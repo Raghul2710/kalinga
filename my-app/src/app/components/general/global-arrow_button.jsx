@@ -2,6 +2,7 @@ export default function GlobalArrowButton({
   children, 
   className = "", 
   arrowClassName = "",
+  arrowSize = 30,
   onClick 
 }) {
   return (
@@ -12,8 +13,8 @@ export default function GlobalArrowButton({
       <p className="ml-5">{children}</p>
       <span className={`bg-white rounded-lg p-2 px-3 flex items-center justify-center ${arrowClassName}`}>
         <svg
-          width="30"
-          height="30"
+          width={arrowSize}
+          height={arrowSize}
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"

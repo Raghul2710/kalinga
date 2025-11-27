@@ -35,6 +35,10 @@
   font-family: 'STIX Two Math', serif;
 }
 
+.font-plus-jakarta-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
 h2{
   font-size: 45px;
   font-weight: 400;
@@ -73,4 +77,22 @@ body {
 
 .conference-pagination .swiper-pagination-bullet-active {
   background: var(--dark-skin);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--button-red);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(151, 43, 40, 0.8);
 }

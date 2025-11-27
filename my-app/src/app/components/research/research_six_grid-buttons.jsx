@@ -36,7 +36,8 @@ export default function ResearchSixGridButtons() {
             <GlobalArrowButton
               key={button.id}
               className="!w-full h-[60px]"
-              arrowClassName="p-[3px] !px-2 mr-2"
+              arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+              arrowSize={29}
             >
               {button.text}
             </GlobalArrowButton>
