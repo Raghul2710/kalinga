@@ -64,17 +64,7 @@ export default function UpcomingConference() {
         >
           {conferences.map((conf) => (
             <SwiperSlide key={conf.id}>
-              <div className="bg-white rounded-2xl shadow-sm p-3 md:p-4 flex flex-col md:flex-row gap-4 items-center relative">
-                {/* Badges positioned at top right */}
-                <div className="absolute top-3 right-3 flex flex-wrap gap-2 items-center z-10">
-                  <p className="inline-flex items-center px-3 py-1 rounded-lg bg-[var(--dark-green)] text-white">
-                    {conf.date}
-                  </p>
-                  <p className="inline-flex items-center px-3 py-1 rounded-lg bg-[var(--dark-blue)] text-white">
-                    {conf.category}
-                  </p>
-                </div>
-
+              <div className="bg-white rounded-2xl shadow-sm p-3 md:p-4 flex flex-col md:flex-row gap-4 items-center">
                 <div className="w-full md:w-2/5">
                   <Image
                     src={conf.image}
@@ -86,6 +76,16 @@ export default function UpcomingConference() {
                 </div>
 
                 <div className="w-full md:w-3/5 flex flex-col gap-6">
+                  {/* Badges positioned at top right */}
+                  <div className="flex justify-end gap-2 items-center">
+                    <p className="inline-flex items-center px-2 md:px-3 py-1 rounded-lg bg-[var(--dark-green)] text-white text-xs whitespace-nowrap">
+                      {conf.date}
+                    </p>
+                    <p className="inline-flex items-center px-2 md:px-3 py-1 rounded-lg bg-[var(--dark-blue)] text-white text-xs whitespace-nowrap">
+                      {conf.category}
+                    </p>
+                  </div>
+
                   <div>
                     <h3 className="!text-4xl font-semibold mb-3">
                       {conf.title}

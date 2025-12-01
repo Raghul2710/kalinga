@@ -53,8 +53,8 @@ export default function ProgramsOffered() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Column */}
-          <div className="flex flex-col gap-6">
-            <div className="pt-30">
+          <div className="flex flex-col gap-6 order-2 lg:order-1">
+            <div className="lg:pt-30">
               <h2 className="text-white mb-4">Programs Offered</h2>
               <p className="text-white leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -75,7 +75,7 @@ export default function ProgramsOffered() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col py-16">
+          <div className="flex flex-col py-16 order-1 lg:order-2">
             {/* Search Bar */}
             <div className="relative p-4 px-4">
               <input
