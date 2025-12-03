@@ -6,44 +6,86 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import GlobalArrowButton from "../general/global-arrow_button";
 
-const admissionSteps = [
+const stepData = [
   {
-    id: 1,
-    stepNumber: "01",
     title: "Step 1",
     description: "Visit Website",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
-    isActive: true,
   },
   {
-    id: 2,
-    stepNumber: "02",
     title: "Step 2",
     description: "Register for the entrance exam",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
-    isActive: true,
   },
   {
-    id: 3,
-    stepNumber: "03",
     title: "Step 3",
     description: "Take the computer-based exam and get shortlisted",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
-    isActive: false,
   },
   {
-    id: 4,
-    stepNumber: "04",
     title: "Step 4",
     description: "Offer letter",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
-    isActive: false,
+  },
+  {
+    title: "Step 5",
+    description: "Admission letter",
   },
 ];
+
+const admissionSteps = stepData.map((step, index) => ({
+  id: index + 1,
+  stepNumber: String(index + 1).padStart(2, "0"),
+  title: step.title,
+  description: step.description,
+  image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+}));
 
 export default function AdmissionSteps() {
   return (
     <section className="py-16 lg:py-24 bg-[var(--light-gray)]">
+      <style dangerouslySetInnerHTML={{__html: `
+        .admission-steps-swiper .swiper-slide-active .step-card-inner {
+          background-color: #F5E6D3;
+          color: var(--foreground);
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-card-inner {
+          background-color: var(--button-red);
+          color: white;
+        }
+        .admission-steps-swiper .swiper-slide-active .step-number {
+          color: #9ca3af;
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-number {
+          color: white;
+        }
+        .admission-steps-swiper .swiper-slide-active .step-title {
+          color: var(--foreground);
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-title {
+          color: white;
+        }
+        .admission-steps-swiper .swiper-slide-active .step-description {
+          color: var(--light-text-gray);
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-description {
+          color: white;
+        }
+        .admission-steps-swiper .swiper-slide-active .step-button {
+          background-color: white;
+        }
+        .admission-steps-swiper .swiper-slide-active .step-button:hover {
+          background-color: #f3f4f6;
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-button {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-button:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+        .admission-steps-swiper .swiper-slide-active .step-button-icon {
+          stroke: black;
+        }
+        .admission-steps-swiper .swiper-slide:not(.swiper-slide-active) .step-button-icon {
+          stroke: white;
+        }
+      `}} />
       <div className="container mx-auto px-4 lg:px-6">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 md:mb-12 gap-4">
@@ -61,9 +103,10 @@ export default function AdmissionSteps() {
             </GlobalArrowButton>
           </div>
         </div>
+      </div>
 
-        {/* Steps Slider */}
-        <div className="relative">
+      {/* Steps Slider - Edge to Edge */}
+      <div className="relative pl-0 md:pl-[50px]">
           <Swiper
             modules={[Navigation]}
             spaceBetween={20}
@@ -84,7 +127,7 @@ export default function AdmissionSteps() {
                 spaceBetween: 24,
               },
               1280: {
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 24,
               },
             }}
@@ -96,26 +139,19 @@ export default function AdmissionSteps() {
           >
             {admissionSteps.map((step, index) => (
               <SwiperSlide key={step.id} className="!h-auto">
-                <div className="relative h-full">
-                  {/* Connecting Line (Dashed) - Between cards */}
+                <div className="relative h-full flex">
+                  {/* Connecting Line - Between cards */}
                   {index < admissionSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-6 w-6 h-0.5 border-t-2 border-dashed border-gray-400 transform -translate-y-1/2 z-20 pointer-events-none"></div>
+                    <div className="hidden lg:block absolute top-1/2 -right-[24px] w-[24px] h-0.5 bg-gray-400 transform -translate-y-1/2 z-20 pointer-events-none"></div>
                   )}
                   
                   {/* Step Card */}
+                  <div className="bg-white rounded-xl p-1 flex-1 flex flex-col">
                   <div
-                    className={`h-full min-w-[280px] md:min-w-[320px] lg:min-w-[360px] rounded-xl p-4 relative overflow-hidden ${
-                      step.isActive
-                        ? "bg-[#F5E6D3] text-[var(--foreground)]"
-                        : "bg-[var(--button-red)] text-white"
-                    }`}
+                    className="step-card-inner h-full min-h-[185px] md:min-h-[185px] flex-1 flex flex-col min-w-full rounded-xl p-4 relative overflow-hidden"
                   >
                     {/* Background Number */}
-                    <div
-                      className={`absolute top-4 right-4 text-7xl md:text-8xl font-bold leading-none opacity-20 font-stix ${
-                        step.isActive ? "text-gray-400" : "text-white"
-                      }`}
-                    >
+                    <div className="step-number absolute top-4 right-4 text-7xl md:text-8xl font-bold leading-none opacity-20 font-stix">
                       {step.stepNumber}
                     </div>
 
@@ -138,77 +174,78 @@ export default function AdmissionSteps() {
                         {/* Title and Description */}
                         <div className="flex-1">
                           {/* Title */}
-                          <h4 className={`text-lg md:text-xl mb-1 ${step.isActive ? "text-[var(--foreground)]" : "text-white"}`}>
+                          <h4 className="step-title text-lg md:text-xl mb-1">
                             {step.title}
                           </h4>
 
                           {/* Description */}
-                          <p className={`text-sm md:text-base ${step.isActive ? "text-[var(--light-text-gray)]" : "text-white"}`}>
+                          <p className="step-description text-sm md:text-base">
                             {step.description}
                           </p>
                         </div>
                       </div>
 
-                      {/* Button (only for active steps) - Separate div with justify-end */}
-                      {step.isActive && (
-                        <div className="flex justify-end">
-                          <button className="w-8 h-8 bg-white hover:bg-gray-100 rounded-lg flex items-center justify-center transition-colors shadow-md">
-                            <svg
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="black"
-                              strokeWidth="2.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M7 17L17 7" />
-                              <path d="M7 7h10v10" />
-                            </svg>
-                          </button>
-                        </div>
-                      )}
+                      {/* Button - Separate div with justify-end */}
+                      <div className="flex justify-end">
+                        <button className="step-button w-8 h-8 rounded-lg flex items-center justify-center transition-colors shadow-md">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            className="step-button-icon"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M7 17L17 7" />
+                            <path d="M7 7h10v10" />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
+                  </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
 
-          {/* Navigation Buttons */}
+        {/* Navigation Buttons */}
+        <div className="container mx-auto px-4 lg:px-6">
           <div className="flex justify-end items-center gap-3 mt-4">
-            <button className="admission-steps-button-prev w-10 h-10 md:w-12 md:h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#c41e3a] flex items-center justify-center transition-colors shadow-md">
+            <button className="admission-steps-button-prev w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-white"
+                className="text-white hover:text-[var(--button-red)] transition-colors"
               >
                 <path
                   d="M10 12L6 8L10 4"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
             </button>
-            <button className="admission-steps-button-next w-10 h-10 md:w-12 md:h-12 rounded-lg bg-[var(--light-gray)] hover:bg-gray-300 flex items-center justify-center transition-colors shadow-md border border-gray-300">
+            <button className="admission-steps-button-next w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-gray-600"
+                className="text-white hover:text-[var(--button-red)] transition-colors"
               >
                 <path
                   d="M6 4L10 8L6 12"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="1"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
@@ -216,7 +253,6 @@ export default function AdmissionSteps() {
             </button>
           </div>
         </div>
-      </div>
     </section>
   );
 }

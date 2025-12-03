@@ -87,7 +87,7 @@ export default function CareerPath() {
 
           {/* Navigation Buttons */}
           <div className="flex justify-end items-center gap-3 mr-10">
-            <button className="career-swiper-button-prev w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[var(--light-gray)] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
+            <button className="career-swiper-button-prev w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
               <svg
                 width="25"
                 height="25"
@@ -105,7 +105,7 @@ export default function CareerPath() {
                 />
               </svg>
             </button>
-            <button className="career-swiper-button-next w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[var(--light-gray)] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
+            <button className="career-swiper-button-next w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
               <svg
                 width="25"
                 height="25"

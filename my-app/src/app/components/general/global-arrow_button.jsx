@@ -12,7 +12,7 @@ export default function GlobalArrowButton({
       onClick={onClick}
       className={`group bg-[var(--button-red)] h-[50px] px-2 rounded-xl shadow-lg text-white font-sans text-base font-semibold transition-all duration-300 hover:opacity-90 hover:shadow-2xl hover:scale-105 flex items-center justify-between ${className}`}
     >
-      <p className={`whitespace-nowrap px-3 ${textClassName}`}>{children}</p>
+      <p className={`whitespace-nowrap w-fit px-3 ${textClassName}`}>{children}</p>
       <span className={`bg-white rounded-lg p-1 px-2 flex items-center justify-center relative ${arrowClassName}`}>
         <svg
           width={arrowSize}

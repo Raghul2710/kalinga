@@ -77,6 +77,41 @@ const Header = () => {
       }
     },
     {
+      id: 'departments',
+      label: 'Departments',
+      href: '/departments',
+      megaMenu: {
+        sections: [
+          {
+            title: 'Departments',
+            links: [
+              { label: 'Courses', href: '/departments/courses' },
+              { label: 'Faculty of Information Technology', href: '/departments/faculty-of-information-technology' },
+            ]
+          }
+        ]
+      }
+    },
+    {
+      id: 'admissions',
+      label: 'Admissions',
+      href: '/admissions',
+      megaMenu: {
+        sections: [
+          {
+            title: 'Admissions',
+            links: [
+              { label: 'Admission Overview', href: '/admissions' },
+              { label: 'How to Apply', href: '/admissions/how-to-apply' },
+              { label: 'Programs', href: '/admissions/programs' },
+              { label: 'Eligibility', href: '/admissions/eligibility' },
+              { label: 'Fee Structure', href: '/admissions/fees' },
+            ]
+          }
+        ]
+      }
+    },
+    {
       id: 'students',
       label: 'Students',
       href: '/students',
@@ -151,16 +186,16 @@ const Header = () => {
     {
       id: 'news',
       label: 'News & Events',
-      href: '/news-events',
+      href: '/news-and-events',
       megaMenu: {
         sections: [
           {
-            title: 'Apply',
+            title: 'News & Events',
             links: [
-              { label: 'How to Apply', href: '/admissions/how-to-apply' },
-              { label: 'Programs', href: '/admissions/programs' },
-              { label: 'Eligibility', href: '/admissions/eligibility' },
-              { label: 'Fee Structure', href: '/admissions/fees' },
+              { label: 'Events Calendar', href: '/news-and-events' },
+              { label: 'Latest News', href: '/news-and-events/news' },
+              { label: 'Upcoming Events', href: '/news-and-events/upcoming' },
+              { label: 'Past Events', href: '/news-and-events/past' },
             ]
           }
         ]
@@ -279,9 +314,11 @@ const Header = () => {
             {/* Right Actions */}
             <div className="flex items-center gap-2">
              
-              <GlobalArrowButton className="lg:flex hidden">
-                <span>Admissions</span>
-              </GlobalArrowButton>
+              <Link href="/admissions">
+                <GlobalArrowButton className="lg:flex hidden">
+                  <span>Admissions</span>
+                </GlobalArrowButton>
+              </Link>
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
