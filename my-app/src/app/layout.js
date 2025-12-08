@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/layout/Header";
 import Breadcrumb from "./components/layout/Breadcrumb";
 import Footer from "./components/layout/Footer";
+import ClickSparkWrapper from "./components/layout/ClickSparkWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,12 +44,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        <Header />
-        <main className="min-h-screen">
-          <Breadcrumb />
-          {children}
-        </main>
-        <Footer />
+        <ClickSparkWrapper>
+          <Header />
+          <main className="min-h-screen">
+            <Breadcrumb />
+            {children}
+          </main>
+          <Footer />
+        </ClickSparkWrapper>
       </body>
     </html>
   );

@@ -1,10 +1,14 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function Facilities() {
+  const SLIDE_DURATION = 4000
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [progress, setProgress] = useState(0)
+  const slideStartRef = useRef(Date.now())
+  const rafRef = useRef(null)
 
   const facilities = [
     { 
@@ -61,14 +65,33 @@ export default function Facilities() {
     return slides
   }
 
-  // Autoplay functionality
+  // Autoplay with progress tracking based on elapsed time to avoid skipping slides
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % facilities.length)
-    }, 4000) // Change slide every 4 seconds
+    const animate = () => {
+      const elapsed = Date.now() - slideStartRef.current
+      const pct = Math.min((elapsed / SLIDE_DURATION) * 100, 100)
+      setProgress(pct)
 
-    return () => clearInterval(interval)
-  }, [facilities.length])
+      if (elapsed >= SLIDE_DURATION) {
+        slideStartRef.current = Date.now()
+        setProgress(0)
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % facilities.length)
+      }
+      rafRef.current = requestAnimationFrame(animate)
+    }
+
+    rafRef.current = requestAnimationFrame(animate)
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current)
+    }
+  }, [facilities.length, SLIDE_DURATION])
+
+  // When slide changes (manual or autoplay), restart the timer baseline
+  useEffect(() => {
+    slideStartRef.current = Date.now()
+    setProgress(0)
+  }, [currentSlide])
 
   return (
     <>
@@ -180,17 +203,25 @@ export default function Facilities() {
           >
             {getVisibleSlides().map((facility, idx) => {
               const isActive = idx === currentSlide
-              // All bars up to and including the active one should be yellow
-              const barColor = idx <= currentSlide ? 'bg-yellow-500' : 'bg-gray-400'
+              const progressForBar = idx < currentSlide ? 100 : idx === currentSlide ? progress : 0
               return (
                 <div 
                   key={facility.id}
                   className="flex flex-col gap-0.5 sm:gap-1 flex-shrink-0 facility-thumbnail"
                 >
-                  {/* colored accent bar above each thumbnail */}
-                  <div className={`w-full h-0.5 sm:h-1 md:h-2 mb-0.5 sm:mb-1 ${barColor} transition-all duration-300`} />
+                  {/* progress accent bar synced with slide timing */}
+                  <div className="w-full h-0.5 sm:h-1 md:h-2 mb-0.5 sm:mb-1 bg-white/20 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-yellow-500 transition-[width] duration-100 ease-linear"
+                      style={{ width: `${progressForBar}%` }}
+                    />
+                  </div>
                   <button 
-                    onClick={() => setCurrentSlide(idx)}
+                    onClick={() => {
+                      slideStartRef.current = Date.now()
+                      setCurrentSlide(idx)
+                      setProgress(0)
+                    }}
                     className={`relative flex-shrink-0 rounded-md sm:rounded-lg overflow-hidden transition-all duration-300 w-full h-12 sm:h-14 md:h-18 lg:h-24 xl:h-28 hover:opacity-90 hover:scale-105 shadow-md sm:shadow-lg ${
                       isActive ? 'ring-1 sm:ring-2 ring-white scale-105' : ''
                     }`}
