@@ -36,7 +36,7 @@ const Breadcrumb = ({ customBreadcrumbs = null, heroImage = null, pageTitle = nu
   return (
     <div className="relative px-5  ">
       {/* Hero Image Section */}
-      <div className="relative h-[400px] rounded-4xl md:h-[500px] lg:h-[600px] w-full overflow-visible bg-gradient-to-br from-[var(--dark-blue)] to-[var(--foreground)] z-0">
+      <div className="relative h-[400px] rounded-4xl md:h-[500px] lg:h-[600px] w-full overflow-visible bg-gradient-to-br from-[var(--dark-blue)] to-[var(--foreground)] z-0 pb-20 md:pb-24 lg:pb-28">
         {heroImage ? (
           <>
             <div className="absolute inset-0 overflow-hidden ">
@@ -69,37 +69,37 @@ const Breadcrumb = ({ customBreadcrumbs = null, heroImage = null, pageTitle = nu
       </div>
 
       {/* White Section */}
-      <div className="relative bg-white py-4 md:py-6 lg:py-8 z-0 ">
-        {/* Spacer to maintain layout */}
+      <div className="relative bg-white py-4 md:py-6 lg:py-8 z-0 mb-16 md:mb-20 lg:mb-24">
+        {/* Spacer to maintain layout and prevent overlap with breadcrumb */}
       </div>
 
       {/* Page Title Card - Positioned at the boundary between blue and white sections */}
       {currentPageTitle  && (
         <div className="container mx-auto">
-        <div className="absolute z-[100]  flex md:flex-row flex-col md:items-end items-start gap-4 md:gap-6 bottom-[40px] md:bottom-[50px] lg:bottom-[50px] translate-y-1/2">
-          <div className="bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl lg:p-16 md:p-10 p-8 min-w-[300px] w-fit">
-            <h1 className="font-stix text-center text-white text-3xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap">
+        <div className="absolute z-[100] flex md:flex-row flex-col md:items-end items-start gap-4 md:gap-6 bottom-[40px] md:bottom-[50px] lg:bottom-[50px] translate-y-1/2 mb-8 md:mb-12">
+          <div className="bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl lg:p-16 md:p-10 p-8 min-w-[300px] max-w-3/5 wraptext-center">
+            <h1 className="font-stix text-center text-white text-2xl md:text-4xl lg:text-5xl font-normal ">
               {currentPageTitle}
             </h1>
           </div>
-          {/* Breadcrumb positioned next to the title card */}
-          <nav aria-label="Breadcrumb" className="flex items-end h-full gap-1 pb-8 md:pl-0 pl-4">
+          {/* Breadcrumb positioned next to the title card - horizontally aligned with blue box */}
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center h-auto min-h-[40px] md:min-h-[50px] gap-1 md:pl-0 pl-4 mb-4 md:mb-0 MD:-translate-y-1/2">
             {breadcrumbs.map((crumb, index) => {
               const isLast = index === breadcrumbs.length - 1;
               
               return (
-                <div key={crumb.href} className="flex items-center">
+                <div key={crumb.href} className="flex items-center flex-shrink-0">
                   {index > 0 && (
                     <span className="text-[var(--dark-gray)] mx-2 text-sm">»</span>
                   )}
                   {isLast ? (
-                    <span className="text-sm font-medium text-[var(--red)]">
+                    <span className="text-sm font-medium text-[var(--red)] whitespace-nowrap">
                       {crumb.label}
                     </span>
                   ) : (
                     <Link
                       href={crumb.href}
-                      className="text-sm text-[var(--dark-gray)] hover:text-[var(--red)] transition-colors"
+                      className="text-sm text-[var(--dark-gray)] hover:text-[var(--red)] transition-colors whitespace-nowrap"
                     >
                       {crumb.label}
                     </Link>

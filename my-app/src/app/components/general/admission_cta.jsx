@@ -31,7 +31,7 @@ const AdmissionCareer = () => {
         </div>
 
         {/* Center - Image (visible only on large screens) */}
-        <div className="hidden lg:block absolute left-1/2 top-[150px] transform -translate-x-1/2 -translate-y-1/2 w-[372px] h-[482px] z-2">
+        <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2  w-[372px] h-[482px] z-2">
           <div className="relative w-full h-full">
             <Image 
               src="https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/Rectangle+574056887.png" 

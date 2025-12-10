@@ -4,6 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import LeadershipCard from "../general/leadership-card";
+import SectionHeading from "../general/SectionHeading";
 
 const leadership = [
   {
@@ -38,9 +39,8 @@ export default function Leadership() {
       <div className="container mx-auto px-4 lg:px-5">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-stix text-[var(--foreground)] text-3xl md:text-4xl lg:text-5xl">
-            Our Leadership
-          </h2>
+          
+          <SectionHeading title="Our Leadership" titleClassName="!py-2" />
         </div>
 
         {/* Slider Section */}
@@ -151,5 +151,5 @@ export default function Leadership() {
       </div>
     </section>
   );
-}
+} 
 

@@ -143,11 +143,9 @@ export default function NewsEvents() {
 
               <div className="mt-2 flex justify-center flex-shrink-0">
               <GlobalArrowButton
+                        variant="no-arrow"
                         className="w-fit !bg-[var(--light-gray)] !shadow-none hover:!shadow-none gap-3 !px-0"
-                        textClassName="!text-[#000] !ml-0 !px-0"
-                        arrowClassName="p-[3px] !px-1 mr-2 !py-1 !bg-[var(--button-red)]"
-                        arrowIconClassName="!text-white"
-                        arrowSize={18}
+                        textClassName="!text-[#000] !font-semibold !ml-0 !px-0"
                       >
                         Read More
             </GlobalArrowButton>

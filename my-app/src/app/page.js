@@ -94,11 +94,12 @@ export default function Home() {
       <Testimonials />
       <GlobalPresence />
       <Scroll
-  texts={['Admission Open 2026']} 
-  velocity={100}
-  numCopies={6}
-  className="font-stix stroke-1 !text-var(--button-red)"
-/>
+        texts={['Admission Open 2026']} 
+        velocity={100}
+        numCopies={6}
+        className="font-stix !stroke-pink-500	 !text-var(--button-red)"
+        logo="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kalinga+logo+png.webp"
+      />
       <ResearchInnovation />
       <CampusTour />
       <AwardsScrollbar />

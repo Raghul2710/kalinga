@@ -10,6 +10,7 @@ import {
   useAnimationFrame
 } from 'motion/react';
 import { useInView } from 'framer-motion';
+import Image from 'next/image';
 
 function useElementWidth(ref) {
   const [width, setWidth] = useState(0);
@@ -40,7 +41,8 @@ export const ScrollComponent = ({
   parallaxClassName,
   scrollerClassName,
   parallaxStyle,
-  scrollerStyle
+  scrollerStyle,
+  logo = null
 }) => {
   function VelocityText({
     children,
@@ -102,7 +104,18 @@ export const ScrollComponent = ({
     const spans = [];
     for (let i = 0; i < (numCopies ?? 1); i++) {
       spans.push(
-        <span className={`flex-shrink-0 ${className}`} key={i} ref={i === 0 ? copyRef : null}>
+        <span className={`flex-shrink-0 ${className} flex items-center gap-8 pr-8`} key={i} ref={i === 0 ? copyRef : null}>
+          {logo && (
+            <span className="flex-shrink-0 inline-flex items-center">
+              <Image
+                src={logo}
+                alt="College Logo"
+                width={80}
+                height={80}
+                className="object-contain"
+              />
+            </span>
+          )}
           {children}
         </span>
       );
@@ -111,7 +124,7 @@ export const ScrollComponent = ({
     return (
       <div className={`${parallaxClassName} relative overflow-hidden container-fluid`} style={parallaxStyle}>
         <motion.div
-          className={`${scrollerClassName} py-16 -rotate-3 flex whitespace-nowrap text-center  text-7xl  !font-stix`}
+          className={`${scrollerClassName} py-16 !stroke-pink-500	 -rotate-3 flex whitespace-nowrap text-center  text-7xl  !font-stix`}
           style={{ x, ...scrollerStyle }}
         >
           {spans}

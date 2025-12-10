@@ -33,7 +33,7 @@ const activities = [
 
 export default function StudentActivities() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-24">
       <div className="container mx-auto px-6">
         <h5 className="text-center mb-10"><span className="text-[var(--button-red)]">Student Activities</span></h5>
         <h2 className="text-center mb-10">Lorem ipsum dolor sit amet, consectetur</h2>

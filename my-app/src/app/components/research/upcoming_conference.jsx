@@ -69,7 +69,7 @@ export default function UpcomingConference({
         >
           {conferences.map((conf) => (
             <SwiperSlide key={conf.id}>
-              <div className={`${backgroundColorcard} rounded-2xl shadow-sm  flex flex-col md:flex-row gap-4 items-center`}>
+              <div className={`${backgroundColorcard} rounded-2xl shadow-sm  flex flex-col md:flex-row gap-4 md:gap-8 items-center`}>
                 <div className="w-full md:w-2/5">
                   <Image
                     src={conf.image}
@@ -80,19 +80,19 @@ export default function UpcomingConference({
                   />
                 </div>
 
-                <div className="w-full md:w-3/5 flex flex-col gap-6 pb-10">
+                <div className="w-full md:w-3/5 flex flex-col gap-6 pb-10 md:px-0 px-5">
                   {/* Badges positioned at top right */}
-                  <div className="flex justify-end gap-2 items-center mr-4 mt-10">
-                    <p className="inline-flex items-center px-2 md:px-3 py-1 rounded-lg bg-[var(--dark-green)] text-white text-xs whitespace-nowrap">
+                  <div className="flex justify-end gap-5 items-center mr-4 md:mt-10 mt-5">
+                    <p className="inline-flex font-light font-plus-jakarta-sans  items-center px-2 md:px-3 py-1 rounded-lg bg-[var(--dark-green)] text-white text-xs whitespace-nowrap">
                       {conf.date}
                     </p>
-                    <p className="inline-flex items-center px-2 md:px-3 py-1 rounded-lg bg-[var(--dark-blue)] text-white text-xs whitespace-nowrap">
+                    <p className="inline-flex font-light font-plus-jakarta-sans items-center px-2 md:px-3 py-1 rounded-lg bg-[var(--dark-blue)] text-white text-xs whitespace-nowrap">
                       {conf.category}
                     </p>
                   </div>
 
                   <div>
-                    <h3 className="!text-4xl font-semibold mb-3">
+                    <h3 className="!text-4xl  mb-3">
                       {conf.title}
                     </h3>
                     <p className="text-[var(--light-text-gray)] text-sm">
