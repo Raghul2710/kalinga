@@ -7,18 +7,18 @@ export default function Footer() {
     <>
       <style dangerouslySetInnerHTML={{__html: `
         .footer-decorative-text {
-          font-size: 6vh;
+          font-size: 6vw;
           max-width: 100%;
           line-height: 1.1;
         }
         @media (min-width: 640px) {
           .footer-decorative-text {
-            font-size: 8vh;
+            font-size: 6vw;
           }
         }
         @media (min-width: 768px) {
           .footer-decorative-text {
-            font-size: 25vh;
+            font-size: 12vw;
             white-space: nowrap;
           }
         }
@@ -47,14 +47,13 @@ export default function Footer() {
           <div className="sm:col-span-1 md:col-span-4 mb-6 sm:mb-0">
             <h4 className="text-sm sm:text-base lg:text-lg font-stix mb-4 sm:mb-4 lg:mb-6 flex items-end gap-2">
               <span className="text-white font-stix">Quick Links</span>
-              <span className="flex-1 border-t border-thick border-white/40"></span>
+              <span className="flex-1 border-t border-thick border-white/40 relative bottom-2"></span>
             </h4>
             <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 sm:gap-y-3 font-plus-jakarta-sans text-xs sm:text-[14px] leading-relaxed sm:leading-[25px] font-normal">
               <ul className="text-white/80 space-y-2 sm:space-y-3">
                 <li><a className="hover:text-white transition-colors" href="/admissions">About</a></li>
                 <li><a className="hover:text-white transition-colors" href="/academics">Academics</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Admissions</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">News & Events</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Research</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Placements</a></li>
               </ul>
@@ -62,7 +61,6 @@ export default function Footer() {
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Departments</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Campus Life</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Facilities</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Libraries</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Labs</a></li>
                 <li><a className="hover:text-white transition-colors" href="/students/campus-life">Events</a></li>
               </ul>
@@ -73,7 +71,7 @@ export default function Footer() {
           <div className="sm:col-span-1 md:col-span-4 mb-6 sm:mb-0">
             <h4 className="text-sm sm:text-base lg:text-lg font-normal mb-4 sm:mb-6 flex items-end gap-2">
               <span className="text-white font-stix">Important Links</span>
-              <span className="flex-1 border-t border-white/40"></span>
+              <span className="flex-1 border-t border-white/40 relative bottom-2"></span>
             </h4>
             <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 sm:gap-y-3 font-plus-jakarta-sans text-xs sm:text-[14px] leading-relaxed sm:leading-[25px] font-normal">
               <ul className="text-white/80 space-y-2 sm:space-y-3">
@@ -95,10 +93,10 @@ export default function Footer() {
 
           {/* Contact Us */}
             <div className="sm:col-span-2 md:col-span-4 mt-0 md:mt-[-75px]">
-            <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:gap-6">
               {/* Follow Us Section */}
               <div className="text-left">
-                <div className="grid grid-cols-1 gap-3 sm:gap-4 lg:gap-8">
+                <div className="grid grid-cols-1 gap-3 ">
                   <h4 className="text-sm sm:text-base lg:text-lg font-normal text-white font-stix">
                     Follow Us
                   </h4>

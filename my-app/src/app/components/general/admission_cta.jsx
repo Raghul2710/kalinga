@@ -22,7 +22,8 @@ const AdmissionCareer = () => {
           className="font-stix !text-[50px] md:!text-[100px] mt-4 sm:mt-5 leading-none whitespace-nowrap self-start -ml-0 md:-ml-5 sm:-ml-6 md:-ml-10 -mb-6 sm:-mb-10"
            style={{
                 color: 'transparent',
-                WebkitTextStroke: '0.2px #FFFFFF',
+                WebkitTextStroke: '1px #FFFFFF',
+                opacity: 0.5,
               }}
         >
           Admission
@@ -57,7 +58,8 @@ const AdmissionCareer = () => {
   className="font-stix leading-none whitespace-nowrap !text-[50px] md:!text-[100px] mt-4 sm:mt-5 self-start sm:self-end -mr-5 sm:-mr-6 md:-mr-8 -mb-6 sm:-mb-10" 
    style={{
         color: 'transparent',
-        WebkitTextStroke: '0.2px #FFFFFF',
+        WebkitTextStroke: '1px #FFFFFF',
+        opacity: 0.5,
       }}
 >
   Career

@@ -1,17 +1,84 @@
-import React from 'react'
+'use client'
+
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import GlobalArrowButton from '../general/global-arrow_button'
 
 export default function ResearchInnovation() {
+  const sectionRef = useRef(null)
+  const [hasAnimated, setHasAnimated] = useState(false)
+  const [researchPublications, setResearchPublications] = useState(0)
+  const [startups, setStartups] = useState(0)
+  const [researchLabs, setResearchLabs] = useState(0)
+  const [citations, setCitations] = useState(0)
+
   const stats = [
-    { label: 'Research Publications', value: '3360+', variant: 'orange' },
-    { label: 'Startups', value: '6+', variant: 'white' },
-    { label: 'Research Labs', value: '90+', variant: 'white' },
-    { label: 'Citations', value: '2136 +', variant: 'white' },
+    { label: 'Research Publications', value: '3360+', variant: 'orange', targetValue: 3360, setter: setResearchPublications },
+    { label: 'Startups', value: '6+', variant: 'white', targetValue: 6, setter: setStartups },
+    { label: 'Research Labs', value: '90+', variant: 'white', targetValue: 90, setter: setResearchLabs },
+    { label: 'Citations', value: '2136 +', variant: 'white', targetValue: 2136, setter: setCitations },
   ]
 
+  // Count-up animation function
+  const animateValue = (start, end, duration, setter) => {
+    const startTime = performance.now()
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const current = Math.floor(start + (end - start) * progress)
+      setter(current)
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      }
+    }
+    requestAnimationFrame(animate)
+  }
+
+  // Intersection Observer to trigger animation when section is in view
+  useEffect(() => {
+    if (hasAnimated || !sectionRef.current) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true)
+            animateValue(0, 3360, 2000, setResearchPublications)
+            animateValue(0, 6, 2000, setStartups)
+            animateValue(0, 90, 2000, setResearchLabs)
+            animateValue(0, 2136, 2000, setCitations)
+          }
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    observer.observe(sectionRef.current)
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [hasAnimated])
+
+  // Helper function to get the animated value with suffix
+  const getAnimatedValue = (stat) => {
+    const animatedValues = {
+      'Research Publications': researchPublications,
+      'Startups': startups,
+      'Research Labs': researchLabs,
+      'Citations': citations,
+    }
+    const animatedValue = animatedValues[stat.label]
+    // Check if the original value has a space before the +
+    const hasSpace = stat.value.includes(' +')
+    return `${animatedValue.toLocaleString()}${hasSpace ? ' +' : '+'}`
+  }
+
   return (
-    <section className="py-16 bg-white overflow-x-hidden">
+    <section ref={sectionRef} className="py-16 bg-white overflow-x-hidden">
       <div className="container mx-auto px-4 lg:px-5">
         {/* Top section: Text and Image */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center mb-5">
@@ -59,7 +126,7 @@ export default function ResearchInnovation() {
                 </div>
                 <div>
                   <h2 className="font-stix font-bold text-[var(--foreground)]">
-                    {stat.value}
+                    {getAnimatedValue(stat)}
                   </h2>
                 </div>
               </div>
