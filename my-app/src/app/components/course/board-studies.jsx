@@ -31,7 +31,7 @@ export default function BoardStudies() {
             </p>
             <div className="mt-4">
               <GlobalArrowButton
-                className="!bg-white  !w-auto !min-w-[200px]"
+                className="!bg-white"
                 arrowClassName="!bg-[var(--button-red)]"
                 arrowIconClassName="!text-white"
                 textClassName="!text-[var(--button-red)]"
