@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="sm:col-span-1 md:col-span-4 mb-6 sm:mb-0">
             <h4 className="text-sm sm:text-base lg:text-lg font-stix mb-4 sm:mb-4 lg:mb-6 flex items-end gap-2">
               <span className="text-white font-stix">Quick Links</span>
-              <span className="flex-1 border-t border-thick border-white/40 relative bottom-2"></span>
+              <span className="flex-1 border-t border-thick border-white/70 relative bottom-2"></span>
             </h4>
             <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 sm:gap-y-3 font-plus-jakarta-sans text-xs sm:text-[14px] leading-relaxed sm:leading-[25px] font-normal">
               <ul className="text-white/80 space-y-2 sm:space-y-3">
@@ -71,7 +71,7 @@ export default function Footer() {
           <div className="sm:col-span-1 md:col-span-4 mb-6 sm:mb-0">
             <h4 className="text-sm sm:text-base lg:text-lg font-normal mb-4 sm:mb-6 flex items-end gap-2">
               <span className="text-white font-stix">Important Links</span>
-              <span className="flex-1 border-t border-white/40 relative bottom-2"></span>
+              <span className="flex-1 border-t border-white/70 relative bottom-2"></span>
             </h4>
             <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 sm:gap-y-3 font-plus-jakarta-sans text-xs sm:text-[14px] leading-relaxed sm:leading-[25px] font-normal">
               <ul className="text-white/80 space-y-2 sm:space-y-3">
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Us */}
-            <div className="sm:col-span-2 md:col-span-4 mt-0 md:mt-[-75px]">
+            <div className="sm:col-span-2 md:col-span-4 mt-0 md:mt-[-75px] ml-[70px]">
             <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:gap-6">
               {/* Follow Us Section */}
               <div className="text-left">
