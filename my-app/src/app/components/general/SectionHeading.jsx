@@ -2,14 +2,15 @@ export default function SectionHeading({
   subtitle, 
   title,
   subtitleClassName = "",
-  titleClassName = ""
+  titleClassName = "",
+  subtitleTextColor = "!text-[var(--button-red)]"
 }) {
   return (
     <>
       {subtitle && (
-        <div className={`text-[var(--button-red)] text-base sm:text-lg md:text-xl  pt-3 sm:pt-5 md:pt-8 lg:pt-[50px] font-plus-jakarta-sans font-medium  ${subtitleClassName}`}>
+        <h5 className={`${subtitleTextColor} text-base sm:text-lg md:text-xl font-plus-jakarta-sans font-medium  ${subtitleClassName}`}>
           {subtitle}
-        </div>
+        </h5>
       )}
       {title && (
         <h2 className={`font-stix  py-3  leading-12 text-[var(--foreground)] ${titleClassName}`}>

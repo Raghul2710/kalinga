@@ -39,7 +39,7 @@ const AccreditationRanking = ({
   }))
 
   return (
-    <section className="py-24 ">
+    <section className="py-16 ">
       <div className="">
         <div className="flex flex-col md:flex-row items-center md:items-center gap-4 md:gap-0.5">
           {/* Left title pill */}
@@ -48,9 +48,10 @@ const AccreditationRanking = ({
               <h2 className="text-xl sm:text-2xl md:text-4xl font-stix leading-tight text-left md:ml-25 py-2 sm:py-0">
                 {heading}
                 {secondHeading && (
-                  
+                  <span className="block text-lg sm:text-xl md:text-2xl font-normal">
                     {secondHeading}
-                                  )}
+                  </span>
+                )}
               </h2>
             </div>
           </div>

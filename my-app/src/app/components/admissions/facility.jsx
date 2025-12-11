@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
-
+import SectionHeading from "../general/SectionHeading";
 const facilities = [
   {
     id: 1,
@@ -32,7 +32,7 @@ const facilities = [
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/library.webp",
   },
   {
-    id: 5,
+    id: 6,
     name: "LAB",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/library.webp",
   },
@@ -43,15 +43,12 @@ export default function Facility() {
     <section className="py-16 bg-white relative">
       <div className="container mx-auto px-4 lg:px-5">
         {/* Header Section */}
-        <div className="text-center mb-8 md:mb-12">
-          <h3 className="font-stix text-[var(--button-red)] text-3xl md:text-4xl lg:text-5xl mb-4">
-            Kalinga Facilities
-          </h3>
-          <h2 className="font-stix text-[var(--foreground)] text-lg md:text-xl">
-            Lorem ipsum dolor sit amet, consectetur
-          </h2>
-        </div>
-
+        <SectionHeading 
+                        subtitleClassName="text-center"
+                        titleClassName="text-center"
+                        subtitle="Real Stories. Real Success."
+                        title="Stories that define our Kalinga spirit."
+                    />
         {/* Slider Section */}
         <div className="relative overflow-visible">
           <Swiper 
@@ -80,16 +77,16 @@ export default function Facility() {
               nextEl: ".facility-swiper-button-next",
               prevEl: ".facility-swiper-button-prev",
             }}
-            className="facility-swiper !pb-12 pt-24 [&_.swiper-wrapper]:!flex [&_.swiper-wrapper]:items-stretch [&_.swiper-wrapper]:overflow-visible [&_.swiper-slide]:!h-auto [&_.swiper-slide]:!flex [&_.swiper-slide]:overflow-visible p-5"
+            className="facility-swiper !pb-5 pt-5 [&_.swiper-wrapper]:!flex [&_.swiper-wrapper]:items-stretch [&_.swiper-wrapper]:overflow-visible [&_.swiper-slide]:!h-auto [&_.swiper-slide]:!flex [&_.swiper-slide]:overflow-visible p-5"
             loop={false}
             autoHeight={false}
           >
             {facilities.map((facility) => (
               <SwiperSlide key={facility.id} className="!overflow-visible">
                 <div className="h-full w-full">
-                  <div className="bg-white rounded-xl shadow-xl overflow-visible h-full group-hover:shadow-2xl group-hover:z-[50] relative transition-all duration-300 cursor-pointer group">
+                  <div className="bg-white rounded-xl  overflow-visible h-full group-hover:z-[50] relative transition-all duration-300 cursor-pointer group">
                     {/* Image Container - Fixed wrapper with padding for upward growth (250px visible + 50px padding = 300px total) */}
-                    <div className="relative w-full min-h-[300px] pt-[50px] overflow-visible rounded-t-xl">
+                    <div className="relative w-full min-h-[300px] overflow-visible rounded-t-xl">
                       {/* Image - Positioned at bottom, grows upward on hover */}
                       <div className="absolute bottom-0 left-0 right-0 h-[250px] group-hover:h-[300px]  transition-all duration-300">
                         <Image
@@ -113,7 +110,7 @@ export default function Facility() {
           </Swiper>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-end items-center gap-3 mt-4 ">
+          <div className="flex justify-end items-center gap-3">
             <button className="cursor-pointer facility-swiper-button-prev w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
               <svg
                 width="20"

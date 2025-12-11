@@ -10,6 +10,9 @@ import 'swiper/css/navigation'
 
 export default function FeatureCards({ 
   isSlider = true,
+  title = "Why is Kalinga University the Right Choice?",
+  subtitle = "Why is Kalinga University the Right Choice?",
+  description = null,
   cards = [
     { 
       id: 1, 
@@ -152,11 +155,11 @@ export default function FeatureCards({
       image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/100%25+Automation.svg' 
     },
   ],
-  title = "Why is Kalinga University the Right Choice?",
   fullText = "Spread across 50+ Acres of Land, the University offers fully equipped infrastructure with the most advanced curriculum that prepares students to compete in global opportunities. Every space on our campus generates curiosity and encourages motivation among young minds. We just don't focus on classroom-based learning, but our primary focus is to provide a holistic learning experience to our students so that they can become all-rounders in their personal and professional lives. With a supportive and inclusive learning environment, our students have achieved remarkable success and transformed their DREAMS into REALITY.",
   imageUrl = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
   imageAlt = "Kalinga students celebrating"
 }) {
+  const effectiveFullText = description ?? fullText
   const [isExpanded, setIsExpanded] = useState(false)
   const [cardExpanded, setCardExpanded] = useState({})
   const swiperRef = useRef(null)
@@ -171,9 +174,9 @@ export default function FeatureCards({
 
   // Dynamically calculate truncated and hidden text from fullText
   const truncateLimit = 200
-  const truncatedText = fullText?.length > truncateLimit ? fullText.slice(0, truncateLimit) : fullText
-  const hiddenText = fullText?.length > truncateLimit ? fullText.slice(truncateLimit) : ''
-  const displayText = isExpanded ? fullText : truncatedText
+  const truncatedText = effectiveFullText?.length > truncateLimit ? effectiveFullText.slice(0, truncateLimit) : effectiveFullText
+  const hiddenText = effectiveFullText?.length > truncateLimit ? effectiveFullText.slice(truncateLimit) : ''
+  const displayText = isExpanded ? effectiveFullText : truncatedText
  
   return (
     <section className="py-16 px-4">
@@ -198,12 +201,14 @@ export default function FeatureCards({
 
             {/* Text content on right */}
             <div className="flex flex-col justify-center">
-              <SectionHeading
-                // subtitle="Why is Kalinga University the Right Choice?"
-                title="Why is Kalinga University the Right Choice?"
-                titleClassName="text-white"
-               
-              />
+              {(title || subtitle) && (
+                <SectionHeading
+                  subtitle={subtitle || undefined}
+                  title={title || undefined}
+                  titleClassName="text-white"
+                  subtitleClassName="text-white/70"
+                  subtitleTextColor="!text-[var(--dark-orange-red)]"                  />
+              )}
               <p className="text-white leading-relaxed">
                 {displayText}
                 {!isExpanded && hiddenText && (
@@ -274,8 +279,9 @@ export default function FeatureCards({
                             </div>
                           )}
                           <div className="flex-1 flex flex-col">
-                            <h4 className="text-lg font-plus-jakarta-sans !text-[16px] !font-medium
- mb-1.5 sm:mb-2">{c.title}</h4>
+                            <h4 className="text-lg font-plus-jakarta-sans
+                              mb-1.5 sm:mb-2">{c.title}
+                            </h4>
                             <p
                               className="text-sm"
                               style={cardExpanded[c.id] ? undefined : collapsedTextStyle}

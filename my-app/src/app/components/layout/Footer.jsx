@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Us */}
-            <div className="sm:col-span-2 md:col-span-4 mt-0 md:mt-[-75px] ml-[70px]">
+            <div className="sm:col-span-2 md:col-span-4 mt-0 md:mt-[-75px] md:ml-[75px] ml-[0px]">
             <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:gap-6">
               {/* Follow Us Section */}
               <div className="text-left">

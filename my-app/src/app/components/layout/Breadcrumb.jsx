@@ -4,6 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+const routeHeroImages = [
+  {
+    match: /^\/about/,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
+  },
+];
+
 const Breadcrumb = ({ customBreadcrumbs = null, heroImage = null, pageTitle = null }) => {
   const pathname = usePathname();
 
@@ -31,24 +38,28 @@ const Breadcrumb = ({ customBreadcrumbs = null, heroImage = null, pageTitle = nu
   };
 
   const breadcrumbs = generateBreadcrumbs();
+  const resolvedHeroImage =
+    heroImage ||
+    routeHeroImages.find(route => route.match.test(pathname))?.image ||
+    null;
   const currentPageTitle = pageTitle || breadcrumbs[breadcrumbs.length - 1]?.label || '';
 
   return (
     <div className="relative px-5  ">
       {/* Hero Image Section */}
-      <div className="relative h-[400px] rounded-4xl md:h-[500px] lg:h-[600px] w-full overflow-visible bg-gradient-to-br from-[var(--dark-blue)] to-[var(--foreground)] z-0 pb-20 md:pb-24 lg:pb-28">
-        {heroImage ? (
+      <div className="relative h-[400px] rounded-4xl md:h-[400px] lg:h-[400px] w-full overflow-visible bg-gradient-to-br from-[var(--dark-blue)] to-[var(--foreground)] z-0 pb-20 md:pb-24 lg:pb-28">
+        {resolvedHeroImage ? (
           <>
-            <div className="absolute inset-0 overflow-hidden ">
+            <div className="absolute inset-0 overflow-hidden rounded-4xl">
               <Image
-                src={heroImage}
+                src={resolvedHeroImage}
                 alt={currentPageTitle}
                 fill
                 className="object-cover"
                 priority
               />
               {/* Gradient Overlay for image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--dark-blue)]/80 via-[var(--dark-blue)]/60 to-[var(--foreground)]/80"></div>
+              <div className="absolute inset-0"></div>
             </div>
           </>
         ) : (
@@ -69,7 +80,7 @@ const Breadcrumb = ({ customBreadcrumbs = null, heroImage = null, pageTitle = nu
       </div>
 
       {/* White Section */}
-      <div className="relative bg-white py-4 md:py-6 lg:py-8 z-0 mb-16 md:mb-20 lg:mb-24">
+      <div className="relative bg-white py-4 md:py-6 lg:py-8 z-0">
         {/* Spacer to maintain layout and prevent overlap with breadcrumb */}
       </div>
 

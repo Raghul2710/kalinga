@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function VisionMission() {
   return (
-    <section className="pt-16 lg:pt-24 bg-white">
+    <section className="pt-16 bg-white">
       <div className="container mx-auto px-4 lg:px-5">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           {/* Left - Vision Box */}

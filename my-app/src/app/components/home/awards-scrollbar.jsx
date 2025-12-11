@@ -149,8 +149,8 @@ const defaultAwards = [
 
 export default function AwardsScrollbar({
   awards = defaultAwards,
-  title = "A Legacy of Achievements",
-  subtitle = " Awards and Accolades",
+  title = "Awards and Accolades ",
+  subtitle = "",
 }) {
   return (
     <section className="py-10 sm:py-14 bg-white px-4 lg:px-5">

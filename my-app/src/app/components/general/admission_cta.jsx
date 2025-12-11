@@ -8,7 +8,7 @@ const AdmissionCareer = () => {
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
 
         {/* Left Panel - Admission */}
-        <div className="w-full bg-[var(--dark-orange-red)] rounded-l-lg p-5 sm:p-7 md:p-12 text-white flex flex-col items-center justify-center">
+        <div className="w-full bg-[var(--dark-orange-red)] rounded-l-lg p-5 sm:p-7 md:p-12 text-white flex flex-col md:items-center justify-center items-start">
          <h1>Step Into Your Future</h1>
         <h5 className="mt-4 sm:mt-6 md:mt-8 leading-tight sm:leading-normal font-stix leading-[32px] sm:leading-[40px] pr-4 sm:pr-8 md:pr-15">Discover 130+ career-driven programs and world-class learning at Kalinga University. Your journey to success starts today</h5>
           <div className="mt-3 sm:mt-5 w-full sm:w-[211px] self-start">
@@ -43,9 +43,9 @@ const AdmissionCareer = () => {
         </div>
 
         {/* Right Panel - Career */}
-        <div className="w-full bg-[var(--button-red)] rounded-r-lg p-5 sm:p-7 md:p-12 text-white text-right flex flex-col items-end justify-end">
+        <div className="w-full bg-[var(--button-red)] rounded-r-lg p-5 sm:p-7 md:p-12 text-white md:text-right text-left flex flex-col md:items-end items-start md:justify-end justify-start">
          <h1>Work. Inspire. Achieve.</h1> 
-        <h5 className="mt-4 sm:mt-6 md:mt-8 leading-tight sm:leading-normal font-stix leading-[32px] sm:leading-[40px] pb-4 pl-4 sm:pl-8 md:pl-20">Kalinga University offers a collaborative environment <br></br>for educators and professionals to grow and make an impact.</h5>
+        <h5 className="mt-4 sm:mt-6 md:mt-8 leading-tight sm:leading-normal font-stix leading-[32px] sm:leading-[40px] pb-4 md:pl-20">Kalinga University offers a collaborative environment <br></br>for educators and professionals to grow and make an impact.</h5>
         <GlobalArrowButton className="!bg-white !text-black"
                 arrowClassName="!bg-[var(--button-red)]"
                 arrowIconClassName="!text-white"  

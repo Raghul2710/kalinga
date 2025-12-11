@@ -26,9 +26,21 @@ const leadership = [
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/omprakash.png",
   },
   {
-    id: 3,
-    name: "Mr. Sajjan Singh",
-    title: "Pro-Chancellor",
+    id: 4,
+    name: "Dr. R. Shridhar",
+    title: "Vice-Chancellor",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/omprakash.png",
+  },
+  {
+    id: 5,
+    name: "Dr. Byju John",
+    title: "Director General",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/omprakash.png",
+  },
+  {
+    id: 6,
+    name: "Dr. Sandeep Gandhi",
+    title: "Registrar",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/omprakash.png",
   },
 ];
@@ -44,7 +56,7 @@ export default function Leadership() {
         </div>
 
         {/* Slider Section */}
-        <div className="relative py-8">
+        <div className="relative">
           <Swiper
             modules={[Navigation]}
             spaceBetween={24}
@@ -71,7 +83,7 @@ export default function Leadership() {
               nextEl: ".leadership-swiper-button-next",
               prevEl: ".leadership-swiper-button-prev",
             }}
-            className="leadership-swiper !pb-12 [&_.swiper-wrapper]:!flex [&_.swiper-wrapper]:items-stretch [&_.swiper-slide]:!h-auto [&_.swiper-slide]:!flex"
+            className="leadership-swiper  [&_.swiper-wrapper]:!flex [&_.swiper-wrapper]:items-stretch [&_.swiper-slide]:!h-auto [&_.swiper-slide]:!flex"
             loop={false}
             autoHeight={false}
           >
