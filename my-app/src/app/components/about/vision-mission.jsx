@@ -63,7 +63,7 @@ export default function VisionMission({
               <ul className="space-y-2">
                 {text.map((item, index) => (
                   <li key={index} className="flex items-start gap-2 rounded">
-                   <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black bg-white p-1 flex-shrink-0 group-hover:text-white rounded-md "><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                   <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-black bg-white p-1 flex-shrink-0 group-hover:text-white rounded-md "><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"></path></svg>
 
                     <span className="text-[var(--foreground)] leading-relaxed text-sm">{item}</span>
                   </li>

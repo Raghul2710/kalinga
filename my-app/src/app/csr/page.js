@@ -12,25 +12,19 @@ import StudentActivities from "@/app/components/department/student_activities";
 import AdmissionCareer from "@/app/components/general/admission_cta";
 import MainIntro from "@/app/components/about/main_intro";
 import FAQ from "@/app/components/general/faq";
-
+import { useLayoutEffect } from "react";
 
 
 // Just define your breadcrumb data as a const - Breadcrumb will automatically use it
 // No imports needed for breadcrumb! Just define the const and it works.
 const breadcrumbData = {
   heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
-  pageTitle: "Corpodsdssrate Social Responsibility",
+  pageTitle: "Corporate a Sociala Responsibility",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },
-    { label: 'C dSR', href: '/csr' }
+    { label: 'CSaR', href: '/csr' }
   ]
 };
-
-// Register it globally (no import needed - this pattern works automatically)
-if (typeof window !== 'undefined') {
-  window.__breadcrumbData = breadcrumbData;
-}
-
 
 export default function KIFPage({
     visionMissionData: visionMissionDataProp,
@@ -166,6 +160,20 @@ export default function KIFPage({
           answer: " amlLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
         }
       ]
+
+  // Set breadcrumb data when component mounts, clear when it unmounts
+  // Use useLayoutEffect to ensure it's set before Breadcrumb component checks
+  useLayoutEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.__breadcrumbData = breadcrumbData;
+    }
+    // Cleanup: clear breadcrumb data when component unmounts
+    return () => {
+      if (typeof window !== 'undefined') {
+        delete window.__breadcrumbData;
+      }
+    };
+  }, []);
       
   return (
     <div>

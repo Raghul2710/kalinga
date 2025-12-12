@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useBreadcrumb } from './BreadcrumbContext';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const routeHeroImages = [
   {
@@ -30,13 +30,42 @@ const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {
   // Don't show breadcrumb on homepage
   if (pathname === '/') return null;
 
-  // Check global window.__breadcrumbData (for pages that don't want to import anything)
+  // Track previous pathname to detect route changes
+  const prevPathnameRef = useRef(pathname);
+
+  // Clear breadcrumb data when pathname changes
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.__breadcrumbData && breadcrumbContext?.setBreadcrumbData) {
-      breadcrumbContext.setBreadcrumbData(window.__breadcrumbData);
-      // Clear it after use to avoid stale data
-      delete window.__breadcrumbData;
+    if (!breadcrumbContext?.setBreadcrumbData) return;
+
+    const pathnameChanged = prevPathnameRef.current !== pathname;
+    
+    if (pathnameChanged) {
+      // Pathname changed - clear old breadcrumb data first
+      prevPathnameRef.current = pathname;
+      breadcrumbContext.setBreadcrumbData(null);
     }
+  }, [pathname, breadcrumbContext]);
+
+  // Check for new breadcrumb data - runs after page components have a chance to set it
+  useEffect(() => {
+    if (!breadcrumbContext?.setBreadcrumbData) return;
+
+    // Check immediately first (in case data was set synchronously)
+    if (typeof window !== 'undefined' && window.__breadcrumbData) {
+      breadcrumbContext.setBreadcrumbData(window.__breadcrumbData);
+      delete window.__breadcrumbData;
+      return;
+    }
+
+    // Also check after a microtask to catch data set in useEffect
+    const timeoutId = setTimeout(() => {
+      if (typeof window !== 'undefined' && window.__breadcrumbData) {
+        breadcrumbContext.setBreadcrumbData(window.__breadcrumbData);
+        delete window.__breadcrumbData;
+      }
+    }, 0);
+
+    return () => clearTimeout(timeoutId);
   }, [pathname, breadcrumbContext]);
 
   // Use context data if available, otherwise use props
