@@ -5,7 +5,7 @@ const breadcrumbData = {
   pageTitle: "Administration & Leadership",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },
-    { label: 'Administration Leadership', href: '/administration-leadership' }
+    { label: 'Administration & Leadership', href: '/administration' }
   ]
 };
 export default function Page() {

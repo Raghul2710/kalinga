@@ -25,7 +25,7 @@ const routeHeroImages = [
   },
   {
     match: /^\/academics/,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-gathered.webp",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/academics-banner.webp",
   },  
   {
     match: /^\/contact_us/,
@@ -39,6 +39,14 @@ const routeHeroImages = [
     match: /^\/iqac/,
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
   },
+  {
+    match: /^\/alumini/,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alumini-banner.webp",
+  },
+  {
+    match: /^\/careers/,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/career.webp",
+  }
 
 ];
 const imageposition = "object-center";
