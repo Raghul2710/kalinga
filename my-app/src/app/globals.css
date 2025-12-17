@@ -239,3 +239,53 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Vertical Marquee Animation */
+@keyframes marqueeVertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-50% - 0.75rem));
+  }
+}
+
+.animate-marquee-vertical {
+  animation: marqueeVertical 15s linear infinite;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  will-change: transform;
+}
+
+.animate-marquee-vertical:hover {
+  animation-play-state: paused;
+}
+
+.partner-marquee-container {
+  overflow: hidden;
+  height: 400px;
+  position: relative;
+
+}
+
+.partner-marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Rounded Polygon Clip Path */
+.r-3d {
+  border-radius: 20px;
+  clip-path: url(#rounded-polygon);
+  -webkit-clip-path: url(#rounded-polygon);
+}
+
+/* Line Clamp for Read More */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

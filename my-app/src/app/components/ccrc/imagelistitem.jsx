@@ -14,10 +14,11 @@ export default function ImageListItem({
   items = [],
   boxItems = [],
   className = "",
-  textClassName = "text-white",
+  textClassName = "text-white ",
   headingClassName = "text-white",
   cardBackgroundColor = "bg-[var(--card-sandal)]",
   cardTitleClassName = "text-[var(--red)]",
+  listItemTextClassName = "",
 }) {
   return (
     <section
@@ -69,6 +70,11 @@ export default function ImageListItem({
               title={title}
               titleClassName={`!py-2 text-left  ${headingClassName}`}
             />
+
+            {/* Description */}
+            {description && (
+              <p className={`text-sm pb-4 ${textClassName}`}>{description}</p>
+            )}
 
             {/* Scrollable items only */}
             {items && Array.isArray(items) && items.length > 0 && (
@@ -124,7 +130,7 @@ export default function ImageListItem({
                           {item.title}
                         </h4>
                       )}
-                      <p className={textClassName}>
+                      <p className={listItemTextClassName}>
                         {item.text || item.description}
                       </p>
                     </div>

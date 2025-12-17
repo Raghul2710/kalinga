@@ -45,15 +45,19 @@ export default function KIFPage({
     const visionMissionData = visionMissionDataProp ?? [{
         visionTitle: "Vision",
         missionTitle: "Mission",
-        visionText: "Kalinga University's incubation centre promotes an incubation ecosystem for new-age entrepreneurs who are contributing to the social and economic development of India. The primary vision is to facilitate a resource-rich platform for our budding entrepreneurs so that they can commence their startup business at minimum risk. Our multidisciplinary incubators, technological assistance, and research facilitations encourage young enthusiasts to take advantage of our full-fledged startup ecosystem. ",
-        missionText: defaultMission,
+        visionText: "Kalinga University's incubation centre promotes an incubation ecosystem for new-age entrepreneurs who are contributing to the social and economic development of India. The primary vision is to facilitate a resource-rich platform for our budding entrepreneurs so that they can commence their startup business at minimum risk. Our multidisciplinary incubators, technological assistance, and research facilitations encourage young enthusiasts to take advantage of our full-fledged startup ecosystem.   ",
+        missionText: ["We empower the next-gen entrepreneurs in solving the pressing challenges of our society.",  
+          "KIF significantly contributes to supporting student-led startups, employment generation, designing sustainable business models, and economic growth.", 
+          "We facilitate extensive networking opportunities, connecting young entrepreneurs with highly knowledgeable people.", 
+          "We identify and nurture unique business ideas of students with all the necessary resources, tools, and mentorship.", 
+          ],
         imageAlt: "Vision and Mission",
         className: "",
         showImage: true,
     }];
     const boxItems = boxItemsProp ?? [{
         title: "Startup Incubation",
-        description: "The core theme emphasizes joint efforts between different sectors.",
+        description: "Got an idea? We’ll turn it into a successful company.",
         icon: (
           <Image 
             src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/incubator.svg" 
@@ -77,7 +81,7 @@ export default function KIFPage({
         ),
     },{
         title: "Prototype Development Lab",
-        description: "Plan, design, test, and experiment with your ideas in our incubation lab.",
+        description: "Plan, design, test, and experiment with your ideas in our incubation lab. ",
         icon: (
           <Image 
             src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Prototype+Development+Lab.svg" 
@@ -139,7 +143,7 @@ export default function KIFPage({
     },
     {
         title: "Legal & Compliance",
-        description: "From registration to IP rights, we’ll make your paperwork process stress-free.",
+        description: "From registration to IP rights, we’ll make your paperwork process stress-free.  ",
         icon: (
           <Image 
             src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Legal+%26+Compliance.svg" 
@@ -150,6 +154,45 @@ export default function KIFPage({
           />
         ),
     },];
+    const boxItems1 = boxItemsProp ?? [{
+      title: "Diverse Ecosystem",
+      description: "Whether it’s technology, healthcare, medicine, sustainable products, or social impact, KIF supports startups across different domains. Our ecosystem prompts cross-pollination of ideas and innovation.",
+      icon: (
+        <Image 
+          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/incubator.svg" 
+          alt="Startup " 
+          width={40} 
+          height={40}
+          className="h-10 w-10"
+        />
+      ),
+  },
+  {
+      title: "Commitment to Innovation",
+      description: "We embrace fresh ideas of our champions, offering resources and mentorship to turn them into a powerful business.",
+      icon: (
+        <Image 
+          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Technology+Support.svg" 
+          alt="Technology Support" 
+          width={40} 
+          height={40}
+          className="h-10 w-10"
+        />
+      ),
+  },
+  {
+      title: "Passionate Team of Incubators",
+      description: "Our passionate team members, who come from different backgrounds, will constantly support you in your dreams at each step in your new journey.  ",
+      icon: (
+        <Image 
+          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Legal+%26+Compliance.svg" 
+          alt="Legal & Compliance" 
+          width={40} 
+          height={40}
+          className="h-10 w-10"
+        />
+      ),
+  },];
     const testimonials = testimonialsProp ?? [{
         id: 1,
         name: "",
@@ -356,14 +399,33 @@ export default function KIFPage({
         },
     ];
       
+  const kifAdditionalContent = [
+    "Our incubation managers and support members transform their raw ideas into real ventures. With expert guidance, research-related infrastructure, pitch trainings, workshops, guest lectures, industrial visits, and presentation trainings, our incubation centre will guide you at every stage of your startup journey. In line with the Startup India Policy and the Chhattisgarh State Startup & Incubation Policy, KIF ensures that its incubation model is closely aligned with both national and regional priorities. Through industrial insights, networking opportunities, and seed funding support, KIF will fast-track your entrepreneurial journey. Whether you are building a new app or solving a real-world problem, it will provide you with an environment where your innovative ideas will be executed in the right direction.",
+  ];
+
+  const selectionCriteria = [
+    "Validation of Unique Ideas",
+    "Your Solution/Product",
+    "Scalability Potential",
+    "Strong and well-rounded team members"
+  ];
+
   return (
     <div>
-      <ImageContent title="Kalinga Incubation Foundation" subtitle="About KIF" description="KIF was established in 2023, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION. Recognised as a Host Institute under the Ministry of MSME, Government of India, and structured as a Section 8, not-for-profit company under the Ministry of Corporate Affairs (MCA), Government of India, its motive is to promote the spirit of research, innovation, and entrepreneurship among students and faculty members of our University. " />
+      <ImageContent 
+        title="Kalinga Incubation Foundation" 
+        subtitle="About KIF" 
+        description="KIF was established in 2023, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION. Recognised as a Host Institute under the Ministry of MSME, Government of India, and structured as a Section 8, not-for-profit company under the Ministry of Corporate Affairs (MCA), Government of India, its motive is to promote the spirit of research, innovation, and entrepreneurship among students and faculty members of our University." 
+        additionalContent={kifAdditionalContent}
+        certificateLink="https://drive.google.com/file/d/1Lz-kMpsQjxyPBScXs5mpQ3-RYEpF4g89/view?usp=drive_link"
+        certificateLinkText="Ministry of Corporate Affairs Certificate"
+        selectionCriteria={selectionCriteria}
+      />
       <VisionMission data={visionMissionData} showImg={false} />
-      <ImageListItem imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
+      <ImageListItem textClassName="hidden" listItemTextClassName="text-black"  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
       <QuickLinks links={links} title="What Awaits You At KIF?" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid"
        backgroundColor="bg-white" textColorClassName="text-black" showReadMore={false} />
-      <ImageContent title="Kalinga Incubation Foundation" subtitle="About CCRC" description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support."  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp" imageAlt="CCRC Banner"/>
+      <ImageContent title="Career and Corporate Resource Centre" subtitle="About CCRC" description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support."  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp" imageAlt="CCRC Banner" buttonLink="/career-and-corporate-resource-centre" buttonText="Read More" />
       <AdmissionSteps
         steps={kifSteps}
      subtitleClassName="hidden"
@@ -374,21 +436,17 @@ export default function KIFPage({
         showIcon={false}
         showImage={false}
       />
+      <ImageListItem textClassName="text-white" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems1} title="Join Us on Your Entrepreneurial Journey" subtitle="About KIF" description="We transform young innovators' ideas into scalable and profitable ventures. ." />
+
       <Testimonials testimonials={testimonials} />
 
-      <OrganogramOfKalinga
-        title={organogram.title}
-        description={organogram.description}
-        buttonLabel={organogram.buttonLabel}
-        readMoreLabel={organogram.readMoreLabel}
-        readLessLabel={organogram.readLessLabel}
-      />
+      
       <CenterOfExcellence
         centres={centres}
         title="Startup Partners"
         description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation."
       />
-      <StudentActivities activities={activities} title="" subtitle="KIF  Glimpse" />
+      <StudentActivities activities={activities} subtitle="" title="KIF  Glimpse" />
       <AdmissionCareer />
 
      
