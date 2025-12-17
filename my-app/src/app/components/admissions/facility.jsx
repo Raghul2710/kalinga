@@ -57,7 +57,7 @@ export default function Facility({
                         title={title}
                     />
                     {description && (
-                      <p className="text-left md:text-center text-gray-600 max-w-3xl mx-auto mt-4 mb-8">
+                      <p className="text-center text-gray-600 max-w-3xl mx-auto mt-4 mb-8">
                         {description}
                       </p>
                     )}

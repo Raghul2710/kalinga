@@ -130,7 +130,7 @@ export default function CoreValues() {
   );
 
   return (
-    <section className="py-16 bg-[var(--dark-blue)]">
+    <section className="py-16 bg-[var(--dark-blue)] mx-2 rounded-xl">
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="mb-5">

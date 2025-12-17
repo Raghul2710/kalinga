@@ -172,8 +172,8 @@ export default function Map() {
         <SectionHeading 
           subtitle="Global Scale"
           title="Expanding Horizons Through Global Partnerships"
-          subtitleClassName="mb-2"
-          titleClassName="mb-8"
+          subtitleClassName="mb-2 text-center"
+          titleClassName="mb-8 text-center"
           subtitleTextColor="!text-[var(--button-red)]"
         />
         <p className="text-center">Kalinga University is home to students from 29+ countries, fostering a truly international learning environment. Through academic exchange programs, research collaborations, and strategic global alliances, the University prepares students to become globally competent professionals and leaders.</p>
