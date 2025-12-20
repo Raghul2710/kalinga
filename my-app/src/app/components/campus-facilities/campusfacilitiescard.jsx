@@ -14,24 +14,24 @@ function Campusfacilitiescard() {
             title: "Hostel",
             description:
                 "We have fully-furnished hostels for girls and boys on campus with all necessary facilities and tight security. We ensure a comfortable and safe living environment so students never face difficulties during their stay.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/hostel.webp",
+            logoSrc: "",
             subtitle: "STUDENT ACCOMMODATION",
         },
         {
             title: "Mess",
             description:
                 "In partnership with Sodexo Food Solutions India Pvt. Ltd., separate mess facilities for boys and girls serve four nutritious meals daily—breakfast, lunch, high tea, and dinner—prepared hygienically.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/mess.webp",
+            logoSrc: "",
             subtitle: "DINING FACILITIES",
         },
         {
             title: "Canteen & Cafeteria",
             description:
                 "Operated in partnership with Sodexo, our canteen and cafeterias offer regular meals, fast food, fresh juices, snacks, and ice creams at affordable prices across campus.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/canteenandcafteria.webp",
+            logoSrc: "",
             subtitle: "FOOD & REFRESHMENTS",
         },
         {
@@ -54,8 +54,8 @@ function Campusfacilitiescard() {
             title: "Hostel Reading Room",
             description:
                 "A spacious and quiet reading room in the hostel provides a comfortable space for individual or group study without any membership requirements.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/hostelreadingroom_campusfacility.webp",
+            logoSrc: "",
             subtitle: "STUDY SPACES",
         },
         {
@@ -78,8 +78,8 @@ function Campusfacilitiescard() {
             title: "24/7 Wi-Fi Enabled Campus",
             description:
                 "The entire campus is equipped with high-speed 24/7 Wi-Fi with multiple ISPs, offering up to 1 Gbps secure internet connectivity supporting LMS and academic needs.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/wifienabledcampus.webp",
+            logoSrc: "",
             subtitle: "DIGITAL INFRASTRUCTURE",
         },
         {
@@ -94,8 +94,8 @@ function Campusfacilitiescard() {
             title: "Art Gallery",
             description:
                 "The art gallery showcases souvenirs from different countries, allowing national and international students to explore cultural diversity and global traditions.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/artgallery.webp",
+            logoSrc: "",
             subtitle: "CULTURAL EXPRESSION",
         },
         {
@@ -118,13 +118,11 @@ function Campusfacilitiescard() {
             title: "Selfie Points",
             description:
                 "We have picturesque selfie points across campus where students can capture memorable moments and share their experiences with friends and family.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/selfiepoints.webp",
+            logoSrc: "",
             subtitle: "CAMPUS EXPERIENCE",
         },
     ];
-
-
     useEffect(() => {
         const onKeyDown = (e) => e.key === "Escape" && setOpen(false);
         if (open) document.body.style.overflow = "hidden";
@@ -144,37 +142,52 @@ function Campusfacilitiescard() {
 
         e.preventDefault();
 
-        // ✅ Find which Know More button was clicked (by index)
-        const root = wrapperRef.current;
-        if (!root) return;
-
-        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter(
-            (el) => ((el.textContent || "").trim().toLowerCase().includes("know more"))
+        const buttons = Array.from(
+            wrapperRef.current.querySelectorAll("button, a")
+        ).filter((el) =>
+            (el.textContent || "").toLowerCase().includes("know more")
         );
 
-        const idx = knowMoreButtons.indexOf(btn);
-
-        // ✅ Use the same index from your cards data
+        const idx = buttons.indexOf(btn);
         const picked = cards[idx] || cards[0];
 
         setModalData({
-            title: picked?.title || "Details",
-            description: picked?.description || "",
+            title: picked.title,
+            description: picked.description,
         });
+
         setOpen(true);
     };
 
     return (
         <>
-            <div ref={wrapperRef} onClickCapture={handleClickCapture}>
+            {/* 🔒 PAGE-LEVEL FIX — SAME AS ACADEMIC CARDS */}
+            <style jsx global>{`
+        /* Campus Facilities ONLY */
+        .campus-cards-wrapper img {
+          width: 100% !important;
+          height: 340px !important;
+          object-fit: cover !important;
+        }
+
+        /* Hide ghost logos */
+        .campus-cards-wrapper img[src=""],
+        .campus-cards-wrapper img:not([src]) {
+          display: none !important;
+        }
+      `}</style>
+
+            <div
+                ref={wrapperRef}
+                onClickCapture={handleClickCapture}
+                className="campus-cards-wrapper"
+            >
                 <Cards cards={cards} />
             </div>
 
             {open && (
                 <div
                     className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
-                    role="dialog"
-                    aria-modal="true"
                     onMouseDown={() => setOpen(false)}
                 >
                     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
@@ -184,29 +197,25 @@ function Campusfacilitiescard() {
                         onMouseDown={(e) => e.stopPropagation()}
                     >
                         <div className="flex items-start justify-between gap-4">
-                            <h3 className="font-stix text-2xl md:text-3xl text-[var(--foreground)]">
+                            <h3 className="text-2xl md:text-3xl">
                                 {modalData.title}
                             </h3>
-
                             <button
-                                type="button"
+                                className="rounded-full border px-3 py-1 text-sm"
                                 onClick={() => setOpen(false)}
-                                className="rounded-full border border-black/10 px-3 py-1 text-sm hover:bg-black/5"
-                                aria-label="Close"
                             >
                                 ✕
                             </button>
                         </div>
 
-                        <p className="mt-4 text-[var(--light-text-gray)] leading-relaxed">
+                        <p className="mt-4 text-gray-600">
                             {modalData.description}
                         </p>
 
                         <div className="mt-6 flex justify-end">
                             <button
-                                type="button"
                                 onClick={() => setOpen(false)}
-                                className="rounded-lg bg-[var(--button-red)] px-5 py-2 text-sm font-medium text-white"
+                                className="bg-[var(--button-red)] text-white px-5 py-2 rounded-lg"
                             >
                                 Close
                             </button>
