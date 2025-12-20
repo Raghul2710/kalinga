@@ -3,7 +3,33 @@
 import React from "react";
 import SectionHeading from "@/app/components/general/SectionHeading";
 
-export default function CifYoutubeCallSection() {
+export default function CifYoutubeCallSection({ videoUrl = "" }) {
+  // Convert YouTube URL to embed format
+  const getEmbedUrl = (url) => {
+    if (!url) return "";
+    
+    // Handle youtu.be format
+    if (url.includes("youtu.be/")) {
+      const videoId = url.split("youtu.be/")[1].split("?")[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    
+    // Handle youtube.com format
+    if (url.includes("youtube.com/watch?v=")) {
+      const videoId = url.split("v=")[1].split("&")[0];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    
+    // If already in embed format, return as is
+    if (url.includes("youtube.com/embed/")) {
+      return url;
+    }
+    
+    return url;
+  };
+
+  const embedUrl = getEmbedUrl(videoUrl);
+
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6">
@@ -22,7 +48,7 @@ export default function CifYoutubeCallSection() {
           <div className="relative w-full pb-[56.25%]">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src=""
+              src={embedUrl}
               title="CIF In Action"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
