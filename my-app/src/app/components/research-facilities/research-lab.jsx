@@ -7,16 +7,14 @@ export default function ResearchLab() {
     <section className="research-lab-wrapper">
       {/* Scoped CSS to resize image */}
       <style jsx>{`
-        /* Make image wider and shorter (rectangle) */
         .research-lab-wrapper :global(img) {
           width: 100% !important;
-          max-width: 900px;       /* increase width */
-          height: 260px !important; /* decrease height */
+          max-width: 900px;
+          height: 260px !important;
           object-fit: cover;
           border-radius: 16px;
         }
 
-        /* Center the image horizontally */
         .research-lab-wrapper :global(.image-container),
         .research-lab-wrapper :global(.relative) {
           display: flex;
@@ -30,7 +28,10 @@ export default function ResearchLab() {
         subtitle={null}
         description="We have research labs, including the Central Instrumentation Facility (CIF), and computer labs that fulfill the research needs of students through advanced resources, tools, and technologies."
         buttonText="Read More"
-        additionalContent={[]}
+        buttonLink="/laboratories"   // ✅ this will navigate
+        readmore={true}              // ✅ keep button visible
+        hasImage={true}
+        additionalContent={[]}       // ✅ optional, keep empty
       />
     </section>
   );
