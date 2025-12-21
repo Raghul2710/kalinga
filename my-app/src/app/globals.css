@@ -149,6 +149,9 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.ccrc-scrollbar::-webkit-scrollbar-button { 
+  display:none;
+ }
 
 .scrollbar-hide {
   -ms-overflow-style: none;

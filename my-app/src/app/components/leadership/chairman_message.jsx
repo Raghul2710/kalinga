@@ -3,7 +3,7 @@ import Image from "next/image";
 import SectionHeading from "../general/SectionHeading";
 
 export default function ChairmanMessage({
-  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/leadership/chairman.jpg",
+  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Rajeev+Kumar.png",
   imageAlt = "Dr. Rajeev Kumar",
   name = "Dr. Rajeev Kumar",
   title = "Chairman",

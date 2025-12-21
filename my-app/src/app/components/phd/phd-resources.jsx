@@ -108,7 +108,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
         ),
       },
       {
-        title: "Syllabus for Ph.D. Entrance",
+        title: "Detailed Syllabus of Research Methodology",
         body: (
           <ul className="space-y-2">
             <LinkItem

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const defaultActivities = [
   {
@@ -50,18 +50,37 @@ export default function StudentActivities({
 }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const swiperRef = useRef(null);
 
   const showAsSlider = activities && activities.length > 3;
 
+  const bindNavigation = (swiperInstance) => {
+    if (!swiperInstance || !prevRef.current || !nextRef.current) return;
+    swiperInstance.params.navigation.prevEl = prevRef.current;
+    swiperInstance.params.navigation.nextEl = nextRef.current;
+    if (swiperInstance.navigation) {
+      swiperInstance.navigation.destroy();
+      swiperInstance.navigation.init();
+      swiperInstance.navigation.update();
+    }
+  };
+
+  // Re-bind navigation once refs are mounted and when activities change
+  useEffect(() => {
+    bindNavigation(swiperRef.current);
+  }, [activities]);
+
   return (
     <section className={`bg-white ${paddingClassName}`}>
-      <SectionHeading
-        title={title}
-        subtitle={subtitle}
-        subtitleClassName="text-center"
-        titleClassName="text-center"
-      />
-      <div className="container mx-auto px-2 mt-5">
+      {(title || subtitle) && (
+        <SectionHeading
+          title={title}
+          subtitle={subtitle}
+          subtitleClassName="text-center"
+          titleClassName="text-center"
+        />
+      )}
+      <div className={`container mx-auto px-2 ${(title || subtitle) ? 'mt-5' : ''}`}>
         <div className="relative">
           {showAsSlider ? (
             <Swiper
@@ -82,6 +101,11 @@ export default function StudentActivities({
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
               }}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+                // Delay binding to ensure button refs are set
+                setTimeout(() => bindNavigation(swiper), 0);
+              }}
               onInit={(swiper) => {
                 swiper.navigation.init();
                 swiper.navigation.update();
@@ -100,7 +124,7 @@ export default function StudentActivities({
                         className="rounded-lg object-cover w-full"
                       />
                       {activity.date && (
-                        <div className="absolute bottom-3 right-3 bg-[var(--dark-orange-red-light)] px-3 py-1.5 rounded text-[#000] text-[10px] font-medium">
+                        <div className="absolute bottom-3 right-3 bg-[var(--dark-orange-red-light)] px-3 py-1.5 rounded text-[#000] text-[11px] font-medium">
                           {activity.date}
                         </div>
                       )}
@@ -132,7 +156,7 @@ export default function StudentActivities({
                       className="rounded-lg object-cover w-full"
                     />
                     {activity.date && (
-                      <div className="absolute bottom-3 right-3 bg-[var(--dark-orange-red-light)] px-3 py-1.5 rounded text-[#000] text-[10px] font-medium">
+                      <div className="absolute bottom-3 right-3 bg-[var(--dark-orange-red-light)] px-3 py-1.5 rounded text-[#000] text-[11px] font-medium">
                         {activity.date}
                       </div>
                     )}

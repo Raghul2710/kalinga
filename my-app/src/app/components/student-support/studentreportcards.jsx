@@ -23,8 +23,8 @@ function Studentreportcards() {
             title: "CTCD",
             description:
                 "The Corporate Training and Consultancy Division (CTCD) regularly organises expert-led masterclasses on the latest industry trends to make students job-ready professionals.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ctcd.png",
+            logoSrc: "",
             subtitle: "INDUSTRY EXPOSURE",
         },
         {
@@ -32,8 +32,8 @@ function Studentreportcards() {
             title: "Academic & Non-Academic Clubs",
             description:
                 "Students actively participate in departmental academic clubs as well as music, dance, arts, and literature clubs, fostering creativity and collaboration.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/academicandnonacademic.webp",
+            logoSrc: "",
             subtitle: "STUDENT ENGAGEMENT",
         },
         {
@@ -50,8 +50,8 @@ function Studentreportcards() {
             description:
                 "Our eco-friendly campus promotes sustainable practices in daily activities, enabling students to learn and grow in a green environment.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/sustainablecampusenv.webp",
+            logoSrc: "",
             subtitle: "GREEN CAMPUS",
         },
         {
@@ -68,8 +68,8 @@ function Studentreportcards() {
             description:
                 "Our holistic learning approach includes career counselling, soft skills training, language labs, bridge courses, yoga, meditation, and competitive exam coaching.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/careerdevelopement.webp",
+            logoSrc: "",
             subtitle: "HOLISTIC GROWTH",
         },
         {
@@ -95,8 +95,8 @@ function Studentreportcards() {
             description:
                 "Faculty members provide personal guidance to students in academics and career development, boosting confidence and keeping them on the right path.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/mentormentee.webp",
+            logoSrc: "",
             subtitle: "PERSONAL GUIDANCE",
         },
         {
@@ -181,8 +181,8 @@ function Studentreportcards() {
             title: "TnP Cell",
             description:
                 "The Training & Placement Cell conducts interview preparation, resume building, soft skills training, and organises campus placement drives.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/trainingandplacementcell.webp",
+            logoSrc: "",
             subtitle: "PLACEMENT SUPPORT",
         },
     ];
@@ -225,7 +225,22 @@ function Studentreportcards() {
 
     return (
         <>
-            <div ref={wrapperRef} onClickCapture={handleClickCapture}>
+            <style jsx global>{`
+        /* Campus Facilities ONLY */
+        .campus-cards-wrapper img {
+          width: 100% !important;
+          height: 340px !important;
+          object-fit: cover !important;
+        }
+
+        /* Hide ghost logos */
+        .campus-cards-wrapper img[src=""],
+        .campus-cards-wrapper img:not([src]) {
+          display: none !important;
+        }
+      `}</style>
+
+            <div ref={wrapperRef} onClickCapture={handleClickCapture} className="campus-cards-wrapper">
                 <Cards cards={cards} />
             </div>
 

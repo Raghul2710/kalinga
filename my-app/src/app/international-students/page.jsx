@@ -14,6 +14,8 @@ import MediaCardSlider from '../components/general/media-card-slider';
 import UpcomingConference from '../components/research/upcoming_conference';
 import Gallery from '../components/campuslife/campusgallery';
 import AdmissionCareer from '../components/general/admission_cta';
+import OpenPositions from '../components/careers/OpenPositions';
+import VisaFrofrroGuidelines from '../components/international/visa_frofrro_guidelines';
 
 // Breadcrumb configuration
 const breadcrumbData = {
@@ -60,22 +62,39 @@ export default function InternationalStudents() {
   const videoItems = [
     {
       id: 1,
-      name: "Name",
-      description: "Lorem ipsum",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      name: "David Giir Riiny",
+      description: "B.tech Student",
+      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_AIML_TESTOMONIAL_02.mp4",
+      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_AIML_TESTOMONIAL_02.mp4",
     },
     {
       id: 2,
-      name: "Name",
-      description: "Lorem ipsum",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      name: "Salima Naguago",
+      description: "Pharmacy Student",
+      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_01.mp4",
+      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_01.mp4",
     },
     {
       id: 3,
-      name: "Name",
-      description: "Lorem ipsum",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      name: "Khazi lupiya",
+      description: "Pharmacy Student",
+      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_04.mp4",
+      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_04.mp4",
     },  
+    {
+      id: 4,
+      name: "Palchin Upadhyay",
+      description: "BA Gen Student",
+      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_01.mp4",
+      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_01.mp4",
+    },
+    {
+      id: 5,
+      name: "Issac",
+      description: "BSW Student",
+      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_02.mp4",
+      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_02.mp4",
+    },
   ]
   const boxItems = [
     {
@@ -186,79 +205,79 @@ export default function InternationalStudents() {
     {
       id: 1,
       title: "Students",
-      value: 8000,
+      value: "8000 +",
       description: "Students",
     },
     {
       id: 2,
       title: "International students from",
-      value: 600,
+      value: "600 +",
       description: "International students from",
     },
     {
       id: 3,
       title: "Countries",
-      value: 29,
+      value: "29 +",
       description: "Countries",
     },
     {
       id: 4,
       title: "Scholarships Distributed",
-      value: 3,
+      value: "3 Cr. +",
       description: "3 Cr. + Scholarships Distributed",
     },
     {
       id: 5,
       title: "Programs",
-      value: 130,
+      value: "130 +",
       description: "Programs",
     },
     {
       id: 6,
       title: "Recruitment Partners",
-      value: 250,
+      value: "250 +",
       description: "Recruitment Partners",
     },
     {
       id: 7,
       title: "Research Publications",
-      value: 3360,
+      value: "3360 +",
       description: "Research Publications",
     },
     {
       id: 8,
       title: "Patents",
-      value: 510,
+      value: "510 +",
       description: "Patents",
     },
     {
       id: 9,
       title: "Sponsored Research Projects",
-      value: 160,
+      value: "160 +",
       description: "Sponsored Research Projects",
     },
     {
       id: 10,
       title: "Consultancy Projects",
-      value: 130,
+      value: "130 +",
       description: "Consultancy Projects",
     },
     {
       id: 11,
       title: "MoUs Signed",
-      value: 200,
+      value: "200 +",
       description: "MoUs Signed",
     },
     {
       id: 12,
       title: "Centres of Excellence",
-      value: 7,
+      value: "7",
       description: "Centres of Excellence",
     },
     {
       id: 13,
       title: "Laboratories",
-      value: 90,
+      value: "90 +",
       description: "Laboratories",
     },
   ]
@@ -275,21 +294,21 @@ export default function InternationalStudents() {
       id: 2,
       stepNumber: "02",
       title: "Step 2",
-      description: "Offer letter will be issued after checking the eligibility",
+      description: "Offer letter",
       backDescription: "Offer letter will be issued after checking the eligibility",
     },
     {
       id: 3,
       stepNumber: "03",
       title: "Step 3",
-      description: "Registration fee of USD 300 is to be paid to the University, and share the proof of payment with us over email",
+      description: "Registration fee",
       backDescription: "Registration fee of USD 300 is to be paid to the University, and share the proof of payment with us over email",
     },
     {
       id: 4,
       stepNumber: "04",
       title: "Step 4",
-      description: "Admission Letter and Visa Letter will be issued by the University. You need to contact the nearest Indian Embassy / High Commission to initiate the Student Visa Process",
+      description: "Admission and Visa Letter",
       backDescription: "Admission Letter and Visa Letter will be issued by the University. You need to contact the nearest Indian Embassy / High Commission to initiate the Student Visa Process",
     },
   ]
@@ -297,9 +316,19 @@ export default function InternationalStudents() {
     <>
       <MainIntro
         title="International Students At KU"
-        description="Kalinga University, established in 2013, stands out as one of the leading private universities strategically located in the Smart City of New Raipur, Chhattisgarh. The University has consistently ranked among the top 101–150 universities in India under the NIRF Rankings 2025 for the fourth consecutive year and has also received a NAAC B+ accreditation, continuously shining on the horizons of high-quality education with equal opportunities to its international students."
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/international-main-intro.webp"
+        description={[
+          "Our international collaborations are with different nationalities, including Afghanistan, Angola, Bangladesh, Burundi, Cameroon, Congo, Gambia, Ghana, Ivory Coast, Lesotho, Liberia, Malawi, Mozambique, Namibia, Nepal, Nigeria, PNG, Rwanda, Somalia, South Korea, South Sudan, Sudan, Swaziland, Syria, Tanzania, Zambia, Zimbabwe, ⁠Singapore, ⁠South Africa.",
+          "We offer our global students a vibrant platform where they can all express their views and share their country's culture and values.",
+          "From pre-arrival to post-arrival, we're here to support them at every step of their academic journey.",
+          "We conduct one-on-one counselling sessions for every student, helping them select the programs of their interest.",
+          "Our highly experienced faculty members provide unparalleled mentorship to our international students in academics and personal growth.",
+          "Explore Diploma, UG, PG, and Doctorate programs designed to meet your academic aspirations.",
+          "At Kalinga, you're not just another student but a part of a global community where IDEAS are nurtured and DREAMS are fulfilled."
+        ]}
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/international-students-intro.jpg"
         imageAlt="International Students"
+        initialVisibleParagraphs={2}
+        showKnowMore={true}
       />
       <PublicationGrid stats={publicationStats} />
       <AccreditationRanking
@@ -310,7 +339,7 @@ export default function InternationalStudents() {
         title="Why is Kalinga University the Right Choice?"
         subtitle=""
         description="At Kalinga University, our international students benefit from complete support and guidance, world-class infrastructure, and unmatched campus facilities. With our quality education system, our global students will be well-prepared for the professional world. Here, we just don't value your academic journey, but care about your emotional well-being too."
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-why.jpg"
         imageAlt="International Students"
         cards={internationalStudentsFeatureCards}
       />        
@@ -325,34 +354,71 @@ export default function InternationalStudents() {
          headingClassName="" 
          cardBackgroundColor="bg-[var(--button-red)]"
          cardTitleClassName="text-white"
+         listItemTextClassName="text-white"
        /> 
       <StudentCell />
+      <VisaFrofrroGuidelines />
       <AdmissionSteps   
         steps={internationalAdmissionSteps}
         bgColor="bg-[var(--background)]"
       />
       <AppreciationLetterLayout />
       <MainIntro
-        title="International Students At KU"
-        description="Kalinga University, established in 2013, stands out as one of the leading private universities strategically located in the Smart City of New Raipur, Chhattisgarh. The University has consistently ranked among the top 101–150 universities in India under the NIRF Rankings 2025 for the fourth consecutive year and has also received a NAAC B+ accreditation, continuously shining on the horizons of high-quality education with equal opportunities to its international students."
+        subtitle="Faith and Worship Facility"
+        title="Honouring Every Faith and Religion"
+        description={[
+          "Kalinga University, established in 2013, stands out as one of the leading private universities strategically located in the Smart City of New Raipur, Chhattisgarh. The University has consistently ranked among the top 101–150 universities in India under the NIRF Rankings 2025 for the fourth consecutive year and has also received a NAAC B+ accreditation, continuously shining on the horizons of high-quality education with equal opportunities to its international students.",
+          "At Kalinga University, you'll find the world in one place. With students from 29+ countries, we celebrate their cultures, faiths, and beliefs. We offer an inclusive environment to all our students where they can freely practice their religion and stay connected with their roots."
+        ]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/international-students-group.webp"
         imageAlt="International Students"
         reverseLayout={true}
         applyTransform3dSlant={false}
+        initialVisibleParagraphs={1}
+        showKnowMore={true}
+        hidePointsUntilExpanded={true}
+        points={[
+          "Free-of-cost transportation facility for prayers at the Mosque (on Fridays) and the Church (on Sundays) to our Muslim and Christian students.",
+          "A visit to the Temple is organised on demand for our Hindu students.",
+          "During Ramadan, an appropriate meal plan is provided to our Muslim students.",
+          "During Navratri, a special meal is provided to our Hindu Students.",
+          "The Meditation Room is available for all students (Hostel + Regular) to meditate or offer prayers."
+        ]}
+      />
+      <OpenPositions 
+        title="BRIDGE Courses for International Students" 
+        subtitle="Pre-Semester Preparation Programs"
+        description="BRIDGE Courses for newly admitted international students are conducted before the commencement of the first semester classes. The main objective of the course is to bridge the gap between subjects studied at the Pre-university level and subjects they would be studying here. We also understand that the students applying to the university come from different backgrounds and countries, and thus, we have included a few topics that will help them understand the local culture and history of India. To make this bridge course interesting for the students, we have included workshops related to art and culture & a hobby class too. We have bridge courses of 2 months, 4 months, and 6 months (5 days a week)."
+        positions={[
+          {
+            title: "Technical BRIDGE Courses",
+            description: "Designed for students enrolling in technical programs, covering essential subjects including Maths, Physics, Chemistry, and Biology. These courses ensure you have a strong foundation before starting your technical degree program."
+          },
+          {
+            title: "Non-Technical BRIDGE Courses",
+            description: "Tailored for students in non-technical programs, focusing on Yoga & Meditation, and Indian Arts & Crafts. These courses help you adapt to the academic environment while exploring India's rich cultural heritage."
+          },
+          {
+            title: "Common Topics (Technical & Non-Technical)",
+            description: "All BRIDGE course students benefit from common topics including English & Soft Skills, Language Communications (Hindi), Indian Culture & Lifestyle, IT Skills, Grooming & Personality Development, GD & PI, and Hobby Classes (Music & Dance / Painting & Other Fine Arts / Modelling & Fashion Style / Library Arts / Book Club)."
+          }
+        ]}
       />
       <OrganogramOfKalinga
         title="Download Brochure 2025-26"
         description="Kalinga University follows a well-defined governance structure that ensures smooth administration, transparency, and institutional excellence."
         buttonLabel="Download PDF"
-        href="/about-us"
+        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/International+Student_compressed.pdf"
+        useContainer={true}
       />
-      <MainIntro 
-        title="International Students At KU"
-        description="Kalinga University, established in 2013, stands out as one of the leading private universities strategically located in the Smart City of New Raipur, Chhattisgarh. The University has consistently ranked among the top 101–150 universities in India under the NIRF Rankings 2025 for the fourth consecutive year and has also received a NAAC B+ accreditation, continuously shining on the horizons of high-quality education with equal opportunities to its international students."
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/international-students-group.webp"
+      <MainIntro
+        subtitle="Campus Safety and Security"
+        title="A Safe & Protected Learning Environment "
+        description="Kalinga University is committed to maintaining a safe and secure campus environment for its students, staff members, and visitors. The entire campus area, including hostels, parking areas, and academic buildings, is very well-secured by the in-house security team. CCTV cameras are also installed all across the campus to continuously monitor all the activities of the University. We even encourage everyone on our campus to take care of their personal belongings. "
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-sage.jpg"
         imageAlt="International Students"
-        reverseLayout={false}
-        applyTransform3dSlant={true}
+        initialVisibleParagraphs={1}
+        showKnowMore={true}
       />
       <MediaCardSlider
         categoryTitle="Video Interviews"
@@ -371,9 +437,6 @@ export default function InternationalStudents() {
         backgroundColorcard="bg-white"
         showCategory={false}
         showDate={false}
-        imageWidth={300}
-        imageHeight={300}
-        imageContainerClass="w-full md:w-1/3 flex justify-center"
       />
       <Gallery title="International Students Glimpse" /> 
       <AdmissionCareer />

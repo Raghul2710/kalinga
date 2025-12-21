@@ -50,12 +50,13 @@ export default function AdmissionSteps({
   subtitle = "Admission Procedure",
   title = "Steps To Get Admission Into KU",
   showHeaderButton = true,
-  ctaLabel = "Admission Now",
+  ctaLabel = "Enquiry Now",
   onCtaClick,
   showReadMore = true,
   showIcon = true,
   showImage = true,
   bgColor = "bg-[var(--light-gray)]",
+  itemsAlignment = "end",
 }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -204,7 +205,7 @@ export default function AdmissionSteps({
                           {/* Content */}
                           <div className="relative z-10 flex flex-col h-full">
                             {/* Icon and Text Row */}
-                            <div className="flex items-end gap-4 flex-1 pt-4">
+                            <div className={`flex gap-4 flex-1 pt-4 ${itemsAlignment === "center" ? "items-center" : "items-end"}`}>
                               {/* Icon Image */}
                               {showIcon && (
                                 <div className="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center text-[var(--button-red)]">
@@ -227,7 +228,7 @@ export default function AdmissionSteps({
                               {/* Title and Description */}
                               <div className="flex-1">
                                 {/* Title */}
-                                <h4 className="step-title text-lg md:text-xl mb-1">
+                                <h4 className="step-title text-lg md:text-xl mb-1 font-plus-jakarta-sans  ">
                                   {step.title}
                                 </h4>
 

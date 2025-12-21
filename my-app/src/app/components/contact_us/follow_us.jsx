@@ -62,7 +62,7 @@ const socialLinks = [
   },
   {
     id: "twitter",
-    label: "Twitter",
+    label: "X (Twitter)",
     href: "https://twitter.com/Kalingaraipur",
     icon: (
       <svg
@@ -70,7 +70,7 @@ const socialLinks = [
         viewBox="0 0 24 24"
         fill="currentColor"
       >
-        <path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 005.001-1.721 4.036 4.036 0 01-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 01-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 01-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 008.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 016.968-2.756 7.936 7.936 0 002.556-.973 4.02 4.02 0 01-1.771 2.22 8.073 8.073 0 002.319-.624 8.645 8.645 0 01-2.019 2.083z" />
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
       </svg>
     ),
   },
@@ -78,7 +78,7 @@ const socialLinks = [
 
 export default function FollowUs() {
   return (
-    <section className="py-12 sm:py-16 bg-white mt-12 sm:mt-16">
+    <section className="py-16 bg-white mt-12 sm:mt-16">
       <div className="container mx-auto px-6 flex flex-col items-center">
         <SectionHeading
           title="Follow us"

@@ -64,15 +64,21 @@ const Gallery = ({
   title = "Gallery",
   backgroundColor = "bg-white",
   paddingClassName = "py-16",
-  titleClassName = ""
+  titleClassName = "",
+  forceSliderOnMobile = false
 }) => {
-  const useSlider = images.length > 4
+  const useSlider = images.length > 4 || forceSliderOnMobile
+  
+  // Determine title alignment based on titleClassName
+  const titleAlignment = titleClassName.includes('text-left') ? 'text-left' : 
+                        titleClassName.includes('text-right') ? 'text-right' : 
+                        'text-center';
 
   return (
     <section className={`${backgroundColor} ${paddingClassName}`}>
       <div className="px-2">
         {/* Title */}
-        <div className="mb-6 sm:mb-8 md:mb-10 text-center">
+        <div className={`mb-6 sm:mb-8 md:mb-10 ${titleAlignment}`}>
           <SectionHeading title={title} titleClassName={titleClassName} />
         </div>
 
@@ -122,23 +128,57 @@ const Gallery = ({
           </div>
         ) : (
           /* Grid Layout - when 4 or fewer images */
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
-            {images.map((item) => (
-              <div 
-                key={item.id} 
-                className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer w-[calc(50%-6px)] sm:w-[calc(50%-8px)] md:w-[calc(25%-18px)] max-w-[300px]"
-              >
-                <Image 
-                  src={item.image} 
-                  alt={item.alt} 
-                  fill 
-                  className="object-cover group-hover:scale-110 transition-transform duration-300" 
-                />
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+          <>
+            {/* Mobile Slider - if forceSliderOnMobile is true */}
+            {forceSliderOnMobile && (
+              <div className="md:hidden relative">
+                <Swiper
+                  modules={[Autoplay]}
+                  loop={true}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                  spaceBetween={16}
+                  slidesPerView={1.2}
+                  className="gallery-swiper"
+                >
+                  {images.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
+                        <Image 
+                          src={item.image} 
+                          alt={item.alt} 
+                          fill 
+                          className="object-cover group-hover:scale-110 transition-transform duration-300" 
+                        />
+                        {/* Overlay on hover */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
-            ))}
-          </div>
+            )}
+            {/* Desktop Grid - always show for grid layout */}
+            <div className={`flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 ${forceSliderOnMobile ? 'hidden md:flex' : ''}`}>
+              {images.map((item) => (
+                <div 
+                  key={item.id} 
+                  className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer w-[calc(50%-6px)] sm:w-[calc(50%-8px)] md:w-[calc(25%-18px)] max-w-[300px]"
+                >
+                  <Image 
+                    src={item.image} 
+                    alt={item.alt} 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-300" 
+                  />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                </div>
+              ))}
+            </div>
+          </>
         )}
       </div>
     </section>

@@ -56,7 +56,9 @@ const defaultPrograms = [
 export default function ProgramsOffered({ 
   programs = defaultPrograms,
   title = "Programs Offered",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi"
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi",
+  backgroundImage = "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/programs-offered.webp",
+  imageAlt = "Students"
 }) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -78,8 +80,8 @@ export default function ProgramsOffered({
             </div>
             <div className="mt-auto">
               <Image
-                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/programs-offered.webp"
-                alt="Students"
+                src={backgroundImage}
+                alt={imageAlt}
                 width={500}
                 height={400}
                 className="rounded-lg object-cover w-full h-[300px] md:h-[400px] lg:h-[500px]"

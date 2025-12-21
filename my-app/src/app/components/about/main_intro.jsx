@@ -33,6 +33,7 @@ export default function MainIntro({
   reverseLayout = false,
   applyTransform3dSlant = true,
   descriptionClassName = "text-[var(--light-text-gray)]",
+  hidePointsUntilExpanded = false,
 }) {
   const descriptionArray = Array.isArray(description) ? description : [description];
   const [showAll, setShowAll] = useState(false);
@@ -41,7 +42,7 @@ export default function MainIntro({
     : descriptionArray.slice(0, initialVisibleParagraphs);
 
   return (
-    <section className="md:py-16 bg-white pt-18 md:pb-16 pb-10 ">
+    <section className="md:py-16 bg-white py-16 pb-10 ">
       <div className="container mx-auto px-2">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Section - Text Content */}
@@ -61,7 +62,7 @@ export default function MainIntro({
               ))}
 
               {/* Points List */}
-              {points && Array.isArray(points) && points.length > 0 && (
+              {points && Array.isArray(points) && points.length > 0 && (!hidePointsUntilExpanded || showAll) && (
                 <ul className="space-y-3 mt-4">
                   {points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-[var(--light-text-gray)] leading-relaxed">

@@ -4,10 +4,10 @@ import Link from 'next/link';
 import GlobalArrowButton from '../general/global-arrow_button';
 const HeroSection = () => {
   return (
-    <section className="-mt-[80px] relative h-[500px] md:h-[600px] lg:h-[700px] md:mx-2 mx-0">
+    <section className="-mt-[80px] relative h-[500px] md:h-[600px] lg:h-[700px]">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat  rounded-xl sm:rounded-4xl h-full w-full"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat  h-full w-full"
         style={{
           backgroundImage: `url('https://kalinga-university.s3.ap-south-1.amazonaws.com/kalingabanner.webp')`,
           backgroundColor: '#e6e9f2', // fallback color

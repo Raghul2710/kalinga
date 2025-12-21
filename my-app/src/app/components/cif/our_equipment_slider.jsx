@@ -13,25 +13,91 @@ const equipments = [
     id: 1,
     title: "Scanning Electron Microscope (SEM)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
   },
   {
     id: 2,
     title: "High Performance Liquid Chromatography (HPLC)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
   },
   {
     id: 3,
     title: "FT-IR Spectrophotometer",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
   },
   {
-    id: 3,
-    title: "FT-IR Spectrophotometer",
+    id: 4,
+    title: "X-Ray Diffractometer (XRD)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 5,
+    title: "PCR (Thermal Cycler)",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 6,
+    title: "UV-Visible Double Beam Spectrophotometer",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 7,
+    title: "3D Printer",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 8,
+    title: "Bio-Chemistry Analyzer",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 9,
+    title: "Autoclave (Portable)",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 10,
+    title: "DNA Gel Electrophoresis Setup",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 11,
+    title: "Rotary Tablet Press",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 12,
+    title: "UV Transilluminator",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 13,
+    title: "Viscometer (Touch Screen)",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 14,
+    title: "Viscometer (Digital)",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
+  },
+  {
+    id: 15,
+    title: "Hot Air Oven",
+    image:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-1.webp",
   },
 ];
 

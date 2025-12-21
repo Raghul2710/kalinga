@@ -9,7 +9,6 @@ function Academiccards() {
     const [open, setOpen] = useState(false);
     const [modalData, setModalData] = useState({ title: "", description: "" });
 
-    // change image for every card
     const PLACEHOLDER =
         "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png";
 
@@ -18,40 +17,40 @@ function Academiccards() {
             title: "Digital Classrooms",
             description:
                 "Our classrooms have smart boards, projectors, and audio-visual tools, which make learning fun and interactive. Students actively use these tools for presentations and collaborative learning.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/digitalclassrooms.webp",
+            logoSrc: "",
             subtitle: "ACADEMIC INFRASTRUCTURE",
         },
         {
             title: "Resource-Rich Library",
             description:
                 "Our library is packed with the latest collection of books, journals, research papers, digital resources, magazines, and newspapers to support academic and research excellence.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/resourcerichlibrary.webp",
+            logoSrc: "",
             subtitle: "ACADEMIC INFRASTRUCTURE",
         },
         {
             title: "Modern Laboratories",
             description:
                 "We have over 90+ laboratories, including language labs, central instrumentation facilities, computer labs with 1600+ high-tech systems, and advanced research labs.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
+            logoSrc: "",
             subtitle: "RESEARCH & PRACTICAL LEARNING",
         },
         {
             title: "Incubation Centre",
             description:
                 "Kalinga Incubation Foundation (KIF) supports students’ entrepreneurial ideas and helps transform them into successful startup ventures through mentorship, networking, and seed funding.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
+            logoSrc: "",
             subtitle: "INNOVATION & STARTUPS",
         },
         {
             title: "Moot Court",
             description:
                 "Our Moot Court provides law students with a real courtroom experience, helping them participate in trials, competitions, and practical legal training to build confidence.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/mootcourt.webp",
+            logoSrc: "",
             subtitle: "LEGAL EDUCATION",
         },
         {
@@ -66,8 +65,8 @@ function Academiccards() {
             title: "Film Making Studio",
             description:
                 "Our fully equipped film making studio enables students to learn script writing, acting, direction, lighting, editing, set design, camera handling, and live streaming.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/filmmakingstudio.webp",
+            logoSrc: "",
             subtitle: "CREATIVE ARTS",
         },
         {
@@ -106,8 +105,8 @@ function Academiccards() {
             title: "Audio-Visual Centre",
             description:
                 "The audio-visual centre offers advanced tools and resources that support interactive learning, presentations, and student projects.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/audiovisualcentre.webp",
+            logoSrc: "",
             subtitle: "LEARNING SUPPORT",
         },
         {
@@ -122,72 +121,72 @@ function Academiccards() {
             title: "E-Learning Rooms (SWAYAM / MOOCs)",
             description:
                 "E-learning rooms offer high-speed internet, printing facilities, and access to digital libraries, online courses, and research databases.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/elearning.webp",
+            logoSrc: "",
             subtitle: "DIGITAL EDUCATION",
         },
         {
             title: "Training & Placement Cell",
             description:
                 "The TnP cell conducts interview preparation, resume building, soft skills training, and organises campus placement drives for students.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/trainingandplacementcell.webp",
+            logoSrc: "",
             subtitle: "CAREER SERVICES",
         },
         {
             title: "Scholarships",
             description:
                 "Students can avail scholarships up to 100% based on eligibility, including merit-based, sports, entrance exams, content creators, and more.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/scolarships.webp",
+            logoSrc: "",
             subtitle: "STUDENT SUPPORT",
         },
         {
             title: "Research Facilities",
             description:
                 "High-tech instruments, research labs, centres of excellence, IPR cell, and dedicated faculty support undergraduate, postgraduate, and Ph.D. research.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/researchfacilities.webp",
+            logoSrc: "",
             subtitle: "ADVANCED RESEARCH",
         },
         {
             title: "Value Added Courses",
             description:
                 "Short-term certificate courses conducted by industry experts help students enhance their skills and add value to their resumes.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/valueaddedcourses.webp",
+            logoSrc: "",
             subtitle: "SKILL DEVELOPMENT",
         },
         {
             title: "Counselling Support",
             description:
                 "Experienced counsellors provide one-on-one sessions to support students facing academic stress or personal challenges.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/conselling.webp",
+            logoSrc: "",
             subtitle: "STUDENT WELLBEING",
         },
         {
             title: "Recording Studio",
             description:
                 "Our recording studio offers advanced tools for producing high-quality audio and video content, supporting creative expression.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recordingstudio.webp",
+            logoSrc: "",
             subtitle: "MEDIA PRODUCTION",
         },
         {
             title: "Career Development Centre",
             description:
                 "The Career Development Centre guides students with job search strategies, training programs, internships, and placement opportunities.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/careerdevelopmentcentre.webp",
+            logoSrc: "",
             subtitle: "PROFESSIONAL GROWTH",
         },
         {
             title: "Business Lab",
             description:
                 "The business lab provides advanced systems and software to help commerce and management students master data analysis and decision-making tools.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/businesslab.webp",
+            logoSrc: "",
             subtitle: "MANAGEMENT STUDIES",
         },
         {
@@ -199,8 +198,6 @@ function Academiccards() {
             subtitle: "DATA & ANALYTICS",
         },
     ];
-
-
 
     useEffect(() => {
         const onKeyDown = (e) => e.key === "Escape" && setOpen(false);
@@ -216,25 +213,23 @@ function Academiccards() {
         const btn = e.target?.closest?.("button, a");
         if (!btn) return;
 
-        const label = (btn.textContent || "").trim().toLowerCase();
+        const label = (btn.textContent || "").toLowerCase();
         if (!label.includes("know more")) return;
 
         e.preventDefault();
 
-        const root = wrapperRef.current;
-        if (!root) return;
-
-        // Find all "Know More" buttons, pick clicked button index
-        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter(
-            (el) => ((el.textContent || "").trim().toLowerCase().includes("know more"))
+        const buttons = Array.from(
+            wrapperRef.current.querySelectorAll("button, a")
+        ).filter((el) =>
+            (el.textContent || "").toLowerCase().includes("know more")
         );
 
-        const idx = knowMoreButtons.indexOf(btn);
-        const picked = cards[idx] || cards[0];
+        const index = buttons.indexOf(btn);
+        const picked = cards[index] || cards[0];
 
         setModalData({
-            title: picked?.title || "Details",
-            description: picked?.description || "",
+            title: picked.title,
+            description: picked.description,
         });
 
         setOpen(true);
@@ -242,15 +237,31 @@ function Academiccards() {
 
     return (
         <>
-            <div ref={wrapperRef} onClickCapture={handleClickCapture}>
+
+            <style jsx global>{`
+        .academic-cards-wrapper img {
+          width: 100% !important;
+          height: 340px !important; /* control card image height */
+          object-fit: cover !important;
+        }
+
+        .academic-cards-wrapper img[src=""],
+        .academic-cards-wrapper img:not([src]) {
+          display: none !important;
+        }
+      `}</style>
+
+            <div
+                ref={wrapperRef}
+                onClickCapture={handleClickCapture}
+                className="academic-cards-wrapper"
+            >
                 <Cards cards={cards} />
             </div>
 
             {open && (
                 <div
                     className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
-                    role="dialog"
-                    aria-modal="true"
                     onMouseDown={() => setOpen(false)}
                 >
                     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
@@ -259,30 +270,26 @@ function Academiccards() {
                         className="relative w-full max-w-2xl rounded-2xl bg-white p-6 md:p-8 shadow-2xl"
                         onMouseDown={(e) => e.stopPropagation()}
                     >
-                        <div className="flex items-start justify-between gap-4">
-                            <h3 className="font-stix text-2xl md:text-3xl text-[var(--foreground)]">
+                        <div className="flex justify-between items-start gap-4">
+                            <h3 className="text-2xl md:text-3xl">
                                 {modalData.title}
                             </h3>
-
                             <button
-                                type="button"
+                                className="rounded-full border px-3 py-1 text-sm"
                                 onClick={() => setOpen(false)}
-                                className="rounded-full border border-black/10 px-3 py-1 text-sm hover:bg-black/5"
-                                aria-label="Close"
                             >
                                 ✕
                             </button>
                         </div>
 
-                        <p className="mt-4 text-[var(--light-text-gray)] leading-relaxed">
+                        <p className="mt-4 text-gray-600">
                             {modalData.description}
                         </p>
 
                         <div className="mt-6 flex justify-end">
                             <button
-                                type="button"
                                 onClick={() => setOpen(false)}
-                                className="rounded-lg bg-[var(--button-red)] px-5 py-2 text-sm font-medium text-white"
+                                className="bg-[var(--button-red)] text-white px-5 py-2 rounded-lg"
                             >
                                 Close
                             </button>

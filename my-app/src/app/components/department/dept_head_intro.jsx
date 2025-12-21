@@ -151,8 +151,8 @@ function MentorCard({
           </div>
 
           <div className="flex items-end justify-end relative z-10">
-            <div className="absolute bottom-0">
-              <div className="flex justify-end gap-1 mt-4 sm:mt-0">
+            <div className="absolute bottom-[-12px] md:bottom-0">
+              <div className="flex justify-end gap-1 mt-6 sm:mt-0">
                 <svg width="26" height="41" viewBox="0 0 26 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.76369 40.0727C5.26097 39.9475 4.25915 38.57 4.5096 37.1925C4.63483 36.4411 5.01051 35.815 5.63665 35.3141C11.898 31.1816 12.2737 26.2977 11.1466 22.5409H2.50597C1.12847 22.5409 0.00142097 21.4139 0.00142097 20.0364V2.50454C0.00142097 1.12705 1.12847 0 2.50597 0H22.5423C23.9198 0 25.0469 1.12705 25.0469 2.50454V24.795C25.0469 27.9257 24.0451 31.0564 22.1666 33.5609C19.9126 36.5664 15.4044 39.9475 6.76369 40.0727Z" fill="white"/>
                 </svg>
@@ -231,7 +231,7 @@ function MentorCard({
 export default function MentorIntro({ items, ...restProps }) {
   const entries = Array.isArray(items) && items.length > 0 ? items : [restProps];
   return (
-    <section className="py-16 bg-white pt-30">
+    <section className="py-16 bg-white md:pt-30">
       <div className="container mx-auto px-2 space-y-12">
         {entries.map((item, idx) => (
           <MentorCard key={idx} {...item} />

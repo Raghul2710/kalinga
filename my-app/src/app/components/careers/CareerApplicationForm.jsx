@@ -82,17 +82,25 @@ export default function CareerApplicationForm({
       {/* TABS - hidden for Alumni variant */}
       {!hideTabs && (
         <div className="relative mt-10 pb-2 border-b border-[var(--background)]/30">
-          
+          <style jsx>{`
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;
+            }
+            .scrollbar-hide {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+          `}</style>
           <div
             ref={tabsContainerRef}
-            className="flex gap-10 justify-center overflow-x-auto no-scrollbar px-2"
+            className="flex gap-4 sm:gap-6 md:gap-10 justify-start sm:justify-center overflow-x-auto scrollbar-hide px-2 sm:px-0"
           >
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 ref={(el) => (tabRefs.current[tab.id] = el)}
                 onClick={() => setActiveTab(tab.id)}
-                className={`pb-3 text-sm sm:text-base ${
+                className={`flex-shrink-0 pb-3 text-xs sm:text-sm md:text-base whitespace-nowrap px-2 sm:px-0 ${
                   activeTab === tab.id ? "text-[var(--dark-orange-red-light)] font-medium" : "text-[var(--background)]"
                 }`}
               >

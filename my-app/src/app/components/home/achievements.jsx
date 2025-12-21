@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import GlobalArrowButton from '../general/global-arrow_button'
@@ -190,11 +190,16 @@ export default function Achievements() {
               </div>
 
               <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Autoplay]}
                 navigation={{
                   nextEl: '.achievements-swiper-button-next',
                   prevEl: '.achievements-swiper-button-prev',
                 }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
                 spaceBetween={24}
                 slidesPerView={1}
                 breakpoints={{

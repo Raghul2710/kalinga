@@ -114,7 +114,7 @@ export default function KalseeExamPattern() {
                   </tr>
                 </thead>
 
-                <tbody className="text-[var(--foreground)]/80">
+                <tbody className="text-[var(--foreground)]">
                   {activeData.rows.map((r, idx) => (
                     <tr key={idx} className="border-t border-black/10">
                       <td className="px-5 py-4">{r.sl}</td>

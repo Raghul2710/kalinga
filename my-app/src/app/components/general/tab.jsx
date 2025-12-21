@@ -21,7 +21,7 @@ export function Tabs({ defaultValue, value, onValueChange, className = "", child
 
 export function TabsList({ className = "", children }) {
   return (
-    <div className={["flex flex-wrap gap-[14px]", className].join(" ")}>
+    <div className={["flex gap-[14px] bg-white rounded-lg p-1", className].join(" ")}>
       {children}
     </div>
   );
@@ -39,7 +39,7 @@ export function TabsTrigger({ value, className = "", children }) {
       onClick={() => ctx.setValue(value)}
       className={[
         // pixel-ish: height, padding, radius like your screenshot
-        "h-[44px] rounded-[6px] px-[18px] text-[14px] font-semibold leading-none transition",
+        "h-[55px] rounded-[6px] px-[18px] text-[14px] leading-none transition",
         "border border-white/30",
         isActive ? "bg-[var(--button-red)] text-white" : "bg-white text-[var(--foreground)] cursor-pointer",
         className,

@@ -176,15 +176,23 @@ export const LogoLoop = memo(
             containerRef.current.style.height = `${targetHeight}px`;
         }
         if (sequenceHeight > 0) {
-          setSeqHeight(Math.ceil(sequenceHeight));
+          const newHeight = Math.ceil(sequenceHeight);
           const viewport = containerRef.current?.clientHeight ?? parentHeight ?? sequenceHeight;
           const copiesNeeded = Math.ceil(viewport / sequenceHeight) + ANIMATION_CONFIG.COPY_HEADROOM;
-          setCopyCount(Math.max(ANIMATION_CONFIG.MIN_COPIES, copiesNeeded));
+          const newCopyCount = Math.max(ANIMATION_CONFIG.MIN_COPIES, copiesNeeded);
+          
+          // Only update state if values actually changed to prevent infinite loops
+          setSeqHeight(prev => prev !== newHeight ? newHeight : prev);
+          setCopyCount(prev => prev !== newCopyCount ? newCopyCount : prev);
         }
       } else if (sequenceWidth > 0) {
-        setSeqWidth(Math.ceil(sequenceWidth));
+        const newWidth = Math.ceil(sequenceWidth);
         const copiesNeeded = Math.ceil(containerWidth / sequenceWidth) + ANIMATION_CONFIG.COPY_HEADROOM;
-        setCopyCount(Math.max(ANIMATION_CONFIG.MIN_COPIES, copiesNeeded));
+        const newCopyCount = Math.max(ANIMATION_CONFIG.MIN_COPIES, copiesNeeded);
+        
+        // Only update state if values actually changed to prevent infinite loops
+        setSeqWidth(prev => prev !== newWidth ? newWidth : prev);
+        setCopyCount(prev => prev !== newCopyCount ? newCopyCount : prev);
       }
     }, [isVertical]);
 

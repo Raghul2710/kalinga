@@ -1,7 +1,8 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import SectionHeading from './SectionHeading'
 import DataTable from './data-table'
+import GlobalArrowButton from './global-arrow_button'
 
 const defaultFAQItems = [
   {
@@ -57,7 +58,26 @@ const FAQ = ({
 }) => {
   const [openItems, setOpenItems] = useState(new Set())
   const [faqItems, setFaqItems] = useState(items)
-  const [collapsedSections, setCollapsedSections] = useState(new Set())
+  // Initialize with all sections collapsed except the first one for button variant
+  const [collapsedSections, setCollapsedSections] = useState(() => {
+    if (variant === "button" && buttons.length > 0) {
+      const initialSet = new Set()
+      buttons.forEach((item, index) => {
+        if (index > 0) { // Skip first item (index 0) - keep it open
+          initialSet.add(`button-section-${item.id || index}`)
+        }
+      })
+      return initialSet
+    }
+    return new Set()
+  })
+
+  // Update faqItems state when items prop changes (only for editable variant)
+  useEffect(() => {
+    if (variant === "editable") {
+      setFaqItems(items)
+    }
+  }, [items, variant])
   const [editableTableData, setEditableTableData] = useState(
     variant === "table" 
       ? items.map((item, index) => ({
@@ -71,16 +91,21 @@ const FAQ = ({
   )
 
   const toggleItem = (id) => {
+    console.log('FAQ toggle clicked for id:', id)
     setOpenItems(prev => {
+      console.log('Previous openItems:', Array.from(prev))
       const newSet = new Set(prev)
       if (newSet.has(id)) {
         newSet.delete(id)
+        console.log('Closing item:', id)
       } else {
         if (!allowMultipleOpen) {
           newSet.clear()
         }
         newSet.add(id)
+        console.log('Opening item:', id)
       }
+      console.log('New openItems:', Array.from(newSet))
       return newSet
     })
   }
@@ -197,12 +222,14 @@ const FAQ = ({
       <Wrapper className={`${backgroundColor} py-16`}>
         <div className="container mx-auto px-2">
           {showHeading && (
-            <SectionHeading 
-              title={title} 
-              subtitle={subtitle}
-              titleClassName={titleClassName}
-              subtitleClassName={`text-center ${subtitleClassName}`}
-            />
+            <div className="mb-5">
+              <SectionHeading 
+                title={title} 
+                subtitle={subtitle}
+                titleClassName={titleClassName}
+                subtitleClassName={`text-center ${subtitleClassName}`}
+              />
+            </div>
           )}
           
           {/* Regular FAQ Items (lists, etc.) */}
@@ -387,23 +414,13 @@ const FAQ = ({
                     </p>
                     <div className="flex flex-wrap gap-3">
                       {item.buttons.map((btn, btnIdx) => (
-                        <button
+                        <GlobalArrowButton
                           key={btnIdx}
                           onClick={btn.onClick}
-                          className="bg-[var(--button-red)] text-white px-6 py-3 rounded-lg hover:bg-[var(--button-red)]/90 transition-colors font-plus-jakarta-sans flex items-center gap-2 group"
+                          variant="default"
                         >
-                          <span>{btn.label}</span>
-                          <div className="bg-white rounded p-1">
-                            <svg
-                              className="w-4 h-4 text-[var(--button-red)] transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                          </div>
-                        </button>
+                          {btn.label}
+                        </GlobalArrowButton>
                       ))}
                     </div>
                   </div>

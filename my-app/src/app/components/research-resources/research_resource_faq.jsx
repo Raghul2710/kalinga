@@ -11,14 +11,14 @@ export default function ResearchResourceFaqClient() {
                 <div className="space-y-4">
                     <div>
                         <p className="font-semibold text-[var(--foreground)]">Purpose</p>
-                        <p className="text-[var(--foreground)]/80">
+                        <p className="text-[var(--foreground)]">
                             The primary goal of this scheme is to support faculty members and researchers in developing research resources in their expertise through interdisciplinary approaches or methodologies.
                         </p>
                     </div>
 
                     <div>
                         <p className="font-semibold text-[var(--foreground)]">Objectives</p>
-                        <ul className="list-disc pl-5 space-y-2 text-[var(--foreground)]/80">
+                        <ul className="list-disc pl-5 space-y-2 text-[var(--foreground)]">
                             <li>To promote a research-friendly environment.</li>
                             <li>To strengthen the research culture with clear guidelines.</li>
                             <li>To encourage socially and commercially relevant research work.</li>
@@ -31,21 +31,21 @@ export default function ResearchResourceFaqClient() {
 
                     <div>
                         <p className="font-semibold text-[var(--foreground)]">Who Can Apply?</p>
-                        <p className="text-[var(--foreground)]/80">
+                        <p className="text-[var(--foreground)]">
                             The faculty members who have been appointed as Assistant Professor, Associate Professor, and Professor at Kalinga University.
                         </p>
                     </div>
 
                     <div>
                         <p className="font-semibold text-[var(--foreground)]">Amount</p>
-                        <p className="text-[var(--foreground)]/80">
+                        <p className="text-[var(--foreground)]">
                             Up to INR 100,000/- and in exceptional cases up to INR 300,000/-.
                         </p>
                     </div>
 
                     <div>
                         <p className="font-semibold text-[var(--foreground)]">Process</p>
-                        <p className="text-[var(--foreground)]/80">
+                        <p className="text-[var(--foreground)]">
                             The applicant has to fill in the details related to the projects along with his/her details in the format given in Kalinga University Seed Money Policy and submit the form at the Office of Vice Chancellor, Kalinga University, Raipur after getting signed by the concerned HoD and Dean Research.
                         </p>
                     </div>

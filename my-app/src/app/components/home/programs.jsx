@@ -3,18 +3,46 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import GlobalArrowButton from '../general/global-arrow_button'
 import GlobalRedPlainButton from '../general/global-red_plain_button'
 import SectionHeading from '../general/SectionHeading'
 import { renderProgramCard } from '../general/program-cards-slider'
+
+// Program Preview Images
+const programPreviewImages = [
+  {
+    id: 1,
+    src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp',
+    alt: 'Computer Programs'
+  },
+  {
+    id: 2,
+    src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/busniess.png',
+    alt: 'Business Programs'
+  },
+  {
+    id: 3,
+    src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/MBA.webp',
+    alt: 'MBA Programs'
+  },
+  {
+    id: 4,
+    src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/biotechnology.webp',
+    alt: 'Biotechnology Programs'
+  }
+]
+
 const Programs = () => {
-  const [activeTab, setActiveTab] = useState('Diploma')
+  const [activeTab, setActiveTab] = useState('UG')
   const [query, setQuery] = useState('')
   const prevRef = useRef(null)
   const nextRef = useRef(null)
+  const previewPrevRef = useRef(null)
+  const previewNextRef = useRef(null)
+  const previewSwiperRef = useRef(null)
 
   const programs = [
     { id: 1, title: 'Diploma in Computer Applications', type: 'Diploma', img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp', summary: 'Build fundamentals in programming, networking, and databases for entry-level IT roles.', scholarships: 'Check eligibility', qualification: 'Pass in Higher Secondary Examinations of (10+2.' },
@@ -52,7 +80,7 @@ const Programs = () => {
         {/* Two column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mb-6 sm:mb-8 lg:mb-10">
           {/* Left column: Text and Tabs */}
-          <div className="flex flex-col justify-end">
+          <div className="flex flex-col justify-around">
             {/* Header text */}
             <div className="mb-4 sm:mb-5 lg:mb-6">
               <SectionHeading
@@ -63,7 +91,7 @@ const Programs = () => {
             </div>
 
             {/* Tabs */}
-            <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:gap-2 pt-4 sm:pt-6 md:pt-8 lg:pt-10">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:gap-2 pt-4 sm:pt-6 md:pt-10 lg:pt-12">
               <button
                 onClick={() => setActiveTab('Diploma')}
                 className={`font-stix px-3 sm:px-4 md:px-6 lg:px-8 py-1.5 sm:py-2 md:py-2.5 lg:py-3 rounded-lg transition-all text-[clamp(20px,4vw,30px)] leading-tight ${activeTab === 'Diploma' ? 'bg-[var(--button-red)] text-white shadow-md' : 'text-[var(--dark-blue)] hover:bg-gray-100'}`}
@@ -94,9 +122,70 @@ const Programs = () => {
           {/* Right column: Blue card and Search */}
           <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 items-start lg:items-end w-full lg:w-auto">
             {/* Blue card */}
-            <div className="bg-[var(--dark-blue)] p-4 sm:p-5 lg:p-6 shadow-xl w-full lg:w-full max-w-[560px] h-auto min-h-[180px] sm:min-h-[200px] lg:h-[257px] rounded-[10px]">
-              <div className="bg-white/90 rounded-lg h-[100px] sm:h-[120px] lg:h-[150px] mb-3 sm:mb-4 lg:mb-4 px-3 sm:px-4 lg:px-4 flex items-center justify-center">
-                <span className="text-gray-400 text-xs sm:text-sm">Program Preview</span>
+            <div className="bg-[var(--dark-blue)] p-4 sm:p-5 lg:p-6 shadow-xl w-full lg:w-full max-w-[560px] h-auto min-h-[230px] sm:min-h-[200px] lg:h-[300px] rounded-[10px]">
+              <div className="bg-white/90 rounded-lg h-[200px] sm:h-[150px] lg:h-[200px] mb-3 sm:mb-4 lg:mb-4 relative overflow-hidden">
+                <Swiper
+                  modules={[Navigation, Autoplay]}
+                  spaceBetween={8}
+                  slidesPerView={1}
+                  loop={true}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                  navigation={{
+                    prevEl: previewPrevRef.current,
+                    nextEl: previewNextRef.current,
+                  }}
+                  onBeforeInit={(swiper) => {
+                    swiper.params.navigation.prevEl = previewPrevRef.current;
+                    swiper.params.navigation.nextEl = previewNextRef.current;
+                  }}
+                  onSwiper={(swiper) => {
+                    previewSwiperRef.current = swiper;
+                    setTimeout(() => {
+                      if (swiper && previewPrevRef.current && previewNextRef.current) {
+                        swiper.params.navigation.prevEl = previewPrevRef.current;
+                        swiper.params.navigation.nextEl = previewNextRef.current;
+                        swiper.navigation.init();
+                        swiper.navigation.update();
+                      }
+                    }, 0);
+                  }}
+                  className="program-preview-swiper h-full"
+                >
+                  {programPreviewImages.map((img) => (
+                    <SwiperSlide key={img.id} className="h-full">
+                      <div className="relative w-full h-full rounded-lg overflow-hidden">
+                        <Image
+                          src={img.src}
+                          alt={img.alt}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                {/* Navigation buttons for preview slider */}
+                <button
+                  ref={previewPrevRef}
+                  className="absolute left-1 top-1/2 -translate-y-1/2 z-10 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center transition-opacity"
+                  aria-label="Previous image"
+                >
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="text-white">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                <button
+                  ref={previewNextRef}
+                  className="absolute right-1 top-1/2 -translate-y-1/2 z-10 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/50 hover:bg-black/70 flex items-center justify-center transition-opacity"
+                  aria-label="Next image"
+                >
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" className="text-white">
+                    <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
               </div>
               <div className="flex justify-center">
               <GlobalArrowButton className="!bg-white !text-black"
@@ -108,7 +197,7 @@ const Programs = () => {
             </div>
 
             {/* Search input */}
-            <div className="w-full lg:w-full max-w-[560px] mt-6 sm:mt-8 lg:mt-10 py-1 sm:py-2 h-auto">
+            <div className="w-full lg:w-full max-w-[560px] py-1 sm:py-2 h-auto">
               <div className="flex items-center bg-[var(--light-gray)] rounded-lg px-3 sm:px-4 lg:px-5 py-3 sm:py-3.5 shadow-sm border border-gray-200">
                 <input
                   value={query}
@@ -166,7 +255,7 @@ const Programs = () => {
           )}
 
           {/* Navigation Buttons - Bottom Right Corner */}
-          <div className="absolute bottom-[14px] right-0 flex gap-2 sm:gap-3 z-20">
+          <div className="absolute right-0 flex gap-2 sm:gap-3 z-20">
             <button
               ref={prevRef}
               className="programs-btn-prev w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md"

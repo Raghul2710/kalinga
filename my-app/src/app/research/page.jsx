@@ -50,41 +50,46 @@ export default function Research() {
   const awards = [
     {
       id: 1,
-      year: "2024-25 ",
-     
+      year: "2024-25",
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Awards+2024-25+(1).pdf",
       active: true,
-    },  {
-      id: 1,
+    },
+    {
+      id: 2,
       year: "2023-24",
-     
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Awards+2023-24+(1).pdf",
       active: true,
-    },  {
-      id: 1,
-      year: "22022-23",
-     
+    },
+    {
+      id: 3,
+      year: "2022-23",
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2022-23+(2).pdf",
       active: true,
-    },  {
-      id: 1,
+    },
+    {
+      id: 4,
       year: "2021-22",
-     
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2021-22+(2).pdf",
       active: true,
-    },  {
-      id: 1,
+    },
+    {
+      id: 5,
       year: "2020-21",
-     
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2020-21+(2).pdf",
       active: true,
-    },  {
-      id: 1,
+    },
+    {
+      id: 6,
       year: "2019-20",
-     
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2019-20+(2).pdf",
       active: true,
-    },  {
-      id: 1,
+    },
+    {
+      id: 7,
       year: "2018-19",
-     
+      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2018-19+(2)+(1).pdf",
       active: true,
-    },  
-     
+    },
   ];
   const breadcrumbData = {
     heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/reserarch-banner.webp",
@@ -98,12 +103,16 @@ export default function Research() {
     <div>
       <AutoBreadcrumb data={breadcrumbData} />
       <MainIntro
-        title="Research at Kalinga University"
-        description="Kalinga University fosters a strong research culture that extends beyond classrooms through collaboration with leading universities and R&D institutions. Its research-driven curriculum, IPR and incubation cells support innovation, patents, commercialization, and industry linkage. With advanced CIF laboratories, research tools, plagiarism checks, and a robust research policy, the university empowers students to independently explore, innovate, and solve real-world challenges."
+        title="Best Research Intensive University"
+        description={[
+          "Kalinga University promotes research through a knowledge-sharing mechanism that goes beyond textbooks and classroom-based studies. The primary aim of our research department is to make the outcome impactful by collaborating with renowned universities and R&D institutions. Our research-ready curriculum is constantly updated with innovative programs to tackle real-world challenges, encouraging interdisciplinary and multidisciplinary education.",
+          "Our IPR cell supports patent filing, technology development, and commercialisation, while our incubation cell connects us with local/national industry, research labs & institutions, civil society, and the Government. We conduct research work under our well-designed research policy, and to promote that, we have ample online study material, SPSS tools for research, and Drillbit to check plagiarism in research. We have extensive CIF labs with all the high-tech instruments that are not available anywhere else in Chhattisgarh. We don't just encourage students to ask questions, but we support them in finding answers on their own."
+        ]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/research-main-content.webp"
         imageAlt="Kalinga University Research"
-        showButton ={false}
-        showKnowMore ={false}
+        showButton={false}
+        showKnowMore={true}
+        initialVisibleParagraphs={1}
       />
 
       <PublicationGrid  />
@@ -112,6 +121,7 @@ export default function Research() {
         description="Begin your research journey with world-class faculty, advanced labs, and a structured research ecosystem."
         buttonLabel="Apply Now"
         href="/about-us"
+        useContainer={true}
       
       />
       <UGCLogo />
@@ -122,68 +132,57 @@ export default function Research() {
   subtitle = "HoD – Research"
   department = "Research Department"
   quote = "Research is the foundation of academic excellence, where curiosity transforms into innovation and knowledge advances society."
-  message = "At Kalinga University, research stands at the core of academic excellence. We are committed to nurturing a strong research ecosystem that encourages curiosity, innovation, and problem-solving among our students and faculty. Through advanced research laboratories, high-tech instruments, robust policy frameworks, IPR support, and collaborations with national and international organizations, we empower our scholars to contribute meaningfully to society. With hands-on training, workshops, and continuous mentorship, our faculty actively guide students in publishing research, filing patents, and presenting their work on diverse platforms, shaping them into confident leaders in their respective fields."
+  message = "Research is the soul of academic excellence, and Kalinga University strives to develop a rich research ecosystem that generates curiosity, problem-solving, and inspiration among young researchers and faculty. With our advanced research labs, high-tech instruments, updated policy guidelines, IPR facilitation, CIF labs, and connections with national and international organisations, our research scholars work together toward societal progress. With hands-on training opportunities, workshops, and seminars on how to use modern machines, students learn to lead in their field. Our faculty members support students in publishing their research papers, filing patents, and presenting their work on different platforms."
   />  
 
       <FAQ 
-        title="Research Committee Members" 
+        title="Conferences" 
         subtitleClassName="!hidden" 
         variant="table-display"
         items={[]}
         tableSections={[
           {
             id: 1,
-            title: "2023-2024",
+            title: "List of Conferences Held At KU",
+            columns: [
+              { key: "slNo", label: "S. No.", width: "w-20" },
+              { key: "faculty", label: "Faculty", width: "w-48" },
+              { key: "conferenceName", label: "Name of The Conference", width: "w-80" },
+              { key: "type", label: "National/ International", width: "w-40" },
+              { key: "date", label: "Date", width: "w-64" },
+              { key: "year", label: "Year", width: "w-24" }
+            ],
             data: [
-              { name: "Dr. Priya Sharma", designation: "Faculty of Science", category: "Author" },
-              { name: "Dr. Rajesh Kumar", designation: "Faculty of Technology", category: "Co-Author" },
-              { name: "Prof. Meera Patel", designation: "Faculty of CS & IT", category: "Author" },
-              { name: "Dr. Anil Verma", designation: "Faculty of Pharmacy", category: "Researcher" },
-              { name: "Dr. Sushma Desai", designation: "Faculty of Law", category: "Author" },
-              { name: "Dr. Vikram Singh", designation: "Faculty of Commerce & Management", category: "Co-Author" },
-              { name: "Prof. Kavita Rao", designation: "Faculty of Arts & Humanities", category: "Author" },
-              { name: "Dr. Manoj Tiwari", designation: "Faculty of Engineering", category: "Researcher" },
-              { name: "Dr. Neha Agarwal", designation: "Faculty of Education", category: "Author" },
-              { name: "Dr. Pradeep Nair", designation: "Faculty of Science", category: "Co-Author" },
-              { name: "Prof. Ritu Agarwal", designation: "Faculty of Technology", category: "Author" },
-              { name: "Dr. Sandeep Reddy", designation: "IEEE", category: "Researcher" }
-            ]
-          },
-          {
-            id: 2,
-            title: "2022-2023",
-            data: [
-              { name: "Dr. Vijay Bhushan", designation: "Faculty of Arts & Humanities", category: "Author" },
-              { name: "Dr. Sinha Singh", designation: "Faculty of Commerce & Management", category: "Author" },
-              { name: "Dr. Smith Kalyan Pandey", designation: "Faculty of Commerce & Management", category: "Co-Author" },
-              { name: "Dr. Jasmine Joshi", designation: "Faculty of Commerce & Management", category: "Researcher" },
-              { name: "Dr. Nusratin Khatun", designation: "Faculty of Technology", category: "Author" },
-              { name: "Prof. Ritu Mishra", designation: "Faculty of Technology", category: "Co-Author" },
-              { name: "Dr. Komal Gupta", designation: "Faculty of Commerce & Management", category: "Author" },
-              { name: "Dr. Ruchi Gupta", designation: "Faculty of Commerce & Management", category: "Researcher" },
-              { name: "Dr. C. Divya", designation: "Faculty of Commerce & Management", category: "Author" },
-              { name: "Prof. Shiv Kumar", designation: "Faculty of Technology", category: "Co-Author" },
-              { name: "Dr. Sunayana Shukla", designation: "Faculty of Commerce & Management", category: "Author" },
-              { name: "Dr. Arvind Mehta", designation: "Faculty of Science", category: "Researcher" },
-              { name: "Dr. Preeti Khanna", designation: "Faculty of Pharmacy", category: "Author" }
-            ]
-          },
-          {
-            id: 3,
-            title: "2021-2022",
-            data: [
-              { name: "Dr. Amit Kumar", designation: "Faculty of Technology", category: "Author" },
-              { name: "Prof. Divya Sharma", designation: "Faculty of CS & IT", category: "Co-Author" },
-              { name: "Dr. Rohit Verma", designation: "Faculty of Engineering", category: "Researcher" },
-              { name: "Dr. Anjali Kapoor", designation: "Faculty of Arts & Humanities", category: "Author" },
-              { name: "Dr. Sanjay Patel", designation: "Faculty of Commerce & Management", category: "Co-Author" },
-              { name: "Prof. Geeta Singh", designation: "Faculty of Science", category: "Author" },
-              { name: "Dr. Mukesh Yadav", designation: "Faculty of Pharmacy", category: "Researcher" },
-              { name: "Dr. Priyanka Nair", designation: "Faculty of Law", category: "Author" },
-              { name: "Dr. Rajiv Joshi", designation: "Faculty of Education", category: "Co-Author" },
-              { name: "Dr. Sneha Reddy", designation: "Faculty of Technology", category: "Author" },
-              { name: "Prof. Vishal Mehta", designation: "Faculty of CS & IT", category: "Researcher" },
-              { name: "Dr. Kavita Desai", designation: "Faculty of Arts & Humanities", category: "Author" }
+              { slNo: 1, faculty: "IEEE", conferenceName: "2025 World Conference on Communication & Computing (WCONF)", type: "International", date: "25.07.2025 to 27.07.2025", year: "2025" },
+              { slNo: 2, faculty: "Faculty of CS IT", conferenceName: "Recent Trends in Emerging Technologies for Sustainable Innovation, Management and Development (ICRETE SIMD 2025)", type: "International", date: "27.03.2025 to 28.03.2025", year: "2025" },
+              { slNo: 3, faculty: "Faculty of Pharmacy", conferenceName: "Emerging Perspectives and Future Trends in Pharmaceutical and Allied Sciences For Global Health and Wellbeing", type: "International", date: "25.03.2025 to 26.03.2025", year: "2025" },
+              { slNo: 4, faculty: "Faculty of Arts & Humanities", conferenceName: "Viksit Bharat @2047: Progress and Development", type: "National", date: "21.03.2025 to 22.03.2025", year: "2025" },
+              { slNo: 5, faculty: "Faculty of Law", conferenceName: "2-Days Global Conference on \"Recent Trends in Law, Arbitration, Meditation, Economy & Society\"", type: "International", date: "28.02.2025 to 01.03.2025", year: "2025" },
+              { slNo: 6, faculty: "Faculty of Commerce & Management", conferenceName: "2-Days International Conference on \"International Conference on Innovative Management Techniques for Sustainable Development\" (IMTSD)", type: "International", date: "21.02.2025 to 22.02.2025", year: "2025" },
+              { slNo: 7, faculty: "Faculty of Education", conferenceName: "2-Days International Conference on \"Innovative Education Strategies NEP 2020 in Chhattisgarh and Beyond\".", type: "International", date: "21.01.2025 to 22.01.2025", year: "2025" },
+              { slNo: 8, faculty: "IEEE", conferenceName: "2024 World Conference on Communication & Computing (WCONF)", type: "International", date: "12.07.2024 to 14.07.2024", year: "2024" },
+              { slNo: 9, faculty: "Faculty of Science", conferenceName: "Future Aspects of Science & Technology", type: "International", date: "03.04.2024 to 04.04.2024", year: "2024" },
+              { slNo: 10, faculty: "Faculty of Pharmacy", conferenceName: "Current challenges and Novel strategies in global Adverse drug reaction (ADR) Monitoring", type: "International", date: "15.03.2024 to 16.03.2024", year: "2024" },
+              { slNo: 11, faculty: "Faculty of Law", conferenceName: "Constitutionalism and the Present Democracy: The Challenges Ahead", type: "International", date: "27.10.2023 to 28.10.2023", year: "2023" },
+              { slNo: 12, faculty: "Faculty of Arts & Humanities", conferenceName: "Strengthening women entrepreneurship for achieving sustainable development goals", type: "National", date: "06.10.2023 to 07.10.2023", year: "2023" },
+              { slNo: 13, faculty: "IEEE", conferenceName: "2023 World Conference on Communication & Computing (WCONF)", type: "International", date: "14.07.2023 to 16.07.2023", year: "2023" },
+              { slNo: 14, faculty: "Faculty of Commerce & Management", conferenceName: "The New Normal-Recent trends in Business and Management", type: "National", date: "27.05.2023 to 28.05.2023", year: "2023" },
+              { slNo: 15, faculty: "Faculty of Science", conferenceName: "International Conference on Climate Change, Sustainable Development & Smart Agriculture", type: "International", date: "06.04.2023 to 07.04.2023", year: "2023" },
+              { slNo: 16, faculty: "Faculty of Science", conferenceName: "National Climate Change Conference on Suggestions and recommendations for fostering Adaptation and Resilience", type: "National", date: "17.03.2023", year: "2023" },
+              { slNo: 17, faculty: "Faculty of Science", conferenceName: "Hodiernal Aspect of Science and Technology", type: "International", date: "24.02.2023 to 25.02.2023", year: "2023" },
+              { slNo: 18, faculty: "Faculty of Education", conferenceName: "National Conference on Intellectual Property Rights", type: "National", date: "15.02.2023 to 17.02.2023", year: "2023" },
+              { slNo: 19, faculty: "Faculty of Technology", conferenceName: "National Conference on Advance Approaches in Pure and Applied Mathematics", type: "National", date: "14.02.2023 to 15.02.2023", year: "2023" },
+              { slNo: 20, faculty: "Faculty of Arts & Humanities", conferenceName: "Global Crisis in the Present Scenario", type: "International", date: "02.12.2022 to 03.12.2022", year: "2022" },
+              { slNo: 21, faculty: "Faculty of Commerce & Management", conferenceName: "Emerging Business and Technology Issues with Emergence of Industry 4.0", type: "National", date: "29.11.2022 to 30.11.2022", year: "2022" },
+              { slNo: 22, faculty: "Faculty of Pharmacy", conferenceName: "Current Scenario and Innovation in Pharma Industry for Drug Discovery and Development", type: "National", date: "24.11.2022", year: "2022" },
+              { slNo: 23, faculty: "Faculty of Law", conferenceName: "Rights of Differently Abled Person in India", type: "National", date: "23.11.2022 to 24.11.2022", year: "2022" },
+              { slNo: 24, faculty: "Faculty of Technology", conferenceName: "Recent Innovations In Emerging Computing Technologies", type: "National", date: "14.11.2022 to 15.11.2022", year: "2022" },
+              { slNo: 25, faculty: "Faculty of Technology", conferenceName: "Recent Innovations in Engineering & Technology", type: "National", date: "06.05.2022", year: "2022" },
+              { slNo: 26, faculty: "Faculty of CS & IT", conferenceName: "Recent Advancements in Engineering & Computing Technologies", type: "National", date: "04.05.2022 to 05.05.2022", year: "2022" },
+              { slNo: 27, faculty: "Faculty of Education", conferenceName: "Indian Culture And Modern Challenges of Education", type: "International", date: "02.05.2022 to 03.05.2022", year: "2022" },
+              { slNo: 28, faculty: "Faculty Arts & Humanities", conferenceName: "Women Leadership in Contemporary Scenario", type: "International", date: "25.04.2022 to 26.04.2022", year: "2022" },
+              { slNo: 29, faculty: "Faculty Arts & Humanities", conferenceName: "Over The Horizon Introspecting The Self in Flux", type: "National", date: "15.11.2019 to 16.11.2019", year: "2019" },
+              { slNo: 30, faculty: "Faculty of Science", conferenceName: "Advanced Material & Environmental Science", type: "National", date: "14.10.2019 to 15.10.2019", year: "2019" }
             ]
           }
         ]}
@@ -203,8 +202,9 @@ export default function Research() {
         description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation."
       />
       <AwardsScrollbar 
+        title="Awards Received for Research & Innovation"
         awards={awards} 
-        hideTitle={true}
+        hideTitle={false}
         headerButtonLabel="View All Awards"
         onHeaderButtonClick={() => console.log('View all awards clicked')}
       />

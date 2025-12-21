@@ -7,10 +7,10 @@ import ChairmanMessage from "../components/leadership/chairman_message";
 const breadcrumbData = {
   heroImage:
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-front-banner02.webp",
-  pageTitle: "Leadership",
+  pageTitle: "Chancellor",
   customBreadcrumbs: [
     { label: "Home", href: "/" },
-    { label: "Leadership", href: "/leadership" },
+    { label: "Chancellor", href: "/chancellor" },
   ],
 };
 
@@ -23,11 +23,11 @@ export default function Leadership() {
   return (
     <>
       <ChairmanMessage
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/leadership/chairman.jpg"
+        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Arora.png"
         imageAlt="Dr. Rajeev Kumar"
         name="Dr. Rajeev Kumar"
         title="Chancellor"
-        department="Kalinga University"
+       
         quote="Education is not merely about degrees, but about shaping character, leadership, and purpose for a better tomorrow."
         message={[
           "It gives me immense pleasure to welcome you to Kalinga University, where education goes beyond classrooms and inspires lifelong learning.",

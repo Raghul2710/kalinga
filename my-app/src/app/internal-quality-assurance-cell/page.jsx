@@ -7,7 +7,7 @@ import DeptHeadIntro from '../components/department/dept_head_intro'
 import ISOCertificateSection from '../components/iqac/iso_certificate_section'
 import ContactSection from '../components/cif/contact_section'
 import AdmissionCareer from '../components/general/admission_cta'
-import accordion from '../components/general/accordion.jsx'
+import IQACTabSection from '../components/iqac/iqac_tab_section'
 
 // Breadcrumb configuration
 const breadcrumbData = {
@@ -78,7 +78,7 @@ const IQACPage = () => {
     />
     <PublicationGrid stats={publicationStats} />
     <DeptHeadIntro items={MentorIntroProps} />
-    <accordion />
+    <IQACTabSection />
     <ISOCertificateSection />
     <ContactSection />
     <AdmissionCareer />

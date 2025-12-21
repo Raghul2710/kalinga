@@ -284,10 +284,11 @@ export default function Map({ backgroundColor = "", textColor = "", subtitleText
           <Image 
             src="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/globe-new.png"
             alt="Global Presence Map" 
-            width={1000} 
-            height={500} 
-            className="w-full opacity-80 pt-10"
-            unoptimized
+            width={1200} 
+            height={600} 
+            className="w-full pt-10"
+            quality={100}
+            priority
           />
           
           {/* Location Points */}

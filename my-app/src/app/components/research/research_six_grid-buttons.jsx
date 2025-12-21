@@ -1,6 +1,7 @@
 import GlobalArrowButton from "../general/global-arrow_button";
 
 const buttons = [
+  // Left Column
   {
     id: 1,
     text: "Research, Consultancy & IPR Policy",
@@ -8,46 +9,57 @@ const buttons = [
   },
   {
     id: 2,
-    text: "Research Advisory Committee",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Constitution+of+Research+Advisory+Committee.pdf",
+    text: "Ethics Committee Constitution",
+    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/RESEARCH+Ethics.pdf",
   },
   {
     id: 3,
-    text: "Ethics Committee Constitution",
-    href: "#",
-  },
-  {
-    id: 4,
-    text: "Plagiarism Policy",
-    href: "#",
-  },
-  {
-    id: 5,
     text: "Software used for Plagiarism",
     href: "#",
   },
   {
-    id: 6,
-    text: "Ph.D. Admissions",
-    href: "/admissions/phd",
-  },
-  {
-    id: 7,
+    id: 4,
     text: "Research Policy",
     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/1.+Research+Policy+(2).pdf",
   },
   {
+    id: 5,
+    text: "Constitution of the Ethics Board for Maintaining Research Integrity",
+    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Constitution+of+Research+Advisory+Committee.pdf",
+  },
+  {
+    id: 6,
+    text: "Research Facilities and Resources",
+    href: "#",
+  },
+  // Right Column
+  {
+    id: 7,
+    text: "Research Advisory Committee",
+    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Constitution+of+Research+Advisory+Committee.pdf",
+  },
+  {
     id: 8,
+    text: "Plagiarism Policy",
+    href: "#",
+  },
+  {
+    id: 9,
+    text: "Ph.D. Admissions",
+    href: "/admissions/phd",
+  },
+  {
+    id: 10,
     text: "Research Integrity & Ethics Policy",
     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Constitution+of+Research+Advisory+Committee.pdf",
   },
   {
-    id: 9,
+    id: 11,
     text: "Constitution Of the Research Advisory Committee",
-    href: "#",
+    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Constitution+of+Research+Advisory+Committee.pdf",
   },
   {
-    id: 10,
+    id: 12,
     text: "Doctoral Research Committee",
     href: "#",
   },

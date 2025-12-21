@@ -1,49 +1,59 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const leadershipData = [
+  const leadershipData = [
   {
-    id: 1,
     name: "Dr. Rajeev Kumar",
     title: "Chairman",
+    route: "leadership",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Rajeev+Kumar.png",
   },
   {
-    id: 2,
     name: "Dr. Sandeep Arora",
     title: "Chancellor",
+    route: "chancellor",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Arora.png",
   },
   {
-    id: 3,
     name: "Mr. Sajjan Singh",
     title: "Pro-Chancellor",
+    route: "pro-chancellor",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sajjan+Singh.png",
   },
   {
-    id: 4,
     name: "Dr. R. Shridhar",
     title: "Vice-Chancellor",
+    route: "vice-chancellor",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Shridhar.png",
   },
   {
-    id: 5,
     name: "Dr. Byju John",
     title: "Director General",
+    route: "director-general",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Byju+John.png",
   },
   {
-    id: 6,
     name: "Dr. Sandeep Gandhi",
     title: "Registrar",
+    route: "registrar",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Gandhi.png",
   },
 ];
 
+
 const LeadershipCard = ({ leader }) => {
+  const router = useRouter();
+
+  const handleBadgeClick = (e) => {
+    e.stopPropagation(); // prevents parent click (important)
+    router.push(`${leader.route}`);
+  };
+
   return (
-    <div className="relative bg-[#FFEBD0] rounded-[10px] overflow-hidden group w-full max-w-[332px] min-h-[350px] sm:min-h-[386px] mx-auto mt-8 ">
+    <div className="relative bg-[#FFEBD0] rounded-[10px] overflow-hidden group w-full max-w-[332px] min-h-[350px] sm:min-h-[386px] mx-auto mt-8">
+      
       {/* IMAGE */}
       <div className="relative w-full h-[300px] sm:h-[240px] md:h-[280px] flex items-center justify-center pt-4 mt-1">
         <Image
@@ -65,24 +75,28 @@ const LeadershipCard = ({ leader }) => {
           {leader.title}
         </p>
 
-        {/* BADGE */}
+        {/* BADGE BUTTON */}
         <div className="absolute bottom-6 right-6">
-                      <button className="w-8 h-8 bg-[var(--button-red)] hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md">
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="white"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M7 17L17 7" />
-                          <path d="M7 7h10v10" />
-                        </svg>
-                      </button>
-                    </div>
+          <button
+            onClick={handleBadgeClick}
+            className="w-8 h-8 bg-[var(--button-red)] hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md"
+            aria-label={`View ${leader.title}`}
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   );

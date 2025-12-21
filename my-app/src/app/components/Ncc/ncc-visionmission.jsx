@@ -8,22 +8,60 @@ const nccVision =
 const nccMission =
   "To provide physical training and basic military skills to youth and prepare them to take up challenging careers in the Indian Defence Forces and lead confidently.";
 
-export default function NccVisionMission({
-  className = "",
-  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  imageAlt = "NCC Vision and Mission",
-  showImage = true,
-}) {
+export default function NccVisionMission() {
   return (
-    <VisionMission
-      className={className}
-      visionTitle="Vision"
-      missionTitle="Mission"
-      visionText={nccVision}
-      missionText={nccMission}
-      imageSrc={imageSrc}
-      imageAlt={imageAlt}
-      showImage={showImage}
-    />
+    <div className="ncc-vm-wrap">
+      {/* ✅ MOBILE-ONLY overrides */}
+      <style jsx>{`
+        /* -------------------------------------- */
+        /* ❌ Disable Read More (unchanged) */
+        /* -------------------------------------- */
+        .ncc-vm-wrap :global(.line-clamp-4) {
+          -webkit-line-clamp: unset !important;
+          display: block !important;
+          overflow: visible !important;
+        }
+
+        .ncc-vm-wrap :global(button) {
+          display: none !important;
+        }
+
+        /* -------------------------------------- */
+        /* 📱 MOBILE ONLY: reduce Vision & Mission box padding */
+        /* Original: py-20 = 80px */
+        /* -------------------------------------- */
+        @media (max-width: 767px) {
+          .ncc-vm-wrap :global(.py-20) {
+            padding-top: 32px !important;   /* ↓ from 80px */
+            padding-bottom: 32px !important;
+          }
+        }
+      `}</style>
+
+      <VisionMission
+        showImage={false}
+        imageSrc=""
+        imageAlt=""
+        className={[
+          "-mt-16 md:-mt-24",
+
+          // layout alignment (UNCHANGED)
+          "[&_.grid]:items-stretch",
+          "[&_.grid]:gap-8",
+          "[&_.grid>div]:h-full",
+          "[&_.grid>div]:flex",
+          "[&_.grid>div]:items-stretch",
+          "[&_.grid>div>div]:h-full",
+          "[&_.grid>div>div]:flex",
+          "[&_.grid>div>div]:flex-col",
+          "[&_.grid>div>div]:justify-center",
+          "[&_.grid>div>div]:text-center",
+        ].join(" ")}
+        visionTitle="Vision"
+        missionTitle="Mission"
+        visionText={nccVision}
+        missionText={nccMission}
+      />
+    </div>
   );
 }

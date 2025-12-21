@@ -21,17 +21,19 @@ export function useBreadcrumb() {
 // Hook for pages to set breadcrumb data
 export function useBreadcrumbData(data) {
   const context = useBreadcrumb();
+  const setBreadcrumbData = context?.setBreadcrumbData;
   
   useEffect(() => {
-    if (context && data) {
-      context.setBreadcrumbData(data);
+    if (setBreadcrumbData) {
+      // Set data if provided, or clear it if null/undefined
+      setBreadcrumbData(data || null);
     }
     // Cleanup: reset when component unmounts
     return () => {
-      if (context) {
-        context.setBreadcrumbData(null);
+      if (setBreadcrumbData) {
+        setBreadcrumbData(null);
       }
     };
-  }, [data, context]);
+  }, [data, setBreadcrumbData]);
 }
 

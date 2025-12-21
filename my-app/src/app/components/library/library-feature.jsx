@@ -9,7 +9,7 @@ export default function LibraryGrid() {
       stats={[
         {
           title: "Books",
-          value: "94931+",
+          value: "94K+",
           description: "Extensive collection of printed books across all disciplines.",
         },
         {
@@ -19,12 +19,12 @@ export default function LibraryGrid() {
         },
         {
           title: "E-Books",
-          value: "8683122+",
+          value: "8683K+",
           description: "Digital books accessible anytime through the university portal.",
         },
         {
           title: "E-Journals",
-          value: "159152+",
+          value: "159K+",
           description: "Online journals covering diverse research domains.",
         },
         {

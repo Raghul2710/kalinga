@@ -87,6 +87,17 @@ export default function     Testimonials({ testimonials = [], className = "", su
         };
     }, [activeIndex, isMobile]);
 
+    // Autoplay functionality
+    useEffect(() => {
+        const autoplayInterval = setInterval(() => {
+            setActiveIndex((prev) => (prev + 1) % testimonialsData.length);
+        }, 4000); // Change slide every 4 seconds
+
+        return () => {
+            clearInterval(autoplayInterval);
+        };
+    }, [testimonialsData.length]);
+
     const getSlideStyles = (index) => {
         const total = testimonialsData.length;
         let diff = (index - activeIndex) % total;

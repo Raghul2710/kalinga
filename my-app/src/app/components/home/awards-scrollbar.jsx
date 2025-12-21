@@ -222,15 +222,30 @@ export default function AwardsScrollbar({
                   
                    
                 
-                    <div
-                  className={`mt-2 rounded-md px-5 py-3 text-xs sm:text-sm font-stix ${
-                    award.active
-                      ? "bg-[var(--button-red)] text-white shadow-md"
-                      : "bg-[#e6e6e6] text-[var(--foreground)]"
-                  }`}
-                >
-                    {award.year}
-                  </div>
+                    {award.link ? (
+                      <a
+                        href={award.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`mt-2 rounded-md px-5 py-3 text-xs sm:text-sm font-stix cursor-pointer transition-opacity hover:opacity-90 ${
+                          award.active
+                            ? "bg-[var(--button-red)] text-white shadow-md"
+                            : "bg-[#e6e6e6] text-[var(--foreground)]"
+                        }`}
+                      >
+                        {award.year}
+                      </a>
+                    ) : (
+                      <div
+                        className={`mt-2 rounded-md px-5 py-3 text-xs sm:text-sm font-stix ${
+                          award.active
+                            ? "bg-[var(--button-red)] text-white shadow-md"
+                            : "bg-[#e6e6e6] text-[var(--foreground)]"
+                        }`}
+                      >
+                        {award.year}
+                      </div>
+                    )}
                  
                   <Image
                     src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
@@ -278,15 +293,30 @@ export default function AwardsScrollbar({
                   <div className="flex items-center justify-center gap-2 mb-2">
                    
                   
-                      <div
-                    className={`mt-2 rounded-md px-5 py-3 text-xs sm:text-sm font-stix ${
-                      award.active
-                        ? "bg-[var(--button-red)] text-white shadow-md"
-                        : "bg-[#e6e6e6] text-[var(--foreground)]"
-                    }`}
-                  >
-                      {award.year}
-                    </div>
+                      {award.link ? (
+                        <a
+                          href={award.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`mt-2 rounded-md px-5 py-3 text-xs sm:text-sm font-stix cursor-pointer transition-opacity hover:opacity-90 ${
+                            award.active
+                              ? "bg-[var(--button-red)] text-white shadow-md"
+                              : "bg-[#e6e6e6] text-[var(--foreground)]"
+                          }`}
+                        >
+                          {award.year}
+                        </a>
+                      ) : (
+                        <div
+                          className={`mt-2 rounded-md px-5 py-3 text-xs sm:text-sm font-stix ${
+                            award.active
+                              ? "bg-[var(--button-red)] text-white shadow-md"
+                              : "bg-[#e6e6e6] text-[var(--foreground)]"
+                          }`}
+                        >
+                          {award.year}
+                        </div>
+                      )}
               
                  
                   </div>

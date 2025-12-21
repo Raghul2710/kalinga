@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 
-export function AccordionItem({ title, children, defaultOpen = false }) {
+export function AccordionItem({ title, children, defaultOpen = false, titleClassName = "" }) {
   const [open, setOpen] = useState(defaultOpen);
+  
+  const defaultTitleClassName = "font-stix text-[24px] leading-[30px] text-[var(--button-red)]";
+  const finalTitleClassName = titleClassName || defaultTitleClassName;
 
   return (
     <div className="rounded-[16px] bg-[var(--card-sandal)] p-[22px] md:p-[26px]">
@@ -13,7 +16,7 @@ export function AccordionItem({ title, children, defaultOpen = false }) {
         onClick={() => setOpen(!open)}
         className="flex w-full items-center justify-between text-left cursor-pointer"
       >
-        <h3 className="font-stix text-[24px] leading-[30px] text-[var(--button-red)]">
+        <h3 className={finalTitleClassName}>
           {title}
         </h3>
 
