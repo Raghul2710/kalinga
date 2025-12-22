@@ -2,6 +2,7 @@
 
 import GlobalArrowButton from "../components/general/global-arrow_button";
 
+// Breadcrumb configuration
 const breadcrumbData = {
   heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/elearning.webp",
   pageTitle: "Annual Reports",
@@ -11,7 +12,7 @@ const breadcrumbData = {
   ]
 };
 
-// Register it globally (no import needed - this pattern works automatically)
+// Register breadcrumb data globally
 if (typeof window !== 'undefined') {
   window.__breadcrumbData = breadcrumbData;
 }
@@ -91,9 +92,9 @@ export default function Page() {
 
           {/* ✅ PAGE HEADING */}
           <div className="mb-10">
-            <h1 className="text-[28px] md:text-[32px] font-semibold text-[#191919] mb-3">
+            <h2 >
               Annual Reports
-            </h1>
+            </h2>
             <p className="text-[16px] text-[#555] max-w-[900px] leading-relaxed">
               Our annual reports will give you a detailed overview of the University’s growth and achievements. 
               These reports show transparency, academic excellence, and overall institutional development.
