@@ -62,7 +62,7 @@ export default function CenterOfExcellence({
       <div className="container mx-auto px-2">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-stix text-[var(--foreground)] text-3xl md:text-4xl lg:text-5xl mb-4">
+      <h2 className="font-stix text-[var(--foreground)] text-2xl md:text-3xl lg:text-4xl mb-4">
             {title}
           </h2>
           {showDescription && (
@@ -80,6 +80,7 @@ export default function CenterOfExcellence({
               background-color: #F5E6D3 !important;
               min-height: 280px !important;
               border-radius: 12px !important;
+             
             }
             .centres-swiper .centres-card-wrapper > div {
               background-color: #F5E6D3 !important;
