@@ -358,8 +358,8 @@ const FAQ = ({
       title: item.question || `Section ${index + 1}`,
       description: item.answer || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       buttons: item.buttons || [
-        { label: "Annual Reports", onClick: () => {} },
-        { label: "Placement Details", onClick: () => {} }
+        { label: "Annual Reports", onClick: () => window.location.href = "/annual-reports" },
+        { label: "Placement Details", onClick: () => window.location.href = "/placements" }
       ]
     }))
     
@@ -640,7 +640,7 @@ const FAQ = ({
                     }`}
                     aria-expanded={isOpen}
                   >
-                    <h3 className="text-left text-xl pr-4 font-plus-jakarta-sans">
+                    <h3 className="text-left text-[14px] leading-[20px] md:leading-[24px] md:text-xl pr-4 font-plus-jakarta-sans">
                       {item.question}
                     </h3>
                     <div className="flex-shrink-0">

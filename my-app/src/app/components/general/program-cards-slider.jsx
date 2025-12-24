@@ -80,7 +80,7 @@ export const renderProgramCard = (program) => {
       <div className="h-[340px] sm:h-[380px] md:h-[400px] lg:h-[420px] w-[300px] sm:w-[340px] md:w-[360px] lg:w-[380px]">
         <Stack
           cards={cards}
-          randomRotation
+          randomRotation={false}
           sendToBackOnClick
           pauseOnHover
           autoplay={false}

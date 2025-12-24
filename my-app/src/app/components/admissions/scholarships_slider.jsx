@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
 import ScholarshipCard from "../general/scholarship-card";
 import GlobalArrowButton from "../general/global-arrow_button";
 import Image from "next/image";
@@ -43,9 +44,11 @@ export default function ScholarshipsSlider() {
             </p>
           </div>
           <div className="flex-shrink-0">
-            <GlobalArrowButton >
-              Explore Now
-            </GlobalArrowButton>
+            <Link href="/admissions" className="inline-flex">
+              <GlobalArrowButton >
+                Explore Now
+              </GlobalArrowButton>
+            </Link>
           </div>
         </div>
 

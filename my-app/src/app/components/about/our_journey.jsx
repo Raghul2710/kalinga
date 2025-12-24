@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import SectionHeading from "../general/SectionHeading";
 
 const journeyData = [
   {
@@ -246,9 +247,10 @@ export default function OurJourney() {
       <div className="container mx-auto px-2 md:px-4">
         {/* Title */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="font-stix text-white text-4xl md:text-5xl lg:text-6xl">
-            Our Journey
-          </h2>
+          <SectionHeading
+            title="Our Journey"
+            titleClassName="text-white"
+          />
         </div>
 
         {/* Content Cards Swiper */}
@@ -327,7 +329,7 @@ export default function OurJourney() {
                       >
                         {item.year}
                       </div>
-                      <h3 className="text-[var(--foreground)] font-stix font-medium text-base md:text-xl lg:text-2xl mb-2 md:mb-4">
+                      <h3 className="text-[var(--foreground)] font-stix font-medium text-base md:text-xl lg:text-[20px] mb-2 md:mb-4">
                         {item.title}
                       </h3>
                       <div className="space-y-1.5 md:space-y-3">

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import SectionHeading from "../general/SectionHeading";
 import ProgramCard from "../general/program-card";
 import { fetchAllDepartments, fetchAllDepartmentCourses, fetchAllCourses } from "@/app/lib/api";
@@ -81,6 +81,7 @@ export default function OurPrograms({
   const [allCourses, setAllCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   // Update state when URL parameters change
   useEffect(() => {
@@ -95,6 +96,11 @@ export default function OurPrograms({
       }
     }
   }, [searchParams]);
+
+  // Reset showAll when filters change
+  useEffect(() => {
+    setShowAll(false);
+  }, [selectedStudyLevel, selectedDepartment, searchQuery]);
 
   // Skip data fetching if custom programs are provided
   const shouldFetchData = !customPrograms;
@@ -261,22 +267,34 @@ export default function OurPrograms({
   // Handle program actions
   const handleCheckEligibility = (program) => {
     // Link to course page eligibility section
-    window.location.href = `${program.coursePageUrl}#eligibility`;
+    if (program.coursePageUrl) {
+      router.push(`${program.coursePageUrl}#eligibility`);
+    } else {
+      router.push("/admissions#eligibility");
+    }
   };
 
   const handleApplyNow = (program) => {
-    // Static link to admissions portal
-    window.open("https://admissions.kalingauniversity.ac.in/", "_blank");
+    // Link to KALSEE page for admissions
+    router.push("/kalsee");
   };
 
   const handleExploreProgram = (program) => {
     // Link to course page
-    window.location.href = program.coursePageUrl;
+    if (program.coursePageUrl) {
+      router.push(program.coursePageUrl);
+    } else {
+      router.push("/academics");
+    }
   };
 
   const handleScholarshipsClick = (program) => {
-    // Link to course page (scholarships section if available)
-    window.location.href = program.coursePageUrl;
+    // Link to course page (scholarships section if available) or admissions page
+    if (program.coursePageUrl) {
+      router.push(program.coursePageUrl);
+    } else {
+      router.push("/admissions");
+    }
   };
 
   if (loading) {
@@ -425,7 +443,7 @@ export default function OurPrograms({
                 No programs match your search criteria.
               </div>
             )}
-            {filteredPrograms.map((program) => (
+            {(showAll ? filteredPrograms : filteredPrograms.slice(0, 6)).map((program) => (
               <ProgramCard
                 key={program.id}
                 program={program}
@@ -439,6 +457,18 @@ export default function OurPrograms({
               />
             ))}
           </div>
+          
+          {/* Load More Button */}
+          {!showAll && filteredPrograms.length > 6 && (
+            <div className="flex justify-center mt-6 md:mt-8">
+              <button
+                onClick={() => setShowAll(true)}
+                className="px-6 py-3 bg-[var(--button-red)] text-white rounded-lg font-medium hover:bg-[var(--dark-orange-red)] transition-colors duration-300"
+              >
+                Load More
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

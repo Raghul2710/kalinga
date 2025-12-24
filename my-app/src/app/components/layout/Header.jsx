@@ -43,7 +43,7 @@ const Header = () => {
 
   const courses = useMemo(
     () => [
-      { name: 'Bachelor of Technology (B.Tech)', href: '/about' },
+      { name: 'Bachelor of Technology (B.Tech)', href: '/about-us' },
       { name: 'Bachelor of Business Administration (BBA)', href: '/academics/undergraduate/bba' },
       { name: 'Bachelor of Computer Applications (BCA)', href: '/academics/undergraduate/bca' },
       { name: 'Master of Business Administration (MBA)', href: '/academics/postgraduate/mba' },
@@ -104,14 +104,14 @@ const Header = () => {
     {
       id: 'about',
       label: 'About Us',
-      href: '/about',
+      href: '/about-us',
       megaMenu: {
         sections: [
           {
             title: 'Overview',
             links: [
-              { label: 'About University', href: '/about' },
-              { label: 'Vision & Mission', href: '/about#vision-mission' },
+              { label: 'About University', href: '/about-us' },
+              { label: 'Vision & Mission', href: '/about-us#vision-mission' },
               { label: 'Chancellor Message', href: '/chancellor' },
               { label: 'Vice Chancellor', href: '/vice-chancellor' },
               { label: 'Leadership', href: '/leadership' },

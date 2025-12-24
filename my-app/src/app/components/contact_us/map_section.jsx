@@ -28,7 +28,7 @@ const Map = () => {
     {
       id: 1,
       name: "Bus Stop",
-      distance: "2km Near By",
+      distance: "8km Near By",
       icon: "🚌",
       position: { lat: 21.1540426, lng: 81.7963184 },
       pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/bus-pin.png",
@@ -36,7 +36,7 @@ const Map = () => {
     {
       id: 2,
       name: "Airport (Raipur)",
-      distance: "3km Near By",
+      distance: "14km Near By",
       icon: "✈️",
       position: { lat: 21.1859715, lng: 81.7402786 },
       pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/airport-pin.png",
@@ -44,7 +44,7 @@ const Map = () => {
     {
       id: 3,
       name: "Railway Station (Raipur)",
-      distance: "2km Near By",
+      distance: "28km Near By",
       icon: "🚂",
       position: { lat: 21.2573531, lng: 81.6283452 },
       pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/rail-pin.png",
@@ -52,7 +52,7 @@ const Map = () => {
     {
       id: 4,
       name: "Hospital",
-      distance: "2km Near By",
+      distance: "24km Near By",
       icon: "🏥",
       position: { lat: 21.2131334, lng: 81.6536364 },
       pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/hospital-pin.png",

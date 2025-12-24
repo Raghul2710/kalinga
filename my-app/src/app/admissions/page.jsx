@@ -90,6 +90,7 @@ export default function Admissions() {
     arrowIconClassName: "!text-[var(--button-red)]",
     textClassName: "!text-white",
     useContainer: true,
+    href: "/entrance-exam",
   };
 
   // OrganogramOfKalinga content (second instance - without image)
@@ -107,6 +108,7 @@ export default function Admissions() {
     arrowClassName: "!bg-[var(--dark-orange-red)]",
     arrowIconClassName: "!text-white",
     textClassName: "!text-black",
+    href: "/admissions",
   };
 
   // Facility content
@@ -254,6 +256,7 @@ export default function Admissions() {
         arrowIconClassName={entranceExamContent.arrowIconClassName}
         textClassName={entranceExamContent.textClassName}
         useContainer={entranceExamContent.useContainer}
+        href={entranceExamContent.href}
       />
       {/* <EntranceExam /> */}
       <AdmissionSteps
@@ -264,6 +267,7 @@ export default function Admissions() {
         ctaLabel={admissionStepsContent.ctaLabel}
         showReadMore={admissionStepsContent.showReadMore}
         showIcon={admissionStepsContent.showIcon}
+        ctaHref="/admissions"
       />
       <OrganogramOfKalinga
         title={admissionOrganogramContent.title}
@@ -278,6 +282,7 @@ export default function Admissions() {
         arrowIconClassName={admissionOrganogramContent.arrowIconClassName}
         textClassName={admissionOrganogramContent.textClassName}
         useContainer={true}
+        href={admissionOrganogramContent.href}
       />
       <ScholarshipsSlider />
       <Facility

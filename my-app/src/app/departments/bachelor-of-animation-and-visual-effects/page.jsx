@@ -75,10 +75,11 @@ function Courses() {
     title: "Eligibility Criteria",
     criteria: [
       "The candidate should be a 12th pass with 45% aggregate marks.",
-      'Take the Entrance Test: <a href="#" class="text-white hover:underline inline-flex items-center gap-1">KALSEE<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[var(--dark-orange-red)]"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>.',
+      'Take the Entrance Test: <a href="/kalsee" class="text-white hover:underline inline-flex items-center gap-1">KALSEE<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[var(--dark-orange-red)]"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></a>',
     ],
     admissionTitle: "Start Your Creative Journey in Animation & Visual Effects Today",
     admissionButtonLabel: "Admission Open",
+    href: "/admissions",
   };
 
   // CareerPath content
@@ -263,6 +264,7 @@ function Courses() {
           criteria={eligibilityContent.criteria}
           admissionTitle={eligibilityContent.admissionTitle}
           admissionButtonLabel={eligibilityContent.admissionButtonLabel}
+          href={eligibilityContent.href}
         />
       </div>
       <div id="career">
@@ -279,18 +281,23 @@ function Courses() {
           items={whyStudyContent.items}
         />
       </div>
-      <OrganogramOfKalinga
-        title="Scheme & Syllabus 2024-2025"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ."
-        buttonLabel="Explore Now"
-        href="/about-us"
-        buttonClassName="!bg-white !text-black"
-        arrowClassName="!bg-[var(--dark-orange-red)]"
-        arrowIconClassName="!text-white"
-        textClassName="!text-black"
-        cardBackgroundColor="bg-[var(--button-red)]"
-        useContainer={false}
-      />
+      <div id="syllabus">
+        <OrganogramOfKalinga
+          title="Scheme & Syllabus 2024-2025"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ."
+          buttonLabel="Explore Now"
+          href="/about-us"
+          buttonClassName="!bg-white !text-black"
+          arrowClassName="!bg-[var(--dark-orange-red)]"
+          arrowIconClassName="!text-white"
+          textClassName="!text-black"
+          cardBackgroundColor="bg-[var(--button-red)]"
+          useContainer={false}
+        />
+      </div>
+      <div id="fees">
+        {/* Fees section - Add your fees content here */}
+      </div>
       <div id="facilities">
         <Facility />
       </div>

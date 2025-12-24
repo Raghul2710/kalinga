@@ -93,10 +93,12 @@ export default function FollowUs() {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center justify-center p-3 sm:p-4 w-24 h-24 sm:w-50 sm:h-40 rounded-[12px] bg-[var(--lite-sand)] hover:shadow-md transition-shadow"
+              className="group flex flex-col items-center justify-around p-3 sm:p-4 w-24 h-24 sm:w-50 sm:h-40 rounded-[12px] bg-[var(--lite-sand)] hover:bg-[var(--button-red)] hover:shadow-md transition-all duration-300"
             >
-              <div className="mb-1 sm:mb-2">{item.icon}</div>
-              <span className="text-[11px] sm:text-xs md:!text-[22px] text-[var(--foreground)] font-medium">
+              <div className="mb-1 sm:mb-2 [&_svg]:transition-colors [&_svg]:duration-300 group-hover:[&_svg]:text-white">
+                {item.icon}
+              </div>
+              <span className="text-[11px] sm:text-xs md:!text-[22px] text-[var(--foreground)] font-medium group-hover:text-white transition-colors duration-300">
                 {item.label}
               </span>
             </a>

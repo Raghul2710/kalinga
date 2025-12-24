@@ -98,14 +98,14 @@ export default function Facility({
                 <div className="h-full w-full">
                   <div className="bg-white rounded-xl overflow-visible h-full group-hover:z-[50] relative transition-all duration-300 cursor-pointer group group-hover:shadow-xl">
                     {/* Image Container - Fixed wrapper with padding for upward growth (250px visible + 50px padding = 300px total) */}
-                    <div className="relative w-full min-h-[300px] overflow-visible rounded-t-xl">
+                    <div className="relative w-full min-h-[300px] overflow-hidden rounded-xl">
                       {/* Image - Positioned at bottom, grows upward on hover */}
                       <div className="absolute bottom-0 left-0 right-0 h-[250px] group-hover:h-[300px]  transition-all duration-300">
                         <Image
                           src={facility.image}
                           alt={facility.name}
                           fill
-                          className="object-cover rounded-t-xl"
+                          className="object-cover rounded-xl"
                         />
                       </div>
                       {/* Label - Overlaid on image */}

@@ -95,7 +95,7 @@ export default function GetInTouch() {
               </div>
 
               {/* For Admissions card */}
-              <div className="bg-[var(--lite-sand)] rounded-xl px-6 py-6 shadow-md flex items-start flex-col justify-center">
+              <div className="bg-[var(--lite-sand)] rounded-xl px-6 py-6 shadow-md flex items-start flex-col justify-start">
                 <h3 className="font-stix !text-[22px] mb-3 text-[var(--foreground)]">
                   For Admissions
                 </h3>
@@ -118,7 +118,7 @@ export default function GetInTouch() {
                       </svg>
                     </span>
                     <p className="text-[var(--foreground)]">
-                    You can reach out to us at<br/> <a href="tel:+91-9907252100" className="text-[var(--foreground)]">+91-9907252100</a> 
+                    <a href="tel:+91-9907252100" className="text-[var(--foreground)]">+91-9907252100</a> 
                     </p>
                   </li>
                   {/* <li className="flex items-center gap-2">

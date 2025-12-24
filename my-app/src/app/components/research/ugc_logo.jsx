@@ -1,166 +1,171 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import GlobalRedPlainButton from "../general/global-red_plain_button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 
 export default function UGCLogo() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2); // Start with center logo (index 2)
+  const [isMobile, setIsMobile] = useState(false);
+  const swiperRef = useRef(null);
   const logos = [
     {
       src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-1.png",
       alt: "Survey of India",
+      name: "Survey of India",
     },
     {
       src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-2.png",
       alt: "NCTE",
+      name: "NCTE",
     },
     {
       src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-3.png",
       alt: "Council of Science & Technology",
-      isCenter: true,
+      name: "University Grants Commission",
     },
     {
       src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-4.png",
       alt: "Association of Indian Universities",
+      name: "Association of Indian Universities",
     },
     {
       src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-5.png",
       alt: "Pharmacy Council of India",
+      name: "Pharmacy Council of India",
+    },
+    {
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-1.png",
+      alt: "Survey of India",
+      name: "Survey of India",
+    },
+    {
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-2.png",
+      alt: "NCTE",
+      name: "NCTE",
+    },
+    {
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-3.png",
+      alt: "Council of Science & Technology",
+      name: "University Grants Commission",
+    },
+    {
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-4.png",
+      alt: "Association of Indian Universities",
+      name: "Association of Indian Universities",
+    },
+    {
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-5.png",
+      alt: "Pharmacy Council of India",
+      name: "Pharmacy Council of India",
     },
   ];
 
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.update();
+      swiperRef.current.updateSlides();
+      swiperRef.current.updateSlidesClasses();
+    }
+    
+    // Check if mobile on mount and resize
+    const checkMobile = () => {
+      if (typeof window !== 'undefined') {
+        setIsMobile(window.innerWidth < 1024);
+      }
+    };
+    checkMobile();
+    if (typeof window !== 'undefined') {
+      window.addEventListener('resize', checkMobile);
+      return () => window.removeEventListener('resize', checkMobile);
+    }
+  }, []);
+
   return (
     <div className="container mx-auto py-16 px-6">
-      {/* Mobile & Tablet Slider View */}
-      <div className="lg:hidden">
+      {/* Slider View for All Screen Sizes */}
+      <div className="relative">
+        <style dangerouslySetInnerHTML={{__html: `
+          .ugc-swiper-wrapper .swiper-wrapper {
+            transition-duration: 800ms !important;
+          }
+          .ugc-swiper-wrapper .swiper-slide.center-highlight > div > div {
+            outline: 1px solid rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 15px 3px rgba(59, 130, 246, 0.4) !important;
+            transform: scale(1.1) !important;
+            z-index: 10;
+          }
+        `}} />
         <Swiper
-          modules={[Navigation]}
+          modules={[Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
-          navigation={{
-            nextEl: ".ugc-swiper-button-next",
-            prevEl: ".ugc-swiper-button-prev",
+          loop={true}
+          loopAdditionalSlides={2}
+          speed={800}
+          allowTouchMove={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
           }}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-          onSwiper={(swiper) => setActiveIndex(swiper.activeIndex)}
-          className="relative !p-5"
+          breakpoints={{
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+              loopAdditionalSlides: 5,
+            },
+          }}
+          onSlideChange={(swiper) => {
+            setActiveIndex(swiper.realIndex);
+          }}
+          onInit={(swiper) => {
+            swiperRef.current = swiper;
+            setActiveIndex(swiper.realIndex);
+          }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          className="relative !p-5 ugc-swiper-wrapper"
         >
-          {logos.map((logo, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative flex flex-col items-center">
-                <div
-                  className={`relative ${
-                    activeIndex === index
-                      ? " shadow-md "
-                      : ""
-                  } rounded-full overflow-hidden transition-all duration-300 bg-white`}
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={100}
-                    height={100}
-                    className="rounded-full object-contain w-[100px] h-[100px] mx-auto"
-                  />
+          {logos.map((logo, index) => {
+            // Calculate which slide should be highlighted as center
+            // On mobile (1 slide): center is the active slide itself
+            // On desktop (5 slides): center is 2 positions ahead
+            const originalLogoIndex = index % 5;
+            const centerOffset = isMobile ? 0 : 2;
+            const centerIndex = (activeIndex + centerOffset) % 5;
+            const isCenter = originalLogoIndex === centerIndex;
+            
+            return (
+              <SwiperSlide key={index} className={isCenter ? "center-highlight" : ""}>
+                <div className="relative flex flex-col items-center">
+                  <div className="relative rounded-full overflow-hidden transition-all duration-300 bg-white">
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={100}
+                      height={100}
+                      className="rounded-full object-contain w-[100px] h-[100px] mx-auto"
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
-        {/* Navigation Buttons */}
-        <div className="flex justify-center items-center gap-4 mt-6">
-          <button className="ugc-swiper-button-prev w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100 transition-colors">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-[var(--button-red)]"
-            >
-              <path
-                d="M10 12L6 8L10 4"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-          <button className="ugc-swiper-button-next w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-100 transition-colors">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="text-[var(--button-red)]"
-            >
-              <path
-                d="M6 4L10 8L6 12"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-
-        {/* Common Button for All Logos */}
+        {/* Dynamic Button for Active Logo */}
         <div className="flex flex-col items-center w-full px-4 mt-6">
-          <div className="w-px h-8 border-2 border-dashed border-gray-500 hidden lg:block"></div>
-          <div className="mt-3 w-full">
+          <div className="w-px h-8 border-2 border-dashed border-gray-500"></div>
+          <div className="mt-3 w-full max-w-md">
             <GlobalRedPlainButton className="w-full text-sm px-4 py-3">
-              University Grants Commission
+              {logos[activeIndex]?.name || "University Grants Commission"}
             </GlobalRedPlainButton>
           </div>
         </div>
-      </div>
-
-      {/* Desktop Grid View */}
-      <div className="hidden lg:flex flex-wrap justify-around items-start gap-6 md:gap-8 lg:gap-12">
-        {logos.map((logo, index) => (
-          <div
-            key={index}
-            className={`relative flex flex-col items-center ${
-              logo.isCenter ? "transform scale-110 z-10" : ""
-            }`}
-          >
-            <div
-              className={`relative ${
-                logo.isCenter
-                  ? "ring-1 shadow-[0_0_25px_8px_rgba(59,130,246,0.4)]"
-                  : ""
-              } rounded-full overflow-hidden transition-all duration-300 bg-white`}
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={100}
-                height={100}
-                className="rounded-full object-contain w-[100px] h-[100px]"
-              />
-            </div>
-
-            {/* Dashed line and button for center logo */}
-            {logo.isCenter && (
-              <div className="flex flex-col items-center">
-                <div className="w-px h-10 border-2 border-dashed border-gray-500"></div>
-                <div className="mt-3">
-                  <GlobalRedPlainButton>
-                    University Grants Commission
-                  </GlobalRedPlainButton>
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
       </div>
     </div>
   );

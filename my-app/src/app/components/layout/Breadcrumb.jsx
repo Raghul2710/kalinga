@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useBreadcrumb } from './BreadcrumbContext';
 import { useEffect, useRef } from 'react';
 
-const imageposition = "object-center";
+const imageposition = "object-top";
 
 const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {
   const pathname = usePathname();

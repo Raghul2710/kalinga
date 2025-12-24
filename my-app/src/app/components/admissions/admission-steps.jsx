@@ -4,6 +4,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import GlobalArrowButton from "../general/global-arrow_button";
 import SectionHeading from "../general/SectionHeading";
 import { useRef, useEffect } from "react";
@@ -52,6 +53,7 @@ export default function AdmissionSteps({
   showHeaderButton = true,
   ctaLabel = "Enquiry Now",
   onCtaClick,
+  ctaHref = "/admissions",
   showReadMore = true,
   showIcon = true,
   showImage = true,
@@ -84,10 +86,10 @@ export default function AdmissionSteps({
         .admission-steps-swiper .swiper-slide .step-card-inner {
           color: white;
         }
-        .admission-steps-swiper .swiper-slide .step-number {
-          color: var(--lite-sand);
-          opacity: 0.2;
-        }
+        // .admission-steps-swiper .swiper-slide .step-number {
+        //   color: var(--lite-sand);
+        //   opacity: 0.2;
+        // }
         .admission-steps-swiper .flip-face.back .step-number {
           color: var(--light-text-gray);
           opacity: 0.3;
@@ -137,9 +139,17 @@ export default function AdmissionSteps({
           </div>
           {showHeaderButton && (
             <div className="flex-shrink-0">
-              <GlobalArrowButton onClick={onCtaClick}>
-                {ctaLabel}
-              </GlobalArrowButton>
+              {onCtaClick ? (
+                <GlobalArrowButton onClick={onCtaClick}>
+                  {ctaLabel}
+                </GlobalArrowButton>
+              ) : (
+                <Link href={ctaHref} className="inline-flex">
+                  <GlobalArrowButton>
+                    {ctaLabel}
+                  </GlobalArrowButton>
+                </Link>
+              )}
             </div>
           )}
         </div>
@@ -198,7 +208,14 @@ export default function AdmissionSteps({
                       <div className="flip-face front bg-white rounded-xl p-1 h-full flex flex-col">
                         <div className="step-card-inner h-full flex flex-col rounded-xl relative overflow-hidden bg-[var(--button-red)] text-white p-4">
                           {/* Background Number */}
-                          <div className="step-number absolute top-4 right-4 text-7xl md:text-8xl font-bold leading-none opacity-20 font-stix">
+                          <div 
+                            className="step-number absolute top-4 right-4 text-7xl md:text-8xl leading-none opacity-20 font-stix text-[#fe9999]"
+                            style={{
+                              WebkitTextStroke: '1px #fe9999',
+                              textStroke: '1px #fe9999',
+                              color: 'transparent'
+                            }}
+                          >
                             {step.stepNumber}
                           </div>
 

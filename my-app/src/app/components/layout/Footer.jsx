@@ -51,18 +51,18 @@ export default function Footer() {
             </h4>
             <div className="grid grid-cols-2 gap-x-4 sm:gap-x-12 gap-y-2.5 sm:gap-y-3 font-plus-jakarta-sans text-xs sm:text-[14px] leading-relaxed sm:leading-[25px] font-normal">
               <ul className="text-white/80 space-y-2 sm:space-y-3">
-                <li><a className="hover:text-white transition-colors" href="/admissions">About</a></li>
+                <li><a className="hover:text-white transition-colors" href="/about-us">About</a></li>
                 <li><a className="hover:text-white transition-colors" href="/academics">Academics</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Admissions</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Research</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Placements</a></li>
+                <li><a className="hover:text-white transition-colors" href="/admissions">Admissions</a></li>
+                <li><a className="hover:text-white transition-colors" href="/research">Research</a></li>
+                <li><a className="hover:text-white transition-colors" href="/placements">Placements</a></li>
               </ul>
               <ul className="text-white/80 space-y-2 sm:space-y-3">
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Departments</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Campus Life</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Facilities</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Labs</a></li>
-                <li><a className="hover:text-white transition-colors" href="/students/campus-life">Events</a></li>
+                <li><a className="hover:text-white transition-colors" href="/departments">Departments</a></li>
+                <li><a className="hover:text-white transition-colors" href="/campuslife">Campus Life</a></li>
+                <li><a className="hover:text-white transition-colors" href="/campus-facilities">Facilities</a></li>
+                <li><a className="hover:text-white transition-colors" href="/laboratories">Labs</a></li>
+                <li><a className="hover:text-white transition-colors" href="/news-and-events">Events</a></li>
               </ul>
             </div>
           </div>
@@ -78,15 +78,15 @@ export default function Footer() {
                 <li><a className="hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</a></li>
                 <li><a className="hover:text-white transition-colors" href="/terms-conditions">Terms & Conditions</a></li>
                 <li><a className="hover:text-white transition-colors" href="/refund-policy">Refund Policy</a></li>
-                <li><a className="hover:text-white transition-colors" href="/accessibility">Accessibility</a></li>
+                <li><a className="hover:text-white transition-colors" href="#">Accessibility</a></li>
                 <li><a className="hover:text-white transition-colors" href="/downloads">Downloads</a></li>
               </ul>
               <ul className="text-white/80 space-y-2 sm:space-y-3">
-                <li><a className="hover:text-white transition-colors" href="/grievance">Grievance</a></li>
+                <li><a className="hover:text-white transition-colors" href="/grievance-redressal">Grievance</a></li>
                 <li><a className="hover:text-white transition-colors" href="/rti">RTI</a></li>
-                <li><a className="hover:text-white transition-colors" href="/nirf-ranking">NIRF Ranking</a></li>
-                <li><a className="hover:text-white transition-colors" href="/iqac-documents">IQAC Documents</a></li>
-                <li><a className="hover:text-white transition-colors" href="/mandatory-disclosures">Mandatory Disclosures</a></li>
+                <li><a className="hover:text-white transition-colors" href="#">NIRF Ranking</a></li>
+                <li><a className="hover:text-white transition-colors" href="#">IQAC Documents</a></li>
+                <li><a className="hover:text-white transition-colors" href="#">Mandatory Disclosures</a></li>
               </ul>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function Footer() {
                 <a href="mailto:registrar@kalingauniversity.ac.in" className="text-[10px] sm:text-xs break-all">registrar@kalingauniversity.ac.in</a>
               </div>
               <div className="flex justify-start sm:justify-end">
-                <a href="#" className="inline-flex items-center gap-2 text-xs sm:text-sm text-white hover:text-white/80 transition-colors">
+                <a href="/contact-us" className="inline-flex items-center gap-2 text-xs sm:text-sm text-white hover:text-white/80 transition-colors">
                   Get Direction 
                   <span className="inline-flex items-center justify-center bg-white text-[#972B28] rounded w-4 h-4 sm:w-5 sm:h-5 text-[10px] sm:text-xs">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 sm:w-3 sm:h-3">

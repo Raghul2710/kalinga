@@ -48,7 +48,7 @@ const OrganogramOfKalinga = ({
         <div
           className={`${cardBackgroundColor} rounded-[10px] text-white relative ${showImage ? 'overflow-visible' : 'overflow-hidden'}`}
         >
-          <div className={`flex flex-col   ${showImage ? 'lg:flex-row' : ''} items-center gap-6 lg:gap-8`}>
+          <div className={`flex flex-col   ${showImage ? 'lg:flex-row' : ''} items-center gap-6 lg:gap-0`}>
             {/* Left Content */}
             <div className={`flex-1 p-5 md:p-8 ${showImage ? 'lg:w-1/2' : 'w-full'}`}>
               {/* Title */}
@@ -59,7 +59,7 @@ const OrganogramOfKalinga = ({
               />
 
               {/* Description */}
-              <div className="text-sm sm:text-base md:text-lg md:w-5/6 w-full leading-relaxed sm:leading-normal md:leading-relaxed mb-6 font-plus-jakarta-sans space-y-3">
+              <div className="text-sm sm:text-base md:text-lg md:w-full w-full leading-relaxed sm:leading-normal md:leading-relaxed mb-6 font-plus-jakarta-sans space-y-3">
                 {descriptionArray.map((para, idx) => (
                   <p key={idx}>{para}</p>
                 ))}
@@ -79,7 +79,7 @@ const OrganogramOfKalinga = ({
 
             {/* Right Image */}
             {showImage && imageUrl && (
-              <div className="flex-shrink-0 lg:w-2/5 relative w-full h-[400px] -mt-[95px]">
+              <div className="flex-shrink-0 lg:w-1/3 relative w-full h-[400px] -mt-[95px]">
                 <div className="relative w-full h-full">
                   <Image
                     src={imageUrl}

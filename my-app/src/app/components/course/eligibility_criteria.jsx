@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import GlobalArrowButton from "../general/global-arrow_button";
 
 const defaultContent = {
@@ -22,6 +23,7 @@ export default function EligibilityCriteria({
   criteria = defaultContent.criteria,
   admissionTitle = defaultContent.admissionTitle,
   admissionButtonLabel = defaultContent.admissionButtonLabel,
+  href = null,
 }) {
   return (
     <section className="bg-[var(--dark-blue)] py-16 rounded-2xl mx-2">
@@ -80,14 +82,27 @@ export default function EligibilityCriteria({
               <h3 className="text-white mb-6 text-2xl md:text-3xl lg:text-[30px] leading-tight">
                 {admissionTitle}
               </h3>
-              <GlobalArrowButton
-                className="!bg-white !text-[var(--button-red)] hover:!bg-gray-100 !shadow-none hover:!shadow-none"
-                arrowClassName="!bg-[var(--dark-orange-red)]"
-                arrowIconClassName="!text-white"
-                textClassName="!font-semibold"
-              >
-                {admissionButtonLabel}
-              </GlobalArrowButton>
+              {href ? (
+                <Link href={href} className="inline-flex">
+                  <GlobalArrowButton
+                    className="!bg-white !text-[var(--button-red)] hover:!bg-gray-100 !shadow-none hover:!shadow-none"
+                    arrowClassName="!bg-[var(--dark-orange-red)]"
+                    arrowIconClassName="!text-white"
+                    textClassName="!font-semibold"
+                  >
+                    {admissionButtonLabel}
+                  </GlobalArrowButton>
+                </Link>
+              ) : (
+                <GlobalArrowButton
+                  className="!bg-white !text-[var(--button-red)] hover:!bg-gray-100 !shadow-none hover:!shadow-none"
+                  arrowClassName="!bg-[var(--dark-orange-red)]"
+                  arrowIconClassName="!text-white"
+                  textClassName="!font-semibold"
+                >
+                  {admissionButtonLabel}
+                </GlobalArrowButton>
+              )}
             </div>
           </div>
         </div>

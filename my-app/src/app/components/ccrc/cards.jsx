@@ -23,7 +23,16 @@ export default function Cards({ cards = [] }) {
             />
             {/* Red Button (bottom left) */}
             <div className="absolute left-5 bottom-4 z-10">
-              <GlobalArrowButton variant="default" onClick={() => {}}>Know More</GlobalArrowButton>
+              <GlobalArrowButton 
+                variant="default" 
+                onClick={() => {
+                  if (card.href) {
+                    window.location.href = card.href;
+                  }
+                }}
+              >
+                Know More
+              </GlobalArrowButton>
             </div>
 
             {/* Small white rounded box (bottom right) */}

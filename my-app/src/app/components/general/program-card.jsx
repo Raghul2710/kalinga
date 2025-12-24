@@ -11,7 +11,8 @@ export default function ProgramCard({
   onExploreProgramClick,
   showSpecializationDropdown = false,
   specializationOptions = [],
-  specializationPlaceholder = "Select Specialisation"
+  specializationPlaceholder = "Select Specialisation",
+  href = "/admissions"
 }) {
   const [selectedSpecialization, setSelectedSpecialization] = useState("");
   return (
@@ -24,7 +25,7 @@ export default function ProgramCard({
       {/* Program Content */}
       <div className="relative z-10">
         {/* Program Title - Dark Red */}
-        <h3 className="text-[var(--button-red)] text-xl md:text-2xl lg:text-3xl !font-bold mb-2 font-plus-jakarta-sans">
+        <h3 className="text-[var(--button-red)] text-xl md:text-2xl lg:text-3xl !font-bold mb-2 font-plus-jakarta-sans normal-case">
           {program.title}
         </h3>
 
@@ -71,7 +72,7 @@ export default function ProgramCard({
         )}
 
         {/* Program Details Section */}
-        <div className="mb-4 md:mb-6 flex gap-5">
+        <div className="mb-4 md:mb-6 md:flex  gap-5">
           {/* Duration */}
           <p className="whitespace-nowrap">
             Duration : {program.duration}
@@ -85,12 +86,14 @@ export default function ProgramCard({
 
           {/* Links Row - Hide if specialization dropdown is shown */}
           {!showSpecializationDropdown && (
-            <div className="flex items-center gap-3 md:gap-4 justify-start flex-wrap md:flex-nowrap">
+            <div className="flex items-center gap-3 md:gap-4 justify-start flex-wrap md:flex-nowrap mt-2 md:mt-0">
               <a
-                href="#"
+                href="/admissions"
                 onClick={(e) => {
-                  e.preventDefault();
-                  if (onScholarshipsClick) onScholarshipsClick(program);
+                  if (onScholarshipsClick) {
+                    e.preventDefault();
+                    onScholarshipsClick(program);
+                  }
                 }}
                 className="text-[var(--button-red)] text-xs md:text-sm font-medium hover:underline flex items-center gap-1 whitespace-nowrap !text-[11px] md:!text-[12px]"
               >
@@ -141,17 +144,23 @@ export default function ProgramCard({
         {/* Action Buttons */}
         <div className="flex flex-row gap-2 md:gap-3">
           {/* Check Eligibility Button - Dark Red with white arrow in white square */}
+          <a href={href} onClick={(e) => {
+            e.preventDefault();
+            if (onCheckEligibility) onCheckEligibility(program);
+          }}>
           <GlobalArrowButton
             className="!bg-[var(--dark-orange-red)] !text-[var(--background)] whitespace-nowrap text-xs md:text-sm lg:text-base !h-[38px] md:!h-[40px] !rounded-lg !px-1"
             arrowClassName="!bg-[var(--background)] !px-1"
             arrowIconClassName="!text-[var(--button-red)]"
             textClassName="!text-[12px] md:!text-[14px] !px-2 md:!px-3"
             onClick={() => onCheckEligibility && onCheckEligibility(program)}
-          >
-            Check Eligibility
-          </GlobalArrowButton>
+            >
+              Check Eligibility
+            </GlobalArrowButton>
+          </a>
 
           {/* Apply Now Button - Dark Red with white arrow in white square */}
+          <a href={href}>
           <GlobalArrowButton
             className="!bg-[var(--button-red)] !text-[var(--background)] whitespace-nowrap !text-xs md:!text-sm lg:!text-base !h-[38px] md:!h-[40px] !rounded-lg !px-1"
             arrowClassName="!bg-[var(--background)] !px-1 !text-white"
@@ -161,6 +170,7 @@ export default function ProgramCard({
           >
             Apply Now
           </GlobalArrowButton>
+          </a>
         </div>
       </div>
     </div>

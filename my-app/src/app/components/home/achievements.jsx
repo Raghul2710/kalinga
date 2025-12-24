@@ -155,7 +155,7 @@ export default function Achievements() {
                 titleClassName="text-[var(--foreground)] mb-6 lg:mb-8"
               />
               <div>
-                <Link href="/about" className="inline-flex">
+                <Link href="/about-us" className="inline-flex">
                   <GlobalArrowButton className="w-full sm:w-[160px] h-[44px] justify-between"> 
                     Learn More
                     </GlobalArrowButton>
