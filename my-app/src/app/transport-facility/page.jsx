@@ -33,7 +33,6 @@ export default function TransportFacilityPage() {
     knowMoreLabel="Bus Route Details"
     knowMoreHref="#"
     />
-    <ResearchSixGridButtons />
     </>
   )
 }
