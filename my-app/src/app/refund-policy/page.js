@@ -7,7 +7,7 @@ const listStyle = { fontFamily: 'Plus Jakarta Sans, sans-serif', fontSize: '14px
 
 /// Breadcrumb configuration
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/contact-us-banner.webp",
   pageTitle: "Refund & Cancellation Policy",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },

@@ -6,7 +6,7 @@ import GlobalArrowButton from "../components/general/global-arrow_button";
 
 
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/infra.webp",
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
   pageTitle: "Downloads",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },

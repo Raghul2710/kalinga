@@ -2,7 +2,7 @@
 
 import SectionHeading from '../general/SectionHeading';
 
-export default function EmployeeBenefits({ counsellingAreas }) {
+export default function EmployeeBenefits({ counsellingAreas, headingTextColor }) {
 
   const defaultBenefits = [
     {
@@ -51,13 +51,17 @@ export default function EmployeeBenefits({ counsellingAreas }) {
 
   const data = counsellingAreas?.[0] || defaultData;
   const benefits = data.benefits || defaultBenefits;
+  const title = data.title || "Employee Benefits";
+  const description = data.description || "At Kalinga University, we recognize that our people are our greatest asset. We are committed to creating a supportive, inclusive, and growth-oriented workplace that encourages excellence, innovation, and well-being.";
 
   return (
     <section className="w-full max-w-[1249px] mx-auto py-20 px-2">
-      <h2 className="text-[var(--dark-blue)] text-center text-3xl sm:text-[40px] mb-4">Employee Benefits</h2>
-      <p className="text-center text-[14px] text-[var(--light-text-gray)] max-w-3xl mx-auto mb-16">
-      At Kalinga University, we recognize that our people are our greatest asset. We are committed to creating a supportive, inclusive, and growth-oriented workplace that encourages excellence, innovation, and well-being.
-</p>
+      <h2 className={`${headingTextColor || 'text-[var(--dark-blue)]'} text-center text-3xl sm:text-[40px] mb-4`}>{title}</h2>
+      {description && (
+        <p className="text-center text-[14px] text-[var(--light-text-gray)] max-w-3xl mx-auto mb-16">
+          {description}
+        </p>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         

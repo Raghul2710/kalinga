@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import SectionHeading from '../components/general/SectionHeading'
 
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/contact-us-banner.webp",
   pageTitle: "Privacy Policy",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },

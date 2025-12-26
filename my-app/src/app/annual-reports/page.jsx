@@ -20,11 +20,6 @@ if (typeof window !== 'undefined') {
 
  const annualReportButtons = [
   {
-    id: 0,
-    text: "overall institutional development",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Website+PDFs.xlsx",
-  },
-  {
     id: 1,
     text: "Annual Report 2022–23 (Volume I)",
     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2022-23-(Vol-1).pdf",
@@ -91,11 +86,11 @@ export default function Page() {
         <div className="container mx-auto px-6">
 
           {/* ✅ PAGE HEADING */}
-          <div className="mb-10">
+          <div className="mb-10 text-center">
             <h2 >
               Annual Reports
             </h2>
-            <p className="text-[16px] text-[#555] max-w-[900px] leading-relaxed">
+            <p className="text-[16px] text-[#555] leading-relaxed">
               Our annual reports will give you a detailed overview of the University’s growth and achievements. 
               These reports show transparency, academic excellence, and overall institutional development.
             </p>

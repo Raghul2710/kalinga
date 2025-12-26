@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import MainIntro from '../components/about/main_intro'
 import EmployeeBenefits from "../components/careers/EmployeeBenefits"
@@ -22,61 +24,58 @@ const breadcrumbData = {
   const counsellingAreas = [
     {
       title: "Our Key Counselling Areas",
-      description: "",
-    },
-    {
+      description: "Kalinga University's counselling cell provides comprehensive support to help students navigate their academic and personal journey with confidence and clarity.",
       benefits: [
-    {
-      id: 1,
-      title: "Identifying Interests",
-      description: "A student can sometimes be unaware of their passion or new career opportunities. Our dedicated counsellors interact with each candidate and identify their interests.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/wages.svg",
-    },
-    {
-      id: 2,
-      title: "Selection of Programs",
-      description: "They guide each student in choosing the best programs available according to their interests and goals, helping them make an informed academic decision.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/professional-development.svg"
-    },
-    {
-      id: 3,
-      title: "Managing Academic Pressure",
-      description: "A college life often comes with new academic challenges, which sometimes increases their stress level. Counsellors at Kalinga effectively manage their new challenges by giving them proper solutions.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Health+%26+Wellness.svg"
-    },
-    {
-      id: 4,
-      title: "Adjustment Problems",
-      description: "Students find it difficult to adjust to a new environment or make new friends, but they will get complete help, making them feel at home.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Work%E2%80%93Life+Balance.svg"
-    },
-    {
-      id: 5,
-      title: "Mental Health Support",
-      description: "Students’ health can deteriorate if they’re facing issues with their academic or personal life. With our one-on-one interaction session, their problems will be resolved so that they can enjoy their college life.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Research.svg"
-    },
-    {
-      id: 6,
-      title: "Personal Growth and Development",
-      description: "We inform our students about essential skills apart from their curriculum. They will be informed about our training on soft skills, interview preparation, and co-curricular and extracurricular activities.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Recognition+%26+Growth.svg"
-    },
-    {
-      id: 7,
-      title: "Future Career Planning",
-      description: "Based on their selected programs, they’ll be guided on different career opportunities they can explore in their chosen field. They will also be informed about our campus placement drives.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Recognition+%26+Growth.svg"
-    },
-    {
-      id: 8,
-      title: "Crisis Management",
-      description: "If they face any traumatic incident in their life, we’ll not let them go through that alone. They will be taken care of every single day so that they can overcome their situation.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Recognition+%26+Growth.svg"
+        {
+          id: 1,
+          title: "Identifying Interests",
+          description: "A student can sometimes be unaware of their passion or new career opportunities. Our dedicated counsellors interact with each candidate and identify their interests.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/wages.svg",
+        },
+        {
+          id: 2,
+          title: "Selection of Programs",
+          description: "They guide each student in choosing the best programs available according to their interests and goals, helping them make an informed academic decision.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/loyalty-program.svg"
+        },
+        {
+          id: 3,
+          title: "Managing Academic Pressure",
+          description: "A college life often comes with new academic challenges, which sometimes increases their stress level. Counsellors at Kalinga effectively manage their new challenges by giving them proper solutions.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/knowledge.svg"
+        },
+        {
+          id: 4,
+          title: "Adjustment Problems",
+          description: "Students find it difficult to adjust to a new environment or make new friends, but they will get complete help, making them feel at home.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Adjustment+Problems.svg"
+        },
+        {
+          id: 5,
+          title: "Mental Health Support",
+          description: "Students' health can deteriorate if they're facing issues with their academic or personal life. With our one-on-one interaction session, their problems will be resolved so that they can enjoy their college life.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mental+Health+Support.svg"
+        },
+        {
+          id: 6,
+          title: "Personal Growth and Development",
+          description: "We inform our students about essential skills apart from their curriculum. They will be informed about our training on soft skills, interview preparation, and co-curricular and extracurricular activities.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Personal+Growth+and+Development.svg"
+        },
+        {
+          id: 7,
+          title: "Future Career Planning",
+          description: "Based on their selected programs, they'll be guided on different career opportunities they can explore in their chosen field. They will also be informed about our campus placement drives.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Future+Career+Planning.svg"
+        },
+        {
+          id: 8,
+          title: "Crisis Management",
+          description: "If they face any traumatic incident in their life, we'll not let them go through that alone. They will be taken care of every single day so that they can overcome their situation.",
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Crisis+Management.svg"
+        }
+      ]
     }
-    ]
-    }
-
   ]
 
 
@@ -97,9 +96,10 @@ const breadcrumbData = {
       showKnowMore={true}
       initialVisibleParagraphs={1}
       />
-      <EmployeeBenefits
-      counsellingAreas={counsellingAreas}
-      />
+        <EmployeeBenefits
+        counsellingAreas={counsellingAreas}
+        headingTextColor="text-black"
+        />
         </div>
     )
 }

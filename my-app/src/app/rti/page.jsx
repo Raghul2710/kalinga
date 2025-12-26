@@ -21,21 +21,20 @@ export default function GetInTouch() {
     }
   }, []);
   return (
-    <section className="py-16 mt-16 mb-30 bg-[var(--dark-blue)] lg:h-[650px] rounded-xl mx-2">
+    <section className="py-16 mt-16 mb-30 bg-[var(--dark-blue)] lg:h-[500px] rounded-xl mx-2">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]  lg:gap-12 items-stretch">
 
           {/* Left: Heading + info cards */}
           <div className="flex flex-col gap-6 text-white">
-            <div className="mb-5">
+            <div className="mb-5 text-center">
               <SectionHeading
                 title="Right To Information (RTI)"
                 subtitle=""
-                titleClassName="text-left mb-2 text-white"
-                subtitleClassName="text-left text-sm sm:text-base text-[var(--lite-sand)] max-w-xl"
+                titleClassName="text-center mb-2 text-white"
+                subtitleClassName="text-center text-sm sm:text-base text-[var(--lite-sand)] max-w-xl"
               />
 
-              <p className="max-w-xl">
+              <p className="text-white text-sm sm:text-base">
                 Kalinga University stays open and transparent by following the Right To Information (RTI) Act, 2005. Stakeholders can submit the RTI application, and our designated PIO will ensure a timely response to all their queries.
               </p>
             </div>
@@ -67,11 +66,12 @@ export default function GetInTouch() {
                     </span>
 
                     <p className="text-[var(--foreground)]">
-                      Mrs. T. Gayatri Murty <br />
-                      Assistant Registrar & PIO – <br />
-                      Kalinga University <br />
-                      Kotni, Near Mantralaya, <br />
-                      Naya Raipur (C.G.) – 492 101
+                      Mrs. T. Gayatri Murty, 
+                      Assistant Registrar & PIO – 
+                      Kalinga University, 
+                      Kotni, Near Mantralaya, 
+                      Naya Raipur (C.G.), 
+                      India - 492 101
                     </p>
                   </li>
 
@@ -146,11 +146,12 @@ export default function GetInTouch() {
                     </span>
 
                     <p className="text-[var(--foreground)]">
-                      Dr. Sandeep Gandhi <br />
-                      Registrar & Appellate Authority – <br />
-                      Kalinga University <br />
-                      Kotni, Near Mantralaya <br />
-                      Naya Raipur (C.G.) – 492 101
+                      Dr. Sandeep Gandhi, 
+                      Registrar & Appellate Authority – 
+                      Kalinga University, 
+                      Kotni, Near Mantralaya, 
+                      Naya Raipur (C.G.), 
+                      India - 492 101
                     </p>
                   </li>
 
@@ -204,10 +205,10 @@ export default function GetInTouch() {
           </div>
 
           {/* Right: Form card */}
-          <div className="flex justify-center mt-10 lg:mt-30 lg:justify-end">
+          {/* <div className="flex justify-center mt-10 lg:mt-30 lg:justify-end">
 
-<div className="w-full max-w-lg lg:max-w-lg bg-[var(--button-red)] rounded-2xl border-2 border-white 
-px-4 pt-2 pb-5 sm:px-5 sm:pt-4 sm:pb-7 lg:px-8 lg:py-12 shadow-2xl">
+             <div className="w-full max-w-lg lg:max-w-lg bg-[var(--button-red)] rounded-2xl border-2 border-white 
+              px-4 pt-2 pb-5 sm:px-5 sm:pt-4 sm:pb-7 lg:px-8 lg:py-12 shadow-2xl">
 
 
               <form className="space-y-6 sm:space-y-8 text-white">
@@ -244,9 +245,8 @@ px-4 pt-2 pb-5 sm:px-5 sm:pt-4 sm:pb-7 lg:px-8 lg:py-12 shadow-2xl">
 
               </form>
             </div>
-          </div>
+          </div> */}
 
-        </div>
       </div>
     </section>
   );
