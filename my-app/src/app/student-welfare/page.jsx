@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import StudentWelfareIntro from "../components/student-welface/studentwelfare-intro";
-import SwdeanIntro from "../components/student-welface/swdean-into";
-import SwCards from "../components/student-welface/sw-cards";
+import StudentWelfareIntro from "../components/student-welfare/studentwelfare-intro";
+import SwdeanIntro from "../components/student-welfare/swdean-into";
+import SwCards from "../components/student-welfare/sw-cards";
 import FAQ from "../components/general/faq";
 import ImageContent from "@/app/components/ccrc/imagecontent";
 import { useMemo, useState } from "react";

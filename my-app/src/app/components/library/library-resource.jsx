@@ -92,7 +92,7 @@ export default function LibraryResource() {
     const wrapper = document.querySelector(".library-e-resources-wrapper");
     if (!wrapper) return;
 
-    // 1) Change "Register Now" text to "Open Link"
+    // 1) Change button text to "Open Link"
     const replaceButtonText = () => {
       const all = wrapper.querySelectorAll("*");
       all.forEach((el) => {
@@ -103,11 +103,84 @@ export default function LibraryResource() {
       });
     };
 
-    replaceButtonText();
-    const mo = new MutationObserver(() => replaceButtonText());
-    mo.observe(wrapper, { childList: true, subtree: true });
+    // 2) Read More / Read Less for description (without touching UpcomingConference)
+    const RESOURCE_DESC = new Map(eResources.map((r) => [r.title, r.description]));
+    const expandedTitles = new Set();
 
-    // 2) Make "Open Link" open href of active slide
+    const setupReadMore = () => {
+      const slides = wrapper.querySelectorAll(".swiper-slide");
+      slides.forEach((slide) => {
+        const titleEl = slide.querySelector("h1, h2, h3");
+        const title = titleEl?.textContent?.trim();
+        if (!title || !RESOURCE_DESC.has(title)) return;
+
+        if (slide.querySelector(".library-desc")) return;
+
+        const full = RESOURCE_DESC.get(title);
+
+        const nodes = slide.querySelectorAll("p, div, span");
+        let descNode = null;
+        nodes.forEach((n) => {
+          if (descNode) return;
+          const t = n.textContent?.trim();
+          if (t === full) descNode = n;
+        });
+        if (!descNode) return;
+
+        const descWrap = document.createElement("div");
+        descWrap.className = "library-desc-wrap";
+
+        const descSpan = document.createElement("span");
+        descSpan.className = "library-desc";
+        descSpan.textContent = full;
+
+        if (expandedTitles.has(title)) descSpan.classList.add("is-expanded");
+
+        descNode.replaceWith(descWrap);
+        descWrap.appendChild(descSpan);
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "library-readmore";
+        btn.setAttribute("data-title", title);
+        btn.textContent = expandedTitles.has(title) ? "Read less" : "Read more";
+        descWrap.appendChild(btn);
+
+        requestAnimationFrame(() => {
+          const isExpanded = descSpan.classList.contains("is-expanded");
+          if (!isExpanded) {
+            const overflows = descSpan.scrollHeight > descSpan.clientHeight + 1;
+            if (!overflows) btn.style.display = "none";
+          }
+        });
+      });
+    };
+
+    const toggleReadMore = (e) => {
+      let el = e.target;
+      while (el && el !== wrapper) {
+        if (el.classList?.contains("library-readmore")) {
+          const title = el.getAttribute("data-title");
+          if (!title) return;
+
+          const wrap = el.closest(".library-desc-wrap");
+          const desc = wrap?.querySelector(".library-desc");
+          if (!desc) return;
+
+          const willExpand = !desc.classList.contains("is-expanded");
+          desc.classList.toggle("is-expanded", willExpand);
+
+          if (willExpand) expandedTitles.add(title);
+          else expandedTitles.delete(title);
+
+          el.textContent = willExpand ? "Read less" : "Read more";
+          return;
+        }
+        el = el.parentElement;
+      }
+    };
+
+    // 3) Make "Open Link" open href of active slide
     const getActiveHref = () => {
       const active = wrapper.querySelector(".swiper-slide-active");
       if (!active) return null;
@@ -125,6 +198,10 @@ export default function LibraryResource() {
     };
 
     const clickHandler = (e) => {
+      // readmore
+      toggleReadMore(e);
+
+      // open link
       let el = e.target;
       while (el && el !== wrapper) {
         const t = el.textContent?.trim();
@@ -137,66 +214,20 @@ export default function LibraryResource() {
       }
     };
 
+    replaceButtonText();
+    setupReadMore();
+
+    const mo = new MutationObserver(() => {
+      replaceButtonText();
+      setupReadMore();
+    });
+    mo.observe(wrapper, { childList: true, subtree: true });
+
     wrapper.addEventListener("click", clickHandler, true);
-
-    // ✅ Read More / Read Less for the description paragraph inside UpcomingConference
-    const initReadMore = () => {
-      const slides = wrapper.querySelectorAll(".swiper-slide");
-
-      slides.forEach((slide) => {
-        // The description in your UpcomingConference:
-        // <p class="text-[var(--light-text-gray)] text-sm">{conf.description}</p>
-        const desc = slide.querySelector("p.text-\\[var\\(--light-text-gray\\)\\]");
-        if (!desc) return;
-
-        // Remove previous button if any
-        const oldBtn = slide.querySelector(".ku-readmore-btn");
-        if (oldBtn) oldBtn.remove();
-
-        // Reset to collapsed on rerender
-        desc.classList.remove("is-expanded");
-        desc.classList.add("ku-readmore-text");
-
-        requestAnimationFrame(() => {
-          const cs = window.getComputedStyle(desc);
-          let lineHeight = parseFloat(cs.lineHeight);
-          if (Number.isNaN(lineHeight)) {
-            const fontSize = parseFloat(cs.fontSize) || 16;
-            lineHeight = fontSize * 1.4;
-          }
-
-          const maxLines = 3;
-          const maxHeight = Math.ceil(lineHeight * maxLines);
-
-          // If doesn't exceed 3 lines, no Read More
-          if (desc.scrollHeight <= maxHeight + 2) return;
-
-          const btn = document.createElement("button");
-          btn.type = "button";
-          btn.className = "ku-readmore-btn";
-          btn.textContent = "Read More";
-
-          btn.addEventListener("click", (ev) => {
-            ev.preventDefault();
-            ev.stopPropagation();
-
-            const expanded = desc.classList.toggle("is-expanded");
-            btn.textContent = expanded ? "Read Less" : "Read More";
-          });
-
-          desc.insertAdjacentElement("afterend", btn);
-        });
-      });
-    };
-
-    initReadMore();
-    const mo2 = new MutationObserver(() => initReadMore());
-    mo2.observe(wrapper, { childList: true, subtree: true });
 
     return () => {
       wrapper.removeEventListener("click", clickHandler, true);
       mo.disconnect();
-      mo2.disconnect();
     };
   }, []);
 
@@ -204,12 +235,19 @@ export default function LibraryResource() {
     <div className="library-e-resources-wrapper py-12 md:py-16">
       <style jsx global>{`
         /* =============================
-           IMAGE WIDTH FIX (your existing)
+           Layout fixes for MOBILE images
            ============================= */
-        .library-e-resources-wrapper :global(.swiper-slide > div > div) {
-          align-items: flex-start !important;
+
+        /* Ensure card inner layout can wrap on small screens */
+        @media (max-width: 768px) {
+          .library-e-resources-wrapper :global(.swiper-slide > div > div) {
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 14px !important;
+          }
         }
 
+        /* Image container: NEVER collapse on mobile */
         .library-e-resources-wrapper
           :global(.swiper-slide .overflow-hidden.rounded-xl) {
           flex: 0 0 34% !important;
@@ -223,6 +261,19 @@ export default function LibraryResource() {
 
           padding: 0 !important;
           margin: 0 auto !important;
+          min-width: 140px !important; /* prevents disappearing */
+        }
+
+        /* Mobile: make image full width and visible */
+        @media (max-width: 768px) {
+          .library-e-resources-wrapper
+            :global(.swiper-slide .overflow-hidden.rounded-xl) {
+            flex: 0 0 auto !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            height: 190px !important;
+            min-width: 0 !important;
+          }
         }
 
         .library-e-resources-wrapper
@@ -237,56 +288,87 @@ export default function LibraryResource() {
           align-items: center !important;
         }
 
+        /* image itself */
         .library-e-resources-wrapper :global(.swiper-slide img.object-cover) {
           width: auto !important;
-          max-width: 85% !important;
-          max-height: 95% !important;
+          max-width: 90% !important;
+          max-height: 100% !important;
+
           object-fit: contain !important;
           object-position: center !important;
+
           display: block !important;
           margin: 0 auto !important;
         }
 
+        /* Mobile: allow larger image */
+        @media (max-width: 768px) {
+          .library-e-resources-wrapper :global(.swiper-slide img.object-cover) {
+            max-width: 92% !important;
+            max-height: 96% !important;
+          }
+        }
+
+        /* Increase top padding inside card */
         .library-e-resources-wrapper :global(.swiper-slide > div) {
           padding-top: 32px !important;
         }
 
+        @media (max-width: 768px) {
+          .library-e-resources-wrapper :global(.swiper-slide > div) {
+            padding-top: 18px !important;
+          }
+        }
+
         /* =============================
-           ✅ READ MORE (works with your UpcomingConference markup)
+           Read More styles
            ============================= */
-        .library-e-resources-wrapper :global(.ku-readmore-text) {
-          display: -webkit-box !important;
-          -webkit-box-orient: vertical !important;
-          -webkit-line-clamp: 3 !important;
-          overflow: hidden !important;
 
-          /* keep consistent measurement */
-          line-height: 1.5 !important;
+        .library-e-resources-wrapper :global(.library-desc-wrap) {
+          margin-top: 8px;
         }
 
-        .library-e-resources-wrapper :global(.ku-readmore-text.is-expanded) {
-          -webkit-line-clamp: unset !important;
-          overflow: visible !important;
-          display: block !important;
+        .library-e-resources-wrapper :global(.library-desc) {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+
+          line-height: 1.65;
+          font-size: 0.95rem;
+          color: rgba(17, 24, 39, 0.82);
         }
 
-        .library-e-resources-wrapper :global(.ku-readmore-btn) {
-          margin-top: 6px !important;
+        .library-e-resources-wrapper :global(.library-desc.is-expanded) {
+          -webkit-line-clamp: unset;
+          display: block;
+          overflow: visible;
+        }
 
-          /* ✅ match component font automatically */
-          font: inherit !important;
-          font-size: inherit !important;
-          line-height: inherit !important;
+        .library-e-resources-wrapper :global(.library-readmore) {
+          margin-top: 8px;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          cursor: pointer;
 
-          font-weight: 600 !important;
-          color: #7b4b2a !important; /* ✅ brown */
+          font-size: 0.92rem;
+          font-weight: 600;
+          letter-spacing: 0.1px;
 
-          background: transparent !important;
-          border: 0 !important;
-          padding: 0 !important;
-          cursor: pointer !important;
-          text-decoration: underline !important;
-          width: fit-content !important;
+          color: var(--red);
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        .library-e-resources-wrapper :global(.library-readmore:hover) {
+          opacity: 0.9;
+        }
+
+        .library-e-resources-wrapper :global(.library-readmore:focus-visible) {
+          outline: 2px solid rgba(0, 0, 0, 0.25);
+          outline-offset: 3px;
+          border-radius: 6px;
         }
       `}</style>
 
