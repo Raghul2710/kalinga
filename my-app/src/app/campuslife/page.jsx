@@ -42,7 +42,8 @@ export default function Page() {
             date: "Nov 28, 2025 · 10:00 A.M.",
             category: "Academic Event",
             description: "Hybrid workshop on Scopus analytics and publishing insights with experts.",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Pic1+(1).jpeg"
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Pic1+(1).jpeg",
+            href: "/contact-us"
           }
         ]}
        

@@ -123,28 +123,59 @@ export default function OpenPositions({
                   {/* Buttons - Vertical on mobile, horizontal on desktop */}
                   <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-[430px] px-4 lg:px-0 mt-4 lg:mt-0 pb-4 md:pb-0">
                     {position.knowMoreButton && (
-                      <GlobalArrowButton
-                        className="!bg-[var(--dark-orange-red)] !text-white hover:!bg-[var(--dark-orange-red)]/90 flex-1 justify-between w-full sm:w-auto"
-                        arrowClassName="!bg-white"
-                        arrowIconClassName="!text-[var(--button-red)]"
-                        onClick={() => handleKnowMore(position)}
-                      >
-                        {position.knowMoreButton}
-                      </GlobalArrowButton>
+                      position.knowMoreLink ? (
+                        <a
+                          href={position.knowMoreLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 w-full sm:w-auto"
+                        >
+                          <GlobalArrowButton
+                            className="!bg-[var(--dark-orange-red)] !text-white hover:!bg-[var(--dark-orange-red)]/90 flex-1 justify-between w-full sm:w-auto"
+                            arrowClassName="!bg-white"
+                            arrowIconClassName="!text-[var(--button-red)]"
+                          >
+                            {position.knowMoreButton}
+                          </GlobalArrowButton>
+                        </a>
+                      ) : (
+                        <GlobalArrowButton
+                          className="!bg-[var(--dark-orange-red)] !text-white hover:!bg-[var(--dark-orange-red)]/90 flex-1 justify-between w-full sm:w-auto"
+                          arrowClassName="!bg-white"
+                          arrowIconClassName="!text-[var(--button-red)]"
+                          onClick={() => handleKnowMore(position)}
+                        >
+                          {position.knowMoreButton}
+                        </GlobalArrowButton>
+                      )
                     )}
                     {position.registrationButton && (
-                      <GlobalArrowButton
-                        className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full sm:w-auto"
-                        arrowClassName="!bg-white"
-                        arrowIconClassName="!text-[var(--button-red)]"
-                        onClick={position.onRegistrationClick || (() => {
-                          if (position.registrationLink) {
-                            window.open(position.registrationLink, '_blank', 'noopener,noreferrer');
-                          }
-                        })}
-                      >
-                        {position.registrationButton}
-                      </GlobalArrowButton>
+                      position.registrationLink ? (
+                        <a
+                          href={position.registrationLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 w-full sm:w-auto"
+                        >
+                          <GlobalArrowButton
+                            className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full sm:w-auto"
+                            arrowClassName="!bg-white"
+                            arrowIconClassName="!text-[var(--button-red)]"
+                            onClick={position.onRegistrationClick}
+                          >
+                            {position.registrationButton}
+                          </GlobalArrowButton>
+                        </a>
+                      ) : (
+                        <GlobalArrowButton
+                          className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full sm:w-auto"
+                          arrowClassName="!bg-white"
+                          arrowIconClassName="!text-[var(--button-red)]"
+                          onClick={position.onRegistrationClick}
+                        >
+                          {position.registrationButton}
+                        </GlobalArrowButton>
+                      )
                     )}
                   </div>
                 </div>

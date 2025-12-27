@@ -199,6 +199,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Google SketchUp Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/azFEvsHhhg12uFtu5",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/azFEvsHhhg12uFtu5"
           },
@@ -218,6 +219,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "SEM & Microscopy Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/WJCVBNZNoYPzeZUG9",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/WJCVBNZNoYPzeZUG9"
           },
@@ -238,6 +240,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Literature Review Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/kJNVJbsYwKK72B2J9",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/kJNVJbsYwKK72B2J9"
           },
@@ -259,6 +262,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Stock Market Trading Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://surli.cc/vxybhb",
             registrationButton: "Registration Now",
             registrationLink: "https://surli.cc/vxybhb"
           },
@@ -280,6 +284,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "AI for Future Teachers Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/wu14sWWTFw2x7Jji8",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/wu14sWWTFw2x7Jji8"
           },
@@ -299,6 +304,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Protein Estimation Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/wBik5u8s8PqDGpH18",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/wBik5u8s8PqDGpH18"
           },
@@ -317,6 +323,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Entrepreneurship in Biotechnology Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/etCwbWopxmboF4366",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/etCwbWopxmboF4366"
           },
@@ -337,6 +344,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "3D Printing Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/x3wqSGyN3JVVSGkM9",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/x3wqSGyN3JVVSGkM9"
           },
@@ -357,6 +365,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Molecular Techniques Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/RaXN6W95vH4QbCYd9",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/RaXN6W95vH4QbCYd9"
           },
@@ -377,6 +386,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Electrical Vehicle Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/bjz6uvkksWoivMBH8",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/bjz6uvkksWoivMBH8"
           },
@@ -396,6 +406,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Advanced Instrumentation Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/RcuhamUeTnxTCkSNA",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/RcuhamUeTnxTCkSNA"
           },
@@ -416,6 +427,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "HPLC Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/PUCnH3ckUDLnuuQk9",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/PUCnH3ckUDLnuuQk9"
           },
@@ -436,6 +448,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "Power BI Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://surl.lu/gcokdr",
             registrationButton: "Registration Now",
             registrationLink: "https://surl.lu/gcokdr"
           },
@@ -455,6 +468,7 @@ const CentralInstrumentationFacilityPage = () => {
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
             imageAlt: "X-Ray Diffractometer Course",
             knowMoreButton: "Know More",
+            knowMoreLink: "https://forms.gle/gCgSQEyedH43aiBt7",
             registrationButton: "Registration Now",
             registrationLink: "https://forms.gle/gCgSQEyedH43aiBt7"
           }

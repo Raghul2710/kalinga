@@ -202,7 +202,7 @@ export default function Academics() {
         </div>
       </div>
     </section>
-    <QuickLinks title="Quick Links" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid" links={quickLinks} titleClassName="text-white" />
+    <QuickLinks title="Quick Links" description="Kalinga University offers a comprehensive academic experience beyond the classroom. From student clubs and value-added courses to industrial visits, internships, and placement opportunities, we provide students with the resources and support needed to excel academically and professionally. Our state-of-the-art academic facilities, conferences, and events create an enriching environment for holistic learning and growth." links={quickLinks} titleClassName="text-white" showReadMore={false} />
     <AdmissionCareer />
     </>
   )

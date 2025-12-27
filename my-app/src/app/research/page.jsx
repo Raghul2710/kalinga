@@ -22,8 +22,9 @@ export default function Research() {
       title: "Scopus Workshop: Research Impact",
       date: "Nov 28, 2025 · 10:00 A.M.",
       category: "Academic Event",
-      description: "Hybrid workshop on Scopus analytics and publishing insights with experts.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Pic1+(1).jpeg"
+            description: "Hybrid workshop on Scopus analytics and publishing insights with experts.",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Pic1+(1).jpeg",
+            href: "/contact-us"
     }
   ];
   const centres = [

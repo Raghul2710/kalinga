@@ -378,7 +378,7 @@ export default function Research() {
         descriptionTextClass=""
         swiperClassName="ccrc-video-slider"
       />
-      <QuickLinks titleClassName="text-white" links={links2} description="We're here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems."/>
+      <QuickLinks titleClassName="text-white" links={links2} description="We're here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems." showReadMore={false}/>
       <FAQ 
         title="Placement Records"
         variant="button"

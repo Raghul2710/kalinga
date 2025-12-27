@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -112,9 +113,17 @@ export default function UpcomingConference({
                     </p>
                   </div>
 
-                  <GlobalArrowButton className="w-fit mt-1 text-sm">
-                    Register Now
-                  </GlobalArrowButton>
+                  {conf.href ? (
+                    <Link href={conf.href}>
+                      <GlobalArrowButton className="w-fit mt-1 text-sm">
+                        Register Now
+                      </GlobalArrowButton>
+                    </Link>
+                  ) : (
+                    <GlobalArrowButton className="w-fit mt-1 text-sm">
+                      Register Now
+                    </GlobalArrowButton>
+                  )}
                 </div>
               </div>
             </SwiperSlide>
