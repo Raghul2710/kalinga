@@ -13,6 +13,11 @@ export const API_CONFIG = {
     list: () => `/departments/`,
     completeDetail: (departmentId) => `/departments/${departmentId}/complete-detail/`,
     courses: (slugOrId) => `/departments/${slugOrId}/courses/`,
+    urlInfo: (slugOrId) => `/departments/${slugOrId}/url-info/`,
+    allDepartmentsCourses: (programType = null) => {
+      const base = `/departments/all-departments-courses/`;
+      return programType ? `${base}?program_type=${programType}` : base;
+    },
     courseCounts: () => `/departments/course-counts/`,
     updateCourseCount: () => `/departments/course-counts/update/`,
   },

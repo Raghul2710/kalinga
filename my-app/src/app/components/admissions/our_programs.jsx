@@ -3,7 +3,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import SectionHeading from "../general/SectionHeading";
 import ProgramCard from "../general/program-card";
-import { fetchAllDepartments, fetchAllDepartmentCourses, fetchAllCourses, fetchDepartmentsCourses } from "@/app/lib/api";
+import { fetchAllDepartments, fetchAllDepartmentCourses, fetchAllCourses, fetchAllDepartmentsCourses } from "@/app/lib/api";
 import Link from "next/link";
 
 // Helper function to format course name (BSE, BTech format - uppercase first few letters, then lowercase)
@@ -72,8 +72,8 @@ export default function OurPrograms({
   const searchParams = useSearchParams();
   const router = useRouter();
   
-  // Initialize state from URL query parameters
-  const initialStudyLevel = searchParams?.get('studyLevel') || "All";
+  // Initialize state from URL query parameters, default to "UG" instead of "All"
+  const initialStudyLevel = searchParams?.get('studyLevel') || "UG";
   const initialDepartment = searchParams?.get('department') || "All";
   
   const [selectedStudyLevel, setSelectedStudyLevel] = useState(initialStudyLevel);
@@ -92,6 +92,9 @@ export default function OurPrograms({
       const department = searchParams.get('department');
       if (studyLevel) {
         setSelectedStudyLevel(studyLevel);
+      } else {
+        // Default to UG if no studyLevel in URL
+        setSelectedStudyLevel("UG");
       }
       if (department) {
         setSelectedDepartment(department);
@@ -119,57 +122,47 @@ export default function OurPrograms({
         setLoading(true);
         setError(null);
 
-        // Try to fetch from the new departments-courses endpoint first
+        // Use the new all-departments-courses endpoint
         let departmentsData = [];
         let coursesData = [];
         
         try {
-          const response = await fetchDepartmentsCourses();
+          // Fetch all courses without program_type filter to get all departments and courses
+          const response = await fetchAllDepartmentsCourses(null);
           
-          // New format: response is an array of departments, each with nested courses
-          if (Array.isArray(response)) {
+          // Response format: { departments: [...], courses: [...] }
+          if (response && response.departments && response.courses) {
             // Extract departments
-            departmentsData = response.map(dept => ({
-              id: dept.id,
-              name: dept.name,
-              slug: dept.slug,
-              url: dept.url
-            }));
-            
-            // Flatten courses from all departments and add department info
-            coursesData = [];
-            response.forEach(dept => {
-              if (Array.isArray(dept.courses)) {
-                dept.courses.forEach(course => {
-                  coursesData.push({
-                    ...course,
-                    departmentId: dept.id,
-                    departmentName: dept.name,
-                    departmentSlug: dept.slug,
-                    departmentUrl: dept.url,
-                    // Use course URL if available, otherwise generate from slug
-                    courseUrl: course.url || `/courses/${course.slug}`
-                  });
-                });
-              }
-            });
-          } else if (response.departments && response.courses) {
-            // Old format fallback: separate departments and courses
-            departmentsData = Array.isArray(response.departments) ? response.departments : [];
-            coursesData = Array.isArray(response.courses) ? response.courses : [];
+            departmentsData = Array.isArray(response.departments) 
+              ? response.departments.map(dept => ({
+                  id: dept.id,
+                  name: dept.name,
+                  slug: dept.slug
+                }))
+              : [];
             
             // Map courses to include department info
-            coursesData = coursesData.map(course => ({
-              ...course,
-              departmentId: course.department?.id,
-              departmentName: course.department?.name || '',
-              departmentSlug: course.department?.slug || '',
-              courseUrl: course.url || `/courses/${course.slug}`
-            }));
+            coursesData = Array.isArray(response.courses) 
+              ? response.courses.map(course => {
+                  // Extract department info from nested department object
+                  const dept = course.department || {};
+                  
+                  return {
+                    ...course,
+                    departmentId: dept.id || course.departmentId,
+                    departmentName: dept.name || course.departmentName || '',
+                    departmentSlug: dept.slug || course.departmentSlug || '',
+                    // Use course URL from API (course.url contains full URL)
+                    courseUrl: course.url || `/courses/${course.slug}`,
+                    // Preserve program_type from API (ug, pg, phd, diploma)
+                    program_type: course.program_type
+                  };
+                })
+              : [];
           }
           
         } catch (deptCoursesError) {
-          console.warn('departments-courses endpoint failed, trying fallback approach:', deptCoursesError);
+          console.warn('all-departments-courses endpoint failed, trying fallback approach:', deptCoursesError);
           
           // Fallback: Fetch departments separately
           try {
@@ -252,15 +245,11 @@ export default function OurPrograms({
     loadData();
   }, [shouldFetchData, initialDepartment]);
 
-  // Get unique study levels from courses
+  // Get unique study levels - always show all program types
   const studyLevels = useMemo(() => {
-    const levels = new Set(["All"]);
-    allCourses.forEach(course => {
-      const level = getStudyLevel(course.program_type);
-      levels.add(level);
-    });
-    return Array.from(levels).sort();
-  }, [allCourses]);
+    // Always include all program types in order
+    return ["UG", "PG", "PhD", "Diploma"];
+  }, []);
 
   // Filter and format courses
   const filteredPrograms = useMemo(() => {
@@ -272,10 +261,18 @@ export default function OurPrograms({
     
     let filtered = allCourses;
 
-    // Filter by study level
-    if (selectedStudyLevel !== "All") {
+    // Filter by study level (always filter, default is UG)
+    if (selectedStudyLevel && selectedStudyLevel !== "All") {
       filtered = filtered.filter(course => {
-        const level = getStudyLevel(course.program_type);
+        // Get program_type from course
+        const programType = course.program_type;
+        
+        // Handle null/undefined program_type - default to UG
+        if (!programType) {
+          return selectedStudyLevel === "UG";
+        }
+        
+        const level = getStudyLevel(programType);
         return level === selectedStudyLevel;
       });
     }
@@ -310,21 +307,27 @@ export default function OurPrograms({
     // Format courses for ProgramCard
     return filtered.map(course => {
       const courseName = formatCourseName(course.name || "");
-      // Use course URL if available, otherwise generate from slug
-      const courseUrl = course.courseUrl || course.url || `/courses/${course.slug || generateCourseSlug(course.name)}`;
+      // Use course URL from API or generate from slug
+      const courseUrl = course.url || course.courseUrl || `/courses/${course.slug || generateCourseSlug(course.name)}`;
       const courseSlug = course.slug || generateCourseSlug(course.name);
+      
+      // Get program_type and map to display level
+      const programType = course.program_type;
+      const mappedLevel = getStudyLevel(programType);
 
       return {
         id: course.id,
         title: courseName,
         specialization: course.departmentName || "",
         duration: formatDuration(course), // Pass entire course object
-        type: getStudyLevel(course.program_type),
+        type: mappedLevel,
         courseSlug: courseSlug,
         coursePageUrl: courseUrl, // Use the URL from API
         departmentId: course.departmentId,
         departmentName: course.departmentName,
         departmentSlug: course.departmentSlug,
+        // Preserve program_type for filtering
+        program_type: programType
       };
     });
   }, [allCourses, selectedStudyLevel, selectedDepartment, searchQuery]);
@@ -354,8 +357,8 @@ export default function OurPrograms({
   };
 
   const handleScholarshipsClick = (program) => {
-    // Static scholarship link - keep as static
-    router.push("/admissions#scholarships");
+    // Link to scholarships page
+    router.push("/scholarships");
   };
 
   if (loading) {

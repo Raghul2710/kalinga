@@ -300,6 +300,34 @@ export async function fetchDepartmentCourseCounts() {
 }
 
 /**
+ * Fetches all departments and courses filtered by program type
+ * @param {string|null} programType - Program type filter (ug, pg, phd, diploma) or null for all
+ * @returns {Promise<Object>} Object with departments and courses arrays
+ */
+export async function fetchAllDepartmentsCourses(programType = null) {
+  try {
+    const url = getApiUrl(API_CONFIG.departments.allDepartmentsCourses(programType));
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Error fetching all departments courses${programType ? ` for ${programType}` : ''}:`, error);
+    throw error;
+  }
+}
+
+/**
  * Fetches departments and courses from the combined endpoint
  * @returns {Promise<Object>} Object with departments, courses, and metadata
  */
