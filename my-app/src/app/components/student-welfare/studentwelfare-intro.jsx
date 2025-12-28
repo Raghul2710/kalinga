@@ -22,7 +22,7 @@ export default function ResearchWelfareIntro() {
 
           "The welfare team organises various activities, events, exhibitions, fests, competitions, and cultural programs that create a balanced educational environment. Students should never feel bored at any time, and their happiness is our top priority. They are always encouraged to not just participate in classroom activities but to step out of their comfort zone and get involved in various events organised by DSW. The department helps students shake off their academic stress by promoting a culture of self-growth and the development of real-life skills. It fulfils their academic accomplishments and makes them a perfect all-around individual.",
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-gathered.webp"
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
         imageAlt="Student Welfare Services"
         readMoreLabel="Read More"
         readLessLabel="Show Less"
