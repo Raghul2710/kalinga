@@ -177,21 +177,21 @@ export default function Admissions() {
         id: 3,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/covid.svg",
         title: "Hostel",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Fully-furnished separate hostels for girls and boys with round-the-clock security, clean rooms, and mess facilities in a safe, comfortable environment.",
         href: "/hostel"
       },
       {
         id: 4,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship.svg",
         title: "Transports",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Convenient, safe, and affordable transport service with 30+ buses and 4-wheelers covering pick-up and drop facilities across Raipur, up to 70 km each way.",
         href: "/transport-facility"
       },
       {
         id: 5,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
         title: "Pay fees",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Pay your fees securely online through our payment portal using debit/credit cards or online banking. View detailed fee structure and payment options.",
         href: "/ku-fees"
       },
       {
