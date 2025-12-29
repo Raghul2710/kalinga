@@ -30,37 +30,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Complete electric vehicle architecture",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Battery technology & management systems",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Motor & controller operations",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "EV diagnostics & troubleshooting",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Assembly & disassembly of EV components",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Safety, maintenance & repair techniques",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-6.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-6.svg",
   },
 ];
 

@@ -190,14 +190,7 @@ export default function GrievanceRedressalPage() {
 
   return (
     <main className="bg-white">
-      {/* Title */}
-      <section className="pt-10 pb-6">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl md:text-4xl font-semibold text-[var(--title-color)]">
-            Grievance Redressal Cell
-          </h1>
-        </div>
-      </section>
+     
 
       {/* Main Intro (About) */}
       <MainIntro

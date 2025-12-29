@@ -34,41 +34,40 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Understanding of MSME Business Models & Industrial Practices",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Real-Time Methods Used by Successful MSMEs",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Effective Strategy Planning & Decision-Making Skills",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Market Research & Opportunity Identification",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Financial Planning & Risk Management",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Communication & Negotiation Skills",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-6.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-6.svg",
   },
 ];
 
-// ✅ Glimpses (MediaCardSlider expects imageItems/videoItems)
 const glimpsesImageItems = [
   {
     id: 1,

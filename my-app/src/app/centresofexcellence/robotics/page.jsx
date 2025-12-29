@@ -30,37 +30,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Programming languages used in robotics & automation tasks",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Robotics mechanisms & control systems",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Drone mechanisms & safe flying practices",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Artificial Intelligence principles used in smart gadgets",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Project-based learning & experimentation",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Develop and prototype your own tech-based ideas",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-6.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-6.svg",
   },
 ];
 

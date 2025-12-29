@@ -27,37 +27,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Automotive & manufacturing fundamentals",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Problem identification & troubleshooting",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Industry-relevant vocational training",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/lbosch/bosch-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Hands-on technical training",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/abosch/bosch-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Analytical & problem-solving skills",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Workplace & communication skills",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-6.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-6.svg",
   },
 ];
 

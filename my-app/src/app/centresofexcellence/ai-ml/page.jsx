@@ -27,37 +27,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Programming languages & tools for AI & ML",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Deep understanding of Artificial Intelligence & Machine Learning",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Algorithm & model development",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Management of large data sets",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Deep learning & neural networks",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Designing intelligent systems & software",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-1.svg",
   },
 ];
 

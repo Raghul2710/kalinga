@@ -27,37 +27,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Understanding of industrial IoT architecture",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Working of industrial sensors & devices",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Real-time data monitoring & analysis",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Cloud connectivity & data integration",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "IIoT communication protocols",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com//iiot/iiot-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Dashboard & visualization tools",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-6.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-6.svg",
   },
 ];
 

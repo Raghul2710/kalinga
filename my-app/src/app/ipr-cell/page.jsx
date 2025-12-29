@@ -102,7 +102,7 @@ export default function IPRCellPage() {
         <MentorIntro items={MentorIntroProps} />
       </div>
 
-      <section className="py-12">
+      <section className="pb-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-semibold text-[var(--title-color)]">
             Our IPR Committee

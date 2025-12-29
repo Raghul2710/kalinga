@@ -8,7 +8,7 @@ import AdmissionCareer from "@/app/components/general/admission_cta";
 
 const breadcrumbData = {
   heroImage:
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/conferences/conferences-banner.webp",
   pageTitle: "Conferences & Events",
   customBreadcrumbs: [
     { label: "Home", href: "/" },
@@ -144,11 +144,13 @@ export default function ConferencesAndEventsPage() {
         </div>
       </section> */}
 
-      <ImageListItem
-        items={whyAttendItems}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png"
-        title="Why Attend Our Conferences and Events?"
-      />
+      <section className="pt-10 pb-6">
+        <ImageListItem
+          items={whyAttendItems}
+          imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/conferences/conferences-objective.webp"
+          title="Why Attend Our Conferences and Events?"
+        />
+      </section>
 
       <section className="pb-12">
         <div className="container mx-auto px-4">
@@ -174,6 +176,6 @@ export default function ConferencesAndEventsPage() {
         </div>
       </section>
       <AdmissionCareer />
-      </>
+    </>
   );
 }

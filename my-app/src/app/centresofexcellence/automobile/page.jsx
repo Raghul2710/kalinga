@@ -30,37 +30,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Fundamentals of 2 & 3-Wheeler systems",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-1.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Diagnostic skills using modern tools",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-2.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Engine service & maintenance",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-3.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Repair procedures for 2 & 3 wheelers",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-4.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Preventive & predictive maintenance techniques",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-5.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Exposure to emerging technologies in mobility",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-6.svg",
+    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-6.svg",
   },
 ];
 
