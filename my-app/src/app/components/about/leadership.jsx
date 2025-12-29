@@ -101,16 +101,16 @@ export default function Leadership() {
             {leadership.map((person) => (
               <SwiperSlide key={person.id}>
                 <div className="h-full w-full">
-                  <div className="bg-white rounded-xl p-1 h-full relative">
-                    <LeadershipCard
-                      name={person.name}
-                      title={person.title}
-                      image={person.image}
-                    />
-                    {/* Button - Positioned at bottom right */}
-                    <div className="absolute bottom-6 right-6">
-                      <Link href={person.link || "#"}>
-                        <button className="w-8 h-8 bg-[var(--button-red)] hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md">
+                  <Link href={person.link || "#"} className="block h-full">
+                    <div className="bg-white rounded-xl p-1 h-full relative cursor-pointer hover:shadow-lg transition-shadow group">
+                      <LeadershipCard
+                        name={person.name}
+                        title={person.title}
+                        image={person.image}
+                      />
+                      {/* Button - Positioned at bottom right */}
+                      <div className="absolute bottom-6 right-6">
+                        <div className="w-8 h-8 bg-[var(--button-red)] group-hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md">
                           <svg
                             width="16"
                             height="16"
@@ -124,10 +124,10 @@ export default function Leadership() {
                             <path d="M7 17L17 7" />
                             <path d="M7 7h10v10" />
                           </svg>
-                        </button>
-                      </Link>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
               </SwiperSlide>
             ))}

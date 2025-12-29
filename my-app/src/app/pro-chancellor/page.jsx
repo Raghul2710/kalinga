@@ -27,7 +27,7 @@ export default function Leadership() {
         imageAlt="Mr. Sajjan Singh"
         name="Mr. Sajjan Singh"
         title="Pro-Chancellor"
-        
+        messageHeading="Pro-Chancellor's Message"
         quote="Education is not merely about degrees, but about shaping character, leadership, and purpose for a better tomorrow."
         message={[
 "As you begin a new journey of academic exploration, I extend a heartfelt welcome to all our students joining Kalinga University.","It gives me immense pleasure to be part of Kalinga University as the Pro Chancellor and to welcome students from India and across the globe into our undergraduate, postgraduate, and research programs.",

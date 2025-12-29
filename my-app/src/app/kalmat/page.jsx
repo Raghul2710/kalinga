@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import DeptSyllabus from "../components/department/dept_syllabus";
 import HeroSectionTwo from "../components/general/hero-section-two";
 import KalseeApplicationForm from "../components/kalsee/kalsee-application-form";
@@ -77,38 +78,66 @@ export default function KalseePage() {
   ]
   const kifSteps = [
     {
+      id: 1,
+      stepNumber: "01",
       title: "Step 1: Visit & Apply",
-      description: "Visit https://admissions.kalingauniversity.ac.in/ and apply for the KAL-MAT Exam.",
+      description: "",
+      backDescription: "Visit https://admissions.kalingauniversity.ac.in/ and apply for the KAL-MAT Exam.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(2).png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
+      id: 2,
+      stepNumber: "02",
       title: "Step 2: Fill Application Form",
-      description: "Fill out the online application form with your details.",
+      description: "",
+      backDescription: "Fill out the online application form with your details.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
+      id: 3,
+      stepNumber: "03",
       title: "Step 3: Pay Application Fees",
-      description: "Pay the application fees to complete your registration.",
+      description: "",
+      backDescription: "Pay the application fees to complete your registration.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/fees.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },  
     {
+      id: 4,
+      stepNumber: "04",
       title: "Step 4: Receive Login Details",
-      description: "Get login details & scheduling link within 24 hours.",
+      description: "",
+      backDescription: "Get login details & scheduling link within 24 hours.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/key.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
+      id: 5,
+      stepNumber: "05",
       title: "Step 5: Take the CBT",
-      description: "Take the Computer-Based Test (CBT) as per your scheduled date.",
+      description: "",
+      backDescription: "Take the Computer-Based Test (CBT) as per your scheduled date.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
+      id: 6,
+      stepNumber: "06",
       title: "Step 6: Check Results",
-      description: "Check your final results online.",
+      description: "",
+      backDescription: "Check your final results online.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/medical-result.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
+      id: 7,
+      stepNumber: "07",
       title: "Step 7: Welcome to KU",
-      description: "Welcome to Kalinga University!",
+      description: "",
+      backDescription: "Welcome to Kalinga University!",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/college-student.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
   ]
@@ -133,49 +162,59 @@ export default function KalseePage() {
   const boxItems = [
     {
       title: "Eligibility",
-      description: "10 + 2 For BBA, Graduation For MBA"
+      description: "10 + 2 For BBA, Graduation For MBA",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/criteria+(1).png" alt="Eligibility" width={64} height={64} className="object-contain" />
     },
     {
       title: "Mode",
-      description: "Online; Flexible scheduling for BBA & fixed date for MBA"
+      description: "Online; Flexible scheduling for BBA & fixed date for MBA",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/test.png" alt="Mode" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Dates & Registration",
-      description: "BBA - Anytime within a week after registration, MBA - 8th March 2025"
+      description: "BBA - Anytime within a week after registration, MBA - 8th March 2025",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/registration.png" alt="Exam Dates & Registration" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Pattern",
-      description: "MCQ-Based"
+      description: "MCQ-Based",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/pattern.png" alt="Exam Pattern" width={64} height={64} className="object-contain" />
     },
     {
       title: "Total Questions",
-      description: "90 questions, 90 minutes for BBA and MBA"
+      description: "90 questions, 90 minutes for BBA and MBA",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(1).png" alt="Total Questions" width={64} height={64} className="object-contain" />
     },
     {
       title: "Negative Marking",
-      description: "No Negative Marking"
+      description: "No Negative Marking",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam.png" alt="Negative Marking" width={64} height={64} className="object-contain" />
     },
     {
       title: "Passing Marks",
-      description: "Need 50% to qualify"
+      description: "Need 50% to qualify",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/mark.png" alt="Passing Marks" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Fee",
-      description: "BBA - INR 1,400/- (Online Exam) + INR 1,000/- (Personal Interview) (one-time eligibility), MBA - INR 2,000/- (Online Exam) + INR 1,500/- (Personal Interview) (one-time eligibility)"
+      description: "BBA - INR 1,400/- (Online Exam) + INR 1,000/- (Personal Interview) (one-time eligibility), MBA - INR 2,000/- (Online Exam) + INR 1,500/- (Personal Interview) (one-time eligibility)",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/hand.png" alt="Exam Fee" width={64} height={64} className="object-contain" />
     },
     {
       title: "Scholarships",
-      description: "Attractive scholarships to top scorers for BBA and MBA courses."
+      description: "Attractive scholarships to top scorers for BBA and MBA courses.",
+      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/scholarship.png" alt="Scholarships" width={64} height={64} className="object-contain" />
     },
   ]
   return (
     <>
       <HeroSectionTwo 
-        backgroundImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+        id="hero-banner"
+        backgroundImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/kalmat-banner-new.png"
         title="Turn Your Business Ambition Into A Thriving Career"
         description=""
         buttonText="Apply Now"
-        buttonLink="/admissions"
+        buttonLink="#hero-banner"
         showForm={false}
         customForm={<KalseeApplicationForm />}
       />
@@ -197,11 +236,15 @@ export default function KalseePage() {
         leftCardTitle="BBA"
         leftCardDescription="All questions carry 1 mark each."
         leftCardButtonText="Know more"
+        leftCardButtonLink="/admissions"
         leftCardSecondButtonText="Register now"
+        leftCardSecondButtonLink="#hero-banner"
         rightCardTitle="MBA"
         rightCardDescription="22nd March 2025"
         rightCardButtonText="Know more"
+        rightCardButtonLink="/admissions"
         rightCardSecondButtonText="Register now"
+        rightCardSecondButtonLink="#hero-banner"
         mobileImageHeight={700}
       />
       <SampleTesting 
@@ -308,7 +351,7 @@ export default function KalseePage() {
             }
           ]}
           hideSearchFilter={true}
-          customTitle="Lorem ipsum dolor sit amet, consectetur"
+          customTitle="Programs Available Through KAL-MAT"
           customSubtitle="Explore Our Programs"
           maxPrograms={2}
           mobileMaxWidth={700}
@@ -321,11 +364,11 @@ export default function KalseePage() {
         ctaLabel="Apply Now"
         showReadMore={false}
         showHeaderButton={false}
-        showIcon={false}
+        showIcon={true}
         showImage={false}
         bgColor="bg-white"
       />
-      <Testimonials testimonials={testimonials} />
+      <Testimonials testimonials={testimonials} className="bg-[var(--light-gray)]" />
       <FAQ title="Frequently Asked Questions" items={faqItems} />
       <AdmissionCareer />
     </>

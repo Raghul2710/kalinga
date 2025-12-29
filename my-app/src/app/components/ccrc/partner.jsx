@@ -243,7 +243,7 @@ export default function Partner({
             <div className="flex flex-col ">
               {/* Section Title */}
               <SectionHeading title={blueTitle} titleClassName="!py-2 text-white text-center" />
-              <p className="text-white text-center text-sm pb-5 max-w-md mx-auto">Organizations that have participated in skill development and professional training initiatives</p>
+              <p className="text-white text-center text-sm pb-5">Organizations that have participated in skill development and professional training initiatives</p>
       
               {/* Partners Grid with Vertical Marquee */}
               {renderPartnerGrid(blueItems, true)}
@@ -255,7 +255,7 @@ export default function Partner({
             <div className="flex flex-col ">
                       {/* Section Title */}
                       <SectionHeading title={redTitle} titleClassName="!py-2 text-white text-center" />
-                      <p className="text-white text-center text-sm pb-5 max-w-md mx-auto"> Companies partnered with CCRC through MoUs for training and collaboration</p>
+                      <p className="text-white text-center text-sm pb-5"> Companies partnered with CCRC through MoUs for training and collaboration</p>
               
               {/* Partners Grid with Vertical Marquee */}
               {renderPartnerGrid(redItems, false)}

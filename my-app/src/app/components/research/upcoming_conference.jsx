@@ -50,7 +50,10 @@ export default function UpcomingConference({
   showDate = true,
   imageWidth = 420,
   imageHeight = 230,
-  imageContainerClass = "w-full md:w-2/5"
+  imageContainerClass = "w-full md:w-2/5",
+  href = null,
+  
+  categoryText = "Upcoming Conferences"
 }) {
   return (
     <section className={`${backgroundColor} pt-16 pb-16 mx-2 rounded-xl`}>
@@ -82,7 +85,7 @@ export default function UpcomingConference({
                     src={conf.image}
                     alt={conf.title}
                     fill
-                    className="rounded-xl object-cover"
+                    className="rounded-xl object-contain"
                     unoptimized
                   />
                 </div>
@@ -113,15 +116,15 @@ export default function UpcomingConference({
                     </p>
                   </div>
 
-                  {conf.href ? (
-                    <Link href={conf.href}>
+                  {(conf.href || href) ? (
+                    <Link href={conf.href || href}>
                       <GlobalArrowButton className="w-fit mt-1 text-sm">
-                        Register Now
+                      {conf.registerButtonText || "Register Now"}
                       </GlobalArrowButton>
                     </Link>
                   ) : (
                     <GlobalArrowButton className="w-fit mt-1 text-sm">
-                      Register Now
+                      {conf.registerButtonText || "Register Now"}
                     </GlobalArrowButton>
                   )}
                 </div>
@@ -135,5 +138,4 @@ export default function UpcomingConference({
     </section>
   );
 }
-
 

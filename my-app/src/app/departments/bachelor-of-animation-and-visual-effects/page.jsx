@@ -214,7 +214,7 @@ function Courses() {
   // QuickLinks content
   const quickLinksContent = {
     title: "Beyond The Curriculum ",
-    description: "",
+    description: " Beyond The Curriculum is a platform that provides students with the opportunity to explore the world of animation and visual effects. It is a platform that provides students with the opportunity to explore the world of animation and visual effects.",
     links: [
       {
         id: 1,
@@ -290,7 +290,7 @@ function Courses() {
       <div id="syllabus">
         <OrganogramOfKalinga
           title="Scheme & Syllabus 2024-2025"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ."
+          description="Our comprehensive curriculum covers 2D and 3D animation, visual effects, character design, and motion graphics. Students learn industry-standard tools like Maya, Blender, and After Effects through hands-on projects, preparing them for careers in film, television, gaming, and digital media."
           buttonLabel="Explore Now"
           href="/about-us"
           buttonClassName="!bg-white !text-black"

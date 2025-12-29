@@ -119,36 +119,42 @@ export default function Academics() {
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Programs.svg",
       title: "Student Clubs",
       description: "Our vibrant clubs motivate students to learn and grow with confidence inside and outside their classrooms.",
+      href: "/student-clubs",
     },
     {
       id: 2,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/teachings.svg",
       title: "Value Added Courses",
       description: "Explore a wide range of short-term value-added certification courses conducted by industry experts at the University. ",
+      href: "/value-added-course",
     },
     {
       id: 3,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Curriculum.svg",
       title: "Industrial Visits",
       description: "To understand the industry dynamics, we conduct industrial visits where students interact with industry professionals and explore real-world applications.",
+      href: "/campuslife",
     },
     {
       id: 4,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industrial+Visits.svg",
       title: "Internships & Placement",
       description: "Get an on-campus or off-campus internship opportunity and get placed in top companies through our Campus Placement Drives.",
+      href: "/training-and-placement-cell",
     },
     {
       id: 5,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
       title: "Academic Facilities",
       description: "Our top-notch academic facilities will support your dreams by giving an all-around practical exposure at every step of your journey.",
+      href: "/academic-facilities",
     },
     {
       id: 6,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Events.svg",
       title: "Conferences & Events",
       description: "Discover various National and International conferences held at Kalinga University, offering a dynamic platform for knowledge sharing.",
+      href: "/conferences-and-events",
     },
   ]
 
@@ -202,7 +208,7 @@ export default function Academics() {
         </div>
       </div>
     </section>
-    <QuickLinks title="Quick Links" description="Kalinga University offers a comprehensive academic experience beyond the classroom. From student clubs and value-added courses to industrial visits, internships, and placement opportunities, we provide students with the resources and support needed to excel academically and professionally. Our state-of-the-art academic facilities, conferences, and events create an enriching environment for holistic learning and growth." links={quickLinks} titleClassName="text-white" showReadMore={false} />
+    <QuickLinks title="Quick Links" description="Kalinga University offers a comprehensive academic experience beyond the classroom. From student clubs and value-added courses to industrial visits, internships, and placement opportunities, we provide students with the resources and support needed to excel academically and professionally. Our state-of-the-art academic facilities, conferences, and events create an enriching environment for holistic learning and growth." links={quickLinks} titleClassName="text-white" showReadMore={true} />
     <AdmissionCareer />
     </>
   )

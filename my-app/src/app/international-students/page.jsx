@@ -218,79 +218,79 @@ export default function InternationalStudents() {
       id: 1,
       title: "Students",
       value: "8000 +",
-      description: "Students",
+      description: "",
     },
     {
       id: 2,
       title: "International students from",
       value: "600 +",
-      description: "International students from",
+      description: "",
     },
     {
       id: 3,
       title: "Countries",
       value: "29 +",
-      description: "Countries",
+      description: "",
     },
     {
       id: 4,
       title: "Scholarships Distributed",
       value: "3 Cr. +",
-      description: "3 Cr. + Scholarships Distributed",
+      description: "",
     },
     {
       id: 5,
       title: "Programs",
       value: "130 +",
-      description: "Programs",
+      description: "",
     },
     {
       id: 6,
       title: "Recruitment Partners",
       value: "250 +",
-      description: "Recruitment Partners",
+      description: "",
     },
     {
       id: 7,
       title: "Research Publications",
       value: "3360 +",
-      description: "Research Publications",
+      description: "",
     },
     {
       id: 8,
       title: "Patents",
       value: "510 +",
-      description: "Patents",
+      description: "",
     },
     {
       id: 9,
       title: "Sponsored Research Projects",
       value: "160 +",
-      description: "Sponsored Research Projects",
+      description: "",
     },
     {
       id: 10,
       title: "Consultancy Projects",
       value: "130 +",
-      description: "Consultancy Projects",
+      description: "",
     },
     {
       id: 11,
       title: "MoUs Signed",
       value: "200 +",
-      description: "MoUs Signed",
+      description: "",
     },
     {
       id: 12,
       title: "Centres of Excellence",
       value: "7",
-      description: "Centres of Excellence",
+      description: "",
     },
     {
       id: 13,
       title: "Laboratories",
       value: "90 +",
-      description: "Laboratories",
+      description: "",
     },
   ]
 
@@ -406,18 +406,26 @@ export default function InternationalStudents() {
         title="BRIDGE Courses for International Students" 
         subtitle="Pre-Semester Preparation Programs"
         description="BRIDGE Courses for newly admitted international students are conducted before the commencement of the first semester classes. The main objective of the course is to bridge the gap between subjects studied at the Pre-university level and subjects they would be studying here. We also understand that the students applying to the university come from different backgrounds and countries, and thus, we have included a few topics that will help them understand the local culture and history of India. To make this bridge course interesting for the students, we have included workshops related to art and culture & a hobby class too. We have bridge courses of 2 months, 4 months, and 6 months (5 days a week)."
+        hideCheckEligibility={true}
+        cardTitleClassName="font-plus-jakarta-sans"
         positions={[
           {
             title: "Technical BRIDGE Courses",
-            description: "Designed for students enrolling in technical programs, covering essential subjects including Maths, Physics, Chemistry, and Biology. These courses ensure you have a strong foundation before starting your technical degree program."
+            description: "Maths, Physics, Chemistry, Biology",
+            checkEligibilityLink: "/contact-us",
+            applyNowLink: "/contact-us"
           },
           {
             title: "Non-Technical BRIDGE Courses",
-            description: "Tailored for students in non-technical programs, focusing on Yoga & Meditation, and Indian Arts & Crafts. These courses help you adapt to the academic environment while exploring India's rich cultural heritage."
+            description: "Yoga & Meditation, Indian Arts & Crafts",
+            checkEligibilityLink: "/contact-us",
+            applyNowLink: "/contact-us"
           },
           {
             title: "Common Topics (Technical & Non-Technical)",
-            description: "All BRIDGE course students benefit from common topics including English & Soft Skills, Language Communications (Hindi), Indian Culture & Lifestyle, IT Skills, Grooming & Personality Development, GD & PI, and Hobby Classes (Music & Dance / Painting & Other Fine Arts / Modelling & Fashion Style / Library Arts / Book Club)."
+            description: "English & Soft Skills, Language Communications (Hindi), Indian Culture & Lifestyle, IT Skills",
+            checkEligibilityLink: "/contact-us",
+            applyNowLink: "/contact-us"
           }
         ]}
       />
@@ -454,6 +462,7 @@ export default function InternationalStudents() {
         backgroundColorcard="bg-white"
         showCategory={false}
         showDate={false}
+        href="/contact-us"
       />
       <Gallery 
         title="Glimpse" 

@@ -27,7 +27,7 @@ export default function Leadership() {
         imageAlt="Dr. Sandeep Arora"
         name="Dr. Sandeep Arora"
         title="Chancellor"
-       
+        messageHeading="Chancellor's Message"
         quote="Education is not merely about degrees, but about shaping character, leadership, and purpose for a better tomorrow."
         message={[
           "It gives me immense pleasure to welcome you to Kalinga University, where education goes beyond classrooms and inspires lifelong learning.",

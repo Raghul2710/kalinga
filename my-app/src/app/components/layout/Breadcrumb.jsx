@@ -143,13 +143,13 @@ const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {
       {currentPageTitle  && (
         <div className="container mx-auto">
         <div className="absolute z-[10] flex md:flex-row flex-col md:items-end items-start gap-2  md:gap-6 left-1/2 -translate-x-1/2 md:left-auto md:right-auto md:translate-x-0 md:bottom-[25px]  -bottom-[35px] translate-y-1/2 mb-12 md:mb-16 ">
-          <div className="p-5 bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl md:min-h-[150px] min-h-[100px] flex justify-center items-center min-w-[330px] md:max-w-3/5 max-w-full wraptext-center">
-            <h1 className="font-stix text-center text-white text-2xl md:text-4xl lg:text-5xl font-normal ">
+          <div className="p-5 bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl md:min-h-[150px] min-h-[100px] flex justify-center items-center min-w-[330px] md:max-w-4/5 max-w-full wraptext-center">
+            <h1 className="font-stix capitalize text-center text-white text-2xl md:text-4xl lg:text-5xl font-normal ">
               {currentPageTitle}
             </h1> 
           </div>
           {/* Breadcrumb positioned next to the title card - horizontally aligned with blue box */}
-          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center h-auto min-h-[40px] md:min-h-[50px] gap-1 md:pl-0 pl-4 mb-4 md:mb-0 MD:-translate-y-1/2">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center h-auto min-h-[40px] md:min-h-[50px] gap-1 md:pl-0 pl-4 md:mb-0 MD:-translate-y-1/2 mt-3 mb-15">
             {breadcrumbs.map((crumb, index) => {
               const isLast = index === breadcrumbs.length - 1;
               
@@ -159,7 +159,7 @@ const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {
                     <span className="text-[var(--dark-gray)] mx-2 text-sm">»</span>
                   )}
                   {isLast ? (
-                    <span className="text-sm font-medium text-[var(--red)] whitespace-nowrap">
+                    <span className="text-sm font-medium text-[var(--red)] break-normal">
                       {crumb.label}
                     </span>
                   ) : (

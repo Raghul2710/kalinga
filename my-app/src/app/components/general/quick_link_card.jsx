@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -12,6 +12,45 @@ const QuickLinkCard = ({
   href = null
 }) => {
   const isImageUrl = typeof icon === 'string' && (icon.startsWith('http') || icon.startsWith('/'))
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [showReadMoreButton, setShowReadMoreButton] = useState(false)
+  const descriptionRef = useRef(null)
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      if (descriptionRef.current) {
+        const element = descriptionRef.current
+        // Create a clone to measure full height without line-clamp
+        const clone = element.cloneNode(true)
+        clone.style.position = 'absolute'
+        clone.style.visibility = 'hidden'
+        clone.style.height = 'auto'
+        clone.style.maxHeight = 'none'
+        clone.classList.remove('line-clamp-4')
+        clone.style.width = element.offsetWidth + 'px'
+        document.body.appendChild(clone)
+        
+        const fullHeight = clone.offsetHeight
+        const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight) || 20
+        const maxHeight = lineHeight * 4
+        
+        document.body.removeChild(clone)
+        setShowReadMoreButton(fullHeight > maxHeight)
+      }
+    }
+
+    // Use setTimeout to ensure DOM is rendered
+    const timer = setTimeout(checkOverflow, 0)
+    window.addEventListener('resize', checkOverflow)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('resize', checkOverflow)
+    }
+  }, [description])
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded)
+  }
 
   return (
     <div
@@ -41,14 +80,29 @@ const QuickLinkCard = ({
       </h3>
 
       {/* Description */}
-      <p className=" text-sm mb-4 sm:mb-6 flex-grow font-plus-jakarta-sans">
-        {description}
-      </p>
+      <div className="flex-grow mb-4 sm:mb-6">
+        <p 
+          ref={descriptionRef}
+          className={`text-sm font-plus-jakarta-sans ${
+            !isExpanded && showReadMoreButton ? 'line-clamp-4' : ''
+          }`}
+        >
+          {description}
+        </p>
+        {showReadMoreButton && (
+          <button
+            onClick={toggleExpand}
+            className="text-[var(--button-red)] text-sm font-semibold mt-2 hover:underline"
+          >
+            {isExpanded ? 'Read Less' : 'Read More'}
+          </button>
+        )}
+      </div>
       {showReadMore && (
         <div className="flex justify-end mt-auto">
           {href ? (
             <Link href={href} className="inline-flex">
-              <button className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[var(--button-red)] text-white flex items-center justify-center shadow-sm hover:bg-[#a2a2a2] transition-colors">
+              <button className="cursor-pointer w-7 h-7 sm:w-8 sm:h-8 rounded bg-[var(--button-red)] text-white flex items-center justify-center shadow-sm hover:bg-[#a2a2a2] transition-colors">
                 <svg
                     className="w-3 h-3 sm:w-4 sm:h-4 text-[var(--background)]"
                     viewBox="0 0 16 16"
@@ -66,7 +120,7 @@ const QuickLinkCard = ({
               </button>
             </Link>
           ) : (
-            <button className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-[var(--button-red)] text-white flex items-center justify-center shadow-sm hover:bg-[#a2a2a2] transition-colors">
+            <button className="cursor-pointer w-7 h-7 sm:w-8 sm:h-8 rounded bg-[var(--button-red)] text-white flex items-center justify-center shadow-sm hover:bg-[#a2a2a2] transition-colors">
               <svg
                   className="w-3 h-3 sm:w-4 sm:h-4 text-[var(--background)]"
                   viewBox="0 0 16 16"

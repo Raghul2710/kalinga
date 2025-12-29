@@ -13,11 +13,22 @@ export const API_CONFIG = {
     list: () => `/departments/`,
     completeDetail: (departmentId) => `/departments/${departmentId}/complete-detail/`,
     courses: (slugOrId) => `/departments/${slugOrId}/courses/`,
+    urlInfo: (slugOrId) => `/departments/${slugOrId}/url-info/`,
+    allDepartmentsCourses: (programType = null, department = null) => {
+      const base = `/departments/all-departments-courses/`;
+      const params = [];
+      if (programType) params.push(`program_type=${programType}`);
+      if (department) params.push(`department=${department}`);
+      return params.length > 0 ? `${base}?${params.join('&')}` : base;
+    },
+    courseCounts: () => `/departments/course-counts/`,
+    updateCourseCount: () => `/departments/course-counts/update/`,
   },
   
   // Optimized endpoints
   departmentCourses: {
     list: () => `/department-courses/`,
+    departmentsCourses: () => `/departments-courses/`,
   },
   
   // Add other API endpoints here as needed

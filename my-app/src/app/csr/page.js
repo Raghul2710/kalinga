@@ -37,10 +37,10 @@ export default function KIFPage({
         visionTitle: "Core Values",
         missionTitle: "Mission",
         visionText: [
-            "Holistic Development",
-            "lluminating the World with Light of Knowledge ",
-            "Global Diversity",
-            "Multicultural Environment ",  
+            "Holistic Development,",
+            "lluminating the World with Light of Knowledge ,",
+            "Global Diversity,",
+            "Multicultural Environment,",  
             "Team Spirit & Bonding",
         ],
         missionText: 
@@ -98,31 +98,63 @@ export default function KIFPage({
         },
     ];
     const activities = [
-        {
-          id: 1,
-          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
-          imageAlt: "Student Activities",
-          title: "Lorem ipsum dolor sit amet, consectetur",
+      {
+        id: 1,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-1.png",
+        imageAlt: "Student Activities",
+        title: "Startup Day Celebration 16th January 2025",
+        buttonText: "Read More",
+        date: "August 25 - 2025",
+      },
+      {
+        id: 2,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-2.png",
+        imageAlt: "Student Activities",
+        title: "Visit by Dr. Laxmikant Dwivedi, President, Sanskar Bharti Chhattisgarh",
           buttonText: "Read More",
-          date: "August 25 - 2025",
-        },
-        {
-          id: 2,
-          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
-          imageAlt: "Student Activities",
-          title: "Lorem ipsum dolor sit amet, consectetur",
-            buttonText: "Read More",
-          date: "August 25 - 2025",
-        },
-        {
-          id: 3,
-          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
-          imageAlt: "Student Activities",
-          title: "Lorem ipsum dolor sit amet, consectetur",
-           buttonText: "Read More",
-          date: "August 25 - 2025",
-        },
-    ];
+        date: "August 25 - 2025",
+      },
+      {
+        id: 3,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-3.png",
+        imageAlt: "Student Activities",
+        title: "FDP Organised by AICTE & the Ministry of Education’s Innovation Cell",
+         buttonText: "Read More",
+        date: "August 25 - 2025",
+      },
+      {
+        id: 4,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(18).webp",
+        imageAlt: "Student Activities",
+        title: "Evaluation of the Screening Session of CSVTU for MSME Ideathon",
+         buttonText: "Read More",
+        date: "August 25 - 2025",
+      },
+      {
+        id: 5,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(21).webp",
+        imageAlt: "Student Activities",
+        title: "Kalinga Incubation Stall at SEML Establishment Day",
+         buttonText: "Read More",
+        date: "August 25 - 2025",
+      },
+      {
+        id: 6,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(19).webp",
+        imageAlt: "Student Activities",
+        title: "Field visit to Incubation Centre Under IIC Activity @ NIT Raipur",
+         buttonText: "Read More",
+        date: "August 25 - 2025",
+      },
+      {
+        id: 7,
+        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(20).webp",
+        imageAlt: "Student Activities",
+        title: "TOT Program on Entrepreneur Development organised with CSIDC & EDII, Gandhi Nagar & CSIDC C.G",
+         buttonText: "Read More",
+        date: "August 25 - 2025",
+      },
+  ];
     const FAQItems = [
         {
           id: 1,
@@ -225,14 +257,14 @@ export default function KIFPage({
       <VisionMission data={visionMissionData} showImg={false} />
       <ImageListItem items={Items} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Objectives of the Organisation"  />
 
-      <ImageContent hasImage={false}  className="items-center justify-center" title="Career and Corporate Resource Centre" subtitleclassName="hidden" description="It is a philanthropic organisation that is primarily involved in education and social welfare activities. The society works towards uplifting the underprivileged communities by offering them inclusive educational opportunities, healthcare facilities, and engaging in charitable activities. The society operates educational institutions, healthcare camps, scholarship programs, and other social welfare initiatives." />
+      <ImageContent hasImage={true} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp" className="items-center justify-center" title="Career and Corporate Resource Centre" subtitleclassName="hidden" description="It is a philanthropic organisation that is primarily involved in education and social welfare activities. The society works towards uplifting the underprivileged communities by offering them inclusive educational opportunities, healthcare facilities, and engaging in charitable activities. The society operates educational institutions, healthcare camps, scholarship programs, and other social welfare initiatives." buttonLink="/career-and-corporate-resource-centre" />
       <FAQ 
         items={FAQItems} 
         title="" 
         subtitle=""
       />
       <CenterOfExcellence centres={centres} title="Startup Partners" description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation." />
-      <StudentActivities activities={activities} title=" Glimpse" subtitle="" />
+      <StudentActivities activities={activities} title="CSR Glimpse" subtitle="" />
       
       <AdmissionCareer />
      

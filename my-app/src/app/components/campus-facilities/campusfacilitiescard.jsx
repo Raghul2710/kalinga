@@ -112,8 +112,8 @@ function Campusfacilitiescard() {
             title: "Sanitary Napkin Vending Machines",
             description:
                 "Sanitary napkin vending machines are installed in all girls’ washrooms and hostels to ensure hygiene and round-the-clock accessibility for female students.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/sanitary-napkin-vending-machines.webp",
+            logoSrc: "",
             subtitle: "WOMEN WELLBEING",
             // link: "/campus-facilities/women-wellbeing",
         },
@@ -121,8 +121,8 @@ function Campusfacilitiescard() {
             title: "Recreation Corners",
             description:
                 "Our peaceful recreational corners offer students a space to relax, unwind, socialize, and take breaks from academic stress in a calm environment.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp",
+            logoSrc: "",
             subtitle: "STUDENT LIFE",
         },
         {

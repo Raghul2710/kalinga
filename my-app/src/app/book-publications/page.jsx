@@ -60,7 +60,7 @@ export default function Page() {
 
   return (
     <>
-   <SectionHeading
+   <SectionHeading 
   title={
     <>
       Book Publications
@@ -70,7 +70,7 @@ export default function Page() {
       </span>
     </>
   }
-  titleClassName="text-center text-5xl "
+  titleClassName="text-center text-2xl md:text-5xl font-stix mt-20"
 />
 
 

@@ -6,7 +6,7 @@ import Link from 'next/link'
 const AboutKalinga = () => {
   const [isExpanded, setIsExpanded] = useState(false)
   
-  const fullText = "Established in 2013, Kalinga University, Raipur stands as one of the best private universities in Chhattisgarh, strategically located in the Smart City of New Raipur.With a 50-acre green campus, Centres of Excellence, and strong industry placement partnerships, Kalinga University is dedicated to nurturing global leaders through innovation, inclusivity, and excellence.Home to students from over 29+countries, the University offers state-of-the-art education in Arts & Humanities, Commerce & Management,Education,IT mention full form of this, Law, Pharmacy,Science and Technology supported by global collaborations with IBM, Cisco, Bosch, and more."
+  const fullText = "Established in 2013, Kalinga University, Raipur stands as one of the best private universities in Chhattisgarh, strategically located in the Smart City of New Raipur.With a 50-acre green campus, Centres of Excellence, and strong industry placement partnerships, Kalinga University is dedicated to nurturing global leaders through innovation, inclusivity, and excellence.Home to students from over 29+countries, the University offers state-of-the-art education in Arts & Humanities, Commerce & Management,Education,Information Technology, Law, Pharmacy,Science and Technology supported by global collaborations with IBM, Cisco, Bosch, and more."
   
   const truncateLimit = 200
   const truncatedText = fullText.length > truncateLimit ? fullText.slice(0, truncateLimit) + '...' : fullText

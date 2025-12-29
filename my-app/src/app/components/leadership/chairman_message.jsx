@@ -8,6 +8,7 @@ export default function ChairmanMessage({
   name = "Dr. Rajeev Kumar",
   title = "Chairman",
   department = "",
+  messageHeading = "Chairman's Message",
   quote = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
   message = [
     "It gives me immense pleasure to welcome you to the Kalinga University, where we believe that education is not just about classroom learning but about inspiring learners to achieve lifelong knowledge.",
@@ -107,10 +108,10 @@ export default function ChairmanMessage({
               </div>
             </div>
           </div>
-          {/* Bottom Section - Chairman's Message */}
+          {/* Bottom Section - Message */}
           <div className="bg-white rounded-lg p-4 md:p-6 lg:p-10 relative lg:top-[-140px] md:top-[-60px] top-6 md:top-0 mt-4 md:mt-0 z-20">
               <h2 className="font-stix text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[var(--foreground)] mb-3 md:mb-4 lg:mb-6 xl:mb-8">
-                Chairman's Message
+                {messageHeading}
               </h2>
               <div>
                 {/* Desktop: Show all paragraphs */}

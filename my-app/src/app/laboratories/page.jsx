@@ -3,7 +3,7 @@
 import { useLayoutEffect } from "react";
 import MainIntro from "@/app/components/about/main_intro";
 import FAQ from "@/app/components/general/faq"; // adjust path if your FAQ is elsewhere
-import StudentActivities from "@/app/components/department/student_activities";
+import Gallery from "@/app/components/general/gallery";
 import AdmissionCareer from "@/app/components/general/admission_cta";
 
 const breadcrumbData = {
@@ -175,33 +175,36 @@ const labFaqItems = [
   },
 ];
 
-const glimpses = [
+const galleryImages = [
   {
     id: 1,
-    imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse1.webp", // (Add Multiple Images - 2)
-    imageAlt: "Laboratories Glimpse",
-    title: "Glimpses",
-    buttonText: "Read More",
-    date: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse1.webp",
+    alt: "Laboratories Glimpse 1",
   },
   {
     id: 2,
-    imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse2.webp", // (Add Multiple Images - 2)
-    imageAlt: "Laboratories Glimpse",
-    title: "Glimpses",
-    buttonText: "Read More",
-    date: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse2.webp",
+    alt: "Laboratories Glimpse 2",
   },
   {
     id: 3,
-    imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse3.webp", // (Add Multiple Images - 2)
-    imageAlt: "Laboratories Glimpse",
-    title: "Glimpses",
-    buttonText: "Read More",
-    date: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse3.webp",
+    alt: "Laboratories Glimpse 3",
+  },
+  {
+    id: 4,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/lab-1.webp",
+    alt: "Laboratories Glimpse 4",
+  },
+  {
+    id: 5,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/lab-2.webp",
+    alt: "Laboratories Glimpse 5",
+  },
+  {
+    id: 6,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/lab-3.webp",
+    alt: "Laboratories Glimpse 6",
   }
 ];
 
@@ -239,10 +242,9 @@ export default function LaboratoriesPage() {
       />
 
       {/* Glimpses */}
-      <StudentActivities
-        activities={glimpses}
-        title="Glimpses"
-        subtitle="Glimpses"
+      <Gallery 
+        title="Glimpses" 
+        images={galleryImages} 
       />
 
       <AdmissionCareer />

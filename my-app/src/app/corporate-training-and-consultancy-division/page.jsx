@@ -216,6 +216,11 @@ export default function CorporateTrainingAndConsultancyDivision() {
   // Gallery Images for Tab 1 (2024-25) - 3 images
   const galleryImages = [
     {
+      id: 1,
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(1).webp",
+      alt: "Masterclass 2024-25 Glimpse 1"
+    },
+    {
       id: 2,
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-7.webp",
       alt: "Masterclass 2024-25 Glimpse 4"
@@ -234,6 +239,16 @@ export default function CorporateTrainingAndConsultancyDivision() {
       id: 5,
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-10.webp",
       alt: "Masterclass 2024-25 Glimpse 7"
+    },
+    {
+      id: 6,
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(14).webp",
+      alt: "Masterclass 2024-25 Glimpse 8"
+    },
+    {
+      id: 7,
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(15).webp",
+      alt: "Masterclass 2024-25 Glimpse 9"
     },
   ];
 
@@ -259,11 +274,34 @@ export default function CorporateTrainingAndConsultancyDivision() {
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-4.webp",
       alt: "Masterclass 2025-26 Glimpse 4"
     },
+    {
+      id: 5,
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(11).webp",
+      alt: "Masterclass 2025-26 Glimpse 5"
+    },
+    {
+      id: 6,
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(12).webp",
+      alt: "Masterclass 2025-26 Glimpse 6"
+    },
+    {
+      id: 7,
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(13).webp",
+      alt: "Masterclass 2025-26 Glimpse 7"
+    },
   ];
 
   return (
     <>
-      <HeroSectionTwo />
+      <HeroSectionTwo 
+        showBlackOverlay={true}
+        titleTextColor="text-white"
+        subtitleTextColor="text-white"
+        subtitle=""
+        hideBorder={true}
+        subtitleImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-ctcd.svg"
+        subtitleImageAlt="CTCD Logo"
+      />
       <MainIntro 
         title="Corporate Training And Consultancy Division (CTCD)"
         description={[
@@ -298,7 +336,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
           "More specifically, we assist them in talent management, digital integration, and workforce planning; every approach ensures improved productivity and employee engagement. We help them make SMARTER decisions with proper resource planning and integration, enabling them to grow with a clear roadmap"
         ]}
         buttonLabel="Explore Now"
-        href="/ctcd-organogram"
+        href="/organogram"
         cardBackgroundColor="bg-[var(--dark-blue)]"
         useContainer = {true}
       />
@@ -334,7 +372,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
       <OrganogramOfKalinga 
       
         title="Download Brochure 2025-26"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Download our comprehensive Corporate Training and Consultancy Division (CTCD) brochure for 2025-26 to explore our training programs, consultancy services, masterclasses, and how we can help your organization enhance employee skills, boost productivity, and achieve business excellence through customized training solutions."
         buttonLabel="Explore Now"
         href="https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/CTCD+-+Corporate+Training+and+Consultancy+Division_compressed+(1).pdf"
         cardBackgroundColor="bg-[var(--button-red)]"

@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainIntro from '@/app/components/about/main_intro'
 import ImageContent from '@/app/components/ccrc/imagecontent'
 import ImageListItem from '@/app/components/ccrc/imagelistitem'
@@ -11,7 +11,24 @@ import MediaCardSlider from '@/app/components/general/media-card-slider'
 import Testimonials from '@/app/components/home/Testimonials'
 import Gallery from '@/app/components/campuslife/campusgallery'
 import CustomGallery from '@/app/components/general/gallery'
+
+
+
+const breadcrumbData = {
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-intro.jpg",
+  imageposition: "object-center",
+  pageTitle: "Training and Placement Cell",
+  customBreadcrumbs: [
+    { label: "Home", href: "/" },
+    { label: "Training and Placement Cell", href: "/training-and-placement-cell" },
+  ],
+}
 const TrainingAndPlacementCell = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.__breadcrumbData = breadcrumbData;
+    }
+  }, []);
   const blueItems = [
     {
       imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-1.webp",
@@ -350,7 +367,7 @@ const TrainingAndPlacementCell = () => {
         <TabsContent value="tab1" className="pt-7">
           <div className="space-y-8">
             <div>
-              <h3 className="font-stix text-2xl font-bold text-[var(--foreground)] mb-4">
+              <h3 className="font-stix text-2xl text-[var(--foreground)] mb-4">
                 Campus Recruitment Training (CRT)
               </h3>
               <p className="text-[var(--light-text-gray)] leading-relaxed">
@@ -359,7 +376,7 @@ const TrainingAndPlacementCell = () => {
             </div>
 
             <div>
-              <h4 className="font-stix text-xl font-semibold text-[var(--foreground)] mb-3">
+              <h4 className="font-stix text-xl  text-[var(--foreground)] mb-3">
                 Learning Methodology
               </h4>
               <p className="text-[var(--light-text-gray)] mb-3">
@@ -375,7 +392,7 @@ const TrainingAndPlacementCell = () => {
             </div>
 
             <div>
-              <h3 className="font-stix text-2xl font-bold text-[var(--foreground)] mb-4">
+              <h3 className="font-stix text-2xl text-[var(--foreground)] mb-4">
                 Corporate Employment Assessment Test (CEAT)
               </h3>
               <p className="text-[var(--light-text-gray)] leading-relaxed">
@@ -391,7 +408,7 @@ const TrainingAndPlacementCell = () => {
         <TabsContent value="tab2" className="pt-7">
           <div className="space-y-8">
             <div>
-              <h3 className="font-stix text-2xl font-bold text-[var(--foreground)] mb-4">
+              <h3 className="font-stix text-2xl text-[var(--foreground)] mb-4">
                 Our Student Training Initiatives
               </h3>
               <p className="text-[var(--light-text-gray)] leading-relaxed">
@@ -400,7 +417,7 @@ const TrainingAndPlacementCell = () => {
             </div>
 
             <div>
-              <h4 className="font-stix text-xl font-semibold text-[var(--foreground)] mb-3">
+              <h4 className="font-stix text-xl  text-[var(--foreground)] mb-3">
                 Meta Skills Training
               </h4>
               <p className="text-[var(--light-text-gray)] leading-relaxed mb-4">
@@ -408,7 +425,7 @@ const TrainingAndPlacementCell = () => {
               </p>
 
               <div className="mb-4">
-                <h5 className="font-stix text-lg font-semibold text-[var(--foreground)] mb-2">
+                <h5 className="font-stix text-lg  text-[var(--foreground)] mb-2">
                   Core Objectives:
                 </h5>
                 <ul className="list-disc list-inside text-[var(--light-text-gray)] space-y-2 ml-4">
@@ -421,7 +438,7 @@ const TrainingAndPlacementCell = () => {
               </div>
 
               <div className="mb-4">
-                <h5 className="font-stix text-lg font-semibold text-[var(--foreground)] mb-2">
+                <h5 className="font-stix text-lg  text-[var(--foreground)] mb-2">
                   Methodology:
                 </h5>
                 <p className="text-[var(--light-text-gray)] mb-3">
@@ -429,7 +446,7 @@ const TrainingAndPlacementCell = () => {
                 </p>
                 <div className="space-y-3">
                   <div>
-                    <p className="font-semibold text-[var(--foreground)] mb-1">Industry-Focused Approach -</p>
+                    <p className=" text-[var(--foreground)] mb-1">Industry-Focused Approach -</p>
                     <ul className="list-disc list-inside text-[var(--light-text-gray)] space-y-1 ml-4">
                       <li>Experiential activities, role-plays, and group discussions</li>
                       <li>Mentorship from industry experts</li>
@@ -437,7 +454,7 @@ const TrainingAndPlacementCell = () => {
                     </ul>
                   </div>
                   <div>
-                    <p className="font-semibold text-[var(--foreground)] mb-1">Individual-Focused Approach -</p>
+                    <p className=" text-[var(--foreground)] mb-1">Individual-Focused Approach -</p>
                     <ul className="list-disc list-inside text-[var(--light-text-gray)] space-y-1 ml-4">
                       <li>Identifying their strengths, challenges, and interests</li>
                       <li>Setting personalised career paths and actionable goals</li>
@@ -449,7 +466,7 @@ const TrainingAndPlacementCell = () => {
               </div>
 
               <div>
-                <h5 className="font-stix text-lg font-semibold text-[var(--foreground)] mb-2">
+                <h5 className="font-stix text-lg  text-[var(--foreground)] mb-2">
                   Year-Wise Development Modules:
                 </h5>
                 <ul className="list-disc list-inside text-[var(--light-text-gray)] space-y-2 ml-4">
@@ -461,7 +478,7 @@ const TrainingAndPlacementCell = () => {
             </div>
 
             <div>
-              <h4 className="font-stix text-xl font-semibold text-[var(--foreground)] mb-3">
+              <h4 className="font-stix text-xl  text-[var(--foreground)] mb-3">
                 Apti Mitra Module
               </h4>
               <p className="text-[var(--light-text-gray)] leading-relaxed">
@@ -470,7 +487,7 @@ const TrainingAndPlacementCell = () => {
             </div>
 
             <div>
-              <h4 className="font-stix text-xl font-semibold text-[var(--foreground)] mb-3">
+              <h4 className="font-stix text-xl  text-[var(--foreground)] mb-3">
                 Outbound Training
               </h4>
               <p className="text-[var(--light-text-gray)] leading-relaxed">

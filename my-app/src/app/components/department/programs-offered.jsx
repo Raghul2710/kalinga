@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const defaultPrograms = [
@@ -139,9 +140,9 @@ export default function ProgramsOffered({
                       <p className="text-[var(--light-text-gray)] !font-[500]">
                         Duration: {program.duration}
                       </p>
-                      <a
-                      href="/admissions"
-                      className="font-[500] flex items-center gap-1 hover:gap-2 transition-all md:ml-4"
+                      <Link
+                      href={program.slug ? `/courses/${program.slug}` : "/admissions"}
+                      className="font-[500] flex items-center gap-1 hover:gap-2 transition-all md:ml-4 text-[var(--button-red)] hover:text-[var(--button-red)]/80"
                     >
                       Explore Program
                       <svg
@@ -160,7 +161,7 @@ export default function ProgramsOffered({
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </a>
+                    </Link>
                     </div>
                     </div>
                   </div>

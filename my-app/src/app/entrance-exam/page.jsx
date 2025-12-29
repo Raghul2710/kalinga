@@ -8,10 +8,11 @@ import CareerApplicationForm from "@/app/components/careers/CareerApplicationFor
 import FaqSection from "@/app/components/general/faq";
 import { useBreadcrumbData } from "@/app/components/layout/BreadcrumbContext";
 import AdmissionCareer from "@/app/components/general/admission_cta";
+import EntranceExamUpdated from "@/app/components/entrance-exam/entrance-exam-updated";
 
 // Breadcrumb configuration
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp",
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/banner.webp",
   imageposition: "object-top",
   pageTitle: "Entrance Exam",
   customBreadcrumbs: [
@@ -33,15 +34,27 @@ const EntranceExamPage = () => {
     const Items = [
         {
             id: 1,
-            text: "To become a hub of manufacturing, information technology, and biotechnology sectors."
+            text: "Earn Scholarships: Up to 100%."
         },
         {
             id: 2,
-            text: "To become a hub of manufacturing, information technology, and biotechnology sectors."
+            text: "Flexible Scheduling: Schedule the exam at your preferred time."
         },  
         {
             id: 3,
-            text: "To become a hub of manufacturing, information technology, and biotechnology sectors."
+            text: "No Negative Marking: Attempt all questions with no worries."
+        },
+        {
+            id: 4,
+            text: "Fast-Track Your College Application Process: First-Come, First-Served Basis."
+        },
+        {
+            id: 5,
+            text: "Recognised Entrance Exam: A trusted online exam."
+        },
+        {
+            id: 6,
+            text: "Access to Premium Programs: Enroll in our world-class programs."
         },
     ]
   return (
@@ -50,14 +63,15 @@ const EntranceExamPage = () => {
         hasImage={false} 
         readmore={false} 
         className="items-center justify-center" 
-        title="Corporate Social Responsibility (CSR)" 
+        title="Introducing A Shortcut To Success" 
         subtitleclassName="hidden" 
-        description="Companies today understand the importance of giving back by being socially responsible towards society, but with a lack of time, planning, and expertise, they fail to develop effective programs. The Corporate Social Responsibility (CSR) initiatives at Kalinga come under Bhagwan Shri Bala Sai Educational and Charitable Society, which works on behalf of different organisations and assists them in staying ahead in sustainable and social welfare. It handles every project with transparency and accountability by identifying real social needs, developing solutions to address those challenges, working towards the cause, and measuring outcomes. The organization helps companies successfully channelise their CSR efforts by focusing on their business objectives and delivering measurable results."
+        description="Crack the KALSEE/KAL-MAT Exam and Join KU’s Prestigious Programs."
       />  
-       <ImageListItem items={Items} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Objectives of the Organisation"  /> 
-       <EntranceExamFormCards />
+       <ImageListItem items={Items} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Apply For KU Entrance Exams"  /> 
+       {/* <EntranceExamFormCards /> */}
+       <EntranceExamUpdated />
        <CareerApplicationForm
-          heading="CTCD Application Form"
+          heading="Entrance Exam Application Form"
           description="Share your details to stay connected with Kalinga University, receive updates, and participate in alumni activities and events."
           backgroundClass="bg-[var(--dark-blue)]"
           hideTabs={true}
@@ -65,6 +79,7 @@ const EntranceExamPage = () => {
           useArrowSubmitButton={true}
           arrowSubmitVariant="white"
         />  
+
         <FaqSection items={careerFAQs} showHeading={false} />
         <AdmissionCareer />
     </>

@@ -504,7 +504,7 @@ const CentralInstrumentationFacilityPage = () => {
         subtitleClassName="!text-[var(--button-red)]"
         subtitleTextColor="!text-[var(--button-red)]"
       />
-    <Gallery />
+    <Gallery  title="Glimpse" />
     <AdmissionCareer />
     </>
   )

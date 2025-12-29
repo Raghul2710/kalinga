@@ -271,3 +271,119 @@ export function parseHtmlListItems(htmlContent) {
     return '';
   }).filter(item => item.length > 0);
 }
+
+/**
+ * Fetches course counts for all departments
+ * @returns {Promise<Array>} Array of department objects with course_count
+ */
+export async function fetchDepartmentCourseCounts() {
+  try {
+    const url = getApiUrl(API_CONFIG.departments.courseCounts());
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return extractResults(data);
+  } catch (error) {
+    console.error('Error fetching department course counts:', error);
+    throw error;
+  }
+}
+
+/**
+ * Fetches all departments and courses filtered by program type and/or department
+ * @param {string|null} programType - Program type filter (ug, pg, phd, diploma) or null for all
+ * @param {string|null} department - Department slug or ID filter or null for all
+ * @returns {Promise<Object>} Object with departments and courses arrays
+ */
+export async function fetchAllDepartmentsCourses(programType = null, department = null) {
+  try {
+    const url = getApiUrl(API_CONFIG.departments.allDepartmentsCourses(programType, department));
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Error fetching all departments courses${programType ? ` for ${programType}` : ''}${department ? ` in ${department}` : ''}:`, error);
+    throw error;
+  }
+}
+
+/**
+ * Fetches departments and courses from the combined endpoint
+ * @returns {Promise<Object>} Object with departments, courses, and metadata
+ */
+export async function fetchDepartmentsCourses() {
+  try {
+    const url = getApiUrl(API_CONFIG.departmentCourses.departmentsCourses());
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching departments and courses:', error);
+    throw error;
+  }
+}
+
+/**
+ * Updates the course count for a department
+ * @param {number} departmentId - The department ID
+ * @param {number} courseCount - The course count to update
+ * @returns {Promise<Object>} API response
+ */
+export async function updateDepartmentCourseCount(departmentId, courseCount) {
+  try {
+    const url = getApiUrl(API_CONFIG.departments.updateCourseCount());
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        department_id: departmentId,
+        course_count: courseCount,
+      }),
+      cache: 'no-store',
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(`Error updating course count for department ${departmentId}:`, error);
+    throw error;
+  }
+}

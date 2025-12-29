@@ -20,41 +20,41 @@ export const renderProgramCard = (program) => {
 
   const overviewCard = (
     <div className="w-full h-full rounded-xl overflow-hidden shadow-xl p-4 sm:p-4 lg:p-4 flex flex-col" style={{ backgroundColor: 'rgba(254, 192, 113, 1)' }}>
-      <div>
+      <div className="flex-1 min-h-0 flex flex-col">
         <h3 className="font-stix !text-[25px] leading-tight mb-3 sm:mb-4">Overview</h3>
-        <p className="font-plus-jakarta-sans text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 !text-gray-800">
+        <p className="font-plus-jakarta-sans text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 !text-gray-800 overflow-hidden">
           {program.summary || 'Learn more about this program and its opportunities.'}
         </p>
+        <ul className="text-sm sm:text-base font-plus-jakarta-sans space-y-2.5 sm:space-y-3 mb-4 sm:mb-5">
+          {program.scholarships && (
+            <li className="flex items-start gap-2">
+              <Image
+                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
+                alt="Scholarships icon"
+                width={20}
+                height={20}
+                className="mt-0.5"
+              />
+              <span className="text-gray-800"><span className="font-stix md:text-[20px] text-[16px] text-black">Scholarships :</span> {program.scholarships}</span>
+            </li>
+          )}
+          {program.programs && (
+            <li className="flex items-start gap-2">
+              <Image
+                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
+                alt="Programs icon"
+                width={20}
+                height={20}
+                className="mt-0.5"
+              />
+              <span className="text-gray-800"><span className="font-stix md:text-[20px] text-[16px] text-black">Programs :</span> {program.programs}</span>
+            </li>
+          )}
+        </ul>
       </div>
-      <ul className="text-sm sm:text-base font-plus-jakarta-sans space-y-2.5 sm:space-y-3 mb-4 sm:mb-5">
-        {program.scholarships && (
-          <li className="flex items-start gap-2">
-            <Image
-              src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
-              alt="Scholarships icon"
-              width={20}
-              height={20}
-              className="mt-0.5"
-            />
-            <span className="text-gray-800"><span className="font-stix text-[20px] text-black">Scholarships :</span> {program.scholarships}</span>
-          </li>
-        )}
-        {program.programs && (
-          <li className="flex items-start gap-2">
-            <Image
-              src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
-              alt="Programs icon"
-              width={20}
-              height={20}
-              className="mt-0.5"
-            />
-            <span className="text-gray-800"><span className="font-stix text-[20px] text-black">Programs :</span> {program.programs}</span>
-          </li>
-        )}
-      </ul>
 
-      <div className="mt-auto flex items-center justify-between gap-2 sm:gap-3">
-        <div className="flex items-center gap-2 sm:gap-3">
+      <div className="flex-shrink-0 flex items-center justify-between gap-2 sm:gap-3">
+        <div className="flex items-center  md:gap-3">
           <Link href={`/courses/${program.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>
             <GlobalArrowButton className="!bg-transparent !shadow-none !text-[#1a1a1a] !px-0 !py-0 !h-auto text-sm sm:text-base" arrowClassName="!bg-transparent" arrowIconClassName="!text-[#1a1a1a]">
               Know More

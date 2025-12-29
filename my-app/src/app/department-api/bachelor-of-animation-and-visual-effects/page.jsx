@@ -339,67 +339,67 @@ function Courses() {
     <div>
       {navigationTabs && <CourseNavigation tabs={navigationTabs} />}
       {mainIntroContent && (
-        <div id="about">
-          <MainIntro 
-            title={mainIntroContent.title}
-            subtitle={mainIntroContent.subtitle}
-            description={mainIntroContent.description}
-            imageUrl={mainIntroContent.imageUrl}
-            imageAlt={mainIntroContent.imageAlt}
-            showKnowMore={false}
-          />
-        </div>
+      <div id="about">
+        <MainIntro 
+          title={mainIntroContent.title}
+          subtitle={mainIntroContent.subtitle}
+          description={mainIntroContent.description}
+          imageUrl={mainIntroContent.imageUrl}
+          imageAlt={mainIntroContent.imageAlt}
+          showKnowMore={false}
+        />
+      </div>
       )}
       {publicationStats && publicationStats.length > 0 && (
-        <PublicationGrid stats={publicationStats} />
+      <PublicationGrid stats={publicationStats} />
       )}
       {eligibilityContent && (
-        <div id="eligibility">
-          <EligibilityCriteria 
-            imageUrl={eligibilityContent.imageUrl}
-            imageAlt={eligibilityContent.imageAlt}
-            duration={eligibilityContent.duration}
-            title={eligibilityContent.title}
-            criteria={eligibilityContent.criteria}
-            admissionTitle={eligibilityContent.admissionTitle}
-            admissionButtonLabel={eligibilityContent.admissionButtonLabel}
-          />
-        </div>
+      <div id="eligibility">
+        <EligibilityCriteria 
+          imageUrl={eligibilityContent.imageUrl}
+          imageAlt={eligibilityContent.imageAlt}
+          duration={eligibilityContent.duration}
+          title={eligibilityContent.title}
+          criteria={eligibilityContent.criteria}
+          admissionTitle={eligibilityContent.admissionTitle}
+          admissionButtonLabel={eligibilityContent.admissionButtonLabel}
+        />
+      </div>
       )}
       {careerPathContent && (
-        <div id="career">
-          <CareerPath 
-            title={careerPathContent.title}
-            description={careerPathContent.description}
-            careers={careerPathContent.careers}
-          />
-        </div>
+      <div id="career">
+        <CareerPath 
+          title={careerPathContent.title}
+          description={careerPathContent.description}
+          careers={careerPathContent.careers}
+        />
+      </div>
       )}
       {whyStudyContent && whyStudyContent.items && whyStudyContent.items.length > 0 && (
-        <div id="specialization">
-          <WhyStudy 
-            sectionTitle={whyStudyContent.sectionTitle}
-            backgroundImage={whyStudyContent.backgroundImage}
-            items={whyStudyContent.items}
-          />
-        </div>
+      <div id="specialization">
+        <WhyStudy 
+          sectionTitle={whyStudyContent.sectionTitle}
+          backgroundImage={whyStudyContent.backgroundImage}
+          items={whyStudyContent.items}
+        />
+      </div>
       )}
       {syllabusContent && (
-        <OrganogramOfKalinga
+      <OrganogramOfKalinga
           title={syllabusContent.title}
           description={syllabusContent.description}
           buttonLabel={syllabusContent.buttonLabel}
           href={syllabusContent.href}
-          buttonClassName="!bg-white !text-black"
-          arrowClassName="!bg-[var(--dark-orange-red)]"
-          arrowIconClassName="!text-white"
-          textClassName="!text-black"
-          cardBackgroundColor="bg-[var(--button-red)]"
-          useContainer={false}
+        buttonClassName="!bg-white !text-black"
+        arrowClassName="!bg-[var(--dark-orange-red)]"
+        arrowIconClassName="!text-white"
+        textClassName="!text-black"
+        cardBackgroundColor="bg-[var(--button-red)]"
+        useContainer={false}
           showImage={false}
           imageUrl={syllabusContent.imageUrl}
           imageAlt={syllabusContent.title}
-        />
+      />
       )}
       <div id="facilities">
         <Facility />
@@ -411,10 +411,10 @@ function Courses() {
         titleClassName="text-white"
       />
       {faqContent && faqContent.items && faqContent.items.length > 0 && (
-        <FAQ 
-          title={faqContent.title}
-          items={faqContent.items}
-        />
+      <FAQ 
+        title={faqContent.title}
+        items={faqContent.items}
+      />
       )}
       {/* <BoardStudies /> */}
       <div id="activities">

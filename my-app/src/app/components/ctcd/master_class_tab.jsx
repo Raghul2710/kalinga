@@ -232,13 +232,14 @@ export default function MasterClassTab({
                 subtitle=""
                 activities={activities1}
                 paddingClassName="py-0"
+                cardHeightClass="h-max"
               />
               <Gallery
                 title={tab1GalleryTitle}
                 images={gallery1}
                 backgroundColor="bg-white"
                 paddingClassName="py-0"
-                titleClassName="font-plus-jakarta-sans text-lg font-bold sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 mt-5 text-[var(--foreground)] text-center"
+                titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 mt-5 text-[var(--foreground)] text-center"
                 forceSliderOnMobile={true}
               />
             </>
@@ -250,13 +251,14 @@ export default function MasterClassTab({
                 subtitle=""
                 activities={activities2}
                 paddingClassName="py-0"
+                cardHeightClass="h-max"
               />
               <Gallery
                 title={tab2GalleryTitle}
                 images={gallery2}
                 backgroundColor="bg-white"
                 paddingClassName="py-0"
-                titleClassName="font-plus-jakarta-sans text-lg font-bold sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 text-[var(--foreground)] text-center mt-10"
+                titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 text-[var(--foreground)] text-center mt-10"
                 forceSliderOnMobile={true}
               />
             </>

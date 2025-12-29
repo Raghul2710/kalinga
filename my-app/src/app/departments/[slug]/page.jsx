@@ -23,7 +23,9 @@ import FAQ from "@/app/components/general/faq";
 import MediaCardSlider from "@/app/components/general/media-card-slider";
 import WeStandOut from "@/app/components/department/we_stand_out";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
-import { fetchAllDepartments, fetchDepartmentCompleteDetail, parseHtmlToParagraphs, parseHtmlToText } from "@/app/lib/api";
+import Testimonials from "@/app/components/home/Testimonials";
+import DataTable from "@/app/components/general/data-table";
+import { fetchAllDepartments, fetchDepartmentCompleteDetail, fetchAllDepartmentsCourses, parseHtmlToParagraphs, parseHtmlToText } from "@/app/lib/api";
 import { useBreadcrumbData } from "@/app/components/layout/BreadcrumbContext";
 
 // Generate slug from department name if slug is not available
@@ -43,6 +45,7 @@ export default function DynamicDepartmentPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [departmentId, setDepartmentId] = useState(null);
+  const [departmentCourses, setDepartmentCourses] = useState([]);
 
   // Find department ID from slug
   useEffect(() => {
@@ -92,6 +95,25 @@ export default function DynamicDepartmentPage() {
 
     loadDepartmentData();
   }, [departmentId]);
+
+  // Fetch department courses from the optimized endpoint
+  useEffect(() => {
+    if (!slug) return;
+
+    const loadDepartmentCourses = async () => {
+      try {
+        const data = await fetchAllDepartmentsCourses(null, slug);
+        if (data && data.courses && Array.isArray(data.courses)) {
+          setDepartmentCourses(data.courses);
+        }
+      } catch (err) {
+        console.error('Failed to load department courses:', err);
+        // Silently fail - will fallback to department_courses from complete detail
+      }
+    };
+
+    loadDepartmentCourses();
+  }, [slug]);
 
   // Update SEO metadata when departmentData is available
   useEffect(() => {
@@ -179,13 +201,15 @@ export default function DynamicDepartmentPage() {
     };
   })() : null;
 
+  // Map API data to DeptHeadIntro component props
+  // Component expects: title, subtitle, department, imageSrc, quote, message
   const deptHeadIntroContent = departmentData?.department_faculty_details?.[0] ? {
-    name: departmentData.department_faculty_details[0].name,
-    designation: departmentData.department_faculty_details[0].designation,
-    imageUrl: departmentData.department_faculty_details[0].image,
-    imageAlt: departmentData.department_faculty_details[0].image_alt,
-    quote: departmentData.department_faculty_details[0].quote_description,
-    about: parseHtmlToParagraphs(departmentData.department_faculty_details[0].about),
+    title: departmentData.department_faculty_details[0].name || "",
+    subtitle: departmentData.department_faculty_details[0].qualification || "Head of Department",
+    department: departmentData.name || "",
+    imageSrc: departmentData.department_faculty_details[0].image || "",
+    quote: departmentData.department_faculty_details[0].quote_description || "",
+    message: parseHtmlToParagraphs(departmentData.department_faculty_details[0].about || ""),
   } : null;
 
   const publicationStats = departmentData?.milestones && departmentData.milestones.length > 0
@@ -199,7 +223,10 @@ export default function DynamicDepartmentPage() {
     : null;
 
   const programsOffered = useMemo(() => {
-    const coursesData = departmentData?.department_courses;
+    // Prioritize courses from the optimized endpoint, fallback to department_courses
+    const coursesData = (departmentCourses && departmentCourses.length > 0) 
+      ? departmentCourses 
+      : departmentData?.department_courses;
     
     if (!coursesData || !Array.isArray(coursesData) || coursesData.length === 0) {
       return null;
@@ -233,13 +260,16 @@ export default function DynamicDepartmentPage() {
         title: course.name || "",
         duration: duration,
         level: level,
+        slug: course.slug || null,
       };
     });
-  }, [departmentData?.department_courses]);
+  }, [departmentCourses, departmentData?.department_courses]);
 
-  const programsImage = departmentData?.programs_image || null;
-  const programsImageAlt = departmentData?.programs_image_alt || "Programs Offered";
-  const programsOverview = departmentData?.programs_offered_overview || "";
+  // Map program_syllabus_images data (prioritize this over legacy fields)
+  const programSyllabusImage = departmentData?.program_syllabus_images?.[0];
+  const programsImage = programSyllabusImage?.image || programSyllabusImage?.image_url || departmentData?.programs_image || null;
+  const programsImageAlt = programSyllabusImage?.image_alt || departmentData?.programs_image_alt || "Programs Offered";
+  const programsOverview = programSyllabusImage?.programs_offered_overview || departmentData?.programs_offered_overview || "";
 
   const placementData = {
     placement_info: departmentData?.placement_info || [],
@@ -275,9 +305,64 @@ export default function DynamicDepartmentPage() {
       }));
   }, [departmentData?.faqs]);
 
+  // Map video interviews for MediaCardSlider (Hidden for future use)
+  const videoInterviewItems = useMemo(() => {
+    if (!departmentData?.video_interviews || !Array.isArray(departmentData.video_interviews) || departmentData.video_interviews.length === 0) {
+      return [];
+    }
+    
+    return departmentData.video_interviews
+      .filter(interview => interview.heading || interview.description) // Filter out items without heading or description
+      .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
+      .map(interview => ({
+        id: interview.id,
+        name: interview.heading || "",
+        description: parseHtmlToText(interview.description) || "",
+        videoUrl: interview.video_link || null,
+        thumbnail: interview.placeholder_image || null,
+      }));
+  }, [departmentData?.video_interviews]);
+
+  // Map video interviews for Testimonials component
+  const testimonialsData = useMemo(() => {
+    if (!departmentData?.video_interviews || !Array.isArray(departmentData.video_interviews) || departmentData.video_interviews.length === 0) {
+      return [];
+    }
+    
+    const themes = ["orange", "red", "amber"];
+    
+    return departmentData.video_interviews
+      .filter(interview => interview.heading || interview.description) // Filter out items without heading or description
+      .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
+      .map((interview, index) => ({
+        id: interview.id,
+        name: interview.heading || "",
+        role: "Student", // Default role
+        quote: parseHtmlToText(interview.description) || "",
+        image: interview.placeholder_image || null,
+        theme: themes[index % themes.length], // Cycle through themes
+      }));
+  }, [departmentData?.video_interviews]);
+
+  // Map board of studies for DataTable component
+  const boardOfStudiesData = useMemo(() => {
+    if (!departmentData?.board_of_studies || !Array.isArray(departmentData.board_of_studies) || departmentData.board_of_studies.length === 0) {
+      return [];
+    }
+    
+    return departmentData.board_of_studies
+      .sort((a, b) => (a.s_no || 0) - (b.s_no || 0))
+      .map(member => ({
+        number: member.s_no || "",
+        name: member.name || "",
+        designation: member.designation || "",
+      }));
+  }, [departmentData?.board_of_studies]);
+
   const breadcrumbData = (departmentData?.name && !loading) ? {
     heroImage: departmentData?.banners?.[0]?.image || departmentData?.banners?.[0]?.image_url || "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-gathered.webp",
     pageTitle: departmentData.name,
+    imageposition: "object-[45%_25%]",
     customBreadcrumbs: [
       { label: 'Home', href: '/' },
       { 
@@ -328,7 +413,7 @@ export default function DynamicDepartmentPage() {
       {mainIntroContent && (
         <MainIntro 
           title={mainIntroContent.title}
-          subtitle={mainIntroContent.subtitle}
+          // subtitle={mainIntroContent.subtitle}
           description={mainIntroContent.description}
           imageUrl={mainIntroContent.imageUrl}
           imageAlt={mainIntroContent.imageAlt}
@@ -340,25 +425,26 @@ export default function DynamicDepartmentPage() {
       {publicationStats && publicationStats.length > 0 && (
         <PublicationGrid stats={publicationStats} />
       )}
-      {deptHeadIntroContent && (
-        <DeptHeadIntro
-          name={deptHeadIntroContent.name}
-          designation={deptHeadIntroContent.designation}
-          imageUrl={deptHeadIntroContent.imageUrl}
-          imageAlt={deptHeadIntroContent.imageAlt}
-          quote={deptHeadIntroContent.quote}
-          about={deptHeadIntroContent.about}
-        />
-      )}
       {programsOffered && programsOffered.length > 0 && (
         <ProgramsOffered
           programs={programsOffered}
           title="Programs Offered"
           description={parseHtmlToText(programsOverview)}
-          backgroundImage={programsImage}
-          imageAlt={programsImageAlt}
+          {...(programsImage && { backgroundImage: programsImage })}
+          {...(programsImageAlt && { imageAlt: programsImageAlt })}
         />
       )}
+      {deptHeadIntroContent && (
+        <DeptHeadIntro
+          title={deptHeadIntroContent.title}
+          subtitle={deptHeadIntroContent.subtitle}
+          department={deptHeadIntroContent.department}
+          imageSrc={deptHeadIntroContent.imageSrc}
+          quote={deptHeadIntroContent.quote}
+          message={deptHeadIntroContent.message}
+        />
+      )}
+     
       <Placements placementData={placementData} />
       {whyStudyContent && whyStudyContent.items && whyStudyContent.items.length > 0 && (
         <WhyStudy 
@@ -377,32 +463,62 @@ export default function DynamicDepartmentPage() {
       )}
       {departmentData?.clubs && departmentData.clubs.length > 0 && (
         <UpcomingConference
+          title="Student Clubs"
+          registerButtonText="Join Now"
+          imageContainerClass="w-full md:w-1/5 flex justify-center"
           conferences={departmentData.clubs
             .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
             .map(club => ({
               id: club.id,
               title: club.name || "",
               description: parseHtmlToText(club.description) || "",
-              imageUrl: club.logo || null,
-              imageAlt: club.logo_alt || "",
-              link: club.join_link || null,
+              image: club.logo || null,
+              href: club.join_link || null,
+              category: "Clubs", // Default category from component, can be customized per club if needed
             }))
           }
+          showCategory={true}
+          showDate={false}
         />
       )}
-      {departmentData?.video_interviews && departmentData.video_interviews.length > 0 && (
+      {/* Board of Studies Table */}
+      {boardOfStudiesData && boardOfStudiesData.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[var(--button-red)]">
+              Board of Studies
+            </h2>
+            <DataTable
+              columns={[
+                { key: "number", label: "S. No", width: "w-20" },
+                { key: "name", label: "Name", width: "flex-1" },
+                { key: "designation", label: "Designation", width: "flex-1" },
+              ]}
+              data={boardOfStudiesData}
+              overflowX={true}
+            />
+          </div>
+        </section>
+      )}
+      {/* MediaCardSlider Section - Hidden for future use */}
+      {false && videoInterviewItems && videoInterviewItems.length > 0 && (
         <MediaCardSlider
-          cards={departmentData.video_interviews
-            .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
-            .map(interview => ({
-              id: interview.id,
-              title: interview.heading || "",
-              description: parseHtmlToText(interview.description) || "",
-              videoUrl: interview.video_link || null,
-              placeholderImage: interview.placeholder_image || null,
-              placeholderAlt: interview.placeholder_alt || "",
-            }))
-          }
+          categoryTitle="Video Interviews"
+          title="Student Interviews"
+          description="Hear from our students about their experiences"
+          videoItems={videoInterviewItems}
+          cardBgClass="bg-white"
+          nameTextClass="text-[var(--button-red)]"
+          descriptionTextClass="text-gray-600"
+          swiperClassName="video-interviews-slider"
+        />
+      )}
+      {/* Testimonials Section - Using video interviews data */}
+      {testimonialsData && testimonialsData.length > 0 && (
+        <Testimonials
+          testimonials={testimonialsData}
+          subtitle="Real Stories. Real Success."
+          title="Stories that define our Kalinga spirit."
         />
       )}
       <Facility />

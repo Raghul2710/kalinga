@@ -27,7 +27,7 @@ export default function Leadership() {
         imageAlt="Dr. R. Shridhar"
         name="Dr. R. Shridhar"
         title="Vice-Chancellor"
-        
+        messageHeading="Vice-Chancellor's Message"
         quote="Education is not merely about degrees, but about shaping character, leadership, and purpose for a better tomorrow."
         message={[
  "It is a matter of honour and immense pleasure to lead Kalinga University.",

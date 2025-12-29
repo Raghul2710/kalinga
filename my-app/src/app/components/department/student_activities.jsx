@@ -4,7 +4,7 @@ import Image from "next/image";
 import GlobalArrowButton from "../general/global-arrow_button";
 import SectionHeading from "../general/SectionHeading";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useRef, useEffect, useMemo, useState } from "react";
@@ -85,6 +85,7 @@ export default function StudentActivities({
   subtitle = "Lorem ipsum dolor sit amet, consectetur",
   activities = defaultActivities,
   paddingClassName = "py-16",
+  cardHeightClass = "h-full",
 }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -127,14 +128,14 @@ export default function StudentActivities({
     );
 
     return (
-      <div className="bg-[var(--light-gray)] rounded-lg p-5 h-full flex flex-col">
+      <div className={`bg-[var(--light-gray)] rounded-lg p-5 ${cardHeightClass} flex flex-col`}>
         <div className="relative">
           <Image
             src={activity.imageSrc}
             alt={activity.imageAlt}
             width={500}
             height={500}
-            className="rounded-lg object-cover w-full"
+            className="rounded-lg object-cover w-full h-[250px]"
           />
           {activity.date && (
             <div className="absolute bottom-3 right-3 bg-[var(--dark-orange-red-light)] px-3 py-1.5 rounded text-[#000] text-[11px] font-medium">
@@ -192,9 +193,14 @@ export default function StudentActivities({
         <div className="relative">
           {showAsSlider ? (
             <Swiper
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               spaceBetween={24}
               slidesPerView={1.2}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
               breakpoints={{
                 768: {
                   slidesPerView: 3,

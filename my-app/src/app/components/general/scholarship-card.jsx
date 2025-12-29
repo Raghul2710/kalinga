@@ -17,7 +17,7 @@ export default function ScholarshipCard({ title, description, icon }) {
       </div>
 
       {/* Title */}
-      <h3 className="mb-3 mt-15 !text-[22px] font-stix text-[var(--foreground)]">{title}</h3>
+      <h3 className="mb-3 mt-15 !text-[22px] font-stix text-[var(--foreground)] leading-tight">{title}</h3>
 
       {/* Divider */}
       <div className="w-full h-px bg-gray-300 mb-3"></div>

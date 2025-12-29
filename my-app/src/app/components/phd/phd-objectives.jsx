@@ -3,7 +3,7 @@ import ImageListItem from "../ccrc/imagelistitem";
 export default function PhdObjectivesPanel() {
   return (
     <ImageListItem
-      imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png"
+      imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-Objectives.webp"
       imageAlt="Doctoral Studies & Research"
      description=""
       title="Objectives Of Our Doctoral Studies & Research"

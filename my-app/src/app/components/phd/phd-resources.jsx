@@ -60,11 +60,11 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Ordinance No. 48 (16.09.2013)"
-              href="https://drive.google.com/file/d/1UDgaoHsULXWseDmT_j7qcvaPu7P6Kmnh/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ordinance+No.+48+(16.09.2013).pdf"
             />
             <LinkItem
               label="Revised Ordinance No. 48 (18.02.2022)"
-              href="https://drive.google.com/file/d/1fLV_cdfFiTfBC-t2NSMVmjxz3e0grAjF/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Amended+Ordinance+No.+48+(18.02.2022).pdf"
             />
           </ul>
         ),
@@ -75,23 +75,23 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Cover Page Format"
-              href="https://drive.google.com/file/d/1xoTLDsrIdlYXKbEN91RLjkdY_sHsfoaf/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University-+Cover+Page+-Thesis.pdf"
             />
             <LinkItem
               label="Synopsis Format"
-              href="https://drive.google.com/file/d/1DYa7_p2ApN5ob2GkkKXra2ASx0lZo4tY/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University+-Synopsis+Format+-Cover+Page+(1).pdf"
             />
             <LinkItem
               label="Summary Format"
-              href="https://drive.google.com/file/d/1d2waUAP38daCljZaViYJUT9hrD0JGUb-/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University+-Summary+Format-+Cover+page.pdf"
             />
             <LinkItem
               label="Arrangement of Thesis Content"
-              href="https://drive.google.com/file/d/1-KToXxcakDN31gKWhRfuzC-B2Muj4aWk/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/ARRANGEMENT+OF+THESIS+CONTENTS.pdf"
             />
             <LinkItem
               label="Thesis Chapterization"
-              href="https://drive.google.com/file/d/1POGsmWwPTzjVmJj49xwdSeq8qNgJTlaI/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University-+Thesis+Chapterization_Final.pdf"
             />
           </ul>
         ),
@@ -102,7 +102,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Ph.D. Admission Policy"
-              href="https://drive.google.com/file/d/1PY2DPdW5y8NIRGS1kxpV-HpDks6urnHv/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/2.+Admission+poilcy+(1).pdf"
             />
           </ul>
         ),
@@ -113,7 +113,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Detailed Syllabus of Research Methodology"
-              href="https://drive.google.com/file/d/1XHA6eFFLLk8f-cp5p48a8r7m1wdmQNZt/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Detailed+Syllabus.pdf"
             />
           </ul>
         ),
@@ -124,7 +124,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Fellowship Scholarship Policy for Ph.D. Scholars"
-              href="https://drive.google.com/file/d/1KN9LAtkWoEgcqgSYms7ysFPo6_7jxu62/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/3.+Fellowship+Scholarship+Policy+for+Ph.D.+Scholars.pdf"
             />
           </ul>
         ),
@@ -135,7 +135,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Policy for the Grievance Redress Mechanism of Scholars"
-              href="https://drive.google.com/file/d/1eEZqj7DiHoPA-B1AnbBFfZKUTfYbztDW/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/6+POLICY+FOR+GRIEVANCE+REDRESS+MECHANISM+OF+SCHOLARS.pdf"
             />
           </ul>
         ),
@@ -146,7 +146,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Best Practices & Process Improvement"
-              href="https://drive.google.com/file/d/1r6bX9pGWSCDRmianMZf-NyomwUWR6JHO/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Best+Practices+%26+Process+Improvement+(1).pdf"
             />
           </ul>
         ),
@@ -157,15 +157,15 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="2022"
-              href="https://drive.google.com/file/d/1vwJuvNnvZRaHV_ietszBmNKewzL24Jmb/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGC+Regulation+2022+(1).pdf"
             />
             <LinkItem
               label="2016"
-              href="https://drive.google.com/file/d/1b5MkzeaUdGEKbInuxlgN58QGJz9C16ZQ/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGC+Regulations+2016+(1).pdf"
             />
             <LinkItem
               label="2018"
-              href="https://drive.google.com/file/d/1YBPW_WoCo6F-flyjt0Mg6qTAPsc4MypO/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGCNotification_Plagiarism_2018.pdf"
             />
           </ul>
         ),
@@ -176,7 +176,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Ph.D. Notification 2025-26"
-              href="https://drive.google.com/file/d/1I0ZAdSzxqSP52EYVILtNreyQAVs0KVzk/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2025+Notification+26-07-2025.pdf"
             />
           </ul>
         ),
@@ -239,7 +239,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="space-y-2">
             <LinkItem
               label="Undertaking"
-              href="https://drive.google.com/file/d/1fRF91mXBJGf_KbVlHJPWTFcziLn6Ifor/view?usp=drive_link"
+              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Undertaking+(1).pdf"
             />
           </ul>
         ),

@@ -20,7 +20,7 @@ const EntranceExamCards = () => {
       title: 'KAL-MAT',
       description: 'For BBA and MBA Programs',
       imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-1.webp',
-      href: '/kal-mat', // Update with actual route if needed
+      href: '/kalmat', // Update with actual route if needed
       borderColor: 'border-gray-800',
     },
   ];

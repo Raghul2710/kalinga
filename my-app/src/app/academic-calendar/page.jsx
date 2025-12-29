@@ -47,12 +47,12 @@ export default function Page() {
         <div className="container mx-auto px-6">
 
           {/* ✅ PAGE HEADING */}
-          <div className="mb-10">
-            <h2 >
+          <div className="mb-10 text-center">
+            <h2 className="mb-4" >
               Academic Calendar 2025-26
 
             </h2>
-            <p className="text-[16px] text-[#555] max-w-[900px] leading-relaxed">
+            <p className="text-[16px] text-[#555]">
               The academic calendar for the year 2025-26 covers all the academic and non-academic events scheduled throughout the year at Kalinga University. 
             </p>
           </div>

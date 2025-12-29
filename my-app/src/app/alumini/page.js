@@ -1,4 +1,46 @@
 "use client"
+// DOMMatrix polyfill for SSR - must be before any motion imports
+if (typeof window === 'undefined' && typeof global !== 'undefined' && typeof global.DOMMatrix === 'undefined') {
+  global.DOMMatrix = class DOMMatrix {
+    constructor(init) {
+      if (typeof init === 'string') {
+        this.a = 1; this.b = 0; this.c = 0; this.d = 1; this.e = 0; this.f = 0;
+      } else if (init) {
+        this.a = init.a ?? 1; this.b = init.b ?? 0; this.c = init.c ?? 0;
+        this.d = init.d ?? 1; this.e = init.e ?? 0; this.f = init.f ?? 0;
+      } else {
+        this.a = 1; this.b = 0; this.c = 0; this.d = 1; this.e = 0; this.f = 0;
+      }
+    }
+    multiply(other) {
+      return new DOMMatrix({
+        a: this.a * other.a + this.c * other.b,
+        b: this.b * other.a + this.d * other.b,
+        c: this.a * other.c + this.c * other.d,
+        d: this.b * other.c + this.d * other.d,
+        e: this.a * other.e + this.c * other.f + this.e,
+        f: this.b * other.e + this.d * other.f + this.f,
+      });
+    }
+    translate(x, y) {
+      return this.multiply(new DOMMatrix({ a: 1, b: 0, c: 0, d: 1, e: x, f: y }));
+    }
+    scale(x, y) {
+      return this.multiply(new DOMMatrix({ a: x, b: 0, c: 0, d: y || x, e: 0, f: 0 }));
+    }
+    rotate(angle) {
+      const rad = (angle * Math.PI) / 180;
+      const cos = Math.cos(rad);
+      const sin = Math.sin(rad);
+      return this.multiply(new DOMMatrix({ a: cos, b: sin, c: -sin, d: cos, e: 0, f: 0 }));
+    }
+    toString() {
+      return `matrix(${this.a}, ${this.b}, ${this.c}, ${this.d}, ${this.e}, ${this.f})`;
+    }
+  };
+}
+
+import dynamicImport from 'next/dynamic';
 import PublicationGrid from "../components/research/publication-grid";
 import UGCLogo from "../components/research/ugc_logo";
 import UpcomingConference from "../components/research/upcoming_conference";
@@ -14,13 +56,18 @@ import MentorIntro from "../components/department/dept_head_intro";
 import CenterOfExcellence from "../components/about/center_of_excellence";
 import AwardsScrollbar from "../components/home/awards-scrollbar";  
 import ImageContent from "../components/ccrc/imagecontent";
-import Testimonials from "../components/home/Testimonials";
-import Gallery from "@/app/components/general/gallery";
-import MediaCardSlider from "@/app/components/general/media-card-slider";
 import DataTable from "@/app/components/general/data-table";
 import SectionHeading from "@/app/components/general/SectionHeading";
 import CareerApplicationForm from "../components/careers/CareerApplicationForm";
 import ContactSection from "../components/cif/contact_section";
+
+// Dynamically import components that might use motion/react to prevent SSR issues
+const Testimonials = dynamicImport(() => import("../components/home/Testimonials"), { ssr: false });
+const Gallery = dynamicImport(() => import("@/app/components/general/gallery"), { ssr: false });
+const MediaCardSlider = dynamicImport(() => import("@/app/components/general/media-card-slider"), { ssr: false });
+
+// Disable static generation to prevent SSR issues with DOMMatrix
+export const dynamic = 'force-dynamic';
 
 // Breadcrumb configuration
 const breadcrumbData = {
@@ -340,7 +387,7 @@ shining on the horizons of high-quality education."
       <UpcomingConferences 
         conferences={newsConferences}
         title="Alumni Meet"
-    
+        href="/contact-us"
       />
       <CenterOfExcellence
         centres={centres}

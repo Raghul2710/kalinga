@@ -31,7 +31,7 @@ export default function Page() {
 
       {[
         { type: "sandal", title: "Academic Infrastructure", desc: "Kalinga University offers state-of-the-art academic infrastructure with smart classrooms, digital learning tools, and well-equipped labs that promote innovation and practical learning.", link: "/academic-facilities" },
-        { type: "red", title: "Transportation", desc: "With 30+ buses and 4-wheelers, our transport service offers convenient, safe, and affordable pick-up and drop facilities across Raipur, covering up to 70 km each way.", link: "/transport-facility", feesLink: "/ku-fees" },
+        { type: "red", title: "Transportation", desc: "With 30+ buses and 4-wheelers, our transport service offers convenient, safe, and affordable pick-up and drop facilities across Raipur, covering up to 70 km each way.", link: "/transport-facility", feesLink: "/ku-fees?tab=other" },
         { type: "sandal", title: "Mini Market", desc: "The on-campus mini market includes an ATM, stationery shop, salon, juice and snack counters, and a chemist — ensuring students have access to essentials without leaving campus.", link: "/mini-market" },
         { type: "red", title: "Health Clinic", desc: "Our on-campus health clinic, staffed by qualified doctors and nurses, provides consultation, counseling, and emergency medical support for students and staff.", link: "/health-clinic" },
         { type: "sandal", title: "Banking & ATM", desc: "With tie-ups with the Central Bank of India and Canara Bank, students can avail of education loans easily. Two 24×7 ATMs (ICICI & OBC Bank) are also available on campus, supporting all major digital payment methods.", link: "/campus-facilities"},

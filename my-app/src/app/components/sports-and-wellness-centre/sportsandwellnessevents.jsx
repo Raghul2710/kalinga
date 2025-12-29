@@ -8,7 +8,7 @@ function Sportsandwellnessevents() {
         {
             id: 1,
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/woodball.webp",
             imageAlt: "Sports Events",
             title:
                 "Kalinga University Clinches Gold at AIU Woodball Championship 2024-25 in Vadodara, Gujarat",
@@ -22,7 +22,7 @@ function Sportsandwellnessevents() {
         {
             id: 2,
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/wellness_event.webp",
             imageAlt: "Sports Events",
             title: `A session on "Health & Wellness through Ayurveda"`,
             description: [

@@ -51,6 +51,7 @@ const QuickLinks = ({
   textColorClassName = "text-white/80",
   showReadMore = true,
   titleClassName = "",
+  gridClassName = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10",
 }) => {
   // Default description only if not provided
   const displayDescription = description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid";
@@ -69,7 +70,7 @@ const QuickLinks = ({
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+        <div className={gridClassName}>
           {links.map((link) => (
             <QuickLinkCard
               key={link.id}

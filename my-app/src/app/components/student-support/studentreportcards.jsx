@@ -114,9 +114,9 @@ export default function Studentreportcards() {
             description:
                 "Our inclusive campus supports all faiths, cultures, and beliefs, allowing students to freely practice their religion.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/faith.webp",
             logoSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "",
             subtitle: "INCLUSIVE CAMPUS",
         },
         {
@@ -144,9 +144,9 @@ export default function Studentreportcards() {
             description:
                 "We conduct annual parent-teacher meetings to discuss student performance and address parental concerns.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/careerdevelopmentcentre.webp",
             logoSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "",
             subtitle: "PARENT ENGAGEMENT",
         },
         {

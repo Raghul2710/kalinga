@@ -117,7 +117,7 @@ export default function IPRCellPage() {
       <section className="pb-12">
         <div className="container mx-auto px-4 flex justify-center">
           <Link
-            href="https://drive.google.com/file/d/1CQVGreskeMlFRxiL1-vkYwztbfww6OV9/view?usp=drive_link"
+            href="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/KU_REF_CITATION.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

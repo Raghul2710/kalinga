@@ -240,7 +240,7 @@ export default function AboutUs() {
       "Kalinga University follows a well-defined governance structure that ensures smooth administration, transparency, and institutional excellence.The framework begins with the Chancellor, followed by the Vice-Chancellor and Director General, who oversee the academic, administrative, and strategic functions of the University.", 
     ]}
     buttonLabel="Explore Now"
-    href="/administration"
+    href="/organogram"
     buttonClassName="!bg-white !text-black"
     arrowClassName="!bg-[var(--dark-orange-red)]"
     arrowIconClassName="!text-white"

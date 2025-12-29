@@ -10,6 +10,7 @@ import Testimonials from "../components/home/Testimonials";
 import FAQ from "../components/general/faq";
 import AdmissionCareer from "../components/general/admission_cta";
 import MediaCardSlider from "../components/general/media-card-slider";
+import Image from "next/image";
 export default function KalseePage() {
   const faqItems = [
     
@@ -138,28 +139,75 @@ export default function KalseePage() {
 
   const kifSteps = [
     {
-      title: "Step 1: Apply",
-      description: "Apply for KALSEE by filling out the application form online.",
+      id: 1,
+      stepNumber: "01",
+      title: "Visit Admissions Portal",
+      description: "",
+      backDescription: "Visit https://admissions.kalingauniversity.ac.in/ to start your application process.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(2).png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
-      title: "Step 2: Prepare",
-      description: "Prepare for KALSEE by studying the exam pattern and syllabus.",
+      id: 2,
+      stepNumber: "02",
+      title: "Apply for KALSEE Exam",
+      description: "",
+      backDescription: "Apply for the KALSEE Exam through the online portal.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam-preparation.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
-      title: "Step 3: Take the Exam",
-      description: "Take the KALSEE exam by attending the exam center on the scheduled date.",
+      id: 3,
+      stepNumber: "03",
+      title: "Fill Application Form",
+      description: "",
+      backDescription: "Fill out the online application form with all required details.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },  
     {
-      title: "Step 4: Get the Result",
-      description: "Get the result of KALSEE by checking the result online.",
+      id: 4,
+      stepNumber: "04",
+      title: "Pay Application Fees",
+      description: "",
+      backDescription: "Pay the application fees through the secure payment gateway.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/medical-result.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
     {
-      title: "Step 5: Get the Admission",
-      description: "Get the admission for KALSEE by attending the admission center on the scheduled date.",
+      id: 5,
+      stepNumber: "05",
+      title: "Get Login Details",
+      description: "",
+      backDescription: "Get login details & scheduling link within 24 hours after payment confirmation.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/college-student.png",
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    },
+    {
+      id: 6,
+      stepNumber: "06",
+      title: "Take the CBT",
+      description: "",
+      backDescription: "Take the Computer-Based Test (CBT) on your scheduled date and time.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    },
+    {
+      id: 7,
+      stepNumber: "07",
+      title: "Check Results",
+      description: "",
+      backDescription: "Check your final results online through the admissions portal.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/medical-result.png",
+      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    },
+    {
+      id: 8,
+      stepNumber: "08",
+      title: "Welcome to Kalinga University!",
+      description: "",
+      backDescription: "Welcome to Kalinga University! Complete your admission process and begin your academic journey.",
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/college-student.png",
       image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
     },
   ]
@@ -191,89 +239,92 @@ export default function KalseePage() {
   {
     title: "Eligibility",
     description: "Required for UG, PG, and Ph.D. Programs.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/criteria+(1).png" alt="Eligibility" width={64} height={64} className="object-contain" />
   },
   {
     title: "Mode of Examination",
     description: "Computer-Based Test (CBT).",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/test.png" alt="Mode of Examination" width={64} height={64} className="object-contain" />
   },
   {
     title: "Exam Registration",
     description: "Online registration is mandatory to appear for the KALSEE exam.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/registration.png" alt="Exam Registration" width={64} height={64} className="object-contain" />
   },
   {
     title: "Exam Pattern & Duration",
     description: "MCQ-based examination. Duration is 90 minutes for UG and PG programs, and 120 minutes for Ph.D. programs.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/pattern.png" alt="Exam Pattern & Duration" width={64} height={64} className="object-contain" />
   },
   {
     title: "Total Questions",
     description: "90 questions for UG and PG programs, and 100 questions for Ph.D. programs.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(1).png" alt="Total Questions" width={64} height={64} className="object-contain" />
   },
   {
     title: "Negative Marking",
     description: "There is no negative marking in the KALSEE examination.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam.png" alt="Negative Marking" width={64} height={64} className="object-contain" />
   },
   {
     title: "Passing Marks",
     description: "Candidates must secure a minimum of 50% marks to qualify.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/mark.png" alt="Passing Marks" width={64} height={64} className="object-contain" />
   },
   {
     title: "Exam Fee",
     description: "India & SAARC candidates: INR 1,400 for all UG and PG courses, and INR 3,500 for Ph.D. courses.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/hand.png" alt="Exam Fee" width={64} height={64} className="object-contain" />
   },
   {
     title: "Scholarship Opportunities",
     description: "Merit-based scholarships are available for top scorers.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+    icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/scholarship.png" alt="Scholarship Opportunities" width={64} height={64} className="object-contain" />
   }
 ];
 
   return (
     <>
       <HeroSectionTwo 
-        backgroundImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+        backgroundImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-banner-new.png"
         title="Your Next Big Chapter Starts With One Click"
         description="KALSEE (Kalinga University Entrance Examination) is the gateway to your academic journey at Kalinga University. This comprehensive entrance exam is designed to assess your knowledge, aptitude, and readiness for various undergraduate and postgraduate programs. Prepare yourself for success and take the first step towards a bright future."
         buttonText="Apply Now"
         buttonLink="/admissions"
         showForm={false}
         customForm={<KalseeApplicationForm />}
+        subtitle="Admission Open 2026-2027"
       />
       <KalseeMilestone />
       <MainIntro
         title=" What is KALSEE?"
         description="Kalinga Scholastic Entrance Examination (KALSEE) is your gateway to book a seat in our selected course among 130+ Programs of KU. With amazing scholarships and endless career options, it’s time to make your dreams come true with one of the top private university in Chhattisgarh. "
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee.webp"
         imageAlt="KALSEE"
       />
-      <ImageListItem textClassName="hidden" listItemTextClassName="text-black"  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Details of KALSEE" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
+      <ImageListItem textClassName="hidden" listItemTextClassName="text-black"  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Details of KALSEE" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." hideIcons={false} />
       <KalseeExamPattern />
-      <QuickLinks links={links} title="Exam Policies" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid"
-       textColorClassName="text-[var(--background)]" showReadMore={false}  titleClassName="text-white" />
+      <QuickLinks links={links} title="Exam Policies" description="KALSEE follows comprehensive policies covering eligibility, registration, examination format, fee structure, and scholarship opportunities to ensure a fair and transparent examination process."
+       textColorClassName="text-[var(--background)]" showReadMore={false}  titleClassName="text-white" gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-5" />
       <AdmissionSteps
         steps={kifSteps}
      subtitleClassName="hidden"
         title="Your Step-By-Step Startup Process"
-        ctaLabel="How To Apply? "
-        showReadMore={false}
+        ctaLabel="How To Apply? "
+        showReadMore={true}
         showHeaderButton={false}
-        showIcon={false}
+        showIcon={true}
         showImage={false}
         bgColor="bg-white"
       />
       <MediaCardSlider
+        title="KALSEE Testimonials"
         videoItems={testimonials}
         items={testimonials}
         cardBgClass="bg-white"
         nameTextClass="text-[var(--button-red)]"
         swiperClassName="ccrc-video-slider"
+        backgroundColor="bg-[var(--light-gray)] mx-2 rounded-xl"
       />
       <FAQ title="Frequently Asked Questions" items={faqItems} />
       <AdmissionCareer />

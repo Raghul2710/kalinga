@@ -56,7 +56,7 @@ export default function EmployeeBenefits({ counsellingAreas, headingTextColor })
 
   return (
     <section className="w-full max-w-[1249px] mx-auto py-20 px-2">
-      <h2 className={`${headingTextColor || 'text-[var(--dark-blue)]'} text-center text-3xl sm:text-[40px] mb-4`}>{title}</h2>
+      <h2 className={`${headingTextColor || 'text-[var(--foreground)]'} text-center text-3xl sm:text-[40px] mb-4`}>{title}</h2>
       {description && (
         <p className="text-center text-[14px] text-[var(--light-text-gray)] max-w-3xl mx-auto mb-16">
           {description}

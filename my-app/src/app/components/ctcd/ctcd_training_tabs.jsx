@@ -4,6 +4,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "../general/tab";
 import { AccordionItem } from "../general/accordion";
 import Gallery from "../general/gallery";
 import SectionHeading from "../general/SectionHeading";
+import FAQ from "../general/faq";
 
 
 function BulletList({ items }) {
@@ -46,6 +47,8 @@ const GALLERY_IMAGES = transformToGalleryImages(trainingGlimpse);
 
 // Training Projects Gallery Images
 const trainingProjectsImages = [
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(5).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(6).webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-2.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-3.webp",
@@ -55,6 +58,10 @@ const TRAINING_PROJECTS_GALLERY_IMAGES = transformToGalleryImages(trainingProjec
 
 // Training Domain Gallery Images
 const trainingDomainImages = [
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(1).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(2).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(3).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(4).webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-1.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-2.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-3.webp",
@@ -64,6 +71,10 @@ const TRAINING_DOMAIN_GALLERY_IMAGES = transformToGalleryImages(trainingDomainIm
 
 // Training Details Gallery Images
 const trainingDetailsImages = [
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(7).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(8).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(9).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ccrc-15.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-5.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-6.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-7.webp",
@@ -73,10 +84,10 @@ const TRAINING_DETAILS_GALLERY_IMAGES = transformToGalleryImages(trainingDetails
 
 // Common classNames
 const CARD_CLASSNAME = "rounded-[16px] bg-[var(--card-sandal)] p-[22px] md:p-[26px]";
-const CARD_TITLE_CLASSNAME = "font-plus-jakarta-sans text-[24px] leading-[30px] text-[var(--button-red)]";
+const CARD_TITLE_CLASSNAME = "font-plus-jakarta-sans text-[24px] leading-[30px] font-medium text-[var(--button-red)]";
 const CARD_TEXT_CLASSNAME = "mt-[10px] text-[var(--foreground)]";
-const SECTION_TITLE_CLASSNAME = "font-stix text-[var(--foreground)]";
-const ACCORDION_TITLE_CLASSNAME = "font-plus-jakarta-sans text-[18px] md:text-[24px] leading-[30px] text-[var(--button-red)]";
+const SECTION_TITLE_CLASSNAME = "font-stix text-2xl md:text-[40px] text-[var(--foreground)]";
+const ACCORDION_TITLE_CLASSNAME = "font-plus-jakarta-sans text-[24px] leading-[30px] font-medium text-[var(--button-red)]";
 
 // Reusable Training Glimpse Gallery component
 function TrainingGlimpseGallery() {
@@ -188,133 +199,77 @@ export default function CtcdTrainingTabs() {
                         <TabsContent value="details">
                             <SectionHeading 
                                 title="Training Details"
-                                titleClassName={SECTION_TITLE_CLASSNAME}
+                                titleClassName=" text-2xl md:text-[40px]"
                             />
-                            {/* Four beige cards */}
-                            <div className="mt-[26px] grid gap-[22px] md:grid-cols-1">
-
-
-                                {/* Training Duration */}
-                                <AccordionItem title="Training Duration" defaultOpen titleClassName={ACCORDION_TITLE_CLASSNAME}>
-                                    <p className="mt-[10px] text-[var(--foreground)]">
-                                        The duration of all proposed training programs largely depends on the training objectives of the organisation.
-                                    </p>
-
-                                    <BulletList
-                                        items={[
+                            <FAQ
+                                title=""
+                                subtitle=""
+                                showHeading={false}
+                                noSection={true}
+                                pyClassName="!py-0"
+                                items={[
+                                    {
+                                        id: 1,
+                                        question: "Training Duration",
+                                        answer: [
+                                            "The duration of all proposed training programs largely depends on the training objectives of the organisation.",
                                             "Full Days (6 Hours)",
                                             "Half Days (4 Hours)",
                                             "A session of two hours per day",
-                                        ]}
-                                    />
-
-                                    <p className="mt-4 text-[var(--foreground)]">
-                                        Certain training programs are delivered on a nomination basis from organisations for a prescheduled calendar.
-                                        Training can also be delivered before and after office hours.
-                                    </p>
-                                </AccordionItem>
-
-                                {/* Training Venue */}
-                                <AccordionItem title="Training Venue" titleClassName={ACCORDION_TITLE_CLASSNAME}>
-                                    <p className="mt-[10px] text-[var(--foreground)]">
-                                        The training venue can be mutually decided. It can be delivered at our end, at your end, or at third-party venues like a hotel or a resort, depending upon the client's choice.
-
-                                        If the training is conducted at our end, at the Kalinga Campus at Naya Raipur, we will be providing:
-
-                                    </p>
-
-                                    <BulletList
-                                        items={[
+                                            "Certain training programs are delivered on a nomination basis from organisations for a prescheduled calendar. Training can also be delivered before and after office hours."
+                                        ]
+                                    },
+                                    {
+                                        id: 2,
+                                        question: "Training Venue",
+                                        answer: [
+                                            "The training venue can be mutually decided. It can be delivered at our end, at your end, or at third-party venues like a hotel or a resort, depending upon the client's choice.",
+                                            "If the training is conducted at our end, at the Kalinga Campus at Naya Raipur, we will be providing:",
                                             "Auditorium ( Having a capacity of 150 )",
                                             "Board Room - 1 - Having a capacity of 20",
                                             "Board Room - 2 - Having a capacity of 25",
                                             "Board Room - 3 - Having a capacity of 10",
                                             "Board Room - 4 - Having a capacity of 30",
-                                        ]}
-                                    />
-
-                                    <p className="mt-4 text-[var(--foreground)]">
-                                        All of the above are equipped with air conditioning, Interactive Panels for projection, and soundproofing compliant.
-                                    </p>
-
-                                    <BulletList
-                                        items={[
+                                            "All of the above are equipped with air conditioning, Interactive Panels for projection, and soundproofing compliant.",
                                             "Computers and Laptops (if the training requires the use of computers)",
                                             "Training Kit",
                                             "Lush Green Gardens for outdoor activities",
                                             "Tea / Coffee / Light Snacks and Lunch",
                                             "Parking",
-                                        ]}
-                                    />
-
-                                    <p className="mt-4 text-[var(--foreground)]">
-
-                                        If the Training is conducted at your end or a third venue, you have to provide:
-
-                                    </p>
-
-                                    <BulletList
-                                        items={[
+                                            "If the Training is conducted at your end or a third venue, you have to provide:",
                                             "Training Hall or Board Room with sufficient capacity",
                                             "Projection Device (Projector or TV, or Interactive Panel)*",
                                             "White Board or Glass Board and Marker*",
                                             "Air-conditioning",
                                             "Tea/Coffee and Lunch for the trainer",
-                                        ]}
-                                    />
-                                    <p className="mt-[3px] text-[var(--foreground)]">
-
-                                        * If not available, can be hired and installed at your venue.
-
-                                    </p>
-
-                                    <p className="mt-4 text-[var(--foreground)]">
-
-                                        To be provided by us if the training is conducted at your end
-
-                                    </p>
-
-                                    <BulletList
-                                        items={[
+                                            "* If not available, can be hired and installed at your venue.",
+                                            "To be provided by us if the training is conducted at your end:",
                                             "Trainer",
-                                            "Training Kits",
-                                        ]}
-                                    />
-                                </AccordionItem>
-
-                                {/* Trainers Profile */}
-                                <AccordionItem title="Trainers Profile" titleClassName={ACCORDION_TITLE_CLASSNAME}>
-                                    <p className="mt-[10px]">
-                                        We offer trainers who have rich experience and knowledge, and considerable training experience.
-
-                                        Depending upon the training objectives, the trainer profile will be shared, and a discussion with the trainer will be conducted offline or online if desired by the client.
-
-                                        Only after the approval of the trainer will the training be initiated.
-                                    </p>
-                                </AccordionItem>
-
-                                {/* Training Cost */}
-                                <AccordionItem title="Training Cost" titleClassName={ACCORDION_TITLE_CLASSNAME}>
-
-                                    <p className="mt-[10px] text-[var(--foreground)]">
-                                        The training cost is dependent upon the Trainer, duration of the training, venue and training aids availability, which can be mutually discussed.
-                                    </p>
-                                </AccordionItem>
-
-                                {/* Government Trainings */}
-                                <AccordionItem title="Government Trainings" titleClassName={ACCORDION_TITLE_CLASSNAME}>
-                                    <h3 className="mt-[10px] font-plus-jakarta-sans text-[20px] leading-[26px] text-[var(--foreground)] font-semibold mb-3">
-                                        Police Training Initiatives:
-                                    </h3>
-                                    <p className="text-[var(--foreground)]">
-                                        It is a matter of immense pride and honour to contribute to the strengthening of our nation's law enforcement system and State Administration Body. We have collaborated with the Police Training School, Mana and the Police Training Academy, Chaudkhuri. In our inspiring sessions with officers, including Deputy Superintendents of Police (DSPs), Platoon Commandants, Subedars, Sub Inspectors, and newly recruited constables, we witness not just uniforms but their stories of sacrifice and responsibility.
-                                    </p>
-                                    <p className="mt-4 text-[var(--foreground)]">
-                                        Our government training modules are based on leadership, conflict resolution, stress management, team building, and police-society relations. With interactive sessions and experiential activities, we help officers develop emotional balance and calm in chaos, making them an emotionally intelligent police workforce.
-                                    </p>
-                                </AccordionItem>
-
-                            </div>
+                                            "Training Kits"
+                                        ]
+                                    },
+                                    {
+                                        id: 3,
+                                        question: "Trainers Profile",
+                                        answer: "We offer trainers who have rich experience and knowledge, and considerable training experience. Depending upon the training objectives, the trainer profile will be shared, and a discussion with the trainer will be conducted offline or online if desired by the client. Only after the approval of the trainer will the training be initiated."
+                                    },
+                                    {
+                                        id: 4,
+                                        question: "Training Cost",
+                                        answer: "The training cost is dependent upon the Trainer, duration of the training, venue and training aids availability, which can be mutually discussed."
+                                    },
+                                    {
+                                        id: 5,
+                                        question: "Government Trainings",
+                                        answer: [
+                                            "Police Training Initiatives:",
+                                            "It is a matter of immense pride and honour to contribute to the strengthening of our nation's law enforcement system and State Administration Body. We have collaborated with the Police Training School, Mana and the Police Training Academy, Chaudkhuri. In our inspiring sessions with officers, including Deputy Superintendents of Police (DSPs), Platoon Commandants, Subedars, Sub Inspectors, and newly recruited constables, we witness not just uniforms but their stories of sacrifice and responsibility.",
+                                            "Our government training modules are based on leadership, conflict resolution, stress management, team building, and police-society relations. With interactive sessions and experiential activities, we help officers develop emotional balance and calm in chaos, making them an emotionally intelligent police workforce."
+                                        ]
+                                    }
+                                ]}
+                                allowMultipleOpen={false}
+                            />
 
                             {/* Training Details Gallery */}
                             <div className="mt-[28px]">
@@ -333,7 +288,7 @@ export default function CtcdTrainingTabs() {
                         <TabsContent value="assessments">
                             <SectionHeading 
                                 title="Our Behavioural and Psychometric Assessments"
-                                titleClassName="font-stix text-[var(--foreground)]"
+                                titleClassName="font-stix text-2xl md:text-[40px] text-[var(--foreground)]"
                             />
                             {/* Two beige cards */}
                             <div className="mt-[26px] grid gap-[22px] md:grid-cols-1">

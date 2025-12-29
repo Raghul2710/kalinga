@@ -27,7 +27,7 @@ export default function Leadership() {
         imageAlt="Dr. Byju John"
         name="Dr. Byju John"
         title="Director General"
-       
+        messageHeading="Director General's Message"
         quote="Education is not merely about degrees, but about shaping character, leadership, and purpose for a better tomorrow."
         message={[
   "It gives me immense pleasure to welcome you all to Kalinga University.",

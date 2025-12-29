@@ -8,7 +8,7 @@ const defaultContent = {
     title: "Step Into Your Future",
     description:
       "Discover 130+ career-driven programs and world-class learning at Kalinga University. Your journey to success starts today",
-    buttonLabel: "Admission Open",
+    buttonLabel: "Apply Now",
     tag: "Admission",
   },
   right: {

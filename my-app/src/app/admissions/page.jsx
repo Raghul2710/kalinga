@@ -100,9 +100,9 @@ export default function Admissions() {
 
   // OrganogramOfKalinga content (second instance - without image)
   const admissionOrganogramContent = {
-    title: "Admission Process Overview",
+    title: "Proposed Fee Structure 2025-26 (For Indian Students)",
     description: [
-      "Kalinga University follows a streamlined admission process designed to identify and welcome talented students from diverse backgrounds. Our admission team works diligently to ensure a smooth and transparent process from application to enrollment.",
+      "Kalinga University follows a well-structured governance model to ensure smooth administration and institutional integrity. It begins with the Chancellor, followed by the Vice-Chancellor and Director General. Their roles and responsibilities are well-defined, enabling proper decision-making across all the departments of the university. ",
     ],
     buttonLabel: "Learn More",
     cardBackgroundColor: "bg-[var(--dark-blue)]",
@@ -113,7 +113,7 @@ export default function Admissions() {
     arrowClassName: "!bg-[var(--dark-orange-red)]",
     arrowIconClassName: "!text-white",
     textClassName: "!text-black",
-    href: "/admissions",
+    href: "/ku-fees",
   };
 
   // Facility content
@@ -164,36 +164,42 @@ export default function Admissions() {
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
         title: "How to Apply",
         description: "Learn about the step-by-step admission process and apply easily for your preferred program through our online portal.",
+        href: "/admissions#admission-steps"
       },
       {
         id: 2,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
         title: "Value Addition",
         description: "Gain a competitive edge with our value-added courses, workshops, and certifications designed to enhance your professional and personal development.",
+        href: "/value-added-course"
       },
       {
         id: 3,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/covid.svg",
         title: "Hostel",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Fully-furnished separate hostels for girls and boys with round-the-clock security, clean rooms, and mess facilities in a safe, comfortable environment.",
+        href: "/hostel"
       },
       {
         id: 4,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship.svg",
         title: "Transports",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Convenient, safe, and affordable transport service with 30+ buses and 4-wheelers covering pick-up and drop facilities across Raipur, up to 70 km each way.",
+        href: "/transport-facility"
       },
       {
         id: 5,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
         title: "Pay fees",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        description: "Pay your fees securely online through our payment portal using debit/credit cards or online banking. View detailed fee structure and payment options.",
+        href: "/ku-fees"
       },
       {
         id: 6,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/admission+procedure.svg",
         title: "Admission Procedure",
         description: "Understand the complete admission process, document checklist, and important deadlines to ensure a smooth enrollment experience.",
+        href: "/admissions#admission-steps"
       },
     ],
   };
@@ -246,7 +252,7 @@ export default function Admissions() {
           </div>
         </section>
       }>
-        <OurPrograms />
+        <OurPrograms programCardTitleClassName="uppercase !text-base md:!text-lg lg:!text-xl" />
       </Suspense>
       <OrganogramOfKalinga
         title={entranceExamContent.title}
@@ -264,16 +270,18 @@ export default function Admissions() {
         href={entranceExamContent.href}
       />
       {/* <EntranceExam /> */}
-      <AdmissionSteps
-        steps={admissionStepsContent.steps}
-        subtitle={admissionStepsContent.subtitle}
-        title={admissionStepsContent.title}
-        showHeaderButton={admissionStepsContent.showHeaderButton}
-        ctaLabel={admissionStepsContent.ctaLabel}
-        showReadMore={admissionStepsContent.showReadMore}
-        showIcon={admissionStepsContent.showIcon}
-        ctaHref="/admissions"
-      />
+      <div id="admission-steps">
+        <AdmissionSteps
+          steps={admissionStepsContent.steps}
+          subtitle={admissionStepsContent.subtitle}
+          title={admissionStepsContent.title}
+          showHeaderButton={admissionStepsContent.showHeaderButton}
+          ctaLabel={admissionStepsContent.ctaLabel}
+          showReadMore={admissionStepsContent.showReadMore}
+          showIcon={admissionStepsContent.showIcon}
+          ctaHref="/admissions"
+        />
+      </div>
       <OrganogramOfKalinga
         title={admissionOrganogramContent.title}
         description={admissionOrganogramContent.description}

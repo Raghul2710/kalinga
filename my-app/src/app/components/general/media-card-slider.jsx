@@ -13,7 +13,7 @@ import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function MediaCardSlider({
-  title = "Media Gallery",
+  title = "Testimonials",
   categoryTitle = "",
   description = "",
   imageItems = [],
@@ -23,6 +23,7 @@ export default function MediaCardSlider({
   descriptionTextClass = "text-gray-600",
   thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
   className = "",
+  backgroundColor = "bg-white",
   swiperClassName = "media-card-slider",
 }) {
   // Determine which items to use - prioritize video if both provided
@@ -76,7 +77,7 @@ export default function MediaCardSlider({
   }, [isModalOpen]);
 
   return (
-    <section className={` py-16 bg-white relative ${className}`}>
+    <section className={` py-16 ${backgroundColor} relative ${className}`}>
       <div className="container mx-auto px-2">
         {/* Header Section */}
         <div className="text-center">

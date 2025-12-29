@@ -27,10 +27,17 @@ export default function CourseNavigation({
     if (onTabClick) {
       onTabClick(tabId);
     } else {
-      // Default behavior: scroll to section
+      // Default behavior: scroll to section with offset for header
       const element = document.getElementById(tabId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const headerOffset = 100; // Adjust based on header height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     }
   };
@@ -43,7 +50,7 @@ export default function CourseNavigation({
             <button
               key={tab.id}
               onClick={() => handleTabClick(tab.id)}
-              className={`font-plus-jakarta-sans text-sm md:text-base lg:text-lg px-3 md:px-4 py-1.5 md:py-2 transition-colors duration-200 whitespace-nowrap flex-shrink-0 ${
+              className={`font-plus-jakarta-sans text-sm md:text-base lg:text-lg px-3 md:px-4 py-1.5 md:py-2 transition-colors duration-200 whitespace-nowrap flex-shrink-0 cursor-pointer ${
                 currentActive === tab.id
                   ? 'text-[var(--button-red)] font-semibold'
                   : 'text-[var(--foreground)] font-normal hover:text-[var(--button-red)]'

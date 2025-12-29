@@ -12,7 +12,7 @@ import AdmissionCareer from "@/app/components/general/admission_cta";
 import MediaCardSlider from "@/app/components/general/media-card-slider";
 
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc-banner-new+(1).webp",
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc-banner-updated.jpg",
   pageTitle: "CCRC",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },
@@ -65,20 +65,23 @@ const cards = [
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ctcd.png",
     logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-ctcd.svg",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
+    href: "/ctcd",
   },
   {
-    title: "Corporate Social Responsibility (CSR) ",
+    title: "Corporate Social Responsibility (CSR) ",
     description: "Companies today understand the importance of giving back by being socially responsible towards society, but with a lack of time, planning, and expertise, they fail to develop effective programs.",
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/csr.png",
     logoSrc: "",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
+    href: "/csr",
   },
   {
     title: "Kalinga Incubation Foundation (KIF)",
     description: "KIF was established in 2023, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION.",
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
+    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/IMG-20250409-WA0055.jpg",
     logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-kif.svg",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
+    href: "/kif",
   },
   {
     title: "Training & Placements",
@@ -86,6 +89,7 @@ const cards = [
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/placement.png",
     logoSrc: "",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
+    href: "/training-and-placement-cell",
   },
 ]
 
@@ -357,7 +361,13 @@ const MentorIntroProps = [
 export default function CCRCPage() {
   return <>
    
-    <ImageContent imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp"  />
+    <ImageContent 
+      imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp"
+      description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support."
+      additionalContent={[
+        "With skill-based training programs, workshops, guest lectures, corporate mentorship, industrial visits, soft skill trainings, personality development workshops, internships, industrial training, campus placement drives, and industry-certified programs, we're able to maximise the output and save the time of students and working professionals, and build a future-ready workforce. The Centre features state-of-the-art infrastructure and resources that meet industry standards and has earned high appreciation from leading organisations across India and abroad. With experiential learning strategies and an updated curriculum, our students are placed at top companies, and corporate professionals have learned to deliver maximum output and maintain consistent performance."
+      ]}
+    />
     <ImageListItem items={Items} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Benefits for Organisations"  />
     <DeptHeadIntro items={MentorIntroProps} />
 
@@ -389,6 +399,7 @@ export default function CCRCPage() {
         title="Upcoming CCRC Events"
         backgroundColor="bg-[var(--light-gray)]"
         backgroundColorcard="bg-white"
+        href="/contact-us"
       />
       <Gallery title=" CCRC  Glimpse" paddingClassName="py-20" />
      

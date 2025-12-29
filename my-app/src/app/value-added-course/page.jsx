@@ -31,12 +31,12 @@ const videoItems = [
   },
   {
     id: 2,
-    name: "Sangita Jana",
-    description: "BSc Forensic Science",
+    name: "Sadiq Isa Yusuf",
+    description: "MBA",
     videoUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_e260bdb8-0152-4a83-93bd-fc33bb794b02.mp4",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/students-video-1.mp4",
     thumbnail:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_e260bdb8-0152-4a83-93bd-fc33bb794b02.mp4",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/students-video-1.mp4",
   },
   {
     id: 3,
@@ -82,15 +82,6 @@ const videoItems = [
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/Value+Added+Byte+07+(1)+(1).mp4",
     thumbnail:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/Value+Added+Byte+07+(1)+(1).mp4",
-  },
-  {
-    id: 8,
-    name: "Sadiq Isa Yusuf",
-    description: "MBA",
-    videoUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_7fe436a0-5cc2-45e0-90bf-49bf031fb5f2+(1)+(1).mp4",
-    thumbnail:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_7fe436a0-5cc2-45e0-90bf-49bf031fb5f2+(1)+(1).mp4",
   },
   {
     id: 9,
@@ -145,9 +136,9 @@ export default function ValueAddedPage() {
      {/* ---------- YEAR WISE PDF SECTION ---------- */}
 <section className="py-14">
   <div className="mx-auto max-w-6xl rounded-3xl bg-[#0d4a75] p-6">
-    <h3 className="text-white mb-6">
-      Our Value Added Courses (PDFs)
-    </h3>
+    {/* <h3 className="text-white mb-6">
+      
+    </h3> */}
 
     {/* Tabs */}
     <div className="flex flex-wrap gap-3 mb-6">

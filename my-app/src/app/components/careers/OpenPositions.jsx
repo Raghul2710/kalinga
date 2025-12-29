@@ -22,7 +22,10 @@ export default function OpenPositions({
     },
   ],
   useCourseCardLayout = false,
-  initialVisibleCount = null
+  initialVisibleCount = null,
+  hideCheckEligibility = false,
+  titleClassName = "text-white",
+  cardTitleClassName = ""
 }) {
   const itemsPerPage = initialVisibleCount || positions.length;
   const totalPages = Math.ceil(positions.length / itemsPerPage);
@@ -54,7 +57,7 @@ export default function OpenPositions({
           subtitle={subtitle}
           title={title}
           subtitleClassName=""
-          titleClassName="text-white"
+          titleClassName={titleClassName}
           subtitleTextColor="!text-[var(--dark-orange-red-light)]"
         />
         {description && (
@@ -73,7 +76,7 @@ export default function OpenPositions({
                 {/* Left Section - Text Content */}
                 <div className="flex-1">
                   {/* Title - Training Program */}
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-plus-jakarta-sans text-[var(--button-red)] mb-4">
+                  <h3 className={`text-lg sm:text-xl lg:text-2xl font-plus-jakarta-sans text-[var(--button-red)] mb-4 ${cardTitleClassName}`}>
                     {position.title}
                   </h3>
                   
@@ -107,47 +110,30 @@ export default function OpenPositions({
                 </div>
 
                 {/* Right Section - Image and Buttons */}
-                <div className="flex-1 flex flex-col items-center justify-center w-full lg:w-auto">
+                <div className="flex-1 flex flex-col items-end justify-center w-full lg:w-auto">
                   {/* Image */}
                   {position.imageUrl && (
-                    <div className="relative w-full max-w-[500px] h-48 sm:h-56 lg:h-64">
+                    <div className="relative w-full max-w-[450px] h-48 sm:h-56 lg:h-64 mb-4">
                       <Image
                         src={position.imageUrl}
                         alt={position.imageAlt || position.title}
                         fill
-                        className="object-cover lg:p-6 lg:px-[30px] lg:rounded-[40px] rounded-xl" 
+                        className="object-cover rounded-xl" 
                       />
                     </div>
                   )}
 
-                  {/* Buttons - Vertical on mobile, horizontal on desktop */}
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-[430px] px-4 lg:px-0 mt-4 lg:mt-0 pb-4 md:pb-0">
+                  {/* Buttons - Full width to match image */}
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-[450px]">
                     {position.knowMoreButton && (
-                      position.knowMoreLink ? (
-                        <a
-                          href={position.knowMoreLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 w-full sm:w-auto"
-                        >
-                          <GlobalArrowButton
-                            className="!bg-[var(--dark-orange-red)] !text-white hover:!bg-[var(--dark-orange-red)]/90 flex-1 justify-between w-full sm:w-auto"
-                            arrowClassName="!bg-white"
-                            arrowIconClassName="!text-[var(--button-red)]"
-                          >
-                            {position.knowMoreButton}
-                          </GlobalArrowButton>
-                        </a>
-                      ) : (
-                        <GlobalArrowButton
-                          className="!bg-[var(--dark-orange-red)] !text-white hover:!bg-[var(--dark-orange-red)]/90 flex-1 justify-between w-full sm:w-auto"
-                          arrowClassName="!bg-white"
-                          arrowIconClassName="!text-[var(--button-red)]"
-                          onClick={() => handleKnowMore(position)}
-                        >
-                          {position.knowMoreButton}
-                        </GlobalArrowButton>
-                      )
+                      <GlobalArrowButton
+                        className="!bg-[var(--dark-orange-red)] !text-white hover:!bg-[var(--dark-orange-red)]/90 flex-1 justify-between w-full"
+                        arrowClassName="!bg-white"
+                        arrowIconClassName="!text-[var(--button-red)]"
+                        onClick={() => handleKnowMore(position)}
+                      >
+                        {position.knowMoreButton}
+                      </GlobalArrowButton>
                     )}
                     {position.registrationButton && (
                       position.registrationLink ? (
@@ -155,10 +141,10 @@ export default function OpenPositions({
                           href={position.registrationLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex-1 w-full sm:w-auto"
+                          className="flex-1 w-full"
                         >
                           <GlobalArrowButton
-                            className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full sm:w-auto"
+                            className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full"
                             arrowClassName="!bg-white"
                             arrowIconClassName="!text-[var(--button-red)]"
                             onClick={position.onRegistrationClick}
@@ -168,7 +154,7 @@ export default function OpenPositions({
                         </a>
                       ) : (
                         <GlobalArrowButton
-                          className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full sm:w-auto"
+                          className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90 flex-1 justify-between w-full"
                           arrowClassName="!bg-white"
                           arrowIconClassName="!text-[var(--button-red)]"
                           onClick={position.onRegistrationClick}
@@ -185,7 +171,7 @@ export default function OpenPositions({
               <div className="flex flex-col lg:flex-row items-start md:items-center lg:justify-between gap-6">
                 
                 <div className="flex-1">
-                  <h3 className="text-[var(--button-red)] mb-4">
+                  <h3 className={`text-[var(--button-red)] mb-4 ${cardTitleClassName}`}>
                     {position.title}
                   </h3>
                   <p className="leading-relaxed max-w-[650px]">
@@ -194,12 +180,14 @@ export default function OpenPositions({
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="#careerform">
-                 <GlobalArrowButton className="!bg-[var(--dark-orange-red)] hover:!bg-[var(--background)] hover:!text-[var(--dark-orange-red)]">
-                   Check Eligibility
-                 </GlobalArrowButton>
-                 </Link>
-                 <Link href="#careerform">
+                {!hideCheckEligibility && (
+                  <Link href={position.checkEligibilityLink || "#careerform"}>
+                   <GlobalArrowButton className="!bg-[var(--dark-orange-red)] hover:!bg-[var(--background)] hover:!text-[var(--dark-orange-red)]">
+                     Check Eligibility
+                   </GlobalArrowButton>
+                   </Link>
+                )}
+                 <Link href={position.applyNowLink || "#careerform"}>
                 <GlobalArrowButton>Apply Now</GlobalArrowButton>
                 </Link>
                 </div>
@@ -311,11 +299,14 @@ export default function OpenPositions({
               )}
 
               {/* Date and Price */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-4">
                 {selectedPosition.startDate && (
                   <div>
                     <span className="text-sm font-semibold text-gray-600">Date: </span>
-                    <span className="text-gray-700">{selectedPosition.startDate}</span>
+                    <span className="text-gray-700">
+                      {selectedPosition.startDate}
+                      {selectedPosition.endDate ? ` - ${selectedPosition.endDate}` : ''}
+                    </span>
                   </div>
                 )}
                 {selectedPosition.price && (
@@ -325,6 +316,26 @@ export default function OpenPositions({
                   </div>
                 )}
               </div>
+
+              {/* Registration Link Button */}
+              {selectedPosition.registrationLink && (
+                <div className="pt-4 border-t border-gray-200">
+                  <a
+                    href={selectedPosition.registrationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <GlobalArrowButton
+                      className="!bg-[var(--button-red)] !text-white hover:!bg-[var(--button-red)]/90"
+                      arrowClassName="!bg-white"
+                      arrowIconClassName="!text-[var(--button-red)]"
+                    >
+                      {selectedPosition.registrationButton || "Register Now"}
+                    </GlobalArrowButton>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -62,7 +62,7 @@ export default function KIFPage({
           ],
         imageAlt: "Vision and Mission",
         className: "",
-        showImage: true,
+        showImage: false,
     }];
     const boxItems = boxItemsProp ?? [{
         title: "Startup Incubation",
@@ -384,25 +384,57 @@ export default function KIFPage({
     const activities = [
         {
           id: 1,
-          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-1.png",
           imageAlt: "Student Activities",
-          title: "Lorem ipsum dolor sit amet, consectetur",
+          title: "Startup Day Celebration 16th January 2025",
           buttonText: "Read More",
           date: "August 25 - 2025",
         },
         {
           id: 2,
-          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-2.png",
           imageAlt: "Student Activities",
-          title: "Lorem ipsum dolor sit amet, consectetur",
+          title: "Visit by Dr. Laxmikant Dwivedi, President, Sanskar Bharti Chhattisgarh",
             buttonText: "Read More",
           date: "August 25 - 2025",
         },
         {
           id: 3,
-          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-3.png",
           imageAlt: "Student Activities",
-          title: "Lorem ipsum dolor sit amet, consectetur",
+          title: "FDP Organised by AICTE & the Ministry of Education’s Innovation Cell",
+           buttonText: "Read More",
+          date: "August 25 - 2025",
+        },
+        {
+          id: 4,
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(18).webp",
+          imageAlt: "Student Activities",
+          title: "Evaluation of the Screening Session of CSVTU for MSME Ideathon",
+           buttonText: "Read More",
+          date: "August 25 - 2025",
+        },
+        {
+          id: 5,
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(21).webp",
+          imageAlt: "Student Activities",
+          title: "Kalinga Incubation Stall at SEML Establishment Day",
+           buttonText: "Read More",
+          date: "August 25 - 2025",
+        },
+        {
+          id: 6,
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(19).webp",
+          imageAlt: "Student Activities",
+          title: "Field visit to Incubation Centre Under IIC Activity @ NIT Raipur",
+           buttonText: "Read More",
+          date: "August 25 - 2025",
+        },
+        {
+          id: 7,
+          imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(20).webp",
+          imageAlt: "Student Activities",
+          title: "TOT Program on Entrepreneur Development organised with CSIDC & EDII, Gandhi Nagar & CSIDC C.G",
            buttonText: "Read More",
           date: "August 25 - 2025",
         },
@@ -432,8 +464,8 @@ export default function KIFPage({
         selectionCriteria={selectionCriteria}
       />
       <VisionMission data={visionMissionData} showImg={false} />
-      <ImageListItem textClassName="hidden" listItemTextClassName="text-black"  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
-      <QuickLinks links={links} title="What Awaits You At KIF?" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid"
+      <ImageListItem textClassName="hidden" listItemTextClassName="text-black"  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(17).webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
+      <QuickLinks links={links} title="What Awaits You At KIF?" description="Discover a comprehensive ecosystem with state-of-the-art infrastructure, expert mentorship, networking opportunities, seed funding support, and hands-on training through workshops and pitch sessions to transform your innovative ideas into successful startups."
        backgroundColor="bg-white" textColorClassName="text-black" showReadMore={false} />
       <ImageContent title="Career and Corporate Resource Centre" subtitle="About CCRC" description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support."  imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp" imageAlt="CCRC Banner" buttonLink="/career-and-corporate-resource-centre" buttonText="Read More" />
       <AdmissionSteps
@@ -447,11 +479,18 @@ export default function KIFPage({
         showImage={false}
         bgColor="bg-white"
       />
-      <ImageListItem textClassName="text-white" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/picture-29.png" boxItems={boxItems1} title="Join Us on Your Entrepreneurial Journey" subtitle="About KIF" description="We transform young innovators' ideas into scalable and profitable ventures." />
+      <ImageListItem textClassName="text-white" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(16).webp" boxItems={boxItems1} title="Join Us on Your Entrepreneurial Journey" subtitle="About KIF" description="We transform young innovators' ideas into scalable and profitable ventures." />
 
       <Testimonials testimonials={testimonials} />
 
-      
+      <OrganogramOfKalinga
+        title="Join Us on Your Entrepreneurial Journey"
+        description="We transform young innovators' ideas into scalable and profitable ventures."
+        buttonLabel="Download Form"
+        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/stratup_reg_form.pdf"
+        cardBackgroundColor="bg-[var(--button-red)]"
+        useContainer = {true}
+      />
       <CenterOfExcellence
         centres={centres}
         title="Startup Partners"

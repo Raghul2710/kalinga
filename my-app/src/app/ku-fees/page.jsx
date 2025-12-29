@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import KUFeesTabSection from '../components/ku-fees/kufeestabs'
 import AutoBreadcrumb from '../components/layout/BreadcrumbData';
 import AdmissionCareer from '../components/general/admission_cta';
@@ -17,7 +17,9 @@ function KuFees() {
     return (
         <div>
             <AutoBreadcrumb data={breadcrumbData} />
-            <KUFeesTabSection />
+            <Suspense fallback={<div className="w-full py-4 px-2">Loading...</div>}>
+                <KUFeesTabSection />
+            </Suspense>
             <AdmissionCareer />
         </div>
     )

@@ -229,40 +229,46 @@ export default function Research() {
   
   const links = [
     {
-      id: 1,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industrial+Visits.svg",
-      title: "Training & Placement Cell",
-      description: "Our dedicated Training & Placement Cell provides comprehensive career guidance, skill development programs, and placement assistance to ensure students are industry-ready.",
-    },
-    {
-      id: 2,
+      id: 7,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
-      title: "Career & Corporate Resource Centre",
-      description: "The CCRC connects students with top recruiters and provides training in essential skills, helping them achieve their personal and professional goals.",
+      title: "Career Counselling",
+      description: "We strongly emphasise career counselling for students, and thus, we have a team of counsellors who provide students with a roadmap on how they can achieve their career goals. They help them identify their interests first, and according to that, they introduce them to our programs. They will always guide students at any stage of their journey at KU until they get placed.",
+      href: "/training-and-placement-cell",
     },
     {
-      id: 3,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Events.svg",
-      title: "Campus Placement Drives",
-      description: "Regular on-campus placement drives with leading companies provide students with direct opportunities to secure their dream jobs right after graduation.",
-    },
-    {
-      id: 4,
+      id: 8,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
-      title: "Skill Development Programs",
-      description: "Industry-aligned training programs and workshops enhance students' technical and soft skills, making them more employable and competitive in the job market.",
+      title: "Soft Skills Development",
+      description: "Apart from degrees, a student must know communication skills, interpersonal skills, decision-making skills, problem-solving abilities, emotional intelligence, and career-focused skills for overall personality development. Our soft skills training programs are inclusive of all the above skill sets and are a part of our curriculum.",
+      href: "/value-added-course",
     },
     {
-      id: 5,
+      id: 9,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Curriculum.svg",
-      title: "Industry Partnerships",
-      description: "Strong partnerships with 400+ leading companies ensure diverse placement opportunities across various sectors and industries.",
+      title: "Language Lab",
+      description: "The English language lab gives students a profound learning experience where they can work on key areas like listening, speaking, reading, writing, grammar, and vocabulary. It improves their confidence and fluency, enabling them to communicate clearly.",
+      href: "/academic-facilities",
     },
     {
-      id: 6,
+      id: 10,
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
+      title: "Bridge Courses",
+      description: "We provide bridge courses in subjects like Physics, Chemistry, Maths, English, and more to students who come from different academic backgrounds. The well-defined syllabus helps to grasp the essential concepts of different subjects.",
+      href: "/value-added-course",
+    },
+    {
+      id: 11,
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship.svg",
-      title: "Placement Statistics",
-      description: "Track record of excellent placements with competitive salary packages, with highest package of 12L+ and average package of 4 LPA.",
+      title: "Competitive Exams Coaching",
+      description: "We prepare our students to compete in various National and International level competitive exams like GATE, GRE, GMAT, CAT, IAS, UPSC, IELTS, TOEFL, IBPS, PSC, SSC, NET, etc.",
+      href: "/entrance-exam",
+    },
+    {
+      id: 12,
+      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
+      title: "Remedial Coaching",
+      description: "We support every learner's needs through remedial coaching. Slow learners receive extra classes and assignments, while fast learners are encouraged to do research work and take up challenging projects.",
+      href: "/training-and-placement-cell",
     },
   ]
   const links2 = [
@@ -362,11 +368,11 @@ export default function Research() {
       />
       <QuickLinks 
         links={links} 
-        title="Placement Overview" 
+        title="Training Initiatives Of Kalinga’s TnP Cell" 
         description="Kalinga University's placement program bridges academia and industry with 400+ recruitment partners, comprehensive training, and dedicated support to prepare students for successful careers in top companies."
         backgroundColor="bg-white" 
         textColorClassName="text-black" 
-        showReadMore={false} 
+        showReadMore={true} 
       />
       <Placements hideMarquee={true} hideMilestones={true} bgColor="bg-[var(--light-gray)] mx-2 rounded-xl" marginClassName="mb-0"/>
       <MediaCardSlider
@@ -378,7 +384,7 @@ export default function Research() {
         descriptionTextClass=""
         swiperClassName="ccrc-video-slider"
       />
-      <QuickLinks titleClassName="text-white" links={links2} description="We're here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems." showReadMore={false}/>
+      <QuickLinks title="Entrepreneurship & Startup Support" titleClassName="text-white" links={links2} description="We're here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems." showReadMore={false}/>
       <FAQ 
         title="Placement Records"
         variant="button"

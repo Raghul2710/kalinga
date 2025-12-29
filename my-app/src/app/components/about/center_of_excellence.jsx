@@ -61,7 +61,7 @@ export default function CenterOfExcellence({
     <section className="py-16 bg-white relative">
       <div className="container mx-auto px-2">
         {/* Header Section */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-8 md:mb-12 pt-8 md:pt-0">
       <h2 className="font-stix text-[var(--foreground)] text-2xl md:text-3xl lg:text-4xl mb-4">
             {title}
           </h2>

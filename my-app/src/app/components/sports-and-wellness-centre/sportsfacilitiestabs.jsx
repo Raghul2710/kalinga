@@ -16,21 +16,21 @@ import DataTable from "../general/data-table";
 
 export default function SportsFacilitiesTabs({
   // Indoor (single images)
-  caromImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  chessImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/chess.webp",
-  tableTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  snookerImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  caromImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/carrom-game-pieces.webp",
+  chessImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/chess+(1).webp",
+  tableTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/table_tennis.webp",
+  snookerImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/snooker.webp",
 
   // Outdoor (single images)
   cricketImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
   footballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  badmintonImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  badmintonImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/badminton.webp",
   basketballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/basektballevent.webp",
   volleyballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  kabaddiImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  kabaddiImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/kabaddi+(1).webp",
   khoKhoImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
   hockeyImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  handballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  handballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/handball.webp",
   lawnTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
   shotPutImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
   discusThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",

@@ -12,7 +12,8 @@ export default function ProgramCard({
   showSpecializationDropdown = false,
   specializationOptions = [],
   specializationPlaceholder = "Select Specialisation",
-  href = "/admissions"
+  href = "/admissions",
+  titleClassName = ""
 }) {
   const [selectedSpecialization, setSelectedSpecialization] = useState("");
   return (
@@ -25,7 +26,7 @@ export default function ProgramCard({
       {/* Program Content */}
       <div className="relative z-10">
         {/* Program Title - Dark Red */}
-        <h3 className="text-[var(--button-red)] text-xl md:text-2xl lg:text-3xl !font-medium mb-2 font-plus-jakarta-sans normal-case">
+        <h3 className={`text-[var(--button-red)] text-xl md:text-2xl lg:text-3xl !font-medium mb-2 font-plus-jakarta-sans normal-case ${titleClassName}`}>
           {program.title}
         </h3>
 

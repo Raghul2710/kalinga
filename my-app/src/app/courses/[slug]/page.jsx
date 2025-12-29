@@ -22,7 +22,8 @@ import FAQ from "@/app/components/general/faq";
 import AdmissionCareer from "@/app/components/general/admission_cta";
 import CourseNavigation from "@/app/components/general/course-navigation";
 import QuickLinks from "@/app/components/general/quick_links";
-import { fetchAllCourses, fetchCourseCompleteDetail, parseHtmlToParagraphs, parseHtmlToText, parseHtmlListItems } from "@/app/lib/api";
+import GlobalArrowButton from "@/app/components/general/global-arrow_button";
+import { fetchAllCourses, fetchCourseCompleteDetail, fetchDepartmentCompleteDetail, parseHtmlToParagraphs, parseHtmlToText, parseHtmlListItems } from "@/app/lib/api";
 import { useBreadcrumbData } from "@/app/components/layout/BreadcrumbContext";
 
 // Helper function to format duration
@@ -42,6 +43,18 @@ const generateSlug = (name) => {
     .replace(/^-+|-+$/g, '');
 };
 
+// Normalize slug for comparison (handles variations)
+const normalizeSlug = (slug) => {
+  if (!slug) return '';
+  return slug
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
 export default function DynamicCoursePage() {
   const params = useParams();
   const slug = params?.slug;
@@ -50,26 +63,102 @@ export default function DynamicCoursePage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [courseId, setCourseId] = useState(null);
+  const [departmentData, setDepartmentData] = useState(null);
 
   // Find course ID from slug
   useEffect(() => {
     const findCourse = async () => {
       try {
+        setLoading(true);
+        setError(null);
         const courses = await fetchAllCourses();
-        const course = courses.find(c => 
-          (c.slug && c.slug === slug) || 
-          generateSlug(c.name) === slug
-        );
+        
+        const normalizedSlug = normalizeSlug(slug);
+        console.log(`[Course Page] Looking for course with slug: "${slug}" (normalized: "${normalizedSlug}")`);
+        console.log(`[Course Page] Total courses fetched: ${courses.length}`);
+        
+        // Try multiple matching strategies
+        let course = null;
+        
+        // Strategy 1: Exact slug match (case-insensitive)
+        course = courses.find(c => {
+          if (!c.slug) return false;
+          return normalizeSlug(c.slug) === normalizedSlug;
+        });
+        
+        // Strategy 2: Generated slug from name
+        if (!course) {
+          course = courses.find(c => {
+            if (!c.name) return false;
+            return normalizeSlug(generateSlug(c.name)) === normalizedSlug;
+          });
+        }
+        
+        // Strategy 3: Partial match on slug
+        if (!course) {
+          course = courses.find(c => {
+            if (!c.slug) return false;
+            return normalizeSlug(c.slug).includes(normalizedSlug) || normalizedSlug.includes(normalizeSlug(c.slug));
+          });
+        }
+        
+        // Strategy 4: Match on name (remove common prefixes/suffixes)
+        if (!course) {
+          const searchTerms = normalizedSlug.split('-').filter(t => t.length > 2);
+          course = courses.find(c => {
+            if (!c.name) return false;
+            const normalizedName = normalizeSlug(c.name);
+            return searchTerms.every(term => normalizedName.includes(term));
+          });
+        }
+        
+        // Log potential matches for debugging
+        if (!course) {
+          const potentialMatches = courses.filter(c => {
+            const cSlug = normalizeSlug(c.slug || generateSlug(c.name || ''));
+            const cName = (c.name || '').toLowerCase();
+            const searchName = slug.replace(/-/g, ' ').toLowerCase();
+            
+            return cSlug.includes(normalizedSlug) || 
+                   normalizedSlug.includes(cSlug) ||
+                   cName.includes(searchName) ||
+                   searchName.includes(cName);
+          });
+          
+          console.log(`[Course Page] No exact match found. Potential matches (${potentialMatches.length}):`, 
+            potentialMatches.slice(0, 10).map(c => ({ 
+              id: c.id, 
+              name: c.name, 
+              slug: c.slug,
+              generatedSlug: generateSlug(c.name),
+              normalizedSlug: normalizeSlug(c.slug || generateSlug(c.name))
+            }))
+          );
+        }
         
         if (course) {
+          console.log(`[Course Page] Found course:`, { 
+            id: course.id, 
+            name: course.name, 
+            slug: course.slug,
+            generatedSlug: generateSlug(course.name),
+            matchType: 'found'
+          });
           setCourseId(course.id);
         } else {
-          setError('Course not found');
+          console.error(`[Course Page] Course not found for slug: "${slug}"`);
+          console.error(`[Course Page] All course slugs:`, courses.slice(0, 20).map(c => ({
+            id: c.id,
+            name: c.name,
+            slug: c.slug,
+            normalized: normalizeSlug(c.slug || generateSlug(c.name))
+          })));
+          setError(`Course not found: ${slug}`);
           setLoading(false);
         }
       } catch (err) {
-        console.error('Failed to find course:', err);
-        setError(err.message);
+        console.error('[Course Page] Failed to find course:', err);
+        setError(`Failed to load courses: ${err.message}`);
         setLoading(false);
       }
     };
@@ -86,12 +175,32 @@ export default function DynamicCoursePage() {
     const loadCourseData = async () => {
       try {
         setLoading(true);
+        setError(null);
+        console.log(`[Course Page] Fetching complete details for course ID: ${courseId}`);
+        
         const data = await fetchCourseCompleteDetail(courseId);
+        console.log(`[Course Page] Successfully loaded course data for ID: ${courseId}`, { name: data.name, slug: data.slug });
         setCourseData(data);
         setError(null);
+        
+        // Fetch department data if course milestones are not available or for image fallbacks
+        if (data.department) {
+          try {
+            const deptId = typeof data.department === 'object' ? data.department.id : data.department;
+            if (deptId) {
+              console.log(`[Course Page] Fetching department data for ID: ${deptId}`);
+              const deptData = await fetchDepartmentCompleteDetail(deptId);
+              setDepartmentData(deptData);
+            }
+          } catch (deptErr) {
+            console.error('[Course Page] Failed to load department data for fallbacks:', deptErr);
+            // Silently fail - will just not show milestones or use fallback images
+          }
+        }
       } catch (err) {
-        console.error('Failed to load course data:', err);
-        setError(err.message);
+        console.error(`[Course Page] Failed to load course data for ID ${courseId}:`, err);
+        const errorMessage = err.message || 'Unknown error';
+        setError(`Failed to load course details: ${errorMessage}. This might be a backend issue. Please check the API endpoint: /courses/${courseId}/complete-detail/`);
       } finally {
         setLoading(false);
       }
@@ -178,25 +287,73 @@ export default function DynamicCoursePage() {
     imageAlt: courseData.about_sections[0].alt, 
   } : null;
 
-  const publicationStats = courseData?.milestones && courseData.milestones.length > 0
-    ? courseData.milestones
-        .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
-        .map(milestone => ({
-          title: milestone.heading || "",
-          value: `${milestone.number || ""} ${milestone.symbol || ""}`.trim(),
-          description: milestone.description || "",
-        }))
-    : null;
+  // Use course milestones if available, otherwise fallback to department milestones
+  const publicationStats = (() => {
+    const courseMilestones = courseData?.milestones && courseData.milestones.length > 0 
+      ? courseData.milestones 
+      : null;
+    
+    const deptMilestones = departmentData?.milestones && departmentData.milestones.length > 0 
+      ? departmentData.milestones 
+      : null;
+    
+    const milestones = courseMilestones || deptMilestones;
+    
+    if (!milestones || milestones.length === 0) {
+      return null;
+    }
+    
+    return milestones
+      .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
+      .map(milestone => ({
+        title: milestone.heading || "",
+        value: `${milestone.number || ""} ${milestone.symbol || ""}`.trim(),
+        description: milestone.description || "",
+      }));
+  })();
+
+  // Helper function to parse eligibility criteria (handles both list items and paragraphs)
+  const parseEligibilityCriteria = (htmlContent) => {
+    if (!htmlContent) return [];
+    
+    // First try to parse as list items
+    const listItems = parseHtmlListItems(htmlContent);
+    if (listItems && listItems.length > 0) {
+      return listItems;
+    }
+    
+    // If no list items, try to split by paragraphs
+    const paragraphMatches = htmlContent.match(/<p[^>]*>([\s\S]*?)<\/p>/gi);
+    if (paragraphMatches && paragraphMatches.length > 0) {
+      return paragraphMatches.map(p => {
+        const innerMatch = p.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+        return innerMatch && innerMatch[1] ? innerMatch[1].trim() : '';
+      }).filter(item => item.length > 0);
+    }
+    
+    // If no paragraphs, return the HTML content as a single item
+    return [htmlContent.trim()];
+  };
 
   const eligibilityContent = courseData?.eligibility_criteria?.[0] ? {
-    imageUrl: courseData.eligibility_criteria[0].image || courseData?.image,
-    imageAlt: courseData?.image_alt || "Students",
+    imageUrl: courseData.eligibility_criteria[0].image || 
+             courseData.eligibility_criteria[0].image_url || 
+             courseData?.image ||
+             (departmentData?.program_syllabus_images?.[0]?.image || departmentData?.program_syllabus_images?.[0]?.image_url) ||
+             departmentData?.programs_image ||
+             "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/course_page.webp",
+    imageAlt: courseData.eligibility_criteria[0].image_alt || 
+              courseData?.image_alt || 
+              departmentData?.programs_image_alt ||
+              "Students",
     duration: formatDuration(courseData?.duration, courseData?.semester),
     title: "Eligibility Criteria",
-    criteria: parseHtmlListItems(courseData.eligibility_criteria[0].eligibility_criteria),
-    admissionTitle: courseData.eligibility_criteria[0].cta_text,
+    criteria: parseEligibilityCriteria(courseData.eligibility_criteria[0].eligibility_criteria),
+    // admissionTitle: courseData.eligibility_criteria[0].cta_text || "Your Next Big Chapter Starts With One Click",
+    admissionTitle:  "Your Next Big Chapter Starts With One Click",
+
     admissionButtonLabel: "Admission Open",
-    ctaLink: courseData.eligibility_criteria[0].cta_link || null,
+    href: courseData.eligibility_criteria[0].cta_link || null,
   } : null;
 
   const breadcrumbData = (courseData?.name && !loading) ? {
@@ -227,29 +384,49 @@ export default function DynamicCoursePage() {
         description: parseHtmlToText(career.description) || "",
         imageUrl: career.icon_image || null,
       }))
+      .filter(career => career.title || career.description) // Filter out empty careers
   } : null;
 
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
-    sectionTitle: "Specialization",
+    sectionTitle: " Course Specialization",
     backgroundImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp",
     items: courseData.specializations
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
       .map((specialization, index) => ({
         id: specialization.id,
         title: specialization.heading || "",
-        body: parseHtmlToText(specialization.description) || "",
+        body: parseHtmlToText(specialization.career_opportunities) || "",
         variant: index % 2 === 0 ? "gray" : "amber",
-        image: specialization.icon_image || null,
+        image: specialization.icon || specialization.icon_url || null,
+        alt: specialization.alt || "",
       }))
+      .filter(item => item.title || item.body) // Filter out empty items
   } : null;
 
-  const syllabusContent = courseData?.syllabus && courseData.syllabus.length > 0 ? {
-    title: courseData.syllabus[0].heading,
-    description: parseHtmlToParagraphs(courseData.syllabus[0].description),
+  // Extract link from HTML description if available
+  const extractLinkFromHtml = (htmlContent) => {
+    if (!htmlContent) return null;
+    const linkMatch = htmlContent.match(/<a[^>]+href=["']([^"']+)["'][^>]*>/i);
+    return linkMatch ? linkMatch[1] : null;
+  };
+
+  const syllabusContent = courseData?.syllabus_info ? {
+    title: courseData.syllabus_info.heading || "Scheme & Syllabus",
+    description: parseHtmlToParagraphs(courseData.syllabus_info.description),
     buttonLabel: "Explore Now",
-    href: courseData.syllabus[0].link || "/about-us",
-    imageUrl: courseData.syllabus[0].file || null,
-    showImage: !!courseData.syllabus[0].file,
+    href: extractLinkFromHtml(courseData.syllabus_info.description) || "/about-us",
+    imageUrl: null,
+    showImage: false,
+    buttons: courseData?.syllabus_buttons && courseData.syllabus_buttons.length > 0
+      ? courseData.syllabus_buttons
+          .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
+          .map(btn => ({
+            id: btn.id,
+            text: btn.button_text || "Download",
+            fileUrl: btn.file_url || btn.file || null,
+            displayOrder: btn.display_order || 0,
+          }))
+      : null,
   } : null;
 
   const faqContent = courseData?.faqs && courseData.faqs.length > 0 ? {
@@ -286,45 +463,62 @@ export default function DynamicCoursePage() {
       }))
   } : {
     title: "Beyond The Curriculum ",
-    description: "",
+    description: "Beyond the classroom, Kalinga provides platforms for students to develop useful skills, explore concepts, and get ready for opportunities in the real world. Through industry-focused training, career counseling, and entrepreneurship support, students are encouraged to develop both personally and professionally.",
     links: [
       {
         id: 1,
         title: "Kalinga Incubation Foundation (KIF)",
+        href: "/kif",
         description: "KIF converts students' bold and unique entrepreneurial ideas into ACTION by providing all-around support.",
       },
       {
         id: 2,
         title: "Corporate Training And Consultancy Division (CTCD)",
+        href: "/ctcd",
         description: "CTCD offers customised training programs to junior, middle, and senior levels of management of different companies.",
       },
       {
         id: 3,
         title: "Career Development Centre",
+        href: "/training-and-placement-cell",
+
         description: "It connects students with different companies and trains them in essential skills, helping them achieve their personal and professional goals.",
       },
     ],
   };
 
-  const navigationTabs = courseData?.quick_links && courseData.quick_links.length > 0
-    ? courseData.quick_links
-        .map(link => ({
-          id: link.link,
-          label: link.name
-        }))
-        .filter((tab, index, self) => 
-          index === self.findIndex(t => t.id === tab.id)
-        )
-        .sort((a, b) => {
-          const order = ['about', 'program details', 'specialization', 'career', 'career pathway', 'eligibility', 'fees', 'syllabus'];
-          const aIndex = order.findIndex(o => a.id.toLowerCase().includes(o.toLowerCase()));
-          const bIndex = order.findIndex(o => b.id.toLowerCase().includes(o.toLowerCase()));
-          if (aIndex === -1 && bIndex === -1) return 0;
-          if (aIndex === -1) return 1;
-          if (bIndex === -1) return -1;
-          return aIndex - bIndex;
-        })
-    : null;
+  // Build navigation tabs based on available sections
+  const navigationTabs = (() => {
+    const tabs = [];
+    
+    // About section
+    if (mainIntroContent) {
+      tabs.push({ id: 'about', label: 'About' });
+    }
+    
+    // Eligibility Criteria section
+    if (eligibilityContent) {
+      tabs.push({ id: 'eligibility', label: 'Eligibility Criteria' });
+    }
+    
+    // Career Pathways section
+    if (careerPathContent && careerPathContent.careers && careerPathContent.careers.length > 0) {
+      tabs.push({ id: 'career', label: 'Career Pathways' });
+    }
+    
+    // Specialization section
+    if (whyStudyContent && whyStudyContent.items && whyStudyContent.items.length > 0) {
+      tabs.push({ id: 'specialization', label: 'Specialization' });
+    }
+    
+    // Facilities section (always available)
+    tabs.push({ id: 'facilities', label: 'Facilities' });
+    
+    // Student Activities section (always available)
+    tabs.push({ id: 'activities', label: 'Student Activities' });
+    
+    return tabs.length > 0 ? tabs : null;
+  })();
 
   if (loading) {
     return (
@@ -362,10 +556,10 @@ export default function DynamicCoursePage() {
     <div>
       {navigationTabs && <CourseNavigation tabs={navigationTabs} />}
       {mainIntroContent && (
-        <div id="about">
+        <div id="about" className="scroll-mt-24 md:scroll-mt-28">
           <MainIntro 
             title={mainIntroContent.title}
-            subtitle={mainIntroContent.subtitle}
+            // subtitle={mainIntroContent.subtitle}
             description={mainIntroContent.description}
             imageUrl={mainIntroContent.imageUrl}
             imageAlt={mainIntroContent.imageAlt}
@@ -377,7 +571,7 @@ export default function DynamicCoursePage() {
         <PublicationGrid stats={publicationStats} />
       )}
       {eligibilityContent && (
-        <div id="eligibility">
+        <div id="eligibility" className="scroll-mt-24 md:scroll-mt-28">
           <EligibilityCriteria 
             imageUrl={eligibilityContent.imageUrl}
             imageAlt={eligibilityContent.imageAlt}
@@ -386,11 +580,12 @@ export default function DynamicCoursePage() {
             criteria={eligibilityContent.criteria}
             admissionTitle={eligibilityContent.admissionTitle}
             admissionButtonLabel={eligibilityContent.admissionButtonLabel}
+            href={eligibilityContent.href}
           />
         </div>
       )}
-      {careerPathContent && (
-        <div id="career">
+      {careerPathContent && careerPathContent.careers && careerPathContent.careers.length > 0 && (
+        <div id="career" className="scroll-mt-24 md:scroll-mt-28">
           <CareerPath 
             title={careerPathContent.title}
             description={careerPathContent.description}
@@ -399,7 +594,7 @@ export default function DynamicCoursePage() {
         </div>
       )}
       {whyStudyContent && whyStudyContent.items && whyStudyContent.items.length > 0 && (
-        <div id="specialization">
+        <div id="specialization" className="scroll-mt-24 md:scroll-mt-28">
           <WhyStudy 
             sectionTitle={whyStudyContent.sectionTitle}
             backgroundImage={whyStudyContent.backgroundImage}
@@ -413,6 +608,7 @@ export default function DynamicCoursePage() {
           description={syllabusContent.description}
           buttonLabel={syllabusContent.buttonLabel}
           href={syllabusContent.href}
+          buttons={syllabusContent.buttons}
           buttonClassName="!bg-white !text-black"
           arrowClassName="!bg-[var(--dark-orange-red)]"
           arrowIconClassName="!text-white"
@@ -424,8 +620,10 @@ export default function DynamicCoursePage() {
           imageAlt={syllabusContent.title}
         />
       )}
-      <div id="facilities">
-        <Facility />
+      <div id="facilities" className="scroll-mt-24 md:scroll-mt-28">
+        <Facility 
+        subtitle="An Environment That Empowers Students"
+        />
       </div>
       <QuickLinks 
         title={quickLinksContent.title}
@@ -439,7 +637,7 @@ export default function DynamicCoursePage() {
           items={faqContent.items}
         />
       )}
-      <div id="activities">
+      <div id="activities" className="scroll-mt-24 md:scroll-mt-28">
         <StudentActivities />
       </div>
       <AdmissionCareer />

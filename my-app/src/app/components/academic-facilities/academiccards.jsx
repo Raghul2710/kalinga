@@ -66,8 +66,8 @@ function Academiccards() {
             title: "Centres of Excellence",
             description:
                 "We collaborate with leading industry partners to offer skill-based training in EVs, IIoT, Robotics, AI & ML, MSME, Automobile Engineering, Coding, Drones, and more.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse2.webp",
+            logoSrc: "",
             subtitle: "INDUSTRY COLLABORATIONS",
             link: "/centres-of-excellence",
         },
@@ -84,8 +84,8 @@ function Academiccards() {
             title: "Podcast Studio",
             description:
                 "The soundproof podcast studio is equipped with professional microphones and recording equipment, providing students with an ideal space for content creation.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recording-studios.webp",
+            logoSrc: "",
             subtitle: "MEDIA & COMMUNICATION",
         },
         {
@@ -100,8 +100,8 @@ function Academiccards() {
             title: "ERP Portal",
             description:
                 "Every student has access to the ERP portal for academic curriculum, exam schedules, results, notices, transportation details, and other essential information.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/student-erp.webp",
+            logoSrc: "",
             subtitle: "DIGITAL SERVICES",
             // link: "/erp-portal",
         },
@@ -109,8 +109,8 @@ function Academiccards() {
             title: "Animal House",
             description:
                 "A safe and well-maintained animal house supports experimental studies and research in pharmacy, biotechnology, and life sciences, following strict ethical guidelines.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/animal+house.webp",
+            logoSrc: "",
             subtitle: "RESEARCH FACILITIES",
             // link: "/animal-house",
         },
@@ -127,8 +127,8 @@ function Academiccards() {
             title: "Auditorium, Seminar Halls & Board Rooms",
             description:
                 "Our digitally equipped auditorium, seminar halls, and board rooms host conferences, guest lectures, placement programs, training sessions, and campus events.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
+            logoSrc: "",
             subtitle: "EVENT INFRASTRUCTURE",
             // link: "/auditorium-and-halls",
         },
@@ -145,7 +145,7 @@ function Academiccards() {
             description:
                 "The TnP cell conducts interview preparation, resume building, soft skills training, and organises campus placement drives for students.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/trainingandplacementcell.webp",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet2.webp",
             logoSrc: "",
             subtitle: "CAREER SERVICES",
             // link: "/training-and-placement",
@@ -219,8 +219,8 @@ function Academiccards() {
             title: "Statistical Database Lab",
             description:
                 "This lab equips students and researchers with advanced statistical analysis techniques to analyse, interpret, and present data effectively.",
-            imageSrc: PLACEHOLDER,
-            logoSrc: PLACEHOLDER,
+            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/research-and-statistical-database-lab1.webp",
+            logoSrc: "",
             subtitle: "DATA & ANALYTICS",
         },
     ];

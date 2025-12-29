@@ -260,6 +260,7 @@ export default function IqacTabSection() {
     "2017-18": false,
     "2016-17": false,
   });
+  const [activeFeedbackModal, setActiveFeedbackModal] = useState(null);
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
@@ -595,8 +596,34 @@ export default function IqacTabSection() {
                 </div>
               )}
 
+              {/* Feedback Form Tab */}
+              {activeTab === "feedback-form" && (
+                <div className="flex-1">
+                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
+                    Feedback Form
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {[
+                      { id: "student", label: "Student Feedback" },
+                      { id: "alumni", label: "Alumni Feedback" },
+                      { id: "faculty", label: "Faculty Feedback" },
+                      { id: "employer", label: "Employer Feedback" },
+                      { id: "parents", label: "Parents Feedback" },
+                    ].map((feedback) => (
+                      <button
+                        key={feedback.id}
+                        onClick={() => setActiveFeedbackModal(feedback.id)}
+                        className="px-6 py-4 bg-[var(--button-red)] text-white rounded-lg hover:bg-[var(--button-red)]/90 transition-colors font-plus-jakarta-sans text-sm md:text-base font-semibold text-center"
+                      >
+                        {feedback.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Placeholder content for other tabs */}
-              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction"].includes(activeTab) && (
+              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form"].includes(activeTab) && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}
@@ -610,6 +637,959 @@ export default function IqacTabSection() {
           </div>
         </div>
       </div>
+
+      {/* Feedback Form Modals */}
+      {activeFeedbackModal && (
+        <div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex items-center justify-center p-4"
+          onClick={() => setActiveFeedbackModal(null)}
+        >
+          <div
+            className="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setActiveFeedbackModal(null)}
+              className="absolute top-6 right-6 z-50 bg-white rounded-full p-2 shadow-lg text-gray-600 hover:text-gray-900 transition-colors"
+              aria-label="Close modal"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <div className="p-6 md:p-8">
+              {activeFeedbackModal === "student" && <StudentFeedbackForm onClose={() => setActiveFeedbackModal(null)} />}
+              {activeFeedbackModal === "alumni" && <AlumniFeedbackForm onClose={() => setActiveFeedbackModal(null)} />}
+              {activeFeedbackModal === "faculty" && <FacultyFeedbackForm onClose={() => setActiveFeedbackModal(null)} />}
+              {activeFeedbackModal === "employer" && <EmployerFeedbackForm onClose={() => setActiveFeedbackModal(null)} />}
+              {activeFeedbackModal === "parents" && <ParentsFeedbackForm onClose={() => setActiveFeedbackModal(null)} />}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
+  );
+}
+
+// Student Feedback Form Component
+function StudentFeedbackForm({ onClose }) {
+  const [formData, setFormData] = useState({
+    studentName: "",
+    session: "",
+    program: "",
+    nationality: "",
+    email: "",
+    gender: "",
+    mobile: "",
+    ratings: {},
+    comments: "",
+  });
+
+  const ratingQuestions = [
+    "The course objectives were clear",
+    "The subject workload was manageable",
+    "Course outcomes were fulfilled",
+    "The learning and teaching methods encouraged participation",
+    "The provision of learning resources in the library was adequate and appropriate",
+    "The method's of assessment were reasonable",
+    "Feedback on assessment was helpful",
+    "Subject topics are relevant to correct industry requirement",
+    "How do you rate the list of experiments for the laboratory courses in relation to real life applications",
+    "How do you rate the course outcomes for the laboratory courses",
+    "How do you rate the evaluation scheme designed for each of the course",
+    "Sufficient Classrooms, reading rooms, toilets are available",
+    "You are satisfied with sports facilities available in University",
+    "You are satisfied with the medical facilities that are available round the clock",
+    "Classrooms/labs/workshops are cleaned properly",
+    "The toilets are cleaned properly and regulary",
+    "You are provided with Clean and cold drinking water",
+    "You are satisfied with Student Amenity Centre(Mini Market) present in your Campus",
+    "The feedback process is fair and unbiased",
+    "The teacher uses modern teaching aids, handouts, suitable references, powerpoint presentation, web resources etc",
+    "The Syllabus has a good balance between theory and practical applications",
+  ];
+
+  const ratingOptions = [
+    { value: 5, label: "Strongly Agree" },
+    { value: 4, label: "Very Much Agree" },
+    { value: 3, label: "Agree" },
+    { value: 2, label: "Somewhat Agree" },
+    { value: 1, label: "Neither Agree Nor Disagree" },
+  ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRatingChange = (question, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      ratings: { ...prev.ratings, [question]: value },
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Student Feedback Submitted:", formData);
+    // Handle form submission here
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <h3 className="font-plus-jakarta-sans text-2xl md:text-3xl text-[var(--foreground)] mb-2">
+        Student's Feedback
+      </h3>
+      <p className="text-gray-600 text-sm mb-6">
+        This questionnaire is intended to collect information relating to your satisfaction towards the curriculum, end facilities. The information provided by you will be kept confidential and will be used as important feedback for quality improvement of Kalinga University.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Student Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            name="studentName"
+            value={formData.studentName}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Session</label>
+          <input
+            type="text"
+            name="session"
+            value={formData.session}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Program</label>
+          <input
+            type="text"
+            name="program"
+            value={formData.program}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Nationality</label>
+          <input
+            type="text"
+            name="nationality"
+            value={formData.nationality}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email Id <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+          <div className="flex gap-4 mt-2">
+            <label className="flex items-center">
+              <input
+                type="radio"
+                name="gender"
+                value="Male"
+                onChange={handleChange}
+                className="mr-2"
+              />
+              Male
+            </label>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                name="gender"
+                value="Female"
+                onChange={handleChange}
+                className="mr-2"
+              />
+              Female
+            </label>
+          </div>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Mobile <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <p className="text-sm font-medium text-gray-700 mb-4">
+          Directions: A score for each item please indicate your level of satisfaction with the following statement by choosing between 1 and 5.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-3 py-2 text-left">Question</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Strongly Agree (5)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Very Much Agree (4)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Agree (3)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Somewhat Agree (2)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Neither Agree Nor Disagree (1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ratingQuestions.map((question, idx) => (
+                <tr key={idx}>
+                  <td className="border border-gray-300 px-3 py-2">{question}</td>
+                  {ratingOptions.map((option) => (
+                    <td key={option.value} className="border border-gray-300 px-2 py-2 text-center">
+                      <input
+                        type="radio"
+                        name={`rating_${idx}`}
+                        value={option.value}
+                        onChange={() => handleRatingChange(question, option.value)}
+                        className="cursor-pointer"
+                      />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="flex justify-end gap-4 mt-6">
+        <button
+          type="button"
+          onClick={onClose}
+          className="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          className="px-6 py-2 bg-[var(--button-red)] text-white rounded-md hover:bg-[var(--button-red)]/90"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+}
+
+// Alumni Feedback Form Component
+function AlumniFeedbackForm({ onClose }) {
+  const [formData, setFormData] = useState({
+    studentName: "",
+    session: "",
+    programName: "",
+    enrollmentNo: "",
+    email: "",
+    mobile: "",
+    currentStatus: "",
+    toolsUsed: "",
+    improvements: "",
+    ratings: {},
+  });
+
+  const ratingQuestions = [
+    "How do you find the relevance of the curriculum of your degree in relevance with higher studies",
+    "How do you find the relevance of the curriculum of your degree with respect to your current job",
+    "How do you find the relevance of the curriculum of your degree with respect to your ability to link theory to practice",
+    "How do you find the relevance of the curriculum of your degree with respect to your IT knowledge",
+  ];
+
+  const ratingOptions = [
+    { value: 5, label: "Excellent" },
+    { value: 4, label: "V. Good" },
+    { value: 3, label: "Good" },
+    { value: 2, label: "Avg" },
+    { value: 1, label: "Poor" },
+  ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRatingChange = (question, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      ratings: { ...prev.ratings, [question]: value },
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Alumni Feedback Submitted:", formData);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <h3 className="font-plus-jakarta-sans text-2xl md:text-3xl text-[var(--foreground)] mb-2">
+        Alumni Feedback
+      </h3>
+      <p className="text-gray-600 text-sm mb-6">
+        The purpose of this survey held at Kalinga University is to obtain alumni input on the quality of education they received and the level of preparation they had at University. The purpose of this survey is to assess the quality of the academic program. We seek your help in completing this survey.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Student Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            name="studentName"
+            value={formData.studentName}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Session</label>
+          <input
+            type="text"
+            name="session"
+            value={formData.session}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Program Name</label>
+          <input
+            type="text"
+            name="programName"
+            value={formData.programName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Enrollment No</label>
+          <input
+            type="text"
+            name="enrollmentNo"
+            value={formData.enrollmentNo}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email Id <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Mobile <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">Current Status</label>
+          <div className="flex flex-wrap gap-4 mt-2">
+            {["Pursuing higher education", "Working", "Self employed", "Preparing for competitive exams"].map((status) => (
+              <label key={status} className="flex items-center">
+                <input
+                  type="radio"
+                  name="currentStatus"
+                  value={status}
+                  onChange={handleChange}
+                  className="mr-2"
+                />
+                {status}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            To meet the current job requirements, please specify Tools/New Technologies, you have used
+          </label>
+          <textarea
+            name="toolsUsed"
+            value={formData.toolsUsed}
+            onChange={handleChange}
+            rows={3}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            How could your programs be improved? What specific comments do you have regarding the curriculum
+          </label>
+          <textarea
+            name="improvements"
+            value={formData.improvements}
+            onChange={handleChange}
+            rows={3}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <p className="text-sm font-medium text-gray-700 mb-4">
+          Directions: A score for each item please indicate your level of satisfaction with the following statement by choosing between 1 and 5.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-3 py-2 text-left">Question</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Excellent (5)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">V. Good (4)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Good (3)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Avg (2)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Poor (1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ratingQuestions.map((question, idx) => (
+                <tr key={idx}>
+                  <td className="border border-gray-300 px-3 py-2">{question}</td>
+                  {ratingOptions.map((option) => (
+                    <td key={option.value} className="border border-gray-300 px-2 py-2 text-center">
+                      <input
+                        type="radio"
+                        name={`rating_${idx}`}
+                        value={option.value}
+                        onChange={() => handleRatingChange(question, option.value)}
+                        className="cursor-pointer"
+                      />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="flex justify-end gap-4 mt-6">
+        <button
+          type="button"
+          onClick={onClose}
+          className="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          className="px-6 py-2 bg-[var(--button-red)] text-white rounded-md hover:bg-[var(--button-red)]/90"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+}
+
+// Faculty Feedback Form Component
+function FacultyFeedbackForm({ onClose }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    designation: "",
+    subjectTaught: "",
+    subjectCode: "",
+    department: "",
+    employeeCode: "",
+    email: "",
+    mobile: "",
+    ratings: {},
+  });
+
+  const ratingQuestions = [
+    "Subject curriculum is based on the needs of the stakeholders",
+    "The Subject has created interest and increased student knowledge and perspective in the subject area",
+    "Subject syllabus contents are clear and well defined",
+    "Course Outcomes are well defined and clear to stakeholders",
+    "The Subject curriculum has good balance between Theory and application",
+    "The Text and reference books prescribed are relevant, of latest edition and available",
+    "Proper coverage of all units in the curriculum in the allocated period is done",
+    "Syllabus is sufficient to bridge the gap between industry standards / currents global scenarios and academics",
+    "Class test are conducted well in time with proper coverage of all Units in the syllabus",
+    "Flexibility to adopt new techniques of teaching such as seminar presentation group discussion and students participation",
+  ];
+
+  const ratingOptions = [
+    { value: 5, label: "Strongly Agree" },
+    { value: 4, label: "Very much Agree" },
+    { value: 3, label: "Agree" },
+    { value: 2, label: "Somewhat Agree" },
+    { value: 1, label: "Neither Agree Nor Disagree" },
+  ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRatingChange = (question, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      ratings: { ...prev.ratings, [question]: value },
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Faculty Feedback Submitted:", formData);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <h3 className="font-plus-jakarta-sans text-2xl md:text-3xl text-[var(--foreground)] mb-2">
+        Faculty Feedback
+      </h3>
+      <p className="text-gray-600 text-sm mb-6">
+        This Feedback is to collect information about your satisfaction regarding Kalinga University curriculum of the subject currently taught. The information provided will be kept confidential and will be used as important feedback for quality improvement of teaching –learning process.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Name of Faculty <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Designation</label>
+          <input
+            type="text"
+            name="designation"
+            value={formData.designation}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Subject Taught</label>
+          <input
+            type="text"
+            name="subjectTaught"
+            value={formData.subjectTaught}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Subject Code</label>
+          <input
+            type="text"
+            name="subjectCode"
+            value={formData.subjectCode}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Department</label>
+          <input
+            type="text"
+            name="department"
+            value={formData.department}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Employee Code</label>
+          <input
+            type="text"
+            name="employeeCode"
+            value={formData.employeeCode}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email Id <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Mobile <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <p className="text-sm font-medium text-gray-700 mb-4">
+          Directions: A score for each item please indicate your level of satisfaction with the following statement by choosing between 1 and 5.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-3 py-2 text-left">Question</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Strongly Agree (5)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Very much Agree (4)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Agree (3)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Somewhat Agree (2)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Neither Agree Nor Disagree (1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ratingQuestions.map((question, idx) => (
+                <tr key={idx}>
+                  <td className="border border-gray-300 px-3 py-2">{question}</td>
+                  {ratingOptions.map((option) => (
+                    <td key={option.value} className="border border-gray-300 px-2 py-2 text-center">
+                      <input
+                        type="radio"
+                        name={`rating_${idx}`}
+                        value={option.value}
+                        onChange={() => handleRatingChange(question, option.value)}
+                        className="cursor-pointer"
+                      />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="flex justify-end gap-4 mt-6">
+        <button
+          type="button"
+          onClick={onClose}
+          className="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          className="px-6 py-2 bg-[var(--button-red)] text-white rounded-md hover:bg-[var(--button-red)]/90"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+}
+
+// Employer Feedback Form Component
+function EmployerFeedbackForm({ onClose }) {
+  const [formData, setFormData] = useState({
+    companyName: "",
+    evaluatorName: "",
+    email: "",
+    studentName: "",
+    mobile: "",
+    overallSatisfaction: "",
+    improvements: "",
+    recruitMore: "",
+    ratings: {},
+  });
+
+  const ratingQuestions = [
+    "Ability to contribute to the goal of the organization",
+    "Technical knowledge/skill Ability to manage/leadership Innovativeness",
+    "Creativity is intelligence having fun",
+    "Relationship with seniors/peers /subordinates",
+    "Ability and motivation for social activity",
+    "Obligation to work beyond schedule if required",
+    "Overall impression about their performance",
+  ];
+
+  const ratingOptions = [
+    { value: 5, label: "Excellent" },
+    { value: 4, label: "V.Good" },
+    { value: 3, label: "Good" },
+    { value: 2, label: "Satisfactory" },
+    { value: 1, label: "Poor" },
+  ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleRatingChange = (question, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      ratings: { ...prev.ratings, [question]: value },
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Employer Feedback Submitted:", formData);
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <h3 className="font-plus-jakarta-sans text-2xl md:text-3xl text-[var(--foreground)] mb-2">
+        Employer Feedback
+      </h3>
+      <p className="text-gray-600 text-sm mb-6">
+        Dear Employers, As industry is the ultimate customer of university pass out student graduates, its satisfaction about standards and Kalinga University products is important. Kalinga University always maintains a continuous dialogue accordingly. As the ultimate beneficiary of our quality product your support and feedback will help us to maintain the required standards of education. Here are some of the points to facilitate you in giving feedback about our student. You are requested to give marks in the box provided against each item as per the following norms.
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Name of the Company/Organization</label>
+          <input
+            type="text"
+            name="companyName"
+            value={formData.companyName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Name of the evaluating person with Designation</label>
+          <input
+            type="text"
+            name="evaluatorName"
+            value={formData.evaluatorName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Email Id <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Name of the Student/Employee <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="text"
+            name="studentName"
+            value={formData.studentName}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Mobile <span className="text-red-500">*</span>
+          </label>
+          <input
+            type="tel"
+            name="mobile"
+            value={formData.mobile}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            How do you rate your overall satisfaction with Kalinga University students and the curriculum
+          </label>
+          <select
+            name="overallSatisfaction"
+            value={formData.overallSatisfaction}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          >
+            <option value="">Choose</option>
+            {ratingOptions.map((option) => (
+              <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
+          </select>
+        </div>
+        <div className="md:col-span-2">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            How Could our programs be improved? What specific comments you would like to share for imporvement of curriculum
+          </label>
+          <textarea
+            name="improvements"
+            value={formData.improvements}
+            onChange={handleChange}
+            rows={3}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Would you like to recruit more Kalinga University student
+          </label>
+          <select
+            name="recruitMore"
+            value={formData.recruitMore}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--button-red)]"
+          >
+            <option value="">Choose</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="mt-8">
+        <p className="text-sm font-medium text-gray-700 mb-4">
+          Directions: A score for each item please indicate your level of satisfaction with the following statement by choosing between 1 and 5.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-3 py-2 text-left">Question</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Excellent (5)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">V.Good (4)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Good (3)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Satisfactory (2)</th>
+                <th className="border border-gray-300 px-2 py-2 text-center">Poor (1)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ratingQuestions.map((question, idx) => (
+                <tr key={idx}>
+                  <td className="border border-gray-300 px-3 py-2">{question}</td>
+                  {ratingOptions.map((option) => (
+                    <td key={option.value} className="border border-gray-300 px-2 py-2 text-center">
+                      <input
+                        type="radio"
+                        name={`rating_${idx}`}
+                        value={option.value}
+                        onChange={() => handleRatingChange(question, option.value)}
+                        className="cursor-pointer"
+                      />
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="flex justify-end gap-4 mt-6">
+        <button
+          type="button"
+          onClick={onClose}
+          className="px-6 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          className="px-6 py-2 bg-[var(--button-red)] text-white rounded-md hover:bg-[var(--button-red)]/90"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+}
+
+// Parents Feedback Form Component (using iframe for Google Form)
+function ParentsFeedbackForm({ onClose }) {
+  return (
+    <div className="space-y-6">
+      <h3 className="font-plus-jakarta-sans text-2xl md:text-3xl text-[var(--foreground)] mb-2">
+        Parents Feedback
+      </h3>
+      <div className="w-full" style={{ minHeight: "600px" }}>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfY8LlgLJvgWuQB-jQsbh2XzO52C14W01f4sCvuJx-5W9u7uw/viewform?embedded=true"
+          width="100%"
+          height="600"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+          className="w-full"
+        >
+          Loading…
+        </iframe>
+      </div>
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={onClose}
+          className="px-6 py-2 bg-[var(--button-red)] text-white rounded-md hover:bg-[var(--button-red)]/90"
+        >
+          Close
+        </button>
+      </div>
+    </div>
   );
 }

@@ -53,6 +53,7 @@ const FAQ = ({
   tableData = [],
   tableSections = [], // Array of { id, title, data } for multiple sections
   overflowX = false,
+  pyClassName = "py-16",
   // For button variant
   buttons = []
 }) => {
@@ -244,7 +245,7 @@ const FAQ = ({
       }))
     
     return (
-      <Wrapper className={`${backgroundColor} py-16`}>
+      <Wrapper className={`${backgroundColor} ${pyClassName}`}>
         <div className="container mx-auto px-2">
           {showHeading && (
             <div className="mb-5">
@@ -381,7 +382,7 @@ const FAQ = ({
     }))
     
     return (
-      <Wrapper className={`${backgroundColor} py-16`}>
+      <Wrapper className={`${backgroundColor} ${pyClassName}`}>
         <div className="container mx-auto px-2">
           {showHeading && (
             <SectionHeading 
@@ -464,7 +465,7 @@ const FAQ = ({
     const maxCol = editableTableData.length > 0 ? Math.max(...editableTableData.map(item => item.col), 0) : 0
     
     return (
-      <Wrapper className={`${backgroundColor} py-16`}>
+      <Wrapper className={`${backgroundColor} ${pyClassName}`}>
         <div className="container mx-auto px-2">
           {showHeading && (
             <SectionHeading 
@@ -566,7 +567,7 @@ const FAQ = ({
 
   // Render Default or Editable Variant
   return (
-    <Wrapper className={`${backgroundColor} py-16`}>
+    <Wrapper className={`${backgroundColor} ${pyClassName}`}>
       <div className="container mx-auto px-2">
         {showHeading && (
           <SectionHeading 

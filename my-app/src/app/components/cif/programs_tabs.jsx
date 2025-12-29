@@ -40,7 +40,7 @@ export default function ProgramsTabs() {
         <div className="bg-[var(--dark-blue)] rounded-2xl py-16">
           <div className="container mx-auto">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="mb-8 flex-wrap justify-center">
+            <TabsList className="mb-8 justify-center">
               <TabsTrigger value="45Days" className="flex-1 min-w-[calc(50%-7px)] md:min-w-[200px]">
                 45 Days Internship Program
               </TabsTrigger>

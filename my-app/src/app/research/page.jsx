@@ -122,7 +122,7 @@ export default function Research() {
         title="Apply Now for Ph.D. Admissions"
         description="Begin your research journey with world-class faculty, advanced labs, and a structured research ecosystem."
         buttonLabel="Apply Now"
-        href="/admissions"
+        href="/phd"
         useContainer={true}
       
       />
@@ -162,10 +162,17 @@ export default function Research() {
           },
           {
             id: 5,
-            href: "#",
+            href: "/research-resources",
             icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
-            title: "Seed Money",
-            description: "We promote a research culture that supports faculty members and researchers in real-time research, innovation, and product development by providing seed funding of up to 100,000/- and, in exceptional cases, up to 300,000/-.",
+            title: "Research Resources",
+            description: "Kalinga University is one of the best Research-Intensive University as it is more than just your academic curriculum; it’s about generating curiosity, creativity, and a continuous learning environment.",
+          },
+          {
+            id: 6,
+            href: "/research-facilities",
+            icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+            title: "Research Facilities",
+            description: "State-of-the-art laboratories, high-tech instrumentation, and dedicated research centers equipped with cutting-edge tools for groundbreaking research across all disciplines.",
           },
         ]}
         showReadMore={true}

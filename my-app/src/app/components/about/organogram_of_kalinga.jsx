@@ -27,6 +27,7 @@ const OrganogramOfKalinga = ({
   imageUrl = "",
   imageAlt = "",
   useContainer = false,
+  buttons = null, // Array of button objects: [{ text, fileUrl, id }]
 }) => {
   const descriptionArray = Array.isArray(description) ? description : [description];
 
@@ -61,18 +62,39 @@ const OrganogramOfKalinga = ({
               {/* Description */}
               <div className="text-sm sm:text-base md:text-lg md:w-full w-full leading-relaxed sm:leading-normal md:leading-relaxed mb-6 font-plus-jakarta-sans space-y-3">
                 {descriptionArray.map((para, idx) => (
-                  <p key={idx}>{para}</p>
+                  <p key={idx} dangerouslySetInnerHTML={{ __html: para }} />
                 ))}
               </div>
 
-              {/* Explore Now Button */}
-              <div className="flex justify-start">
-                {href ? (
-                  <a href={href} className="inline-flex">
-                    {ButtonContent}
-                  </a>
+              {/* Buttons */}
+              <div className="flex flex-wrap gap-3 md:gap-4 justify-start">
+                {buttons && buttons.length > 0 ? (
+                  buttons.map((btn) => (
+                    <a
+                      key={btn.id}
+                      href={btn.fileUrl || "#"}
+                      target={btn.fileUrl ? "_blank" : undefined}
+                      rel={btn.fileUrl ? "noopener noreferrer" : undefined}
+                      className="inline-flex"
+                    >
+                      <GlobalArrowButton
+                        className={buttonClassName}
+                        arrowClassName={arrowClassName}
+                        arrowIconClassName={arrowIconClassName}
+                        textClassName={textClassName}
+                      >
+                        {btn.text}
+                      </GlobalArrowButton>
+                    </a>
+                  ))
                 ) : (
-                  ButtonContent
+                  href ? (
+                    <a href={href} className="inline-flex" target="_blank" rel="noopener noreferrer">
+                      {ButtonContent}
+                    </a>
+                  ) : (
+                    ButtonContent
+                  )
                 )}
               </div>
             </div>

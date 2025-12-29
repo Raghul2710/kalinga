@@ -28,7 +28,7 @@ export default function Gallery({
         <div className="text-center mb-12">
           <SectionHeading 
             title={title}
-            titleClassName="text-4xl sm:text-[50px] text-[var(--foreground)]"
+            titleClassName="text-[var(--foreground)]"
           />
           {description && (
             <p className="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed max-w-6xl mx-auto">

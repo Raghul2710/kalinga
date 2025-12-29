@@ -44,7 +44,7 @@ export default function MainIntro({
   return (
     <section className="md:py-16 bg-white py-16 pb-10 ">
       <div className="container mx-auto px-2">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 ${showAll ? 'items-start' : 'items-center'}`}>
           {/* Left Section - Text Content */}
           <div className={`flex flex-col order-2 ${reverseLayout ? 'lg:order-2' : 'lg:order-1'} lg:pl-0 lg:pr-4`}>
             <SectionHeading 

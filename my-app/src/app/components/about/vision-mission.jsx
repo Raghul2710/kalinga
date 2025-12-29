@@ -143,6 +143,7 @@ export default function VisionMission({
   imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png",
   imageAlt = "Vision and Mission",
   showImage = true,
+  showImg, // Alias for showImage
   className = "",
 }) {
   // Track if desktop view (for clipPath)
@@ -165,8 +166,14 @@ export default function VisionMission({
   }, []);
 
   // Support data prop (array of objects) or individual props
+  // Use showImg prop if provided, otherwise use showImage
+  const finalShowImage = showImg !== undefined ? showImg : showImage;
+  
   const entries = Array.isArray(data) && data.length > 0 
-    ? data 
+    ? data.map(entry => ({
+        ...entry,
+        showImage: showImg !== undefined ? showImg : (entry.showImage !== undefined ? entry.showImage : true)
+      }))
     : [{
         visionTitle,
         missionTitle,
@@ -174,7 +181,7 @@ export default function VisionMission({
         missionText,
         imageSrc,
         imageAlt,
-        showImage,
+        showImage: finalShowImage,
         className,
       }];
 

@@ -39,13 +39,13 @@ const defaultAwards = [
     subtitle: "Inter Departmental Lead Agency",
     active: true,
   },
-  {
-    id: 5,
-    year: "2023-24",
-    title: "Appreciation award",
-    subtitle: "Sambhav Doot Foundation (Ayra)",
-    active: true,
-  },
+  // {
+  //   id: 5,
+  //   year: "2023-24",
+  //   title: "Appreciation award",
+  //   subtitle: "Sambhav Doot Foundation (Ayra)",
+  //   active: true,
+  // },
   {
     id: 6,
     year: "2022-23",
@@ -85,7 +85,7 @@ const defaultAwards = [
     id: 11,
     year: "2020-21",
     title: "Youth Development for Contributuing works and pre-career guidance",
-    subtitle: "OCBOS",
+    subtitle: "CCBOS",
     active: true,
   },
   {
