@@ -136,7 +136,7 @@ export default function WhyStudy({
                             <div className="flex-shrink-0">
                               <Image
                                 src={item.image}
-                                alt={item.title}
+                                alt={item.alt || item.title}
                                 width={48}
                                 height={48}
                                 className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 object-contain"

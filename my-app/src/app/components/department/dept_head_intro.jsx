@@ -71,7 +71,7 @@ function MentorCard({
     <>
       <div className={`grid grid-cols-1 lg:grid-cols-12 items-center gap-5 lg:gap-0 ${cardClassName}`}>
         <div className="lg:col-span-4 z-20 h-full">
-          <div className="relative z-20 bg-[var(--lite-sand)] rounded-2xl p-2 w-full h-[450px]">
+          <div className="relative z-20 bg-[var(--lite-sand)] rounded-2xl p-2 w-full md:h-[450px] h-auto">
             <Image
               src={imageSrc}
               alt={title}

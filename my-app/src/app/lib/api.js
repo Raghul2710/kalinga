@@ -300,13 +300,14 @@ export async function fetchDepartmentCourseCounts() {
 }
 
 /**
- * Fetches all departments and courses filtered by program type
+ * Fetches all departments and courses filtered by program type and/or department
  * @param {string|null} programType - Program type filter (ug, pg, phd, diploma) or null for all
+ * @param {string|null} department - Department slug or ID filter or null for all
  * @returns {Promise<Object>} Object with departments and courses arrays
  */
-export async function fetchAllDepartmentsCourses(programType = null) {
+export async function fetchAllDepartmentsCourses(programType = null, department = null) {
   try {
-    const url = getApiUrl(API_CONFIG.departments.allDepartmentsCourses(programType));
+    const url = getApiUrl(API_CONFIG.departments.allDepartmentsCourses(programType, department));
     const response = await fetch(url, {
       method: 'GET',
       headers: {
@@ -322,7 +323,7 @@ export async function fetchAllDepartmentsCourses(programType = null) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error(`Error fetching all departments courses${programType ? ` for ${programType}` : ''}:`, error);
+    console.error(`Error fetching all departments courses${programType ? ` for ${programType}` : ''}${department ? ` in ${department}` : ''}:`, error);
     throw error;
   }
 }

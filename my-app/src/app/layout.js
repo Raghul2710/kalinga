@@ -92,6 +92,7 @@ export default function RootLayout({ children }) {
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        suppressHydrationWarning
       >
         <BreadcrumbProvider>
           <ClickSparkWrapper>

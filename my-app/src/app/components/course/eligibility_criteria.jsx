@@ -30,7 +30,7 @@ export default function EligibilityCriteria({
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Image */}
-          <div className="w-full order-2 lg:order-1">
+          <div className="w-full order-2 lg:order-1 ">
             <Image
               src={imageUrl}
               alt={imageAlt}
@@ -41,7 +41,7 @@ export default function EligibilityCriteria({
           </div>
 
           {/* Right Column - Content */}
-          <div className="flex flex-col gap-6 justify-between h-full order-3 lg:order-2">
+          <div className="flex flex-col gap-10 justify-center h-full order-3 lg:order-2">
             {/* Duration Box */}
             <div className="bg-[var(--card-skin)] rounded-lg px-2 py-5 text-center">
               <h3 className="text-[18px] md:text-[24px]">Duration : {duration}</h3>
@@ -78,7 +78,7 @@ export default function EligibilityCriteria({
             </div>
             
             {/* Red Box with Admission Open Button */}
-            <div className="bg-[var(--button-red)] rounded-lg p-6 md:p-8 lg:p-11">
+            <div className="bg-[var(--button-red)] rounded-lg p-6 md:p-8 ">
               <h3 className="text-white mb-6 text-2xl md:text-3xl lg:text-[30px] leading-tight">
                 {admissionTitle}
               </h3>

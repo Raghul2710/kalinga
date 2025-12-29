@@ -232,14 +232,14 @@ export default function FacultyOfInformationTechnology() {
   const breadcrumbData = (departmentData?.name && !loading) ? {
     heroImage: departmentData?.banners?.[0]?.image || departmentData?.banners?.[0]?.image_url || departmentData.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-gathered.webp",
     pageTitle: departmentData.name,
-    customBreadcrumbs: [
-      { label: 'Home', href: '/' },
-      { label: 'Departments', href: '/departments' },
+  customBreadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Departments', href: '/departments' },
       { 
         label: departmentData.name, 
         href: `/departments/${departmentData.slug || generateSlug(departmentData.name)}` 
       }
-    ]
+  ]
   } : loading ? {
     // During loading, set empty breadcrumbs to hide breadcrumb component
     customBreadcrumbs: []
@@ -411,7 +411,7 @@ export default function FacultyOfInformationTechnology() {
   return (
     <div>
       {mainIntroContent && (
-        <MainIntro 
+       <MainIntro 
           title={mainIntroContent.title}
           subtitle={mainIntroContent.subtitle}
           description={mainIntroContent.description}
@@ -426,13 +426,13 @@ export default function FacultyOfInformationTechnology() {
         <PublicationGrid stats={publicationStats} />
       )}
       {programsOffered && programsOffered.length > 0 && (
-        <ProgramsOffered 
-          programs={programsOffered}
-          title="Programs Offered"
+      <ProgramsOffered 
+        programs={programsOffered}
+        title="Programs Offered"
           description={programsOverview}
           backgroundImage={programsImage || "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/programs-offered.webp"}
           imageAlt={programsImageAlt}
-        />
+      />
       )}
       {mentorIntroProps && mentorIntroProps.length > 0 && (
         <DeptHeadIntro items={mentorIntroProps} />
@@ -440,39 +440,39 @@ export default function FacultyOfInformationTechnology() {
       <DeptSyllabus />
       <Placements placementData={placementData} />
       {videoItems && videoItems.length > 0 && (
-        <MediaCardSlider
-          categoryTitle="Video Interviews"
+      <MediaCardSlider
+        categoryTitle="Video Interviews"
           title="Video Interviews"
           description="Watch interviews with our students and faculty members"
-          videoItems={videoItems}
-          cardBgClass="bg-white"
-          nameTextClass="text-[var(--button-red)]"
-          descriptionTextClass=""
-          swiperClassName="ccrc-video-slider"
-        />
+        videoItems={videoItems}
+        cardBgClass="bg-white"
+        nameTextClass="text-[var(--button-red)]"
+        descriptionTextClass=""
+        swiperClassName="ccrc-video-slider"
+      />
       )}
       <Facility />
       {whyStudyItems && whyStudyItems.length > 0 && (
-        <WhyStudy 
-          items={whyStudyItems}
+      <WhyStudy 
+        items={whyStudyItems}
           sectionTitle={departmentData?.name 
             ? `Why Study ${departmentData.name.replace(/^Faculty of\s+/i, '')}?` 
             : "Why Study Information Technology?"}
-        />
+      />
       )}
       {weStandOutCards && weStandOutCards.length > 0 && (
-        <WeStandOut cards={weStandOutCards} />
+      <WeStandOut cards={weStandOutCards} />
       )}
       {newsConferences && newsConferences.length > 0 && (
-        <UpcomingConference 
-          conferences={newsConferences}
-          title="Upcoming Conferences & Events"
-          backgroundColor="bg-[var(--light-gray)]"
-          backgroundColorcard="bg-white"
-          showCategory={false}
-          showDate={false}
-          imageContainerClass="w-full md:w-1/3 flex justify-center"
-        />
+      <UpcomingConference 
+        conferences={newsConferences}
+        title="Upcoming Conferences & Events"
+        backgroundColor="bg-[var(--light-gray)]"
+        backgroundColorcard="bg-white"
+        showCategory={false}
+        showDate={false}
+        imageContainerClass="w-full md:w-1/3 flex justify-center"
+      />
       )}
       <StudentActivities />
       {faqItems && faqItems.length > 0 && (

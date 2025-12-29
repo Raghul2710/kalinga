@@ -9,7 +9,7 @@ import QuickLinks from "@/app/components/general/quick_links";
 import Stack from '@/app/components/gsap/Stack'
 import { fetchAllDepartments, fetchDepartmentCompleteDetail, parseHtmlToText, fetchDepartmentCourseCounts } from '@/app/lib/api'
 import { useBreadcrumbData } from '@/app/components/layout/BreadcrumbContext'
-
+import GlobalArrowButton from '@/app/components/general/global-arrow_button'
 // Breadcrumb configuration
 const breadcrumbData = {
   heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/academics-banner.webp",
@@ -401,30 +401,28 @@ function DepartmentCard({ program }) {
 
       <div className="mt-auto flex items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-2 sm:gap-3">
-          <button
+          
+          <GlobalArrowButton className="!bg-transparent !shadow-none !text-[#1a1a1a] !px-0 !py-0 !h-auto text-sm sm:text-base" arrowClassName="!bg-transparent" arrowIconClassName="!text-[#1a1a1a]"
             onClick={(e) => {
               e.stopPropagation();
               if (program.onKnowMore) program.onKnowMore();
             }}
-            className="cursor-pointer font-plus-jakarta-sans text-sm sm:text-base text-[#1a1a1a] hover:text-[var(--button-red)] transition-colors flex items-center gap-1"
           >
             Know More
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M7 17L17 7M7 7h10v10" />
-            </svg>
-          </button>
-          <button
-            onClick={(e) => {
+          </GlobalArrowButton>
+         <GlobalArrowButton
+          className="!bg-white !text-black"
+          arrowClassName="!bg-[var(--button-red)]"
+          arrowIconClassName="!text-white"
+          textClassName="!text-black"
+               onClick={(e) => {
               e.stopPropagation();
               if (program.onApplyNow) program.onApplyNow();
             }}
-            className="cursor-pointer bg-white text-black px-3 py-1.5 rounded-lg hover:bg-gray-100 transition-colors text-sm sm:text-base font-plus-jakarta-sans flex items-center gap-1"
           >
             Apply Now
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--button-red)]">
-              <path d="M7 17L17 7M7 7h10v10" />
-            </svg>
-          </button>
+  
+          </GlobalArrowButton>
         </div>
       </div>
     </div>

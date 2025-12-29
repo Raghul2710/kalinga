@@ -60,7 +60,7 @@ export function useBreadcrumbData(data) {
     }
   }, [data, setBreadcrumbData]);
   
-  // Cleanup: reset when component unmounts
+    // Cleanup: reset when component unmounts
   useEffect(() => {
     return () => {
       if (setBreadcrumbData && isMountedRef.current) {

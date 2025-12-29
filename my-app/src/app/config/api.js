@@ -14,9 +14,12 @@ export const API_CONFIG = {
     completeDetail: (departmentId) => `/departments/${departmentId}/complete-detail/`,
     courses: (slugOrId) => `/departments/${slugOrId}/courses/`,
     urlInfo: (slugOrId) => `/departments/${slugOrId}/url-info/`,
-    allDepartmentsCourses: (programType = null) => {
+    allDepartmentsCourses: (programType = null, department = null) => {
       const base = `/departments/all-departments-courses/`;
-      return programType ? `${base}?program_type=${programType}` : base;
+      const params = [];
+      if (programType) params.push(`program_type=${programType}`);
+      if (department) params.push(`department=${department}`);
+      return params.length > 0 ? `${base}?${params.join('&')}` : base;
     },
     courseCounts: () => `/departments/course-counts/`,
     updateCourseCount: () => `/departments/course-counts/update/`,

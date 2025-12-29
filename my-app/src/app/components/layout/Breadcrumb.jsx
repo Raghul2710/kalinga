@@ -144,7 +144,7 @@ const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {
         <div className="container mx-auto">
         <div className="absolute z-[10] flex md:flex-row flex-col md:items-end items-start gap-2  md:gap-6 left-1/2 -translate-x-1/2 md:left-auto md:right-auto md:translate-x-0 md:bottom-[25px]  -bottom-[35px] translate-y-1/2 mb-12 md:mb-16 ">
           <div className="p-5 bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl md:min-h-[150px] min-h-[100px] flex justify-center items-center min-w-[330px] md:max-w-4/5 max-w-full wraptext-center">
-            <h1 className="font-stix text-center text-white text-2xl md:text-4xl lg:text-5xl font-normal ">
+            <h1 className="font-stix capitalize text-center text-white text-2xl md:text-4xl lg:text-5xl font-normal ">
               {currentPageTitle}
             </h1> 
           </div>
