@@ -1,10 +1,28 @@
-// ✅ 4) STUDENT REPORT / STUDENT SUPPORT CARDS (Modal + Link Navigation)
-// File: studentreportcards.jsx
-
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Cards from "../ccrc/cards";
+
+/** ✅ Reusable helper: hide Know More button for cards without link/href */
+function useHideKnowMoreWithoutLink(wrapperRef, cards) {
+    useLayoutEffect(() => {
+        const root = wrapperRef.current;
+        if (!root) return;
+
+        // Cards.jsx: each card is a direct child div of the <section>
+        const cardEls = root.querySelectorAll("section > div");
+
+        cardEls.forEach((cardEl, i) => {
+            const hasLink = !!cards[i]?.link || !!cards[i]?.href;
+
+            // Know More wrapper in Cards.jsx:
+            // <div className="absolute left-5 bottom-4 z-10">
+            const btnWrap = cardEl.querySelector(".absolute.left-5.bottom-4");
+
+            if (btnWrap) btnWrap.style.display = hasLink ? "" : "none";
+        });
+    }, [wrapperRef, cards]);
+}
 
 export default function Studentreportcards() {
     const wrapperRef = useRef(null);
@@ -19,18 +37,18 @@ export default function Studentreportcards() {
                 "Includes workshops, seminars, conferences, industrial visits, guest lectures, masterclasses, hands-on training programs, hackathons (coding competitions), ideathons (business plan competitions), and more.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/arts.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "SKILL & CAREER DEVELOPMENT",
         },
         {
             title: "CTCD",
             description:
                 "The Corporate Training and Consultancy Division (CTCD) regularly organises expert-led masterclasses on the latest industry trends to make students job-ready professionals.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ctcd.png",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ctcd.png",
             logoSrc: "",
             subtitle: "INDUSTRY EXPOSURE",
-            link: "/ctcd", // ✅ navigation
+            link: "/ctcd",
         },
         {
             title: "Academic & Non-Academic Clubs",
@@ -40,6 +58,7 @@ export default function Studentreportcards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/academicandnonacademic.webp",
             logoSrc: "",
             subtitle: "STUDENT ENGAGEMENT",
+            link: "/student-clubs"
         },
         {
             title: "Campus Placement Drives",
@@ -47,9 +66,9 @@ export default function Studentreportcards() {
                 "Top industries visit our campus to recruit students for competitive roles with attractive salary packages through regular campus placement drives.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/commerce-management.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "PLACEMENT OPPORTUNITIES",
+            link: "/placements",
         },
         {
             title: "Sustainable Campus Environment",
@@ -59,6 +78,7 @@ export default function Studentreportcards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/sustainablecampusenv.webp",
             logoSrc: "",
             subtitle: "GREEN CAMPUS",
+            link: "/campus-facilities",
         },
         {
             title: "Academic Programs",
@@ -66,10 +86,9 @@ export default function Studentreportcards() {
                 "Choose from 130+ academic programs across multiple streams, designed to meet industry standards and ensure student success.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/education.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "DIVERSE COURSES",
-            // link: "/programs",
+            link: "/academics",
         },
         {
             title: "Career Development",
@@ -79,6 +98,7 @@ export default function Studentreportcards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/careerdevelopement.webp",
             logoSrc: "",
             subtitle: "HOLISTIC GROWTH",
+            link: "/careers"
         },
         {
             title: "Student Welfare Services",
@@ -86,9 +106,9 @@ export default function Studentreportcards() {
                 "The Department of Student Welfare creates a supportive environment where students can explore interests, develop hobbies, and participate in in-house programs.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "STUDENT SUPPORT",
+            link: "/student-welfare"
         },
         {
             title: "Student Feedback",
@@ -96,8 +116,7 @@ export default function Studentreportcards() {
                 "We value student feedback and continuously work towards improving academic quality and overall campus life experience.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/MBA.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "CONTINUOUS IMPROVEMENT",
         },
         {
@@ -115,8 +134,7 @@ export default function Studentreportcards() {
                 "Our inclusive campus supports all faiths, cultures, and beliefs, allowing students to freely practice their religion.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/faith.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "INCLUSIVE CAMPUS",
         },
         {
@@ -125,9 +143,9 @@ export default function Studentreportcards() {
                 "The Career and Corporate Resource Team builds leadership and soft skills through internships, workshops, conferences, training programs, and guest lectures.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet2.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "OVERALL GROWTH",
+            link: "/corporate-training-and-consultancy-division"
         },
         {
             title: "Academic Advice",
@@ -135,8 +153,7 @@ export default function Studentreportcards() {
                 "From choosing the right program to securing placements, our advisors provide career guidance and time management strategies.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet1.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "CAREER GUIDANCE",
         },
         {
@@ -145,8 +162,7 @@ export default function Studentreportcards() {
                 "We conduct annual parent-teacher meetings to discuss student performance and address parental concerns.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/careerdevelopmentcentre.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "PARENT ENGAGEMENT",
         },
         {
@@ -155,8 +171,7 @@ export default function Studentreportcards() {
                 "Programs across commerce, management, arts, science, pharmacy, law, technology, IT, and education prepare students with industry-relevant knowledge.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/bg-course.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "CAREER OPTIONS",
         },
         {
@@ -165,9 +180,9 @@ export default function Studentreportcards() {
                 "Bridge courses in Physics, Chemistry, Maths, English, and more help students from varied academic backgrounds strengthen core concepts.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "ACADEMIC SUPPORT",
+            link: "/value-added-course"
         },
         {
             title: "Competitive Exams Coaching",
@@ -175,8 +190,7 @@ export default function Studentreportcards() {
                 "We prepare students for national and international exams like GATE, GRE, GMAT, CAT, UPSC, IELTS, TOEFL, SSC, NET, and more.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "EXAM PREPARATION",
         },
         {
@@ -185,8 +199,7 @@ export default function Studentreportcards() {
                 "Personalised remedial coaching supports slow learners with extra guidance while encouraging fast learners to take up advanced projects.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "LEARNING SUPPORT",
         },
         {
@@ -195,8 +208,7 @@ export default function Studentreportcards() {
                 "Emerging programs in AI, ML, Cybersecurity, Data Science, Film Making, Animation & VFX, and Forensic Science bridge industry skill gaps.",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placement-intro-2.webp",
-            logoSrc:
-                "",
+            logoSrc: "",
             subtitle: "FUTURE-READY SKILLS",
             // link: "/new-age-programs",
         },
@@ -208,9 +220,18 @@ export default function Studentreportcards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/trainingandplacementcell.webp",
             logoSrc: "",
             subtitle: "PLACEMENT SUPPORT",
-            // link: "/training-and-placement",
+            link: "/training-and-placement-cell",
         },
     ];
+
+    // ✅ Add href for Cards.jsx (uses card.href)
+    const cardsForCardsComponent = cards.map((c) => ({
+        ...c,
+        href: c.link || null,
+    }));
+
+    // ✅ Hide Know More for cards without link (before paint)
+    useHideKnowMoreWithoutLink(wrapperRef, cardsForCardsComponent);
 
     useEffect(() => {
         const onKeyDown = (e) => e.key === "Escape" && setOpen(false);
@@ -234,43 +255,69 @@ export default function Studentreportcards() {
         const root = wrapperRef.current;
         if (!root) return;
 
-        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter((el) =>
-            (el.textContent || "").trim().toLowerCase().includes("know more")
+        // Only visible Know More buttons (linked cards only) remain
+        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter(
+            (el) => (el.textContent || "").trim().toLowerCase().includes("know more")
         );
 
         const idx = knowMoreButtons.indexOf(btn);
-        const picked = cards[idx];
+
+        // Since we hide non-link buttons, map index over linked cards only
+        const linkedCards = cards.filter((c) => !!c.link);
+        const picked = linkedCards[idx];
         if (!picked) return;
 
-        if (picked.link) {
-            window.location.assign(picked.link);
-            return;
-        }
-
-        setModalData({
-            title: picked?.title || "Details",
-            description: picked?.description || "",
-        });
-        setOpen(true);
+        window.location.assign(picked.link);
     };
 
     return (
         <>
-            <style jsx global>{`
-        .student-cards-wrapper img {
-          width: 100% !important;
-          height: 340px !important;
-          object-fit: cover !important;
-        }
+            <>
+                <style jsx global>{`
+    /* Default (Desktop) */
+    .student-cards-wrapper img {
+      width: 100% !important;
+      object-fit: cover !important;
+      border-radius: 0.75rem;
+    }
 
-        .student-cards-wrapper img[src=""],
-        .student-cards-wrapper img:not([src]) {
-          display: none !important;
-        }
-      `}</style>
+    /* Desktop */
+    @media (min-width: 1024px) {
+      .student-cards-wrapper img {
+        height: 340px !important;
+      }
+    }
 
-            <div ref={wrapperRef} onClickCapture={handleClickCapture} className="student-cards-wrapper">
-                <Cards cards={cards} />
+    /* Tablet */
+    @media (min-width: 641px) and (max-width: 1023px) {
+      .student-cards-wrapper img {
+        height: 280px !important;
+      }
+    }
+
+    /* Mobile — PREVENT CUT / SQUEEZE */
+    @media (max-width: 640px) {
+      .student-cards-wrapper img {
+        height: 220px !important;          /* smaller height */
+        object-fit: cover    !important;    /* no cropping */
+        padding: 6px;                      /* breathing room */
+      }
+    }
+
+    .student-cards-wrapper img[src=""],
+    .student-cards-wrapper img:not([src]) {
+      display: none !important;
+    }
+  `}</style>
+            </>
+
+
+            <div
+                ref={wrapperRef}
+                onClickCapture={handleClickCapture}
+                className="student-cards-wrapper"
+            >
+                <Cards cards={cardsForCardsComponent} />
             </div>
 
             {open && (

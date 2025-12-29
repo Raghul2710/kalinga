@@ -25,6 +25,17 @@ export default function AcademicFacilities() {
 
     return (
         <>
+            <style jsx global>{`
+  .absolute.inset-0 > img {
+    object-position: center 60% !important;
+  }
+
+  @media (max-width: 768px) {
+    .absolute.inset-0 > img {
+      object-position: center 5% !important;
+    }
+  }
+`}</style>
             <Academicmainintro />
             <Academiccards />
             <AdmissionCareer />

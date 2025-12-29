@@ -1,6 +1,3 @@
-// ✅ 3) ACADEMIC CARDS (Modal + Link Navigation) — INCLUDES "Animal House"
-// File: academiccards.jsx
-
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -11,9 +8,6 @@ function Academiccards() {
 
     const [open, setOpen] = useState(false);
     const [modalData, setModalData] = useState({ title: "", description: "" });
-
-    const PLACEHOLDER =
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png";
 
     const cards = [
         {
@@ -33,7 +27,7 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/resourcerichlibrary.webp",
             logoSrc: "",
             subtitle: "ACADEMIC INFRASTRUCTURE",
-            // link: "/library",
+            link: "/library"
         },
         {
             title: "Modern Laboratories",
@@ -43,15 +37,17 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
             logoSrc: "",
             subtitle: "RESEARCH & PRACTICAL LEARNING",
+            link: "/laboratories"
         },
         {
             title: "Incubation Centre",
             description:
                 "Kalinga Incubation Foundation (KIF) supports students’ entrepreneurial ideas and helps transform them into successful startup ventures through mentorship, networking, and seed funding.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
             logoSrc: "",
             subtitle: "INNOVATION & STARTUPS",
-            // link: "/incubation-centre",
+            link: "/kif"
         },
         {
             title: "Moot Court",
@@ -66,10 +62,11 @@ function Academiccards() {
             title: "Centres of Excellence",
             description:
                 "We collaborate with leading industry partners to offer skill-based training in EVs, IIoT, Robotics, AI & ML, MSME, Automobile Engineering, Coding, Drones, and more.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse2.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse2.webp",
             logoSrc: "",
             subtitle: "INDUSTRY COLLABORATIONS",
-            link: "/centres-of-excellence",
+            link: "/centresofexcellence",
         },
         {
             title: "Film Making Studio",
@@ -84,7 +81,8 @@ function Academiccards() {
             title: "Podcast Studio",
             description:
                 "The soundproof podcast studio is equipped with professional microphones and recording equipment, providing students with an ideal space for content creation.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recording-studios.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recording-studios.webp",
             logoSrc: "",
             subtitle: "MEDIA & COMMUNICATION",
         },
@@ -92,7 +90,8 @@ function Academiccards() {
             title: "Internship Programs & Hands-on Training",
             description:
                 "We provide on-campus and off-campus internships along with hands-on training programs to enhance real-world skills and make students job-ready.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/education.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/education.webp",
             logoSrc: "",
             subtitle: "CAREER READINESS",
         },
@@ -100,19 +99,19 @@ function Academiccards() {
             title: "ERP Portal",
             description:
                 "Every student has access to the ERP portal for academic curriculum, exam schedules, results, notices, transportation details, and other essential information.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/student-erp.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/student-erp.webp",
             logoSrc: "",
             subtitle: "DIGITAL SERVICES",
-            // link: "/erp-portal",
         },
         {
             title: "Animal House",
             description:
                 "A safe and well-maintained animal house supports experimental studies and research in pharmacy, biotechnology, and life sciences, following strict ethical guidelines.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/animal+house.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/animal+house.webp",
             logoSrc: "",
             subtitle: "RESEARCH FACILITIES",
-            // link: "/animal-house",
         },
         {
             title: "Audio-Visual Centre",
@@ -127,7 +126,8 @@ function Academiccards() {
             title: "Auditorium, Seminar Halls & Board Rooms",
             description:
                 "Our digitally equipped auditorium, seminar halls, and board rooms host conferences, guest lectures, placement programs, training sessions, and campus events.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
             logoSrc: "",
             subtitle: "EVENT INFRASTRUCTURE",
             // link: "/auditorium-and-halls",
@@ -136,7 +136,8 @@ function Academiccards() {
             title: "E-Learning Rooms (SWAYAM / MOOCs)",
             description:
                 "E-learning rooms offer high-speed internet, printing facilities, and access to digital libraries, online courses, and research databases.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/elearning.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/elearning.webp",
             logoSrc: "",
             subtitle: "DIGITAL EDUCATION",
         },
@@ -148,7 +149,7 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet2.webp",
             logoSrc: "",
             subtitle: "CAREER SERVICES",
-            // link: "/training-and-placement",
+            link: "/placements"
         },
         {
             title: "Scholarships",
@@ -158,16 +159,17 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/scolarships.webp",
             logoSrc: "",
             subtitle: "STUDENT SUPPORT",
-            // link: "/scholarships",
+            link: "/scholarships",
         },
         {
             title: "Research Facilities",
             description:
                 "High-tech instruments, research labs, centres of excellence, IPR cell, and dedicated faculty support undergraduate, postgraduate, and Ph.D. research.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/science.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/science.webp",
             logoSrc: "",
             subtitle: "ADVANCED RESEARCH",
-            // link: "/research-facilities",
+            link: "/research-facilities",
         },
         {
             title: "Value Added Courses",
@@ -177,7 +179,7 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/valueaddedcourses.webp",
             logoSrc: "",
             subtitle: "SKILL DEVELOPMENT",
-            link: "/value-added-courses",
+            link: "/value-added-course",
         },
         {
             title: "Counselling Support",
@@ -219,11 +221,27 @@ function Academiccards() {
             title: "Statistical Database Lab",
             description:
                 "This lab equips students and researchers with advanced statistical analysis techniques to analyse, interpret, and present data effectively.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/research-and-statistical-database-lab1.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/research-and-statistical-database-lab1.webp",
             logoSrc: "",
             subtitle: "DATA & ANALYTICS",
         },
     ];
+
+    // ✅ HIDE "Know More" button for cards that don't have link (no Cards.jsx change)
+    useEffect(() => {
+        const root = wrapperRef.current;
+        if (!root) return;
+
+        const cardEls = root.querySelectorAll("section > div"); // each card wrapper
+        cardEls.forEach((cardEl, i) => {
+            if (cards[i]?.link) return; // keep button for linked cards
+
+            // Button wrapper inside Cards.jsx => <div className="absolute left-5 bottom-4 z-10">
+            const btnWrap = cardEl.querySelector(".absolute.left-5.bottom-4");
+            if (btnWrap) btnWrap.style.display = "none";
+        });
+    }, [cards]);
 
     useEffect(() => {
         const onKeyDown = (e) => e.key === "Escape" && setOpen(false);
@@ -247,8 +265,9 @@ function Academiccards() {
         const root = wrapperRef.current;
         if (!root) return;
 
-        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter((el) =>
-            (el.textContent || "").trim().toLowerCase().includes("know more")
+        // Get ONLY the know more buttons in card list
+        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter(
+            (el) => (el.textContent || "").trim().toLowerCase().includes("know more")
         );
 
         const idx = knowMoreButtons.indexOf(btn);
@@ -270,19 +289,48 @@ function Academiccards() {
     return (
         <>
             <style jsx global>{`
-        .academic-cards-wrapper img {
-          width: 100% !important;
-          height: 340px !important;
-          object-fit: cover !important;
-        }
+  /* Default (Desktop base) */
+  .academic-cards-wrapper img {
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0.75rem;
+  }
 
-        .academic-cards-wrapper img[src=""],
-        .academic-cards-wrapper img:not([src]) {
-          display: none !important;
-        }
-      `}</style>
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .academic-cards-wrapper img {
+      height: 340px !important;
+    }
+  }
 
-            <div ref={wrapperRef} onClickCapture={handleClickCapture} className="academic-cards-wrapper">
+  /* Tablet */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .academic-cards-wrapper img {
+      height: 280px !important;
+    }
+  }
+
+  /* Mobile — prevent cut / squeeze */
+  @media (max-width: 640px) {
+    .academic-cards-wrapper img {
+      height: 220px !important;
+      object-fit: cover !important;   /* show full image */
+      padding: 6px;
+    }
+  }
+
+  .academic-cards-wrapper img[src=""],
+  .academic-cards-wrapper img:not([src]) {
+    display: none !important;
+  }
+`}</style>
+
+
+            <div
+                ref={wrapperRef}
+                onClickCapture={handleClickCapture}
+                className="academic-cards-wrapper"
+            >
                 <Cards cards={cards} />
             </div>
 

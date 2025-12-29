@@ -1,16 +1,16 @@
-import React from 'react'
-import MediaCardSlider from '@/app/components/general/media-card-slider';
+import React from "react";
+import MediaCardSlider from "@/app/components/general/media-card-slider";
 
 function Valueadditionvideointerview() {
     const videoItems = [
         {
             id: 1,
-            name: "Sangita Jana",
-            description: "BSc Forensic Science",
+            name: "Sadiq Isa Yusuf",
+            description: "MBA",
             videoUrl:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_e260bdb8-0152-4a83-93bd-fc33bb794b02.mp4",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_7fe436a0-5cc2-45e0-90bf-49bf031fb5f2+(1)+(1).mp4",
             thumbnail:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_e260bdb8-0152-4a83-93bd-fc33bb794b02.mp4",
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_7fe436a0-5cc2-45e0-90bf-49bf031fb5f2+(1)+(1).mp4",
         },
         {
             id: 2,
@@ -31,8 +31,35 @@ function Valueadditionvideointerview() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VIDEO_8b1b9390-247c-4ca7-b120-29a1e6e2d85d.mp4",
         },
     ];
+
     return (
         <>
+            <style jsx global>{`
+        /* ✅ Only affect this slider */
+        @media (max-width: 640px) {
+          /* Thumbnail <img> case */
+          .ccrc-video-slider img {
+            object-fit: contain !important;
+            background: #fff !important; /* optional to avoid black bars */
+          }
+
+          /* ReactPlayer thumbnail wrapper often uses <video> or inner div */
+          .ccrc-video-slider video {
+            height: 380px !important;
+            object-fit: contain !important;
+            background: #fff !important;
+          }
+
+          /* If the player uses a background-image on a div */
+          .ccrc-video-slider [style*="background-image"] {
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-color: #fff !important;
+          }
+        }
+      `}</style>
+
             <MediaCardSlider
                 categoryTitle=""
                 title="Their Experience Can Become Your Inspiration"
@@ -43,7 +70,7 @@ function Valueadditionvideointerview() {
                 swiperClassName="ccrc-video-slider"
             />
         </>
-    )
+    );
 }
 
-export default Valueadditionvideointerview
+export default Valueadditionvideointerview;

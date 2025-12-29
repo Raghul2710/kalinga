@@ -1,10 +1,30 @@
-// ✅ 1) VALUE ADDITION CARDS (Modal + Link Navigation)
-// File: valueadditioncards.jsx
-
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Cards from "../ccrc/cards";
+
+/** ✅ Reusable helper: hide Know More button for cards without link/href */
+function useHideKnowMoreWithoutLink(wrapperRef, cards) {
+    useLayoutEffect(() => {
+        const root = wrapperRef.current;
+        if (!root) return;
+
+        // Cards.jsx renders each card as direct child div of <section>
+        const cardEls = root.querySelectorAll("section > div");
+
+        cardEls.forEach((cardEl, i) => {
+            const hasLink = !!cards[i]?.link || !!cards[i]?.href;
+
+            // Know More wrapper inside Cards.jsx:
+            // <div className="absolute left-5 bottom-4 z-10">
+            const btnWrap = cardEl.querySelector(".absolute.left-5.bottom-4");
+
+            if (btnWrap) {
+                btnWrap.style.display = hasLink ? "" : "none";
+            }
+        });
+    }, [wrapperRef, cards]);
+}
 
 function Valueadditioncards() {
     const wrapperRef = useRef(null);
@@ -17,48 +37,61 @@ function Valueadditioncards() {
             title: "Incubation Center",
             description:
                 "Kalinga Incubation Foundation supports students’ innovative business ideas and turns them into successful business ventures.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
-            // link: "/incubation-centre",
+            link: "/kif",
         },
         {
             title: "CTCD",
             description:
                 "Our Corporate Training and Consultancy Division (CTCD) provides customised training to organisations using experiential learning methods.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
-            link: "/ctcd", // ✅ example navigation
+            link: "/ctcd", // ✅ will show Know More
         },
         {
             title: "CIF Labs",
             description:
                 "Facilitating researchers and students with high-end instruments in basic, applied, and life sciences.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
-            // link: "/cif-labs",
+            link: "/research-facilities",
         },
         {
             title: "CoEs",
             description:
                 "Our Centres of Excellence include: Electric Vehicles (Godawari Electric Motors Pvt. Ltd. - Eblu), IIoT (Technoviz Automation), Robotics, Coding, & Drones (BDS Education), AI-ML (IBM Innovation Centre for Education - ICE), MSME (IamSMEofIndia), BRIDGE Courses (BOSCH), Automobile Training Centre (JustAuto Solutions).",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002977.png",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-banner.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
-            link: "/centres-of-excellence", // ✅ example navigation
+            link: "/centresofexcellence", // ✅ will show Know More
         },
         {
             title: "New Age Programs",
             description:
                 "Our next-gen programs will prepare you for future career roles in the tech and creative world.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/career.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-glimpse2.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
-            // link: "/new-age-programs",
         },
     ];
+
+    // ✅ Pass href too (Cards.jsx uses card.href)
+    const cardsForCardsComponent = cards.map((c) => ({
+        ...c,
+        href: c.link || null,
+    }));
+
+    // ✅ Hide Know More for non-link cards (before paint)
+    useHideKnowMoreWithoutLink(wrapperRef, cardsForCardsComponent);
 
     useEffect(() => {
         const onKeyDown = (e) => e.key === "Escape" && setOpen(false);
@@ -82,12 +115,20 @@ function Valueadditioncards() {
         const root = wrapperRef.current;
         if (!root) return;
 
-        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter((el) =>
+        // Only visible Know More buttons (linked cards only) will remain
+        const knowMoreButtons = Array.from(
+            root.querySelectorAll("button, a")
+        ).filter((el) =>
             (el.textContent || "").trim().toLowerCase().includes("know more")
         );
 
         const idx = knowMoreButtons.indexOf(btn);
-        const picked = cards[idx];
+
+        // IMPORTANT:
+        // Since we hide Know More for cards without link,
+        // idx maps to "linked cards only". So we find the linked cards list.
+        const linkedCards = cards.filter((c) => !!c.link);
+        const picked = linkedCards[idx];
         if (!picked) return;
 
         // ✅ Navigate if link exists
@@ -96,7 +137,7 @@ function Valueadditioncards() {
             return;
         }
 
-        // ✅ Else modal
+        // ✅ Else modal (not used here since button hidden for no-link)
         setModalData({
             title: picked?.title || "Details",
             description: picked?.description || "",
@@ -107,20 +148,49 @@ function Valueadditioncards() {
     return (
         <>
             <style jsx global>{`
-        .valueadd-cards-wrapper img {
-          width: 100% !important;
-          height: 340px !important;
-          object-fit: cover !important;
-        }
+  /* ✅ Default: desktop look */
+  .valueadd-cards-wrapper img {
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0.75rem;
+  }
 
-        .valueadd-cards-wrapper img[src=""],
-        .valueadd-cards-wrapper img:not([src]) {
-          display: none !important;
-        }
-      `}</style>
+  /* ✅ Desktop */
+  @media (min-width: 1024px) {
+    .valueadd-cards-wrapper img {
+      height: 340px !important;
+    }
+  }
 
-            <div ref={wrapperRef} onClickCapture={handleClickCapture} className="valueadd-cards-wrapper">
-                <Cards cards={cards} />
+  /* ✅ Tablet */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .valueadd-cards-wrapper img {
+      height: 280px !important;
+    }
+  }
+
+  /* ✅ Mobile: prevent squeeze/cut */
+  @media (max-width: 640px) {
+    .valueadd-cards-wrapper img {
+      height: 220px !important;   /* reduce height */
+      object-fit: cover !important; /* prevents cutting */
+      padding: 6px;     /* optional: gives breathing space */
+    }
+  }
+
+  .valueadd-cards-wrapper img[src=""],
+  .valueadd-cards-wrapper img:not([src]) {
+    display: none !important;
+  }
+`}</style>
+
+
+            <div
+                ref={wrapperRef}
+                onClickCapture={handleClickCapture}
+                className="valueadd-cards-wrapper"
+            >
+                <Cards cards={cardsForCardsComponent} />
             </div>
 
             {open && (

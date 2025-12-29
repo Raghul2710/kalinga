@@ -34,6 +34,7 @@ function page() {
     }
   }
 `}</style>
+
       <AutoBreadcrumb data={breadcrumbData} />
       <RaipurMainIntro />
       <NewRaipur />

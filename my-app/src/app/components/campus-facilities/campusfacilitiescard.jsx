@@ -1,10 +1,30 @@
-// ✅ 2) CAMPUS FACILITIES CARD (Modal + Link Navigation)
-// File: campusfacilitiescard.jsx
-
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Cards from "../ccrc/cards";
+
+/** ✅ Reusable helper: hides Know More button for cards without link/href */
+function useHideKnowMoreWithoutLink(wrapperRef, cards) {
+    useLayoutEffect(() => {
+        const root = wrapperRef.current;
+        if (!root) return;
+
+        // Each card wrapper in Cards.jsx is a direct child of <section>
+        const cardEls = root.querySelectorAll("section > div");
+
+        cardEls.forEach((cardEl, i) => {
+            const hasLink = !!cards[i]?.link || !!cards[i]?.href;
+
+            // Know More wrapper in Cards.jsx:
+            // <div className="absolute left-5 bottom-4 z-10">
+            const btnWrap = cardEl.querySelector(".absolute.left-5.bottom-4");
+
+            if (btnWrap) {
+                btnWrap.style.display = hasLink ? "" : "none";
+            }
+        });
+    }, [wrapperRef, cards]);
+}
 
 function Campusfacilitiescard() {
     const wrapperRef = useRef(null);
@@ -21,16 +41,17 @@ function Campusfacilitiescard() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/hostel.webp",
             logoSrc: "",
             subtitle: "STUDENT ACCOMMODATION",
-            // link: "/campus-facilities/hostel",
+            link: "/hostel",
         },
         {
             title: "Mess",
             description:
                 "In partnership with Sodexo Food Solutions India Pvt. Ltd., separate mess facilities for boys and girls serve four nutritious meals daily—breakfast, lunch, high tea, and dinner—prepared hygienically.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/mess.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/mess.webp",
             logoSrc: "",
             subtitle: "DINING FACILITIES",
-            // link: "/campus-facilities/mess",
+            link: "/cafeteria-mess",
         },
         {
             title: "Canteen & Cafeteria",
@@ -45,7 +66,8 @@ function Campusfacilitiescard() {
             title: "Transportation Options",
             description:
                 "With 30+ buses and four-wheel vehicles, we provide pick-up and drop facilities covering up to 70 km (one way). Transport is offered at minimal rates with faculty proctorial supervision.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/transport-1.jpg",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/transport-1.jpg",
             logoSrc: "",
             subtitle: "CAMPUS CONNECTIVITY",
             // link: "/campus-facilities/transport",
@@ -54,9 +76,11 @@ function Campusfacilitiescard() {
             title: "Mini Market",
             description:
                 "The on-campus mini market includes an ATM, salon, stationery store, snack shop, juice centre, and chemist—saving students time by meeting daily needs within campus.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/mini-market2.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/mini-market2.webp",
             logoSrc: "",
             subtitle: "DAILY ESSENTIALS",
+            link: "/mini-market",
         },
         {
             title: "Hostel Reading Room",
@@ -71,15 +95,18 @@ function Campusfacilitiescard() {
             title: "Health Clinic",
             description:
                 "Our on-campus health clinic is staffed with an experienced doctor and nurse, offering general consultation, counselling, and emergency medical support.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Health+Clinic1.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Health+Clinic1.webp",
             logoSrc: "",
             subtitle: "HEALTH & WELLNESS",
+            link: "/health-clinic"
         },
         {
             title: "Banking and ATM",
             description:
                 "We have tie-ups with Central Bank of India and Canara Bank for education loans, along with 24-hour ATMs from ICICI and OBC banks. Multiple digital payment options are supported.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/bank-atm1.png",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/bank-atm1.png",
             logoSrc: "",
             subtitle: "FINANCIAL SERVICES",
         },
@@ -91,12 +118,14 @@ function Campusfacilitiescard() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/wifienabledcampus.webp",
             logoSrc: "",
             subtitle: "DIGITAL INFRASTRUCTURE",
+            //link: "/campus-facilities/wifi", // ✅ example: button will show
         },
         {
             title: "Safety & Security",
             description:
                 "Our campus is secured by an in-house security team with CCTV surveillance across hostels, parking areas, and academic buildings to ensure a safe environment.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security1.jpg",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security1.jpg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY",
         },
@@ -104,7 +133,8 @@ function Campusfacilitiescard() {
             title: "Art Gallery",
             description:
                 "The art gallery showcases souvenirs from different countries, allowing national and international students to explore cultural diversity and global traditions.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/artgallery.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/artgallery.webp",
             logoSrc: "",
             subtitle: "CULTURAL EXPRESSION",
         },
@@ -112,7 +142,8 @@ function Campusfacilitiescard() {
             title: "Sanitary Napkin Vending Machines",
             description:
                 "Sanitary napkin vending machines are installed in all girls’ washrooms and hostels to ensure hygiene and round-the-clock accessibility for female students.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/sanitary-napkin-vending-machines.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/sanitary-napkin-vending-machines.webp",
             logoSrc: "",
             subtitle: "WOMEN WELLBEING",
             // link: "/campus-facilities/women-wellbeing",
@@ -121,7 +152,8 @@ function Campusfacilitiescard() {
             title: "Recreation Corners",
             description:
                 "Our peaceful recreational corners offer students a space to relax, unwind, socialize, and take breaks from academic stress in a calm environment.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp",
             logoSrc: "",
             subtitle: "STUDENT LIFE",
         },
@@ -129,11 +161,21 @@ function Campusfacilitiescard() {
             title: "Selfie Points",
             description:
                 "We have picturesque selfie points across campus where students can capture memorable moments and share their experiences with friends and family.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/selfiepoints.webp",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/selfiepoints.webp",
             logoSrc: "",
             subtitle: "CAMPUS EXPERIENCE",
         },
     ];
+
+    // ✅ Provide href for Cards.jsx navigation (optional but good)
+    const cardsForCardsComponent = cards.map((c) => ({
+        ...c,
+        href: c.link || null,
+    }));
+
+    // ✅ Hide button for non-link cards (before paint)
+    useHideKnowMoreWithoutLink(wrapperRef, cardsForCardsComponent);
 
     useEffect(() => {
         const onKeyDown = (e) => e.key === "Escape" && setOpen(false);
@@ -157,8 +199,8 @@ function Campusfacilitiescard() {
         const root = wrapperRef.current;
         if (!root) return;
 
-        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter((el) =>
-            (el.textContent || "").trim().toLowerCase().includes("know more")
+        const knowMoreButtons = Array.from(root.querySelectorAll("button, a")).filter(
+            (el) => (el.textContent || "").trim().toLowerCase().includes("know more")
         );
 
         const idx = knowMoreButtons.indexOf(btn);
@@ -180,20 +222,49 @@ function Campusfacilitiescard() {
     return (
         <>
             <style jsx global>{`
-        .campus-cards-wrapper img {
-          width: 100% !important;
-          height: 340px !important;
-          object-fit: cover !important;
-        }
+  /* Default (Desktop base) */
+  .campus-cards-wrapper img {
+    width: 100% !important;
+    object-fit: cover !important;
+    border-radius: 0.75rem;
+  }
 
-        .campus-cards-wrapper img[src=""],
-        .campus-cards-wrapper img:not([src]) {
-          display: none !important;
-        }
-      `}</style>
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .campus-cards-wrapper img {
+      height: 340px !important;
+    }
+  }
 
-            <div ref={wrapperRef} onClickCapture={handleClickCapture} className="campus-cards-wrapper">
-                <Cards cards={cards} />
+  /* Tablet */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .campus-cards-wrapper img {
+      height: 280px !important;
+    }
+  }
+
+  /* Mobile — prevent cut / squeeze */
+  @media (max-width: 640px) {
+    .campus-cards-wrapper img {
+      height: 220px !important;
+      object-fit: cover !important;   /* show full image */
+      padding: 6px;
+    }
+  }
+
+  .campus-cards-wrapper img[src=""],
+  .campus-cards-wrapper img:not([src]) {
+    display: none !important;
+  }
+`}</style>
+
+
+            <div
+                ref={wrapperRef}
+                onClickCapture={handleClickCapture}
+                className="campus-cards-wrapper"
+            >
+                <Cards cards={cardsForCardsComponent} />
             </div>
 
             {open && (

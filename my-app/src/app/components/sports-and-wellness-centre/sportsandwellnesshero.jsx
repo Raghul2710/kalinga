@@ -57,16 +57,47 @@ function SportsAndWellnessHero() {
           background-color: #f3f4f6;
         }
 
-        /* 🔥 IMPORTANT: kill any white bg coming from ImageListItem wrapper */
+        /* kill white bg coming from ImageListItem wrapper */
         .sports-imagelistitem .bg-white {
           background: transparent !important;
         }
 
+        /* ✅ Responsive image sizing (NO huge height on mobile) */
         .sports-imagelistitem img.col-span-6.rounded-xl {
           width: 100% !important;
-          height: 500px !important;
-          object-fit: cover !important;
           max-width: 100% !important;
+          height: auto !important; /* let it scale naturally */
+          object-fit: cover !important;
+
+          /* Desktop-ish default height cap */
+          max-height: 500px !important;
+        }
+
+        /* ✅ On small screens: keep image compact */
+        @media (max-width: 640px) {
+          .sports-imagelistitem img.col-span-6.rounded-xl {
+            max-height: 260px !important; /* adjust if you want 220/280 */
+            border-radius: 16px !important;
+          }
+
+          /* reduce section padding on mobile */
+          .sports-wellness-bg {
+            padding-top: 32px !important;
+            padding-bottom: 32px !important;
+          }
+
+          /* reduce container side padding */
+          .sports-imagelistitem {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+          }
+        }
+
+        /* ✅ Smooth responsive height cap for tablets */
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .sports-imagelistitem img.col-span-6.rounded-xl {
+            max-height: 380px !important;
+          }
         }
 
         .svg-ivory {
