@@ -86,7 +86,7 @@ const TRAINING_DETAILS_GALLERY_IMAGES = transformToGalleryImages(trainingDetails
 const CARD_CLASSNAME = "rounded-[16px] bg-[var(--card-sandal)] p-[22px] md:p-[26px]";
 const CARD_TITLE_CLASSNAME = "font-plus-jakarta-sans text-[24px] leading-[30px] font-medium text-[var(--button-red)]";
 const CARD_TEXT_CLASSNAME = "mt-[10px] text-[var(--foreground)]";
-const SECTION_TITLE_CLASSNAME = "font-stix text-2xl md:text-[40px] text-[var(--foreground)]";
+const SECTION_TITLE_CLASSNAME = "font-stix text-2xl md:text-[30px] text-[var(--foreground)]";
 const ACCORDION_TITLE_CLASSNAME = "font-plus-jakarta-sans text-[24px] leading-[30px] font-medium text-[var(--button-red)]";
 
 // Reusable Training Glimpse Gallery component
@@ -199,7 +199,7 @@ export default function CtcdTrainingTabs() {
                         <TabsContent value="details">
                             <SectionHeading 
                                 title="Training Details"
-                                titleClassName=" text-2xl md:text-[40px]"
+                                titleClassName={SECTION_TITLE_CLASSNAME}
                             />
                             <FAQ
                                 title=""
@@ -288,7 +288,7 @@ export default function CtcdTrainingTabs() {
                         <TabsContent value="assessments">
                             <SectionHeading 
                                 title="Our Behavioural and Psychometric Assessments"
-                                titleClassName="font-stix text-2xl md:text-[40px] text-[var(--foreground)]"
+                                titleClassName={SECTION_TITLE_CLASSNAME}
                             />
                             {/* Two beige cards */}
                             <div className="mt-[26px] grid gap-[22px] md:grid-cols-1">
