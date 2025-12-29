@@ -176,6 +176,8 @@ const breadcrumbData = {
           subtitle="Discover Chhattisgarh"
           description="Located in the heart of India and also known as the ‘Rice Bowl of India’, Chhattisgarh is known for its popular temples, waterfalls, and historical sites. It has become a hub for students, researchers, travellers, and entrepreneurs due to growing opportunities in education, sustainable development, innovation, and exploration. It is famous for its Dhokra (bell metal) art, terracotta sculptures, and bamboo crafts that are admired globally for their detailing and precision. Chhattisgarh offers an inspiring learning environment and lifestyle. "
           cards={cards}
+          cardMinHeight="180px"
+          cardLineClamp={3}
         />
       </div>
     );

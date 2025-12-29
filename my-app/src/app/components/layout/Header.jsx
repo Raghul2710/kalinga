@@ -291,7 +291,7 @@ const Header = () => {
 
     {
       label: 'International',
-      href: '/international',
+      href: '/international-students',
     },
     {
       label: 'IQAC',

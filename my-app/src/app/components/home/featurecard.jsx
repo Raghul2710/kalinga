@@ -13,6 +13,8 @@ export default function FeatureCards({
   title = "Why is Kalinga University the Right Choice?",
   subtitle = "Why is Kalinga University the Right Choice?",
   description = null,
+  cardMinHeight = '260px',
+  cardLineClamp = 3,
   cards = [
     { 
       id: 1, 
@@ -169,7 +171,7 @@ export default function FeatureCards({
   const toggleCard = (id) => setCardExpanded((prev) => ({ ...prev, [id]: !prev[id] }))
   const collapsedTextStyle = {
     display: '-webkit-box',
-    WebkitLineClamp: 3,
+    WebkitLineClamp: cardLineClamp,
     WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
   }
@@ -271,7 +273,7 @@ export default function FeatureCards({
                 {cards.map((c) => (
                   <SwiperSlide key={c.id} className="h-auto">
                     <div className="h-full">
-                      <div className={`relative rounded-lg p-4 sm:p-5 md:p-5 lg:p-5 shadow-xl h-full flex items-center ${c.variant === 'amber' ? 'bg-[var(--card-sandal)] text-black' : 'bg-[var(--card-gray)] text-gray-800'}`} style={{ minHeight: '260px' }}>
+                      <div className={`relative rounded-lg p-4 sm:p-5 md:p-5 lg:p-5 shadow-xl h-full flex items-center ${c.variant === 'amber' ? 'bg-[var(--card-sandal)] text-black' : 'bg-[var(--card-gray)] text-gray-800'}`} style={{ minHeight: cardMinHeight }}>
                         <div className="flex flex-col gap-3 sm:gap-4 w-full h-full">
                           {c.image && (
                             <div className="flex-shrink-0">
@@ -337,7 +339,7 @@ export default function FeatureCards({
               {cards.map((c) => (
                 <div
                   key={c.id}
-                  className={`relative rounded-lg p-4 sm:p-5 md:p-5 lg:p-6 shadow-xl flex ${c.variant === 'amber' ? 'bg-[var(--card-sandal)] text-black' : 'bg-[var(--card-gray)] text-gray-800'}`} style={{ minHeight: '260px' }}
+                  className={`relative rounded-lg p-4 sm:p-5 md:p-5 lg:p-6 shadow-xl flex ${c.variant === 'amber' ? 'bg-[var(--card-sandal)] text-black' : 'bg-[var(--card-gray)] text-gray-800'}`} style={{ minHeight: cardMinHeight }}
                 >
                   <div className="flex flex-col gap-3 sm:gap-4 w-full h-full">
                     <div className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-white/60 flex-shrink-0" />
