@@ -321,7 +321,7 @@ export default function Map({ backgroundColor = "", textColor = "", subtitleText
         </div>
         
         {/* Legend - Horizontal under image */}
-        <div className="w-full rounded-[20px] bg-[#D9D9D975] backdrop-blur-md overflow-hidden relative top-[-35px]">
+        <div className="w-full rounded-[20px] bg-[#D9D9D975] backdrop-blur-md overflow-hidden relative top-6 md:top-[-35px]">
           <GlowingBox borderColor="var(--button-red)" className="p-6 rounded-[20px]">
             {/* Marquee Slider using LogoLoop */}
             <div className="relative z-20" style={{ pointerEvents: 'auto' }}>
@@ -347,7 +347,15 @@ export default function Map({ backgroundColor = "", textColor = "", subtitleText
                       activeLocation === item.id ? null : item.id
                     )}
                   >
-                    <Image src={item.src} alt={item.alt} width={30} height={30} />
+                    <Image 
+                      src={item.src.replace('/w40/', '/w320/')} 
+                      alt={item.alt} 
+                      width={120} 
+                      height={120}
+                      className="object-contain w-20 h-20 md:w-24 md:h-24"
+                      quality={100}
+                      unoptimized={false}
+                    />
                     {/* <span className="text-xs md:text-sm text-center whitespace-nowrap">{item.title}</span> */}
                   </div>
                 )}
