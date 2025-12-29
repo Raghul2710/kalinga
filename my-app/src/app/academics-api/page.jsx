@@ -9,7 +9,7 @@ import QuickLinks from "@/app/components/general/quick_links";
 import Stack from '@/app/components/gsap/Stack'
 import { fetchAllDepartments, fetchDepartmentCompleteDetail, parseHtmlToText, fetchDepartmentCourseCounts } from '@/app/lib/api'
 import { useBreadcrumbData } from '@/app/components/layout/BreadcrumbContext'
-import GlobalArrowButton from '@/app/components/general/global-arrow_button'
+import GlobalArrowButton from '@/app/components/general/global-arrow_button' 
 
 // Function to convert text to proper title case
 const toTitleCase = (str) => {
@@ -399,8 +399,8 @@ function DepartmentCard({ program }) {
               className="mt-0.5"
             />
             <span className="text-gray-800">
-              <span className="font-stix md:text-[20px] text-[16px] text-black">Scholarships :</span>{' '}
-              <Link href="/scholarships" className=" cursor-pointer text-[var(--button-red)] font-semibold ml-1 hover:underline inline !text-[16px]">
+              <span className="font-stix text-[20px] text-black">Scholarships :</span>{' '}
+              <Link href="/scholarships" className=" cursor-pointer  ml-1 hover:underline inline text-xl ">
                 {program.scholarships}
               </Link>
             </span>

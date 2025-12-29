@@ -77,39 +77,98 @@ export default function DynamicCoursePage() {
         console.log(`[Course Page] Looking for course with slug: "${slug}" (normalized: "${normalizedSlug}")`);
         console.log(`[Course Page] Total courses fetched: ${courses.length}`);
         
+        // Log first few courses for debugging
+        console.log(`[Course Page] Sample courses:`, courses.slice(0, 5).map(c => ({
+          id: c.id,
+          name: c.name,
+          slug: c.slug,
+          generatedSlug: generateSlug(c.name || ''),
+          normalizedSlug: normalizeSlug(c.slug || generateSlug(c.name || '')),
+          normalizedName: normalizeSlug(c.name || '')
+        })));
+        
         // Try multiple matching strategies
         let course = null;
+        let matchStrategy = '';
         
         // Strategy 1: Exact slug match (case-insensitive)
         course = courses.find(c => {
           if (!c.slug) return false;
-          return normalizeSlug(c.slug) === normalizedSlug;
+          const cNormalized = normalizeSlug(c.slug);
+          return cNormalized === normalizedSlug;
         });
+        if (course) matchStrategy = 'exact-slug';
         
         // Strategy 2: Generated slug from name
         if (!course) {
           course = courses.find(c => {
             if (!c.name) return false;
-            return normalizeSlug(generateSlug(c.name)) === normalizedSlug;
+            const generated = generateSlug(c.name);
+            const cNormalized = normalizeSlug(generated);
+            return cNormalized === normalizedSlug;
           });
+          if (course) matchStrategy = 'generated-slug-from-name';
         }
         
-        // Strategy 3: Partial match on slug
+        // Strategy 3: Normalized name match (direct name normalization)
+        if (!course) {
+          course = courses.find(c => {
+            if (!c.name) return false;
+            const cNormalized = normalizeSlug(c.name);
+            return cNormalized === normalizedSlug;
+          });
+          if (course) matchStrategy = 'normalized-name';
+        }
+        
+        // Strategy 4: Partial match on slug (contains)
         if (!course) {
           course = courses.find(c => {
             if (!c.slug) return false;
-            return normalizeSlug(c.slug).includes(normalizedSlug) || normalizedSlug.includes(normalizeSlug(c.slug));
+            const cNormalized = normalizeSlug(c.slug);
+            return cNormalized.includes(normalizedSlug) || normalizedSlug.includes(cNormalized);
           });
+          if (course) matchStrategy = 'partial-slug-match';
         }
         
-        // Strategy 4: Match on name (remove common prefixes/suffixes)
+        // Strategy 5: Partial match on generated slug
+        if (!course) {
+          course = courses.find(c => {
+            if (!c.name) return false;
+            const generated = generateSlug(c.name);
+            const cNormalized = normalizeSlug(generated);
+            return cNormalized.includes(normalizedSlug) || normalizedSlug.includes(cNormalized);
+          });
+          if (course) matchStrategy = 'partial-generated-slug';
+        }
+        
+        // Strategy 6: Match on name words (all key terms match)
         if (!course) {
           const searchTerms = normalizedSlug.split('-').filter(t => t.length > 2);
           course = courses.find(c => {
             if (!c.name) return false;
             const normalizedName = normalizeSlug(c.name);
-            return searchTerms.every(term => normalizedName.includes(term));
+            // Check if all search terms are present in the course name
+            return searchTerms.length > 0 && searchTerms.every(term => normalizedName.includes(term));
           });
+          if (course) matchStrategy = 'name-words-match';
+        }
+        
+        // Strategy 7: Case-insensitive name match (remove special chars)
+        if (!course) {
+          const searchName = slug.replace(/-/g, ' ').toLowerCase().trim();
+          course = courses.find(c => {
+            if (!c.name) return false;
+            const cName = c.name.toLowerCase().replace(/[^a-z0-9\s]/g, '').trim();
+            return cName === searchName || cName.includes(searchName) || searchName.includes(cName);
+          });
+          if (course) matchStrategy = 'case-insensitive-name';
+        }
+        
+        // Strategy 8: Try matching by ID if slug is numeric
+        if (!course && /^\d+$/.test(slug)) {
+          const courseId = parseInt(slug, 10);
+          course = courses.find(c => c.id === courseId);
+          if (course) matchStrategy = 'id-match';
         }
         
         // Log potential matches for debugging
@@ -125,33 +184,50 @@ export default function DynamicCoursePage() {
                    searchName.includes(cName);
           });
           
-          console.log(`[Course Page] No exact match found. Potential matches (${potentialMatches.length}):`, 
+          console.log(`[Course Page] No match found. Potential matches (${potentialMatches.length}):`, 
             potentialMatches.slice(0, 10).map(c => ({ 
               id: c.id, 
               name: c.name, 
               slug: c.slug,
-              generatedSlug: generateSlug(c.name),
-              normalizedSlug: normalizeSlug(c.slug || generateSlug(c.name))
+              generatedSlug: generateSlug(c.name || ''),
+              normalizedSlug: normalizeSlug(c.slug || generateSlug(c.name || '')),
+              normalizedName: normalizeSlug(c.name || '')
+            }))
+          );
+          
+          // Also log courses with similar slugs
+          console.log(`[Course Page] Courses containing "master" or "mba":`, 
+            courses.filter(c => {
+              const name = (c.name || '').toLowerCase();
+              const cSlug = (c.slug || '').toLowerCase();
+              return name.includes('master') || name.includes('mba') || cSlug.includes('master') || cSlug.includes('mba');
+            }).slice(0, 10).map(c => ({
+              id: c.id,
+              name: c.name,
+              slug: c.slug,
+              generatedSlug: generateSlug(c.name || '')
             }))
           );
         }
         
         if (course) {
-          console.log(`[Course Page] Found course:`, { 
+          console.log(`[Course Page] Found course via ${matchStrategy}:`, { 
             id: course.id, 
             name: course.name, 
             slug: course.slug,
-            generatedSlug: generateSlug(course.name),
-            matchType: 'found'
+            generatedSlug: generateSlug(course.name || ''),
+            normalizedSlug: normalizeSlug(course.slug || generateSlug(course.name || '')),
+            matchStrategy
           });
           setCourseId(course.id);
         } else {
           console.error(`[Course Page] Course not found for slug: "${slug}"`);
-          console.error(`[Course Page] All course slugs:`, courses.slice(0, 20).map(c => ({
+          console.error(`[Course Page] First 20 courses:`, courses.slice(0, 20).map(c => ({
             id: c.id,
             name: c.name,
             slug: c.slug,
-            normalized: normalizeSlug(c.slug || generateSlug(c.name))
+            normalized: normalizeSlug(c.slug || generateSlug(c.name || '')),
+            normalizedName: normalizeSlug(c.name || '')
           })));
           setError(`Course not found: ${slug}`);
           setLoading(false);
