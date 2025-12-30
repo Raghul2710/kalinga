@@ -28,7 +28,7 @@ function Valueadditionsofkalinga() {
             id: 4,
             title: "Internships and Industrial Visits",
             body: "All Kalinga University students are provided with internship opportunities and are encouraged to work on practical projects and visit industrial sites.",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/industrialvisit.svg",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/internship.svg",
             variant: "amber",
         },
         {
@@ -56,7 +56,7 @@ function Valueadditionsofkalinga() {
             id: 8,
             title: "National Service Scheme (NSS)",
             body: "Become a part of our NSS team and engage in our student volunteer programs. It will make you confident, develop leadership qualities, and become an active citizen through social and community services.",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/nss.svg",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/nss-1.svg",
             variant: "amber",
         },
         {
@@ -77,14 +77,14 @@ function Valueadditionsofkalinga() {
             id: 11,
             title: "Grooming and Placements",
             body: "Our special trainers prepare students with soft skills, basic mannerisms, etiquette, interview preparation, and language proficiency, making them ready for campus placement drives.",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/placement.svg",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/placement-1.svg",
             variant: "gray",
         },
         {
             id: 12,
             title: "Experience Cultural Diversity",
             body: "We have students from 28+ nationalities, which opens doors to experiencing a wide diversity. We encourage all our students to participate in different festivals or cultural activities and develop global connections.",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/culturaldiversity.svg",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/diversity.svg",
             variant: "amber",
         },
         {
@@ -98,14 +98,16 @@ function Valueadditionsofkalinga() {
 
     return (
         <>
-            <FeatureCards
-                title="Value Additions Of Kalinga University"
-                subtitle=""
-                description="We’ve created a learning environment where you can find your passion, develop curiosity, and get new experiences. You will not just attend classes but grow academically, personally, and socially. At KU, you will get a space that matches your energy and ambition."
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/campuslife.webp"
-                imageAlt="International Students"
-                cards={internationalStudentsFeatureCards}
-            />
+            <div className="force-outline-icons">
+                <FeatureCards
+                    title="Value Additions Of Kalinga University"
+                    subtitle=""
+                    description="We’ve created a learning environment where you can find your passion..."
+                    imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/campuslife.webp"
+                    imageAlt="International Students"
+                    cards={internationalStudentsFeatureCards}
+                />
+            </div>
         </>
     )
 }

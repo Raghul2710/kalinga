@@ -22,20 +22,20 @@ export default function SportsFacilitiesTabs({
   snookerImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/snooker.webp",
 
   // Outdoor (single images)
-  cricketImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  footballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  cricketImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/cricket.webp",
+  footballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/football.webp",
   badmintonImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/badminton.webp",
   basketballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/basektballevent.webp",
-  volleyballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  volleyballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/volleyball.webp",
   kabaddiImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/kabaddi+(1).webp",
-  khoKhoImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  hockeyImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  khoKhoImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/kho-kho.webp",
+  hockeyImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/hockey.webp",
   handballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/handball.webp",
-  lawnTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  shotPutImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  discusThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  javelinThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-  hammerThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  lawnTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/table_tennis.webp",
+  shotPutImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/shotput.webp",
+  discusThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/discthrow.webp",
+  javelinThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/javelin_throw.webp",
+  hammerThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/hammer_throw.webp",
 
   // Multiple images
   gymImages = [],
@@ -54,8 +54,9 @@ export default function SportsFacilitiesTabs({
   const [activeTab, setActiveTab] = useState("indoor");
 
   const toggleAccordion = (id) => {
-    setActiveTab((prev) => (prev === id ? "" : id));
+    setActiveTab((prev) => (prev === id ? "indoor" : id));
   };
+
 
   const renderTabContent = (tabId) => {
     if (tabId === "indoor") {
@@ -365,19 +366,13 @@ function OutdoorGames({
       </div>
 
       {/* ✅ TABLE 1 (DataTable) */}
-      <p className="mt-10 font-plus-jakarta-sans font-semibold text-[var(--foreground)]">Outdoor Game Facilities</p>
+      <h5 className="mt-10 font-plus-jakarta-sans font-semibold text-[var(--foreground)]">Outdoor Game Facilities</h5>
 
       <div className="mt-4">
         <DataTable
           columns={facilitiesColumns}
           data={facilitiesRows}
           overflowX={true}
-          className="border border-black/10"
-          headerBgColor="bg-black/5"
-          headerTextColor="text-[var(--foreground)]"
-          evenRowBg="bg-white"
-          oddRowBg="bg-gray-50"
-          borderColor="border-black/10"
         />
       </div>
 
@@ -389,12 +384,6 @@ function OutdoorGames({
           columns={groundsColumns}
           data={groundRows}
           overflowX={true}
-          className="border border-black/10"
-          headerBgColor="bg-black/5"
-          headerTextColor="text-[var(--foreground)]"
-          evenRowBg="bg-white"
-          oddRowBg="bg-gray-50"
-          borderColor="border-black/10"
         />
       </div>
     </div>

@@ -1,17 +1,17 @@
 "use client"
 
 import React from "react";
-import HostelWarden from "../department/dept_head_intro";
+import MentorIntro from "../department/dept_head_intro";
 
 function Hostelwarden() {
     const MentorIntroProps = [
         {
-            cardClassName: "",
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            title: "Mr. Manish Singh",
-            subtitle: "Chief Warden",
-            department: "",
+            title: "A Message From the Warden",
+            subtitle: "Mr. Manish Singh",
+            department: "Warden - Hostel",
+            imageAlt: "Warden-Hostel",
             message: [
                 "I welcome you all to the Kalinga family, where students live in a neat and clean environment and develop self-discipline. Our students come from all around the globe with different cultures and upbringings, but they live together in harmony.",
                 "We provide them with an atmosphere where they can learn, live, laugh, and grow together. Our dedicated wardens of each hostel ensure cleanliness in each corner so that hostelers live in a hygienic environment.",
@@ -24,17 +24,9 @@ function Hostelwarden() {
 
     return (
         <>
-            {/* ✅ PAGE-SCOPED FIX FOR MODAL POSITION */}
-            <style jsx global>{`
-        /* Center the popup vertically for Hostel Warden page only */
-        body .fixed.inset-0.flex.items-end.justify-center {
-          align-items: center !important;
-          padding-top: 80px; /* keeps it below navbar */
-          padding-bottom: 40px;
-        }
-      `}</style>
-
-            <HostelWarden items={MentorIntroProps} />
+            <div className="-mt-16 md:-mt-20">
+                <MentorIntro items={MentorIntroProps} />
+            </div>
         </>
     );
 }

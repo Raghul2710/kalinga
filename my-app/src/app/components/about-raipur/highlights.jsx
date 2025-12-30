@@ -21,7 +21,7 @@ function Highlights() {
             id: 3,
             title: 'Education Hub of Central India',
             body: 'Raipur is home to some of the renowned institutions like IIT, IIM, IIIT, Hidayatullah National Law University, and AIIMS. It attracts talented students from different states of India and international students from various corners of the world.',
-            image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about-raipur/educationhub.svg', //change image
+            image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about-raipur/educationhub-1.svg', //change image
             variant: 'gray',
         },
         {

@@ -18,7 +18,7 @@ export default function HostelFeeTabs() {
     const [activeTab, setActiveTab] = useState("boys");
 
     const toggleAccordion = (id) => {
-        setActiveTab((prev) => (prev === id ? "" : id));
+        setActiveTab((prev) => (prev === id ? "boys" : id));
     };
 
     const renderContent = (id) => {
@@ -129,12 +129,6 @@ function HostelFeeTable({ rows }) {
             columns={columns}
             data={data}
             overflowX={true}
-            className="!shadow-none"
-            headerBgColor="bg-black/5"
-            headerTextColor="text-[var(--foreground)]"
-            evenRowBg="bg-white"
-            oddRowBg="bg-white"
-            borderColor="border-black/10"
         />
     );
 }

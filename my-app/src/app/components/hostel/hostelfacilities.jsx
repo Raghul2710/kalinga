@@ -18,7 +18,7 @@ function Hostelfacilities() {
         {
             id: 2,
             name: "Different Occupancy Options",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/occupancy.webp",
         },
         {
             id: 3,
@@ -28,7 +28,7 @@ function Hostelfacilities() {
         {
             id: 4,
             name: "AC / Non-AC Rooms",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/Acnonac.webp",
         },
         {
             id: 5,
@@ -38,7 +38,7 @@ function Hostelfacilities() {
         {
             id: 6,
             name: "Attached Washroom",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/attached.webp",
         },
         {
             id: 7,

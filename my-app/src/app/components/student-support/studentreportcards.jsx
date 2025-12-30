@@ -213,7 +213,7 @@ export default function Studentreportcards() {
             // link: "/new-age-programs",
         },
         {
-            title: "TnP Cell",
+            title: "Training and Placement Cell",
             description:
                 "The Training & Placement Cell conducts interview preparation, resume building, soft skills training, and organises campus placement drives.",
             imageSrc:

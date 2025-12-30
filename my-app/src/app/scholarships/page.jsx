@@ -55,7 +55,7 @@ export default function ScholarshipsPage() {
 
   const breadcrumbData = {
     heroImage:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/scholarship-banner.webp",
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
     pageTitle: "Scholarships",
     customBreadcrumbs: [
       { label: "Home", href: "/" },
@@ -144,7 +144,7 @@ export default function ScholarshipsPage() {
       title:
         "Canara Bank provides education loans and financial assistance to needy and meritorious students seeking admission to Kalinga University, subject to the fulfilment of the bank’s terms, conditions, and eligibility norms.",
       image:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+        "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/canara.webp",
     },
     {
       id: 2,
@@ -152,7 +152,7 @@ export default function ScholarshipsPage() {
       title:
         "Central Bank of India offers education loans and financial assistance to students pursuing studies at Kalinga University, in accordance with the bank’s guidelines and applicable norms.",
       image:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+        "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/central-1.webp",
     },
   ];
 
@@ -344,6 +344,17 @@ export default function ScholarshipsPage() {
 
   return (
     <>
+      <style jsx global>{`
+  .absolute.inset-0 > img {
+    object-position: center 50% !important;
+  }
+
+  @media (max-width: 768px) {
+    .absolute.inset-0 > img {
+      object-position: center 5% !important;
+    }
+  }
+`}</style>
       <AutoBreadcrumb data={breadcrumbData} />
 
       <MainIntro
@@ -391,14 +402,25 @@ export default function ScholarshipsPage() {
 
 
       {/* ✅ Slider cards */}
-      <ScholarshipsSlider
-        items={scholarships}
-        title="Scholarship Details Of Kalinga University"
-        description=""
-        ctaText="Explore Now"
-        ctaHref=""
-        navId=""
-      />
+      <div className="hide-scholarship-cta">
+        <ScholarshipsSlider
+          items={scholarships}
+          title="Scholarship Details Of Kalinga University"
+          description=""
+          ctaText="Explore Now"
+          ctaHref=""
+          navId=""
+        />
+      </div>
+
+      <style jsx global>{`
+      /* Hide "Explore Now" CTA only for this page */
+      .hide-scholarship-cta a.inline-flex {
+        display: none !important;
+      }
+    `}</style>
+
+
 
       {/* ✅ Popup Modal */}
       {open && activeData && (
