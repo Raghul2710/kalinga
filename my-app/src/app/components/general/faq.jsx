@@ -54,7 +54,6 @@ const FAQ = ({
   tableSections = [], // Array of { id, title, data } for multiple sections
   overflowX = false,
   pyClassName = "py-16",
-  disableAccordion = false, // For table-display variant: show tables directly without accordion
   // For button variant
   buttons = []
 }) => {
@@ -475,80 +474,23 @@ const FAQ = ({
             </div>
           )}
           
-          {/* Regular FAQ Items (lists, etc.) */}
-          {regularItems.length > 0 && (
-            <div className="w-full max-w-6xl mx-auto space-y-4 mb-8">
-              {regularItems.map((item) => {
-                const isOpen = openItems.has(item.id)
-                return (
-                  <div
-                    key={item.id}
-                    className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
+          {/* Combined: Table Sections first, then Regular FAQ Items - Single Accordion System */}
+          <div className="w-full max-w-6xl mx-auto space-y-4">
+            {/* Table Sections */}
+            {tableSectionsList.map((section, index) => {
+              const sectionId = section.id || index
+              const fullId = `table-${sectionId}`
+              const isOpen = unifiedOpenId === fullId
+              
+              return (
+                <div key={section.id || index} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                  <button
+                    onClick={() => toggleUnified(sectionId, 'table')}
+                    className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors"
                   >
-                    <button
-                      onClick={() => toggleItem(item.id)}
-                      className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors"
-                    >
-                      <h3 className="text-left text-lg font-plus-jakarta-sans font-semibold text-gray-800">
-                        {item.question}
-                      </h3>
-                      <svg
-                        className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${
-                          isOpen ? 'rotate-180' : ''
-                        }`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-300 ${
-                        isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
-                      }`}
-                    >
-                      <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
-                        {Array.isArray(item.answer) ? (
-                          <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm leading-relaxed font-plus-jakarta-sans">
-                            {item.answer.map((listItem, idx) => (
-                              <li key={idx}>{listItem}</li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <p className="text-gray-700 text-sm leading-relaxed font-plus-jakarta-sans">
-                            {item.answer}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          )}
-          
-          {/* Table Sections */}
-          {tableSectionsList.map((section, index) => {
-            const sectionId = `section-${section.id || index}`
-            const isCollapsed = collapsedSections.has(sectionId)
-            
-            return (
-              <div key={section.id || index} className="w-full max-w-6xl mx-auto mb-6 rounded-lg overflow-hidden shadow-md">
-                <button
-                  onClick={() => toggleSection(sectionId)}
-                  className={`w-full flex items-center justify-between p-4 rounded-t-lg transition-colors ${
-                    isCollapsed
-                      ? 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      : 'bg-[var(--button-red)] text-white hover:bg-[var(--button-red)]/90'
-                  }`}
-                >
-                  <h3 className="text-lg font-plus-jakarta-sans font-semibold">
-                    {section.title}
-                  </h3>
-                  <div className={`rounded-lg p-2 transition-transform duration-300 ${
-                    isCollapsed ? 'bg-white' : 'bg-white'
-                  }`}>
+                    <h3 className="text-left text-lg font-plus-jakarta-sans font-semibold text-gray-800">
+                      {section.title}
+                    </h3>
                     <svg
                       className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${
                         isOpen ? 'rotate-180' : ''
@@ -559,26 +501,79 @@ const FAQ = ({
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
-                  </div>
-                </button>
-                
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    isCollapsed ? 'max-h-0' : 'max-h-[600px]'
-                  }`}
-                >
-                  <div className="bg-[var(--lite-sand)] p-4 max-h-[600px] overflow-y-auto overflow-x-auto">
-                    <DataTable
-                      columns={section.columns || tableColumns}
-                      data={section.data}
-                      overflowX={true}
-                      className="shadow-none"
-                    />
+                  </button>
+                  
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
+                      <div className="overflow-x-auto">
+                        <DataTable
+                          columns={section.columns || tableColumns}
+                          data={section.data}
+                          overflowX={true}
+                          className="shadow-none"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
+            
+            {/* Regular FAQ Items */}
+            {regularItems.map((item) => {
+              const fullId = `regular-${item.id}`
+              const isOpen = unifiedOpenId === fullId
+              
+              return (
+                <div
+                  key={item.id}
+                  className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
+                >
+                  <button
+                    onClick={() => toggleUnified(item.id, 'regular')}
+                    className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors"
+                  >
+                    <h3 className="text-left text-lg font-plus-jakarta-sans font-semibold text-gray-800">
+                      {item.question}
+                    </h3>
+                    <svg
+                      className={`w-5 h-5 text-gray-600 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180' : ''
+                      }`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
+                      {Array.isArray(item.answer) ? (
+                        <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm leading-relaxed font-plus-jakarta-sans">
+                          {item.answer.map((listItem, idx) => (
+                            <li key={idx}>{renderTextWithLinks(listItem)}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="text-gray-700 text-sm leading-relaxed font-plus-jakarta-sans">
+                          {renderTextWithLinks(item.answer)}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </Wrapper>
     )
@@ -945,7 +940,7 @@ const FAQ = ({
                       </ul>
                     ) : (
                       <p className="text-gray-700 text-sm leading-relaxed font-plus-jakarta-sans">
-                        {item.answer}
+                        {renderTextWithLinks(item.answer)}
                       </p>
                     )}
                   </div>
