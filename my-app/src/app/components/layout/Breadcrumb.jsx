@@ -45,23 +45,7 @@ const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {
   // Don't show breadcrumb on kalmat page
   if (pathname === '/kalmat') return null;
 
-  // Track previous pathname to detect route changes
-  const prevPathnameRef = useRef(pathname);
-
-  // Clear breadcrumb data when pathname changes
-  useEffect(() => {
-    if (!breadcrumbContext?.setBreadcrumbData) return;
-
-    const pathnameChanged = prevPathnameRef.current !== pathname;
-    
-    if (pathnameChanged) {
-      // Pathname changed - clear old breadcrumb data first
-      prevPathnameRef.current = pathname;
-      breadcrumbContext.setBreadcrumbData(null);
-    }
-  }, [pathname, breadcrumbContext]);
-
-  // Check for new breadcrumb data - runs after page components have a chance to set it
+  // Check for new breadcrumb data from window.__breadcrumbData (legacy support)
   useEffect(() => {
     if (!breadcrumbContext?.setBreadcrumbData) return;
 
