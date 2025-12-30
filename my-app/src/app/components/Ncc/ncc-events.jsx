@@ -33,7 +33,16 @@ id: 3,
       "",
     
   },
-  
+  {
+    id: 4,
+    imageSrc:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    imageAlt: "",
+    title: "",
+    description:
+      "",
+    
+  },
 ];
 
 export default function NccEvents() {
