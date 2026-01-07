@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
@@ -65,9 +66,10 @@ const Gallery = ({
   backgroundColor = "bg-white",
   paddingClassName = "py-16",
   titleClassName = "",
-  forceSliderOnMobile = false
+  forceSliderOnMobile = false,
+  forceSlider = false
 }) => {
-  const useSlider = images.length > 4 || forceSliderOnMobile
+  const useSlider = forceSlider || images.length > 4 || forceSliderOnMobile
   
   // Determine title alignment based on titleClassName
   const titleAlignment = titleClassName.includes('text-left') ? 'text-left' : 
@@ -110,8 +112,8 @@ const Gallery = ({
               }}
               className="gallery-swiper"
             >
-              {images.map((item) => (
-                <SwiperSlide key={item.id}>
+              {images.map((item) => {
+                const imageContent = (
                   <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
                     <Image 
                       src={item.image} 
@@ -122,8 +124,26 @@ const Gallery = ({
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                   </div>
-                </SwiperSlide>
-              ))}
+                );
+
+                return (
+                  <SwiperSlide key={item.id}>
+                    {item.href ? (
+                      item.href.startsWith('http') ? (
+                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+                          {imageContent}
+                        </a>
+                      ) : (
+                        <Link href={item.href} className="block">
+                          {imageContent}
+                        </Link>
+                      )
+                    ) : (
+                      imageContent
+                    )}
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
         ) : (
@@ -143,8 +163,8 @@ const Gallery = ({
                   slidesPerView={1.2}
                   className="gallery-swiper"
                 >
-                  {images.map((item) => (
-                    <SwiperSlide key={item.id}>
+                  {images.map((item) => {
+                    const imageContent = (
                       <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
                         <Image 
                           src={item.image} 
@@ -155,28 +175,65 @@ const Gallery = ({
                         {/* Overlay on hover */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                       </div>
-                    </SwiperSlide>
-                  ))}
+                    );
+
+                    return (
+                      <SwiperSlide key={item.id}>
+                        {item.href ? (
+                          item.href.startsWith('http') ? (
+                            <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+                              {imageContent}
+                            </a>
+                          ) : (
+                            <Link href={item.href} className="block">
+                              {imageContent}
+                            </Link>
+                          )
+                        ) : (
+                          imageContent
+                        )}
+                      </SwiperSlide>
+                    );
+                  })}
                 </Swiper>
               </div>
             )}
             {/* Desktop Grid - always show for grid layout */}
             <div className={`flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 ${forceSliderOnMobile ? 'hidden md:flex' : ''}`}>
-              {images.map((item) => (
-                <div 
-                  key={item.id} 
-                  className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer w-[calc(50%-6px)] sm:w-[calc(50%-8px)] md:w-[calc(25%-18px)] max-w-[300px]"
-                >
-                  <Image 
-                    src={item.image} 
-                    alt={item.alt} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-300" 
-                  />
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                </div>
-              ))}
+              {images.map((item) => {
+                const imageContent = (
+                  <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
+                    <Image 
+                      src={item.image} 
+                      alt={item.alt} 
+                      fill 
+                      className="object-cover group-hover:scale-110 transition-transform duration-300" 
+                    />
+                    {/* Overlay on hover */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </div>
+                );
+
+                const wrapperClassName = "w-[calc(50%-6px)] sm:w-[calc(50%-8px)] md:w-[calc(25%-18px)] max-w-[300px]";
+
+                return (
+                  <div key={item.id} className={wrapperClassName}>
+                    {item.href ? (
+                      item.href.startsWith('http') ? (
+                        <a href={item.href} target="_blank" rel="noopener noreferrer" className="block">
+                          {imageContent}
+                        </a>
+                      ) : (
+                        <Link href={item.href} className="block">
+                          {imageContent}
+                        </Link>
+                      )
+                    ) : (
+                      imageContent
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </>
         )}
