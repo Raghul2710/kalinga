@@ -8,40 +8,120 @@ import SectionHeading from "../general/SectionHeading";
 const defaultFacilities = [
   {
     id: 1,
-    name: "Hostel",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/hostel.webp",
+    name: "Sustainable Campus",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Infrastructure2.webp",
   },
   {
     id: 2,
-    name: "Library",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/library.webp",
+    name: "Solar-Powered Campus",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
   },
   {
     id: 3,
-    name: "GYM",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp",
+    name: "Smart Classrooms",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/digitalclassrooms.webp",
   },
   {
     id: 4,
-    name: "Playground",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/DSC00047.webp",
+    name: "Laboratories",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
   },
   {
     id: 5,
-    name: "LAB",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/labotories.webp",
+    name: "IT Labs",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/elearning.webp",
   },
   {
     id: 6,
-    name: "Canteen",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen+mess.webp",
+    name: "Sports Centre (Indoor/Outdoor)",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/DSC00047.webp",
+  },
+  {
+    id: 7,
+    name: "Auditorium",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
+  },
+  {
+    id: 8,
+    name: "Moot Court",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/mootcourt.webp",
+  },
+  {
+    id: 9,
+    name: "Counseling Rooms",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/conselling.webp",
+  },
+  {
+    id: 10,
+    name: "Board Rooms",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/businesslab.webp",
+  },
+  {
+    id: 11,
+    name: "Well-Stocked Central Library",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/library.webp",
+  },
+  {
+    id: 12,
+    name: "Green House",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse1.webp",
+  },
+  {
+    id: 13,
+    name: "Farm / Medicinal Garden",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/animal+house.webp",
+  },
+  {
+    id: 14,
+    name: "Recreational Corners",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp",
+  },
+  {
+    id: 15,
+    name: "Wi-Fi Campus",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/wifienabledcampus.webp",
+  },
+  {
+    id: 16,
+    name: "24/7 Security",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security2.jpeg",
+  },
+  {
+    id: 17,
+    name: "University Health Clinic",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Health+Clinic1.webp",
+  },
+  {
+    id: 18,
+    name: "Fully-Equipped Gym",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp",
+  },
+  {
+    id: 19,
+    name: "Mini Markets (Cafeterias, Stationery Shops, Salons, & Fruit Shops)",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/snacks-shop-1.webp",
+  },
+  {
+    id: 20,
+    name: "Transportation Facility",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/transport-3.webp",
+  },
+  {
+    id: 21,
+    name: "Banking & ATM Facility",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/MiniMarket-ATM.webp",
+  },
+  {
+    id: 22,
+    name: "Selfie Points",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
   },
 ];
 
 export default function Facility({
-  title = "A Campus That Defines Possibilities",
+  title = "Experience A World-Class Infrastructure",
   subtitle = "Real Stories. Real Success.",
-  description = " Kalinga University offers a state-of-the-art campus that redefines the student experience. Our cutting-edge labs, expansive library, modern hostels, and recreational facilities ensure a balanced environment where learning and lifestyle go hand in hand.",
+  description = " Step into an award-winning university designed to achieve academic excellence and empower next-gen learners. Our state-of-the-art facilities and encouraging campus environment boost students' academic success and personality development by promoting learning, research & development, and innovation.",
   titleClassName = "text-center",
   subtitleClassName = "text-center !text-[var(--button-red)]",
   facilities = defaultFacilities,
@@ -50,20 +130,20 @@ export default function Facility({
     <section className="py-16 bg-white relative">
       <div className="px-2">
         {/* Header Section */}
-        <SectionHeading 
-                        subtitleClassName={subtitleClassName}
-                        titleClassName={titleClassName}
-                        subtitle={subtitle}
-                        title={title}
-                    />
-                    {description && (
-                      <p className="text-center text-gray-600 max-w-4xl mx-auto mt-4 mb-8">
-                        {description}
-                      </p>
-                    )}
+        <SectionHeading
+          subtitleClassName={subtitleClassName}
+          titleClassName={titleClassName}
+          subtitle={subtitle}
+          title={title}
+        />
+        {description && (
+          <p className="text-center text-gray-600 max-w-4xl mx-auto mt-4 mb-8">
+            {description}
+          </p>
+        )}
         {/* Slider Section */}
         <div className="relative overflow-visible">
-          <Swiper 
+          <Swiper
             modules={[Navigation, Autoplay]}
             loop={true}
             spaceBetween={24}

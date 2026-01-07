@@ -50,10 +50,10 @@ export default function CoreValues() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -63,13 +63,12 @@ export default function CoreValues() {
       className={`
         relative overflow-hidden cursor-pointer
         transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]
-        ${isMobile 
-          ? 'w-full lg:h-[450px] md:h-[575px] h-[420px] rounded-xl' 
-          : `lg:min-w-[100px] md:min-w-[90px] min-w-[80px] p-5 m-2.5 ${
-              isActive 
-                ? 'flex-[10000] scale-100 m-0 rounded-xl' 
-                : 'flex-1 rounded-lg'
-            }`
+        ${isMobile
+          ? 'w-full lg:h-[450px] md:h-[575px] h-[420px] rounded-xl'
+          : `lg:min-w-[100px] md:min-w-[90px] min-w-[80px] p-5 m-2.5 ${isActive
+            ? 'flex-[10000] scale-100 m-0 rounded-xl'
+            : 'flex-1 rounded-lg'
+          }`
         }
         ${!isMobile && index === 4 ? 'max-[718px]:hidden' : ''}
         ${!isMobile && index === 3 ? 'max-[638px]:hidden' : ''}
@@ -84,8 +83,8 @@ export default function CoreValues() {
       {isActive || isMobile ? (
         <div className="w-full h-full lg:p-5 md:p-2 p-5 transition-all duration-500 ease-[cubic-bezier(0.05,0.61,0.41,0.95)]">
           <div className="flex justify-center items-center lg:w-32 lg:h-32 w-20 h-20 rounded-full bg-gray-200 mb-4">
-            <Image 
-              src={value.icon} 
+            <Image
+              src={value.icon}
               alt={value.title}
               width={32}
               height={32}
@@ -104,17 +103,17 @@ export default function CoreValues() {
       ) : (
         <div className="w-full h-full flex flex-col items-center justify-center gap-4">
           <div className="flex justify-center items-center w-16 h-16 rounded-full bg-white flex-shrink-0">
-            <Image 
-              src={value.icon} 
+            <Image
+              src={value.icon}
               alt={value.title}
               width={32}
               height={32}
               className="object-contain"
             />
           </div>
-          <h3 
+          <h3
             className="text-white text-[20px] leading-[1.2] text-left flex-1"
-            style={{ 
+            style={{
               writingMode: 'vertical-rl',
               textOrientation: 'mixed',
               transform: 'rotate(180deg)',
@@ -134,8 +133,8 @@ export default function CoreValues() {
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="mb-5">
-          <SectionHeading 
-            title="Core Values of Kalinga University" 
+          <SectionHeading
+            title="Our Core Values"
             titleClassName="!text-white text-center"
 
           />
@@ -159,7 +158,7 @@ export default function CoreValues() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            
+
             {/* Navigation Buttons */}
             <div className="flex items-center justify-center gap-4 mt-6">
               <button className="cursor-pointer core-values-swiper-button-prev bg-[var(--button-red)] hover:bg-[#a2a2a2] w-10 h-10 rounded-lg flex items-center justify-center">
@@ -180,7 +179,7 @@ export default function CoreValues() {
                   />
                 </svg>
               </button>
-              
+
               <button className="cursor-pointer core-values-swiper-button-next bg-[var(--button-red)] hover:bg-[#a2a2a2] w-10 h-10 rounded-lg flex items-center justify-center">
                 <svg
                   width="16"

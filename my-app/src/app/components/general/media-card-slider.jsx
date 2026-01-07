@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 
 
 // Dynamically import ReactPlayer to avoid SSR issues
-const ReactPlayer = dynamic(() => import("react-player"), { 
+const ReactPlayer = dynamic(() => import("react-player"), {
   ssr: false,
   loading: () => (
     <div className="absolute inset-0 flex items-center justify-center bg-black">
@@ -68,24 +68,24 @@ export default function MediaCardSlider({
   // Convert YouTube URL to embed format
   const getYouTubeEmbedUrl = (url) => {
     if (!url) return "";
-    
+
     // Handle youtu.be format
     if (url.includes("youtu.be/")) {
       const videoId = url.split("youtu.be/")[1].split("?")[0];
       return `https://www.youtube.com/embed/${videoId}`;
     }
-    
+
     // Handle youtube.com/watch?v= format
     if (url.includes("youtube.com/watch?v=")) {
       const videoId = url.split("v=")[1].split("&")[0];
       return `https://www.youtube.com/embed/${videoId}`;
     }
-    
+
     // If already in embed format, return as is
     if (url.includes("youtube.com/embed/")) {
       return url;
     }
-    
+
     return url;
   };
 
@@ -169,7 +169,7 @@ export default function MediaCardSlider({
                   <div className={`${cardBgClass} rounded-xl p-4 h-full flex flex-col border border-gray-300 border-2 transition-shadow ${isVideo && item.videoUrl ? 'cursor-pointer hover:shadow-xl' : ''}`}>
                     {/* Media Container */}
                     <div
-                      className="relative w-full h-[250px] md:h-[350px] mb-4 rounded-lg overflow-hidden bg-gray-200"
+                      className="relative w-full h-[250px] md:h-[380px] mb-4 rounded-lg overflow-hidden bg-gray-200"
                       onClick={() => {
                         if (isVideo && item.videoUrl) {
                           openVideoModal(item.videoUrl, item.name || item.title);

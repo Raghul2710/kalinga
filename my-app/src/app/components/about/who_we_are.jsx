@@ -52,7 +52,7 @@ export default function WhoWeAre() {
             </h2>
             <div className="space-y-3 sm:space-y-4 text-white/90 px-2 sm:px-0">
               <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-              Kalinga University, Raipur, stands as one of Central India’s most distinguished centers for higher learning. With a legacy built on academic excellence, innovation, and inclusivity, we empower students to transform their potential into performance.
+                Kalinga University, Raipur, stands as one of Central India’s most distinguished centers for higher learning. With a legacy built on academic excellence, innovation, and inclusivity, we empower students to transform their potential into impactful careers.
               </p>
             </div>
           </div>
@@ -71,12 +71,12 @@ export default function WhoWeAre() {
                   className="bg-[var(--light-gray)] rounded-xl p-6 lg:p-8 shadow-lg w-[240px] sm:w-[260px] flex-shrink-0 flex flex-col items-center justify-center text-left"
                 >
                   <div className="flex flex-col gap-2 w-full">
-                  <h2 className="text-[var(--button-red)] !font-stix mb-2 break-words text-left">
-                    {stat.number}
-                  </h2>
-                  <h3 className="text-[var(--foreground)] !text-[18px] !leading-relaxed !font-stix mb-3 break-words text-left">
-                    {stat.label}
-                  </h3>
+                    <h2 className="text-[var(--button-red)] !font-stix mb-2 break-words text-left">
+                      {stat.number}
+                    </h2>
+                    <h3 className="text-[var(--foreground)] !text-[18px] !leading-relaxed !font-stix mb-3 break-words text-left">
+                      {stat.label}
+                    </h3>
                   </div>
                   {stat.description && (
                     <p className="text-[var(--light-text-gray)] text-sm leading-relaxed break-words text-left">
@@ -102,6 +102,9 @@ export default function WhoWeAre() {
         .animate-marquee {
           width: max-content;
           animation: marquee 120s linear infinite;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>

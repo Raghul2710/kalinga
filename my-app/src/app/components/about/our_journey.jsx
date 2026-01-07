@@ -10,53 +10,122 @@ import SectionHeading from "../general/SectionHeading";
 const journeyData = [
   {
     year: "2025",
-    title: "Establishment of Centre of Excellence (JustAuto), NIRF Rank Band 101-150 for 4th Consecutive Year.",
+    title: [
+      "Establishment of Centre of Excellence (JustAuto)",
+      "NIRF Rank Band 101-150 for 4th Consecutive Year."
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/our-jounary-1.webp",
     cardBg: "bg-white"
   },
   {
     year: "2024",
-    title: "Establishment of 2 Centres of Excellence (EBLU and MSME). MSME HI Recognition, NIRF  Rank Band 101-150 for third consecutive year, Launch of SDG Logo.",
+    title: [
+      "Establishment of 2 Centres of Excellence (EBLU and MSME)",
+      "MSME HI Recognition",
+      "NIRF Rank Band 101-150 for third consecutive year",
+      "Launch of SDG Logo"
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/our-jounary-2.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
     year: "2023",
-    title: "SIRO Recognition. Establishment of Kalinga Incubation Foundation (KIF), Corporate Training & Consultancy Division, Centre Of Excellence (BDS). NIRF Rank Band 101–150, India Today Ranking (51).",
+    title: [
+      "SIRO Recognition",
+      "Establishment of Kalinga Incubation Foundation (KIF), Corporate Training & Consultancy Division, Centre Of Excellence (BDS)",
+      "NIRF Rank Band 101–150",
+      "India Today Ranking (51)"
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/library-new.webp",
     cardBg: "bg-white"
   },
   {
     year: "2022",
-    title: "Establishment of Centre of Excellence (Technoviz), UBA, IEEE KU SB, MBSI, CCRC. NIRF Rank Band 101–150, Establishment of SDG Cell.",
+    title: [
+      "Establishment of Centre of Excellence (Technoviz), UBA, IEEE KU SB, MBSI, CCRC",
+      "NIRF Rank Band 101–150",
+      "Establishment of SDG Cell"
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/Phd-mba.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
     year: "2021",
-    title: "NIRF Rank Band 151–200, NAAC Accreditation",
+    title: [
+      "NIRF Rank Band 151–200",
+      "NAAC Accreditation"
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/about-kalinga.webp",
     cardBg: "bg-white"
   },
   {
     year: "2020",
-    title: "Establishment of Central Instrumentation Facility",
+    title: [
+      "Establishment of Central Instrumentation Facility"
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/phd-biotechnology-n.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
     year: "2019",
-    title: "Establishment of IIC, Kalinga University",
+    title: [
+      "Establishment of IIC, Kalinga University"
+    ],
     description: "",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/mca.webp",
     cardBg: "bg-white"
-  }
+  },
+  {
+    year: "2017",
+    title: [
+      "Addition of Faculty of Education & Faculty of Pharmacy"
+    ],
+    description: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-1.webp",
+    cardBg: "bg-[var(--lite-sand)]"
+  },
+  {
+    year: "2016",
+    title: [
+      "Establishment of IQAC"
+    ],
+    description: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-2.webp",
+    cardBg: "bg-white"
+  },
+  {
+    year: "2014",
+    title: [
+      "Commencement of Faculty of Law & Faculty of Technology"
+    ],
+    description: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-3.webp",
+    cardBg: "bg-[var(--lite-sand)]"
+  },
+  {
+    year: "2013",
+    title: [
+      "Commencement of Faculty of Arts & Humanities , Commerce & Management, Science & IT"
+    ],
+    description: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-4.webp",
+    cardBg: "bg-white"
+  },
+  {
+    year: "2011",
+    title: [
+      "Establishment of University"
+    ],
+    description: "",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-5.webp",
+    cardBg: "bg-[var(--lite-sand)]"
+  },
 ];
 
 export default function OurJourney() {
@@ -125,7 +194,8 @@ export default function OurJourney() {
 
   return (
     <section className="py-16 bg-[var(--dark-blue)] relative overflow-x-hidden">
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         /* Desktop only - custom wide slides */
         @media (min-width: 1024px) {
           .journey-swiper .swiper-slide {
@@ -248,7 +318,7 @@ export default function OurJourney() {
         {/* Title */}
         <div className="text-center mb-12 lg:mb-16">
           <SectionHeading
-            title="Our Journey"
+            title="Milestones Achieved"
             titleClassName="text-white"
           />
         </div>
@@ -262,7 +332,7 @@ export default function OurJourney() {
             centeredSlides={true}
             loop={true}
             speed={1000}
-            
+
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -318,7 +388,7 @@ export default function OurJourney() {
 
                     {/* Text Content - Below Image (Mobile) / On Right (Desktop) */}
                     <div className="rounded-b-2xl md:rounded-r-2xl p-3 md:p-5 lg:p-4 flex flex-col justify-center flex-1 md:z-10">
-                      <div 
+                      <div
                         className="text-[var(--button-red)] font-stix text-3xl md:text-6xl font-bold mb-2 md:mb-4"
                         style={{
                           WebkitTextStroke: '1px var(--button-red)',
@@ -329,9 +399,17 @@ export default function OurJourney() {
                       >
                         {item.year}
                       </div>
-                      <h3 className="text-[var(--foreground)] font-stix font-medium text-base md:text-xl lg:text-[20px] mb-2 md:mb-4">
-                        {item.title}
-                      </h3>
+                      {Array.isArray(item.title) ? (
+                        <ul className="text-[var(--foreground)] font-stix font-medium text-base md:text-xl lg:text-[20px] mb-2 md:mb-4 list-disc pl-5">
+                          {item.title.map((point, i) => (
+                            <li key={i}>{point}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <h3 className="text-[var(--foreground)] font-stix font-medium text-base md:text-xl lg:text-[20px] mb-2 md:mb-4">
+                          {item.title}
+                        </h3>
+                      )}
                       <div className="space-y-1.5 md:space-y-3">
                         <p className="text-[var(--light-text-gray)] text-xs md:text-sm lg:text-base leading-relaxed line-clamp-2 md:line-clamp-none">
                           {item.description}
@@ -397,18 +475,16 @@ export default function OurJourney() {
                     ref={(el) => {
                       if (el) dotRefs.current[index] = el;
                     }}
-                    className={`w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 rounded-full mb-1 sm:mb-1.5 md:mb-2 transition-all relative z-10 ${
-                      activeIndex === index
-                        ? "bg-[var(--button-red)] scale-125 sm:scale-110 md:scale-125"
-                        : "bg-[#A2A2A2]"
-                    }`}
+                    className={`w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 rounded-full mb-1 sm:mb-1.5 md:mb-2 transition-all relative z-10 ${activeIndex === index
+                      ? "bg-[var(--button-red)] scale-125 sm:scale-110 md:scale-125"
+                      : "bg-[#A2A2A2]"
+                      }`}
                   ></div>
                   <span
-                    className={`text-xs sm:text-sm md:text-base font-plus-jakarta-sans transition-colors ${
-                      activeIndex === index
-                        ? "text-white font-semibold"
-                        : "text-white"
-                    }`}
+                    className={`text-xs sm:text-sm md:text-base font-plus-jakarta-sans transition-colors ${activeIndex === index
+                      ? "text-white font-semibold"
+                      : "text-white"
+                      }`}
                   >
                     {item.year}
                   </span>

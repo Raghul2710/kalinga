@@ -3,18 +3,18 @@
 import React from 'react'
 import LogoLoop from '../gsap/LogoLoop'
 
-const AccreditationRanking = ({ 
+const AccreditationRanking = ({
   heading = "Accreditation & Ranking",
   secondHeading = null,
-  accreditations = null 
+  accreditations = null
 }) => {
   // Default accreditations if none provided
   const defaultAccreditations = [
-           { id: 1, name: 'NIRF', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/nirf.webp' },
-           { id: 2, name: 'NAAC B+', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/naac.webp' },
-           { id: 2, name: 'UGC Grant', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp' },
-           { id: 4, name: 'Outlook', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/outlook.webp' },
-           { id: 5, name: 'Competition 3', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/competition.webp' },
+    { id: 1, name: 'NIRF', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/nirf.webp' },
+    { id: 2, name: 'NAAC B+', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/naac.webp' },
+    { id: 2, name: 'UGC Grant', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp' },
+    { id: 4, name: 'Outlook', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/outlook.webp' },
+    { id: 5, name: 'Competition 3', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/competition.webp' },
 
 
     // { id: 1, name: 'Best Practices', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/best-prac.webp' },
@@ -72,7 +72,7 @@ const AccreditationRanking = ({
               ariaLabel="Accreditation and ranking logos"
               renderItem={(item, key) => (
                 <div className="flex-shrink-0 bg-[var(--light-gray)] rounded-[15px] sm:rounded-[20px] w-[180px] h-[140px] sm:w-[200px] sm:h-[160px] md:w-[231px] md:h-[181px] flex items-center justify-center shadow-sm overflow-hidden">
-                  <div className="relative px-5 ">
+                  <div className="relative px-5 bg-white mx-5 rounded-xl">
                     <img
                       src={item.src}
                       alt={item.alt}

@@ -42,11 +42,6 @@ const page = () => {
       <NccBenefits />
       <NccVisionMission />
       <NccHeadMessage />
-      <UpcomingConferences
-        categoryIds={['6', '7']}
-        title="Campus Events"
-        fallback="hide"
-      />
       <AdmissionCareer />
     </>
   )

@@ -1,6 +1,7 @@
 import MainIntro from "../components/about/main_intro";
 import AdmissionCareer from "../components/general/admission_cta";
 import AutoBreadcrumb from "../components/layout/BreadcrumbData";
+import LeadershipCard from "../components/general/leadership-card";
 
 /* ---------------- Breadcrumb ---------------- */
 const breadcrumbData = {
@@ -201,7 +202,7 @@ export default function Page() {
 
       {/* Club Sections */}
       {clubSections.map((section) => (
-        <section key={section.id} className="py-14 bg-white">
+        <section key={section.id} className="py-8 bg-white">
           <div className="container mx-auto px-4">
 
             {/* Smaller Section Title */}
@@ -212,23 +213,13 @@ export default function Page() {
             {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {section.clubs.map((club, index) => (
-                <div
-                  key={index}
-                  className="bg-[#F5E6D3] rounded-xl p-6 min-h-[280px] flex flex-col items-center justify-between"
-                >
-                  {/* Image Box */}
-                  <div className="bg-white rounded-xl w-full h-[180px] flex items-center justify-center">
-                    <img
-                      src={club.image}
-                      alt={club.name}
-                      className="max-w-[80%] max-h-[80%] object-contain"
-                    />
-                  </div>
-
-                  {/* Club Name */}
-                  <p className="mt-2 text-center text-[var(--foreground)]">
-                    {club.name}
-                  </p>
+                <div key={index}>
+                  <LeadershipCard
+                    name={club.name}
+                    title=""
+                    image={club.image}
+                    usePTagForName={true}
+                  />
                 </div>
               ))}
             </div>

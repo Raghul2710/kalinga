@@ -12,6 +12,13 @@ import GlobalArrowButton from "../general/global-arrow_button"
 
 const defaultAwards = [
   {
+    id: 0,
+    year: "2025",
+    title: "IEEE Outstanding Student Branch Award ",
+    subtitle: "",
+    active: true,
+  },
+  {
     id: 1,
     year: "2024",
     title: "Appreciation Certificate as delegate in International Conference on 'Impact of Artificial intelligence in revolutionizing pharmaceutical education and Research'",

@@ -22,7 +22,8 @@ export default function Organogram() {
     return (
         <>
             <ImageContent
-                hasImage={false}
+                imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/organogram/univ.webp"
+                hasImage={true}
                 readmore={false}
                 className="items-center justify-center"
                 title="Organogram of Kalinga University"

@@ -8,69 +8,102 @@ function ReadMoreParagraphs({ text, isArray = false }) {
   const [needsReadMore, setNeedsReadMore] = useState(false);
   const textRef = useRef(null);
   const measureRef = useRef(null);
-  
-  // If it's an array, join all paragraphs
-  const fullText = isArray ? text.join(' ') : text;
-  
+
+  // Decide what to render
+  const isMixed = !isArray && typeof text === 'object' && text.paragraphs && text.points;
+
+  let content;
+  if (isMixed) {
+    content = (
+      <div className="space-y-4">
+        {text.paragraphs.map((p, i) => (
+          <p key={`p-${i}`} className="text-[var(--foreground)] leading-relaxed">
+            {p}
+          </p>
+        ))}
+        <ul className="list-disc pl-5 space-y-2">
+          {text.points.map((item, idx) => (
+            <p>
+              <li key={`li-${idx}`} className="pl-1">{item}</li>
+            </p>
+          ))}
+        </ul>
+      </div>
+    );
+  } else if (isArray) {
+    content = (
+      <ul className="list-disc pl-5 space-y-2">
+        {text.map((item, idx) => (
+          <p>
+            <li key={idx} className="pl-1">{item}</li>
+          </p>
+        ))}
+      </ul>
+    );
+  } else {
+    content = text;
+  }
+
+  // For dependency tracking
+  let fullText;
+  if (isMixed) {
+    fullText = [...text.paragraphs, ...text.points].join(' ');
+  } else {
+    fullText = isArray ? text.join(' ') : text;
+  }
+
   useEffect(() => {
     const checkIfNeedsReadMore = () => {
       if (!textRef.current || !measureRef.current || showAll) return;
-      
-      // Sync the width of measurement element with visible element
+
+      // Sync widths
       const visibleWidth = textRef.current.offsetWidth;
       if (measureRef.current.style.width !== `${visibleWidth}px`) {
         measureRef.current.style.width = `${visibleWidth}px`;
       }
-      
-      // Get computed styles to calculate line height
+
+      // Calculate Line Height
       const styles = window.getComputedStyle(textRef.current);
       const fontSize = parseFloat(styles.fontSize);
       const lineHeightValue = styles.lineHeight;
-      
-      // Calculate line height (handle 'normal', px, or unitless values)
+
       let lineHeight;
       if (lineHeightValue === 'normal') {
-        lineHeight = fontSize * 1.5; // Default line-height
+        lineHeight = fontSize * 1.5;
       } else if (lineHeightValue.includes('px')) {
         lineHeight = parseFloat(lineHeightValue);
       } else {
         lineHeight = fontSize * parseFloat(lineHeightValue);
       }
-      
-      // 4 lines height
+
+      // Limit to approx 4 lines
       const fourLinesHeight = lineHeight * 4;
-      
-      // Get the full text height from the measurement element
       const fullTextHeight = measureRef.current.scrollHeight;
-      
-      // Check if full text exceeds 4 lines
+
       setNeedsReadMore(fullTextHeight > fourLinesHeight);
     };
-    
-    // Use requestAnimationFrame to ensure DOM is ready
+
     const rafId = requestAnimationFrame(() => {
       checkIfNeedsReadMore();
-      // Also check after a small delay to ensure layout is complete
       setTimeout(checkIfNeedsReadMore, 100);
     });
-    
-    // Check on window resize
+
     window.addEventListener('resize', checkIfNeedsReadMore);
-    
+
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener('resize', checkIfNeedsReadMore);
     };
   }, [fullText, showAll]);
-  
+
   return (
     <div className="space-y-3">
       <div className="relative">
-        {/* Hidden element to measure full text height */}
-        <p 
+        {/* Hidden Measurement Element */}
+        <div
           ref={measureRef}
-          className="text-[var(--foreground)] leading-relaxed text-sm"
-          style={{ 
+          className="text-[var(--foreground)] leading-relaxed"
+          style={{
             position: 'absolute',
             visibility: 'hidden',
             opacity: 0,
@@ -82,24 +115,23 @@ function ReadMoreParagraphs({ text, isArray = false }) {
             wordWrap: 'break-word'
           }}
         >
-          {fullText}
-        </p>
-        
-        {/* Visible text with clamp */}
+          {content}
+        </div>
+
+        {/* Visible Element */}
         {!showAll ? (
-          <div className="flex flex-col  items-start gap-1">
-            <p 
+          <div className="flex flex-col items-start gap-1">
+            <div
               ref={textRef}
-              className={`text-[var(--foreground)] leading-relaxed text-sm flex-1 ${
-                needsReadMore ? 'line-clamp-4' : ''
-              }`}
+              className={`text-[var(--foreground)] leading-relaxed flex-1 ${needsReadMore ? 'line-clamp-4' : ''
+                }`}
             >
-              {fullText}
-            </p>
+              {content}
+            </div>
             {needsReadMore && (
               <button
                 type="button"
-                className="text-[var(--foreground)] !text-sm font-normal hover:text-[var(--button-red)] transition-colors flex-shrink-0 whitespace-nowrap"
+                className="text-[var(--foreground)]  font-normal hover:text-[var(--button-red)] transition-colors flex-shrink-0 whitespace-nowrap"
                 onClick={() => setShowAll(true)}
               >
                 Read More
@@ -107,17 +139,16 @@ function ReadMoreParagraphs({ text, isArray = false }) {
             )}
           </div>
         ) : (
-          <p className="text-[var(--foreground)] leading-relaxed text-sm">
-            {fullText}
-            {' '}
+          <div className="text-[var(--foreground)] leading-relaxed">
+            {content}
             <button
               type="button"
-              className="text-[var(--foreground)] !text-sm font-normal hover:text-[var(--button-red)] transition-colors ml-1"
+              className="text-[var(--foreground)]  font-normal hover:text-[var(--button-red)] transition-colors ml-1 mt-1 inline-block"
               onClick={() => setShowAll(false)}
             >
               Show Less
             </button>
-          </p>
+          </div>
         )}
       </div>
     </div>
@@ -128,10 +159,19 @@ const defaultVision = `
   Kalinga University aims to be an outstanding institution for Talent Development and Knowledge Creation for a vibrant and inclusive society.
 `.trim();
 
-const defaultMission = [
-  'The primary purpose of Kalinga University is to become a global education hub in which faculty, staff, and students can discover, examine critically, preserve, and transmit the knowledge, wisdom, and values that will ensure the survival of future generations and improve the quality of life for all.',
-  'The University seeks to help students develop an understanding and appreciation for the complex cultural and physical worlds in which they live and to realise their highest potential of intellectual, physical, and human development.',
-]
+const defaultMission = {
+  paragraphs: [
+    'The primary purpose of Kalinga University is to become a global education hub in which faculty, staff, and students can discover, examine critically, preserve, and transmit the knowledge, wisdom, and values that will ensure the survival of future generations and improve the quality of life for all.',
+    'The University seeks to help students develop an understanding and appreciation for the complex cultural and physical worlds in which they live and to realise their highest potential of intellectual, physical, and human development.',
+  ],
+  points: [
+    'Offer broad and balanced academic programs that are mutually reinforcing and emphasise high-quality and creative instruction at the undergraduate, graduate, professional, and postgraduate levels.',
+    'Generate new knowledge through a broad array of scholarly research and creative endeavours, which provide a foundation for dealing with the immediate and long-range needs of society.',
+    'Achieve leadership in each discipline, strengthen interdisciplinary studies, and pioneer new fields of learning.',
+    'Promote the use of new technologies in Teaching and Research.',
+    'Inculcate the right values in students for their holistic development.',
+  ]
+};
 
 
 export default function VisionMission({
@@ -168,22 +208,22 @@ export default function VisionMission({
   // Support data prop (array of objects) or individual props
   // Use showImg prop if provided, otherwise use showImage
   const finalShowImage = showImg !== undefined ? showImg : showImage;
-  
-  const entries = Array.isArray(data) && data.length > 0 
+
+  const entries = Array.isArray(data) && data.length > 0
     ? data.map(entry => ({
-        ...entry,
-        showImage: showImg !== undefined ? showImg : (entry.showImage !== undefined ? entry.showImage : true)
-      }))
+      ...entry,
+      showImage: showImg !== undefined ? showImg : (entry.showImage !== undefined ? entry.showImage : true)
+    }))
     : [{
-        visionTitle,
-        missionTitle,
-        visionText,
-        missionText,
-        imageSrc,
-        imageAlt,
-        showImage: finalShowImage,
-        className,
-      }];
+      visionTitle,
+      missionTitle,
+      visionText,
+      missionText,
+      imageSrc,
+      imageAlt,
+      showImage: finalShowImage,
+      className,
+    }];
 
   return (
     <>
@@ -218,7 +258,7 @@ export default function VisionMission({
           </clipPath>
         </defs>
       </svg>
-      
+
       {entries.map((entry, idx) => {
         const {
           visionTitle: vt = "Vision",
@@ -253,20 +293,20 @@ export default function VisionMission({
                 {/* Left - Vision Box */}
                 <div className={`${visionCol} flex`}>
                   {/* Filter Wrapper for Drop Shadow */}
-                  <div 
-                    className="relative group w-full max-w-[900px] h-full transition-transform duration-500 pb-7" 
+                  <div
+                    className="relative group w-full max-w-[900px] h-full transition-transform duration-500 pb-7"
                     style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.08))' }}
                   >
                     {/* The Clipped Card - Inverted */}
-                    <div 
+                    <div
                       className="bg-[var(--dark-skin)] relative w-full h-full p-[25px] py-20 flex items-center justify-center"
-                      style={isDesktop ? { 
+                      style={isDesktop ? {
                         clipPath: 'url(#rounded-polygon-inverted)',
                         WebkitClipPath: 'url(#rounded-polygon-inverted)'
-                      } : {borderRadius: '20px'}}
+                      } : { borderRadius: '20px' }}
                     >
                       <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-orange-900/5 pointer-events-none"></div>
-                      
+
                       {/* Content Container */}
                       <div className="flex-1 flex flex-col items-center justify-center w-full relative z-10 pr-4 md:pr-6">
                         <h3 className="font-stix text-[var(--foreground)] mb-4 text-center !text-[35px]">
@@ -280,7 +320,7 @@ export default function VisionMission({
                   </div>
                 </div>
 
-                
+
                 {/* Center - Person Image */}
                 {showImg && (
                   <div className="order-3 lg:order-2 lg:col-span-3 flex justify-center items-end">
@@ -300,14 +340,14 @@ export default function VisionMission({
                 {/* Right - Mission Box */}
                 <div className={`${missionCol} flex`}>
                   {/* Filter Wrapper for Drop Shadow */}
-                  <div 
-                    className="relative group w-full max-w-[900px] h-full transition-transform duration-500 pb-7" 
+                  <div
+                    className="relative group w-full max-w-[900px] h-full transition-transform duration-500 pb-7"
                     style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.08))' }}
                   >
                     {/* The Clipped Card */}
                     <div className={`${isDesktop ? 'r-3d' : 'rounded-[20px]'} bg-[var(--dark-skin)] relative w-full h-full p-[25px] py-20 flex items-center justify-center`}>
                       <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-orange-900/5 pointer-events-none"></div>
-                      
+
                       {/* Content Container */}
                       <div className="flex-1 flex flex-col items-center justify-center w-full relative z-10 pl-4 md:pl-6">
                         <h3 className="font-stix text-[var(--foreground)] mb-4 text-center !text-[35px]">
