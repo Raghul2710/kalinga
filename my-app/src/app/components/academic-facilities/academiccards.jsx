@@ -83,7 +83,7 @@ function Academiccards() {
             subtitle: "MEDIA & COMMUNICATION",
         },
         {
-            title: "Internship Programs and Hands-on Training by CIF",
+            title: "Central Instrumentation Facility",
             description:
                 "Every year, we provide on-campus and off-campus internship opportunities to our students and conduct hands-on training programs on real-world skills to improve their practical knowledge and technical expertise. We don’t just make our students academically strong but also job-ready with new skills so that they can meet industry demands.",
             imageSrc:
@@ -148,16 +148,6 @@ function Academiccards() {
             link: "/placements",
         },
         {
-            title: "Scholarships",
-            description:
-                "Obtain up to 100% scholarships as per our eligibility criteria and make your finances more manageable. Students who face financial difficulties at the time of admission can get scholarships, like merit-based, sports-based, entrance exam, content creators, and more, based on eligibility criteria.",
-            imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/scolarships.webp",
-            logoSrc: "",
-            subtitle: "STUDENT SUPPORT",
-            link: "/scholarships",
-        },
-        {
             title: "Research Facilities",
             description:
                 "We have high-tech instruments at CIF, research labs for different streams, centres of excellence, an IPR cell, and dedicated faculty members who are always ready to guide, support, and mentor undergraduate, postgraduate, and Ph.D. students and research scholars in performing experimentation work and preparing reports.",
@@ -167,25 +157,6 @@ function Academiccards() {
             link: "/research-facilities",
         },
         {
-            title: "Value Added Courses",
-            description:
-                "We offer a range of short-term value-added certificate courses, which are conducted after class hours or during semester breaks. These courses are conducted by professionals and industry experts who help students stand out in the job market by adding further value to their resumes.",
-            imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/valueaddedcourses.webp",
-            logoSrc: "",
-            subtitle: "SKILL DEVELOPMENT",
-            link: "/value-added-course",
-        },
-        {
-            title: "Counselling Support",
-            description:
-                "We have experienced counsellors at our campus who conduct one-on-one sessions with every student. Whether they are dealing with academic stress or any other issues, a dedicated counsellor will first listen and then take necessary action.",
-            imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/conselling.webp",
-            logoSrc: "",
-            subtitle: "STUDENT WELLBEING",
-        },
-        {
             title: "Recording Studio",
             description:
                 "Our recording studio provides students and faculty members with a creative space where they can explore their artistic expression and produce high-quality audio and video content. It contains advanced tools, audio plugins, video systems, microphones, and pro-grade systems.",
@@ -193,15 +164,6 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recordingstudio.webp",
             logoSrc: "",
             subtitle: "MEDIA PRODUCTION",
-        },
-        {
-            title: "Career Development Centre",
-            description:
-                "Our Career Development Centre helps students identify their interests, guides them with job search strategies, conducts training programs, and provides internships and job opportunities at KU’s campus placement drives.",
-            imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/careerdevelopmentcentre.webp",
-            logoSrc: "",
-            subtitle: "PROFESSIONAL GROWTH",
         },
         {
             title: "Business Lab",

@@ -99,24 +99,6 @@ export default function Studentreportcards() {
             subtitle: "PERSONAL GUIDANCE",
         },
         {
-            title: "Faith & Worship Facility",
-            description:
-                "We support every faith, culture, religion, and belief, allowing students to freely practice their religion in an inclusive campus environment.",
-            imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-support/faith.webp",
-            logoSrc: "",
-            subtitle: "INCLUSIVE CAMPUS",
-        },
-        {
-            title: "Holistic Development",
-            description:
-                "Our Career and Corporate Resource Team builds leadership and soft skills through internships, workshops, conferences, hands-on training programs, and guest lectures.",
-            imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet2.webp",
-            logoSrc: "",
-            subtitle: "OVERALL GROWTH",
-        },
-        {
             title: "Academic Advice",
             description:
                 "From selecting the right program to securing placements, our team provides career guidance and effective time management strategies.",
@@ -163,6 +145,16 @@ export default function Studentreportcards() {
             subtitle: "EXAM PREPARATION",
         },
         {
+            title: "Scholarships",
+            description:
+                "Obtain up to 100% scholarships as per our eligibility criteria and make your finances more manageable. Students who face financial difficulties at the time of admission can get scholarships, like merit-based, sports-based, entrance exam, content creators, and more, based on eligibility criteria.",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/scolarships.webp",
+            logoSrc: "",
+            subtitle: "STUDENT SUPPORT",
+            link: "/scholarships",
+        },
+        {
             title: "Remedial Coaching",
             description:
                 "Remedial coaching supports slow learners with extra classes and assignments while encouraging fast learners to take up advanced projects.",
@@ -170,6 +162,25 @@ export default function Studentreportcards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp",
             logoSrc: "",
             subtitle: "LEARNING SUPPORT",
+        },
+        {
+            title: "Value Added Courses",
+            description:
+                "We offer a range of short-term value-added certificate courses, which are conducted after class hours or during semester breaks. These courses are conducted by professionals and industry experts who help students stand out in the job market by adding further value to their resumes.",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/valueaddedcourses.webp",
+            logoSrc: "",
+            subtitle: "SKILL DEVELOPMENT",
+            link: "/value-added-course",
+        },
+        {
+            title: "Counselling Support",
+            description:
+                "We have experienced counsellors at our campus who conduct one-on-one sessions with every student. Whether they are dealing with academic stress or any other issues, a dedicated counsellor will first listen and then take necessary action.",
+            imageSrc:
+                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/conselling.webp",
+            logoSrc: "",
+            subtitle: "STUDENT WELLBEING",
         },
         {
             title: "New Age Programs",

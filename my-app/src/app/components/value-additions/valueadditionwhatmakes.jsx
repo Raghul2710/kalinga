@@ -79,7 +79,7 @@ function Valueadditionwhatmakes() {
             id: 9,
             title: "Global Recruitment Partners",
             body:
-                "With 250+ recruitment partners, we offer placement opportunities to students from different backgrounds so that they can secure their dream job.",
+                "With 400+ recruitment partners, we offer placement opportunities to students from different backgrounds so that they can secure their dream job.",
             variant: "gray",
             image:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/value-additions/recruitmentpartners.svg", // Image - 32

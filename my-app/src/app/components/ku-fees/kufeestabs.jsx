@@ -3,27 +3,36 @@
 import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import HostelFeeTabs from "../hostel/hosteltabs";
-import GlobalArrowButton from "../general/global-arrow_button";
-import FlipbookTrigger from "../general/FlipbookTrigger";
-import { useFlipbook } from "../general/FlipbookContext";
 
 /** -----------------------------
- *  TABS
+ *  TABS (UPDATED)
  *  ----------------------------*/
 const IQAC_TABS = [
+    // ✅ 8 Faculties alphabetically
+    { id: "arts", label: "Faculty of Arts & Humanities" },
     { id: "commerce", label: "Faculty of Commerce & Management" },
+    { id: "education", label: "Faculty of Education" },
     { id: "engineering", label: "Faculty of Engineering & Technology" },
     { id: "it", label: "Faculty of Information Technology" },
-    { id: "science", label: "Faculty of Science" },
-    { id: "arts", label: "Faculty of Arts & Humanities" },
     { id: "law", label: "Faculty of Law" },
     { id: "pharmacy", label: "Faculty of Pharmacy" },
-    { id: "education", label: "Faculty of Education" },
+    { id: "science", label: "Faculty of Science" },
+
+    // ✅ Then Research
     { id: "research", label: "Faculty of Research" },
-    { id: "hostel", label: "Hostel" },
-    { id: "other", label: "Other Charges / Transport / Scholarship" },
+
+    // ✅ Then Hostel
+    { id: "hostel", label: "Hostel Fees" },
+
+    // ✅ Separate tabs
+    { id: "scholarship", label: "Scholarships" },
+    { id: "transport", label: "Transport" },
+
+    // ✅ Other Charges (only lateral entry)
+    { id: "other", label: "Other Charges" },
+
+    // ✅ Value Additions (DON'T REMOVE)
     { id: "value", label: "Value Additions" },
-    { id: "pdfs", label: "Value Added Courses (PDFs)" },
 ];
 
 const FEES_COMMERCE = {
@@ -926,9 +935,7 @@ const FEES_PHARMACY = {
             "Total Fees (INR)": "2,53,450/-",
         },
     ],
-    notes: [
-        "Specialisations for M.Pharmacy: Pharmacology, Pharmaceutical Chemistry, Pharmaceutics",
-    ],
+    notes: ["Specialisations for M.Pharmacy: Pharmacology, Pharmaceutical Chemistry, Pharmaceutics"],
 };
 
 const FEES_EDUCATION = {
@@ -1052,8 +1059,24 @@ const FEES_RESEARCH = {
     ],
     notes: [],
 };
-// Paste your existing FEES_COMMERCE, FEES_ENGINEERING, FEES_IT, FEES_S CIENCE, FEES_ARTS,
-// FEES_LAW, FEES_PHARMACY, FEES_EDUCATION, FEES_RESEARCH here exactly as you already have.
+
+const VALUE_ADDITIONS = [
+    "Semester Co-Curricular Activities - Spoken English, Grooming, Public Speaking, Research Paper Presentation, Industrial Visit, Presentation Skill, Seminars, Conferences, Student Research Policy Incentives, Innovation Incentive & Credits, Innovation & Start Up Policy Credits.",
+    "Business Quiz/Competition, Business plan presentation & Ad Mad Show for Commerce & Management Students.",
+    "Semester Extra Curricular Activities – Indoor & Outdoor Games, Campus Band, NCC, NSS, Gymnasium membership, Inter College Sports Tournament, Cultural Fest.",
+    "Free Coaching (Choose any one): Preparation for CAT, MAT, Banking & other competitive exams; State Public Service Commission (PSC) Competitive Exam Coaching; UGC NET Coaching for PG Students; Graduate Aptitude Test in Engineering (GATE) Coaching for Engineering Students; CSIR NET Coaching for PG Students; GPAT Coaching for B. Pharma Final Year students.",
+    "Apart from the Scheduled Internship Program (Mandatory), the Short Term Internship Program is based upon Opportunities from Business & Industry (Optional).",
+    "Certification Program on Personal Computer Application Course in association with First Edu India Ltd.",
+    "Training & Joint Certification on E-Commerce from First Edu India Ltd.",
+    "Design Level 2D & 3D Training for Engineering students in association with First Edu India Ltd.",
+    "Robotics Training in association with First Edu India Ltd. for Engineering & IT Students.",
+    "Web Development Training in association with First Edu India Ltd. for IT Students.",
+    "Training on Tally in association with First Edu India Ltd. for Commerce Students.",
+    "Foreign Trip for all courses (Optional with charges).",
+    "Certification course of AIML/Data Science for IT & Engineering students with First Edu India Ltd.",
+    "Certification course on Photography, Videography & Graphic Design with First Edu India Ltd.",
+    "Certification courses on Financial Planning, Self Finance Planning & Stock Market with First Edu India Ltd.",
+];
 
 const OTHER_CHARGES = {
     lateralEntryFee: "One Time - Rs. 3,000/-",
@@ -1078,117 +1101,16 @@ const OTHER_CHARGES = {
     ],
     scholarship:
         "Scholarships (General, Merit & Girl Student) are available on Tuition Fees. The above scholarships are not applicable to Pharmacy, Education, and Research Programs.",
-    uniformDetails:
-        "Uniform Includes - 2 Trousers, 2 Shirts, 1 Blazer, 1 T-Shirt, 1 Lower, 1 Tie, 1 Bag",
+    uniformDetails: "Uniform Includes - 2 Trousers, 2 Shirts, 1 Blazer, 1 T-Shirt, 1 Lower, 1 Tie, 1 Bag",
 };
-
-const VALUE_ADDITIONS = [
-    "Semester Co-Curricular Activities - Spoken English, Grooming, Public Speaking, Research Paper Presentation, Industrial Visit, Presentation Skill, Seminars, Conferences, Student Research Policy Incentives, Innovation Incentive & Credits, Innovation & Start Up Policy Credits.",
-
-    "Business Quiz/Competition, Business plan presentation & Ad Mad Show for Commerce & Management Students.",
-
-    "Semester Extra Curricular Activities – Indoor & Outdoor Games, Campus Band, NCC, NSS, Gymnasium membership, Inter College Sports Tournament, Cultural Fest.",
-
-    "Free Coaching (Choose any one): Preparation for CAT, MAT, Banking & other competitive exams; State Public Service Commission (PSC) Competitive Exam Coaching; UGC NET Coaching for PG Students; Graduate Aptitude Test in Engineering (GATE) Coaching for Engineering Students; CSIR NET Coaching for PG Students; GPAT Coaching for B. Pharma Final Year students.",
-
-    "Apart from the Scheduled Internship Program (Mandatory), the Short Term Internship Program is based upon Opportunities from Business & Industry (Optional).",
-
-    "Certification Program on Personal Computer Application Course in association with First Edu India Ltd.",
-
-    "Training & Joint Certification on E-Commerce from First Edu India Ltd.",
-
-    "Design Level 2D & 3D Training for Engineering students in association with First Edu India Ltd.",
-
-    "Robotics Training in association with First Edu India Ltd. for Engineering & IT Students.",
-
-    "Web Development Training in association with First Edu India Ltd. for IT Students.",
-
-    "Training on Tally in association with First Edu India Ltd. for Commerce Students.",
-
-    "Foreign Trip for all courses (Optional with charges).",
-
-    "Certification course of AIML/Data Science for IT & Engineering students with First Edu India Ltd.",
-
-    "Certification course on Photography, Videography & Graphic Design with First Edu India Ltd.",
-
-    "Certification courses on Financial Planning, Self Finance Planning & Stock Market with First Edu India Ltd."
-];
-
-
-const VALUE_ADDED_PDF_YEARS = [
-    "2024-25",
-    "2023-24",
-    "2022-23",
-    "2021-22",
-    "2020-21",
-    "2019-20",
-    "2018-19",
-];
-
-/** ✅ Add your REAL PDF links here (NOT drive links) */
-const VALUE_ADDED_PDFS = {
-    "2024-25": [
-        {
-            label: "Value Added Courses (2024–25)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/Value+Added+Courses+-+2024-25-new.pdf",
-        },
-    ],
-
-    "2023-24": [
-        {
-            label: "Value Added Courses (2023–24)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/Value+Added+Courses+-+2023-24-new.pdf",
-        },
-    ],
-
-    "2022-23": [
-        {
-            label: "Value Added Courses (2022–23)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/Value+Added+Courses+-+2022-23_new.pdf",
-        },
-    ],
-
-    "2021-22": [
-        {
-            label: "Value Added Courses (2021–22)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/Value+Added+Courses+-+2021-22-new.pdf",
-        },
-    ],
-
-    "2020-21": [
-        {
-            label: "Value Added Courses (2020–21)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VAC+Brochure+20-21.pdf",
-        },
-    ],
-
-    "2019-20": [
-        {
-            label: "Value Added Courses (2019–20)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VAC-Brochure-19-20.pdf",
-        },
-    ],
-
-    "2018-19": [
-        {
-            label: "Value Added Courses (2018–19)",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/VAC+Brochure+18-19.pdf",
-        },
-    ],
-};
-
 
 /** -----------------------------
  *  Reusable table wrapper
- *  - only table scrolls
- *  - wrap long text
- *  - sticky header
  *  ----------------------------*/
 function ScrollTable({ columns, rows }) {
     return (
         <div className="mt-2 border border-gray-200 rounded-lg overflow-hidden">
-            {/* ✅ table gets BOTH scrolls, page won't */}
-            <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px]">
+            <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] scrollbar-hide">
                 <table className="w-max min-w-full border-collapse">
                     <thead className="sticky top-0 z-10">
                         <tr className="bg-[var(--dark-blue)] text-white">
@@ -1212,12 +1134,7 @@ function ScrollTable({ columns, rows }) {
                                 {columns.map((col) => (
                                     <td
                                         key={col}
-                                        className="
-                        px-4 py-3 text-[var(--foreground)]
-                        whitespace-normal break-words
-                        align-top
-                        min-w-[140px]
-                        "
+                                        className="px-4 py-3 text-[var(--foreground)] whitespace-normal break-words align-top min-w-[140px]"
                                     >
                                         {r[col] ?? "-"}
                                     </td>
@@ -1236,9 +1153,7 @@ function Notes({ items = [] }) {
 
     return (
         <div className="mt-4 text-left space-y-2">
-            <h4 className="font-plus-jakarta-sans font-semibold text-[var(--foreground)]">
-                Notes
-            </h4>
+            <h4 className="font-plus-jakarta-sans font-semibold text-[var(--foreground)]">Notes</h4>
             <ul className="list-disc pl-5 space-y-1">
                 {items.map((t, i) => (
                     <li
@@ -1258,19 +1173,16 @@ function Notes({ items = [] }) {
  *  ----------------------------*/
 export default function FeesTabSection() {
     const searchParams = useSearchParams();
-    const [activeTab, setActiveTab] = useState("commerce");
-    const { openFlipbook } = useFlipbook();
+    const [activeTab, setActiveTab] = useState("arts");
 
-    // Check for tab query parameter on mount and when searchParams change
     useEffect(() => {
-        const tabParam = searchParams?.get('tab');
-        if (tabParam && IQAC_TABS.some(tab => tab.id === tabParam)) {
+        const tabParam = searchParams?.get("tab");
+        if (tabParam && IQAC_TABS.some((tab) => tab.id === tabParam)) {
             setActiveTab(tabParam);
         }
     }, [searchParams]);
 
     const faculty = useMemo(() => {
-        // ✅ Paste your existing mapping exactly (keeping same ids)
         if (activeTab === "commerce") return FEES_COMMERCE;
         if (activeTab === "engineering") return FEES_ENGINEERING;
         if (activeTab === "it") return FEES_IT;
@@ -1280,47 +1192,45 @@ export default function FeesTabSection() {
         if (activeTab === "pharmacy") return FEES_PHARMACY;
         if (activeTab === "education") return FEES_EDUCATION;
         if (activeTab === "research") return FEES_RESEARCH;
-        if (activeTab === "hostel") return { title: "Hostel" };
+        if (activeTab === "hostel") return { title: "Hostel Fees" };
         return null;
     }, [activeTab]);
 
+    // ✅ These tabs have their own custom content (so fallback should NEVER appear for them)
+    const CUSTOM_TABS = ["hostel", "scholarship", "transport", "other", "value"];
 
     return (
         <section className="w-full py-4 px-2 overflow-x-hidden">
             <style jsx>{`
-            .scrollbar-hide::-webkit-scrollbar {
-                display: none;
-            }
-            .scrollbar-hide {
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
 
-            /* ✅ Hostel tab compact view (no extra padding) */
-            :global(.fees-hostel-compact section.py-14) {
-                padding-top: 0 !important;
-                padding-bottom: 0 !important;
-            }
+        :global(.fees-hostel-compact section.py-14) {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
 
-            :global(.fees-hostel-compact .rounded-3xl) {
-                padding: 12px !important;
-            }
+        :global(.fees-hostel-compact .rounded-3xl) {
+          padding: 12px !important;
+        }
 
-            :global(.fees-hostel-compact .rounded-2xl.bg-white) {
-                padding: 16px !important;
-            }
+        :global(.fees-hostel-compact .rounded-2xl.bg-white) {
+          padding: 16px !important;
+        }
 
-            @media (min-width: 768px) {
-                :global(.fees-hostel-compact .rounded-2xl.bg-white) {
-                padding: 24px !important;
-                }
-            }
-`}</style>
+        @media (min-width: 768px) {
+          :global(.fees-hostel-compact .rounded-2xl.bg-white) {
+            padding: 24px !important;
+          }
+        }
+      `}</style>
 
-
-            {/* ✅ 1) items-stretch so both columns take same height */}
             <div className="flex flex-col lg:flex-row gap-4 bg-[var(--dark-blue)] py-16 md:px-10 px-4 rounded-xl overflow-x-hidden items-stretch">
-
                 {/* Tabs */}
                 <div className="w-full lg:w-80 flex-shrink-0">
                     <div className="rounded-[16px] bg-[var(--dark-blue)]">
@@ -1332,15 +1242,15 @@ export default function FeesTabSection() {
                                         key={tab.id}
                                         onClick={() => setActiveTab(tab.id)}
                                         className={`
-                    flex-shrink-0 lg:w-full text-left px-4 py-5 rounded-[8px]
-                    font-plus-jakarta-sans text-sm md:text-base
-                    ${tab.id === "other" ? "whitespace-normal break-words" : "whitespace-nowrap"}
-                    transition-all duration-200
-                    ${isActive
+                      flex-shrink-0 lg:w-full text-left px-4 py-5 rounded-[8px]
+                      font-plus-jakarta-sans text-sm md:text-base
+                      whitespace-normal break-words
+                      transition-all duration-200
+                      ${isActive
                                                 ? "bg-[var(--button-red)] text-white font-semibold"
                                                 : "bg-[var(--lite-sand)] text-[var(--foreground)] hover:opacity-90"
                                             }
-                  `}
+                    `}
                                     >
                                         {tab.label}
                                     </button>
@@ -1350,98 +1260,29 @@ export default function FeesTabSection() {
                     </div>
                 </div>
 
-                {/* ✅ 2) Right side becomes a flex column and stretches to left height */}
+                {/* Right Content */}
                 <div className="flex-1 w-full min-w-0 flex flex-col">
-                    {/* ✅ 3) White card takes full height of wrapper */}
                     <div className="rounded-[16px] bg-white shadow-sm overflow-hidden h-full flex flex-col">
-                        {/* ✅ Only THIS part scrolls */}
                         <div className="flex-1 overflow-y-auto px-4 md:px-5 pt-4 md:pt-5 pb-8">
                             {/* Faculty Tables */}
-                            {faculty && activeTab != "hostel" && (
-                                <div>
-                                    <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
-                                        {faculty.title}
-                                    </h2>
-
-                                    <ScrollTable columns={faculty.columns} rows={faculty.rows} />
-                                    <Notes items={faculty.notes} />
-                                </div>
-                            )}
-
-                            {/* Other Charges */}
-                            {activeTab === "other" && (
-                                <div>
-                                    <div className="w-full min-w-0">
-                                        <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 mt-1 text-center w-full max-w-full min-w-0 px-2 !whitespace-normal !break-words !overflow-visible">
-                                            Other Charges / Transport / Scholarship
+                            {faculty &&
+                                activeTab !== "hostel" &&
+                                !["scholarship", "transport", "other", "value"].includes(activeTab) && (
+                                    <div>
+                                        <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
+                                            {faculty.title}
                                         </h2>
+
+                                        <ScrollTable columns={faculty.columns} rows={faculty.rows} />
+                                        <Notes items={faculty.notes} />
                                     </div>
+                                )}
 
-                                    <div className="space-y-4 text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
-                                        <div className="p-4 rounded-lg border border-gray-200 bg-gray-50">
-                                            <div className="font-semibold mb-2">Other Charges</div>
-                                            <ul className="list-disc pl-5 space-y-1">
-                                                <li>Lateral Entry Fees: {OTHER_CHARGES.lateralEntryFee}</li>
-                                                <li>Credit Transfer: {OTHER_CHARGES.creditTransfer}</li>
-                                            </ul>
-                                        </div>
-
-                                        <div className="p-4 rounded-lg border border-gray-200 bg-white">
-                                            <div className="font-semibold mb-2">Transport Charges (To &amp; From)</div>
-
-                                            <div className="border border-gray-200 rounded-lg overflow-hidden">
-                                                <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[360px]">
-                                                    <table className="w-max min-w-full border-collapse">
-                                                        <thead className="sticky top-0 z-10">
-                                                            <tr className="bg-[var(--dark-blue)] text-white">
-                                                                <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Route</th>
-                                                                <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">Fee</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            {OTHER_CHARGES.transport.map((t, i) => (
-                                                                <tr key={i} className="border-b border-gray-200 hover:bg-gray-50">
-                                                                    <td className="px-4 py-3 whitespace-normal break-words min-w-[280px]">{t.route}</td>
-                                                                    <td className="px-4 py-3 whitespace-nowrap">{t.fee}</td>
-                                                                </tr>
-                                                            ))}
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="p-4 rounded-lg border border-gray-200 bg-gray-50">
-                                            <div className="font-semibold mb-2">Scholarship Details</div>
-                                            <p className="whitespace-normal break-words mb-4">
-                                                Scholarships (General, Merit &amp; Girl Student) are available on Tuition Fees.{" "}
-                                                . The above scholarships are not applicable to Pharmacy, Education, and Research Programs.
-                                            </p>
-                                            <FlipbookTrigger
-                                                pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/SCHOLARSHIP_25-26+(4)+(1).pdf"
-                                                title="Scholarship Details"
-                                            >
-                                                <GlobalArrowButton
-                                                    onClick={() => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/SCHOLARSHIP_25-26+(4)+(1).pdf", "Scholarship Details")}
-                                                    className=" !py-2"
-                                                >
-                                                    View Scholarship Details
-                                                </GlobalArrowButton>
-                                            </FlipbookTrigger>
-                                        </div>
-
-                                        <div className="p-4 rounded-lg border border-gray-200 bg-white">
-                                            <div className="font-semibold mb-2">Uniform Details</div>
-                                            <p className="whitespace-normal break-words">{OTHER_CHARGES.uniformDetails}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-                            {/* {Hostel Tab} */}
+                            {/* Hostel Tab */}
                             {activeTab === "hostel" && (
                                 <div className="w-full">
                                     <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
-                                        Hostel
+                                        Hostel Fees
                                     </h2>
 
                                     <div className="fees-hostel-compact">
@@ -1450,12 +1291,96 @@ export default function FeesTabSection() {
                                 </div>
                             )}
 
-                            {/* Value Additions */}
+                            {/* Scholarships Tab */}
+                            {activeTab === "scholarship" && (
+                                <div>
+                                    <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 mt-1 text-center">
+                                        Scholarships
+                                    </h2>
+
+                                    <div className="p-4 rounded-lg border border-gray-200 bg-gray-50">
+                                        <div className="font-semibold mb-2">Scholarship Details</div>
+                                        <p className="whitespace-normal break-words text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
+                                            {OTHER_CHARGES.scholarship}{" "}
+                                            <a
+                                                href="https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/SCHOLARSHIP_25-26+(4)+(1).pdf"
+                                                className="text-[var(--button-red)] underline font-semibold ml-1"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                View scholarship details
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Transport Tab */}
+                            {activeTab === "transport" && (
+                                <div>
+                                    <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 mt-1 text-center">
+                                        Transport Charges (To &amp; From)
+                                    </h2>
+
+                                    <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                                        <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] scrollbar-hide">
+                                            <table className="w-max min-w-full border-collapse">
+                                                <thead className="sticky top-0 z-10">
+                                                    <tr className="bg-[var(--dark-blue)] text-white">
+                                                        <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">
+                                                            Route
+                                                        </th>
+                                                        <th className="px-4 py-3 text-left font-semibold whitespace-nowrap">
+                                                            Fee
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {OTHER_CHARGES.transport.map((t, i) => (
+                                                        <tr key={i} className="border-b border-gray-200 hover:bg-gray-50">
+                                                            <td className="px-4 py-3 whitespace-normal break-words min-w-[280px]">
+                                                                {t.route}
+                                                            </td>
+                                                            <td className="px-4 py-3 whitespace-nowrap">{t.fee}</td>
+                                                        </tr>
+                                                    ))}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Other Charges Tab */}
+                            {activeTab === "other" && (
+                                <div>
+                                    <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 mt-1 text-center">
+                                        Other Charges
+                                    </h2>
+
+                                    <div className="p-4 rounded-lg border border-gray-200 bg-gray-50">
+                                        <div className="font-semibold mb-2">Other Charges</div>
+                                        <ul className="list-disc pl-5 space-y-1 text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
+                                            <li>Lateral Entry Fees: {OTHER_CHARGES.lateralEntryFee}</li>
+                                        </ul>
+                                    </div>
+
+                                    <div className="p-4 mt-4 rounded-lg border border-gray-200 bg-white">
+                                        <div className="font-semibold mb-2">Uniform Details</div>
+                                        <p className="whitespace-normal break-words text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
+                                            {OTHER_CHARGES.uniformDetails}
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* ✅ Value Additions (FIXED: no extra fallback now) */}
                             {activeTab === "value" && (
                                 <div>
                                     <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
                                         Value Additions
                                     </h2>
+
                                     <ul className="list-disc pl-5 space-y-2 text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
                                         {VALUE_ADDITIONS.map((v, i) => (
                                             <li key={i} className="whitespace-normal break-words">
@@ -1466,53 +1391,8 @@ export default function FeesTabSection() {
                                 </div>
                             )}
 
-
-
-                            {/* PDFs */}
-                            {activeTab === "pdfs" && (
-                                <div>
-                                    <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
-                                        Department-wise Free Value-added Courses (PDFs)
-                                    </h2>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                        {VALUE_ADDED_PDF_YEARS.map((y) => {
-                                            const yearPdfs = VALUE_ADDED_PDFS?.[y] || [];
-                                            return (
-                                                <div key={y} className="border border-gray-200 rounded-lg p-4 bg-gray-50">
-                                                    <div className="font-semibold text-[var(--foreground)]">{y}</div>
-
-                                                    {yearPdfs.length > 0 ? (
-                                                        <div className="mt-3 grid grid-cols-1 gap-2">
-                                                            {yearPdfs.map((p, idx) => (
-                                                                <FlipbookTrigger
-                                                                    key={idx}
-                                                                    pdfUrl={p.href}
-                                                                    title={p.label}
-                                                                >
-                                                                    <GlobalArrowButton
-                                                                        onClick={() => openFlipbook(p.href, p.label)}
-                                                                        className="!w-full !py-2 !text-sm"
-                                                                        textClassName="!text-sm"
-                                                                    >
-                                                                        {p.label}
-                                                                    </GlobalArrowButton>
-                                                                </FlipbookTrigger>
-                                                            ))}
-                                                        </div>
-                                                    ) : (
-                                                        <div className="text-sm text-[var(--foreground)]/70 mt-2">
-                                                            PDFs will be added here.
-                                                        </div>
-                                                    )}
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            )}
-
-                            {!faculty && !["other", "value", "pdfs"].includes(activeTab) && (
+                            {/* ✅ fallback (FIXED: will NOT run for value additions anymore) */}
+                            {!faculty && !CUSTOM_TABS.includes(activeTab) && (
                                 <div>
                                     <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
                                         {IQAC_TABS.find((t) => t.id === activeTab)?.label}

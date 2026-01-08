@@ -48,6 +48,9 @@ export default function ScholarshipsPage() {
     ],
   };
 
+  const scholarshipPolicyPdf = "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/SCHOLARSHIP_25-26+(4)+(1).pdf";
+
+
   const whyStudyItems = [
     { id: 1, title: "Over 5000+ top performers have been rewarded." },
     { id: 2, title: "Scholarships worth 3 Crores+ distributed." },
@@ -350,8 +353,8 @@ export default function ScholarshipsPage() {
         readmore={false}
         className="items-center justify-center"
         title="Rewarding the Hard Work and Academic Excellence of Meritorious Students"
-        subtitle="KU Scholarships 2025-26"
-        description="We reward the hard work of every student, and Kalinga University’s scholarships encourage them to dream bigger and confidently step forward towards their career goals."
+        subtitle=""
+        description="We recognize the hard work of every student, and Kalinga University’s scholarships encourage them to dream bigger and confidently step forward towards their career goals."
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/scholarship-about.webp"
       />
 
@@ -552,6 +555,46 @@ export default function ScholarshipsPage() {
       />
 
       <FAQ items={defaultFAQItems} title="Clearing All Your Doubts" subtitle="" />
+      {/* ✅ Download Scholarship Policy */}
+      <div className="mx-auto max-w-6xl px-4 md:px-6 mt-10 mb-6">
+        <div className="rounded-2xl bg-[var(--lite-sand)] p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h3 className="font-stix text-xl md:text-2xl text-[var(--foreground)]">
+              Scholarship Policy (2025–26)
+            </h3>
+            <p className="mt-2 text-gray-700">
+              Download the official scholarship policy document for detailed eligibility and terms.
+            </p>
+          </div>
+
+          <a
+            href={scholarshipPolicyPdf}
+            download
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-5 py-3 text-white font-semibold hover:opacity-90 transition"
+          >
+            Download Policy
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 3v10m0 0l4-4m-4 4l-4-4"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M4 17v3h16v-3"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
       <AdmissionCareer />
     </>
   );

@@ -139,7 +139,7 @@ function BoysHostel() {
     return (
         <>
             <h2 className="font-stix !text-lg md:!text-2xl text-[var(--foreground)] mb-6">
-                Boys Hostel Fee (2025–26)
+                Boys Hostel Fee (2026–27)
             </h2>
 
             <HostelFeeTable
@@ -168,7 +168,7 @@ function GirlsHostel() {
     return (
         <>
             <h2 className="font-stix !text-lg md:!text-2xl text-[var(--foreground)] mb-6">
-                Girls Hostel Fee (2025–26)
+                Girls Hostel Fee (2026–27)
             </h2>
 
             <HostelFeeTable
