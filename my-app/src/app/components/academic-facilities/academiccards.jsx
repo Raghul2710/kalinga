@@ -83,7 +83,7 @@ function Academiccards() {
             subtitle: "MEDIA & COMMUNICATION",
         },
         {
-            title: " Central Instrumentation Facility",
+            title: "Central Instrumentation Facility",
             description:
                 "Every year, we provide on-campus and off-campus internship opportunities to our students and conduct hands-on training programs on real-world skills to improve their practical knowledge and technical expertise. We don’t just make our students academically strong but also job-ready with new skills so that they can meet industry demands.",
             imageSrc:
