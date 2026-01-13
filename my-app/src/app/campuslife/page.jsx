@@ -6,7 +6,7 @@ import CampusLife from "../components/campuslife/campusvideo";
 import Gallery from "../components/campuslife/campusgallery";
 import AdmissionCareer from "../components/general/admission_cta";
 import UpcomingConferences from "../components/research/upcoming_conference";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
+
 
 const breadcrumbData = {
   heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/campuslife.webp",
@@ -17,10 +17,13 @@ const breadcrumbData = {
   ]
 };
 
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
+
 export default function Page() {
   return (
     <>
-      <AutoBreadcrumb data={breadcrumbData} />
       <MainIntro
         title="Life at KU"
         description={["Life at Kalinga University is a vibrant blend of learning, culture, and community. Students from across India and around the world come together to explore ideas, develop skills, and build lifelong connections.From academic clubs and cultural events to sports and leadership activities, every experience at KU fosters growth, confidence, and creativity — all within a modern, green, and inclusive campus."

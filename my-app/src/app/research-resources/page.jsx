@@ -3,7 +3,7 @@
 import MainIntro from "@/app/components/about/main_intro";
 import ImageListItem from "@/app/components/ccrc/imagelistitem";
 import FAQ from "../components/general/faq";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
+import FAQ from "../components/general/faq";
 import { useFlipbook } from "../components/general/FlipbookContext";
 
 const breadcrumbData = {
@@ -15,6 +15,10 @@ const breadcrumbData = {
     { label: "Research Resources", href: "/research-resources" },
   ],
 };
+
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
 
 const Items = [
   {
@@ -170,7 +174,7 @@ export default function ResearchResources() {
         }
       }
   `}</style>
-      <AutoBreadcrumb data={breadcrumbData} />
+
 
       <MainIntro
         title="Powering Your Curiosity At Every Step"

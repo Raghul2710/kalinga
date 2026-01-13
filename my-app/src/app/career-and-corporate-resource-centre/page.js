@@ -15,10 +15,10 @@ import SectionHeading from "../components/general/SectionHeading";
 
 const breadcrumbData = {
   heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/kif-banner.webp",
-  pageTitle: "CCRC",
+  pageTitle: "Career and Corporate Resource Centre",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },
-    { label: 'CCRC', href: '/ccrc' }
+    { label: 'Career and Corporate Resource Centre', href: '/career-and-corporate-resource-centre' }
   ]
 };
 

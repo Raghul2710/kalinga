@@ -1,6 +1,5 @@
 "use client";
 
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
 import AdmissionCareer from "../components/general/admission_cta";
 import CenterOfExcellence from "../components/about/center_of_excellence";
 
@@ -18,73 +17,77 @@ const breadcrumbData = {
   ],
 };
 
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
+
 /* ---------------- DATA (Easy to Update) ---------------- */
 const clubSections = [
   {
     id: 1,
     title: "MOU Partners",
     clubs: [
-     {
+      {
         name: "Profsys Softwares Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Profsys+Softwares+Pvt.+Ltd..webp",
       },
-      
+
       {
         name: "LG Electronics India Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/LG+Electronics+India+Pvt.+Ltd..webp",
       },
-       
-       {
+
+      {
         name: "Kalpataru Power Transmission Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Kalpataru+Power+Transmission+Ltd..webp",
       },
-       
-       {
+
+      {
         name: "Network computer",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Network+company.webp",
       },
-       {
+      {
         name: "Primeone Workforce Pvt.Ltd",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Primeone+Workforce+Pvt.+Ltd..webp",
       },
-       
-       {
+
+      {
         name: "A1 Galaxy Trademark Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/A1+Galaxy+Trademark+Pvt.+Ltd..webp",
       },
-       {
+      {
         name: "R.R. Ispat",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/R.R.+Ispat.webp",
       },
-       {
+      {
         name: "JV Realty",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/JV+Realty.webp",
       },
-     
-       {
+
+      {
         name: "Globecorp Microfinance Foundation",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Globecorp+Microfinance+Foundation.webp",
       },
-       {
+      {
         name: "Saubhagya Ventures Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Saubhagya+Ventures+Pvt.+Ltd..webp",
       },
-       {
+      {
         name: "Patidar Furniture House",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Patidar+Furniture+House.webp",
       },
-       {
+      {
         name: "CAD Academy",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/cad.webp",
@@ -104,57 +107,57 @@ const clubSections = [
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Krishna+Holidays.webp",
       },
-       {
+      {
         name: "Param Web Info",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Param+Web+Info.webp",
       },
-       {
+      {
         name: "Just Dial Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Just+Dial+Ltd..webp",
       },
-       {
+      {
         name: "Adecco Group India",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Adecco+Group+India.webp",
       },
-       {
+      {
         name: "Globussoft Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Globussoft+Pvt.+Ltd..webp",
       },
-       {
+      {
         name: "Globecorp Skill Council Services Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Globecorp+Skill+Council+Services+Pvt.+Ltd..webp",
       },
-       {
+      {
         name: "Construction Industry Development Council (CIDC)",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Construction+Industry+Development+Council+(CIDC).webp",
       },
-       {
+      {
         name: "Bansod Realtors",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Bansod+Realtors.webp",
       },
-       {
+      {
         name: " Saluja Graphix",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Saluja+Graphix.webp",
       },
-       {
+      {
         name: "Swastik Group",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Swastik+Group.webp",
       },
-       {
+      {
         name: "Tata Power",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Tata+Power.webp",
       },
-       {
+      {
         name: " SaiSun Outsourcing Services Pvt. Ltd.",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/SaiSun+Outsourcing+Services+Pvt.+Ltd..webp",
@@ -162,24 +165,24 @@ const clubSections = [
       {
         name: " 195 Holidays",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/195+Holidays.webp",   
+          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/195+Holidays.webp",
       },
       {
         name: " 3S Inc.",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/3S+Inc.webp",   
+          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/3S+Inc.webp",
       },
       {
         name: "Cytogene Research & Development",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Cytogene+Research+%26+Development.webp",   
+          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Cytogene+Research+%26+Development.webp",
       },
       {
         name: "Eiffcon",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Eiffcon.webp",   
+          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Eiffcon.webp",
       },
-      
+
     ],
   },
   {
@@ -211,7 +214,7 @@ const clubSections = [
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/certificate-1.webp",
       },
-      
+
     ],
   },
   {
@@ -224,7 +227,7 @@ const clubSections = [
       { name: "Mgm's college of engineering Nanded-Maharashtra", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Mgm's+college+of+engineering+Nanded-Maharashtra.webp" },
       { name: "Rajiv Gandhi National University of Law, Punjab", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Rajiv+Gandhi+National+University+of+Law%2C+Punjab.webp" },
       { name: "Govt. Digvijay PG Autonomous College, Rajnandgaon – Chhattisgarh", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/Govt.+Digvijay+PG+Autonomous+College%2C+Rajnandgaon+%E2%80%93+Chhattisgarh.webp" },
-      
+
     ],
   },
   {
@@ -237,7 +240,7 @@ const clubSections = [
       { name: "", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/international-institutions-4.webp" },
       { name: "", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/international-institutions-5.webp" },
       { name: "", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Academic-and-Industry-Collaborations/international-institutions-6.webp" },
-      
+
     ],
   },
 ];
@@ -247,7 +250,7 @@ export default function Page() {
   return (
     <>
       {/* Breadcrumb */}
-      <AutoBreadcrumb data={breadcrumbData} />
+
 
       {/* Dynamic Sections */}
       {clubSections.map((section) => (

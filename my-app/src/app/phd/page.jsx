@@ -1,6 +1,5 @@
 "use client";
 import AdmissionCareer from "../components/general/admission_cta";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
 import PhdGrid from "../components/phd/phd-grid";
 import PhdIntro from "../components/phd/phd-intro";
 import PhdObjectivesPanel from "../components/phd/phd-objectives";
@@ -9,18 +8,23 @@ import ScholarStats from "../components/phd/scholar_stats";
 import WhyChoosePhd from "../components/phd/why-phd";
 import { useFlipbook } from "../components/general/FlipbookContext";
 
+const breadcrumbData = {
+  heroImage:
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-BannerImage.webp",
+  pageTitle: "Ph.D",
+  customBreadcrumbs: [
+    { label: "Home", href: "/" },
+    { label: "Ph.D", href: "/phd" },
+  ],
+};
+
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
+
 
 export default function PhdPage() {
   const { openFlipbook } = useFlipbook();
-  const breadcrumbData = {
-    heroImage:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-BannerImage.webp",
-    pageTitle: "Ph.D",
-    customBreadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Ph.D", href: "/phd" },
-    ],
-  };
 
   const phdResources = [
     {
@@ -133,7 +137,7 @@ export default function PhdPage() {
         }
       }
     `}</style>
-      <AutoBreadcrumb data={breadcrumbData} />
+
       <PhdIntro />
       <PhdGrid />
       <WhyChoosePhd />

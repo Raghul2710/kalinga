@@ -1,6 +1,5 @@
 import MainIntro from "../components/about/main_intro";
 import AdmissionCareer from "../components/general/admission_cta";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
 import LeadershipCard from "../components/general/leadership-card";
 
 /* ---------------- Breadcrumb ---------------- */
@@ -13,6 +12,10 @@ const breadcrumbData = {
     { label: "Student Clubs", href: "student-clubs" },
   ],
 };
+
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
 
 /* ---------------- DATA (Easy to Update) ---------------- */
 const clubSections = [
@@ -172,7 +175,7 @@ export default function Page() {
   return (
     <>
       {/* Breadcrumb */}
-      <AutoBreadcrumb data={breadcrumbData} />
+
 
       {/* Intro */}
       <MainIntro

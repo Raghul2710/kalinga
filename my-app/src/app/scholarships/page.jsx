@@ -7,7 +7,20 @@ import ScholarshipsSlider from "../components/admissions/scholarships_slider";
 import CenterOfExcellence from "../components/about/center_of_excellence";
 import FAQ from "../components/general/faq";
 import AdmissionCareer from "../components/general/admission_cta";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
+
+const breadcrumbData = {
+  heroImage:
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
+  pageTitle: "Scholarships",
+  customBreadcrumbs: [
+    { label: "Home", href: "/" },
+    { label: "Scholarships", href: "/scholarships" },
+  ],
+};
+
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
 
 export default function ScholarshipsPage() {
   useEffect(() => {
@@ -37,16 +50,6 @@ export default function ScholarshipsPage() {
       sw.off("reachBeginning", onReachBeginning);
     };
   }, []);
-
-  const breadcrumbData = {
-    heroImage:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
-    pageTitle: "Scholarships",
-    customBreadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "Scholarships", href: "/scholarships" },
-    ],
-  };
 
   const scholarshipPolicyPdf = "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/SCHOLARSHIP_25-26+(4)+(1).pdf";
 
@@ -347,7 +350,7 @@ export default function ScholarshipsPage() {
         }
       `}</style>
 
-      <AutoBreadcrumb data={breadcrumbData} />
+
 
       <MainIntro
         readmore={false}

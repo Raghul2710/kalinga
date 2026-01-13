@@ -5,20 +5,23 @@ import RaipurMainIntro from '@/app/components/about-raipur/raipur_main_intro'
 import NewRaipur from '@/app/components/about-raipur/new_raipur'
 import Objectives from '@/app/components/about-raipur/objective'
 import Highlights from '@/app/components/about-raipur/highlights'
-import AutoBreadcrumb from '../components/layout/BreadcrumbData'
 import AdmissionCareer from '../components/general/admission_cta'
 
-function page() {
-  const breadcrumbData = {
-    heroImage:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
-    pageTitle: "About Raipur",
-    customBreadcrumbs: [
-      { label: "Home", href: "/" },
-      { label: "About Raipur", href: "/about-raipur" },
-    ],
-  };
+const breadcrumbData = {
+  heroImage:
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp",
+  pageTitle: "About Raipur",
+  customBreadcrumbs: [
+    { label: "Home", href: "/" },
+    { label: "About Raipur", href: "/about-raipur" },
+  ],
+};
 
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
+
+function page() {
 
 
   return (
@@ -34,11 +37,9 @@ function page() {
     }
   }
 `}</style>
-
-      <AutoBreadcrumb data={breadcrumbData} />
-      <RaipurMainIntro 
-      knowMoreLabel=''
-      knowMoreHref=''/>
+      <RaipurMainIntro
+        knowMoreLabel=''
+        knowMoreHref='' />
       <NewRaipur />
       <Objectives />
       <Highlights />

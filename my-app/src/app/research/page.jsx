@@ -14,8 +14,22 @@ import MentorIntro from "../components/department/dept_head_intro";
 import NewsEvents from "../components/home/news_and_events";
 import CenterOfExcellence from "../components/about/center_of_excellence";
 import AwardsScrollbar from "../components/home/awards-scrollbar";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
 import ResearchCE from '../components/research-facilities/research-coe'
+
+const breadcrumbData = {
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/reserarch-banner.webp",
+  pageTitle: "Research",
+  imageposition: "object-center",
+  customBreadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Research', href: '/research' }
+  ]
+};
+
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
+}
+
 export default function Research() {
 
   const newsConferences = [
@@ -94,18 +108,9 @@ export default function Research() {
       active: true,
     },
   ];
-  const breadcrumbData = {
-    heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/reserarch-banner.webp",
-    pageTitle: "Research",
-    imageposition: "object-center",
-    customBreadcrumbs: [
-      { label: 'Home', href: '/' },
-      { label: 'Research', href: '/research' }
-    ]
-  };
+
   return (
     <div>
-      <AutoBreadcrumb data={breadcrumbData} />
       <MainIntro
         title="Research and Innovation"
         description={[

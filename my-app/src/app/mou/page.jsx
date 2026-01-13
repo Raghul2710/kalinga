@@ -1,5 +1,5 @@
 import APITable from "../components/general/api-table";
-import AutoBreadcrumb from "../components/layout/BreadcrumbData";
+
 
 const breadcrumbData = {
     heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/campuslife.webp",
@@ -10,10 +10,14 @@ const breadcrumbData = {
     ]
 };
 
+if (typeof window !== "undefined") {
+    window.__breadcrumbData = breadcrumbData;
+}
+
 export default function MOUPage() {
     return (
         <>
-            <AutoBreadcrumb data={breadcrumbData} />
+
 
             {/* Test APITable with the MOU table */}
             <APITable
