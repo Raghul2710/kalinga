@@ -1846,9 +1846,9 @@ export default function IqacTabSection() {
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}
                   </h2>
-                  <p className="text-[var(--foreground)] font-plus-jakarta-sans text-center">
+                  {/* <p className="text-[var(--foreground)] font-plus-jakarta-sans text-center">
                     Content for this section will be added here.
-                  </p>
+                  </p> */}
                 </div>
               )}
             </div>

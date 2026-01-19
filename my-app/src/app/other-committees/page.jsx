@@ -191,9 +191,9 @@ export default function OtherCommittees() {
     },
     {
       id: 9,
-      question: "Fraud Awareness",
+      question: "Fraud Awareness Guidelines",
       answer:
-        "<b>Fraud Awareness Guidelines</b> Kalinga goes to great lengths to protect our students from fraud. If you suspect having received fraudulent emails, SMS, or found a website or social media account that tries to pass off as official Kalinga University, we encourage you to let us know at your earliest convenience, so that we can quickly take action to stop the fraud. Please report all suspicious activity to our dedicated Anti-Abuse Mailbox at report@kalingauniversity.ac.in. We thoroughly investigate every report of suspected fraud, but generally, we do not respond to personal inquiries. Thank you for joining our effort to combat online fraud. <b>Fraudulent Use of Our Brand</b> Attempts have been made to defraud students online by the unauthorised use of the Kalinga University name and brand via email communications and graphics that appear, on the surface, to have originated from Kalinga University. Kalinga accepts no responsibility for any costs, charges, or payments made that were improperly incurred as a result of fraudulent activity.",
+        "<b>Fraud Awareness Guidelines: </b> Kalinga goes to great lengths to protect our students from fraud. If you suspect having received fraudulent emails, SMS, or found a website or social media account that tries to pass off as official Kalinga University, we encourage you to let us know at your earliest convenience, so that we can quickly take action to stop the fraud. Please report all suspicious activity to our dedicated Anti-Abuse Mailbox at report@kalingauniversity.ac.in. We thoroughly investigate every report of suspected fraud, but generally, we do not respond to personal inquiries. Thank you for joining our effort to combat online fraud. <b>Fraudulent Use of Our Brand</b> Attempts have been made to defraud students online by the unauthorised use of the Kalinga University name and brand via email communications and graphics that appear, on the surface, to have originated from Kalinga University. Kalinga accepts no responsibility for any costs, charges, or payments made that were improperly incurred as a result of fraudulent activity.",
     },
   ];
 
