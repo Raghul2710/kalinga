@@ -2411,6 +2411,7 @@ a { font-size: 14px !important; }
     margin-bottom: 30px;
     gap: 12px;
     flex-direction: column;
+    padding: 15px !important;
   }
   .incubation-benefit-item {
     width: 100%;
@@ -2513,7 +2514,6 @@ a { font-size: 14px !important; }
   }
   .cta-content {
     padding-right: 0;
-    padding: 0 20px;
     margin-bottom: 30px;
   }
   .cta-description {
