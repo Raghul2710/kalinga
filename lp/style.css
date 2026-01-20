@@ -921,6 +921,14 @@ a { font-size: 14px !important; }
   margin-bottom: 20px;
 }
 
+.choose-field-hidden {
+  display: none;
+}
+
+.choose-field-hidden-mobile {
+  display: none;
+}
+
 .choose-field-card {
   background-color: var(--lite-sand);
   border-radius: 10px;
