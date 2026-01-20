@@ -64,6 +64,7 @@ export default function StudentActivities({
   limit,
   paddingClassName = "py-16",
   cardHeightClass = "h-full w-full",
+  showReadMore = true,
 }) {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -180,7 +181,7 @@ export default function StudentActivities({
           </p>
         </div>
 
-        {(activity.buttonText !== "" && activity.buttonText !== false) && (
+        {showReadMore && (activity.buttonText !== "" && activity.buttonText !== false) && (
           <div className="mt-2">
             <Link href={activity.slug ? `/news-and-events/${activity.slug}` : "#"} passHref className="inline-block">
               <GlobalArrowButton

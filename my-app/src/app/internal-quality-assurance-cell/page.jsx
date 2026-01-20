@@ -78,7 +78,7 @@ const IQACPage = () => {
     {
       id: 4,
       title: "Patents",
-      value: "10+",
+      value: "510+",
     },
   ]
   return (

@@ -497,7 +497,7 @@ export default function KIFPage({
         title="Startup Partners"
         description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation."
       />
-      <StudentActivities activities={activities} subtitle="" title="Glimpses" />
+      <StudentActivities activities={activities} subtitle="" title="Glimpses" showReadMore={false}/>
       <AdmissionCareer />
 
 

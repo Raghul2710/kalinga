@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../general/tab";
 import { AccordionItem } from "../general/accordion";
 import Gallery from "../general/gallery";
@@ -107,6 +108,9 @@ function TrainingGlimpseGallery() {
 }
 
 export default function CtcdTrainingTabs({ customTabs }) {
+    const [open, setOpen] = useState(false);
+    const [openTechnical, setOpenTechnical] = useState(false);
+
     // If customTabs is provided, render dynamic tabs
     if (customTabs && customTabs.length > 0) {
         return (
@@ -213,6 +217,12 @@ export default function CtcdTrainingTabs({ customTabs }) {
                                             leadership, emotional intelligence, and professionalism. The sessions include real-world case studies where participants
                                             learn how to build a mindset of adaptability and performance excellence that boosts organisational growth.
                                         </p>
+                                        <button
+                                            onClick={() => setOpen(true)}
+                                            className="mt-4 rounded-lg bg-[var(--button-red)] px-5 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+                                        >
+                                            Read More
+                                        </button>
                                     </div>
 
                                     <div className={CARD_CLASSNAME}>
@@ -225,6 +235,12 @@ export default function CtcdTrainingTabs({ customTabs }) {
                                             advanced manufacturing techniques, data analysis, and much more. They don’t just learn but build technical precision that drives
                                             operational excellence.
                                         </p>
+                                        <button
+                                            onClick={() => setOpenTechnical(true)}
+                                            className="mt-4 rounded-lg bg-[var(--button-red)] px-5 py-2 text-sm font-medium text-white hover:opacity-90 transition-opacity"
+                                        >
+                                            Read More
+                                        </button>
                                     </div>
                                 </div>
 
@@ -612,6 +628,459 @@ export default function CtcdTrainingTabs({ customTabs }) {
                     </Tabs>
                 </div>
             </div >
+
+            {/* Behavioural Topics Modal */}
+            {open && (
+                <div
+                    className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
+                    role="dialog"
+                    aria-modal="true"
+                    onClick={() => setOpen(false)}
+                >
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+
+                    <div
+                        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white p-6 md:p-8 shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex items-start justify-between gap-4 mb-4">
+                            <h3 className="font-stix text-2xl md:text-3xl text-[var(--foreground)]">
+                                Behavioural Topics
+                            </h3>
+
+                            <button
+                                type="button"
+                                onClick={() => setOpen(false)}
+                                className="rounded-full border border-black/10 px-3 py-1 text-sm hover:bg-black/5"
+                                aria-label="Close"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        <div className="text-[var(--foreground)] space-y-4">
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Effective Communication</h4>
+                                <p className="ml-4 text-sm">Effective Business Communication, Public Speaking Confidence, Presentation Skills, Active Listening</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Advanced Communication for Leaders</h4>
+                                <p className="ml-4 text-sm">Active Listening, Body Language, Non-Verbals, LSRW, VAK, Assertiveness, Strategic communication, leadership messaging, influencing teams, Beyond Communication (Inner Communication)</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● First Time Leaders</h4>
+                                <p className="ml-4 text-sm">Leadership Fundamentals, Leadership Styles, Communication, Emotional Intelligence</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● 21st Century Leadership Skills</h4>
+                                <p className="ml-4 text-sm">People Skills Managing to Leading, Collaboration, Coaching, Feedback</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Advanced Leadership</h4>
+                                <p className="ml-4 text-sm">Situational and Strategic Leadership</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Customer Centricity</h4>
+                                <p className="ml-4 text-sm">Understanding Customers, Needs, Query - Complaint-Escalation Handling</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Goal Setting</h4>
+                                <p className="ml-4 text-sm">Categorizing & Prioritizing Goals, Mapping the Milestones, Curating the Action Plan, Building Deservability</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Deep Thinking</h4>
+                                <p className="ml-4 text-sm">Concepts, Systems, Deep Thinking and Creativity, Mind Mapping</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Team Dynamics</h4>
+                                <p className="ml-4 text-sm">Working in Teams Ownership, Bonding, Managing people for Results, Team Excellence, Team Synergy, Effective Team Player</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Problem Solving & Decision Making</h4>
+                                <p className="ml-4 text-sm">Understanding Problems, Problem Solving Cycle, Problem Framing & Identification, Problem Solving Techniques Planning & Action, Decision Making</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Time Structuring & Professionalism</h4>
+                                <p className="ml-4 text-sm">Time management, task prioritization, professionalism in the workplace</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Conflict Management & Negotiation Skills</h4>
+                                <p className="ml-4 text-sm">Handling disputes, negotiation tactics, reaching win-win outcomes</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Emotional Intelligence</h4>
+                                <p className="ml-4 text-sm">Self-awareness, empathy, managing emotions, Self Regulation</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Mindfulness and Empathy</h4>
+                                <p className="ml-4 text-sm">Mindful practices, enhancing emotional connection, self reflection, enhancing productivity through mindfulness</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● POSH</h4>
+                                <p className="ml-4 text-sm">Prevention of Sexual Harassment, legal frameworks, respectful workplace practices</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Creativity and Innovation</h4>
+                                <p className="ml-4 text-sm">Fostering creativity, innovative thinking techniques, ideas on</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Project Management</h4>
+                                <p className="ml-4 text-sm">Project planning, execution, risk management</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Interpersonal Relations</h4>
+                                <p className="ml-4 text-sm">Building relationships, communication techniques, conflict resolution</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Professional Personality Development</h4>
+                                <p className="ml-4 text-sm">Grooming, communication skills, workplace behavior</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Stress Management</h4>
+                                <p className="ml-4 text-sm">Coping strategies, relaxation techniques, work-life balance</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Train The Trainer, Facilitation Techniques</h4>
+                                <p className="ml-4 text-sm">Designing training, engaging participants, effective facilitation</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Resilience</h4>
+                                <p className="ml-4 text-sm">Building mental strength, adapting to change, overcoming adversity</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Self Management</h4>
+                                <p className="ml-4 text-sm">Self-discipline, personal growth, managing priorities</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Anger Management</h4>
+                                <p className="ml-4 text-sm">Identifying triggers, calming techniques, conflict avoidance</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Motivation</h4>
+                                <p className="ml-4 text-sm">Self-moving, motivational techniques, setting personal goals</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Mid Life Transition</h4>
+                                <p className="ml-4 text-sm">Coping with career changes, finding purpose, personal development</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● New Age Parenting</h4>
+                                <p className="ml-4 text-sm">Modern parenting techniques, emotional intelligence in parenting, communication</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Success Habits : Being Effective</h4>
+                                <p className="ml-4 text-sm">Productivity habits, time management, daily planning</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Sales Excellence Masterclass</h4>
+                                <p className="ml-4 text-sm">Sales techniques, customer engagement, persuasion skills</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Work Life Balance</h4>
+                                <p className="ml-4 text-sm">Prioritizing, managing stress, balancing personal and professional life</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● EFT (Emotional Freedom Technique)</h4>
+                                <p className="ml-4 text-sm">Tapping techniques, emotional healing, releasing stress at workplace</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Self Healing</h4>
+                                <p className="ml-4 text-sm">Healing practices, self-care techniques, emotional well-being</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● From Leadership to Coaching</h4>
+                                <p className="ml-4 text-sm">Coaching frameworks, communication in coaching, empowering others</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● 3P Pre-Placement Program (100-hour comprehensive training)</h4>
+                                <p className="ml-4 text-sm mb-2"><strong>Aptitude:</strong> Quantitative Aptitude, Logical Reasoning, Data Interpretation, Verbal Ability, Technical Skills, Mock Tests</p>
+                                <p className="ml-4 text-sm mb-2"><strong>Study:</strong> Communication Skills, Interview Preparation, Group Discussions, Personal Branding, Confidence Building, Time Management</p>
+                                <p className="ml-4 text-sm mb-2"><strong>Soft Skills:</strong> Emotional Intelligence, Team Dynamics, Problem Solving, Adaptability, Leadership</p>
+                                <p className="ml-4 text-sm"><strong>Placement Simulations:</strong> Mock Interviews, GDs, Resume Writing, Performance Feedback, Recruitment Process Familiarization</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Affirmations at Workplace</h4>
+                                <p className="ml-4 text-sm">Positive affirmations, boosting workplace morale, enhancing confidence</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Children Counselling for Schools & Colleges</h4>
+                                <p className="ml-4 text-sm">Identifying and managing emotional challenges in children, Building emotional resilience and coping strategies, Addressing behavior and academic concerns, Encouraging self-expression and self-esteem, Developing social skills and peer relationships, Addressing anxiety, fear, and phobias in children, Guidance for dealing with family or life changes</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Teachers Counselling for Schools & Colleges</h4>
+                                <p className="ml-4 text-sm">Understanding child psychology in the classroom, Building positive teacher-student relationships, Techniques for managing classroom stress, Enhancing communication and empathy with students, Classroom mindfulness practices to improve focus, Addressing behavioral issues based on psychological principles, Supporting students' emotional well-being, Managing diverse emotional and learning needs of students</p>
+                            </div>
+                        </div>
+
+                        <div className="mt-6 flex justify-end">
+                            <button
+                                type="button"
+                                onClick={() => setOpen(false)}
+                                className="rounded-lg bg-[var(--button-red)] px-5 py-2 text-sm font-medium text-white"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Technical Topics Modal */}
+            {openTechnical && (
+                <div
+                    className="fixed inset-0 z-[9999] flex items-center justify-center px-4"
+                    role="dialog"
+                    aria-modal="true"
+                    onClick={() => setOpenTechnical(false)}
+                >
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+
+                    <div
+                        className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl bg-white p-6 md:p-8 shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex items-start justify-between gap-4 mb-4">
+                            <h3 className="font-stix text-2xl md:text-3xl text-[var(--foreground)]">
+                                Technical Topics
+                            </h3>
+
+                            <button
+                                type="button"
+                                onClick={() => setOpenTechnical(false)}
+                                className="rounded-full border border-black/10 px-3 py-1 text-sm hover:bg-black/5"
+                                aria-label="Close"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        <div className="text-[var(--foreground)] space-y-4">
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Coal Sampling through Artificial Intelligence</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Samplers Training</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Root Cause Analysis</h4>
+                                <p className="ml-4 text-sm">Identifying underlying causes of problems, root cause analysis techniques (e.g., 5 Whys, Fishbone Diagram), corrective action strategies</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Automation of Civil Measurement and Billing</h4>
+                                <p className="ml-4 text-sm">Digital tools for civil measurement, software-based billing systems, accuracy enhancement, reducing manual work in billing processes</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Design, Measurement</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● BRSR : Business Responsibility and Sustainability Reporting</h4>
+                                <p className="ml-4 text-sm">Corporate social responsibility (CSR) framework, sustainability reporting practices, ethical business practices, stakeholder communication</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● CBAM : Carbon Border Adjustment Mechanism</h4>
+                                <p className="ml-4 text-sm">Understanding carbon tariffs, emissions regulations, global trade impact, aligning with climate goals</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Contract Management</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Contract Finalization</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Implementing 6 S ( 5S + Safety )</h4>
+                                <p className="ml-4 text-sm">Workplace organization, 5S principles (Sort, Set in Order, Shine, Standardize, Sustain), integrating safety measures in all processes</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Fire</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Environment</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Understanding Internal Logistics</h4>
+                                <p className="ml-4 text-sm">Streamlining internal transport, warehouse management, inventory control, optimizing internal supply chain operations</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● External Logistics- GPS, Geo Fencing</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Electric and Autonomous Vehicles</h4>
+                                <p className="ml-4 text-sm">Development and manufacturing of electric vehicle (EV) components, Autonomous driving technologies and their integration in manufacturing, Battery management systems and charging infrastructure</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Connected Vehicles and Telematics</h4>
+                                <p className="ml-4 text-sm">Development of connected car technologies and telematics, Cybersecurity measures for connected vehicles, Data analytics for vehicle performance and customer experience enhancement</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Productivity Improvement Through Artificial Intelligence</h4>
+                                <p className="ml-4 text-sm">AI applications in productivity, process automation, predictive analytics, AI-driven decision making</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Waste Reduction</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Automation and Robotics</h4>
+                                <p className="ml-4 text-sm">Integration of robotic process automation (RPA) in assembly lines, Collaborative robots (cobots) for enhancing human-machine interactions, Advanced robotic welding and painting techniques</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Lean Manufacturing and Six Sigma</h4>
+                                <p className="ml-4 text-sm">Implementing lean manufacturing principles to reduce waste and improve efficiency, Six Sigma methodologies for quality control and process improvement, Value stream mapping and continuous improvement strategies</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Sustainable Manufacturing Practices</h4>
+                                <p className="ml-4 text-sm">Adoption of green manufacturing techniques, Energy-efficient production processes, Waste reduction and recycling programs in automobile manufacturing</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Advanced Manufacturing Techniques</h4>
+                                <p className="ml-4 text-sm">Additive manufacturing (3D printing) for prototyping and production, CNC machining and other precision manufacturing techniques, Advanced forming and molding processes</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Reverse Auction Systems</h4>
+                                <p className="ml-4 text-sm">Online auction principles, cost-saving strategies, e-procurement solutions, competitive bidding</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Supply Chain Management and Logistics</h4>
+                                <p className="ml-4 text-sm">Optimization of supply chain networks for better efficiency, Just-in-time (JIT) inventory management systems, Advanced logistics and distribution strategies</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Understanding Import and Export Systems</h4>
+                                <p className="ml-4 text-sm">International trade regulations, customs procedures, documentation, trade logistics, tariff management</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Quality Management Systems</h4>
+                                <p className="ml-4 text-sm">Implementation of ISO/TS 16949 standards for quality management, Advanced quality control techniques like SPC and FMEA, Total quality management (TQM) for continuous improvement</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Regulatory Compliance and Safety Standards</h4>
+                                <p className="ml-4 text-sm">Ensuring compliance with Indian and international automotive standards, Implementation of safety features and technologies, Environmental and emissions regulations compliance</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Forward Auction Systems</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Use of AI in Industrial Security</h4>
+                                <p className="ml-4 text-sm">AI tools for surveillance, predictive security measures, risk assessment, automated threat detection and response</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Guards Training</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Inventory Management</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Mechanisation of Loading / Unloading</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Advanced Materials and Lightweight Design</h4>
+                                <p className="ml-4 text-sm">Use of advanced materials like carbon fiber, aluminum, and composites, Lightweight strategies for improved fuel efficiency, Innovations in material processing and joining technologies</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Human-Machine Interface (HMI) and User Experience</h4>
+                                <p className="ml-4 text-sm">Design and development of advanced HMI systems, Enhancing user experience through innovative interface design, Integration of augmented reality (AR) and virtual reality (VR) in vehicle interfaces</p>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Availability based Improvement</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Cost Reduction</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Reverse Engineering</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Y-Y Analysis</h4>
+                            </div>
+
+                            <div>
+                                <h4 className="font-semibold text-lg mb-2">● Data Analysis</h4>
+                            </div>
+                        </div>
+
+                        <div className="mt-6 flex justify-end">
+                            <button
+                                type="button"
+                                onClick={() => setOpenTechnical(false)}
+                                className="rounded-lg bg-[var(--button-red)] px-5 py-2 text-sm font-medium text-white"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </section >
     );
 }

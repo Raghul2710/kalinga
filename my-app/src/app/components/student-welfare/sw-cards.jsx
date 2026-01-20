@@ -11,6 +11,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/Tours.webp",
     logoSrc: "",
+    href: "/campuslife",
   },
   {
     title: "Cultural Events & Programs",
@@ -19,6 +20,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/cultural-event-2.webp",
     logoSrc: "",
+    href: "/news-and-events",
   },
   {
     title: "National Days Celebration",
@@ -27,6 +29,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/cultural-events.jpg",
     logoSrc: "",
+    href: "/news-and-events",
   },
   {
     title: "Inclusive & Supportive Environment",
@@ -35,6 +38,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/inclusive-environment.webp",
     logoSrc: "",
+    href: "/student-support",
   },
   {
     title: "International Student Support",
@@ -52,6 +56,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/councelling-support.jpg",
     logoSrc: "",
+    href: "/students-counselling-cell",
   },
   {
     title: "Differently-Abled Students Support",
@@ -60,6 +65,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/facilities-for-pwd-students.jpg",
     logoSrc: "",
+    href: "/student-support",
   },
   {
     title: "Prevention Against Sexual Harassment",
@@ -68,6 +74,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sexual-harassment-prevention-committee.webp",
     logoSrc: "",
+    href: "/other-committees",
   },
   {
     title: "Anti-Ragging Support",
@@ -76,6 +83,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/anti-ragging-committee-squad.jpg",
     logoSrc: "",
+    href: "/anti-ragging-cell",
   },
   {
     title: "Grievance Redressal Cell",
@@ -102,6 +110,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sanitary-napkin-vending-machines.jpeg",
     logoSrc: "",
+    href: "/campus-facilities",
   },
   {
     title: "Free Health Checkup Health Camps",
@@ -110,6 +119,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/free-health-checkup.png",
     logoSrc: "",
+    href: "/health-clinic",
   },
   {
     title: "Blood Donation Camps",
@@ -118,6 +128,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/blood-dontaion.jpeg",
     logoSrc: "",
+    href: "/student-clubs",
   },
   {
     title: "NCC",
@@ -162,6 +173,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/First-weeks.webp",
     logoSrc: "",
+    href: "/student-support",
   },
   {
     title: "FIRST-STEP Induction Programs",
@@ -170,6 +182,7 @@ const swCardsData = [
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/induction-program.webp",
     logoSrc: "",
+    href: "/student-support",
   },
   {
     title: "Scholarships",

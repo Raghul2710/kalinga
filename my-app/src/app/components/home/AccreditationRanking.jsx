@@ -72,11 +72,11 @@ const AccreditationRanking = ({
               ariaLabel="Accreditation and ranking logos"
               renderItem={(item, key) => (
                 <div className="flex-shrink-0 bg-[var(--light-gray)] rounded-[15px] sm:rounded-[20px] w-[180px] h-[140px] sm:w-[200px] sm:h-[160px] md:w-[231px] md:h-[181px] flex items-center justify-center shadow-sm overflow-hidden">
-                  <div className="relative px-5 bg-white mx-5 rounded-xl">
+                  <div className="relative bg-white mx-5 rounded-xl">
                     <img
                       src={item.src}
                       alt={item.alt}
-                      className="object-contain w-[30px] h-[30px] rounded-[20px]"
+                      className="object-contain w-[80px] h-[80px] rounded-[20px]"
                       loading="lazy"
                       decoding="async"
                       draggable={false}

@@ -232,7 +232,7 @@ export default function MasterClassTab({
                 subtitle=""
                 activities={activities1}
                 paddingClassName="py-0"
-                cardHeightClass="h-max"
+                showReadMore={false}
               />
               <Gallery
                 title={tab1GalleryTitle}

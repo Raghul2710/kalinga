@@ -20,7 +20,7 @@ export default function PublicationGrid({
     // },
     {
       title: "Patents",
-      value: "532 +",
+      value: "510 +",
       description: "Our institution actively supports patent filing and innovation, resulting in numerous granted and filed patents that translate research into real-world solutions.",
     },
     {
