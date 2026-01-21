@@ -61,9 +61,19 @@ const postArrivalGuidelines = [
   "The International Student Coordinator (ISC) will assist the student in the following activities: General Introduction: ISC will arrange an introduction of the student to the concerned faculty members and will also explain the academic culture. Student Visa Registration: ISC will guide and assist the student with the student visa registration process. All the international students except those from Nepal and Bhutan must get their student visa registered at the nearest FRRO/FRO within 14 days of arrival in India. FRRO Documentation: It is the prime responsibility of international students to visit the ISC department on time to complete the required FRRO documentation, so that no fine is imposed against him/her. Visa Extension: The ISC department will guide and assist students with visa extension. Others: ISC will help in solving any problems students encounter and will provide complete guidance and support."
 ];
 
+const leaveBankSimGuidelines = [
+
+  "The students need to submit an application to the International Student Coordinator Department before booking the travel ticket, and have to mention the proposed duration of the visit with a proper reason.",
+  "Student should inform the ISC department in writing at least 7 days before their travel.",
+  "Approval from the accounts department is mandatory.",
+  "Approval from the University Management is mandatory. Further, the University will take approval from the parents/guardians of the students before approving leave.",
+  "Approval for NOC from the local FRRO is mandatory before travel."
+
+]
+
 export default function VisaFroFrroGuidelines({
   viewAllHref = "#",
-  title = "Guidelines For Visa And FRO/FRRO",
+  title = "Guidelines and Policies",
   tabs = null,
   showModal = true,
   modalContent = null,
@@ -95,6 +105,48 @@ export default function VisaFroFrroGuidelines({
           </h3>
           <ul className={`space-y-4 ${tabs ? '' : 'mt-5'}`}>
             {defaultExtensionPoints.map((t, i) => <Bullet key={i}>{t}</Bullet>)}
+          </ul>
+        </>
+      )
+    },
+    {
+      id: "prearrival",
+      title: "Pre-Arrival Guidelines",
+      content: (
+        <>
+          <h3 className="font-stix text-2xl text-[var(--foreground)] hidden md:block">
+            Pre-Arrival Guidelines
+          </h3>
+          <ul className={`space-y-4 ${tabs ? '' : 'mt-5'}`}>
+            {preArrivalGuidelines.map((t, i) => <Bullet key={i}>{t}</Bullet>)}
+          </ul>
+        </>
+      )
+    },
+    {
+      id: "postarrival",
+      title: "Post-Arrival Guidelines",
+      content: (
+        <>
+          <h3 className="font-stix text-2xl text-[var(--foreground)] hidden md:block">
+            Post-Arrival Guidelines
+          </h3>
+          <ul className={`space-y-4 ${tabs ? '' : 'mt-5'}`}>
+            {postArrivalGuidelines.map((t, i) => <Bullet key={i}>{t}</Bullet>)}
+          </ul>
+        </>
+      )
+    },
+    {
+      id: "leavebank",
+      title: "Leave / Sim / Bank A/C Policies",
+      content: (
+        <>
+          <h3 className="font-stix text-2xl text-[var(--foreground)] hidden md:block">
+            Leave / Sim / Bank A/C Policies
+          </h3>
+          <ul className={`space-y-4 ${tabs ? '' : 'mt-5'}`}>
+            {leaveBankSimGuidelines.map((t, i) => <Bullet key={i}>{t}</Bullet>)}
           </ul>
         </>
       )
@@ -176,7 +228,7 @@ export default function VisaFroFrroGuidelines({
           </div>
         </div>
 
-        {showModal && (
+        {/* {showModal && (
           <div className="mt-6 flex justify-center">
             <button
               onClick={openModal}
@@ -191,7 +243,7 @@ export default function VisaFroFrroGuidelines({
               </span>
             </button>
           </div>
-        )}
+        )} */}
       </div>
 
       {/* Modal - only render if showModal is true and open */}

@@ -73,52 +73,52 @@ const annualReportButtons = [
   },
 ];
 const AntiImages = [
-    {
-      id: 1,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(1).webp",
-      alt: "anti(1)",
-    },
-    {
-      id: 2,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(2).webp",
-      alt: "anti(2)",
-    },
-    {
-      id: 3,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(3).webp",
-      alt: "anti(3)",
-    },
-    {   
-        id: 4,
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(4).webp",
-        alt: "anti(4)",
-    },
-    {           
-        id: 5,
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(5).webp",
-        alt: "anti(5)",
-    },
-    {           
-        id: 6,
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(6).webp",
-        alt: "anti(6)",
-    },
-     {           
-        id: 7,
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(7).webp",
-        alt: "anti(7)",
-    },
-     {           
-        id: 8,
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(8).webp",
-        alt: "anti(8)",
-    },
-     {           
-        id: 9,
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(9).webp",
-        alt: "anti(9)",
-    },
-  ];
+  {
+    id: 1,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(1).webp",
+    alt: "anti(1)",
+  },
+  {
+    id: 2,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(2).webp",
+    alt: "anti(2)",
+  },
+  {
+    id: 3,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(3).webp",
+    alt: "anti(3)",
+  },
+  {
+    id: 4,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(4).webp",
+    alt: "anti(4)",
+  },
+  {
+    id: 5,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(5).webp",
+    alt: "anti(5)",
+  },
+  {
+    id: 6,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(6).webp",
+    alt: "anti(6)",
+  },
+  {
+    id: 7,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(7).webp",
+    alt: "anti(7)",
+  },
+  {
+    id: 8,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(8).webp",
+    alt: "anti(8)",
+  },
+  {
+    id: 9,
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(9).webp",
+    alt: "anti(9)",
+  },
+];
 /* ---------------- PAGE COMPONENT ---------------- */
 
 export default function Page() {
@@ -150,7 +150,7 @@ export default function Page() {
 
       <ImageListItem
         items={objectives}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-students-2.jpg"
+        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/2149502730.jpg"
         title="Anti-Ragging Policy"
         description="As per the order of Supreme Court of India and subsequent Notification from University Grants Commission (UGC), ragging constitutes one or more of any intention by any student or group of students on:"
       />
@@ -158,39 +158,39 @@ export default function Page() {
       <SportsFacilitiesTabs />
 
       <section className="pt-16 pb-16 bg-white">
-              <div className="container mx-auto px-6">
-      
-                {/* ✅ BUTTON GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {annualReportButtons.map((item) => (
-                    <a
-                      key={item.id}
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block"
-                    >
-                      <GlobalArrowButton
-                        className="!w-full h-[60px] justify-between"
-                        arrowClassName="p-[3px] !px-2 mr-2 !py-1"
-                        arrowSize={29}
-                      >
-                        {item.text}
-                      </GlobalArrowButton>
-                    </a>
-                  ))}
-                </div>
-      
-              </div>
-            </section>
-              <Gallery
-                title="Anti-Ragging Week - 2024" 
-                description="It was an interactive session organised for newcomers in which they were informed about the university's commitment to maintaining a ragging-free campus. Senior students shared their positive experiences in the University regarding this matter and even encouraged them to report any issue to the anti-ragging cell."
-                images={AntiImages.map(img => ({ id: img.id, src: img.image, alt: img.alt }))}
-                paddingClassName="py-0"
-                titleClassName="text-[var(--foreground)] text-center"
-                forceSliderOnMobile={true}
-              />
+        <div className="container mx-auto px-6">
+
+          {/* ✅ BUTTON GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {annualReportButtons.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <GlobalArrowButton
+                  className="!w-full h-[60px] justify-between"
+                  arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+                  arrowSize={29}
+                >
+                  {item.text}
+                </GlobalArrowButton>
+              </a>
+            ))}
+          </div>
+
+        </div>
+      </section>
+      <Gallery
+        title="Anti-Ragging Week - 2024"
+        description="It was an interactive session organised for newcomers in which they were informed about the university's commitment to maintaining a ragging-free campus. Senior students shared their positive experiences in the University regarding this matter and even encouraged them to report any issue to the anti-ragging cell."
+        images={AntiImages.map(img => ({ id: img.id, src: img.image, alt: img.alt }))}
+        paddingClassName="py-0"
+        titleClassName="text-[var(--foreground)] text-center"
+        forceSliderOnMobile={true}
+      />
     </>
   );
 }
