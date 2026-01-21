@@ -67,7 +67,7 @@ export default function InternationalStudents() {
       title: "David Giir Riiny",
       description: "B.tech Student",
       videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_AIML_TESTOMONIAL_02.mp4",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_AIML_TESTOMONIAL_02.mp4",
+      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/david.png",
     },
     {
       id: 2,

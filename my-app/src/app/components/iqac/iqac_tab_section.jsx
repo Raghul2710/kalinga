@@ -1284,90 +1284,90 @@ const IQAC_INITIATIVES = {
     { sno: 23, initiative: "Collection and analysis of feedback", year: "2023-24" },
   ],
   "2022-23": [
-    { sno: 24, initiative: "Teaching Faculty Audit", year: "2022-23" },
-    { sno: 25, initiative: "Conducted Laboratory Internal Audit", year: "2022-23" },
-    { sno: 26, initiative: "Conducted a 2-Day NAAC-sponsored workshop entitled \"Role of IQAC in achieving quality and excellence in higher education by promoting Research, Innovation and Extension activities\"", year: "2022-23" },
-    { sno: 27, initiative: "Formed department-level IQAC coordinators", year: "2022-23" },
-    { sno: 28, initiative: "Collection and maintenance of monthly data from departments", year: "2022-23" },
-    { sno: 29, initiative: "Involved in research work and publications", year: "2022-23" },
-    { sno: 30, initiative: "Guest Lecture on \"NEEDO Education\"", year: "2022-23" },
-    { sno: 31, initiative: "Audit of Non-Teaching Departments", year: "2022-23" },
-    { sno: 32, initiative: "Initiated a green and energy audit for the campus", year: "2022-23" },
-    { sno: 33, initiative: "Development of CO-PO-PSO mapping software", year: "2022-23" },
-    { sno: 34, initiative: "Audit of e-content", year: "2022-23" },
-    { sno: 35, initiative: "Update of Innovation-related activities in the IIC portal", year: "2022-23" },
-    { sno: 36, initiative: "Initiated rainwater harvesting on the campus", year: "2022-23" },
-    { sno: 37, initiative: "Applied for the India Today Ranking", year: "2022-23" },
-    { sno: 38, initiative: "Initiated the process of CSR funding", year: "2022-23" },
-    { sno: 39, initiative: "Conducted a session on \"Preparation of Department-level Files\"", year: "2022-23" },
-    { sno: 40, initiative: "Unnat Bharat Abhiyan", year: "2022-23" },
-    { sno: 41, initiative: "Infrastructure (basic amenities) development of the Government Schools in rural areas", year: "2022-23" },
-    { sno: 42, initiative: "Feedback collection and analysis of conferences", year: "2022-23" },
-    { sno: 43, initiative: "Feedback collection and analysis of Campus Recruitment Training", year: "2022-23" },
-    { sno: 44, initiative: "Standardisation of event report format", year: "2022-23" },
-    { sno: 45, initiative: "NEP-2020 implementation", year: "2022-23" },
+    { sno: 1, initiative: "Teaching Faculty Audit", year: "2022-23" },
+    { sno: 2, initiative: "Conducted Laboratory Internal Audit", year: "2022-23" },
+    { sno: 3, initiative: "Conducted a 2-Day NAAC-sponsored workshop entitled \"Role of IQAC in achieving quality and excellence in higher education by promoting Research, Innovation and Extension activities\"", year: "2022-23" },
+    { sno: 4, initiative: "Formed department-level IQAC coordinators", year: "2022-23" },
+    { sno: 5, initiative: "Collection and maintenance of monthly data from departments", year: "2022-23" },
+    { sno: 6, initiative: "Involved in research work and publications", year: "2022-23" },
+    { sno: 7, initiative: "Guest Lecture on \"NEEDO Education\"", year: "2022-23" },
+    { sno: 8, initiative: "Audit of Non-Teaching Departments", year: "2022-23" },
+    { sno: 9, initiative: "Initiated a green and energy audit for the campus", year: "2022-23" },
+    { sno: 10, initiative: "Development of CO-PO-PSO mapping software", year: "2022-23" },
+    { sno: 11, initiative: "Audit of e-content", year: "2022-23" },
+    { sno: 12, initiative: "Update of Innovation-related activities in the IIC portal", year: "2022-23" },
+    { sno: 13, initiative: "Initiated rainwater harvesting on the campus", year: "2022-23" },
+    { sno: 14, initiative: "Applied for the India Today Ranking", year: "2022-23" },
+    { sno: 15, initiative: "Initiated the process of CSR funding", year: "2022-23" },
+    { sno: 16, initiative: "Conducted a session on \"Preparation of Department-level Files\"", year: "2022-23" },
+    { sno: 17, initiative: "Unnat Bharat Abhiyan", year: "2022-23" },
+    { sno: 18, initiative: "Infrastructure (basic amenities) development of the Government Schools in rural areas", year: "2022-23" },
+    { sno: 19, initiative: "Feedback collection and analysis of conferences", year: "2022-23" },
+    { sno: 20, initiative: "Feedback collection and analysis of Campus Recruitment Training", year: "2022-23" },
+    { sno: 21, initiative: "Standardisation of event report format", year: "2022-23" },
+    { sno: 22, initiative: "NEP-2020 implementation", year: "2022-23" },
   ],
   "2021-22": [
-    { sno: 46, initiative: "One-Week FDP on Outcome-Based Education in collaboration with VMedulife", year: "2021-22" },
-    { sno: 47, initiative: "Development of Research Ecosystem", year: "2021-22" },
-    { sno: 48, initiative: "Conducted a workshop on NAAC accreditation", year: "2021-22" },
-    { sno: 49, initiative: "Applied for ARIIA-2022", year: "2021-22" },
-    { sno: 50, initiative: "Initiated Institution Innovation Council (IIC)", year: "2021-22" },
-    { sno: 51, initiative: "Modification of the question paper format as per OBE", year: "2021-22" },
-    { sno: 52, initiative: "Started working on the NBA accreditation of the CSE department", year: "2021-22" },
-    { sno: 53, initiative: "Mentoring other HEIs towards accreditation", year: "2021-22" },
-    { sno: 54, initiative: "Implementation of Seed money", year: "2021-22" },
-    { sno: 55, initiative: "AQAR submission", year: "2021-22" },
+    { sno: 1, initiative: "One-Week FDP on Outcome-Based Education in collaboration with VMedulife", year: "2021-22" },
+    { sno: 2, initiative: "Development of Research Ecosystem", year: "2021-22" },
+    { sno: 3, initiative: "Conducted a workshop on NAAC accreditation", year: "2021-22" },
+    { sno: 4, initiative: "Applied for ARIIA-2022", year: "2021-22" },
+    { sno: 5, initiative: "Initiated Institution Innovation Council (IIC)", year: "2021-22" },
+    { sno: 6, initiative: "Modification of the question paper format as per OBE", year: "2021-22" },
+    { sno: 7, initiative: "Started working on the NBA accreditation of the CSE department", year: "2021-22" },
+    { sno: 8, initiative: "Mentoring other HEIs towards accreditation", year: "2021-22" },
+    { sno: 9, initiative: "Implementation of Seed money", year: "2021-22" },
+    { sno: 10, initiative: "AQAR submission", year: "2021-22" },
   ],
   "2020-21": [
-    { sno: 56, initiative: "Faculty Development Programme on Outcome-Based Education (24th- 29th August 2020)", year: "2020-21" },
-    { sno: 57, initiative: "Faculty Development Programme on Research Methodology & Latest Advances in Teaching Methodologies (29th June-12th July 2021)", year: "2020-21" },
-    { sno: 58, initiative: "Webinar on How to Write a Research Paper (16th March 2021)", year: "2020-21" },
-    { sno: 59, initiative: "Webinar on \"Research Paper Writing Skills\" (20th March 2021)", year: "2020-21" },
-    { sno: 60, initiative: "Seminar on Implementation of New Education Policy 2020 Under AICTE Theme \"Reinvigorating Human Capital Through Excellence in Education and Multilingualism\" (11th May 2021)", year: "2020-21" },
+    { sno: 1, initiative: "Faculty Development Programme on Outcome-Based Education (24th- 29th August 2020)", year: "2020-21" },
+    { sno: 2, initiative: "Faculty Development Programme on Research Methodology & Latest Advances in Teaching Methodologies (29th June-12th July 2021)", year: "2020-21" },
+    { sno: 3, initiative: "Webinar on How to Write a Research Paper (16th March 2021)", year: "2020-21" },
+    { sno: 4, initiative: "Webinar on \"Research Paper Writing Skills\" (20th March 2021)", year: "2020-21" },
+    { sno: 5, initiative: "Seminar on Implementation of New Education Policy 2020 Under AICTE Theme \"Reinvigorating Human Capital Through Excellence in Education and Multilingualism\" (11th May 2021)", year: "2020-21" },
   ],
   "2019-20": [
-    { sno: 61, initiative: "Training Program on Time Management and Stress Management", year: "2019-20" },
-    { sno: 62, initiative: "Training Program on Best Practices in Office Administration", year: "2019-20" },
-    { sno: 63, initiative: "Training Program on skill development: To implement self-management, develop interpersonal & managerial skills and enhance the administrative capabilities", year: "2019-20" },
-    { sno: 64, initiative: "Training Program on Use of animation & presentation skills", year: "2019-20" },
-    { sno: 65, initiative: "Training Program on the use of IT in the workplace", year: "2019-20" },
-    { sno: 66, initiative: "Adopted the semester pattern for the forthcoming session", year: "2019-20" },
-    { sno: 67, initiative: "Started conducting remedial classes for weak learners and competitive coaching classes.", year: "2019-20" },
-    { sno: 68, initiative: "As an IQAC initiative, it was discussed and accepted to go for NAAC accreditation in the forthcoming session", year: "2019-20" },
-    { sno: 69, initiative: "Adoption of five villages in and around the University was done", year: "2019-20" },
+    { sno: 1, initiative: "Training Program on Time Management and Stress Management", year: "2019-20" },
+    { sno: 2, initiative: "Training Program on Best Practices in Office Administration", year: "2019-20" },
+    { sno: 3, initiative: "Training Program on skill development: To implement self-management, develop interpersonal & managerial skills and enhance the administrative capabilities", year: "2019-20" },
+    { sno: 4, initiative: "Training Program on Use of animation & presentation skills", year: "2019-20" },
+    { sno: 5, initiative: "Training Program on the use of IT in the workplace", year: "2019-20" },
+    { sno: 6, initiative: "Adopted the semester pattern for the forthcoming session", year: "2019-20" },
+    { sno: 7, initiative: "Started conducting remedial classes for weak learners and competitive coaching classes.", year: "2019-20" },
+    { sno: 8, initiative: "As an IQAC initiative, it was discussed and accepted to go for NAAC accreditation in the forthcoming session", year: "2019-20" },
+    { sno: 9, initiative: "Adoption of five villages in and around the University was done", year: "2019-20" },
   ],
   "2018-19": [
-    { sno: 70, initiative: "Establishment of a medicinal garden on the university campus", year: "2018-19" },
-    { sno: 71, initiative: "An MoU with Career Launcher was signed to promote awareness amongst students regarding competitive exams", year: "2018-19" },
-    { sno: 72, initiative: "Extension activities in nearby villages", year: "2018-19" },
-    { sno: 73, initiative: "Publishing University journals", year: "2018-19" },
-    { sno: 74, initiative: "Procured e-resources like Delnet and Manupatra for library enrichment", year: "2018-19" },
-    { sno: 75, initiative: "Started advanced English coaching for remedial classes", year: "2018-19" },
-    { sno: 76, initiative: "The student grievance cell was directed to make a decision regarding grievances at the earliest", year: "2018-19" },
-    { sno: 77, initiative: "Established rainwater harvesting system", year: "2018-19" },
-    { sno: 78, initiative: "MoUs with various companies were signed for waste disposal", year: "2018-19" },
-    { sno: 79, initiative: "Feedback from parents was taken regarding the University", year: "2018-19" },
-    { sno: 80, initiative: "The form for UGC 12B was filled out and applied for approval", year: "2018-19" },
+    { sno: 1, initiative: "Establishment of a medicinal garden on the university campus", year: "2018-19" },
+    { sno: 2, initiative: "An MoU with Career Launcher was signed to promote awareness amongst students regarding competitive exams", year: "2018-19" },
+    { sno: 3, initiative: "Extension activities in nearby villages", year: "2018-19" },
+    { sno: 4, initiative: "Publishing University journals", year: "2018-19" },
+    { sno: 5, initiative: "Procured e-resources like Delnet and Manupatra for library enrichment", year: "2018-19" },
+    { sno: 6, initiative: "Started advanced English coaching for remedial classes", year: "2018-19" },
+    { sno: 7, initiative: "The student grievance cell was directed to make a decision regarding grievances at the earliest", year: "2018-19" },
+    { sno: 8, initiative: "Established rainwater harvesting system", year: "2018-19" },
+    { sno: 9, initiative: "MoUs with various companies were signed for waste disposal", year: "2018-19" },
+    { sno: 10, initiative: "Feedback from parents was taken regarding the University", year: "2018-19" },
+    { sno: 11, initiative: "The form for UGC 12B was filled out and applied for approval", year: "2018-19" },
   ],
   "2017-18": [
-    { sno: 81, initiative: "Procurement of ERP", year: "2017-18" },
-    { sno: 82, initiative: "The mass plantation drive was initiated", year: "2017-18" },
-    { sno: 83, initiative: "Celebrate World Ozone Day every year", year: "2017-18" },
-    { sno: 84, initiative: "Organised National and International-level seminars, conferences and workshops to enhance the research environment in the University", year: "2017-18" },
-    { sno: 85, initiative: "Increased the guest lectures in each department, and expert faculty members were invited from various walks of life", year: "2017-18" },
-    { sno: 86, initiative: "Procured the advanced software for the computer laboratories", year: "2017-18" },
-    { sno: 87, initiative: "Procurement of computers with higher configurations to match the student-to-computer ratio", year: "2017-18" },
-    { sno: 88, initiative: "Provided incentives to the faculty for research paper publication to promote research activity in the University", year: "2017-18" },
-    { sno: 89, initiative: "Student feedback regarding curriculum, faculty and facilities on campus", year: "2017-18" },
-    { sno: 90, initiative: "Procurement of more research journals and textbooks for the library", year: "2017-18" },
+    { sno: 1, initiative: "Procurement of ERP", year: "2017-18" },
+    { sno: 2, initiative: "The mass plantation drive was initiated", year: "2017-18" },
+    { sno: 3, initiative: "Celebrate World Ozone Day every year", year: "2017-18" },
+    { sno: 4, initiative: "Organised National and International-level seminars, conferences and workshops to enhance the research environment in the University", year: "2017-18" },
+    { sno: 5, initiative: "Increased the guest lectures in each department, and expert faculty members were invited from various walks of life", year: "2017-18" },
+    { sno: 6, initiative: "Procured the advanced software for the computer laboratories", year: "2017-18" },
+    { sno: 7, initiative: "Procurement of computers with higher configurations to match the student-to-computer ratio", year: "2017-18" },
+    { sno: 8, initiative: "Provided incentives to the faculty for research paper publication to promote research activity in the University", year: "2017-18" },
+    { sno: 9, initiative: "Student feedback regarding curriculum, faculty and facilities on campus", year: "2017-18" },
+    { sno: 10, initiative: "Procurement of more research journals and textbooks for the library", year: "2017-18" },
   ],
   "2016-17": [
-    { sno: 91, initiative: "Heads of Department and faculty members of the university were given autonomy in academics and related activities", year: "2016-17" },
-    { sno: 92, initiative: "Academic and administrative activities were strictly monitored by the IQAC", year: "2016-17" },
-    { sno: 93, initiative: "Review of the teaching learning process and methods of operation", year: "2016-17" },
-    { sno: 94, initiative: "The bi-annual meetings of the IQAC were initiated", year: "2016-17" },
-    { sno: 95, initiative: "Celebration of Pharmacy Week, along with health check-up camps and a model-making workshop", year: "2016-17" },
+    { sno: 1, initiative: "Heads of Department and faculty members of the university were given autonomy in academics and related activities", year: "2016-17" },
+    { sno: 2, initiative: "Academic and administrative activities were strictly monitored by the IQAC", year: "2016-17" },
+    { sno: 3, initiative: "Review of the teaching learning process and methods of operation", year: "2016-17" },
+    { sno: 4, initiative: "The bi-annual meetings of the IQAC were initiated", year: "2016-17" },
+    { sno: 5, initiative: "Celebration of Pharmacy Week, along with health check-up camps and a model-making workshop", year: "2016-17" },
   ],
 };
 
@@ -1475,6 +1475,8 @@ export default function IqacTabSection() {
     "2018-19": false,
     "2017-18": false,
     "2016-17": false,
+    "2015-16": false,
+    "2014-15": false,
   });
   const [activeFeedbackModal, setActiveFeedbackModal] = useState(null);
 
@@ -1789,6 +1791,104 @@ export default function IqacTabSection() {
                         {paragraph}
                       </p>
                     ))}
+                  </div>
+
+                  {/* Strategic Plan Documents */}
+                  <div className="mt-8">
+                    <h3 className="font-plus-jakarta-sans text-lg md:text-2xl text-[var(--foreground)] mb-6 text-center">
+                      Strategic Plan Documents
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      {/* 2025-2029 Plan */}
+                      <a
+                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Perspective+Cum+Strategic+Plan+for+2025-2029.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
+                      >
+                        <div className="flex flex-col items-center text-center space-y-4">
+                          <div className="w-16 h-16 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
+                            <svg className="w-8 h-8 text-[var(--button-red)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-lg mb-2">
+                              2025-2029
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              Perspective Cum Strategic Plan
+                            </p>
+                          </div>
+                          <div className="flex items-center text-[var(--button-red)] group-hover:text-[var(--button-red)] font-plus-jakarta-sans text-sm font-medium">
+                            <span>View Document</span>
+                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+
+                      {/* 2020-2024 Plan */}
+                      <a
+                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Perspective+Cum+Strategic+Plan+for+2020-2024.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
+                      >
+                        <div className="flex flex-col items-center text-center space-y-4">
+                          <div className="w-16 h-16 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
+                            <svg className="w-8 h-8 text-[var(--button-red)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-lg mb-2">
+                              2020-2024
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              Perspective Cum Strategic Plan
+                            </p>
+                          </div>
+                          <div className="flex items-center text-[var(--button-red)] group-hover:text-[var(--button-red)] font-plus-jakarta-sans text-sm font-medium">
+                            <span>View Document</span>
+                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+
+                      {/* 2014-2019 Plan */}
+                      <a
+                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Perspective+Cum+Strategic+Plan+for+2014-2019.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
+                      >
+                        <div className="flex flex-col items-center text-center space-y-4">
+                          <div className="w-16 h-16 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
+                            <svg className="w-8 h-8 text-[var(--button-red)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-lg mb-2">
+                              2014-2019
+                            </h4>
+                            <p className="text-gray-600 text-sm">
+                              Perspective Cum Strategic Plan
+                            </p>
+                          </div>
+                          <div className="flex items-center text-[var(--button-red)] group-hover:text-[var(--button-red)] font-plus-jakarta-sans text-sm font-medium">
+                            <span>View Document</span>
+                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               )}

@@ -181,6 +181,46 @@ const defaultTab2Gallery = [
   },
 ];
 
+// Annual Masterclass Calendar Data 2025-26
+const masterclassCalendar = [
+  {
+    id: 1,
+    month: "November 2025",
+    topic: "Operational Excellence with Six Sigma: Driving Productivity & Cost Efficiency",
+    audience: "Manufacturing, Steel, Mining, Operations, BFSI"
+  },
+  {
+    id: 2,
+    month: "January 2026",
+    topic: "HR in the Age of AI: Reimagining People, Performance & Potential",
+    audience: "HR Professionals, Business Leaders, Administrators, Educators"
+  },
+  {
+    id: 3,
+    month: "March 2026",
+    topic: "Sustainable Industry Practices: Green Technologies & Compliance",
+    audience: "Energy, Mining, Manufacturing, Packaging, Govt. Officers"
+  },
+  {
+    id: 4,
+    month: "April 2026",
+    topic: "Future-Ready Classrooms: AI & Digital Tools in Education and Beyond",
+    audience: "Schools, Colleges, Training Institutions, Corporates"
+  },
+  {
+    id: 5,
+    month: "June 2026",
+    topic: "AI & Data for Industrial Efficiency: From Buzzword to Business Value",
+    audience: "Industry 4.0, Smart Manufacturing, MSMEs, IT, Analysts"
+  },
+  {
+    id: 6,
+    month: "August 2026",
+    topic: "Life Skills & Emotional Intelligence for the 21st Century Professional",
+    audience: "Corporate Employees, Healthcare, NGOs, Students, Teachers"
+  }
+];
+
 export default function MasterClassTab({
   tab1Activities = defaultTab1Activities,
   tab1Gallery = defaultTab1Gallery,
@@ -191,6 +231,7 @@ export default function MasterClassTab({
   tab2GalleryclassName = "",
 }) {
   const [activeTab, setActiveTab] = useState('tab1');
+  const [showCalendar, setShowCalendar] = useState(false);
 
   // Ensure we use defaults if null/undefined/empty arrays are passed
   const activities1 = (tab1Activities && tab1Activities.length > 0) ? tab1Activities : defaultTab1Activities;
@@ -246,6 +287,16 @@ export default function MasterClassTab({
           )}
           {activeTab === 'tab2' && (
             <>
+              {/* View Calendar Button */}
+              <div className="flex justify-center mb-8">
+                <button
+                  onClick={() => setShowCalendar(true)}
+                  className="bg-[var(--button-red)] text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-200 shadow-md"
+                >
+                  View Annual Masterclass Calendar 2025-26
+                </button>
+              </div>
+
               <StudentActivities
                 title=""
                 subtitle=""
@@ -261,6 +312,69 @@ export default function MasterClassTab({
                 titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 text-[var(--foreground)] text-center mt-10"
                 forceSliderOnMobile={true}
               />
+
+              {/* Calendar Modal */}
+              {showCalendar && (
+                <div 
+                  className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+                  onClick={() => setShowCalendar(false)}
+                >
+                  <div 
+                    className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto relative"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {/* Close Button */}
+                    <button
+                      onClick={() => setShowCalendar(false)}
+                      className="sticky top-4 right-4 float-right bg-red-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg z-10"
+                      aria-label="Close"
+                    >
+                      ✕
+                    </button>
+
+                    {/* Calendar Header */}
+                    <div className="text-center pt-8 pb-6 px-6">
+                      <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-2">
+                        Annual Masterclass Calendar
+                      </h2>
+                      <p className="text-xl text-gray-600">2025-2026</p>
+                      <p className="text-sm text-gray-500 mt-2">Kalinga University, Raipur, India</p>
+                    </div>
+
+                    {/* Calendar Content */}
+                    <div className="px-6 pb-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {masterclassCalendar.map((item) => (
+                          <div 
+                            key={item.id}
+                            className="bg-gradient-to-br from-[var(--lite-sand)] to-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200"
+                          >
+                            <div className="mb-3">
+                              <span className="inline-block bg-[var(--button-red)] text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                {item.month}
+                              </span>
+                            </div>
+                            <h3 className="text-lg font-bold text-[var(--foreground)] mb-3 leading-tight">
+                              {item.topic}
+                            </h3>
+                            <div className="border-t border-gray-300 pt-3">
+                              <p className="text-xs font-semibold text-gray-700 mb-1">WHO SHOULD ATTEND:</p>
+                              <p className="text-sm text-gray-600 leading-relaxed">
+                                {item.audience}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Footer Note */}
+                      <div className="mt-8 text-center text-sm text-gray-500">
+                        <p>For more information, please contact Kalinga University</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </>
           )}
         </div>

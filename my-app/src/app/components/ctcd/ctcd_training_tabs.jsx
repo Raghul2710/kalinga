@@ -43,8 +43,8 @@ const transformToGalleryImages = (images) => {
 };
 
 // Constants for Gallery component
-const GALLERY_TITLE = "Training Glimpse";
-const GALLERY_TITLE_CLASSNAME = "font-stix text-[28px] leading-[44px] text-[var(--foreground)] mb-[14px] text-left";
+const GALLERY_TITLE = "Glimpse";
+const GALLERY_TITLE_CLASSNAME = "font-stix text-[28px] leading-[44px] text-[var(--foreground)] mb-[14px] text-center";
 const GALLERY_IMAGES = transformToGalleryImages(trainingGlimpse);
 
 // Training Projects Gallery Images
@@ -81,6 +81,12 @@ const trainingDetailsImages = [
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-6.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-7.webp",
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-8.webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(5).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(6).webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-2.webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-3.webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-4.webp",
 ];
 const TRAINING_DETAILS_GALLERY_IMAGES = transformToGalleryImages(trainingDetailsImages);
 
@@ -185,8 +191,8 @@ export default function CtcdTrainingTabs({ customTabs }) {
                                 Our Behavioural and Psychometric Assessments
                             </TabsTrigger>
 
-                            <TabsTrigger value="projects" className="flex-shrink-0 min-w-[240px] md:min-w-[280px] md:flex-1 break-words whitespace-nowrap">
-                                Our Corporate Training Projects
+                            <TabsTrigger value="methodology" className="flex-shrink-0 min-w-[180px] md:min-w-[160px] md:flex-1 break-words whitespace-nowrap">
+                                Methodology
                             </TabsTrigger>
                         </TabsList>
 
@@ -263,75 +269,419 @@ export default function CtcdTrainingTabs({ customTabs }) {
                                     title="Training Details"
                                     titleClassName={SECTION_TITLE_CLASSNAME}
                                 />
-                                <FAQ
-                                    title=""
-                                    subtitle=""
-                                    showHeading={false}
-                                    noSection={true}
-                                    pyClassName="!py-0"
-                                    items={[
-                                        {
-                                            id: 1,
-                                            question: "Training Duration",
-                                            answer: [
-                                                "The duration of all proposed training programs largely depends on the training objectives of the organisation.",
-                                                "Full Days (6 Hours)",
-                                                "Half Days (4 Hours)",
-                                                "A session of two hours per day",
-                                                "Certain training programs are delivered on a nomination basis from organisations for a prescheduled calendar. Training can also be delivered before and after office hours."
-                                            ]
-                                        },
-                                        {
-                                            id: 2,
-                                            question: "Training Venue",
-                                            answer: [
-                                                "The training venue can be mutually decided. It can be delivered at our end, at your end, or at third-party venues like a hotel or a resort, depending upon the client's choice.",
-                                                "If the training is conducted at our end, at the Kalinga Campus at Naya Raipur, we will be providing:",
-                                                "Auditorium ( Having a capacity of 150 )",
-                                                "Board Room - 1 - Having a capacity of 20",
-                                                "Board Room - 2 - Having a capacity of 25",
-                                                "Board Room - 3 - Having a capacity of 10",
-                                                "Board Room - 4 - Having a capacity of 30",
-                                                "All of the above are equipped with air conditioning, Interactive Panels for projection, and soundproofing compliant.",
-                                                "Computers and Laptops (if the training requires the use of computers)",
-                                                "Training Kit",
-                                                "Lush Green Gardens for outdoor activities",
-                                                "Tea / Coffee / Light Snacks and Lunch",
-                                                "Parking",
-                                                "If the Training is conducted at your end or a third venue, you have to provide:",
-                                                "Training Hall or Board Room with sufficient capacity",
-                                                "Projection Device (Projector or TV, or Interactive Panel)*",
-                                                "White Board or Glass Board and Marker*",
-                                                "Air-conditioning",
-                                                "Tea/Coffee and Lunch for the trainer",
-                                                "* If not available, can be hired and installed at your venue.",
-                                                "To be provided by us if the training is conducted at your end:",
-                                                "Trainer",
-                                                "Training Kits"
-                                            ]
-                                        },
-                                        {
-                                            id: 3,
-                                            question: "Trainers Profile",
-                                            answer: "We offer trainers who have rich experience and knowledge, and considerable training experience. Depending upon the training objectives, the trainer profile will be shared, and a discussion with the trainer will be conducted offline or online if desired by the client. Only after the approval of the trainer will the training be initiated."
-                                        },
-                                        {
-                                            id: 4,
-                                            question: "Training Cost",
-                                            answer: "The training cost is dependent upon the Trainer, duration of the training, venue and training aids availability, which can be mutually discussed."
-                                        },
-                                        {
-                                            id: 5,
-                                            question: "Government Trainings",
-                                            answer: [
-                                                "Police Training Initiatives:",
-                                                "It is a matter of immense pride and honour to contribute to the strengthening of our nation's law enforcement system and State Administration Body. We have collaborated with the Police Training School, Mana and the Police Training Academy, Chaudkhuri. In our inspiring sessions with officers, including Deputy Superintendents of Police (DSPs), Platoon Commandants, Subedars, Sub Inspectors, and newly recruited constables, we witness not just uniforms but their stories of sacrifice and responsibility.",
-                                                "Our government training modules are based on leadership, conflict resolution, stress management, team building, and police-society relations. With interactive sessions and experiential activities, we help officers develop emotional balance and calm in chaos, making them an emotionally intelligent police workforce."
-                                            ]
-                                        }
-                                    ]}
-                                    allowMultipleOpen={false}
-                                />
+                                <div className="space-y-8">
+                                    {/* Training Duration */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Educational+Tours.svg"
+                                                    alt="Training Duration"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Training Duration</h3>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <p className={CARD_TEXT_CLASSNAME}>
+                                                The duration of all proposed training programs largely depends on the training objectives of the organisation. The duration of training also depends on the level of the trainees.
+                                            </p>
+                                            
+                                            <div>
+                                                <p className="text-sm text-gray-700 font-medium mb-3">
+                                                    Most training programs have a stipulated number of hours which could be delivered in the following modes:
+                                                </p>
+                                                <div className="space-y-2 ml-4">
+                                                    {[
+                                                        "Full Days (6 Hours)",
+                                                        "Half Days (4 Hours)",
+                                                        "A session of two hours per day"
+                                                    ].map((item, idx) => (
+                                                        <div key={idx} className="flex items-center gap-2">
+                                                            <span className="text-[var(--button-red)] mt-0.5">●</span>
+                                                            <p className="text-sm text-gray-700">{item}</p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            <p className="text-sm text-gray-600">
+                                                Certain training programs are delivered on a nomination basis from the organisations for a prescheduled calendar.
+                                            </p>
+
+                                            <p className="text-sm text-gray-600">
+                                                Training can also be delivered before and after office hours, depending upon the Trainer&apos;s and Trainees&apos; availability.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Training Venue */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/university.svg"
+                                                    alt="Training Venue"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Training Venue</h3>
+                                        </div>
+                                        <p className={CARD_TEXT_CLASSNAME}>
+                                            The training venue can be mutually decided. It can be delivered at our end, at your end, or at third-party venues like a hotel or a resort, depending upon the client&apos;s choice.
+                                        </p>
+                                        
+                                        <div className="mt-6 space-y-6">
+                                            {/* Our Venue */}
+                                            <div>
+                                                <h4 className="font-semibold text-[var(--foreground)] mb-3">If the training is conducted at our end, at the Kalinga Campus at Naya Raipur, we will be providing:</h4>
+                                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-3">
+                                                    {[
+                                                        { title: "Auditorium", capacity: "150" },
+                                                        { title: "Board Room - 1", capacity: "20" },
+                                                        { title: "Board Room - 2", capacity: "25" },
+                                                        { title: "Board Room - 3", capacity: "10" },
+                                                        { title: "Board Room - 4", capacity: "30" }
+                                                    ].map((room, idx) => (
+                                                        <div key={idx} className="bg-white p-3 rounded-lg border border-gray-200">
+                                                            <p className="font-semibold text-sm text-[var(--foreground)]">{room.title}</p>
+                                                            <p className="text-xs text-gray-600 mt-1">Having a capacity of {room.capacity}</p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <p className="text-sm text-gray-600 mb-4">
+                                                    All of the above are equipped with air conditioning, Interactive Panels for projection, and soundproofing compliant.
+                                                </p>
+                                                
+                                                <div className="space-y-2">
+                                                    {[
+                                                        "Computers and Laptops (if the training requires the use of computers)",
+                                                        "Training Kit",
+                                                        "Lush Green Gardens for outdoor activities",
+                                                        "Tea / Coffee / Light Snacks and Lunch",
+                                                        "Parking"
+                                                    ].map((item, idx) => (
+                                                        <div key={idx} className="flex items-center gap-2">
+                                                            <span className="text-green-600 mt-0.5">●</span>
+                                                            <p className="text-sm text-gray-700">{item}</p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            {/* Client Venue */}
+                                            <div>
+                                                <h4 className="font-semibold text-[var(--foreground)] mb-3">If the Training is conducted at your end or a third venue, you have to provide:</h4>
+                                                <div className="space-y-2 mb-4">
+                                                    {[
+                                                        "Training Hall or Board Room with sufficient capacity",
+                                                        "Projection Device (Projector or TV, or Interactive Panel)*",
+                                                        "White Board or Glass Board and Marker*",
+                                                        "Air-conditioning",
+                                                        "Tea/Coffee and Lunch for the trainer"
+                                                    ].map((item, idx) => (
+                                                        <div key={idx} className="flex items-center gap-2">
+                                                            <span className="text-[var(--button-red)] mt-0.5">●</span>
+                                                            <p className="text-sm text-gray-700">{item}</p>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <p className="text-xs text-gray-500 mb-4 italic">* If not available, can be hired and installed at your venue.</p>
+                                                
+                                                <div className="bg-green-50 p-4 rounded-lg">
+                                                    <p className="text-sm font-semibold text-[var(--foreground)] mb-2">To be provided by us if the training is conducted at your end:</p>
+                                                    <div className="space-y-1.5">
+                                                        {["Trainer", "Training Kits"].map((item, idx) => (
+                                                            <div key={idx} className="flex items-center gap-2">
+                                                                <span className="text-green-600 mt-0.5">●</span>
+                                                                <p className="text-sm text-gray-700">{item}</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Trainers Profile */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg"
+                                                    alt="Trainers Profile"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Trainers Profile</h3>
+                                        </div>
+                                        <p className={CARD_TEXT_CLASSNAME}>
+                                            We offer trainers who have rich experience and knowledge, and considerable training experience. Depending upon the training objectives, the trainer profile will be shared, and a discussion with the trainer will be conducted offline or online if desired by the client. Only after the approval of the trainer will the training be initiated.
+                                        </p>
+                                    </div>
+
+                                    {/* Training Cost */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Abundant+Scholarships.svg"
+                                                    alt="Training Cost"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Training Cost</h3>
+                                        </div>
+                                        <p className={CARD_TEXT_CLASSNAME}>
+                                            The training cost is dependent upon the Trainer, duration of the training, venue and training aids availability, which can be mutually discussed.
+                                        </p>
+                                    </div>
+
+                                    {/* Government Trainings */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Community+Services.svg"
+                                                    alt="Government Trainings"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Government Trainings</h3>
+                                        </div>
+                                        <div className="space-y-4">
+                                            <div>
+                                                <h4 className="font-semibold text-[var(--foreground)] mb-2">Police Training Initiatives:</h4>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    It is a matter of immense pride and honour to contribute to the strengthening of our nation's law enforcement system and State Administration Body. We have collaborated with the Police Training School, Mana and the Police Training Academy, Chaudkhuri. In our inspiring sessions with officers, including Deputy Superintendents of Police (DSPs), Platoon Commandants, Subedars, Sub Inspectors, and newly recruited constables, we witness not just uniforms but their stories of sacrifice and responsibility.
+                                                </p>
+                                            </div>
+                                            <p className={CARD_TEXT_CLASSNAME}>
+                                                Our government training modules are based on leadership, conflict resolution, stress management, team building, and police-society relations. With interactive sessions and experiential activities, we help officers develop emotional balance and calm in chaos, making them an emotionally intelligent police workforce.
+                                            </p>
+                                            <div>
+                                                <h4 className="font-semibold text-[var(--foreground)] mb-2">ADEO Training Initiatives:</h4>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                We collaborated with Thakur Pyarelal State Institute of Panchayat & Rural Development (TPSIPRD) and organised behavioural training programs for Assistant Development Extension Officers (ADEOs), helping them serve rural communities in an effective manner. The key topics were communication skills, time management, decision making, team collaboration, and delegation of responsibilities. With this, they learned to handle work pressure calmly, manage time carefully, and delegate tasks responsibly. A positive impact was also seen in their personal lives, as they shared that now they feel motivated and confident in themselves.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Our Corporate Training Projects */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industry-Relevant+Curriculum.svg"
+                                                    alt="Our Corporate Training Projects"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Our Corporate Training Projects</h3>
+                                        </div>
+                                        
+                                        {/* Projects Table */}
+                                        <div className="overflow-x-auto overflow-y-auto max-h-[600px] border border-gray-200 rounded-lg">
+                                            <table className="w-full border-collapse min-w-[800px]">
+                                                <thead className="sticky top-0 z-10">
+                                                    <tr className="bg-[var(--dark-blue)] text-white">
+                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                            S.No.
+                                                        </th>
+                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                            Client Name
+                                                        </th>
+                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                            Project Title
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">1</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Entrepreneurship Development Institute of India (EDII)</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Trainers Training Program</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">2</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Robot India</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Training on Google Apps for the Employees of Robot India</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">3</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">ADORE WELDING</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Team Productivity, Self-Management, and Problem-Solving Training</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">4</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Real Ispat and Power Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Soft Skills and Workplace Behaviour, Communication and Team Collaboration, Leadership Development, and Process Improvement & Productivity Enhancement.</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">5</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Utkarsh Small Finance Bank</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Sales Training for the Employees of Utkarsh Bank</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">6</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Singhal Enterprises Pvt Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Training on Employee Wellness, Communication & Change Management</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">7</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Techno Blast Mining</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">HR Star Program</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">8</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Kalpataru Projects International Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Training Report on Supervisor Skills Training</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">9</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Sarda Energy & Minerals Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Management Development Program (Sarda Outbound Training)at Sarda Energy & Minerals Ltd</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">10</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Sarda Energy & Minerals Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Psychometric, Functional Assessment & Post Assessment for the Employees of Sarda (Talent Xibit-2)</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">11</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Sarda Energy & Minerals Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Psychometric, Functional Assessment & Post Assessment for the Employees of Sarda (Talent Xibit-1)</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">12</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Rajkiya Engineering College, Sonbhadra</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">3P Power Placement Process at Rajkiya Engineering College, Sonbhadra</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">13</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">WANFENG Aluminium Wheel (INDIA) Pvt. Ltd.</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Employability Enhancement Training Program (Communication Skill & Team Building Workshop)</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">14</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Adarsh Vidyalaya Group of Schools</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Capacity Building Programme for Adarsh Vidyalaya Teachers</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">15</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Jayaswal Neco</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Utilising AI to enhance team productivity</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">16</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Robertshaw Controls Pvt Ltd</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Training on Problem Solving and Advanced Communication Skills</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">17</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Suryodaya Bank</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Training on Customer Centricity for Credit Officers & Business Excellence.</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">18</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Goeld Frozen Foods</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Developing Managerial Skills and Capabilities</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">19</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">SIMBA Group</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Management Development Program</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">20</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Ramkrishna Care Hospitals</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Patient-Centred Communication, Conflict Resolution among Staff, Emotional Well-Being, and Stress Management</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">21</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Sai Baba Hospital</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">To Reinforce Existing Skills and Competencies so that Employees become more Productive.</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">22</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Central Bank Of India</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Probationary Officers Training Program</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">23</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">GIET Ghangapatna Bhubaneswar</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Aptitude Trainer</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">24</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Kusum Smelters Pvt. Ltd.</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Leadership & Skills Development Training Program</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">25</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Godawari Power & Ispat</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Employee Development Training</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">26</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Police Training Academy Chandkhuri</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">SI & DSP Training</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">27</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Real Group</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Training for Security & Housekeeping Staff</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">28</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Shree Shankara Senior Sec. School Raipur</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Faculty Development Program</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">29</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Thakur Pyarelal State Institute of Panchayat & Rural Development (TPIPRD) in Nimora</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Time & Stress Management Training</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">30</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Police Training School Mana</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">SI & Constable Training</td>
+                                                    </tr>
+                                                    <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">31</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Rajasthan Global Security Pvt. Ltd.</td>
+                                                        <td className="px-4 py-3 text-[var(--foreground)]">Skill Development and Industry-Aligned Training Initiative</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        {/* Training Projects Gallery */}
+                                        {/* <div className="mt-6">
+                                            <Gallery
+                                                images={TRAINING_PROJECTS_GALLERY_IMAGES}
+                                                title={GALLERY_TITLE}
+                                                backgroundColor="bg-transparent"
+                                                paddingClassName="py-0"
+                                                titleClassName={GALLERY_TITLE_CLASSNAME}
+                                                forceSliderOnMobile={true}
+                                            />
+                                        </div> */}
+                                    </div>
+                                </div>
 
                                 {/* Training Details Gallery */}
                                 <div className="mt-[28px]">
@@ -429,199 +779,197 @@ export default function CtcdTrainingTabs({ customTabs }) {
                                 </div>
                             </TabsContent>
 
-                            {/* TAB 4 */}
-                            <TabsContent value="projects">
+                            {/* TAB 4 — Methodology */}
+                            <TabsContent value="methodology">
                                 <SectionHeading
-                                    title="Our Corporate Training Projects"
+                                    title="Methodology"
                                     titleClassName={SECTION_TITLE_CLASSNAME}
                                 />
 
-                                {/* Projects Table */}
-                                <div className="mt-[26px] overflow-x-auto overflow-y-auto max-h-[600px] border border-gray-200 rounded-lg">
-                                    <table className="w-full border-collapse min-w-[800px]">
-                                        <thead className="sticky top-0 z-10">
-                                            <tr className="bg-[var(--dark-blue)] text-white">
-                                                <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                    S.No.
-                                                </th>
-                                                <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                    Client Name
-                                                </th>
-                                                <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                    Project Title
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">1</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Entrepreneurship Development Institute of India (EDII)</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Trainers Training Program</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">2</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Robot India</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Training on Google Apps for the Employees of Robot India</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">3</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">ADORE WELDING</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Team Productivity, Self-Management, and Problem-Solving Training</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">4</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Real Ispat and Power Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Soft Skills and Workplace Behaviour, Communication and Team Collaboration, Leadership Development, and Process Improvement & Productivity Enhancement.</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">5</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Utkarsh Small Finance Bank</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Sales Training for the Employees of Utkarsh Bank</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">6</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Singhal Enterprises Pvt Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Training on Employee Wellness, Communication & Change Management</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">7</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Techno Blast Mining</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">HR Star Program</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">8</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Kalpataru Projects International Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Training Report on Supervisor Skills Training</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">9</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Sarda Energy & Minerals Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Management Development Program (Sarda Outbound Training)at Sarda Energy & Minerals Ltd</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">10</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Sarda Energy & Minerals Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Psychometric, Functional Assessment & Post Assessment for the Employees of Sarda (Talent Xibit-2)</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">11</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Sarda Energy & Minerals Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Psychometric, Functional Assessment & Post Assessment for the Employees of Sarda (Talent Xibit-1)</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">12</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Rajkiya Engineering College, Sonbhadra</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">3P Power Placement Process at Rajkiya Engineering College, Sonbhadra</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">13</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">WANFENG Aluminium Wheel (INDIA) Pvt. Ltd.</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Employability Enhancement Training Program (Communication Skill & Team Building Workshop)</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">14</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Adarsh Vidyalaya Group of Schools</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Capacity Building Programme for Adarsh Vidyalaya Teachers</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">15</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Jayaswal Neco</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Utilising AI to enhance team productivity</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">16</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Robertshaw Controls Pvt Ltd</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Training on Problem Solving and Advanced Communication Skills</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">17</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Suryodaya Bank</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Training on Customer Centricity for Credit Officers & Business Excellence.</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">18</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Goeld Frozen Foods</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Developing Managerial Skills and Capabilities</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">19</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">SIMBA Group</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Management Development Program</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">20</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Ramkrishna Care Hospitals</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Patient-Centred Communication, Conflict Resolution among Staff, Emotional Well-Being, and Stress Management</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">21</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Sai Baba Hospital</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">To Reinforce Existing Skills and Competencies so that Employees become more Productive.</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">22</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Central Bank Of India</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Probationary Officers Training Program</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">23</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">GIET Ghangapatna Bhubaneswar</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Aptitude Trainer</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">24</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Kusum Smelters Pvt. Ltd.</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Leadership & Skills Development Training Program</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">25</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Godawari Power & Ispat</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Employee Development Training</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">26</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Police Training Academy Chandkhuri</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">SI & DSP Training</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">27</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Real Group</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Training for Security & Housekeeping Staff</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">28</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Shree Shankara Senior Sec. School Raipur</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Faculty Development Program</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">29</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Thakur Pyarelal State Institute of Panchayat & Rural Development (TPIPRD) in Nimora</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Time & Stress Management Training</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">30</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Police Training School Mana</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">SI & Constable Training</td>
-                                            </tr>
-                                            <tr className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">31</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Rajasthan Global Security Pvt. Ltd.</td>
-                                                <td className="px-4 py-3 text-[var(--foreground)]">Skill Development and Industry-Aligned Training Initiative</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <p className="mt-[10px] max-w-[980px] text-[var(--foreground)]">
+                                    Our training methodology is designed to ensure maximum learning effectiveness and practical application. We follow a structured approach that combines assessment, customization, and delivery to meet your organization's specific needs.
+                                </p>
 
-                                {/* Training Projects Gallery */}
-                                <div className="mt-[28px]">
-                                    <Gallery
-                                        images={TRAINING_PROJECTS_GALLERY_IMAGES}
-                                        title={GALLERY_TITLE}
-                                        backgroundColor="bg-transparent"
-                                        paddingClassName="py-0"
-                                        titleClassName={GALLERY_TITLE_CLASSNAME}
-                                        forceSliderOnMobile={true}
-                                    />
+                                <div className="mt-[26px] space-y-6">
+                                    {/* Understanding Training Needs */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg"
+                                                    alt="Understanding Needs"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className={CARD_TITLE_CLASSNAME}>Understanding Training or Consultancy Needs</h3>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    Through discussions with Functional/Top Managers
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Pre-Assessment */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg"
+                                                    alt="Pre-Assessment"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className={CARD_TITLE_CLASSNAME}>Pre-Assessment</h3>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    By discussions or techniques to clearly identify the problem
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Mapping Training Objectives */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Wide+Range+of+Programs.svg"
+                                                    alt="Mapping Objectives"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className={CARD_TITLE_CLASSNAME}>Mapping of Training Objectives</h3>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    Clearly defining goals and expected outcomes for the training program
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Choosing Methodology */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industry-Relevant+Curriculum.svg"
+                                                    alt="Choosing Methodology"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className={CARD_TITLE_CLASSNAME}>Choosing the Right Methodology</h3>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    Selecting the most effective approach based on objectives and audience
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Training Delivery Methods */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Improve+Employability.svg"
+                                                    alt="Training Delivery"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <h3 className={CARD_TITLE_CLASSNAME}>Training Delivery Methods</h3>
+                                        </div>
+                                        
+                                        <p className="text-[var(--foreground)] mb-4">
+                                            We employ a diverse range of training delivery methods to ensure effective learning:
+                                        </p>
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                            {[
+                                                { title: "Instructor-Led Training", icon: "Experienced+Faculties.svg" },
+                                                { title: "Interaction", icon: "Networking+Opportunities.svg" },
+                                                { title: "Case Studies", icon: "Extensive+Research+Facilities.svg" },
+                                                { title: "Real-Life Situations", icon: "Industrial+Visits.svg" },
+                                                { title: "Gaming Exercises", icon: "Flagship+Events.svg" },
+                                                { title: "Relevant Videos", icon: "100%25+Automation.svg" },
+                                                { title: "Experience Sharing", icon: "Mentor-Mentee+System.svg" },
+                                                { title: "Peer-to-Peer Training", icon: "Community+Services.svg" },
+                                                { title: "Problem-Solving Exercises", icon: "Holistic+Development.svg" },
+                                                { title: "Simulation", icon: "Global.svg" },
+                                                { title: "Role Plays", icon: "Cultural+Celebrations.svg" },
+                                                { title: "Sensitisation", icon: "Emotional+Well-Being.svg" }
+                                            ].map((method, idx) => (
+                                                <div key={idx} className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-lg transition-all duration-300 group cursor-pointer hover:border-[var(--button-red)]/20">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="h-10 w-10 rounded-full bg-[var(--card-skin)] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                                            <Image
+                                                                src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${method.icon}`}
+                                                                alt={method.title}
+                                                                width={24}
+                                                                height={24}
+                                                                className="w-6 h-6 object-contain"
+                                                            />
+                                                        </div>
+                                                        <p className="font-semibold text-[var(--foreground)] text-sm leading-tight">
+                                                            {method.title}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Open Feedback */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg"
+                                                    alt="Open Feedback"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className={CARD_TITLE_CLASSNAME}>Open Feedback</h3>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    Collecting insights and suggestions from participants to continuously improve our training programs
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Follow-Up Sessions */}
+                                    <div className={CARD_CLASSNAME}>
+                                        <div className="flex items-start gap-4 mb-4">
+                                            <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
+                                                <Image
+                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Educational+Tours.svg"
+                                                    alt="Follow-Up Sessions"
+                                                    width={32}
+                                                    height={32}
+                                                    className="w-8 h-8 object-contain"
+                                                />
+                                            </div>
+                                            <div>
+                                                <h3 className={CARD_TITLE_CLASSNAME}>Follow-Up Sessions</h3>
+                                                <p className={CARD_TEXT_CLASSNAME}>
+                                                    Ensuring sustained learning and implementation through regular follow-up and support
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </TabsContent>
                         </div>

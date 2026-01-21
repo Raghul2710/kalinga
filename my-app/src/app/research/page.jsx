@@ -186,7 +186,7 @@ export default function Research() {
         showDescriptionReadMore={false}
       />
 
-      <MentorIntro imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/chart-1.webp"
+      <MentorIntro imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/harsha.webp"
         title="Dr. Harsha Patil"
         subtitle="A Message From the Dean"
         department="HoD - Research"

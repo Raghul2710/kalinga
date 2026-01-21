@@ -294,9 +294,8 @@ export default function FeatureCards({
                             <p
                               className="text-sm"
                               style={cardExpanded[c.id] ? undefined : collapsedTextStyle}
-                            >
-                              {c.body}
-                            </p>
+                              dangerouslySetInnerHTML={{ __html: c.body }}
+                            />
                             {c.body && (
                               <button
                                 onClick={() => toggleCard(c.id)}
@@ -357,7 +356,7 @@ export default function FeatureCards({
                         </div>
                       )}
                       <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{c.title}</h3>
-                      <p className="text-gray-600 text-sm sm:text-base flex-grow">{c.body}</p>
+                      <p className="text-gray-600 text-sm sm:text-base flex-grow" dangerouslySetInnerHTML={{ __html: c.body }} />
                       {c.body && (
                         <button
                           onClick={() => toggleCard(c.id)}

@@ -18,6 +18,7 @@ export default function ImageContent({
   certificateLink = null, // Link to certificate
   certificateLinkText = "View Certificate", // Text for certificate link
   selectionCriteria = null, // Array of selection criteria items
+  selectionCriteriaHeading = "The following are the benefits of being a member of the Young Indians:", // Heading for selection criteria
   className = "",
   hasImage = true,
   readmore = true,
@@ -79,7 +80,7 @@ export default function ImageContent({
 
                 {selectionCriteria && selectionCriteria.length > 0 && (
                   <div className="mt-4">
-                    <p className="font-semibold text-sm mb-2">The following are the benefits of being a member of the Young Indians:</p>
+                    <p className="font-semibold text-sm mb-2">{selectionCriteriaHeading}</p>
                     <ul className="list-disc list-inside space-y-1 text-sm">
                       {selectionCriteria.map((item, index) => (
                         <li key={index}>{item}</li>

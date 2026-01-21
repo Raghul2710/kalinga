@@ -72,10 +72,10 @@ const EntranceExamPage = () => {
        <EntranceExamUpdated />
        <CareerApplicationForm
           heading="Entrance Exam Application Form"
-          description="Share your details to stay connected with Kalinga University, receive updates, and participate in alumni activities and events."
+          description=""
           backgroundClass="bg-[var(--dark-blue)]"
           hideTabs={true}
-          submitLabel="Submit Alumni Details"
+          submitLabel="Submit"
           useArrowSubmitButton={true}
           arrowSubmitVariant="white"
         />  

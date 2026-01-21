@@ -233,19 +233,45 @@ function MentorCard({
               </h3>
               <div className="text-gray-700 leading-relaxed font-plus-jakarta-sans">
                 {Array.isArray(message) ? (
-                  message.map((paragraph, index) => (
-                    <p key={index} className={index > 0 ? "mt-4" : ""}>
-                      {paragraph}
-                    </p>
-                  ))
+                  message.map((item, index) => {
+                    // Handle section objects with title and items
+                    if (typeof item === 'object' && item.type === 'section') {
+                      return (
+                        <div key={index} className={index > 0 ? "mt-6" : ""}>
+                          <h4 className="font-semibold text-lg mb-3 text-[var(--foreground)]">
+                            {item.title}
+                          </h4>
+                          <ul className="list-disc list-outside ml-5 space-y-2">
+                            {item.items.map((listItem, idx) => {
+                              // Handle nested items with subitems
+                              if (typeof listItem === 'object' && listItem.subitems) {
+                                return (
+                                  <li key={idx} className="text-gray-700">
+                                    {listItem.text}
+                                    <ul className="list-disc list-outside ml-5 mt-2 space-y-2">
+                                      {listItem.subitems.map((subitem, subIdx) => (
+                                        <li key={subIdx} className="text-gray-700">{subitem}</li>
+                                      ))}
+                                    </ul>
+                                  </li>
+                                );
+                              }
+                              // Regular list item
+                              return <li key={idx} className="text-gray-700">{listItem}</li>;
+                            })}
+                          </ul>
+                        </div>
+                      );
+                    }
+                    // Handle regular string paragraphs
+                    return (
+                      <p key={index} className={index > 0 ? "mt-4" : ""}>
+                        {item}
+                      </p>
+                    );
+                  })
                 ) : typeof message === 'string' ? (
                   <p>{message}</p>
-                ) : Array.isArray(message) ? (
-                  <div className="space-y-4">
-                    {message.map((paragraph, idx) => (
-                      <p key={idx}>{paragraph}</p>
-                    ))}
-                  </div>
                 ) : (
                   message
                 )}

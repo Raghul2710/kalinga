@@ -53,6 +53,7 @@ const centresOfExcellence = [
 export default function CenterOfExcellence({
   centres = centresOfExcellence,
   title = "Centres of Excellence",
+  subtitle = null,
   description = "At Kalinga, we'll not just build your future with only classroom-based studies, but there's something more to it that will make your learning experience fun and exciting. Presenting to you our Centres of Excellence that will introduce you to the future of technologies.",
   nameOnly = false, // variant: show only name centered, no image or title
   showDescription = true,
@@ -63,9 +64,15 @@ export default function CenterOfExcellence({
       <div className="container mx-auto px-2">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-12 pt-8 md:pt-0">
+        {subtitle && (
+            <p className="text-[var(--button-red)] font-semibold text-lg md:text-xl mb-4">
+              {subtitle}
+            </p>
+          )}
           <h2 className="font-stix text-[var(--foreground)] text-2xl md:text-3xl lg:text-4xl mb-4">
             {title}
           </h2>
+         
           {showDescription && (
             <p className="text-[var(--light-text-gray)] max-w-4xl mx-auto">
               {description}

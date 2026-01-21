@@ -12,13 +12,15 @@ import OrganogramOfKalinga from "@/app/components/about/organogram_of_kalinga";
 import CenterOfExcellence from "@/app/components/about/center_of_excellence";
 import StudentActivities from "@/app/components/department/student_activities";
 import AdmissionCareer from "@/app/components/general/admission_cta";
+import Gallery from '../components/campuslife/campusgallery';
 
 
 // Model breradcrumb
 
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/kif-banner.webp",
+  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k4.jpg",
   pageTitle: "Kalinga Incubation Foundation",
+  imageposition: "center",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Kif', href: '/kif' }
@@ -452,17 +454,55 @@ export default function KIFPage({
     "Strong and well-rounded team members"
   ];
 
+  const galleryImages = [
+    {
+      id: 1,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k1.jpg",
+      alt: "KIF Gallery Image 1"
+    },
+    {
+      id: 2,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k2.jpg",
+      alt: "KIF Gallery Image 2"
+    },
+    {
+      id: 3,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k3.jpg",
+      alt: "KIF Gallery Image 3"
+    },
+    {
+      id: 4,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k4.jpg",
+      alt: "KIF Gallery Image 4"
+    },
+    {
+      id: 5,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k5.jpg",
+      alt: "KIF Gallery Image 5"
+    },
+    {
+      id: 6,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k6.jpg",
+      alt: "KIF Gallery Image 6"
+    },
+    {
+      id: 7,
+      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k7.jpg",
+      alt: "KIF Gallery Image 7"
+    }
+  ];
+
   return (
     <div>
       <ImageContent
-        title="Kalinga Incubation Foundation"
+        title="About Kalinga Incubation Foundation (KIF) Ideation | Execution | Expansion"
         subtitle="About KIF"
         description="KIF was established in 2023, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION. Recognised as a Host Institute under the Ministry of MSME, Government of India, and structured as a Section 8, not-for-profit company under the Ministry of Corporate Affairs (MCA), Government of India, its motive is to promote the spirit of research, innovation, and entrepreneurship among students and faculty members of our University."
         additionalContent={kifAdditionalContent}
         certificateLink="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/KIF+MCA_compressed.pdf"
         certificateLinkText="Ministry of Corporate Affairs Certificate"
         selectionCriteria={selectionCriteria}
-
+        selectionCriteriaHeading="Our selection criteria include:"
       />
       <VisionMission data={visionMissionData} showImg={false} />
       <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(17).webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
@@ -495,9 +535,14 @@ export default function KIFPage({
       <CenterOfExcellence
         centres={centres}
         title="Startup Partners"
+        subtitle="Supporting ideas of innovators"
         description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation."
       />
-      <StudentActivities activities={activities} subtitle="" title="Glimpses" showReadMore={false}/>
+      <StudentActivities activities={activities} subtitle="" title="KIF Events" showReadMore={false}/>
+      <Gallery
+        images={galleryImages}
+        title="Glimpses"
+      />
       <AdmissionCareer />
 
 

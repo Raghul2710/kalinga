@@ -6,10 +6,10 @@ import Image from 'next/image';
 import SectionHeading from '../general/SectionHeading';
 
 const HeroSectionTwo = ({
-  backgroundImage = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/kif-banner.webp',
+  backgroundImage = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart.webp',
   logoImage,
   logoAlt = '',
-  title = 'Corporate Training And Consultancy Division (CTCD)',
+  title = 'Corporate Training and Consultancy Division (CTCD)',
   subtitle = 'Admission Open 2026-2027',
   description = 'Due to increasing competition in the domestic and international markets, political influence, and technological advancements, organisations find it difficult to compete in the marketplace. Corporate Training and Consultancy Division (CTCD) at Kalinga helps businesses effectively utilise their most valuable asset, i.e., THEIR PEOPLE.',
   buttonText = 'Learn More',

@@ -120,7 +120,7 @@ export default function MainIntro({
                 </ul>
               )}
 
-              {showKnowMore && (descriptionArray.length > initialVisibleParagraphs || (knowMoreHref && knowMoreHref !== "#")) && (
+              {showKnowMore && (descriptionArray.length > initialVisibleParagraphs || (hidePointsUntilExpanded && points && points.length > 0) || (knowMoreHref && knowMoreHref !== "#")) && (
                 <div className="pt-2">
                   {knowMoreHref && knowMoreHref !== "#" ? (
                     (() => {

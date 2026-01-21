@@ -133,7 +133,7 @@ export default function WhyStudy({
                 {items.map((item) => (
                   <SwiperSlide key={item.id} className="h-auto">
                     <div className="h-full">
-                      <div className={`relative rounded-lg p-4 sm:p-5 md:p-5 lg:p-7 shadow-xl h-full flex items-center ${item.variant === 'amber' ? 'bg-[var(--card-sandal)] text-black' : 'bg-[var(--card-gray)] text-gray-800'}`} style={{ minHeight: '260px' }}>
+                      <div className={`relative rounded-lg p-4 sm:p-5 md:p-5 lg:p-6 shadow-xl h-full flex items-center ${item.variant === 'amber' ? 'bg-[var(--card-sandal)] text-black' : 'bg-[var(--card-gray)] text-gray-800'}`} style={{ minHeight: '260px' }}>
                         <div className="flex flex-col gap-3 sm:gap-4 w-full h-full">
                           {item.image && (
                             <div className="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12">

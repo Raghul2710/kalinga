@@ -17,7 +17,7 @@ import { useLayoutEffect } from "react";
 import Image from "next/image";
 import SectionHeading from "@/app/components/general/SectionHeading";
 import WhyStudy from "@/app/components/department/why-study";
-
+import Gallery from "@/app/components/general/gallery";
 // Just define your breadcrumb data as a const - Breadcrumb will automatically use it
 // No imports needed for breadcrumb! Just define the const and it works.
 const breadcrumbData = {
@@ -199,102 +199,199 @@ export default function KIFPage({
     </div>
   );
 
+  // CSR Initiatives table data
+  const csrInitiativesTableData = [
+    {
+      slNo: 1,
+      initiative: "Transport Subsidy",
+      description: "The transport fees provided to the students (who avail the facility) are at subsidised rates. The bus route covers distances of up to 70 KM (one way) to facilitate students who live far from the university."
+    },
+    {
+      slNo: 2,
+      initiative: "Scholarships",
+      description: "The university provides scholarships under different categories. Click to know more: https://kalinga-university.s3.ap-south-1.amazonaws.com/csr/SCHOLARSHIP_25-26+(4).pdf"
+    },
+    {
+      slNo: 3,
+      initiative: "Financial Support",
+      description: "Absorption of fees or providing appropriate sponsor(s) to those students who are discontinuing or leaving their education midway due to financial difficulties (on a case-by-case basis)."
+    },
+    {
+      slNo: 4,
+      initiative: "Environmental Initiatives",
+      description: "Taking environmental initiatives from time to time by planting 1000+ plants and trees on and around the campus."
+    },
+    {
+      slNo: 5,
+      initiative: "Renewable Energy",
+      description: "We have installed Rooftop Solar Power Panels that convert sunlight into electricity, which reduces the usage of traditional power sources. LED lights have been installed throughout the campus, which minimises energy consumption and enhances lighting quality."
+    },
+    {
+      slNo: 6,
+      initiative: "Waste Management",
+      description: "An MoU has been signed with certified vendors, which ensures that waste materials have been carefully disposed of and recycled."
+    },
+    {
+      slNo: 7,
+      initiative: "Water Conservation",
+      description: "Every building on our campus is equipped with a rainwater harvesting system that is linked to recharge wells. We have also planted less water-consuming plants on our campus to minimise water usage and to improve biodiversity."
+    },
+    {
+      slNo: 8,
+      initiative: "Green Campus",
+      description: "Kalinga's green campus promotes sustainable practices through vermicomposting, apiculture, organic farming, nursery, greenhouse, and electric vehicles."
+    },
+    {
+      slNo: 9,
+      initiative: "Healthcare Camps",
+      description: "The University's Life Science and Pharmacy Departments undertake various Blood Donation camps that conduct periodic visits to villages in the state for free medical consultations."
+    },
+    {
+      slNo: 10,
+      initiative: "Legal Aid",
+      description: "The University's Law Department consists of the Legal Aid Cell that provides free legal consultancy to needy people."
+    },
+    {
+      slNo: 11,
+      initiative: "Khadi Promotion",
+      description: "The University's Fashion Design and Interior Design departments have taken various initiatives to promote Khadi within the state of Chhattisgarh."
+    },
+    {
+      slNo: 12,
+      initiative: "Knowledge Programs",
+      description: "Our various departments conduct free Faculty Development Programs (FDP), Management Development Programs (MDP) and knowledge dissemination programs at various schools, colleges, government departments, corporate and defence institutions."
+    }
+  ];
+
+  // Table columns configuration
+  const csrTableColumns = [
+    { key: "slNo", label: "S.No", width: "w-20" },
+    { key: "initiative", label: "Initiative", width: "w-64" },
+    { key: "description", label: "Description", width: "flex-1" }
+  ];
+
+  // Render CSR Initiatives Table component
+  const renderCSRInitiativesTable = () => (
+    <div className="space-y-4">
+      <div className="bg-gradient-to-r from-[var(--button-red)]/10 to-transparent p-6 rounded-lg border-l-4 border-[var(--button-red)]">
+        <p className="text-sm text-gray-700 leading-relaxed">
+          Corporate Social Responsibility (CSR) at Kalinga University aims to make a positive social and environmental impact beyond academics. Over the years, our students and faculty members have actively participated in various programs that contribute to the welfare of society. It includes healthcare camps, blood donation camps, environmental initiatives, sustainable initiatives, community-based projects, conducting educational camps or providing employment opportunities in nearby villages, maintaining a fair student policy, promoting social equality, and much more. We ensure that our students and staff members become responsible citizens and inspire others.
+        </p>
+      </div>
+      <div className="mt-6">
+        <h3 className="text-xl font-semibold mb-4 text-[var(--foreground)]">Our Initiatives</h3>
+        <DataTable
+          columns={csrTableColumns}
+          data={csrInitiativesTableData}
+          overflowX={false}
+          headerBgColor="bg-[var(--dark-blue)]"
+          headerTextColor="text-white"
+        />
+      </div>
+    </div>
+  );
+
   const whyStudyItems = [
     {
       id: 1,
       title: 'STEM Education: STEM For Girls In India',
       body: 'The representation of women and girls in STEM fields (Science, Technology, Engineering, and Mathematics) is quite less in India, but we fulfil this gap by introducing STEM education to girls in rural areas.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg'
     },
     {
       id: 2,
       title: 'Rural Infrastructure Development',
       body: 'Improving the lives of rural people is essential in terms of education, healthcare, sanitation, infrastructure, road development, water supply, irrigation schemes, local markets, and telecommunication. We help corporates address rural development challenges with proper resource planning and employee volunteering, which will not only develop their village but will also generate employment opportunities for both men and women.',
-      variant: 'amber'
+      variant: 'amber',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg'
     },
     {
       id: 3,
       title: 'Skill Development',
       body: 'Essential for both economic growth and social development, this program will turn youth into a future-ready workforce, as we will conduct skill-based training programs in economically weaker sections of society across India or establish centres on your behalf.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg'
     },
     {
       id: 4,
       title: 'Training of Women/Youth',
       body: 'Investment in skilling women in different sectors, such as helping them establish small businesses which they can run from the comfort of their home, will help them build long-term careers and will lead to sustainable change in the economy and help corporates take ethical responsibility.',
-      variant: 'amber'
+      variant: 'amber',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg'
     },
     {
       id: 5,
       title: 'Road Safety',
       body: 'We will help you address one of the biggest issues in India, i.e, Road Safety. Under this CSR initiative, we will undertake activities like building roads, driving training, investment in R&D in road safety, road accident trauma care, and developing road safety curriculum for school children, inspection of used vehicles, driving testing, and much more.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/transport.svg'
     },
     {
       id: 6,
       title: 'Encouragement of Sports in Rural Areas',
       body: 'To bring out the talent of the youth of rural areas, we will establish sports centres, provide training, and even organise local tournaments in economically backward areas and create opportunities for their growth too.',
-      variant: 'amber'
+      variant: 'amber',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Flagship+Events.svg'
     },
     {
       id: 7,
       title: 'Health Sector',
       body: 'Under this CSR initiative, we will establish medical institutions, organise healthcare camps and awareness programs, and vaccination drives to provide quality healthcare services to underserved communities of our nation.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about-raipur/healthcare.svg'
     },
     {
       id: 8,
       title: 'Sanitation',
       body: 'We support corporates in undertaking sanitation initiatives by promoting cleanliness and hygiene. Our programs will include campaigns on personal hygiene, public health, menstrual health for women, and waste management practices. We will also organise clean-up projects for rivers and ponds.',
-      variant: 'amber'
+      variant: 'amber',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Holistic+Development.svg'
     },
     {
       id: 9,
       title: 'Environment',
       body: 'Environmental pollution is growing at a fast rate as more companies are emitting heavy chemicals into the atmosphere, which makes it imperative for companies to invest their CSR funds in the same. We help companies with the following CSR activities: Recycling, Waste Reduction, Reduce Energy Use, water, and plastic consumption, Use renewable energy sources, Adopt sustainable solutions, Follow the strict guidelines and ethical practices of the government.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/university.svg'
     },
     {
       id: 10,
       title: 'Animal Welfare',
       body: 'We assist companies in actively contributing towards animal welfare initiatives. Our projects under this CSR will focus on building animal shelters, organising vaccination drives, running rescue operations, and other awareness campaigns.',
-      variant: 'amber'
+      variant: 'amber',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mentor-Mentee+System.svg'
     },
     {
       id: 11,
       title: 'Gender Equality, Women\'s Empowerment',
       body: 'Although several NGOs and self-help groups are working for women empowerment, corporates too can work in this area and uplift women and remove discrimination from society. We will provide livelihood opportunities to women in rural areas by organising various skill-based training programs that will uplift them in terms of communication, confidence, self-esteem, and personality development. This will help them develop an entrepreneurial mindset or take up jobs in handloom weaving, pottery designing, painting, candle making, eco-friendly product designing, product packaging and labelling, and more.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mental+Health+Support.svg'
     },
     {
       id: 12,
       title: 'Old Age Home',
       body: 'From planning to infrastructure design, we encourage corporates in undertaking sustainable old-age home projects so that every senior citizen who doesn\'t have shelter, food, and other basic necessities of life feels cared for and valued.',
-      variant: 'amber'
+      variant: 'amber',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Emotional+Well-Being.svg'
     },
     {
       id: 13,
       title: 'Safe Drinking Water',
       body: 'This is one of the major challenges, especially in rural areas, where water usually contains harmful and toxic chemicals. This leads to poor health conditions of those who cannot even afford proper healthcare facilities. Under this CSR initiative, we perform the following activities: Plan and implement safe drinking water supply projects in rural areas, Conduct awareness campaigns on water hygiene and conservation, Promote rainwater harvesting and sustainable solutions, Focus on water accessibility in remote areas, Setting up testing labs to monitor the water quality of different areas.',
-      variant: 'gray'
+      variant: 'gray',
+      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industrial+Visits.svg'
     },
   ];
 
   const FAQItems = [
     {
-      id: 1,
-      question: "Target Groups",
+      id: 4,
+      question: "CSR at Kalinga University",
       answer: {
         type: 'component',
-        component: renderCardGrid(targetGroups)
-      },
-    },
-    {
-      id: 2,
-      question: "Villages Adopted",
-      answer: {
-        type: 'component',
-        component: renderCardGrid(villagesAdopted)
+        component: renderCSRInitiativesTable()
       },
     },
     // {
@@ -339,26 +436,7 @@ export default function KIFPage({
     //     ]
     //   }
     // },
-    {
-      id: 4,
-      question: "CSR at Kalinga University",
-      answer: [
-        "Corporate Social Responsibility (CSR) at Kalinga University aims to make a positive social and environmental impact beyond academics. Over the years, our students and faculty members have actively participated in various programs that contribute to the welfare of society. It includes healthcare camps, blood donation camps, environmental initiatives, sustainable initiatives, community-based projects, conducting educational camps or providing employment opportunities in nearby villages, maintaining a fair student policy, promoting social equality, and much more. We ensure that our students and staff members become responsible citizens and inspire others.",
-        "Our Initiatives",
-        "The transport fees provided to the students (who avail the facility) are at subsidised rates. The bus route covers distances of up to 70 KM (one way) to facilitate students who live far from the university.",
-        "The university provides scholarships under different categories. Click to know more: https://kalinga-university.s3.ap-south-1.amazonaws.com/csr/SCHOLARSHIP_25-26+(4).pdf",
-        "Absorption of fees or providing appropriate sponsor(s) to those students who are discontinuing or leaving their education midway due to financial difficulties (on a case-by-case basis).",
-        "Taking environmental initiatives from time to time by planting 1000+ plants and trees on and around the campus.",
-        "We have installed Rooftop Solar Power Panels that convert sunlight into electricity, which reduces the usage of traditional power sources. LED lights have been installed throughout the campus, which minimises energy consumption and enhances lighting quality.",
-        "An MoU has been signed with certified vendors, which ensures that waste materials have been carefully disposed of and recycled.",
-        "Every building on our campus is equipped with a rainwater harvesting system that is linked to recharge wells. We have also planted less water-consuming plants on our campus to minimise water usage and to improve biodiversity.",
-        "Kalinga's green campus promotes sustainable practices through vermicomposting, apiculture, organic farming, nursery, greenhouse, and electric vehicles.",
-        "The University's Life Science and Pharmacy Departments undertake various Blood Donation camps that conduct periodic visits to villages in the state for free medical consultations.",
-        "The University's Law Department consists of the Legal Aid Cell that provides free legal consultancy to needy people.",
-        "The University's Fashion Design and Interior Design departments have taken various initiatives to promote Khadi within the state of Chhattisgarh.",
-        "Our various departments conduct free Faculty Development Programs (FDP), Management Development Programs (MDP) and knowledge dissemination programs at various schools, colleges, government departments, corporate and defence institutions.",
-      ],
-    }
+
   ]
 
   // Set breadcrumb data when component mounts, clear when it unmounts
@@ -390,14 +468,14 @@ export default function KIFPage({
         }
       />
       <MainIntro
-        title="About Bhagwan Shri Bala Sai Educational And Charitable Society"
+        title="About Bhagwan Shri Bala Sai Educational and Charitable Society"
         description={["It is a philanthropic organisation that is primarily involved in education and social welfare activities. The society works towards uplifting the underprivileged communities by offering them inclusive educational opportunities, healthcare facilities, and engaging in charitable activities. The society operates educational institutions, healthcare camps, scholarship programs, and other social welfare initiatives."]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/csr/csr-intro.png"
         imageAlt="Kalinga University campus"
         showKnowMore={false}
         showImage={true}
       />
-      <VisionMission data={visionMissionData} showImg={false} />
+      {/* <VisionMission data={visionMissionData} showImg={false} /> */}
       <ImageListItem items={Items} description="" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Objectives of the Organisation" />
 
       <ImageContent hasImage={true} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp" className="items-center justify-center" title="Career and Corporate Resource Centre" subtitleclassName="hidden" description="It is a philanthropic organisation that is primarily involved in education and social welfare activities. The society works towards uplifting the underprivileged communities by offering them inclusive educational opportunities, healthcare facilities, and engaging in charitable activities. The society operates educational institutions, healthcare camps, scholarship programs, and other social welfare initiatives." buttonLink="/career-and-corporate-resource-centre" />
@@ -409,15 +487,39 @@ export default function KIFPage({
           1280: { slidesPerView: 3 },
         }}
       />
-      {/* FAQ Section with embedded Target Groups and Villages */}
+
+      {/* Target Groups Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto text-center">
+          <SectionHeading
+            title="Target Groups"
+            subtitle="Who We Serve"
+            subtitleTextColor="!text-[var(--button-red)]"
+          />
+          {renderCardGrid(targetGroups)}
+        </div>
+      </section>
+
+      {/* Villages Adopted Section */}
+      <section className="py-16 px-4 bg-[var(--background)]">
+        <div className="container mx-auto text-center">
+          <SectionHeading
+            title="Villages Adopted"
+            subtitle="Community Impact"
+            subtitleTextColor="!text-[var(--button-red)]"
+          />
+          {renderCardGrid(villagesAdopted)}
+        </div>
+      </section>
+              {/* FAQ Section */}
       <FAQ
         items={FAQItems}
         title=""
         subtitle=""
       />
       {/* <CenterOfExcellence centres={centres} title="Startup Partners" description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation." /> */}
-      <StudentActivities activities={activities} title="CSR Glimpse" subtitle="" />
-
+      {/* <StudentActivities activities={activities} title="CSR Glimpse" subtitle="" showReadMore={false}/> */}
+      <Gallery title=" CSR Glimpse" paddingClassName="py-20" />
       <AdmissionCareer />
 
     </div>

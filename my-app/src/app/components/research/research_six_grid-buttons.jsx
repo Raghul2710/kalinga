@@ -69,11 +69,11 @@ const defaultButtons = [
     text: "Constitution Of the Research Advisory Committee",
     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Constitution+of+Research+Advisory+Committee.pdf",
   },
-  {
-    id: 12,
-    text: "Doctoral Research Committee",
-    href: "/phd",
-  },
+  // {
+  //   id: 12,
+  //   text: "Doctoral Research Committee",
+  //   href: "/phd",
+  // },
   {
     id: 13,
     text: "Seed Money",

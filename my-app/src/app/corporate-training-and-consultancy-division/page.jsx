@@ -331,10 +331,10 @@ export default function CorporateTrainingAndConsultancyDivision() {
 
       />
       <MainIntro
-        title="Corporate Training And Consultancy Division (CTCD)"
+        title="Corporate Training and Consultancy Division (CTCD)"
         description={[
-          "We offer training programs and provide one-on-one consultancy services to corporate employees using experiential methods at their location, at our campus, or through online mode, helping them upgrade their skills, boost morale, and improve productivity.",
-          "Our team continuously researches and stays updated with the latest concepts and trends to provide valuable solutions to organisations. Through our soft skills, technical skills, and compliance training, they become ready to face any challenge and stand out in the workplace."
+          "Due to increasing competition in the domestic and international markets, political influence, and technological advancements, organisations find it difficult to compete in the marketplace. Corporate Training and Consultancy Division (CTCD) at Kalinga helps businesses effectively utilise their most valuable asset, i.e., THEIR PEOPLE.",
+          "We offer training programs and provide one-on-one consultancy services to corporate employees using experiential methods at their location, at our campus, or through online mode, helping them upgrade their skills, boost morale, and improve productivity. Our team continuously researches and stays updated with the latest concepts and trends to provide valuable solutions to organisations. Through our soft skills, technical skills, and compliance training, they become ready to face any challenge and stand out in the workplace."
         ]}
         points={[
           "To align training programs with business needs",
@@ -353,10 +353,10 @@ export default function CorporateTrainingAndConsultancyDivision() {
       <MasterClassTab
         tab1Activities={masterclassActivities}
         tab1Gallery={galleryImages}
-        tab1GalleryTitle="Annual Masterclass 2024-25 Glimpse"
+        tab1GalleryTitle="Glimpses"
         tab2Activities={masterclassActivities2}
         tab2Gallery={galleryImages2}
-        tab2GalleryTitle="Annual Masterclass Calendar 2025-26 Glimpse"
+        tab2GalleryTitle="Glimpses"
         tab2GalleryclassName="mt-10"
       />
       <OrganogramOfKalinga
@@ -388,16 +388,24 @@ export default function CorporateTrainingAndConsultancyDivision() {
           "Well, Kalinga's CTCD team uses effective training methods and trains employees to stay productive, motivated, and improve soft and cognitive skills."
         ]}
         points={[
-          "Enhancing employee skills through targeted training programs aligned with industry needs",
-          "Providing strategic consultancy services to help organizations navigate complex business challenges",
-          "Developing customized training modules tailored to specific organizational requirements",
-          "Fostering innovation and continuous learning culture within corporate environments",
-          "Building strong partnerships with industry leaders to deliver world-class training solutions"
+          "Customised training programs",
+          "Improved problem-solving and Decision-Making Skills",
+          "Bridge skills gaps",
+          "Aligns employees' goals with organisational objectives",
+          "Improved employees' performance",
+          "Flexibility in timings and location (Online, In-Person, and Hybrid)",
+          "Access to the latest training technologies",
+          "Improved employee engagement and morale",
+          "Increased innovation and adaptability",
+          "Development of future leaders",
+          "Boosts employees' retention",
+          "Improves workforce competitiveness"
         ]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd-meeting.jpg"
         imageAlt="CTCD"
-        initialVisibleParagraphs={1}
+        initialVisibleParagraphs={2}
         hidePointsUntilExpanded={true}
+        showKnowMore={true}
       />
       <OrganogramOfKalinga
 
@@ -408,7 +416,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
         cardBackgroundColor="bg-[var(--button-red)]"
         useContainer={true}
       />
-      <Gallery />
+      <Gallery title="Glimpses"/>
       <AdmissionCareer />
     </>
   );
