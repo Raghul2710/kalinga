@@ -10,6 +10,7 @@ import Gallery from "@/app/components/general/gallery";
 import MentorIntro from "@/app/components/department/dept_head_intro";
 import WeStandOut from "@/app/components/department/we_stand_out";
 import AdmissionCareer from "@/app/components/general/admission_cta";
+import NewsEvents from "@/app/components/home/news_and_events";
 
 const breadcrumbData = {
   heroImage:
@@ -165,6 +166,7 @@ export default function NSSPage() {
 
           <Gallery images={[]} title="NSS Activities Gallery" />
 
+      <NewsEvents categoryId="7" title="NCC Events" titleClassName="text-center" hideCalendar={true} />
       <AdmissionCareer />
 
       {/* ✅ FIXED + WORKING GLOBAL CSS */}

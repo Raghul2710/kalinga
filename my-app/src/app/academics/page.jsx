@@ -165,6 +165,25 @@ export default function AcademicsApi() {
           (a.title || '').localeCompare(b.title || '')
         );
 
+        // Add static PhD department
+        const phdDepartment = {
+          id: 'static-phd',
+          title: 'Ph.D.',
+          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-BannerImage.webp",
+          summary: "Pursuing a doctoral program can be a transformative step for the growth of your career...",
+          fullSummary: "Pursuing a doctoral program can be a transformative step for the growth of your career and to earn a name and recognition in society. It will not just provide you with in-depth knowledge, but you will also get an opportunity to contribute to research and development. A Ph.D. degree will make you stand out in both the academic and corporate worlds.",
+          programs: "Research", // Specific label for PhD
+          scholarships: "Know More",
+          slug: "phd",
+          departmentId: 'static-phd',
+        };
+
+        // Insert PhD in alphabetical order or append? 
+        // "P" comes after "O", etc. Let's just push it and resort or just push it. 
+        // If we want it alphabetically sorted:
+        sortedDepartments.push(phdDepartment);
+        sortedDepartments.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+
         setDepartments(sortedDepartments);
       } catch (err) {
         console.error('Failed to load departments:', err);
@@ -234,6 +253,10 @@ export default function AcademicsApi() {
 
   // Handle Know More click - navigate to department page
   const handleKnowMore = (dept) => {
+    if (dept.slug === 'phd') {
+      window.location.href = '/phd';
+      return;
+    }
     window.location.href = `/departments/${dept.slug}`;
   };
 
@@ -246,7 +269,11 @@ export default function AcademicsApi() {
   const handleReadMore = (dept) => {
     if (expandedDept === dept.id) {
       // If already expanded, navigate to department page
-      window.location.href = `/departments/${dept.slug}`;
+      if (dept.slug === 'phd') {
+        window.location.href = '/phd';
+      } else {
+        window.location.href = `/departments/${dept.slug}`;
+      }
     } else {
       // Expand the text inline
       setExpandedDept(dept.id);
@@ -290,7 +317,7 @@ export default function AcademicsApi() {
           </div>
 
           {/* Search Bar */}
-          <a href='/admissions#course-finder'>
+          {/* <a href='/admissions#course-finder'>
             <div className="mb-5">
               <div className="flex items-center bg-[var(--light-gray)] rounded-lg px-3 sm:px-4 lg:px-5 py-3 sm:py-3.5 shadow-sm border border-gray-200">
                 <input
@@ -315,7 +342,7 @@ export default function AcademicsApi() {
                 </button>
               </div>
             </div>
-          </a>
+          </a> */}
           {/* Programs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filteredDepartments.length === 0 && (
@@ -386,7 +413,7 @@ function DepartmentCard({ program }) {
         <h3 className="font-stix !text-[25px] leading-tight mb-3 sm:mb-4">Overview</h3>
         <p className="font-plus-jakarta-sans text-sm sm:text-base leading-relaxed mb-3 sm:mb-4 !text-gray-800">
           {program.summary || 'Learn more about this department and its opportunities.'}
-          {shouldShowReadMore && !isExpanded && (
+          {/* {shouldShowReadMore && !isExpanded && (
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -396,11 +423,11 @@ function DepartmentCard({ program }) {
             >
               Read More
             </button>
-          )}
+          )} */}
 
         </p>
       </div>
-      <ul className="text-sm sm:text-base font-plus-jakarta-sans space-y-2.5 sm:space-y-3 mb-4 sm:mb-5">
+      {/* <ul className="text-sm sm:text-base font-plus-jakarta-sans space-y-2.5 sm:space-y-3 mb-4 sm:mb-5">
         {program.scholarships && (
           <li className="flex items-start gap-2">
             <Image
@@ -430,12 +457,16 @@ function DepartmentCard({ program }) {
             <span className="text-gray-800"><span className="font-stix text-[20px] text-black">Programs :</span> {program.programs}</span>
           </li>
         )}
-      </ul>
+      </ul> */}
 
       <div className="mt-auto flex items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center gap-2 sm:gap-3">
 
-          <GlobalArrowButton className="!bg-transparent !shadow-none !text-[#1a1a1a] !px-0 !py-0 !h-auto text-sm sm:text-base" arrowClassName="!bg-transparent" arrowIconClassName="!text-[#1a1a1a]"
+          <GlobalArrowButton
+            className="!bg-white !text-black"
+            arrowClassName="!bg-[var(--button-red)]"
+            arrowIconClassName="!text-white"
+            textClassName="!text-black"
             onClick={(e) => {
               e.stopPropagation();
               if (program.onKnowMore) program.onKnowMore();
@@ -444,10 +475,7 @@ function DepartmentCard({ program }) {
             Know More
           </GlobalArrowButton>
           <GlobalArrowButton
-            className="!bg-white !text-black"
-            arrowClassName="!bg-[var(--button-red)]"
-            arrowIconClassName="!text-white"
-            textClassName="!text-black"
+
             onClick={(e) => {
               e.stopPropagation();
               if (program.onApplyNow) program.onApplyNow();

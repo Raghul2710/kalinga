@@ -12,7 +12,7 @@ export default function ProgramCard({
   showSpecializationDropdown = false,
   specializationOptions = [],
   specializationPlaceholder = "Select Specialisation",
-  href = "/admissions",
+  href = "",
   applyNowLink = "https://admissions.kalingauniversity.ac.in/",
   exploreLinkText = "Explore Program",
   titleClassName = ""
@@ -119,7 +119,7 @@ export default function ProgramCard({
                   </svg>
                 </a>
               )}
-              {!program.hideExploreLink && (
+              {/* {!program.hideExploreLink && (
                 <a
                   href="/admissions"
                   onClick={(e) => {
@@ -144,7 +144,7 @@ export default function ProgramCard({
                     <path d="M7 7h10v10" />
                   </svg>
                 </a>
-              )}
+              )} */}
             </div>
           )}
         </div>
@@ -160,7 +160,7 @@ export default function ProgramCard({
               alert("Please select a specialization from the dropdown before checking eligibility.");
               return;
             }
-            if (onCheckEligibility) onCheckEligibility(program);
+            if (program.exploreLinkText || exploreLinkText) onExploreProgramClick(program);
           }}>
             <GlobalArrowButton
               className="!bg-[var(--dark-orange-red)] !text-[var(--background)] whitespace-nowrap text-xs md:text-sm lg:text-base !h-[38px] md:!h-[40px] !rounded-lg !px-1"
@@ -175,9 +175,10 @@ export default function ProgramCard({
                   return;
                 }
                 if (onCheckEligibility) onCheckEligibility(program);
+                { program.exploreLinkText || exploreLinkText }
               }}
             >
-              Check Eligibility
+              {program.exploreLinkText || exploreLinkText}
             </GlobalArrowButton>
           </a>
 
