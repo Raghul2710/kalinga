@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import ImageContent from "@/app/components/ccrc/imagecontent";
 import CareerPath from "@/app/components/course/career_path";
 import AdmissionCareer from "@/app/components/general/admission_cta";
@@ -101,7 +101,7 @@ const galleryImages = glimpses.map((g) => ({
 }));
 
 export default function BridgeCentrePage() {
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") window.__breadcrumbData = breadcrumbData;
     return () => {
       if (typeof window !== "undefined") delete window.__breadcrumbData;

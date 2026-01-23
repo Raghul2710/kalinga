@@ -116,12 +116,6 @@ export default function AutomobileTrainingCentrePage() {
       }
     };
   }, [pathname]);
-  useLayoutEffect(() => {
-    if (typeof window !== "undefined") window.__breadcrumbData = breadcrumbData;
-    return () => {
-      if (typeof window !== "undefined") delete window.__breadcrumbData;
-    };
-  }, []);
 
   return (
     <>
