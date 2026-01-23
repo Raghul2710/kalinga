@@ -79,6 +79,7 @@ function Admissionproceduresteps() {
                 ctaLabel={admissionStepsContent.ctaLabel}
                 showReadMore={admissionStepsContent.showReadMore}
                 showIcon={admissionStepsContent.showIcon}
+                bgColor=""
                 ctaHref="https://admissions.kalingauniversity.ac.in/"
             />
         </div>

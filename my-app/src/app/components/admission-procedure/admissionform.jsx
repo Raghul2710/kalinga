@@ -1,17 +1,18 @@
-import React from 'react'
-import OrganogramOfKalinga from '../about/organogram_of_kalinga'
+"use client";
+
+import React from "react";
+import OrganogramOfKalinga from "../about/organogram_of_kalinga";
 
 function Admissionform() {
     const syllabusContent = {
         title: "Download Admission Form ",
-        description: [
-            "",
-        ],
+        description: [""],
         buttonLabel: "Admission Form",
-        href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission_Form.pdf"
+        href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission_Form.pdf",
     };
+
     return (
-        <div>
+        <div className="admissionform-wrap">
             <OrganogramOfKalinga
                 title={syllabusContent.title}
                 description={syllabusContent.description}
@@ -28,8 +29,19 @@ function Admissionform() {
                 imageUrl={syllabusContent.imageUrl}
                 imageAlt={syllabusContent.title}
             />
+
+            {/* ✅ Override Organogram section padding ONLY inside this component */}
+            <style jsx>{`
+        /* Mobile only */
+        @media (max-width: 767px) {
+          .admissionform-wrap :global(section.py-16) {
+            padding-top: 1rem !important;
+            padding-bottom: 4rem !important;
+          }
+        }
+      `}</style>
         </div>
-    )
+    );
 }
 
-export default Admissionform
+export default Admissionform;

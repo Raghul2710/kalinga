@@ -22,7 +22,7 @@ function Admissionhacks() {
             description:
                 "Opt for high-demand careers such as Artificial Intelligence, Machine Learning, Cybersecurity, Designing, Management, Healthcare, Engineering, Law, and other emerging fields.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/3.svg",
+            imageUrl: "https://kalinga-university.s3.amazonaws.com/kalinga_backend/files/course/career_icons/businessman_1.svg",
         },
         {
             title: "Prioritise Colleges Offering Placements",
@@ -69,7 +69,7 @@ function Admissionhacks() {
     ];
 
     return (
-        <div>
+        <div className='mt-7'>
             <CareerPath careers={aboutFeatureCards} title='Master These University Selection Hacks' description='' />
         </div>
     )

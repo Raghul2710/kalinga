@@ -27,7 +27,7 @@ function Admissionearlybenefits() {
     ];
 
     return (
-        <div>
+        <div className='mt-16'>
             <ImageListItem
                 items={items}
                 imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/cif-objectives+(1).webp"
