@@ -312,20 +312,55 @@ export default function OurPrograms({
       });
     }
 
-    // Filter by search query
+    // Filter and score by search query
     if (searchQuery.trim()) {
-      const normalizedQuery = normalizeString(searchQuery.trim());
-      filtered = filtered.filter(course => {
-        const normalizedCourseName = normalizeString(course.name || "");
-        const normalizedShortName = normalizeString(course.short_name || "");
-        const normalizedDeptName = normalizeString(course.departmentName || course.department?.name || "");
+      const query = searchQuery.trim().toLowerCase();
+      const normalizedQuery = normalizeString(query);
+      const queryTokens = query.split(/\s+/).filter(t => t.length > 1); // Split into words for token matching
 
-        return (
-          normalizedCourseName.includes(normalizedQuery) ||
-          normalizedShortName.includes(normalizedQuery) ||
-          normalizedDeptName.includes(normalizedQuery)
-        );
-      });
+      filtered = filtered
+        .map(course => {
+          let score = 0;
+          const name = course.name || "";
+          const shortName = course.short_name || "";
+          const deptName = course.departmentName || course.department?.name || "";
+
+          const normName = normalizeString(name);
+          const normShort = normalizeString(shortName);
+          const normDept = normalizeString(deptName);
+
+          // 1. Exact matches in normalized strings (Highest priority)
+          if (normShort === normalizedQuery) score += 100;
+          else if (normShort.includes(normalizedQuery)) score += 80;
+
+          if (normName === normalizedQuery) score += 90;
+          else if (normName.includes(normalizedQuery)) score += 60;
+
+          if (normDept === normalizedQuery) score += 40;
+          else if (normDept.includes(normalizedQuery)) score += 20;
+
+          // 2. Token based matching (Handles word order like "PSC BA")
+          if (queryTokens.length > 1) {
+            let tokensMatched = 0;
+            queryTokens.forEach(token => {
+              const normToken = normalizeString(token);
+              if (normName.includes(normToken) || normShort.includes(normToken) || normDept.includes(normToken)) {
+                tokensMatched++;
+                score += 10;
+              }
+            });
+            // Bonus for matching all tokens
+            if (tokensMatched === queryTokens.length) score += 30;
+          }
+
+          // 3. Simple fuzzy/typo tolerance (starts with check)
+          if (name.toLowerCase().startsWith(query)) score += 25;
+          if (shortName.toLowerCase().startsWith(query)) score += 35;
+
+          return { ...course, searchScore: score };
+        })
+        .filter(course => course.searchScore > 0)
+        .sort((a, b) => b.searchScore - a.searchScore);
     }
 
     // Format courses for ProgramCard
