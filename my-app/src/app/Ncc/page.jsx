@@ -7,6 +7,8 @@ import NccVisionMission from '../components/Ncc/ncc-visionmission'
 import NccEvents from '../components/Ncc/ncc-events'
 import AdmissionCareer from '../components/general/admission_cta';
 import UpcomingConferences from '../components/research/upcoming_conference';
+import Ncctopvideo from '../components/Ncc/ncc-topvideo';
+import Nccvideos from '../components/Ncc/ncc-videos';
 const breadcrumbData = {
   heroImage:
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp",
@@ -39,7 +41,9 @@ const page = () => {
       }
     `}</style>
       <NccIntro />
+      <Ncctopvideo />
       <NccBenefits />
+      <Nccvideos />
       <NccVisionMission />
       <NccHeadMessage />
       <AdmissionCareer />

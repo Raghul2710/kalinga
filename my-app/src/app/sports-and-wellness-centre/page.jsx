@@ -163,11 +163,11 @@ function Sportsandwellnesscentre() {
         { label: "Sports & Wellness", href: "/sports-and-wellness-centre" },
       ],
     };
-    
+
     if (typeof window !== "undefined") {
       window.__breadcrumbData = breadcrumbData;
     }
-    
+
     return () => {
       if (typeof window !== "undefined" && window.__breadcrumbData?.pathname === pathname) {
         delete window.__breadcrumbData;
@@ -195,11 +195,8 @@ function Sportsandwellnesscentre() {
       <div className="container py-10">
         <SportsFacilitiesTabs />
       </div>
-      <Sportsandwellnessvideo />
-
       {/* Category ID 6 is Sports */}
       <NewsEvents categoryId="6" title="Sports Achievers" titleClassName="text-center" hideCalendar={true} />
-
       <Gallery title='Glimpse' images={galleryItems} />
       <AdmissionCareer />
     </>
