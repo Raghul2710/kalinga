@@ -7,6 +7,8 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+import GlobalArrowButton from '../general/global-arrow_button';
+
 export default function FacilitySlider({
     title = "Moot Court",
     subtitle = "Legal Skills into Trials",
@@ -16,6 +18,8 @@ export default function FacilitySlider({
         "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
         "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/audiovisualcentre.webp"
     ],
+    ctaText,
+    ctaLink = "#",
     className = ""
 }) {
     return (
@@ -32,6 +36,13 @@ export default function FacilitySlider({
                 <p className="leading-relaxed md:w-3/4 w-full">
                     {description}
                 </p>
+                {ctaText && (
+                    <div className="mt-6">
+                        <GlobalArrowButton href={ctaLink}>
+                            {ctaText}
+                        </GlobalArrowButton>
+                    </div>
+                )}
             </div>
 
             {/* Image Slider - Right Side */}

@@ -737,6 +737,32 @@ export default function DynamicCoursePage() {
       {['bachelor-of-arts-bachelor-of-law', 'bachelor-of-business-administration-and-bachelor-of-law', 'bachelor-of-law', 'master-of-law'].includes(slug) && (
         <FacilitySlider />
       )}
+      {['bachelor-of-library-information-science', 'master-of-library-information-science'].includes(slug) && (
+        <FacilitySlider
+          title="Discover Kalinga’s Library"
+          subtitle=""
+          description="The Library at Kalinga University, Naya Raipur, is the biggest learning platform that offers a large number of books, magazines, Indian & International journals, and other online resources, providing students and faculty members with an outstanding learning experience. It has a reading room capacity for 400 students, which is divided into 2 halls of 200 students each. With modern infrastructure and facilities, students get the highest level of comfort and academic support throughout their journey."
+          images={[
+            "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
+            "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-2.webp"
+          ]}
+          ctaText="Know More"
+          ctaLink="/library"
+        />
+      )}
+      {['bachelor-of-arts-in-film-making', 'master-of-arts-in-film-making'].includes(slug) && (
+        <FacilitySlider
+          title="Film Studio Of KU"
+          subtitle="Lights, Camera, Action!"
+          description="Kalinga doesn’t teach film making from slides, but hands you the camera so that you can produce your own story. Our studio will give you the vibe of a mini production house where you can write scripts, shoot, edit, collaborate, and make impactful films. With pro-level cameras, lightning setup, sound gear, professional editing software, makeup and costume area, and a soundproof room, learn the A-Z of filmmaking and produce a masterpiece."
+          images={[
+            "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/filmmakingstudio.webp",
+            "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recordingstudio.webp"
+          ]}
+          ctaText=""
+          ctaLink=""
+        />
+      )}
       {syllabusContent && (
         <div id="syllabus" className="scroll-mt-24 md:scroll-mt-28">
           <OrganogramOfKalinga
