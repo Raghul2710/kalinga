@@ -269,7 +269,7 @@ export default function OpenPositions({
 
         <div className="container mx-auto space-y-6">
           {visiblePositions.map((position, index) => (
-            <div key={index} className={`bg-[var(--background)] rounded-[15px] shadow-lg ${useCourseCardLayout ? 'p-0 overflow-hidden' : 'p-6 sm:p-8'}`}>
+            <div key={index} className={`bg-[var(--background)] rounded-[15px] shadow-lg border-3 border-gray-200 shadow-lg sticky top-24 ${useCourseCardLayout ? 'p-0 overflow-hidden' : 'p-6 sm:p-8'}`}>
               {useCourseCardLayout ? (
                 // Course Promotion Card Layout
                 <div className={`p-8 ${(position.imageUrl || position.knowMoreButton || position.registrationButton) ? 'flex flex-col lg:flex-row items-center' : 'w-full'}`}>
