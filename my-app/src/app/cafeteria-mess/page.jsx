@@ -4,6 +4,7 @@ import AboutCafeteria from '../components/cafeteria-mess/about-cafeteria-mess'
 import AdmissionCareer from '../components/general/admission_cta';
 import CanteenMess from '../components/cafeteria-mess/cafeteria-facility-mess';
 import Page from '../components/campuslife/featuresection';
+import RaipurVideoSection from '../components/about-raipur/raipurvideo';
 
 const breadcrumbData = {
   heroImage:
@@ -36,6 +37,15 @@ const page = () => {
     `}</style>
       <AboutCafeteria />
       <CanteenMess />
+      <RaipurVideoSection
+                  videoId = "Wsv6dss4wSs"
+                  thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
+                  title = "Kalinga University's Foodie Paradise: Satisfy Your Cravings with Fresh, and Diverse Food Options!"
+                  description = "" // optional
+                  alt = "Video thumbnail"
+                  heightClass = "h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
+                  className = "" // optional wrapper class
+              />
       <AdmissionCareer />
 
     </>

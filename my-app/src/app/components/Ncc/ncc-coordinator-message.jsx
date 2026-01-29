@@ -3,14 +3,15 @@
 import MentorIntro from "@/app/components/department/dept_head_intro";
 
 const nccCoordinatorText =
-  "We believe that books just don’t make students all-rounded individuals, but co-curricular activities like NCC also play a vital role in making them strong and mindful citizens. We welcome all students to actively participate in our NCC camps and make a positive contribution to our society and nation. Become a part of this extraordinary journey of self-growth and discover your actual potential.";
+  "Books alone cannot make students well-rounded individuals, but co-curricular activities like NCC also play an important role in building leadership, discipline, and a sense of social responsibility. We welcome all students to actively participate in our NCC camps and make a positive contribution to our society and nation. It helps them learn real-life skills, experience new challenges,  develop resilience and teamwork spirit, and form lifelong friendships. Become a part of this extraordinary journey of self-growth and discover your true potential. This is your chance to serve the nation and take the first step towards creating a meaningful impact.";
 
 export default function NccHeadMessage({
   imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-Coordinator-Image.webp",
   subtitle = "A Message From NCC Coordinator",
   name = "Lt Vibha Chandrakar",
   designation = "NCC Coordinator",
-  quote = nccCoordinatorText,
+  quote = "Leadership begins with discipline, and NCC is where that discipline is forged.",
+
 }) {
   const items = [
     {
@@ -20,7 +21,8 @@ export default function NccHeadMessage({
       department: designation,
       imageSrc,
       imageAlt: name,
-      message: [quote],
+      message: [nccCoordinatorText],
+      quote,
     },
   ];
 

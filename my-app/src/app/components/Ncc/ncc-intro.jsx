@@ -4,7 +4,7 @@ import MainIntro from "../about/main_intro";
 
 const nccIntroContent = {
   imageUrl:
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-1.webp",
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-About-Image.webp",
   title: "About NCC Cell",
   subtitle: "National Cadet Corps",
   description: [

@@ -10,6 +10,7 @@ import LibraryResource from '../components/library/library-resource'
 import LibraryEAccess from '../components/library/library-login'
 
 import AdmissionCareer from '../components/general/admission_cta'
+<<<<<<< Updated upstream
 const breadcrumbData = {
   heroImage:
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
@@ -19,6 +20,20 @@ const breadcrumbData = {
     { label: "KU Library", href: "/library" },
   ],
 };
+=======
+import RaipurVideoSection from '../components/about-raipur/raipurvideo';
+import NccEvents from '../components/ncc/ncc-events';
+import LibraryEvents from '../components/library/library-events';
+ const breadcrumbData = {
+    heroImage:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
+    pageTitle: "KU Library",
+    customBreadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "KU Library", href: "/library" },
+    ],
+  };
+>>>>>>> Stashed changes
 const page = () => {
 
   useEffect(() => {
@@ -39,10 +54,29 @@ const page = () => {
     }
   }
 `}</style>
+<RaipurVideoSection
+                  videoId = "llHISVPRkxI"
+                  thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
+                  title = "Explore the Vast World of Knowledge: Tour of Kalinga University Library"
+                  description = "" // optional
+                  alt = "Video thumbnail"
+                  heightClass = "h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
+                  className = "" // optional wrapper class
+              />
       <LibraryIntro />
       <LibraryGrid />
       <LibraryHeadMessage />
       <LibraryResource />
+      <RaipurVideoSection
+                  videoId = "hdL0Eeb6Moc"
+                  thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
+                  title = "Ahmad Musa Galadima, a Civil Engineering student from Nigeria, shares his experience about the university's library and the standard of education"
+                  description = "" // optional
+                  alt = "Video thumbnail"
+                  heightClass = "h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
+                  className = "" // optional wrapper class
+              />
+      <LibraryEvents/>        
       <LibraryEAccess />
       <AdmissionCareer />
     </>
