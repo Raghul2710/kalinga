@@ -10,7 +10,7 @@ import Gallery from "@/app/components/general/gallery";
 import DeptHeadIntro from "@/app/components/department/dept_head_intro";
 import AdmissionCareer from "@/app/components/general/admission_cta";
 import MediaCardSlider from "@/app/components/general/media-card-slider";
-import { title } from "process";
+// Removing accidental process import
 import SectionHeading from "../components/general/SectionHeading";
 import { useBreadcrumbData } from "@/app/components/layout/BreadcrumbContext";
 
@@ -121,7 +121,7 @@ const sliderItems = [
   {
     id: 12,
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/simba.webp",
-    text: "Simba Brewery" 
+    text: "Simba Brewery"
   },
 
 ]
@@ -385,7 +385,7 @@ const MentorIntroProps = [
 ]
 export default function CCRCPage() {
   useBreadcrumbData(breadcrumbData);
-  
+
   return <>
 
     <ImageContent

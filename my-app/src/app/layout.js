@@ -102,6 +102,11 @@ export default function RootLayout({ children }) {
             <BreadcrumbProvider>
               <ClickSparkWrapper>
                 <Header />
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `if (typeof history !== 'undefined') history.scrollRestoration = 'manual';`
+                  }}
+                />
                 <main className="min-h-screen">
                   <Breadcrumb />
                   {children}

@@ -15,11 +15,11 @@
   --lite-sand: rgba(255, 235, 208, 1);
   --dark-orange-red: rgba(245, 130, 32, 1);
   --dark-orange-red-light: rgba(254, 162, 46, 1);
-  --red:#972B28;
-  --dark-gray:#3B3B3B;
+  --red: #972B28;
+  --dark-gray: #3B3B3B;
   --card-sandal: #FFEBD0;
   --card-gray: rgba(241, 241, 241, 1);
-  --card-skin: rgba(254, 192, 113, 1);  
+  --card-skin: rgba(254, 192, 113, 1);
   --text-gray-card: rgba(60, 60, 60, 1);
   --icons: rgba(255, 178, 50, 1);
   --card-white: rgba(252, 252, 252, 1);
@@ -64,44 +64,46 @@ body {
   .container {
     @apply mx-auto px-4 !max-w-[1200px];
   }
-  
+
   h1 {
     font-family: 'STIX Two Math', serif;
     @apply md:text-7xl text-3xl;
   }
-  
+
   h2 {
     @apply md:text-[40px] text-3xl;
     font-family: 'STIX Two Math', serif;
   }
-  
+
   h3 {
     font-size: 24px;
     line-height: 45px;
     font-family: 'STIX Two Math', serif;
   }
+
   h4 {
     font-size: 16px;
     line-height: 24px;
     font-family: 'STIX Two Math', serif;
   }
+
   h5 {
     font-size: 18px;
     line-height: 30px;
     font-family: 'plus-jakarta-sans', serif;
   }
-  
+
   p {
     @apply text-sm;
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
-  
+
   span {
     font-family: 'Plus Jakarta Sans', sans-serif;
   }
-  
+
   a {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px !important;
   }
 }
@@ -149,9 +151,10 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
-.ccrc-scrollbar::-webkit-scrollbar-button { 
-  display:none;
- }
+
+.ccrc-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -178,6 +181,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -188,6 +192,7 @@ body {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -213,6 +218,7 @@ body {
 
 /* Remove transform on mobile */
 @media (max-width: 767px) {
+
   .transform-3d-slant,
   .transform-3d-slant-mirror {
     transform: none !important;
@@ -228,6 +234,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-50% - 0.5rem));
   }
@@ -248,6 +255,7 @@ body {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(calc(-50% - 0.75rem));
   }
@@ -291,4 +299,9 @@ body {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Suppress smooth scroll for instant jumps */
+.no-smooth-scroll {
+  scroll-behavior: auto !important;
 }

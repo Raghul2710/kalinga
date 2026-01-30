@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -62,6 +62,41 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Reset scroll state, close mobile menu, and force scroll to top on navigation
+  // Use useLayoutEffect for the scroll reset to ensure it happens before the browser paints
+  // This prevents the visible "jump" mentioned by the user.
+  const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
+  useIsomorphicLayoutEffect(() => {
+    setIsScrolled(false);
+    setIsMobileMenuOpen(false);
+    setActiveMenu(null);
+    if (typeof window !== 'undefined') {
+      const html = document.documentElement;
+      // Temporarily disable smooth scroll to make the jump instant and invisible
+      html.classList.add('no-smooth-scroll');
+
+      window.scrollTo(0, 0);
+
+      // Cleanup: remove the class after the jump
+      requestAnimationFrame(() => {
+        window.scrollTo(0, 0);
+        html.classList.remove('no-smooth-scroll');
+      });
+
+      // Reinforced fallbacks for slow-rendering components
+      const timeouts = [
+        setTimeout(() => window.scrollTo(0, 0), 100),
+        setTimeout(() => window.scrollTo(0, 0), 500)
+      ];
+
+      return () => {
+        html.classList.remove('no-smooth-scroll');
+        timeouts.forEach(clearTimeout);
+      };
+    }
+  }, [pathname]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -366,7 +401,7 @@ const Header = () => {
     },
     {
       label: 'ERP Login',
-      href: '#',
+      href: 'https://kusis.kalingauniversity.edu.in/',
     },
     {
       label: 'Contact Us',
