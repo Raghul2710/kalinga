@@ -87,7 +87,7 @@ export default function Footer() {
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/ieee">IEEE Student Branch</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/executive-development-program">Executive <br />Development Program</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/csr">CSR @ KU</a></li>
-                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/kif">NKIF</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/kif">KIF</a></li>
                   </ul>
                   <ul className="text-white/80 space-y-2 sm:space-y-3">
 

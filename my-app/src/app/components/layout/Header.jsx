@@ -215,7 +215,7 @@ const Header = () => {
           {
             title: 'Admissions',
             links: [
-              { label: 'Admission Procedure', href: '#' },
+              { label: 'Admission Procedure', href: '/admission-procedure' },
               { label: 'Discover Programs', href: '/admissions' },
               { label: 'Entrance Exam – KALSEE/KALMAT', href: '/entrance-exam' },
               { label: 'Scholarships', href: '/scholarships' },
