@@ -11,7 +11,6 @@ import LibraryEAccess from '../components/library/library-login'
 
 import AdmissionCareer from '../components/general/admission_cta'
 import RaipurVideoSection from '../components/about-raipur/raipurvideo';
-import NccEvents from '../components/ncc/ncc-events';
 import LibraryEvents from '../components/library/library-events';
 const breadcrumbData = {
   heroImage:
