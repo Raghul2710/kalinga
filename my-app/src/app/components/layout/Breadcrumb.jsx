@@ -74,7 +74,10 @@ const STATIC_PAGE_DATA = {
   '/sports-and-wellness-centre': { title: 'Sports & Wellness Centre' },
   '/students-counselling-cell': { title: 'Student Counselling' },
   '/downloads': { title: 'Downloads' },
-  '/research': { title: 'Research Overview' },
+  '/research': {
+    title: 'Research Overview',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/research/reserarch-banner.webp'
+  },
   '/ipr-cell': { title: 'IPR (Intellectual Property Rights Cell)' },
   '/research-resources': { title: 'Research Resources' },
   '/placements': { title: 'Placements' },
@@ -82,17 +85,61 @@ const STATIC_PAGE_DATA = {
     title: 'Career Development Centre',
     image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-intro.jpg'
   },
-  '/news-and-events': { title: 'News & Events' },
+  '/news-and-events': {
+    title: 'News & Events',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/news-and-event.jpg'
+  },
   '/conferences-and-events': { title: 'Conferences & Events' },
   '/contact-us': { title: 'Contact Us' },
-  '/careers': { title: 'Careers' },
+  '/careers': {
+    title: 'Careers',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/career.webp'
+  },
   '/career-and-corporate-resource-centre': {
-    title: 'Career and Corporate Resource Centre'
+    title: 'Career and Corporate Resource Centre',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/IMG-20250409-WA0032-Picsart-AiImageEnhancer.jpg'
   },
   '/ccrc': { title: 'CCRC' },
-  '/anti-ragging-cell': { title: 'Anti Ragging Cell' },
-  '/institution-innovation-council': { title: 'IIC' },
-  '/iqac': { title: 'IQAC' },
+  '/kif': {
+    title: 'Kalinga Incubation Foundation',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k4.jpg'
+  },
+  '/csr': {
+    title: 'Corporate Social Responsibility',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/kif-banner.webp'
+  },
+  '/Ncc': {
+    title: 'NCC',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp'
+  },
+  '/ncc': {
+    title: 'NCC',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp'
+  },
+  '/scholarships': {
+    title: 'Scholarships',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp'
+  },
+  '/leadership': {
+    title: 'Leadership',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/contact-us-banner.webp'
+  },
+  '/anti-ragging-cell': {
+    title: 'Anti Ragging Cell',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/academics-banner.webp'
+  },
+  '/institution-innovation-council': {
+    title: 'IIC',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/contact-us-banner.webp'
+  },
+  '/iqac': {
+    title: 'IQAC',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/banner.webp'
+  },
+  '/internal-quality-assurance-cell': {
+    title: 'IQAC',
+    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/banner.webp'
+  },
 };
 
 const Breadcrumb = ({ customBreadcrumbs, heroImage, pageTitle }) => {

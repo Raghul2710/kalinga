@@ -59,6 +59,25 @@ export default function CenterOfExcellence({
   showDescription = true,
   showReadMore = false,
   className = "bg-white",
+  slidesPerView = 1,
+  breakpoints = {
+    640: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 2.5,
+      spaceBetween: 24,
+    },
+    1280: {
+      slidesPerView: 3.5,
+      spaceBetween: 24,
+    },
+  },
 }) {
   return (
     <section className={`py-16 relative ${className}`}>
@@ -136,26 +155,9 @@ export default function CenterOfExcellence({
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={24}
-          slidesPerView={1}
+          slidesPerView={slidesPerView}
           grabCursor={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 24,
-            },
-            1024: {
-              slidesPerView: 2.5,
-              spaceBetween: 24,
-            },
-            1280: {
-              slidesPerView: 3.5,
-              spaceBetween: 24,
-            },
-          }}
+          breakpoints={breakpoints}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
