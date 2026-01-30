@@ -428,6 +428,7 @@ export default function DynamicCoursePage() {
         alt: specialization.alt || "",
         duration: specialization.duration || "",
         fees: specialization.fee || "",
+        eligibility: specialization.eligibility_criteria || "",
       }))
       .filter(item => item.title || item.body) // Filter out empty items
   } : null;
@@ -740,7 +741,8 @@ export default function DynamicCoursePage() {
               imageUrl: item.image,
               imageAlt: item.alt,
               duration: item.duration,
-              fees: item.fees
+              fees: item.fees,
+              eligibility: item.eligibility
             }))}
           />
         </div>

@@ -287,6 +287,19 @@ export default function OpenPositions({
                       </div>
                     )}
 
+                    {/* Eligibility Criteria */}
+                    {position.eligibility && (
+                      <div className="text-gray-600 text-[15px] mb-4 font-plus-jakarta-sans">
+                        <div className="flex gap-1.5 flex-wrap ">
+                          <span className="font-semibold text-gray-700 ">Eligibility:</span>
+                          <div
+                            className="[&_a]:text-[var(--button-red)] [&_a]:underline [&_a]:font-bold [&_a]:hover:text-[var(--dark-orange-red)] transition-colors [&_p]:inline"
+                            dangerouslySetInnerHTML={{ __html: position.eligibility }}
+                          />
+                        </div>
+                      </div>
+                    )}
+
                     {/* Price - Registration Fee */}
                     {position.price && (
                       <div className="mb-4">
@@ -604,6 +617,15 @@ export default function OpenPositions({
                           {selectedPosition.startDate}
                           {selectedPosition.endDate ? ` - ${selectedPosition.endDate}` : ''}
                         </span>
+                      </div>
+                    )}
+                    {selectedPosition.eligibility && (
+                      <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 italic">
+                        <span className="text-sm font-semibold text-gray-600 not-italic block mb-1">Eligibility Criteria:</span>
+                        <div
+                          className="text-gray-700 [&_a]:text-[var(--button-red)] [&_a]:underline [&_a]:font-bold [&_a]:hover:text-[var(--dark-orange-red)] transition-colors"
+                          dangerouslySetInnerHTML={{ __html: selectedPosition.eligibility }}
+                        />
                       </div>
                     )}
                     {selectedPosition.price && (

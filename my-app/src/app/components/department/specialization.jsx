@@ -26,6 +26,7 @@ const Specialization = ({
     applications: item.applications || "",
     participants: item.participants || "",
     resourcePerson: item.resourcePerson || "",
+    eligibility: item.eligibility || "",
   }));
 
   if (positions.length === 0) {
