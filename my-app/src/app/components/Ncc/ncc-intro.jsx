@@ -28,10 +28,12 @@ export default function NccIntro() {
         subtitle={nccIntroContent.subtitle}
         description={nccIntroContent.description}
         imageUrl={nccIntroContent.imageUrl}
+        imageObjectFit="contain"
         readMoreLabel="Read More"
         readLessLabel="Read Less"
         showKnowMore={true}
         initialVisibleParagraphs={1}
+        disableClipPath={false}
       />
     </section>
   );

@@ -7,12 +7,10 @@ import NccVisionMission from '../components/Ncc/ncc-visionmission'
 import NccEvents from '../components/Ncc/ncc-events'
 import AdmissionCareer from '../components/general/admission_cta';
 import UpcomingConferences from '../components/research/upcoming_conference';
-<<<<<<< Updated upstream
+import RaipurVideoSection from '../components/about-raipur/raipurvideo';
 import Ncctopvideo from '../components/Ncc/ncc-topvideo';
 import Nccvideos from '../components/Ncc/ncc-videos';
-=======
-import RaipurVideoSection from '../components/about-raipur/raipurvideo';
->>>>>>> Stashed changes
+
 const breadcrumbData = {
   heroImage:
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp",
@@ -44,26 +42,22 @@ const page = () => {
         }
       }
     `}</style>
-    
+
       <NccIntro />
-<<<<<<< Updated upstream
-      <Ncctopvideo />
-=======
       <RaipurVideoSection
-                      videoId = "u2yYHsX52Y"
-                      thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
-                      title = "Why Every Student Should Join NCC | Career Boost, Discipline & More Revealed"
-                      description = "" // optional
-                      alt = "Video thumbnail"
-                      heightClass = "h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
-                      className = "" // optional wrapper class
-                  />
->>>>>>> Stashed changes
+        videoId="u2yYHsX52Y"
+        thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
+        title="Why Every Student Should Join NCC | Career Boost, Discipline & More Revealed"
+        description="" // optional
+        alt="Video thumbnail"
+        heightClass="h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
+        className="" // optional wrapper class
+      />
       <NccBenefits />
       <Nccvideos />
       <NccVisionMission />
       <NccHeadMessage />
-      <NccEvents/>
+      <NccEvents />
       <AdmissionCareer />
     </>
   )
