@@ -128,6 +128,15 @@ export default function MainIntro({
                   // Reconstruct HTML from visible sections
                   const visibleHtml = visibleSections.map(el => el.outerHTML).join('');
 
+                  // Fallback for plain text or strings without block-level elements
+                  if (visibleSections.length === 0 && description) {
+                    return (
+                      <p className={`${descriptionClassName} leading-relaxed break-words overflow-visible text-justify`}>
+                        {description}
+                      </p>
+                    );
+                  }
+
                   return (
                     <div
                       className={`main-intro-content ${descriptionClassName} leading-relaxed break-words overflow-visible text-justify max-w-none`}
