@@ -7,8 +7,8 @@ import SectionHeading from '../general/SectionHeading';
 const defaultTestimonialsData = [
     {
         id: 1,
-        name: "David Chen",
-        role: "Student- IT",
+        name: "Devansh Dubey",
+        role: "Student- MCA",
         quote: "The mentorship I received was transformative. They didn't just help me refine my pitch; they helped me reshape my entire business model for scalability.",
         image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/students-say-2.webp",
         theme: "orange"
@@ -23,8 +23,8 @@ const defaultTestimonialsData = [
     },
     {
         id: 3,
-        name: "Marcus Ray",
-        role: "Student- Pharmacy",
+        name: "Noor Fatima Ashrafi",
+        role: "Student- LLB",
         quote: "The network effects here are real. Being surrounded by other ambitious founders pushed us to iterate faster and aim higher than we thought possible.",
         image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/student-say-3.webp",
         theme: "amber"

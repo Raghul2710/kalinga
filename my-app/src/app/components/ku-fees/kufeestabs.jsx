@@ -12,14 +12,14 @@ const IQAC_TABS = [
     { id: "arts", label: "Faculty of Arts & Humanities" },
     { id: "commerce", label: "Faculty of Commerce & Management" },
     { id: "education", label: "Faculty of Education" },
-    { id: "engineering", label: "Faculty of Engineering & Technology" },
+    { id: "engineering", label: "Faculty of Technology" },
     { id: "it", label: "Faculty of Information Technology" },
     { id: "law", label: "Faculty of Law" },
     { id: "pharmacy", label: "Faculty of Pharmacy" },
     { id: "science", label: "Faculty of Science" },
 
     // ✅ Then Research
-    { id: "research", label: "Faculty of Research" },
+    { id: "research", label: "PhD Programs" },
 
     // ✅ Then Hostel
     { id: "hostel", label: "Hostel Fees" },
@@ -1110,7 +1110,7 @@ const OTHER_CHARGES = {
 function ScrollTable({ columns, rows }) {
     return (
         <div className="mt-2 border border-gray-200 rounded-lg overflow-hidden">
-            <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] scrollbar-hide">
+            <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] custom-scrollbar">
                 <table className="w-max min-w-full border-collapse">
                     <thead className="sticky top-0 z-10">
                         <tr className="bg-[var(--dark-blue)] text-white">
@@ -1202,14 +1202,6 @@ export default function FeesTabSection() {
     return (
         <section className="w-full py-4 px-2 overflow-x-hidden">
             <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-
         :global(.fees-hostel-compact section.py-14) {
           padding-top: 0 !important;
           padding-bottom: 0 !important;
@@ -1234,7 +1226,7 @@ export default function FeesTabSection() {
                 {/* Tabs */}
                 <div className="w-full lg:w-80 flex-shrink-0">
                     <div className="rounded-[16px] bg-[var(--dark-blue)]">
-                        <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-hide">
+                        <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 custom-scrollbar">
                             {IQAC_TABS.map((tab) => {
                                 const isActive = activeTab === tab.id;
                                 return (
@@ -1323,7 +1315,7 @@ export default function FeesTabSection() {
                                     </h2>
 
                                     <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
-                                        <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] scrollbar-hide">
+                                        <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] custom-scrollbar">
                                             <table className="w-max min-w-full border-collapse">
                                                 <thead className="sticky top-0 z-10">
                                                     <tr className="bg-[var(--dark-blue)] text-white">
