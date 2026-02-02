@@ -98,7 +98,7 @@ export default function Footer() {
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/document-verification">Document Verification</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/unnat-bharat-abhiyan">Unnat Bharat Abhiyan</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/voter-portal">Voter Portal</a></li>
-                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/career">Career</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/careers">Careers</a></li>
 
 
                   </ul>
