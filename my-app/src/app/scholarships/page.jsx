@@ -408,7 +408,7 @@ export default function ScholarshipsPage() {
         className="bg-white"
         centres={Banks}
         title="Bank Loan MoUs"
-        description="Kalinga University has signed an MOU with Canara Bank and the Central Bank of India, which are providing financial assistance to our students during admissions. "
+        description="Kalinga University has signed an MOU with Canara Bank and the Central Bank of India, which are providing financial assistance to our students during admissions."
         slidesPerView={1}
         breakpoints={{
           640: {
@@ -611,7 +611,7 @@ export default function ScholarshipsPage() {
             download
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-[var(--foreground)] px-5 py-3 text-white font-semibold hover:opacity-90 transition"
+            className="inline-flex items-center gap-2 rounded-xl bg-[var(--button-red)] px-5 py-3 text-white font-semibold hover:opacity-90 transition"
           >
             Download Policy
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
