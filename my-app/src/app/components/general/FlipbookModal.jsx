@@ -24,6 +24,7 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
     const [numPages, setNumPages] = useState(null);
     const [currentPage, setCurrentPage] = useState(0);
     const [pageInputValue, setPageInputValue] = useState('1');
+    const [pagesToRender, setPagesToRender] = useState(4);
     const [containerWidth, setContainerWidth] = useState(0);
     const containerRef = useRef(null);
     const bookRef = useRef(null);
@@ -35,6 +36,7 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
         setNumPages(null);
         setCurrentPage(0);
         setPageInputValue('1');
+        setPagesToRender(4);
 
         const updateWidth = () => {
             if (containerRef.current) {
@@ -53,9 +55,15 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
     }, [isOpen, pdfUrl]);
 
     const onFlip = useCallback((e) => {
-        setCurrentPage(e.data);
-        setPageInputValue((e.data + 1).toString());
-    }, []);
+        const flippedPage = e.data;
+        setCurrentPage(flippedPage);
+        setPageInputValue((flippedPage + 1).toString());
+
+        // Lazy load: if we are within 2 pages of the end of current rendered set, load more
+        if (flippedPage + 2 >= pagesToRender && pagesToRender < numPages) {
+            setPagesToRender(prev => Math.min(prev + 4, numPages));
+        }
+    }, [pagesToRender, numPages]);
 
     const handlePageInputChange = (e) => {
         setPageInputValue(e.target.value);
@@ -220,12 +228,30 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
                                         {(() => {
                                             const pages = [...Array(numPages).keys()].map((p) => (
                                                 <PDFPage key={p}>
-                                                    <ReactPdfPage
-                                                        pageNumber={p + 1}
-                                                        width={bookWidth}
-                                                        renderTextLayer={false}
-                                                        renderAnnotationLayer={false}
-                                                    />
+                                                    {p < pagesToRender ? (
+                                                        <ReactPdfPage
+                                                            pageNumber={p + 1}
+                                                            width={bookWidth}
+                                                            renderTextLayer={false}
+                                                            renderAnnotationLayer={false}
+                                                            loading={
+                                                                <div className="flex flex-col items-center justify-center h-full w-full bg-gray-50/50">
+                                                                    <div className="animate-pulse flex flex-col items-center">
+                                                                        <div className="h-10 w-10 bg-gray-200 rounded-full mb-2"></div>
+                                                                        <div className="h-2 w-20 bg-gray-200 rounded"></div>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        />
+                                                    ) : (
+                                                        <div className="flex flex-col items-center justify-center h-full w-full bg-gray-50/30">
+                                                            <div className="animate-pulse flex flex-col items-center">
+                                                                <div className="h-10 w-10 bg-white/10 rounded-full mb-2 border border-white/20"></div>
+                                                                <div className="h-2 w-20 bg-white/10 rounded border border-white/20"></div>
+                                                                <p className="mt-2 text-white/40 text-[10px] uppercase tracking-widest font-medium">Loading Page {p + 1}</p>
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 </PDFPage>
                                             ));
 
