@@ -229,10 +229,10 @@ export default function DynamicDepartmentPage() {
     return {
       title: departmentData.about_sections[0].heading,
       subtitle: departmentData.about_sections[0].heading,
-      description: parseHtmlToParagraphs(description),
+      description: description,
       imageUrl: departmentData.about_sections[0].image,
       imageAlt: departmentData.about_sections[0].alt,
-      initialVisibleParagraphs: 3,
+      initialVisibleParagraphs: 2,
       showKnowMore: true,
       knowMoreLabel: "Read More",
     };

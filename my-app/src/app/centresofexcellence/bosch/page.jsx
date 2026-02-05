@@ -9,7 +9,7 @@ import Gallery from "@/app/components/general/gallery";
 const breadcrumbData = {
   heroImage:
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-banner.webp",
-  pageTitle: "BRIDGE Courses Training Centre",
+  pageTitle: "BRIDGE Courses Training",
   customBreadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Centres of Excellence", href: "/centresofexcellence" },

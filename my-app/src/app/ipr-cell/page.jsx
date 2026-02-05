@@ -12,8 +12,15 @@ import FlipbookTrigger from "@/app/components/general/FlipbookTrigger";
 import APITable from "../components/general/api-table";
 import CtcdTrainingTabs from "../components/ctcd/ctcd_training_tabs";
 
-const aboutP1 =
-  "The National IPR Policy was launched by the Government of India on 12th May 2016, which lays down seven objectives, including the Administration and Management of IPRs. It endeavours to promote a stable IP regime in the country and encourages innovation to achieve the country’s industrial and economic development goals.";
+const aboutP1 = (
+  <>
+    The National IPR Policy was launched by the Government of India on 12
+    <sup>th</sup> May 2016, which lays down seven objectives, including the
+    Administration and Management of IPRs. It endeavours to promote a stable IP
+    regime in the country and encourages innovation to achieve the country’s
+    industrial and economic development goals.
+  </>
+);
 
 const aboutP2 =
   "The IPR Cell at Kalinga University extends its initiatives for spreading awareness about the concepts among academicians, scholars, and students for taking steps to implement the objectives of the national IPR Policy, including strengthening IPR management and ensuring ease of access to the IP system for all stakeholders.";
@@ -22,17 +29,14 @@ const MentorIntroProps = [
   {
     id: 1,
     title: "Dr R Udaya Kumar",
-    subtitle: "A Message From the Dean",
+    subtitle: "A Message From the Head",
     department: "Head - IPR Cell",
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-sir.webp",
     imageAlt: "Dean - IPR Cell",
-
-    quote:
-      "Where unique ideas are protected, innovation flourishes.",
-
+    quote: "Where unique ideas are protected, innovation flourishes.",
     message: [
-      "We understand that creativity and innovation are part of academic excellence and national progress. Kalinga University believes that your powerful ideas need to be recognised and protected.  Our IPR cell works towards protecting the creations of students, researchers, and faculty members. Whether you’re working on a research paper, app design, or other research-related work, we’re here to protect your work, file patents, trademarks, copyrights, or any other IP. We want every research scholar to feel confident about their rights and valuable work. Through workshops and seminars, we encourage legal empowerment, encouraging all innovators to discover new horizons in their field of study.",
+      "We understand that creativity and innovation are part of academic excellence and national progress. KU believes that your powerful ideas need to be recognised and protected. Our IPR cell works towards protecting the creations of students, researchers, and faculty members. Whether you’re working on a research paper, app design, or other research-related work, we’re here to protect your work, file patents, trademarks, copyrights, or any other IP. We want every research scholar to feel confident about their rights and valuable work. Through workshops and seminars, we encourage legal empowerment, encouraging all innovators to discover new horizons in their field of study.",
     ],
   },
 ];
@@ -79,13 +83,16 @@ export default function IPRCellPage() {
         { label: "IPR Cell", href: "/ipr-cell" },
       ],
     };
-    
+
     if (typeof window !== "undefined") {
       window.__breadcrumbData = breadcrumbData;
     }
-    
+
     return () => {
-      if (typeof window !== "undefined" && window.__breadcrumbData?.pathname === pathname) {
+      if (
+        typeof window !== "undefined" &&
+        window.__breadcrumbData?.pathname === pathname
+      ) {
         delete window.__breadcrumbData;
       }
     };
@@ -104,8 +111,8 @@ export default function IPRCellPage() {
   }));
 
   const yearlyTabs = Array.from({ length: 12 }, (_, i) => {
-    const id = 14 + i; // 14 to 25
-    const yearStart = 2024 - i; // 2024 to 2013
+    const id = 14 + i;
+    const yearStart = 2024 - i;
     const yearEnd = yearStart + 1;
     const label = `${yearStart}-${yearEnd}`;
 
@@ -128,7 +135,11 @@ export default function IPRCellPage() {
       <ImageContent
         title="Intellectual Property Rights (IPR) Cell"
         subtitle="Intellectual Property Rights "
-        description={`${aboutP1} ${aboutP2}`}
+        description={
+          <>
+            {aboutP1} {aboutP2}
+          </>
+        }
         imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-cell-logo.webp"
         imageAlt="IPR Cell Logo"
         readmore={false}
@@ -140,32 +151,33 @@ export default function IPRCellPage() {
 
       <section className="pb-12">
         <div className="container mx-auto px-4">
-          <h2 className="!font-stix text-4xl">
-            Our IPR Committee
-          </h2>
+          <h2 className="!font-stix text-4xl">Our IPR Committee</h2>
 
           <div className="mt-6">
             <DataTable columns={columns} data={data} overflowX={true} />
           </div>
         </div>
       </section>
+
       <section className="pb-12">
         <div className="container mx-auto px-4 flex justify-center">
-          <FlipbookTrigger pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/KU_REF_CITATION.pdf" title="KU Ref. Citation">
+          <FlipbookTrigger
+            pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/KU_REF_CITATION.pdf"
+            title="KU Ref. Citation"
+          >
             <Link
               href="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/KU_REF_CITATION.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <GlobalArrowButton
-                variant="default"
-              >
+              <GlobalArrowButton variant="default">
                 KU Ref. Citation
               </GlobalArrowButton>
             </Link>
           </FlipbookTrigger>
         </div>
       </section>
+
       <CtcdTrainingTabs customTabs={yearlyTabs} />
       <AdmissionCareer />
     </main>

@@ -5,7 +5,7 @@ import ImageContent from "../ccrc/imagecontent";
 export default function AboutCafeteria() {
   return (
     <ImageContent
-      imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/canteen+mess+(1).webp" // Add Video - 1 (placeholder for now)
+      imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/cafeteria-mess-icon-img.webp" // Add Video - 1 (placeholder for now)
       imageAlt="Cafeteria and Mess at Kalinga University"
       title="Cafeteria & Mess"
       subtitle="Cravings? We’ve Got You Covered!"

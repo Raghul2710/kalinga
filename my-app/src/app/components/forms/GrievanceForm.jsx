@@ -10,41 +10,13 @@ export default function GrievanceForm() {
         name: '',
         email: '',
         phone: '',
-        department: '',
-        committee_category: '',
-        faculty: '',
+        program_name: '',
+        semester: '',
+        enrollment_number: '',
         details: '',
     })
-    const [departments, setDepartments] = useState([])
-    const [committees, setCommittees] = useState([])
-    const [faculties, setFaculties] = useState([])
     const [loading, setLoading] = useState(false)
     const [status, setStatus] = useState({ type: '', message: '' })
-
-    const fetchData = async () => {
-        try {
-            const [deptRes, commRes, facRes] = await Promise.all([
-                fetch('https://kalinga.dupebox.com/api/departments/'),
-                fetch('https://kalinga.dupebox.com/api/committee-categories/'),
-                fetch('https://kalinga.dupebox.com/api/faculty/')
-            ])
-
-            const deptData = await deptRes.json()
-            const commData = await commRes.json()
-            const facData = await facRes.json()
-
-            setDepartments((deptData.results || deptData).map(d => ({ value: d.id.toString(), label: d.name })))
-            setCommittees((commData.results || commData).map(c => ({ value: c.id.toString(), label: c.name })))
-            setFaculties((facData.results || facData).map(f => ({ value: f.id.toString(), label: f.name })))
-
-        } catch (err) {
-            console.error("Failed to fetch form data", err)
-        }
-    }
-
-    React.useEffect(() => {
-        fetchData()
-    }, [])
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -57,8 +29,21 @@ export default function GrievanceForm() {
         setStatus({ type: '', message: '' })
 
         try {
-            await submitForm('/grievance-forms/', formData)
-            setStatus({ type: 'success', message: 'Grievance submitted. We will look into it.' })
+            const result = await submitForm('/grievance-forms/', formData)
+            setStatus({
+                type: 'success',
+                message: `Grievance submitted successfully. Your reference number is: ${result.reference_number}`
+            })
+            // Reset form
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                program_name: '',
+                semester: '',
+                enrollment_number: '',
+                details: '',
+            })
         } catch (err) {
             setStatus({ type: 'error', message: err.message || 'Error submitting form.' })
         } finally {
@@ -74,27 +59,18 @@ export default function GrievanceForm() {
         >
             <form onSubmit={handleSubmit}>
                 <FormGrid>
-                    <InputField label="Full Name" name="name" value={formData.name} onChange={handleChange} required />
-                    <InputField label="Email Address" name="email" type="email" value={formData.email} onChange={handleChange} required />
+                    <InputField label="Student Name" name="name" value={formData.name} onChange={handleChange} required />
+                    <InputField label="Program Name" name="program_name" value={formData.program_name} onChange={handleChange} />
+                    <InputField label="Semester" name="semester" value={formData.semester} onChange={handleChange} />
+                    <InputField label="Enrollment Number" name="enrollment_number" value={formData.enrollment_number} onChange={handleChange} />
                     <InputField label="Phone Number" name="phone" value={formData.phone} onChange={handleChange} required />
-                    <InputField
-                        label="Department" name="department" type="select" value={formData.department} onChange={handleChange} required
-                        options={departments}
-                    />
-                    <InputField
-                        label="Committee Category" name="committee_category" type="select" value={formData.committee_category} onChange={handleChange} required
-                        options={committees}
-                    />
-                    <InputField
-                        label="Faculty" name="faculty" type="select" value={formData.faculty} onChange={handleChange} required
-                        options={faculties}
-                    />
+                    <InputField label="Email Address" name="email" type="email" value={formData.email} onChange={handleChange} required />
                 </FormGrid>
-                <InputField label="Details of Grievance" name="details" type="textarea" value={formData.details} onChange={handleChange} required />
+                <InputField label="Grievance Description" name="details" type="textarea" value={formData.details} onChange={handleChange} required />
 
                 <div className="flex justify-center mt-10">
                     <GlobalArrowButton variant="white" onClick={handleSubmit}>
-                        {loading ? 'Submitting...' : 'Submit Grievance'}
+                        {loading ? 'Submitting...' : 'Submit'}
                     </GlobalArrowButton>
                 </div>
 

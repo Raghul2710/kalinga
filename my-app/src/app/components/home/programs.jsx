@@ -51,17 +51,15 @@ const formatDuration = (course) => {
   return formattedDuration
 }
 
-// Placeholder images by program type
-const getPlaceholderImage = (programType) => {
-  const type = programType?.toLowerCase() || 'ug'
-  const placeholders = {
-    'diploma': 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp',
-    'ug': 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/information.png',
-    'pg': 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/MBA.webp',
-    'phd': 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/Phd-mba.webp'
-  }
-  return placeholders[type] || placeholders['ug']
-}
+// Diverse placeholder images to be used sequentially
+const PROGRAM_PLACEHOLDERS = [
+  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp',
+  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/information.png',
+  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/MBA.webp',
+  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/Phd-mba.webp',
+  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp', // Add more if available, otherwise cycle
+  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/information.png'
+]
 
 const Programs = () => {
   const [activeTab, setActiveTab] = useState('UG')
@@ -184,16 +182,22 @@ const Programs = () => {
     }
 
     // Format courses for renderProgramCard
+    let placeholderCounter = 0
     return filtered.map(course => {
       const courseName = course.name || ""
       const programType = course.program_type
       const mappedLevel = getStudyLevel(programType)
       const courseSlug = course.slug || course.name?.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
 
-      // Get image from course-about API, fallback to placeholder
-      // Ensure course.id is treated as a number for consistent map lookup
+      // Get image from course-about API, fallback to sequential placeholder
       const courseId = typeof course.id === 'number' ? course.id : parseInt(course.id)
-      const courseImage = courseAboutMap.get(courseId) || getPlaceholderImage(programType)
+      let courseImage = courseAboutMap.get(courseId)
+
+      if (!courseImage) {
+        // Use sequential placeholder if API image is missing
+        courseImage = PROGRAM_PLACEHOLDERS[placeholderCounter % PROGRAM_PLACEHOLDERS.length]
+        placeholderCounter++
+      }
 
       return {
         id: course.id,

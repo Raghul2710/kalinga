@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import GlobalArrowButton from "../general/global-arrow_button";
 import SectionHeading from "../general/SectionHeading";
 import FlipbookTrigger from "../general/FlipbookTrigger";
@@ -40,20 +40,40 @@ export default function MainIntro({
   sectionClassName = null,
   imageObjectFit = "cover"
 }) {
-  const descriptionArray = Array.isArray(description) ? description : [description];
   const [showAll, setShowAll] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  // Memoize the content analysis to avoid repeated parsing
+  const { needsTruncation, totalChildren } = useMemo(() => {
+    if (typeof window === 'undefined' || !description) {
+      return { needsTruncation: false, totalChildren: 0 };
+    }
+
+    if (Array.isArray(description)) {
+      return {
+        needsTruncation: description.length > initialVisibleParagraphs,
+        totalChildren: description.length
+      };
+    }
+
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(description, 'text/html');
+      const childrenCount = doc.body.children.length;
+      return {
+        needsTruncation: childrenCount > initialVisibleParagraphs,
+        totalChildren: childrenCount
+      };
+    } catch (e) {
+      console.warn('Error parsing HTML in MainIntro useMemo:', e);
+      return { needsTruncation: false, totalChildren: 0 };
+    }
+  }, [description, initialVisibleParagraphs]);
+
+  const descriptionArray = Array.isArray(description) ? description : [description];
   const visibleParagraphs = showAll
     ? descriptionArray
     : descriptionArray.slice(0, initialVisibleParagraphs);
-  const paragraphs = Array.isArray(description) ? description : [description];
-  const [expanded, setExpanded] = useState(false);
-
-  const visibleText = expanded
-    ? paragraphs
-    : paragraphs.slice(0, initialVisibleParagraphs);
-
-  // Track if desktop view (for clipPath)
-  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     // Check if desktop on mount
@@ -100,15 +120,19 @@ export default function MainIntro({
               {Array.isArray(description) ? (
                 // Array format - render as paragraphs
                 visibleParagraphs.map((paragraph, idx) => (
-                  <p key={idx} className={`${descriptionClassName} leading-relaxed break-words overflow-visible text-justify`}>
-                    {paragraph}
-                  </p>
+                  <p
+                    key={idx}
+                    className={`${descriptionClassName} leading-relaxed break-words overflow-visible text-justify`}
+                    dangerouslySetInnerHTML={{ __html: paragraph }}
+                  />
                 ))
               ) : (
                 // HTML string format - render with dangerouslySetInnerHTML to support ul/li
                 (() => {
-                  // Parse HTML to extract sections (p, ul, ol tags)
-                  if (typeof window === 'undefined' || !description) {
+                  if (!description) return null;
+
+                  // If showAll is true or we don't have block elements to slice, render the whole thing
+                  if (showAll || typeof window === 'undefined') {
                     return (
                       <div
                         className={`main-intro-content ${descriptionClassName} leading-relaxed break-words overflow-visible text-justify max-w-none`}
@@ -117,32 +141,41 @@ export default function MainIntro({
                     );
                   }
 
-                  // Parse the HTML
-                  const parser = new DOMParser();
-                  const doc = parser.parseFromString(description, 'text/html');
-                  const sections = Array.from(doc.body.children);
+                  // Parse the HTML to show only initial sections
+                  try {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(description, 'text/html');
+                    const sections = Array.from(doc.body.children);
 
-                  // Determine visible sections based on showAll state
-                  const visibleSections = showAll ? sections : sections.slice(0, initialVisibleParagraphs);
+                    if (sections.length === 0) {
+                      // Fallback for plain text or strings with ONLY inline elements/text
+                      return (
+                        <div
+                          className={`main-intro-content ${descriptionClassName} leading-relaxed break-words overflow-visible text-justify max-w-none`}
+                          dangerouslySetInnerHTML={{ __html: description }}
+                        />
+                      );
+                    }
 
-                  // Reconstruct HTML from visible sections
-                  const visibleHtml = visibleSections.map(el => el.outerHTML).join('');
+                    // Determine visible sections based on initialVisibleParagraphs
+                    const visibleSections = sections.slice(0, initialVisibleParagraphs);
+                    const visibleHtml = visibleSections.map(el => el.outerHTML).join('');
 
-                  // Fallback for plain text or strings without block-level elements
-                  if (visibleSections.length === 0 && description) {
                     return (
-                      <p className={`${descriptionClassName} leading-relaxed break-words overflow-visible text-justify`}>
-                        {description}
-                      </p>
+                      <div
+                        className={`main-intro-content ${descriptionClassName} leading-relaxed break-words overflow-visible text-justify max-w-none`}
+                        dangerouslySetInnerHTML={{ __html: visibleHtml }}
+                      />
+                    );
+                  } catch (e) {
+                    console.error('Error parsing HTML in MainIntro:', e);
+                    return (
+                      <div
+                        className={`main-intro-content ${descriptionClassName} leading-relaxed break-words overflow-visible text-justify max-w-none`}
+                        dangerouslySetInnerHTML={{ __html: description }}
+                      />
                     );
                   }
-
-                  return (
-                    <div
-                      className={`main-intro-content ${descriptionClassName} leading-relaxed break-words overflow-visible text-justify max-w-none`}
-                      dangerouslySetInnerHTML={{ __html: visibleHtml }}
-                    />
-                  );
                 })()
               )}
 
@@ -168,12 +201,7 @@ export default function MainIntro({
               )}
 
               {showKnowMore && (
-                (Array.isArray(description) && descriptionArray.length > initialVisibleParagraphs) ||
-                (!Array.isArray(description) && typeof window !== 'undefined' && (() => {
-                  const parser = new DOMParser();
-                  const doc = parser.parseFromString(description || '', 'text/html');
-                  return doc.body.children.length > initialVisibleParagraphs;
-                })()) ||
+                needsTruncation ||
                 (hidePointsUntilExpanded && points && points.length > 0) ||
                 (knowMoreHref && knowMoreHref !== "#")
               ) && (

@@ -451,7 +451,7 @@ export default function DynamicCoursePage() {
 
   const syllabusContent = courseData?.syllabus_info ? {
     title: courseData.syllabus_info.heading || "Scheme & Syllabus",
-    description: parseHtmlToParagraphs(courseData.syllabus_info.description),
+    description: courseData.syllabus_info.description,
     buttonLabel: "Explore Now",
     href: extractLinkFromHtml(courseData.syllabus_info.description) || "/about-us",
     imageUrl: null,
@@ -702,7 +702,7 @@ export default function DynamicCoursePage() {
           <MainIntro
             title={mainIntroContent.title}
             // subtitle={mainIntroContent.subtitle}
-            description={mainIntroContent.description}
+            description={mainIntroContent.description} // This now supports rich HTML from CKEditor
             imageUrl={mainIntroContent.imageUrl}
             imageAlt={mainIntroContent.imageAlt}
             showKnowMore={true}

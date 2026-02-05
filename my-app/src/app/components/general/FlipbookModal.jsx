@@ -10,6 +10,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@$
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
+const PAGE_FLIP_SOUND_URL = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/sound/pageflipsound.mp3';
+
 const PDFPage = React.forwardRef((props, ref) => {
     return (
         <div className="bg-white shadow-lg overflow-hidden" ref={ref}>
@@ -24,9 +26,18 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
     const [numPages, setNumPages] = useState(null);
     const [currentPage, setCurrentPage] = useState(0);
     const [pageInputValue, setPageInputValue] = useState('1');
+    const [pagesToRender, setPagesToRender] = useState(4);
     const [containerWidth, setContainerWidth] = useState(0);
+    const isAudioUnlocked = useRef(false);
     const containerRef = useRef(null);
     const bookRef = useRef(null);
+    const audioRef = useRef(null);
+
+    useEffect(() => {
+        // Preload audio
+        audioRef.current = new Audio(PAGE_FLIP_SOUND_URL);
+        audioRef.current.load();
+    }, []);
 
     useEffect(() => {
         if (!isOpen) return;
@@ -35,6 +46,7 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
         setNumPages(null);
         setCurrentPage(0);
         setPageInputValue('1');
+        setPagesToRender(4);
 
         const updateWidth = () => {
             if (containerRef.current) {
@@ -53,9 +65,21 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
     }, [isOpen, pdfUrl]);
 
     const onFlip = useCallback((e) => {
-        setCurrentPage(e.data);
-        setPageInputValue((e.data + 1).toString());
-    }, []);
+        const flippedPage = e.data;
+        setCurrentPage(flippedPage);
+        setPageInputValue((flippedPage + 1).toString());
+
+        // Play page flip sound
+        if (audioRef.current) {
+            audioRef.current.currentTime = 0;
+            audioRef.current.play().catch(err => console.debug('Audio play failed:', err));
+        }
+
+        // Lazy load: if we are within 2 pages of the end of current rendered set, load more
+        if (flippedPage + 2 >= pagesToRender && pagesToRender < numPages) {
+            setPagesToRender(prev => Math.min(prev + 4, numPages));
+        }
+    }, [pagesToRender, numPages]);
 
     const handlePageInputChange = (e) => {
         setPageInputValue(e.target.value);
@@ -92,6 +116,18 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
         window.open(pdfUrl, '_blank', 'noopener,noreferrer');
     };
 
+    const unlockAudio = () => {
+        if (!isAudioUnlocked.current && audioRef.current) {
+            audioRef.current.play()
+                .then(() => {
+                    audioRef.current.pause();
+                    audioRef.current.currentTime = 0;
+                    isAudioUnlocked.current = true;
+                })
+                .catch(err => console.debug('Audio unlock failed:', err));
+        }
+    };
+
     if (!isOpen) return null;
 
     function onDocumentLoadSuccess({ numPages }) {
@@ -107,13 +143,17 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
             {/* Backdrop with blur */}
             <div
                 className="absolute inset-0 bg-black/80 backdrop-blur-xl"
-                onClick={onClose}
+                onClick={() => {
+                    unlockAudio();
+                    onClose();
+                }}
             ></div>
 
             {/* Modal Content */}
             <div
                 className="flex-1 w-full flex items-center justify-center p-4 md:p-12 pointer-events-none overflow-hidden"
                 ref={containerRef}
+                onClick={unlockAudio}
             >
                 <div className="flex items-center justify-center w-full pointer-events-auto">
                     {/* 4px White Border Frame with Integrated Header */}
@@ -220,12 +260,30 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
                                         {(() => {
                                             const pages = [...Array(numPages).keys()].map((p) => (
                                                 <PDFPage key={p}>
-                                                    <ReactPdfPage
-                                                        pageNumber={p + 1}
-                                                        width={bookWidth}
-                                                        renderTextLayer={false}
-                                                        renderAnnotationLayer={false}
-                                                    />
+                                                    {p < pagesToRender ? (
+                                                        <ReactPdfPage
+                                                            pageNumber={p + 1}
+                                                            width={bookWidth}
+                                                            renderTextLayer={false}
+                                                            renderAnnotationLayer={false}
+                                                            loading={
+                                                                <div className="flex flex-col items-center justify-center h-full w-full bg-gray-50/50">
+                                                                    <div className="animate-pulse flex flex-col items-center">
+                                                                        <div className="h-10 w-10 bg-gray-200 rounded-full mb-2"></div>
+                                                                        <div className="h-2 w-20 bg-gray-200 rounded"></div>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        />
+                                                    ) : (
+                                                        <div className="flex flex-col items-center justify-center h-full w-full bg-gray-50/30">
+                                                            <div className="animate-pulse flex flex-col items-center">
+                                                                <div className="h-10 w-10 bg-white/10 rounded-full mb-2 border border-white/20"></div>
+                                                                <div className="h-2 w-20 bg-white/10 rounded border border-white/20"></div>
+                                                                <p className="mt-2 text-white/40 text-[10px] uppercase tracking-widest font-medium">Loading Page {p + 1}</p>
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 </PDFPage>
                                             ));
 

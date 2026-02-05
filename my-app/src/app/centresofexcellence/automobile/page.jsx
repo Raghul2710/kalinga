@@ -95,7 +95,7 @@ export default function AutomobileTrainingCentrePage() {
       pathname: pathname,
       heroImage:
         "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/automobile-banner.webp",
-      pageTitle: "Automobile Training Centre",
+      pageTitle: "Automobile Training",
       customBreadcrumbs: [
         { label: "Home", href: "/" },
         { label: "Centres of Excellence", href: "/centresofexcellence" },
@@ -105,11 +105,11 @@ export default function AutomobileTrainingCentrePage() {
         },
       ],
     };
-    
+
     if (typeof window !== "undefined") {
       window.__breadcrumbData = breadcrumbData;
     }
-    
+
     return () => {
       if (typeof window !== "undefined" && window.__breadcrumbData?.pathname === pathname) {
         delete window.__breadcrumbData;

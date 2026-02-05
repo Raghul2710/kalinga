@@ -9,7 +9,7 @@ import Gallery from "@/app/components/general/gallery";
 const breadcrumbData = {
   heroImage:
     "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-banner.webp",
-  pageTitle: "Robotics, Coding, & Drones Training Centre",
+  pageTitle: "Robotics, Coding & Drones Training ",
   customBreadcrumbs: [
     { label: "Home", href: "/" },
     { label: "Centres of Excellence", href: "/centresofexcellence" },

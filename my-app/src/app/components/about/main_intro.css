@@ -1,24 +1,64 @@
-/* Global styling for HTML content in MainIntro component */
 .main-intro-content ul {
     list-style-type: disc !important;
     margin-left: 1.5rem !important;
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
     padding-left: 0.5rem !important;
 }
 
 .main-intro-content ul ul {
     list-style-type: circle !important;
     margin-left: 1.5rem !important;
-    margin-top: 0.25rem !important;
+    margin-top: 0.5rem !important;
 }
 
 .main-intro-content li {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
     line-height: 1.75 !important;
     display: list-item !important;
 }
 
 .main-intro-content p {
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.25rem !important;
+    line-height: 1.8 !important;
+}
+
+.main-intro-content strong,
+.main-intro-content b {
+    font-weight: 700 !important;
+    color: var(--dark-blue, #001f3f) !important;
+}
+
+.main-intro-content em,
+.main-intro-content i {
+    font-style: italic !important;
+}
+
+.main-intro-content a {
+    color: var(--button-red, #7a1c1d) !important;
+    text-decoration: underline !important;
+    font-weight: 500 !important;
+}
+
+.main-intro-content a:hover {
+    opacity: 0.8 !important;
+}
+
+/* Table support if needed from CKEditor */
+.main-intro-content table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 1.5rem 0 !important;
+}
+
+.main-intro-content th,
+.main-intro-content td {
+    border: 1px solid #e2e8f0 !important;
+    padding: 0.75rem !important;
+    text-align: left !important;
+}
+
+.main-intro-content th {
+    background-color: #f8fafc !important;
+    font-weight: 600 !important;
 }
