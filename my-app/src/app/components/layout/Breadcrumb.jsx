@@ -71,13 +71,13 @@ const Breadcrumb = () => {
           alt={title}
           fill
           className={`object-cover ${pageData?.imagePosition
-              ? (pageData.imagePosition.startsWith('object-') ? pageData.imagePosition : `object-${pageData.imagePosition}`)
-              : 'object-top'
+            ? (pageData.imagePosition.startsWith('object-') ? pageData.imagePosition : `object-${pageData.imagePosition}`)
+            : 'object-top'
             } opacity-80`}
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0" />
       </div>
 
       {/* White Section Spacer */}
