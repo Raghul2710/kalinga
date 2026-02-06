@@ -13,6 +13,24 @@ import { renderProgramCard } from '../general/program-cards-slider'
 import { fetchAllDepartmentsCourses, fetchAllCourseAbout } from '@/app/lib/api'
 import { rankAndSortPrograms } from "@/app/lib/search-utils";
 
+const phdSpecializations = [
+  "Biochemistry",
+  "Bioinformatics",
+  "Biotechnology",
+  "Botany",
+  "Chemistry",
+  "Civil Engineering",
+  "Economics",
+  "Forensic Science",
+  "Journalism and Mass Communication",
+  "Mechanical Engineering",
+  "Microbiology",
+  "Pharmacy",
+  "Physics",
+  "Yoga",
+  "Zoology"
+];
+
 // Helper function to format course name (BSE, BTech format - uppercase first few letters, then lowercase)
 const formatCourseName = (name) => {
   if (!name) return ""
@@ -163,6 +181,23 @@ const Programs = () => {
     let filtered = allCourses
     const isSearchActive = query.trim().length > 0;
 
+    // Static PhD programs as requested by user - separate cards for each specialization
+    const staticPhdPrograms = phdSpecializations.map(spec => ({
+      id: `static-phd-${spec.replace(/\s+/g, '-').toLowerCase()}`,
+      title: "Doctor of Philosophy",
+      shortName: `Ph.D - ${spec}`,
+      summary: `Research program in ${spec.toLowerCase()}. Doctor of Philosophy (Ph.D.) is a research-based doctoral program designed to equip students with advanced knowledge and research skills.`,
+      type: "PhD",
+      program_type: "phd",
+      specialization: spec,
+      courseSlug: "phd",
+      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/phd-placeholder.jpg", // Fallback image
+      hideDuration: true,
+      hideScholarshipLink: true,
+      showSpecializationDropdown: false,
+      applyNowLink: "https://admissions.kalingauniversity.ac.in/"
+    }));
+
     // Only apply Level filter if search is NOT active
     if (!isSearchActive) {
       // Filter by study level (active tab)
@@ -175,10 +210,29 @@ const Programs = () => {
           const level = getStudyLevel(programType)
           return level === activeTab
         })
+
+        // Prepend static PhDs if searching for PhD
+        if (activeTab === "Ph.D") {
+          filtered = [...staticPhdPrograms, ...filtered.filter(c => !c.id.toString().startsWith("static-phd"))];
+        }
       }
     } else {
       // Global search mode: Search across all programs Irrespective of filters
       filtered = rankAndSortPrograms(filtered, query, { includeDept: true });
+
+      // Match search query against static PhDs as well
+      const normalizedQuery = query.toLowerCase();
+      const matchingPhds = staticPhdPrograms.filter(p =>
+        "phd".includes(normalizedQuery) ||
+        "doctor of philosophy".includes(normalizedQuery) ||
+        p.specialization.toLowerCase().includes(normalizedQuery)
+      );
+
+      if (matchingPhds.length > 0) {
+        const existingIds = new Set(filtered.map(f => f.id));
+        const newPhds = matchingPhds.filter(p => !existingIds.has(p.id));
+        filtered = [...newPhds, ...filtered];
+      }
     }
 
     // Format courses for renderProgramCard
@@ -201,13 +255,18 @@ const Programs = () => {
 
       return {
         id: course.id,
-        title: courseName,
+        title: course.shortName || courseName,
+        shortName: course.shortName || "",
+        specialization: course.specialization || course.departmentName || "",
         type: mappedLevel,
         img: courseImage,
-        summary: `Explore ${courseName} program with comprehensive curriculum and industry exposure.`,
-        scholarships: 'Check eligibility',
+        summary: course.summary || `Explore ${courseName} program with comprehensive curriculum and industry exposure.`,
+        scholarships: course.hideScholarshipLink ? null : 'Check eligibility',
         courseSlug: courseSlug,
-        duration: formatDuration(course)
+        courseUrl: course.courseUrl,
+        duration: course.hideDuration ? null : formatDuration(course),
+        // Pass custom links
+        applyNowLink: course.applyNowLink
       }
     })
   }, [allCourses, activeTab, query, loading, courseAboutMap])

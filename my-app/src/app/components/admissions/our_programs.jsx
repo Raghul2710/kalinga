@@ -60,6 +60,24 @@ const getStudyLevel = (programType) => {
   return "UG";
 };
 
+const phdSpecializations = [
+  "Biochemistry",
+  "Bioinformatics",
+  "Biotechnology",
+  "Botany",
+  "Chemistry",
+  "Civil Engineering",
+  "Economics",
+  "Forensic Science",
+  "Journalism and Mass Communication",
+  "Mechanical Engineering",
+  "Microbiology",
+  "Pharmacy",
+  "Physics",
+  "Yoga",
+  "Zoology"
+];
+
 export default function OurPrograms({
   customPrograms = null,
   hideSearchFilter = false,
@@ -263,6 +281,23 @@ export default function OurPrograms({
     let filtered = allCourses;
     const isSearchActive = searchQuery.trim().length > 0;
 
+    // Static PhD programs as requested by user - separate cards for each specialization
+    const staticPhdPrograms = phdSpecializations.map(spec => ({
+      id: `static-phd-${spec.replace(/\s+/g, '-').toLowerCase()}`,
+      title: "Doctor of Philosophy",
+      shortName: `Ph.D - ${spec}`,
+      specialization: spec,
+      duration: "3 Years",
+      type: "PhD",
+      program_type: "phd",
+      courseUrl: "/phd",
+      courseSlug: "phd",
+      hideDuration: true,
+      hideScholarshipLink: true,
+      showSpecializationDropdown: false,
+      applyNowLink: "https://admissions.kalingauniversity.ac.in/"
+    }));
+
     // Only apply Level and Department filters if search is NOT active
     if (!isSearchActive) {
       // Filter by study level (always filter, default is UG)
@@ -279,35 +314,39 @@ export default function OurPrograms({
           const level = getStudyLevel(programType);
           return level === selectedStudyLevel;
         });
-      }
 
-      // Filter by department (supports ID, slug, or name)
-      if (selectedDepartment !== "All") {
-        filtered = filtered.filter(course => {
-          const deptId = course.departmentId || course.department;
-          const deptSlug = course.departmentSlug || course.department?.slug;
-          const deptName = course.departmentName || course.department?.name;
-
-          // Match by ID, slug, or name (case-insensitive)
-          const selectedDeptLower = selectedDepartment.toLowerCase();
-          return (
-            deptId?.toString() === selectedDepartment ||
-            deptSlug?.toLowerCase() === selectedDeptLower ||
-            deptName?.toLowerCase() === selectedDeptLower
-          );
-        });
+        // Prepend static PhDs if searching for PhD
+        if (selectedStudyLevel === "PhD") {
+          // Add all static PhD specializations
+          filtered = [...staticPhdPrograms, ...filtered.filter(c => !c.id.toString().startsWith("static-phd"))];
+        }
       }
     } else {
       // Global search mode: Search across all programs Irrespective of filters
       filtered = rankAndSortPrograms(filtered, searchQuery, { includeDept: true });
+
+      // Match search query against static PhDs as well
+      const query = searchQuery.toLowerCase();
+      const matchingPhds = staticPhdPrograms.filter(p =>
+        "phd".includes(query) ||
+        "doctor of philosophy".includes(query) ||
+        p.specialization.toLowerCase().includes(query)
+      );
+
+      if (matchingPhds.length > 0) {
+        // Filter out any that might already be in results by shared ID
+        const existingIds = new Set(filtered.map(f => f.id));
+        const newPhds = matchingPhds.filter(p => !existingIds.has(p.id));
+        filtered = [...newPhds, ...filtered];
+      }
     }
 
     // Format courses for ProgramCard
     return filtered.map(course => {
-      const courseName = course.name || "";
+      const courseName = course.name || course.title || "";
       // Use course URL from API or generate from slug
-      const courseUrl = course.url || course.courseUrl || `/courses/${course.slug || generateCourseSlug(course.name)}`;
-      const courseSlug = course.slug || generateCourseSlug(course.name);
+      const courseUrl = course.url || course.courseUrl || `/courses/${course.slug || (courseName ? courseName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') : 'program')}`;
+      const courseSlug = course.slug || course.courseSlug || (courseName ? courseName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') : 'program');
 
       // Get program_type and map to display level
       const programType = course.program_type;
@@ -316,9 +355,9 @@ export default function OurPrograms({
       return {
         id: course.id,
         title: courseName,
-        shortName: course.short_name || "",
-        specialization: course.departmentName || "",
-        duration: formatDuration(course), // Pass entire course object
+        shortName: course.short_name || course.shortName || "",
+        specialization: course.departmentName || course.specialization || "",
+        duration: course.duration ? formatDuration(course) : "3 Years", // Pass entire course object
         type: mappedLevel,
         courseSlug: courseSlug,
         coursePageUrl: courseUrl, // Use the URL from API
@@ -326,7 +365,14 @@ export default function OurPrograms({
         departmentName: course.departmentName,
         departmentSlug: course.departmentSlug,
         // Preserve program_type for filtering
-        program_type: programType
+        program_type: programType,
+        // Support static properties
+        hideDuration: course.hideDuration,
+        hideScholarshipLink: course.hideScholarshipLink,
+        showSpecializationDropdown: course.showSpecializationDropdown,
+        specializationOptions: course.specializationOptions,
+        specializationPlaceholder: course.specializationPlaceholder,
+        applyNowLink: course.applyNowLink
       };
     });
   }, [allCourses, selectedStudyLevel, selectedDepartment, searchQuery]);

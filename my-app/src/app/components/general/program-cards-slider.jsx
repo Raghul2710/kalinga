@@ -55,12 +55,12 @@ export const renderProgramCard = (program) => {
 
       <div className="flex-shrink-0 flex items-center justify-between gap-2 sm:gap-3">
         <div className="flex items-center  md:gap-3">
-          <Link href={program.courseSlug ? `/courses/${program.courseSlug}` : `/courses/${program.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>
+          <Link href={program.courseUrl || (program.courseSlug ? `/courses/${program.courseSlug}` : `/courses/${program.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`)}>
             <GlobalArrowButton className="!bg-transparent !shadow-none !text-[#1a1a1a] !px-0 !py-0 !h-auto text-sm sm:text-base" arrowClassName="!bg-transparent" arrowIconClassName="!text-[#1a1a1a]">
               Know More
             </GlobalArrowButton>
           </Link>
-          <Link href="/admissions">
+          <Link href={program.applyNowLink || "/admissions"} {...(program.applyNowLink?.startsWith('http') ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             <GlobalArrowButton className="!bg-white !text-black"
               arrowClassName="!bg-[var(--button-red)]"
               arrowIconClassName="!text-white"
