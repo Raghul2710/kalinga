@@ -3,9 +3,7 @@
 import GlobalArrowButton from "../components/general/global-arrow_button";
 import FlipbookTrigger from "../components/general/FlipbookTrigger";
 
-if (typeof window !== 'undefined') {
-  
-}
+// Academic Calendar page
 
 
 const annualReportButtons = [

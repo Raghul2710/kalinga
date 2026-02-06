@@ -7,10 +7,19 @@ import FlipbookTrigger from "../components/general/FlipbookTrigger";
 import { useFlipbook } from "../components/general/FlipbookContext";
 import GlobalArrowButton from "../components/general/global-arrow_button";
 
-/* ---------------- Breadcrumb ---------------- */
+const breadcrumbData = {
+  heroImage:
+    "https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/banner+(1).webp",
+  pageTitle: "Value Added Courses",
+  customBreadcrumbs: [
+    { label: "Home", href: "/" },
+    { label: "Value Added Courses", href: "/value-added-course" },
+  ],
+};
 
-if (typeof window !== 'undefined') {
-  
+// Register breadcrumb data globally
+if (typeof window !== "undefined") {
+  window.__breadcrumbData = breadcrumbData;
 }
 /* ---------------- Video Data ---------------- */
 const videoItems = [
