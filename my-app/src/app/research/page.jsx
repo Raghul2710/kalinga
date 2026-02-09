@@ -25,7 +25,7 @@ import APITable from "../components/general/api-table";
 export default function Research() {
   const pathname = usePathname();
 
-  
+
 
   const newsConferences = [
     {
@@ -320,7 +320,7 @@ export default function Research() {
           },
           {
             id: 6,
-            href: "",
+            href: " ",
             icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg",
             title: "Research Facilities",
             description: "State-of-the-art laboratories, high-tech instrumentation, and dedicated research centers equipped with cutting-edge tools for groundbreaking research across all disciplines.",

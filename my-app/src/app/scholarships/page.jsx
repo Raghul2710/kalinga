@@ -12,7 +12,7 @@ import AdmissionCareer from "../components/general/admission_cta";
 export default function ScholarshipsPage() {
   const pathname = usePathname();
 
-  
+
   useEffect(() => {
     const el = document.querySelector(".why-study-swiper .swiper");
     const sw = el?.swiper;
@@ -405,7 +405,7 @@ export default function ScholarshipsPage() {
           },
           1280: {
             slidesPerView: 2,
-            spaceBetween: 30,
+            spaceBetween: 0,
           },
         }}
       />

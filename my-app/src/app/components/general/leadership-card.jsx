@@ -12,7 +12,8 @@ export default function LeadershipCard({
   imageContainerClassName = "h-[350px]",
   showArrowButton = false,
   buttonText = "Know More",
-  showReadMore = false
+  showReadMore = false,
+  onArrowClick
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const NameTag = usePTagForName ? 'p' : 'h3';
@@ -58,7 +59,7 @@ export default function LeadershipCard({
 
       {/* BADGE BUTTON */}
       {showArrowButton && (
-        <div className="absolute bottom-6 right-6">
+        <div className="absolute bottom-6 right-6 cursor-pointer z-10" onClick={onArrowClick}>
           <div className="w-10 h-10 bg-[var(--button-red)] group-hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md">
             <svg
               width="20"

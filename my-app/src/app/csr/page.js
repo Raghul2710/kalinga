@@ -28,7 +28,7 @@ export default function CSRPage({
 } = {}) {
   const pathname = usePathname();
 
-  
+
   const visionMissionData = visionMissionDataProp ?? [{
     visionTitle: "Core Values",
     missionTitle: "Mission",
@@ -432,11 +432,12 @@ export default function CSRPage({
   return (
     <div>
       <ImageContent
-        hasImage={false}
+        hasImage={true}
         readmore={false}
         className="items-center justify-center"
         title="Corporate Social Responsibility (CSR)"
         subtitleclassName="hidden"
+        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/csr/bhagawan-sri.webp"
         description={
           <>
             Companies today understand the importance of giving back by being socially responsible towards society, but with a lack of time, planning, and expertise, they fail to develop effective programs. The Corporate Social Responsibility (CSR) initiatives at Kalinga come under <b>Bhagwan Shri Bala Sai Educational and Charitable Society</b>, which works on behalf of different organisations and assists them in staying ahead in sustainable and social welfare. It handles every project with transparency and accountability by identifying real social needs, developing solutions to address those challenges, working towards the cause, and measuring outcomes. The organization helps companies successfully channelise their CSR efforts by focusing on their business objectives and delivering measurable results.
@@ -487,7 +488,7 @@ export default function CSRPage({
           {renderCardGrid(villagesAdopted)}
         </div>
       </section>
-              {/* FAQ Section */}
+      {/* FAQ Section */}
       <FAQ
         items={FAQItems}
         title=""

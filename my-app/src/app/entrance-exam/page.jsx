@@ -50,7 +50,7 @@ const EntranceExamPage = () => {
         hasImage={false}
         readmore={false}
         className="items-center justify-center"
-        title="Introducing A Shortcut To Success"
+        title="Your Dream Career is One Click Away"
         subtitleclassName="hidden"
         description="Crack the KALSEE/KAL-MAT Exam and Join KU’s Prestigious Programs."
       />

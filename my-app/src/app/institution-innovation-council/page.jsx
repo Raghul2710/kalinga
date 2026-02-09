@@ -194,7 +194,7 @@ const iicfounds = [
 export default function InstitutionInnovationCouncil() {
   const pathname = usePathname();
 
-  
+
   return (
     <div className="bg-white">
 
@@ -211,7 +211,7 @@ export default function InstitutionInnovationCouncil() {
 
       />
       {/* Innovation Section */}
-      <section className="py-16 bg-[var(--light-gray)]">
+      <section className="py-16">
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center">
             <Image
