@@ -4,6 +4,7 @@ import FAQ from '../components/general/faq'
 import APITable from '../components/general/api-table';
 import ResearchSixGridButtons from '../components/research/research_six_grid-buttons';
 import AwardsScrollbar from '../components/home/awards-scrollbar';
+import AccreditationsApprovalsSection from '../components/ana/AccreditationsApprovalsSection';
 
 
 function Accreditations() {
@@ -64,100 +65,69 @@ function Accreditations() {
         },
         {
             id: 2,
-            text: "Ethics Committee Constitution",
-            href: "",
-            isTable: true,
-            tableType: "ethics",
+            text: "PHD Chamber of Commerce and Industry",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/PHD-Chamber-of-Commerce-and-Industry.webp",
         },
         {
             id: 3,
-            text: "Software used for Plagiarism",
-            href: "/research-resources/#seedmoney",
+            text: "Vigyan Prasar",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/Vigyan%2BPrasar-Certificate%2Bof%2BAffiliation.pdf",
         },
         {
             id: 4,
-            text: "Research Policy",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/1.+Research+Policy+(2).pdf",
+            text: "DELNET - Certificate of Membership",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/delnet.pdf",
         },
         {
             id: 5,
-            text: "Constitution of the Ethics Board for Maintaining Research Integrity",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/5.+CONSTITUTION+OF+ETHICS+BOARD+FOR+MAINTAINING+RESEARCH+INTEGRITY.pdf"
+            text: "Bank Loan (Tie-Up)",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/Bank%2BLoan%2B(Tie-Up)%2B-%2BCentral%2BBank%2Bof%2BIndia.pdf"
         },
         {
             id: 6,
-            text: "Conferences",
-            href: "/research-conferences",
+            text: "Tribhuvan University Kirtipur, Nepal",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/Tribhuvan%2BUniversity%2C%2BNepal%2C%2BB.pdf"
         },
-
-        // Right Column
-        {
+         {
             id: 7,
-            text: "Research Advisory Committee",
-            href: "",
-            isTable: true,
-            tableType: "research",
+            text: "Ministry Of Education",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/Ministry+Of+Education%2C+Nepal.webp"
         },
-        // {
-        //   id: 8,
-        //   text: "Plagiarism Policy",
-        //   href: "/research-resources",
-        //   isContent: true,
-        // },
-        // {
-        //   id: 9,`
-        //   text: "Ph.D. Admissions",
-        //   href: "/phd",
-        // },
-        {
+         {
+            id: 8,
+            text: "CTEVT Nepal Equivalency",
+            href: ""
+        },
+         {
+            id: 9,
+            text: "Equivalence to Sambalpur University, Odisha",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/Equivalence+to+Sambalpur+University%2C+Odisha.webp"
+        },
+         {
             id: 10,
-            text: "Research Integrity & Ethics Policy",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/RESEARCH+Ethics.pdf",
+            text: "MoU with National Law University",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/MoU+with+National+Law+University.pdf"
         },
-        {
+        
+         {
             id: 11,
-            text: "Constitution Of the Research Advisory Committee",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Constitution+of+Research+Advisory+Committee.pdf",
+            text: "Kalinga University - Statutes and Ordinance",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/statutes_ordinance.pdf"
         },
-        // {
-        //   id: 12,
-        //   text: "Doctoral Research Committee",
-        //   href: "/phd",
-        // },
-        {
+         {
+            id: 12,
+            text: "IIC Appreciation Letter",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/IIC+Appreciation+Letter.pdf"
+        },
+         {
             id: 13,
-            text: "Seed Money",
-            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+Money+Policy.pdf",
+            text: "Digital Smart Campus Ranking 2024",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/Digital+Smart+Campus+Ranking+2024.webp"
         },
-        {
+         {
             id: 14,
-            text: "Research Paper",
-            href: "/research-papers-and-books-published",
-        },
-        {
-            id: 15,
-            text: "Book Chapters",
-            href: "/book-chapters",
-        },
-        {
-            id: 16,
-            text: "Patents",
-            href: "/patents",
-        },
-        {
-            id: 17,
-            text: "Chairs and their Activities",
-            href: "/chairs-and-their-activities",
-        },
-        {
-            id: 18,
-            text: "IPR Cell",
-            href: "/ipr-cell",
-        },
-        {
-            id: 19,
-            text: "Conferences",
-            href: "/research-conferences",
+            text: "CSR Ranking Law 2025",
+            href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/CSR-Ranking-Law-2025.webp"
         },
 
     ];
@@ -169,6 +139,7 @@ function Accreditations() {
                 accreditations={aboutApproval}
             />
             <AwardsScrollbar title="NIRF Ranking" awards={ranking} />
+            <AccreditationsApprovalsSection />
             <ResearchSixGridButtons buttons={defaultButtons} />
         </>
     )
