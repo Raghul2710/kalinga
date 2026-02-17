@@ -3,6 +3,7 @@ import AccreditationRanking from '../components/home/AccreditationRanking'
 import FAQ from '../components/general/faq'
 import APITable from '../components/general/api-table';
 import ResearchSixGridButtons from '../components/research/research_six_grid-buttons';
+import AwardsScrollbar from '../components/home/awards-scrollbar';
 
 
 function Accreditations() {
@@ -14,6 +15,45 @@ function Accreditations() {
         { id: 5, name: "PCI", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002980.png" },
         { id: 6, name: "NCTE", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002978.png" },
         { id: 6, name: "NAAC Accreditation B+", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Accreditation+and+Ranking+Logo/Naac+niirf+2025.png" },
+    ]
+
+    const ranking = [
+        {
+            id: 0,
+            year: "2025",
+            title: "Ranked in top 101–150 universities",
+            subtitle: "",
+            active: true,
+        },
+        {
+            id: 1,
+            year: "2024",
+            title: "Ranked in top 101–150 universities",
+            subtitle: "",
+            active: true,
+        },
+        {
+            id: 2,
+            year: "2023",
+            title: "Ranked in top 101–150 universities",
+            subtitle: "",
+            active: true,
+        },
+        {
+            id: 3,
+            year: "2022",
+            title: "Ranked in top 101–150 universities",
+            subtitle: "",
+            active: true,
+        },
+        {
+            id: 4,
+            year: "2021",
+            title: "Ranked in top 151–200 universities",
+            subtitle: "",
+            active: true,
+        },
+
     ]
     const defaultButtons = [
         // Left Column
@@ -128,6 +168,7 @@ function Accreditations() {
                 secondHeading=""
                 accreditations={aboutApproval}
             />
+            <AwardsScrollbar title="NIRF Ranking" awards={ranking} />
             <ResearchSixGridButtons buttons={defaultButtons} />
         </>
     )
