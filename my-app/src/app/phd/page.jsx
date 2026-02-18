@@ -101,7 +101,8 @@ export default function PhdPage() {
       title: "Ph.D. Notification 2025-26",
       description: "Latest notifications for the upcoming academic year.",
       buttons: [
-        { label: "Ph.D. Notification 2025-26", onClick: () => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2026+Notification.pdf", "Ph.D. Notification 2025-26") },
+        { label: "Ph.D. Notification 2026", onClick: () => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2026+Notification.pdf", "Ph.D. Notification 2026") },
+        { label: "Ph.D. Notification 2025-26", onClick: () => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2025+Notification+26-07-2025.pdf", "Ph.D. Notification 2025-26") },
       ]
     },
     {

@@ -25,11 +25,14 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/app/components/gener
 import CareerPath from '@/app/components/course/career_path'
 import ImageContent from '@/app/components/ccrc/imagecontent'
 import APITable from "../components/general/api-table";
+import GlobalArrowButton from "../components/general/global-arrow_button";
+import FlipbookTrigger from "../components/general/FlipbookTrigger";
+
 export default function Research() {
   const { openFlipbook } = useFlipbook();
   const pathname = usePathname();
 
-  
+
 
   const blueItems = [
     {
@@ -573,6 +576,64 @@ export default function Research() {
     { id: 45, title: "Training & Internship for Session 2021-22" },
   ];
 
+  const annualReportButtons = [
+    {
+      id: 1,
+      text: "Annual Report 2022–23 (Volume I)",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2022-23-(Vol-1).pdf",
+    },
+    {
+      id: 2,
+      text: "Annual Report 2022–23 (Volume II)",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual+Report+2022-23+(Vol.+2).pdf",
+    },
+    {
+      id: 3,
+      text: "Annual Report 2021–22 (Volume I)",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual+Report-2021-22+(Vol.+1).pdf",
+    },
+    {
+      id: 4,
+      text: "Annual Report 2021–22 (Volume II)",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2021-22-(Vol-2).pdf",
+    },
+    {
+      id: 5,
+      text: "Annual Report 2020–21",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2020-21.pdf",
+    },
+    {
+      id: 6,
+      text: "Annual Report 2019–20",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT+2019-20_09-01-2021.pdf",
+    },
+    {
+      id: 7,
+      text: "Annual Report 2018–19",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT+2018-19_15-01-2021.pdf",
+    },
+    {
+      id: 8,
+      text: "Annual Report 2017–18",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT+2017-18_18-01-2021.pdf",
+    },
+    {
+      id: 9,
+      text: "Annual Report 2016–17",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT_2016-17_18-01-2021.pdf",
+    },
+    {
+      id: 10,
+      text: "Annual Report 2015–16",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT_2015-16_18-01-2021.pdf",
+    },
+    {
+      id: 11,
+      text: "Annual Report 2014–15",
+      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT_2014-15_18-01-2021.pdf",
+    },
+  ];
+
   const internshipFAQItems = internshipTables.map(item => ({
     id: item.id,
     question: item.title,
@@ -591,7 +652,7 @@ export default function Research() {
   return (
     <>
       <MainIntro
-        title="Shaping your career with the right opportunities"
+        title="Shaping Your Career with the Right Opportunities"
         subtitle="Successful Placement Track Record"
         description={[
           "Your journey from the classroom to the corporate world begins at Kalinga University. KU offers personalised training and conducts campus drives each year so that you can begin your professional journey right after you graduate. We just don’t teach you the curriculum, but we train, guide, and connect you with industry leaders. We help students build confidence to clear any interview by securing top positions and packages in leading companies."]}
@@ -630,7 +691,7 @@ export default function Research() {
       />
 
       <MainIntro
-        title="Training And Placement Cell"
+        title="Objectives of Training"
         description={[
           "The Career and Corporate Centre of Kalinga University is a hub for career guidance and training, and corporate partnerships. With modern infrastructure and resources, the centre meets industry standards and has even received appreciation from top organisations. The Kalinga University campus placements support cell introduces you to the professional world. We don't just prepare you for the corporate world, but give you a 360-degree training so that you can turn out to be a confident individual who is ready to tackle any challenge in life.",
           "With our personalised training programs, expert-led sessions, and interview preparation, you will be well-prepared to clear any job interview according to your skill set. Our expert mentors go beyond and guide you with skills that companies are looking for in the current job market, and even update the training modules accordingly. Apart from this, we also keep the database of job openings in various companies up-to-date, so that our students don't miss out on any opportunities. With our strong industry connections, we conduct campus drives each year, ensuring that our graduates are placed in leading companies with competitive salary packages."
@@ -790,7 +851,7 @@ export default function Research() {
         description={skillsContent.description}
         careers={skillsContent.careers}
       />
-      <ImageContent
+      {/* <ImageContent
         hasImage={false}
         buttonText={false}
         buttonLink=""
@@ -802,7 +863,7 @@ export default function Research() {
             At KU, you don’t have to wait till graduation, but we’ll help you get a sneak peek into the practical world with our internship programs, which will also make your CV stand out during your job interviews.
           </>
         }
-      />
+      /> */}
       <Placements hideMarquee={true} hideMilestones={true} bgColor="bg-[var(--light-gray)] mx-2 rounded-xl" marginClassName="mb-0" />
       <MediaCardSlider
         categoryTitle="Video Interviews"
@@ -824,8 +885,46 @@ export default function Research() {
         swiperClassName="ccrc-video-slider"
         imageObjectPosition="object-bottom"
       />
+      <section className="pt-16 pb-16 bg-white">
+        <div className="container mx-auto px-6">
+
+          {/* ✅ PAGE HEADING */}
+          <div className="mb-10 text-center">
+            <h2 >
+              Annual Reports
+            </h2>
+            <p className="text-[16px] text-[#555] leading-relaxed">
+              Our annual reports will give you a detailed overview of the University’s growth and achievements.
+              These reports show transparency, academic excellence, and overall institutional development.
+            </p>
+          </div>
+
+          {/* ✅ BUTTON GRID */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {annualReportButtons.map((item) => (
+              <FlipbookTrigger key={item.id} pdfUrl={item.href} title={item.text}>
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <GlobalArrowButton
+                    className="!w-full h-[60px] justify-between"
+                    arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+                    arrowSize={29}
+                  >
+                    {item.text}
+                  </GlobalArrowButton>
+                </a>
+              </FlipbookTrigger>
+            ))}
+          </div>
+
+        </div>
+      </section>
       <FAQ
-        title="Placement Records"
+        title="Our Successful Placement Record"
         variant="button"
         subtitle=""
         buttons={[
@@ -908,7 +1007,8 @@ export default function Research() {
       />
       <MediaCardSlider
         categoryTitle=""
-        title="Internship Details"
+        title="Internship Opportunities At KU"
+        description="At KU, you don’t have to wait till graduation, but we’ll help you get a sneak peek into the practical world with our internship programs, which will also make your CV stand out during your job interviews."
         videoItems={videoItems3}
         cardBgClass="bg-white"
         nameTextClass="text-[var(--button-red)]"

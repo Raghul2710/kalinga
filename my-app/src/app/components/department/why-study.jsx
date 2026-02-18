@@ -36,7 +36,7 @@ const whyStudyItems = [
 export default function WhyStudy({
   items = whyStudyItems,
   sectionTitle = 'Why Study Information Technology?',
-  sectionDescription = 'Choose one of your favourite specialisations and master what’s trending.',
+  sectionDescription = '',
   backgroundImage = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp',
   breakpoints = {
     768: { slidesPerView: 2 },

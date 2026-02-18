@@ -70,7 +70,7 @@ const Breadcrumb = () => {
           src={banner}
           alt={title}
           fill
-          className={`object-cover ${pageData?.imagePosition
+          className={`object-cover ${pageData?.imagePosition  
             ? (pageData.imagePosition.startsWith('object-') ? pageData.imagePosition : `object-${pageData.imagePosition}`)
             : 'object-top'
             } opacity-80`}

@@ -17,11 +17,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCourses, setFilteredCourses] = useState([]);
   const [departments, setDepartments] = useState([]);
-  const searchRef = useRef(null);
   const pathname = usePathname();
   const router = useRouter();
   const isHomePage = pathname === '/';
@@ -98,42 +94,7 @@ const Header = () => {
     }
   }, [pathname]);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
-        setIsSearchOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
-  useEffect(() => {
-    if (!isSearchOpen) {
-      setFilteredCourses([]);
-      return;
-    }
-    const query = searchTerm.trim().toLowerCase();
-    if (!query) {
-      setFilteredCourses(courses.slice(0, 6));
-      return;
-    }
-    const matches = courses.filter((c) => c.name.toLowerCase().includes(query));
-    setFilteredCourses(matches.slice(0, 8));
-  }, [searchTerm, isSearchOpen, courses]);
-
-  const handleSearchSubmit = (e) => {
-    e.preventDefault();
-    const query = searchTerm.trim();
-    if (!query) return;
-    const exactMatch = courses.find((c) => c.name.toLowerCase() === query.toLowerCase());
-    if (exactMatch) {
-      router.push(exactMatch.href);
-    } else {
-      router.push(`/search?q=${encodeURIComponent(query)}`);
-    }
-    setIsSearchOpen(false);
-  };
 
   const navItems = useMemo(() => [
     {
@@ -370,7 +331,7 @@ const Header = () => {
             links: [
               { label: 'News & Events', href: '/news-and-events' },
               { label: 'Conferences & Events', href: '/conferences-and-events' },
-              { label: 'Alumni talk', href: '/news-and-events' },
+              // { label: 'Alumni talk', href: '/news-and-events' },
             ]
           }
         ]
@@ -433,7 +394,7 @@ const Header = () => {
                 <span>{item.label}</span>
               </Link>
             ))}
-            <div className="relative" ref={searchRef}>
+            <div className="relative">
               <button
                 type="button"
                 onClick={() => router.push('/admissions#course-finder')}
@@ -442,49 +403,6 @@ const Header = () => {
               >
                 <FlatIcon name="search" className="w-6" />
               </button>
-              {isSearchOpen && (
-                <form
-                  onSubmit={handleSearchSubmit}
-                  className="absolute right-0 mt-2 bg-white shadow-lg rounded-lg flex flex-col gap-2 px-3 py-2 min-w-[260px] z-[10070]"
-                >
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="text"
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      placeholder="Search Courses..."
-                      className="flex-1 border border-gray-200 rounded px-2 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-[var(--red)] focus:border-[var(--red)]"
-                    />
-                    <button
-                      type="submit"
-                      className="p-2 rounded bg-[var(--red)] text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--red)]"
-                    >
-                      <FlatIcon name="search" className="w-4 h-4" />
-                    </button>
-                  </div>
-                  {filteredCourses.length > 0 ? (
-                    <div className="max-h-64 overflow-y-auto border border-gray-100 rounded-md">
-                      {filteredCourses.map((course) => (
-                        <Link
-                          key={course.href}
-                          href={course.href}
-                          className="block w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md"
-                          onClick={() => {
-                            setIsSearchOpen(false)
-                            setSearchTerm('')
-                          }}
-                        >
-                          {course.name}
-                        </Link>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="px-1 py-1 text-xs text-gray-500">
-                      No Courses Found
-                    </div>
-                  )}
-                </form>
-              )}
             </div>
           </div>
         </div>

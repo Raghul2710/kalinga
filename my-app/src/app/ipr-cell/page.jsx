@@ -12,8 +12,15 @@ import FlipbookTrigger from "@/app/components/general/FlipbookTrigger";
 import APITable from "../components/general/api-table";
 import CtcdTrainingTabs from "../components/ctcd/ctcd_training_tabs";
 
-const aboutP1 =
-  "The National IPR Policy was launched by the Government of India on 12th May 2016, which lays down seven objectives, including the Administration and Management of IPRs. It endeavours to promote a stable IP regime in the country and encourages innovation to achieve the country’s industrial and economic development goals.";
+const aboutP1 = (
+  <>
+    The National IPR Policy was launched by the Government of India on 12
+    <sup>th</sup> May 2016, which lays down seven objectives, including the
+    Administration and Management of IPRs. It endeavours to promote a stable IP
+    regime in the country and encourages innovation to achieve the country’s
+    industrial and economic development goals.
+  </>
+);
 
 const aboutP2 =
   "The IPR Cell at Kalinga University extends its initiatives for spreading awareness about the concepts among academicians, scholars, and students for taking steps to implement the objectives of the national IPR Policy, including strengthening IPR management and ensuring ease of access to the IP system for all stakeholders.";
@@ -22,7 +29,7 @@ const MentorIntroProps = [
   {
     id: 1,
     title: "Dr R Udaya Kumar",
-    subtitle: "A Message From the Dean",
+    subtitle: "Message from HoD",
     department: "Head - IPR Cell",
     imageSrc:
       "https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-sir.webp",
@@ -70,7 +77,7 @@ const IPR_READMORE_PDF =
 export default function IPRCellPage() {
   const pathname = usePathname();
 
-  
+
 
   const columns = [
     { key: "sno", label: "S. No.", width: "w-24" },
@@ -109,7 +116,11 @@ export default function IPRCellPage() {
       <ImageContent
         title="Intellectual Property Rights (IPR) Cell"
         subtitle="Intellectual Property Rights"
-        description={`${aboutP1} ${aboutP2}`}
+        description={
+          <>
+            {aboutP1} {aboutP2}
+          </>
+        }
         imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-cell-logo.webp"
         imageAlt="IPR Cell Logo"
         readmore={true}

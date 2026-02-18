@@ -15,12 +15,12 @@ const clubSections = [
     id: 1,
     title: "Important Links",
     clubs: [
-     
+
       {
         name: "University Grants Commission",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp",
-              url: "https://www.ugc.ac.in",
+        url: "https://www.ugc.ac.in",
       },
       {
         name: "All India Council for Technical Education",
@@ -30,13 +30,13 @@ const clubSections = [
       },
       {
         name: "Bar Council of India",
-       image:
+        image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/bci.webp",
-           url: "http://www.barcouncilofindia.org",
+        url: "http://www.barcouncilofindia.org",
       },
       {
         name: "Pharmacy Council of India",
-       image:
+        image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002980.png",
         url: "https://pci.nic.in",
       },
@@ -48,21 +48,21 @@ const clubSections = [
       },
       {
         name: "National Assessment and Accreditation Council",
-       image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/nirf-logo.webp",
-           url: "http://www.naac.gov.in",
+        image:
+          "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/nirf-logo-new.jpeg",
+        url: "http://www.naac.gov.in",
       },
       {
         name: "National Institutional Ranking Framework",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/naac-logo.webp",
-           url: "https://www.nirfindia.org/Home",
+        url: "https://www.nirfindia.org/Home",
       },
       {
         name: "All India Survey on Higher Education",
         image:
           "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/aishe.webp",
-            url: "https://aishe.gov.in/aishe/home",
+        url: "https://aishe.gov.in/aishe/home",
       },
     ],
   },
@@ -117,7 +117,7 @@ export default function Page() {
                         aria-label="Open link"
                         className="cursor-pointer text-white flex items-center justify-center transition-colors flex-shrink-0"
                       >
-                       <div class="w-10 h-10 bg-[var(--button-red)] group-hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></div>
+                        <div class="w-10 h-10 bg-[var(--button-red)] group-hover:bg-[#c41e3a] rounded-lg flex items-center justify-center transition-colors shadow-md"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></div>
                       </button>
                     </div>
                   </div>

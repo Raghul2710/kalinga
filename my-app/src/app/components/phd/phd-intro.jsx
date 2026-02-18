@@ -22,7 +22,7 @@ export default function PhdIntro() {
           "We stand out as one of the best research universities as we encourage interdisciplinary research in pursuit of knowledge exchange among our research scholars. Our full-time Ph.D. enthusiasts work on different ongoing research projects of our University, gaining practical knowledge apart from theoretical studies. By working on these projects, they don’t just contribute to their domain but also develop a competency to perform research work individually or in a group.",
         ]}
         imageAlt="Kalinga University Research"
-        knowMoreHref="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2025+Newspaper+Notification+-+26-07-2025.pdf"
+        knowMoreHref="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2026+Notification.pdf"
         showKnowMore={true}
       />
     </section>

@@ -8,9 +8,9 @@ function Hostelwarden() {
         {
             imageSrc:
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
-            title: "A Message From the Warden",
-            subtitle: "Mr. Manish Singh",
-            department: "Warden - Hostel",
+            title: "Mr. Manish Singh",
+            subtitle: "Message from Chief Warden",
+            department: "Chief Warden & Head - Administration",
             imageAlt: "Warden-Hostel",
             message: [
                 "I welcome you all to the Kalinga family, where students live in a neat and clean environment and develop self-discipline. Our students come from all around the globe with different cultures and upbringings, but they live together in harmony.",

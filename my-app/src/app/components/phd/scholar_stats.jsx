@@ -13,9 +13,9 @@ const fellowshipTable = {
         { slNo: "1", schemeName: "CSIR", fullForm: "COUNCIL OF SCIENTIFIC AND INDUSTRIAL RESEARCH" },
         { slNo: "2", schemeName: "NET-JOINT-CSIR", fullForm: "JOINT COUNCIL OF SCIENTIFIC AND INDUSTRIAL RESEARCH" },
         { slNo: "3", schemeName: "UGC-NETJRF", fullForm: "NATIONAL ELIGIBILITY TEST" },
-        { slNo: "4", schemeName: "NFSC", fullForm: "NATIONAL FELLOWSHIP FOR SCHEDULED CASTE" },
-        { slNo: "5", schemeName: "NFST", fullForm: "NATIONAL FELLOWSHIP FOR SCHEDULED TRIBES" },
-        { slNo: "6", schemeName: "INSPIRE", fullForm: "INNOVATION IN SCIENCE PURSUIT FOR INSPIRED RESEARCH" },
+        // { slNo: "4", schemeName: "NFSC", fullForm: "NATIONAL FELLOWSHIP FOR SCHEDULED CASTE" },
+        // { slNo: "5", schemeName: "NFST", fullForm: "NATIONAL FELLOWSHIP FOR SCHEDULED TRIBES" },
+        // { slNo: "6", schemeName: "INSPIRE", fullForm: "INNOVATION IN SCIENCE PURSUIT FOR INSPIRED RESEARCH" },
     ]
 };
 

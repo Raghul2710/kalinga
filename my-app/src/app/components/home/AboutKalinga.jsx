@@ -40,7 +40,7 @@ const AboutKalinga = () => {
               <div className={`grid md:grid-cols-2 gap-6 items-start relative z-1 transition-all duration-300`}>                {/* Left: Title and button */}
                 <div className="space-y-6">
                   <h2 className="font-stix text-3xl md:text-4xl lg:text-5xl leading-tight">
-                    A Leading Private University in Chhattisgarh
+                    Best Private University in Chhattisgarh
                   </h2>
                   <div className="mt-4">
                     <Link href="/about-us" className="inline-flex">

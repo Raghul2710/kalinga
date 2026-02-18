@@ -8,13 +8,13 @@ import AdmissionCareer from "@/app/components/general/admission_cta";
 import Academicvideo from "../components/academic-facilities/academicvideo";
 
 export default function AcademicFacilities() {
-    const pathname = usePathname();
+  const pathname = usePathname();
 
-    
 
-    return (
-        <>
-            <style jsx global>{`
+
+  return (
+    <>
+      <style jsx global>{`
   .absolute.inset-0 > img {
     object-position: center 60% !important;
   }
@@ -25,10 +25,10 @@ export default function AcademicFacilities() {
     }
   }
 `}</style>
-            <Academicmainintro />
-            <Academiccards />
-            <Academicvideo />
-            <AdmissionCareer />
-        </>
-    );
+      <Academicmainintro />
+      <Academiccards />
+      {/* <Academicvideo /> */}
+      <AdmissionCareer />
+    </>
+  );
 }
