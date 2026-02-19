@@ -20,7 +20,7 @@ import MediaCardSlider from "@/app/components/general/media-card-slider";
 import Gallery from '../components/campuslife/campusgallery';
 import Placements from "../components/home/placements";
 import Partner from "../components/ccrc/partner";
-import ImageListItem from '@/app/components/ccrc/imagelistitem'
+
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/app/components/general/tab'
 import CareerPath from '@/app/components/course/career_path'
 import ImageContent from '@/app/components/ccrc/imagecontent'
@@ -681,6 +681,23 @@ export default function Research() {
         descriptionTextClass=""
         swiperClassName="ccrc-video-slider"
       />
+      <MainIntro
+        title="Training And Placement Cell"
+        description={[
+          "The Career and Corporate Centre of Kalinga University is a hub for career guidance and training, and corporate partnerships. With modern infrastructure and resources, the centre meets industry standards and has even received appreciation from top organisations. The Kalinga University campus placements support cell introduces you to the professional world. We don't just prepare you for the corporate world, but give you a 360-degree training so that you can turn out to be a confident individual who is ready to tackle any challenge in life.",
+          "With our personalised training programs, expert-led sessions, and interview preparation, you will be well-prepared to clear any job interview according to your skill set. Our expert mentors go beyond and guide you with skills that companies are looking for in the current job market, and even update the training modules accordingly. Apart from this, we also keep the database of job openings in various companies up-to-date, so that our students don't miss out on any opportunities. With our strong industry connections, we conduct campus drives each year, ensuring that our graduates are placed in leading companies with competitive salary packages.",
+          "<h3 style='font-size: 1.3rem; margin-bottom: 0.5rem;'>Objectives of Training </h3>"
+        ]}
+        points={items.map((item) => item.text)}
+        hidePointsUntilExpanded={true}
+        knowMoreLabel="Read More"
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp"
+        imageAlt="Objectives"
+        initialVisibleParagraphs={1}
+        showKnowMore={true}
+        reverseLayout={true}
+        applyTransform3dSlant={false}
+      />
       <QuickLinks
         links={links}
         title="Training Initiatives Of Kalinga’s TnP Cell"
@@ -689,22 +706,6 @@ export default function Research() {
         textColorClassName="text-black"
         showReadMore={true}
       />
-
-      <MainIntro
-        title="Objectives of Training"
-        description={[
-          "The Career and Corporate Centre of Kalinga University is a hub for career guidance and training, and corporate partnerships. With modern infrastructure and resources, the centre meets industry standards and has even received appreciation from top organisations. The Kalinga University campus placements support cell introduces you to the professional world. We don't just prepare you for the corporate world, but give you a 360-degree training so that you can turn out to be a confident individual who is ready to tackle any challenge in life.",
-          "With our personalised training programs, expert-led sessions, and interview preparation, you will be well-prepared to clear any job interview according to your skill set. Our expert mentors go beyond and guide you with skills that companies are looking for in the current job market, and even update the training modules accordingly. Apart from this, we also keep the database of job openings in various companies up-to-date, so that our students don't miss out on any opportunities. With our strong industry connections, we conduct campus drives each year, ensuring that our graduates are placed in leading companies with competitive salary packages."
-        ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp"
-        imageAlt="Objectives"
-        initialVisibleParagraphs={1}
-        showKnowMore={true}
-        reverseLayout={true}
-        applyTransform3dSlant={false}
-      />
-
-      <ImageListItem items={items} description="" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placement-intro-2.webp" title="Training And Placement Cell" />
       <div className="container mx-auto mt-8 rounded-2xl bg-[var(--card-gray)] p-5 md:p-7">
         <Tabs defaultValue="tab1">
           <TabsList className="gap-0">
@@ -874,7 +875,7 @@ export default function Research() {
         descriptionTextClass=""
         swiperClassName="ccrc-video-slider"
       />
-      <QuickLinks title="Entrepreneurship & Startup Support" titleClassName="text-white" links={links2} description="We're here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems." showReadMore={false} />
+      {/* <QuickLinks title="Entrepreneurship & Startup Support" titleClassName="text-white" links={links2} description="We're here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems." showReadMore={false} /> */}
       <MediaCardSlider
         categoryTitle=""
         title="Recruiters Testimonials"

@@ -441,7 +441,7 @@ export default function OurPrograms({
         {/* Title and Subtitle */}
         <div className="text-center mb-5">
           <SectionHeading
-            subtitle={customSubtitle || "Explore Our Programs"}
+            subtitle={customSubtitle || "Admission Procedure"}
             title={customTitle || "Discover a World of Learning Opportunities"}
             subtitleClassName={`text-center ${customPrograms ? "text-white" : "text-[var(--button-red)]"}`}
             titleClassName={`text-center ${textColor}`}

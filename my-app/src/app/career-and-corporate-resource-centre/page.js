@@ -43,7 +43,7 @@ const cards = [
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/placement.png",
     logoSrc: "",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
-    href: "/training-and-placement-cell",
+    href: "/placements",
   },
 ]
 

@@ -10,7 +10,7 @@ function Admissionprocedureexams() {
         customPrograms={[
           {
             id: 1,
-            title: "About Kalsee",
+            title: "About KALSEE",
             specialization:
               "The Kalinga Scholastic Entrance Examination (KALSEE) is a Computer-Based Test for all the streams except BBA and MBA. It is an MCQ-based exam with flexible scheduling options and no negative marking.",
             eligibility: "",
@@ -21,9 +21,9 @@ function Admissionprocedureexams() {
           },
           {
             id: 2,
-            title: "About Kalmat",
+            title: "About KAL-MAT",
             specialization:
-              "The Kalinga Management Aptitude Test (KAL-MAT) is an online entrance exam for BBA and MBA, conducted on specific dates decided by Kalinga University. It includes two steps: An online entrance exam and a personal interview",
+              "The Kalinga Management Aptitude Test (KAL-MAT) is an online entrance exam for BBA and MBA. It includes two steps: An online entrance exam and a personal interview.",
             eligibility: "",
             type: "",
             coursePageUrl: "/kalmat",

@@ -137,8 +137,8 @@ function VideoCardSlider({
 export default function SustainableSlider({
     videos = defaultVideoInterviews,
     subtitle = "",
-    title = "Video",
-    description = "Explore the vibrant life at Kalinga University through our video gallery, showcasing memorable moments from campus events, academic achievements, and sporting excellence.",
+    title = "Campus Moments in Action",
+    description = "Where learning, celebration, and campus life come alive.",
     backgroundColor = "bg-[var(--light-gray)]",
     showPagination = true,
     showNavigation = true

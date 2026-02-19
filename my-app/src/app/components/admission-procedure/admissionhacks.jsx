@@ -6,63 +6,63 @@ function Admissionhacks() {
         {
             title: "Plan Your Finances Wisely",
             description:
-                "Perform well in your board exams and look for universities that provide scholarship options, as it will significantly reduce your financial burden.",
+                "Perform well in your board exams and look for universities that provide scholarship options, as it will lower your financial burden.",
             icon: "",
             imageUrl: "",
         },
         {
             title: "Take Up Career Counselling",
             description:
-                "Select universities that offer career counselling services to help you identify your strengths, weaknesses, and interests, while also clearing all your doubts related to courses and career paths.",
+                "Select universities that have career counsellors, as they will help you identify your strengths, weaknesses, and interests.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/2.svg",
         },
         {
             title: "Select Future-Proof Careers",
             description:
-                "Opt for high-demand careers such as Artificial Intelligence, Machine Learning, Cybersecurity, Designing, Management, Healthcare, Engineering, Law, and other emerging fields.",
+                "Opt for high-demanding careers like AI, ML, Cybersecurity, Designing, Management, Engineering, Law, Pharmacy, and more.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.amazonaws.com/kalinga_backend/files/course/career_icons/businessman_1.svg",
         },
         {
             title: "Prioritise Colleges Offering Placements",
             description:
-                "Choose universities with strong industry connections, reputed recruitment partners, internship opportunities, and regular on-campus placement drives.",
+                "Choose universities that have strong industry connections and provide internship opportunities or conduct campus placement drives.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/4.svg",
         },
         {
             title: "Check University Accreditation",
             description:
-                "Always select accredited universities, as they offer recognised degrees, ensure quality education, focus on holistic development, and follow standard academic practices.",
+                "Choose accredited universities only as they offer recognised degrees, focus on holistic development, and provide quality education.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/5.svg",
         },
         {
             title: "Think Beyond Academics",
             description:
-                "Enroll in universities that promote learning beyond textbooks through hands-on training, research opportunities, workshops, seminars, and industry exposure to make you job-ready.",
+                "Select universities that offer hands-on training programs, facilitate research work, conduct workshops and seminars, and make you job-ready.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/6.svg",
         },
         {
             title: "Look For Student Reviews",
             description:
-                "Before making your final decision, explore student reviews across different platforms or interact with seniors to understand real campus experiences and academic quality.",
+                "Before making your final decision, check out other students' opinions or interact with your seniors to understand academic quality.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/7.svg",
         },
         {
-            title: "Campus Life Matters",
+            title: "Vibrant Campus Life",
             description:
-                "Choose a vibrant campus that hosts events, fests, competitions, and extracurricular activities, as these experiences are equally important alongside academics.",
+                "Take admission into a university that conducts various events, fests, celebrations, and competitions that complement academic learning.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/8.svg",
         },
         {
             title: "Location and Connectivity",
             description:
-                "If the university is far from your home, ensure it offers good transportation facilities and connectivity to make commuting convenient and hassle-free.",
+                "If the university is far from your home, ensure it provides transportation facilities for your safety and convenience.",
             icon: "",
             imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/9.svg",
         },

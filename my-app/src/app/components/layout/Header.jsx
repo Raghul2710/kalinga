@@ -320,14 +320,14 @@ const Header = () => {
     },
     {
       id: 'news',
-      label: 'News & Events',
+      label: 'Events & Activities',
       href: '/news-and-events',
       megaMenu: {
         imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/student-grppic.webp',
         imageAlt: 'News and Events',
         sections: [
           {
-            title: 'News & Events',
+            title: 'Events & Activities',
             links: [
               { label: 'News & Events', href: '/news-and-events' },
               { label: 'Conferences & Events', href: '/conferences-and-events' },

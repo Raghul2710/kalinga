@@ -27,7 +27,7 @@ export default function AcademicFacilities() {
 `}</style>
       <Academicmainintro />
       <Academiccards />
-      {/* <Academicvideo /> */}
+      <Academicvideo />
       <AdmissionCareer />
     </>
   );

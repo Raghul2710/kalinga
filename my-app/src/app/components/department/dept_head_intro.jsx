@@ -242,10 +242,10 @@ function MentorCard({
   );
 }
 
-export default function MentorIntro({ items, ...restProps }) {
+export default function MentorIntro({ items, className, ...restProps }) {
   const entries = Array.isArray(items) && items.length > 0 ? items : [restProps];
   return (
-    <section className="py-16 bg-white md:pt-30">
+    <section className={className || "py-16 bg-white md:pt-30"}>
       <div className="container mx-auto px-2 space-y-12">
         {entries.map((item, idx) => (
           <MentorCard key={idx} {...item} />

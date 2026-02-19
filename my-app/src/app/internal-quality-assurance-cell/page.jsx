@@ -10,11 +10,12 @@ import ContactSection from '../components/cif/contact_section'
 import AdmissionCareer from '../components/general/admission_cta'
 import IQACTabSection from '../components/iqac/iqac_tab_section'
 import QuickLinks from "../components/general/quick_links";
-
+import StudentActivities from "@/app/components/department/student_activities";
+import Gallery from "@/app/components/general/gallery";
 const IQACPage = () => {
   const pathname = usePathname();
 
-  
+
 
   const MentorIntroProps = [
     {
@@ -163,7 +164,7 @@ const IQACPage = () => {
         descriptionClassName="text-[var(--foreground)]"
       />
       {/* <PublicationGrid stats={publicationStats} /> */}
-      <DeptHeadIntro items={MentorIntroProps} />
+      <DeptHeadIntro items={MentorIntroProps} className="pt-10" />
       <IQACTabSection />
       <ISOCertificateSection description="Kalinga University is committed to maintaining the highest standards of quality in all its academic and administrative processes. Our ISO 9001:2015 certification demonstrates our dedication to continuous improvement and excellence in education, ensuring that we meet international quality benchmarks and provide the best possible learning experience to our students" />
       <QuickLinks
@@ -176,6 +177,11 @@ const IQACPage = () => {
         description=""
       />
       <ContactSection mail="iqac@kalingauniversity.ac.in" />
+      <StudentActivities
+        title="News & Events"
+        fallbackToGlobal={true}
+      />
+      <Gallery title="Glimpse" />
       <AdmissionCareer />
     </>
   )
