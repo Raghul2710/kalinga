@@ -199,7 +199,7 @@ const aboutQuickLinks = [
   },
   {
     id: 5,
-    title: "Incubation Center",
+    title: "Incubation Centre",
     description: "Kalinga Incubation Foundation supports students’ innovative business ideas and turns them into successful business ventures.",
   },
   {
@@ -328,9 +328,9 @@ export default function AboutUs() {
         showReadMore={false}
         description={["Kalinga University, established in 2013, stands out as one of the leading private institutions that has consistently ranked among the top 101–150 universities in India under the NIRF Rankings 2025 for the fourth consecutive year. It has also received a NAAC B+ accreditation, continuously shining on the horizons of high-quality education.",
           "Kalinga University has students from across India and 29 + countries. It offers Diploma, Undergraduate, Postgraduate, and Doctoral programs in Arts and Humanities, Commerce and Management, Education, Information Technology, Law, Pharmacy, Science, and Technology. With highly-qualified and experienced faculty members, the University strongly emphasizes research, innovation, and hands-on learning. "
-          , "The University is home to students from over 29+ countries, creating a vibrant, multicultural environment that promotes collaboration and cross-cultural understanding. Through partnerships with global leaders such as IBM, Cisco, Bosch, and Microsoft, Kalinga University integrates academic learning with practical industry experience."
+          , "With a vibrant and multicultural environment, the University promotes collaboration and cross-cultural understanding."
           , "Spread across 50 + acres eco-friendly campus, the University offers an indoor and outdoor sports centre, Moot Court, Incubation Centre, Corporate Training and Consultancy Division, Centres of Excellence, a library with a collection of over 80,000 books and digital content, and 90 + labs, including Central Instrumentation Facility, language labs, and computer labs. Moreover, the University has developed strong connections with leading companies through MoUs to offer corporate training, and internship and placement opportunities to students."
-          , "With an industry-relevant curriculum aligned to the New Education Policy 2020, students are well-prepared to meet modern career demands.  Students get a platform where they dont just study but collaborate, make new connections, learn new languages, and participate in multi-cultural programs. We help students build communication skills, leadership qualities, problem-solving abilities, time management, critical thinking, emotional intelligence, and teamwork, so that you can turn out to be a powerful individual."
+          , "With an industry-relevant curriculum aligned to the New Education Policy 2020, students are well-prepared to meet modern career demands.  Students get a platform where they dont just study but collaborate, make new connections, learn new languages, and participate in multi-cultural programs. We help students build communication skills, leadership qualities, problem-solving abilities, time management, critical thinking, emotional intelligence, and teamwork, so that they can turn out to be a powerful individual."
         ]}
         readMoreLabel="Read More"
         readLessLabel="Read Less"

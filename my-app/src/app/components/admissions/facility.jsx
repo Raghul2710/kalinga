@@ -119,8 +119,8 @@ const defaultFacilities = [
 ];
 
 export default function Facility({
-  title = "Experience A World-Class Infrastructure",
-  subtitle = "Real Stories. Real Success.",
+  title = "Step into a World-Class Infrastructure",
+  subtitle = "An Environment That Empowers Students",
   description = " Step into an award-winning university designed to achieve academic excellence and empower next-gen learners. Our state-of-the-art facilities and encouraging campus environment boost students' academic success and personality development by promoting learning, research & development, and innovation.",
   titleClassName = "text-center",
   subtitleClassName = "text-center !text-[var(--button-red)]",

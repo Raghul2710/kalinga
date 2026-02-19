@@ -124,7 +124,7 @@ export default function IPRCellPage() {
         imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-cell-logo.webp"
         imageAlt="IPR Cell Logo"
         readmore={true}
-        buttonText="Read More"
+        buttonText="Download Research,Consultancy, and IPR Policy"
         buttonLink={IPR_READMORE_PDF}
       />
 

@@ -9,10 +9,15 @@ import FlipbookTrigger from "../components/general/FlipbookTrigger";
 
 
 const downloadsreport = [
+  // {
+  //   id: 0,
+  //   text: "Pharmacy Magazine",
+  //   href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/pharmacy_magazine.pdf",
+  // },
   {
-    id: 0,
-    text: "Pharmacy Magazine",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/pharmacy_magazine.pdf",
+    id: 8,
+    text: "New Admission Form",
+    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/newadmissionform.pdf",
   },
   {
     id: 1,
@@ -48,11 +53,6 @@ const downloadsreport = [
     id: 7,
     text: "Re-Registration Form",
     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/RE-REGISTRATION_FORM.pdf",
-  },
-  {
-    id: 8,
-    text: "New Admission Form",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/newadmissionform.pdf",
   },
   {
     id: 9,
@@ -113,7 +113,7 @@ const downloadsreport = [
 ];
 
 export default function Page() {
-  
+
   return (
     <>
 

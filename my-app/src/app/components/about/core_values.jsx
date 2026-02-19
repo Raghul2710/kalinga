@@ -12,7 +12,7 @@ const coreValues = [
   {
     id: 1,
     title: "Holistic Development",
-    subtitle: "We at Kalinga University are committed to all round development of each and every student. We believe that learning should not remain confined to the classroom and aim at holistic development.",
+    subtitle: "We at Kalinga University are committed to all round development of each and every student. We believe that learning should not remain confined to the classroom but aim at holistic development.",
     icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/values/tree-with-many-leaves.svg"
   },
   {
@@ -24,7 +24,7 @@ const coreValues = [
   {
     id: 3,
     title: "Multicultural Environment",
-    subtitle: "We believe that students learn in multicultural and multinational environment as their train of thought is broadened and they are exposed to different ideologies, practices and culture.",
+    subtitle: "We believe that students should learn in multicultural and multinational environment as their train of thought is broadened and they are exposed to different ideologies, practices and culture.",
     icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/values/tree-new.svg"
   },
   {
