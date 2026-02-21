@@ -397,7 +397,7 @@ export default function CSRPage({
     {
       id: 5,
       title: 'Road Safety',
-      body: 'We will help you address one of the biggest issues in India, i.e, Road Safety. Under this CSR initiative, we will undertake activities like building roads, driving training, investment in R&D in road safety, road accident trauma care, and developing road safety curriculum for school children, inspection of used vehicles, driving testing, and much more.',
+      body: 'We will help you address one of the biggest issues in India, i.e, Road Safety. Under this CSR initiative, we will undertake activities like building roads, driving training, investment in R&D in road safety, road accident trauma care,  developing road safety curriculum for school children, inspection of used vehicles, driving testing, and much more.',
       variant: 'gray',
       image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/transport.svg'
     },
@@ -601,7 +601,7 @@ export default function CSRPage({
       />
       <CsrForm />
       {/* <CenterOfExcellence centres={centres} title="Startup Partners" description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation." /> */}
-      <Gallery title=" CSR Glimpse" paddingClassName="py-20" />
+      <Gallery title=" Glimpses" paddingClassName="py-20" />
       <AdmissionCareer />
 
     </div>

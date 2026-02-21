@@ -625,7 +625,7 @@ export default function DynamicDepartmentPage() {
         departmentId={departmentData?.id}
         fallbackToGlobal={true}
       />
-      <Gallery title="Glimpse" />
+      <Gallery title="Glimpses" />
 
       {faqItems && faqItems.length > 0 && (
         <FAQ

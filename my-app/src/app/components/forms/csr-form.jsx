@@ -14,6 +14,7 @@ export default function CsrForm() {
         semester: '',
         enrollment_number: '',
         details: '',
+        status: 'pending', // Default status for new forms
     })
     const [loading, setLoading] = useState(false)
     const [status, setStatus] = useState({ type: '', message: '' })
@@ -29,10 +30,10 @@ export default function CsrForm() {
         setStatus({ type: '', message: '' })
 
         try {
-            const result = await submitForm('/grievance-forms/', formData)
+            const result = await submitForm('/csr-forms/', formData)
             setStatus({
                 type: 'success',
-                message: `Grievance submitted successfully. Your reference number is: ${result.reference_number}`
+                message: `Form submitted successfully. Reference number: ${result.id || 'N/A'}`
             })
             // Reset form
             setFormData({
@@ -43,6 +44,7 @@ export default function CsrForm() {
                 semester: '',
                 enrollment_number: '',
                 details: '',
+                status: 'pending',
             })
         } catch (err) {
             setStatus({ type: 'error', message: err.message || 'Error submitting form.' })
@@ -53,8 +55,8 @@ export default function CsrForm() {
 
     return (
         <FormWrapper
-            title="Enrollment Form"
-            description=""
+            title="CSR Enrollment Form"
+            description="Please fill out the form below to enroll."
             theme="red"
         >
             <form onSubmit={handleSubmit}>
@@ -66,7 +68,7 @@ export default function CsrForm() {
                     <InputField label="Phone Number" name="phone" value={formData.phone} onChange={handleChange} required />
                     <InputField label="Email Address" name="email" type="email" value={formData.email} onChange={handleChange} required />
                 </FormGrid>
-                <InputField label="Grievance Description" name="details" type="textarea" value={formData.details} onChange={handleChange} required />
+                <InputField label="Details" name="details" type="textarea" value={formData.details} onChange={handleChange} required />
 
                 <div className="flex justify-center mt-10">
                     <GlobalArrowButton variant="white" onClick={handleSubmit}>

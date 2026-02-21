@@ -267,7 +267,7 @@ const Placements = ({ hideMarquee = false, hideMilestones = false, bgColor = "bg
                 <h5
                   className="font-plus-jakarta-sans text-sm sm:text-base md:text-lg leading-tight sm:leading-[25px] text-white text-left w-full px-4 sm:px-6 lg:px-12"
                 >
-                  Our Top Recruiters
+                  {placementInfo?.recruiters_logo_slider_overview || "Our Top Recruiters"}
                 </h5>
 
                 <div className="w-full overflow-hidden relative px-2">

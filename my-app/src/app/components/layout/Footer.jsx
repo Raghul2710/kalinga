@@ -91,7 +91,7 @@ export default function Footer() {
                   </ul>
                   <ul className="text-white/80 space-y-2 sm:space-y-3">
 
-                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/downloads">downloads</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/downloads">Downloads</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/important-links">Important Links</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/media">Media</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/pay-online">Pay Online</a></li>

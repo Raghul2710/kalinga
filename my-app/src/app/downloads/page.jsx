@@ -1,9 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import ResearchSixGridButtons from "../components/research/research_six_grid-buttons";
 import GlobalArrowButton from "../components/general/global-arrow_button";
-import FlipbookTrigger from "../components/general/FlipbookTrigger";
 
 
 
@@ -123,26 +120,21 @@ export default function Page() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {downloadsreport.map((item) => (
-              <FlipbookTrigger
+              <a
                 key={item.id}
-                pdfUrl={item.href}
-                title={item.text}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <a
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
+                <GlobalArrowButton
+                  className="!w-full h-[60px] justify-between"
+                  arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+                  arrowSize={29}
                 >
-                  <GlobalArrowButton
-                    className="!w-full h-[60px] justify-between"
-                    arrowClassName="p-[3px] !px-2 mr-2 !py-1"
-                    arrowSize={29}
-                  >
-                    {item.text}
-                  </GlobalArrowButton>
-                </a>
-              </FlipbookTrigger>
+                  {item.text}
+                </GlobalArrowButton>
+              </a>
             ))}
           </div>
         </div>

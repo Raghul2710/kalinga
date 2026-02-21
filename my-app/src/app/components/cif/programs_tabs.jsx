@@ -227,17 +227,17 @@ export default function ProgramsTabs() {
   };
 
   const programs45Days = [
-    { id: 1, title: "Biotech Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 2, title: "Zoological Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 3, title: "Physics Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 4, title: "Pharmaceutical Techniques", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 5, title: "Applied Business Management", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 6, title: "Botany & Microbiology Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 7, title: "Chemistry Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 8, title: "Artificial Intelligence & Machine Learning (AI & ML)", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 9, title: "Python and R Programming", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 10, title: "E-Vehicle", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
-    { id: 11, title: "Forensic Science", specialization: "Start Date: May | End Date: July", duration: "", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true }
+    { id: 1, title: "Biotech Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "45 Days  ", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 2, title: "Zoological Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 3, title: "Physics Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 4, title: "Pharmaceutical Techniques", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 5, title: "Applied Business Management", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 6, title: "Botany & Microbiology Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 7, title: "Chemistry Tools & Techniques", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 8, title: "Artificial Intelligence & Machine Learning (AI & ML)", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 9, title: "Python and R Programming", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 10, title: "E-Vehicle", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true },
+    { id: 11, title: "Forensic Science", specialization: "Start Date: May | End Date: July", duration: "45 Days", checkEligibilityLink: "#cif-form", applyNowLink: "#cif-form", hideScholarshipLink: true, hideExploreLink: true }
   ];
 
   const programs6Months = [
@@ -277,11 +277,11 @@ export default function ProgramsTabs() {
         <div className="bg-[var(--dark-blue)] rounded-2xl py-16">
           <div className="container mx-auto">
             <div className="text-center mb-8">
-            <SectionHeading
-              title="Internship Programs"
-              subtitle=""
-              titleClassName="text-white"
-            />
+              <SectionHeading
+                title="Internship Programs"
+                subtitle=""
+                titleClassName="text-white"
+              />
             </div>
             <Tabs value={activeTab} onValueChange={setActiveTab}>
               <TabsList className="mb-8 justify-center">
