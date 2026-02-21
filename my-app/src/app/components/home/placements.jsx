@@ -68,7 +68,12 @@ const Placements = ({ hideMarquee = false, hideMilestones = false, bgColor = "bg
       'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement3.webp',
       'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement4.webp',
       'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement5.webp',
-      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement6.webp'
+      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement6.webp',
+      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-1.png',
+      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-2.png',
+      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-3.png',
+      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-4.png',
+      'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-5.png'
     ]
 
   // Get title and description from API or use defaults

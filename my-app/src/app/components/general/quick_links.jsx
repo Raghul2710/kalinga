@@ -30,7 +30,7 @@ const defaultQuickLinks = [
   {
     id: 4,
     icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
-    title: "Book Chapters",
+    title: "Book / Book Chapters",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
@@ -58,10 +58,11 @@ const QuickLinks = ({
   showDescriptionReadMore = true,
   titleClassName = "",
   gridClassName = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10",
-  slider = false,
+  slider,
   iconWrapperClassName,
   children,
 }) => {
+  const isSlider = slider !== undefined ? slider : (links.length === 4 || links.length === 5);
   const [expandedCount, setExpandedCount] = useState(0)
   const swiperRef = useRef(null)
 
@@ -96,7 +97,7 @@ const QuickLinks = ({
         </div>
 
         {/* Content */}
-        {slider ? (
+        {isSlider ? (
           <div className="relative">
             <Swiper
               modules={[Navigation, Autoplay]}

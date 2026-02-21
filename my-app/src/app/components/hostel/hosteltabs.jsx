@@ -106,23 +106,37 @@ function HostelFeeTable({ rows }) {
             { key: "hostelName", label: "Hostel Name", widthPx: 220 },
             { key: "food", label: "Food", widthPx: 140 },
             { key: "occupancy", label: "Occupancy", widthPx: 120 },
-            { key: "waterCooled", label: "Water-Cooled Room (₹)", widthPx: 210 },
+            { key: "waterCooled", label: "Air-Cooled (₹)", widthPx: 210 },
             { key: "acRoom", label: "AC Room (₹)", widthPx: 160 },
         ],
         []
     );
 
-    const data = useMemo(
-        () =>
-            (rows || []).map((r) => ({
-                hostelName: r[0],
-                food: r[1],
-                occupancy: r[2],
-                waterCooled: r[3] !== "NA" ? `₹ ${r[3]}` : "NA",
-                acRoom: r[4] !== "NA" ? `₹ ${r[4]}` : "NA",
-            })),
-        [rows]
-    );
+    const data = useMemo(() => {
+        const result = (rows || []).map((r) => ({
+            hostelName: r[0],
+            food: r[1],
+            occupancy: r[2],
+            waterCooled: r[3] !== "NA" ? `₹ ${r[3]}` : "NA",
+            acRoom: r[4] !== "NA" ? `₹ ${r[4]}` : "NA",
+            rowSpan: {},
+        }));
+
+        // Group rows by hostelName and calculate rowSpan
+        let i = 0;
+        while (i < result.length) {
+            let j = i + 1;
+            while (j < result.length && result[j].hostelName === result[i].hostelName) {
+                result[j].rowSpan.hostelName = 0;
+                j++;
+            }
+            if (j - i > 1) {
+                result[i].rowSpan.hostelName = j - i;
+            }
+            i = j;
+        }
+        return result;
+    }, [rows]);
 
     return (
         <DataTable

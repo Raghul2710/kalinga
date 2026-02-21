@@ -20,10 +20,13 @@ export default function ImageListItem({
   cardTitleClassName = "text-[var(--red)]",
   listItemTextClassName = "",
   hideIcons = false,
+  allowImageOverflow = false,
+  reverseLayout = false,
+  imageClassName = "",
 }) {
   return (
     <section
-      className={`bg-[var(--dark-blue)] rounded-xl py-16 mx-2 ${className}`}
+      className={`bg-[var(--dark-blue)] relative rounded-xl py-12 md:py-16 mx-2 overflow-hidden ${className}`}
     >
       {/* Custom CSS for scrollbar */}
       <style>
@@ -55,18 +58,36 @@ export default function ImageListItem({
           }
         `}
       </style>
-      <div className="container mx-auto ">
-        <div className="grid md:grid-cols-12 grid-cols-6 items-stretch md:gap-12 gap-6 justify-between">
-          <div className="col-span-6 relative min-h-[500px] rounded-xl overflow-hidden">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              className="object-cover rounded-xl"
-            />
+      <div className="container mx-auto">
+        <div className={`grid md:grid-cols-12 grid-cols-1 items-stretch md:gap-12 gap-8 ${reverseLayout ? 'flex-row-reverse' : ''}`}>
+          {/* Image Section */}
+          <div
+            className={`col-span-1 md:col-span-6 lg:col-span-5 relative ${allowImageOverflow
+                ? 'overflow-visible z-20 flex justify-center md:block'
+                : 'rounded-2xl overflow-hidden min-h-[300px] md:min-h-[450px]'
+              } ${reverseLayout ? 'md:order-2' : 'md:order-1'}`}
+          >
+            {allowImageOverflow ? (
+              <div className="relative w-[280px] sm:w-[320px] md:w-full max-w-[500px] h-[350px] md:h-[450px] lg:h-[500px] md:translate-y-0 translate-y-4">
+                <Image
+                  src={imageSrc}
+                  alt={imageAlt}
+                  fill
+                  className={`object-cover rounded-2xl border-8 border-white shadow-2xl md:-translate-x-6 lg:-translate-x-12 scale-105 md:scale-110 ${imageClassName}`}
+                />
+              </div>
+            ) : (
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className={`object-cover rounded-xl ${imageClassName}`}
+              />
+            )}
           </div>
 
-          <div className="col-span-6 md:gap-5 gap-2 items-center items-start min-h-[400px] md:min-h-[500px] flex flex-col justify-center">
+          <div className={`col-span-1 md:col-span-6 lg:col-span-7 md:gap-5 gap-4 items-start min-h-[300px] md:min-h-[450px] flex flex-col justify-center ${reverseLayout ? 'md:order-1' : 'md:order-2'
+            }`}>
             {/* Heading not scrollable */}
             <SectionHeading
               title={title}

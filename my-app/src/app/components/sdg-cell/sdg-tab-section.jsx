@@ -2,17 +2,16 @@
 
 import { useState } from "react";
 import FlipbookTrigger from "../general/FlipbookTrigger";
+import Image from "next/image";
 
 const SDG_TABS = [
-    { id: "measures", label: "Energy Conservation Measures" },
+    { id: "measures", label: "Our Initiatives" },
     { id: "waste", label: "Waste Management" },
     { id: "water", label: "Water Management" },
     { id: "environmental", label: "Environmental Sustainability" },
     { id: "initiatives", label: "Green Initiatives" },
     { id: "audits", label: "Quality Audits" },
-    { id: "reports", label: "Audit Reports" },
     { id: "equity", label: "Gender Equity" },
-    { id: "programs", label: "Gender Equity Programs Held At KU" },
     { id: "disabled", label: "Disabled-Friendly Environment" },
     { id: "obligations", label: "Constitutional Obligations" },
     { id: "celebrations", label: "Important Day Celebrations" },
@@ -22,7 +21,7 @@ const SDG_TABS = [
     { id: "csr", label: "CSR at Kalinga University" },
     { id: "bp1", label: "Best Practice - 1" },
     { id: "bp2", label: "Best Practice - 2" },
-    { id: "contributions", label: "Our Contributions in Sustainable and Social Development" },
+    // { id: "contributions", label: "Our Contributions in Sustainable and Social Development" },
 ];
 
 const ENERGY_CONSERVATION_MEASURES = [
@@ -494,60 +493,64 @@ const CSR_INITIATIVES = [
 const BP1_TITLE =
     "Harmony in Action: Implementing Sustainable Development Goals for a Better World";
 
-const BP1_INTRO =
-    "Kalinga University, Naya Raipur, is committed to community development by introducing a skill development centre for rural women. The University has adopted five nearby villages and continuously works towards their development through skill development and capacity building initiatives.";
+const BP1_INTRO = (
+    <div className="space-y-4">
+        <p>The SDG Cell at Kalinga University was established on 12.04.2022 to promote, implement, and monitor initiatives related to the SDGs. The cell serves as a dynamic hub dedicated to advancing the principles and objectives outlined in the United Nations 2030 Agenda for Sustainable Development. This specialised unit operates at the intersection of education, research, and community engagement, embodying the University’s commitment to providing a more sustainable and equitable world.</p>
+        <p>One of the primary functions of this cell is to cultivate awareness and advocacy for the SDGs within the university community. Through targeted campaigns, educational programs, and outreach initiatives, the cell endeavours to instil a deep understanding of the global challenges addressed by the SDGs and the imperative for collective action.</p>
+        <p>Integral to its mission is the integration of sustainable development principles into the university’s academic landscape. The SDGs cell collaborates with faculty to infuse relevant content into diverse courses, ensuring that students from various disciplines are equipped with the knowledge and skills needed to contribute meaningfully to sustainable development.</p>
+    </div>
+);
 
-const BP1_SDG_LIST = [
-    "No Poverty",
-    "Zero Hunger",
-    "Good Health and Well-being",
-    "Quality Education",
-    "Gender Equality",
-    "Clean Water and Sanitation",
-    "Affordable and Clean Energy",
-    "Decent Work and Economic Growth",
-    "Industry, Innovation and Infrastructure",
-    "Reduced Inequality",
-    "Sustainable Cities and Communities",
-    "Responsible Consumption and Production",
-    "Climate Action",
-    "Life Below Water",
-    "Life on Land",
-    "Peace, Justice and Strong Institutions",
-    "Partnership for the Goals",
+const BP1_SDG_GOALS = [
+    { title: "No Poverty", icon: "Community+Services.svg" },
+    { title: "Zero Hunger", icon: "Holistic+Development.svg" },
+    { title: "Good Health and Well-being", icon: "Emotional+Well-Being.svg" },
+    { title: "Quality Education", icon: "Career+Counseling.svg" },
+    { title: "Gender Equality", icon: "Mental+Health+Support.svg" },
+    { title: "Clean Water and Sanitation", icon: "facility-management.svg" },
+    { title: "Affordable and Clean Energy", icon: "Extensive+Research+Facilities.svg" },
+    { title: "Decent Work and Economic Growth", icon: "Networking+Opportunities.svg" },
+    { title: "Industry, Innovation and Infrastructure", icon: "Industrial+Visits.svg" },
+    { title: "Reduced Inequality", icon: "Global.svg" },
+    { title: "Sustainable Cities and Communities", icon: "campus+life.svg" },
+    { title: "Responsible Consumption and Production", icon: "Educational+Tours.svg" },
+    { title: "Climate Action", icon: "Flagship+Events.svg" },
+    { title: "Life Below Water", icon: "international.svg" },
+    { title: "Life on Land", icon: "Cultural+Celebrations.svg" },
+    { title: "Peace, Justice and Strong Institutions", icon: "Mentor-Mentee+System.svg" },
+    { title: "Partnership for the Goals", icon: "Wide+Range+of+Programs.svg" },
 ];
 
 const BP1_OBJECTIVES = [
-    "To provide a holistic sustainability strategy",
-    "To introduce programs that promote good health and well-being",
-    "To provide quality education and extend learning to society",
-    "To offer courses promoting gender equity",
+    "To provide a Holistic Sustainability Strategy",
+    "To introduce programs to promote good health and well-being",
+    "To provide quality education among students and also spread education to society",
+    "To offer courses to educate on gender equity",
     "To generate and utilise green energy",
     "To incorporate a culture of innovation",
     "To spread awareness on climate change and sustainability",
-    "To promote peace, justice, and legal awareness",
-    "To establish collaborations with industries and academia to meet SDGs",
+    "To promote peace, justice, and educate people about various laws",
+    "To establish collaborations with industries and academia in meeting the SDGs",
 ];
 
 const BP1_PRACTICE = [
-    "Holistic Sustainability Strategy aligned with environmental, social, and economic SDGs.",
-    "Campus-wide eco-friendly infrastructure including energy-efficient buildings, solar panels, biogas plants, and sustainable landscaping.",
-    "Promotion of sustainable transportation such as cycling infrastructure and electric vehicles.",
-    "Interdisciplinary sustainability curriculum across academic programs.",
-    "Research and collaborations addressing at least one SDG through industry and government partnerships.",
-    "Community engagement through initiatives like IEEE, Unnat Bharat Abhiyan, awareness campaigns, and workshops.",
-    "Ethical and sustainable procurement prioritising eco-friendly and fair-trade products.",
-    "Health and well-being programs including counselling, stress management, and wellness initiatives.",
-    "Organisation of sustainable conferences and summits focusing on climate change, peace, justice, and sustainability.",
+    "The university adopts a comprehensive sustainability strategy that aligns with and contributes to various SDGs, including those related to environmental protection, social equity, and economic development.",
+    "The University has implemented energy-efficient buildings, green roofs, and sustainable landscaping practices. It has also integrated renewable energy sources, such as solar panels, to reduce the carbon footprint of campus operations. Besides, the biogas plant on the campus helps the effective utilisation of food waste. The green and clean campus provides fresh air to the staff and students.",
+    "Kalinga University promotes sustainable transportation options, including cycling infrastructure, electric vehicles, etc. Such initiatives are taken to reduce the carbon emissions associated with commuting and campus-related travel.",
+    "Integrated sustainability principles into the curriculum across various academic disciplines. Introduced courses focused on sustainability studies, environmental science, and social responsibility.",
+    "The University has taken initiatives to address SDGs through various projects in line with at least one of the 17 SDGs. Faculty members are encouraged to prepare research projects which will find solutions to any of the SDGs. Collaboration with industry and government agencies is involved in preparing some of the research projects.",
+    "Implemented various community-based projects that directly contribute to SDGs, addressing local challenges. IEEE Kalinga University Student Branch, Unnat Bharat Abhiyan, etc., are some of the bodies that are working towards this. Kalinga University regularly hosts awareness campaigns, workshops, and events to involve the broader community in sustainability initiatives.",
+    "The University has adopted an ethical and sustainable procurement system for campus supplies and services. The University gives priority to environmentally friendly and fair trade products when purchasing any products.",
+    "The University has a provision of mental health resources and counselling services for students and staff. Programs related to stress management, healthy heart, etc., are regularly conducted for the well-being of staff and students.",
+    "The University is organising various conferences, symposiums, and summits to address global needs, especially in climate change and sustainability, peace, justice and strong institutions, etc."
 ];
 
 const BP1_ECONOMIC_EMPOWERMENT = [
-    "Funding support for Smart Dustbin projects distributed to nearby village schools.",
-    "Seed funding for development of a pond-cleaning robot to improve water quality.",
-    "Development of an e-loader made from waste materials for internal campus transport.",
-    "Support from government bodies like NABARD for conferences addressing climate change.",
-    "International Leadership Summit organised by IEEE KU Student Branch on sustainable development.",
-    "Establishment of an SDGs Cell to promote, implement, and monitor SDG initiatives across education, research, and community engagement.",
+    "The University received funding from various agencies, like IEEE, for addressing global needs in the form of Smart Dustbins. Intervention of technology was a part of the project where students and faculty members extended their efforts. These were distributed to schools in nearby villages to maintain a green campus.",
+    "The University provided seed funding to work on a pond cleaning robot. The robot is used for preventing the accumulation of organic matter, which could otherwise lead to water quality issues.",
+    "Faculty members and students developed a model of e-loader from waste materials in and around the campus. The rickshaw is used for the transportation of lightweight materials inside the university campus. For executing this project, the University has provided seed funding.",
+    "Various government bodies, like NABARD, extended their support with funds in organising a conference to address climate change and sustainability issues. Participants published papers with solutions to various challenges related to climate change nowadays.",
+    "IEEE Kalinga University Student Branch organised an International Leadership Summit where leaders like Innovators, Scientists, and Entrepreneurs working towards sustainable development presented their thoughts to bring a better future.",
 ];
 
 const BP1_IMAGES = [
@@ -785,11 +788,25 @@ export default function SdgTabSection() {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
+        .custom-scrollbar::-webkit-scrollbar {
+          width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: var(--button-red);
+          border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #a31d1d;
+        }
       `}</style>
 
-            <div className="flex flex-col lg:flex-row gap-4 bg-[var(--dark-blue)] py-16 md:px-10 px-4 rounded-xl">
+            <div className="flex flex-col lg:flex-row gap-4 bg-[var(--dark-blue)] py-16 md:px-10 px-4 rounded-xl lg:h-[900px]">
                 {/* Left Tabs */}
-                <div className="w-full lg:w-80 flex-shrink-0">
+                <div className="w-full lg:w-80 flex-shrink-0 lg:h-full lg:overflow-y-auto scrollbar-hide">
                     <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible scrollbar-hide">
                         {SDG_TABS.map((tab) => {
                             const isActive = activeTab === tab.id;
@@ -815,8 +832,8 @@ export default function SdgTabSection() {
                 </div>
 
                 {/* Right Content */}
-                <div className="flex-1 w-full">
-                    <div className="rounded-[16px] bg-white p-4 md:p-6 shadow-sm h-full">
+                <div className="flex-1 w-full lg:h-full flex flex-col">
+                    <div className="rounded-[16px] bg-white p-4 md:p-6 shadow-sm flex-1 overflow-y-auto custom-scrollbar">
                         <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center">
                             {SDG_TABS.find((t) => t.id === activeTab)?.label}
                         </h2>
@@ -919,148 +936,145 @@ export default function SdgTabSection() {
 
                         {/* Quality Audits */}
                         {activeTab === "audits" && (
-                            <div className="space-y-6">
+                            <div className="space-y-8">
                                 <p className="text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base leading-relaxed">
                                     {QUALITY_AUDITS_CONTENT}
                                 </p>
-                            </div>
-                        )}
 
-                        {/* Audit Reports */}
-                        {activeTab === "reports" && (
-                            <div className="space-y-4">
-                                {AUDIT_REPORTS.length > 0 ? (
-                                    <div className="space-y-3">
-                                        {AUDIT_REPORTS.map((report, idx) => (
-                                            <FlipbookTrigger key={idx} pdfUrl={report.url} title={report.title}>
-                                                <a
-                                                    href={report.url || "#"}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className={`block px-4 py-3 rounded-lg border font-plus-jakarta-sans text-sm md:text-base transition
+                                <div className="space-y-4">
+                                    <h3 className="font-plus-jakarta-sans text-lg md:text-xl font-semibold text-[var(--foreground)]">
+                                        Audit Reports
+                                    </h3>
+                                    {AUDIT_REPORTS.length > 0 ? (
+                                        <div className="space-y-3">
+                                            {AUDIT_REPORTS.map((report, idx) => (
+                                                <FlipbookTrigger key={idx} pdfUrl={report.url} title={report.title}>
+                                                    <a
+                                                        href={report.url || "#"}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className={`block px-4 py-3 rounded-lg border font-plus-jakarta-sans text-sm md:text-base transition
                 ${report.url?.trim()
-                                                            ? "bg-gray-50 hover:bg-gray-100 border-gray-200 text-[var(--foreground)]"
-                                                            : "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
-                                                        }`}
-                                                >
-                                                    {report.title}
-                                                </a>
-                                            </FlipbookTrigger>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    <p className="text-center text-[var(--foreground)]/70 font-plus-jakarta-sans text-sm md:text-base">
-                                        No audit reports added yet.
-                                    </p>
-                                )}
+                                                                ? "bg-gray-50 hover:bg-gray-100 border-gray-200 text-[var(--foreground)]"
+                                                                : "bg-gray-100 border-gray-200 text-gray-400 cursor-not-allowed pointer-events-none"
+                                                            }`}
+                                                    >
+                                                        {report.title}
+                                                    </a>
+                                                </FlipbookTrigger>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <p className="text-center text-[var(--foreground)]/70 font-plus-jakarta-sans text-sm md:text-base">
+                                            No audit reports added yet.
+                                        </p>
+                                    )}
+                                </div>
                             </div>
                         )}
 
                         {/* Gender Equity */}
                         {activeTab === "equity" && (
-                            <div className="space-y-6">
+                            <div className="space-y-8">
                                 <p className="text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base leading-relaxed">
                                     {GENDER_EQUITY_CONTENT}
                                 </p>
 
-                                {/* ✅ 7 Images */}
+                                {/* Images */}
                                 <ImageGrid images={GENDER_EQUITY_IMAGES} />
-                            </div>
-                        )}
 
+                                <div className="space-y-6">
+                                    <h3 className="font-plus-jakarta-sans text-lg md:text-xl font-semibold text-[var(--foreground)]">
+                                        Gender Equity Programs Held At KU
+                                    </h3>
+                                    {/* Accordion */}
+                                    <div className="space-y-2 text-left">
+                                        {getGenderYears().map((year) => {
+                                            const isExpanded = expandedYears[year] || false;
+                                            const rows = GENDER_EQUITY_PROGRAMS[year] || [];
 
-                        {/* Gender Equity Programs at KU */}
-                        {activeTab === "programs" && (
-
-                            <div className="flex-1">
-
-                                {/* Accordion */}
-                                <div className="space-y-2 text-left">
-                                    {getGenderYears().map((year) => {
-                                        const isExpanded = expandedYears[year] || false;
-                                        const rows = GENDER_EQUITY_PROGRAMS[year] || [];
-
-                                        return (
-                                            <div key={year} className="border-b border-[var(--button-red)] pb-2 last:border-b-0">
-                                                <button
-                                                    onClick={() => toggleYear(year)}
-                                                    className="w-full flex items-center gap-2 py-1 hover:opacity-80 transition-opacity justify-between pr-3"
-                                                    aria-label={`Toggle ${year}`}
-                                                >
-                                                    <h3 className="font-plus-jakarta-sans text-sm md:text-base text-[var(--foreground)]">
-                                                        {year}
-                                                    </h3>
-                                                    <div
-                                                        className={`text-[var(--background)] bg-[var(--button-red)] rounded-sm p-3 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""
-                                                            }`}
+                                            return (
+                                                <div key={year} className="border-b border-[var(--button-red)] pb-2 last:border-b-0">
+                                                    <button
+                                                        onClick={() => toggleYear(year)}
+                                                        className="w-full flex items-center gap-2 py-1 hover:opacity-80 transition-opacity justify-between pr-3"
+                                                        aria-label={`Toggle ${year}`}
                                                     >
-                                                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                        </svg>
-                                                    </div>
-                                                </button>
+                                                        <h3 className="font-plus-jakarta-sans text-sm md:text-base text-[var(--foreground)]">
+                                                            {year}
+                                                        </h3>
+                                                        <div
+                                                            className={`text-[var(--background)] bg-[var(--button-red)] rounded-sm p-3 transition-transform duration-200 ${isExpanded ? "rotate-180" : ""
+                                                                }`}
+                                                        >
+                                                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                            </svg>
+                                                        </div>
+                                                    </button>
 
-                                                {isExpanded && rows.length > 0 && (
-                                                    <div className="mt-2 overflow-x-auto overflow-y-auto max-h-[350px] border border-gray-200 rounded-lg">
-                                                        <table className="w-full border-collapse min-w-[900px]">
-                                                            <thead className="sticky top-0 z-10">
-                                                                <tr className="bg-[var(--dark-blue)] text-white">
-                                                                    <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                                        S.No.
-                                                                    </th>
-                                                                    <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                                        Event
-                                                                    </th>
-                                                                    <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                                        Category
-                                                                    </th>
-                                                                    <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                                        Date
-                                                                    </th>
-                                                                    <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
-                                                                        Department / Managed by
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-
-                                                            <tbody>
-                                                                {rows.map((r) => (
-                                                                    <tr key={`${year}-${r.sno}`} className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
-                                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{r.sno}</td>
-                                                                        <td className="px-4 py-3 text-[var(--foreground)]">{r.event}</td>
-                                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{r.category}</td>
-                                                                        <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{r.date}</td>
-                                                                        <td className="px-4 py-3 text-[var(--foreground)]">{r.department}</td>
+                                                    {isExpanded && rows.length > 0 && (
+                                                        <div className="mt-2 overflow-x-auto overflow-y-auto max-h-[350px] border border-gray-200 rounded-lg">
+                                                            <table className="w-full border-collapse min-w-[900px]">
+                                                                <thead className="sticky top-0 z-10">
+                                                                    <tr className="bg-[var(--dark-blue)] text-white">
+                                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                                            S.No.
+                                                                        </th>
+                                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                                            Event
+                                                                        </th>
+                                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                                            Category
+                                                                        </th>
+                                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                                            Date
+                                                                        </th>
+                                                                        <th className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap">
+                                                                            Department / Managed by
+                                                                        </th>
                                                                     </tr>
-                                                                ))}
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                )}
+                                                                </thead>
 
-                                                {isExpanded && rows.length === 0 && (
-                                                    <p className="px-4 py-2 text-[var(--foreground)]/60 text-sm">
-                                                        No records available for this year.
-                                                    </p>
-                                                )}
-                                            </div>
-                                        );
-                                    })}
-                                </div>
+                                                                <tbody>
+                                                                    {rows.map((r) => (
+                                                                        <tr key={`${year}-${r.sno}`} className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white">
+                                                                            <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{r.sno}</td>
+                                                                            <td className="px-4 py-3 text-[var(--foreground)]">{r.event}</td>
+                                                                            <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{r.category}</td>
+                                                                            <td className="px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{r.date}</td>
+                                                                            <td className="px-4 py-3 text-[var(--foreground)]">{r.department}</td>
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    )}
 
-                                {/* PDF */}
-                                <div className="flex justify-center mb-6">
-                                    <FlipbookTrigger pdfUrl={GENDER_SENSITISATION_PDF.url} title={GENDER_SENSITISATION_PDF.title}>
-                                        <a
-                                            href={GENDER_SENSITISATION_PDF.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[var(--button-red)] text-white font-plus-jakarta-sans text-sm md:text-base font-semibold hover:opacity-90 transition"
-                                        >
-                                            View Gender Sensitisation Action Plan
-                                            <span aria-hidden="true">↗</span>
-                                        </a>
-                                    </FlipbookTrigger>
+                                                    {isExpanded && rows.length === 0 && (
+                                                        <p className="px-4 py-2 text-[var(--foreground)]/60 text-sm">
+                                                            No records available for this year.
+                                                        </p>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+
+                                    {/* PDF */}
+                                    <div className="flex justify-center mt-6">
+                                        <FlipbookTrigger pdfUrl={GENDER_SENSITISATION_PDF.url} title={GENDER_SENSITISATION_PDF.title}>
+                                            <a
+                                                href={GENDER_SENSITISATION_PDF.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[var(--button-red)] text-white font-plus-jakarta-sans text-sm md:text-base font-semibold hover:opacity-90 transition"
+                                            >
+                                                View Gender Sensitisation Action Plan
+                                                <span aria-hidden="true">↗</span>
+                                            </a>
+                                        </FlipbookTrigger>
+                                    </div>
                                 </div>
                             </div>
                         )}
@@ -1107,8 +1121,11 @@ export default function SdgTabSection() {
                         {/* Constitutional Obligations */}
                         {activeTab === "obligations" && (
                             <div className="space-y-6">
+                                <p className="text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base leading-relaxed">
+                                    {CONSTITUTIONAL_OBLIGATIONS_POINTS[0]}
+                                </p>
                                 <ul className="list-disc pl-6 space-y-3 text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base leading-relaxed">
-                                    {CONSTITUTIONAL_OBLIGATIONS_POINTS.map((point, idx) => (
+                                    {CONSTITUTIONAL_OBLIGATIONS_POINTS.slice(1).map((point, idx) => (
                                         <li key={idx}>{point}</li>
                                     ))}
                                 </ul>
@@ -1405,13 +1422,26 @@ export default function SdgTabSection() {
                                 {/* SDGs Covered */}
                                 <div>
                                     <h3 className="font-plus-jakarta-sans text-lg md:text-xl font-semibold mb-3">
-                                        Sustainable Development Goals Addressed
+                                        17 Sustainable Development Goals
                                     </h3>
-                                    <ol className="list-decimal pl-6 grid grid-cols-1 sm:grid-cols-2 gap-y-2 text-sm md:text-base">
-                                        {BP1_SDG_LIST.map((item, idx) => (
-                                            <li key={idx}>{item}</li>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
+                                        {BP1_SDG_GOALS.map((item, index) => (
+                                            <div key={index} className="bg-[var(--card-skin)] p-6 rounded-xl flex flex-col items-center text-center gap-4 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
+                                                <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                                    <Image
+                                                        src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${item.icon}`}
+                                                        alt={item.title}
+                                                        width={40}
+                                                        height={40}
+                                                        className="w-10 h-10 object-contain"
+                                                    />
+                                                </div>
+                                                <span className="font-semibold text-[var(--foreground)] text-lg leading-tight">
+                                                    {item.title}
+                                                </span>
+                                            </div>
                                         ))}
-                                    </ol>
+                                    </div>
                                 </div>
 
                                 {/* Objectives */}

@@ -89,7 +89,7 @@ export const pageDataMap: Record<string, PageData> = {
     },
     "/book-chapters": {
         slug: "/book-chapters",
-        title: "Book Chapters",
+        title: "Book / Book Chapters",
         banner: "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alumini.webp",
     },
     "/book-publications": {
@@ -467,7 +467,7 @@ export const pageDataMap: Record<string, PageData> = {
     },
     "/sdg-cell": {
         slug: "/sdg-cell",
-        title: "SDG Cell",
+        title: "Sustainable Initiatives",
         banner: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-front-banner02.webp",
     },
     "/sports-and-wellness-centre": {

@@ -133,13 +133,29 @@ const APITable = (props) => {
             : undefined,
     })).filter(col => !excludeColumns.includes(col.label));
 
-    const data = tableData.rows.map((row) => {
-        const rowObj = {};
-        row.forEach((cell, index) => {
-            rowObj[`col_${index}`] = cell;
+    const data = tableData.rows
+        .filter(row => row.some(cell => cell !== null && cell !== undefined && String(cell).trim() !== ""))
+        .map((row) => {
+            const rowObj = {};
+            row.forEach((cell, index) => {
+                let value = cell;
+
+                // Format numeric values like "1.0" or 1.0 to "1"
+                if (cell !== null && cell !== undefined) {
+                    const num = parseFloat(cell);
+                    if (!isNaN(num) && Number.isInteger(num)) {
+                        const cellStr = String(cell).trim();
+                        // Only convert if it matches the pattern of a number (possibly with .0)
+                        if (/^\d+(\.0+)?$/.test(cellStr)) {
+                            value = num.toString();
+                        }
+                    }
+                }
+
+                rowObj[`col_${index}`] = value;
+            });
+            return rowObj;
         });
-        return rowObj;
-    });
 
     // Determine the display title
     const displayTitle = title || (showTableTitle && tableData.title ? tableData.title : '');

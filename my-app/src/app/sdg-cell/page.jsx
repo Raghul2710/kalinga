@@ -1,264 +1,55 @@
 "use client";
 
 import React from "react";
-import FAQ from "../components/general/faq";
 import ImageContent from "../components/ccrc/imagecontent";
 import MainIntro from "../components/about/main_intro";
 import SdgTabSection from "../components/sdg-cell/sdg-tab-section";
-import Image from "next/image";
-import SpecializationCard from "../components/course/specialization";
-import FacilitySlider from "../components/course/facility-slider";
+import FAQ from "../components/general/faq";
+// import SpecializationCard from "../components/department/specialization-card";
 
 // FAQ items for different sections
 const faqItems = [
   {
-    id: 18,
-    title: "SDG Cell Establishment and Mission - Year of Establishment: 12/04/2022",
-    description: (
-      <div className="space-y-4">
-        <p>The University has established a Sustainable Development Goals (SDGs) cell to promote, implement, and monitor initiatives related to the SDGs. The cell serves as a dynamic hub dedicated to advancing the principles and objectives outlined in the United Nations 2030 Agenda for Sustainable Development. This specialised unit operates at the intersection of education, research, and community engagement, embodying the Universitys commitment to providing a more sustainable and equitable world.</p>
-        <p>One of the primary functions of this cell is to cultivate awareness and advocacy for the SDGs within the university community. Through targeted campaigns, educational programs, and outreach initiatives, the cell endeavours to instil a deep understanding of the global challenges addressed by the SDGs and the imperative for collective action.</p>
-        <p>Integral to its mission is the integration of sustainable development principles into the universitys academic landscape. The SDGs cell collaborates with faculty to infuse relevant content into diverse courses, ensuring that students from various disciplines are equipped with the knowledge and skills needed to contribute meaningfully to sustainable development.</p>
-      </div>
-    ),
-    buttons: [],
-  },
-  {
     id: 1,
-    title: "17 Sustainable Development Goals",
-    description: (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
-        {[
-          { title: "No Poverty", icon: "Community+Services.svg" },
-          { title: "Zero Hunger", icon: "Holistic+Development.svg" },
-          { title: "Good Health and Well-being", icon: "Emotional+Well-Being.svg" },
-          { title: "Quality Education", icon: "Career+Counseling.svg" },
-          { title: "Gender Equality", icon: "Mental+Health+Support.svg" },
-          { title: "Clean Water and Sanitation", icon: "facility-management.svg" },
-          { title: "Affordable and Clean Energy", icon: "Extensive+Research+Facilities.svg" },
-          { title: "Decent Work and Economic Growth", icon: "Networking+Opportunities.svg" },
-          { title: "Industry, Innovation and Infrastructure", icon: "Industrial+Visits.svg" },
-          { title: "Reduced Inequality", icon: "Global.svg" },
-          { title: "Sustainable Cities and Communities", icon: "campus+life.svg" },
-          { title: "Responsible Consumption and Production", icon: "Educational+Tours.svg" },
-          { title: "Climate Action", icon: "Flagship+Events.svg" },
-          { title: "Life Below Water", icon: "international.svg" },
-          { title: "Life on Land", icon: "Cultural+Celebrations.svg" },
-          { title: "Peace, Justice and Strong Institutions", icon: "Mentor-Mentee+System.svg" },
-          { title: "Partnership for the Goals", icon: "Wide+Range+of+Programs.svg" },
-        ].map((item, index) => (
-          <div key={index} className="bg-[var(--card-skin)] p-6 rounded-xl flex flex-col items-center text-center gap-4 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
-            <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-              <Image
-                src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${item.icon}`}
-                alt={item.title}
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
-              />
-            </div>
-            <span className="font-semibold text-[var(--foreground)] text-lg leading-tight">
-              {item.title}
-            </span>
-          </div>
-        ))}
-      </div>
-    ),
-    buttons: [],
-  },
-  {
-    id: 3,
-    title: "Objectives of the Practice",
-    description: (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
-        {[
-          "To provide a Holistic Sustainability Strategy",
-          "To introduce programs to promote good health and well-being",
-          "To provide quality education among students and also spread education to society",
-          "To offer courses to educate on gender equity",
-          "To generate and utilise green energy",
-          "To incorporate a culture of innovation",
-          "To spread awareness on climate change and sustainability",
-          "To promote peace, justice, and educate people about various laws",
-          "To establish collaborations with industries and academia in meeting the SDGs",
-        ].map((item, index) => (
-          <div key={index} className="bg-[var(--card-skin)] p-6 rounded-xl flex flex-col items-center text-center gap-4 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
-            <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-              <Image
-                src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${index === 0 ? 'Holistic+Development.svg' : index === 1 ? 'Emotional+Well-Being.svg' : index === 2 ? 'Career+Counseling.svg' : index === 3 ? 'Mental+Health+Support.svg' : index === 4 ? 'Extensive+Research+Facilities.svg' : index === 5 ? 'Networking+Opportunities.svg' : index === 6 ? 'university.svg' : index === 7 ? 'Community+Services.svg' : 'Global.svg'}`}
-                alt={item}
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
-              />
-            </div>
-            <span className="font-semibold text-[var(--foreground)] text-lg leading-tight">
-              {item}
-            </span>
-          </div>
-        ))}
-      </div>
-    ),
-    buttons: [],
-  },
-  {
-    id: 4,
-    title: "The Practice - Holistic Sustainability Strategy",
-    description: "The university adopts a comprehensive sustainability strategy that aligns with and contributes to various SDGs, including those related to environmental protection, social equity, and economic development.",
-    buttons: [],
-  },
-  {
-    id: 5,
-    title: "The Practice - Campus-wide Eco-Friendly Infrastructure",
-    description: "The University has implemented energy-efficient buildings, green roofs, and sustainable landscaping practices. It has also integrated renewable energy sources, such as solar panels, to reduce the carbon footprint of campus operations. Besides, the biogas plant on the campus helps the effective utilisation of food waste. The green and clean campus provides fresh air to the staff and students.",
-    buttons: [],
-  },
-  {
-    id: 6,
-    title: "The Practice - Sustainable Transportation",
-    description: "Kalinga University promotes sustainable transportation options, including cycling infrastructure, electric vehicles, etc. Such initiatives are taken to reduce the carbon emissions associated with commuting and campus-related travel.",
-    buttons: [],
-  },
-  {
-    id: 7,
-    title: "The Practice - Interdisciplinary Sustainability Curriculum",
-    description: "Integrated sustainability principles into the curriculum across various academic disciplines. Introduced courses focused on sustainability studies, environmental science, and social responsibility.",
-    buttons: [],
-  },
-  {
-    id: 8,
-    title: "The Practice - Research and Collaboration for Sustainable Solutions",
-    description: "The University has taken initiatives to address SDGs through various projects in line with at least one of the 17 SDGs. Faculty members are encouraged to prepare research projects which will find solutions to any of the SDGs. Collaboration with industry and government agencies is involved in preparing some of the research projects.",
-    buttons: [],
-  },
-  {
-    id: 9,
-    title: "The Practice - Community Engagement and Outreach",
-    description: "Implemented various community-based projects that directly contribute to SDGs, addressing local challenges. IEEE Kalinga University Student Branch, Unnat Bharat Abhiyan, etc., are some of the bodies that are working towards this. Kalinga University regularly hosts awareness campaigns, workshops, and events to involve the broader community in sustainability initiatives.",
-    buttons: [],
-  },
-  {
-    id: 10,
-    title: "The Practice - Sustainable Procurement Practices",
-    description: "The University has adopted an ethical and sustainable procurement system for campus supplies and services. The University gives priority to environmentally friendly and fair trade products when purchasing any products.",
-    buttons: [],
-  },
-  {
-    id: 11,
-    title: "The Practice - Health and Well-being Programs",
-    description: "The University has a provision of mental health resources and counselling services for students and staff. Programs related to stress management, healthy heart, etc., are regularly conducted for the well-being of staff and students.",
-    buttons: [],
-  },
-  {
-    id: 12,
-    title: "The Practice - Sustainable Events and Conferences",
-    description: "The University is organising various conferences, symposiums, and summits to address global needs, especially in climate change and sustainability, peace, justice and strong institutions, etc.",
-    buttons: [],
-  },
-  {
-    id: 13,
-    title: "Economic Empowerment - Smart Dustbins Project",
-    description: "The University received funding from various agencies, like IEEE, for addressing global needs in the form of Smart Dustbins. Intervention of technology was a part of the project where students and faculty members extended their efforts. These were distributed to schools in nearby villages to maintain a green campus.",
-    buttons: [],
-  },
-  {
-    id: 14,
-    title: "Economic Empowerment - Pond Cleaning Robot",
-    description: "The University provided seed funding to work on a pond cleaning robot. The robot is used for preventing the accumulation of organic matter, which could otherwise lead to water quality issues.",
-    buttons: [],
-  },
-  {
-    id: 15,
-    title: "Economic Empowerment - E-Loader from Waste Materials",
-    description: "Faculty members and students developed a model of e-loader from waste materials in and around the campus. The rickshaw is used for the transportation of lightweight materials inside the university campus. For executing this project, the University has provided seed funding.",
-    buttons: [],
-  },
-  {
-    id: 16,
-    title: "Economic Empowerment - Climate Change Conference",
-    description: "Various government bodies, like NABARD, extended their support with funds in organising a conference to address climate change and sustainability issues. Participants published papers with solutions to various challenges related to climate change nowadays.",
-    buttons: [],
-  },
-  {
-    id: 17,
-    title: "Economic Empowerment - International Leadership Summit",
-    description: "IEEE Kalinga University Student Branch organised an International Leadership Summit where leaders like Innovators, Scientists, and Entrepreneurs working towards sustainable development presented their thoughts to bring a better future.",
-    buttons: [],
-  },
-];
-
-const Items = [
-  {
-    id: 1,
-    text: "To provide a holistic sustainability strategy."
+    title: "Sustainability Infrastructure",
+    description: "Learn about Kalinga University's green campus initiatives, including solar power, rainwater harvesting, and waste management systems.",
+    buttons: [
+      { label: "Energy Policy", onClick: () => console.log("Energy Policy") },
+      { label: "Water Management", onClick: () => console.log("Water Management") }
+    ]
   },
   {
     id: 2,
-    text: "To introduce programs to promote good health and well-being."
-  },
-  {
-    id: 3,
-    text: "To provide quality education to students and also spread education to society."
-  },
-  {
-    id: 4,
-    text: "To offer courses to educate on gender equity."
-  },
-  {
-    id: 5,
-    text: "To generate and utilise green energy."
-  },
-  {
-    id: 6,
-    text: "To incorporate a culture of innovation."
-  },
-  {
-    id: 7,
-    text: "To spread awareness on climate change and sustainability."
-  },
-  {
-    id: 8,
-    text: "To promote peace, justice, and educate people about various laws."
-  },
-  {
-    id: 9,
-    text: "To establish collaborations with industries and academia in meeting the SDGs."
-  },
+    title: "Community Outreach",
+    description: "Our commitment to community development through various social welfare campaigns and awareness programs.",
+    buttons: [
+      { label: "Women Empowerment", onClick: () => console.log("Women Empowerment") },
+      { label: "Rural Development", onClick: () => console.log("Rural Development") }
+    ]
+  }
 ];
 
 export default function SDGCell() {
   return (
     <div className="min-h-screen bg-white">
       <ImageContent
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/sdg-cover-img.webp"
-        imageAlt="SDG Cell Cover"
-        imageWidth={1200}
-        imageHeight={600}
-        title="Harmony in Action: Implementing Sustainable Development Goals for a Better World"
-        subtitle=""
-        description="Kalinga University, Naya Raipur, is committed to serving in community development by introducing a skill development centre for rural women. Kalinga University has adopted five nearby villages and is continuously serving the development of these villages. The practice is dedicated to empowering women in these villages through skill development and capacity building."
-        hasImage={true}
-        readmore={false}
-        className="!my-8"
-      />
-      <ImageContent
         hasImage={false}
         readmore={false}
         className="items-center justify-center"
-        title="Sustainable Initiatives"
+        title="Every Small Action Can Make A Big Difference"
         subtitle="Every Small Action Can Make A Big Difference"
         subtitleclassName="hidden"
         description={
           <>
-            Our University promotes sustainable and eco-friendly practices by taking initiatives that minimise environmental impact for the betterment of our planet and future generations. The goal is to make our students environmentally conscious and responsible towards society. They are being taught ways to reduce their carbon footprints and ways to conserve natural resources. By practising the 3 R’s (Reduce, Recycle, and Reuse) at our University, our students and faculty members work together towards green initiatives and set new benchmarks in the field of sustainable education.
+            Our University promotes sustainable and eco-friendly practices by taking initiatives that minimise environmental impact for the betterment of our planet and future generations. The goal is to make our students environmentally conscious and responsible towards society. They are being taught ways to reduce their carbon footprints and conserve natural resources. By practising the 3 R’s (Reduce, Recycle, and Reuse), our students and faculty members work together towards green initiatives and set new benchmarks in the field of sustainable education.
           </>
         }
       />
       <MainIntro
-        title="KU’s Commitment Towards SDGs"
+        title="KU’s Commitment Towards Sustainable Development Goals (SDGs)"
         description={[
           "The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015. The SDGs' 17 goals aim to protect the planet, end poverty, and ensure peace and prosperity by 2030. These goals are well-connected, so if one area progresses or struggles, it will impact others, too.",
-          "Kalinga University has adopted all 17 practices to address global needs and work towards impactful solutions by balancing social, economic, and environmental needs. We integrate sustainable practices into our University’s academic, social, cultural, research, administrative, and community engagement activities."
+          "The SDG Cell at Kalinga University was established on 12.04.2022 to promote and implement initiatives related to the cell. We adopted all 17 practices to address global challenges and work towards impactful solutions by balancing social, economic, and environmental challenges. We integrate sustainable practices into our University’s academic, social, cultural, research, administrative, and community engagement activities."
         ]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/sdg-goals.webp"
         imageAlt="SDG Goals"
@@ -271,7 +62,7 @@ export default function SDGCell() {
       {/* <FacilitySlider /> */}
       {/* <SpecializationCard /> */}
       <FAQ
-        title=""
+        title="SDG Cell Resources"
         subtitle=""
         variant="button"
         buttons={faqItems}
@@ -280,4 +71,3 @@ export default function SDGCell() {
     </div>
   );
 }
-

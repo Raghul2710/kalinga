@@ -380,6 +380,7 @@ export default function LibraryResource() {
         showCategory={false}
         showDate={false}
         imageHeight={170}
+        navigationType="arrows"
       />
     </div>
   );

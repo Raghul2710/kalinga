@@ -11,16 +11,16 @@ const researchHighlights = [
   {
     id: 1,
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-facilities/researchfacilities-labimage.webp",
-    title: "Laboratories",
-    description: "We have research labs, including the Central Instrumentation Facility (CIF), and computer labs that fulfill the research needs of students through advanced resources, tools, and technologies.",
+    title: "Research Facilities",
+    description: "Turn your research work into impactful discoveries through our state-of-the-art laboratories, high-tech instrumentation, and dedicated research centers equipped with cutting-edge tools for groundbreaking research across all disciplines.",
     buttonText: "Know More",
     buttonLink: "/laboratories",
   },
   {
     id: 2,
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/assocham.webp",
-    title: "Awards & Recognitions",
-    description: "Kalinga University has received prestigious awards from ASSOCHAM for its remarkable contribution towards research and academic excellence. Awarded Best University in Promoting Research, East Zone by ASSOCHAM in 2022. Awarded Best Private University in Central India by ASSOCHAM IN Feb 2020.",
+    title: "",
+    description: "Kalinga University has received prestigious awards from ASSOCHAM for its remarkable contribution towards research and academic excellence. Awarded Best University in Promoting Research, East Zone by ASSOCHAM in 2022. Awarded Best Private University in Central India by ASSOCHAM in Feb 2020.",
     buttonText: null,
     buttonLink: null,
   }

@@ -29,7 +29,7 @@ const IQAC_TABS = [
     { id: "transport", label: "Transport" },
 
     // ✅ Other Charges (only lateral entry)
-    { id: "other", label: "Other Charges" },
+    // { id: "other", label: "Other Charges" },
 
     // ✅ Value Additions (DON'T REMOVE)
     { id: "value", label: "Value Additions" },
@@ -118,7 +118,7 @@ const FEES_COMMERCE = {
         },
         {
             "S.No.": 6,
-            Course: "B. Com. (Banking & Finance)",
+            Course: "B. Com. (Banking & Finance) {Includes Taxation & GST}",
             "Tenure (Years)": 3,
             Sem: 6,
             "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
@@ -165,7 +165,7 @@ const FEES_ENGINEERING = {
         },
         {
             "S.No.": 2,
-            Course: "B.Tech",
+            Course: "B.Tech in Computer Science",
             "Tenure (Years)": 4,
             Sem: 8,
             "Proposed Tuition Fee Per Sem (INR)": "65,000/-",
@@ -177,7 +177,7 @@ const FEES_ENGINEERING = {
         },
         {
             "S.No.": 3,
-            Course: "B.Tech CS in AI & ML (IBM Collaboration)",
+            Course: "B.Tech CS in AI & ML (in collaboration with IBM)",
             "Tenure (Years)": 4,
             Sem: 8,
             "Proposed Tuition Fee Per Sem (INR)": "75,000/-",
@@ -189,7 +189,7 @@ const FEES_ENGINEERING = {
         },
         {
             "S.No.": 4,
-            Course: "B.Tech (Electrical, Mechanical & Civil)",
+            Course: "B.Tech (Electrical /  Mechanical / Civil)",
             "Tenure (Years)": 4,
             Sem: 8,
             "Proposed Tuition Fee Per Sem (INR)": "50,000/-",
@@ -213,7 +213,7 @@ const FEES_ENGINEERING = {
         },
         {
             "S.No.": 6,
-            Course: "B.Tech (Electrical, Mechanical & Civil) (Lateral Entry)",
+            Course: "B.Tech (Electrical /  Mechanical / Civil) (Lateral Entry)",
             "Tenure (Years)": 3,
             Sem: 6,
             "Proposed Tuition Fee Per Sem (INR)": "50,000/-",
@@ -223,32 +223,32 @@ const FEES_ENGINEERING = {
             "Exam Fees (Per Sem) (INR)": "1,500/-",
             "Total Fees (INR)": "3,18,350/-",
         },
+        // {
+        //     "S.No.": 7,
+        //     Course: "M.Design with Imagin XP (User Experience)",
+        //     "Tenure (Years)": 2,
+        //     Sem: 4,
+        //     "Proposed Tuition Fee Per Sem (INR)": "70,000/-",
+        //     "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
+        //     "Caution Money (One Time) Refundable (INR)": "3,000/-",
+        //     "Uniform Fee (One Time) (INR)": "4,950/-",
+        //     "Exam Fees (Per Sem) (INR)": "1,500/-",
+        //     "Total Fees (INR)": "2,95,350/-",
+        // },
+        // {
+        //     "S.No.": 8,
+        //     Course: "B.Design with Imagin XP (User Experience)",
+        //     "Tenure (Years)": 4,
+        //     Sem: 8,
+        //     "Proposed Tuition Fee Per Sem (INR)": "60,000/-",
+        //     "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
+        //     "Caution Money (One Time) Refundable (INR)": "3,000/-",
+        //     "Uniform Fee (One Time) (INR)": "4,950/-",
+        //     "Exam Fees (Per Sem) (INR)": "1,500/-",
+        //     "Total Fees (INR)": "5,01,350/-",
+        // },
         {
             "S.No.": 7,
-            Course: "M.Design with Imagin XP (User Experience)",
-            "Tenure (Years)": 2,
-            Sem: 4,
-            "Proposed Tuition Fee Per Sem (INR)": "70,000/-",
-            "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "2,95,350/-",
-        },
-        {
-            "S.No.": 8,
-            Course: "B.Design with Imagin XP (User Experience)",
-            "Tenure (Years)": 4,
-            Sem: 8,
-            "Proposed Tuition Fee Per Sem (INR)": "60,000/-",
-            "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "5,01,350/-",
-        },
-        {
-            "S.No.": 9,
             Course: "Diploma in Engineering",
             "Tenure (Years)": 3,
             Sem: 6,
@@ -260,7 +260,7 @@ const FEES_ENGINEERING = {
             "Total Fees (INR)": "1,98,350/-",
         },
         {
-            "S.No.": 10,
+            "S.No.": 8,
             Course: "Diploma in Engineering (Lateral Entry)",
             "Tenure (Years)": 2,
             Sem: 4,
@@ -274,8 +274,8 @@ const FEES_ENGINEERING = {
     ],
     notes: [
         "M.Tech Specialisations: Mechanical, Electrical, Computer Science, Civil",
-        "Sub-Specialisation for M.Tech: Mechanical (Machine Design, Production Technology, Thermal Engineering), Electrical (Instrumentation & Control, Power System Control), CS (Multimedia Technology, OOSD, AI & ML), Civil (Highway Engineering, Structural Engineering).",
-        "B.Tech CS Specialisation with IBM: Artificial Intelligence and Machine Learning (AIML).",
+        // "Sub-Specialisation for M.Tech: Mechanical (Machine Design, Production Technology, Thermal Engineering), Electrical (Instrumentation & Control, Power System Control), CS (Multimedia Technology, OOSD, AI & ML), Civil (Highway Engineering, Structural Engineering).",
+        // "B.Tech CS Specialisation with IBM: Artificial Intelligence and Machine Learning (AIML).",
         "Diploma in Engineering Specialisations: Mechanical, Civil, Electrical, Computer Science & Mining.",
     ],
 };
@@ -391,20 +391,20 @@ const FEES_IT = {
             "Exam Fees (Per Sem) (INR)": "1,500/-",
             "Total Fees (INR)": "2,43,350/-",
         },
+        // {
+        //     "S.No.": 9,
+        //     Course: "Bachelor in Computer Application (BCA)",
+        //     "Tenure (Years)": 3,
+        //     Sem: 6,
+        //     "Proposed Tuition Fee Per Sem (INR)": "55,000/-",
+        //     "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
+        //     "Caution Money (One Time) (INR)": "3,000/-",
+        //     "Uniform Fee (One Time) (INR)": "4,950/-",
+        //     "Exam Fees (Per Sem) (INR)": "1,500/-",
+        //     "Total Fees (INR)": "3,48,350/-",
+        // },
         {
             "S.No.": 9,
-            Course: "Bachelor in Computer Application (BCA)",
-            "Tenure (Years)": 3,
-            Sem: 6,
-            "Proposed Tuition Fee Per Sem (INR)": "55,000/-",
-            "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
-            "Caution Money (One Time) (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "3,48,350/-",
-        },
-        {
-            "S.No.": 10,
             Course: "BCA in AI & ML",
             "Tenure (Years)": 3,
             Sem: 6,
@@ -429,8 +429,8 @@ const FEES_IT = {
         },
     ],
     notes: [
-        "MCA Specialisations (iNURTURE Collaboration): Artificial Intelligence and Machine Learning; Cloud Technology and Information Security.",
-        "BCA Specialisations (iNURTURE Collaboration): Data Science; Artificial Intelligence and Machine Learning (AI & ML); Cloud Technology and Information Security; Information Security and Cyber Forensics.",
+        // "MCA Specialisations (iNURTURE Collaboration): Artificial Intelligence and Machine Learning; Cloud Technology and Information Security.",
+        // "BCA Specialisations (iNURTURE Collaboration): Data Science; Artificial Intelligence and Machine Learning (AI & ML); Cloud Technology and Information Security; Information Security and Cyber Forensics.",
     ],
 };
 
@@ -475,7 +475,7 @@ const FEES_SCIENCE = {
         },
         {
             "S.No.": 3,
-            Course: "B.Sc. (Biotechnology)",
+            Course: "B.Sc. (Biotechnology / Biochemistry / Bioinformatics / Microbiology)",
             "Tenure (Years)": 3,
             Sem: 6,
             "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
@@ -535,7 +535,7 @@ const FEES_SCIENCE = {
         },
         {
             "S.No.": 8,
-            Course: "Master in Fashion Design (M.FD)",
+            Course: "Master of Fashion Design (M.FD)",
             "Tenure (Years)": 2,
             Sem: 4,
             "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
@@ -547,7 +547,7 @@ const FEES_SCIENCE = {
         },
         {
             "S.No.": 9,
-            Course: "Master in Interior Design (M.ID)",
+            Course: "Master of Interior Design (M.ID)",
             "Tenure (Years)": 2,
             Sem: 4,
             "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
@@ -559,7 +559,7 @@ const FEES_SCIENCE = {
         },
         {
             "S.No.": 10,
-            Course: "Bachelors in Fashion Design (B.FD)",
+            Course: "Bachelors of Fashion Design (B.FD)",
             "Tenure (Years)": 3,
             Sem: 6,
             "Proposed Tuition Fee Per Sem (INR)": "30,000/-",
@@ -571,7 +571,7 @@ const FEES_SCIENCE = {
         },
         {
             "S.No.": 11,
-            Course: "Bachelors in Interior Design (B.ID)",
+            Course: "Bachelors of Interior Design (B.ID)",
             "Tenure (Years)": 3,
             Sem: 6,
             "Proposed Tuition Fee Per Sem (INR)": "30,000/-",
@@ -677,6 +677,18 @@ const FEES_ARTS = {
     rows: [
         {
             "S.No.": 1,
+            Course: "BA in Liberal Arts",
+            "Tenure (Years)": 3,
+            Sem: 6,
+            "Proposed Tuition Fee Per Sem (INR)": "50,000/-",
+            "Prospectus/ KALSEE Fees (One Time) (INR)": "1,400/-",
+            "Caution Money (One Time) Refundable (INR)": "3,000/-",
+            "Uniform Fee (One Time) (INR)": "4,950/-",
+            "Exam Fees (Per Sem) (INR)": "1,500/-",
+            "Total Fees (INR)": "3,18,350/-",
+        },
+        {
+            "S.No.": 2,
             Course: "MA (PSC Coaching)",
             "Tenure (Years)": 2,
             Sem: 4,
@@ -688,7 +700,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "90,400/-",
         },
         {
-            "S.No.": 2,
+            "S.No.": 3,
             Course: "BA (PSC Coaching)",
             "Tenure (Years)": 3,
             Sem: 6,
@@ -700,7 +712,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "1,68,350/-",
         },
         {
-            "S.No.": 3,
+            "S.No.": 4,
             Course: "MSW with PSC Coaching",
             "Tenure (Years)": 2,
             Sem: 4,
@@ -712,7 +724,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "1,10,400/-",
         },
         {
-            "S.No.": 4,
+            "S.No.": 5,
             Course: "BSW with PSC Coaching",
             "Tenure (Years)": 3,
             Sem: 6,
@@ -724,7 +736,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "1,38,350/-",
         },
         {
-            "S.No.": 5,
+            "S.No.": 6,
             Course: "MA (J & MC) with PSC Coaching",
             "Tenure (Years)": 2,
             Sem: 4,
@@ -736,7 +748,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "1,20,400/-",
         },
         {
-            "S.No.": 6,
+            "S.No.": 7,
             Course: "BA (J & MC) with PSC Coaching",
             "Tenure (Years)": 3,
             Sem: 6,
@@ -748,7 +760,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "1,20,400/-",
         },
         {
-            "S.No.": 7,
+            "S.No.": 8,
             Course: "MA Film Making",
             "Tenure (Years)": 2,
             Sem: 4,
@@ -760,7 +772,7 @@ const FEES_ARTS = {
             "Total Fees (INR)": "1,70,400/-",
         },
         {
-            "S.No.": 8,
+            "S.No.": 9,
             Course: "BA Film Making",
             "Tenure (Years)": 3,
             Sem: 6,
@@ -795,7 +807,7 @@ const FEES_LAW = {
     rows: [
         {
             "S.No.": 1,
-            Programme: "LL. B.",
+            Programme: "LLB",
             "Tenure (Years)": 3,
             Sem: 6,
             "Proposed Tuition Fee Per Sem (INR)": "32,500/-",
@@ -876,7 +888,7 @@ const FEES_PHARMACY = {
         },
         {
             "S.No.": 2,
-            Programme: "Pharma D",
+            Programme: "Pharma.D",
             "Tenure (Years)": 6,
             Sem: 12,
             "Proposed Tuition Fee Per Sem (INR)": "65,000/-",
@@ -922,20 +934,22 @@ const FEES_PHARMACY = {
             "Exam Fees (Per Sem) (INR)": "1,500/-",
             "Total Fees (INR)": "2,13,450/-",
         },
-        {
-            "S.No.": 6,
-            Programme: "B. Pharma Practice",
-            "Tenure (Years)": 2,
-            Sem: 4,
-            "Proposed Tuition Fee Per Sem (INR)": "60,000/-",
-            "Prospectus/ KALSEE Fees (One Time) (INR)": "2,500/-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "2,53,450/-",
-        },
+        // {
+        //     "S.No.": 6,
+        //     Programme: "B. Pharma Practice",
+        //     "Tenure (Years)": 2,
+        //     Sem: 4,
+        //     "Proposed Tuition Fee Per Sem (INR)": "60,000/-",
+        //     "Prospectus/ KALSEE Fees (One Time) (INR)": "2,500/-",
+        //     "Caution Money (One Time) Refundable (INR)": "3,000/-",
+        //     "Uniform Fee (One Time) (INR)": "4,950/-",
+        //     "Exam Fees (Per Sem) (INR)": "1,500/-",
+        //     "Total Fees (INR)": "2,53,450/-",
+        // },
     ],
-    notes: ["Specialisations for M.Pharmacy: Pharmacology, Pharmaceutical Chemistry, Pharmaceutics"],
+    notes: [
+        "Specialisations for M.Pharmacy: Pharmacology, Pharmaceutical Chemistry, Pharmaceutics",
+    ],
 };
 
 const FEES_EDUCATION = {
@@ -1057,6 +1071,7 @@ const FEES_RESEARCH = {
             "Total Fees (INR)": "4,03,000/-",
         },
     ],
+    knowMoreHref: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2026+Notification.pdf",
     notes: [],
 };
 
@@ -1154,16 +1169,39 @@ function Notes({ items = [] }) {
     return (
         <div className="mt-4 text-left space-y-2">
             <h4 className="font-plus-jakarta-sans font-semibold text-[var(--foreground)]">Notes</h4>
-            <ul className="list-disc pl-5 space-y-1">
+            <div className="space-y-1">
                 {items.map((t, i) => (
-                    <li
+                    <div
                         key={i}
-                        className="text-sm md:text-base text-[var(--foreground)] font-plus-jakarta-sans whitespace-normal break-words"
+                        className="text-sm md:text-base text-[var(--foreground)] font-plus-jakarta-sans whitespace-normal break-words flex gap-2"
                     >
-                        {t}
-                    </li>
+                        <span className="flex-shrink-0">*</span>
+                        <span>{t}</span>
+                    </div>
                 ))}
-            </ul>
+            </div>
+        </div>
+    );
+}
+
+function OtherChargesSection() {
+    return (
+        <div className="mt-6 text-left">
+            <h4 className="font-plus-jakarta-sans font-bold text-[var(--foreground)] mb-2 text-md">Other Charges :</h4>
+            <div className="space-y-3 text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
+                <div>
+                    <div className="font-semibold">Lateral Entry Fees (if eligible)</div>
+                    <div>(One Time) – Rs. 3000/-</div>
+                </div>
+                <div>
+                    <div className="font-semibold">Credit Transfer Fees (if eligible)</div>
+                    <div>(One time) – Rs. 5000/-</div>
+                </div>
+                <div>
+                    <div className="font-semibold">Course Change Fees (if eligible with other terms and conditions apply)</div>
+                    <div>(One time) – Rs. 750/-</div>
+                </div>
+            </div>
         </div>
     );
 }
@@ -1267,6 +1305,20 @@ export default function FeesTabSection() {
 
                                         <ScrollTable columns={faculty.columns} rows={faculty.rows} />
                                         <Notes items={faculty.notes} />
+                                        {activeTab !== "research" && <OtherChargesSection />}
+
+                                        {faculty.knowMoreHref && (
+                                            <div className="mt-8 flex justify-center">
+                                                <a
+                                                    href={faculty.knowMoreHref}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="inline-block bg-[var(--button-red)] text-white font-plus-jakarta-sans px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-all text-sm md:text-base"
+                                                >
+                                                    Know More
+                                                </a>
+                                            </div>
+                                        )}
                                     </div>
                                 )}
 
@@ -1295,7 +1347,7 @@ export default function FeesTabSection() {
                                         <p className="whitespace-normal break-words text-[var(--foreground)] font-plus-jakarta-sans text-sm md:text-base">
                                             {OTHER_CHARGES.scholarship}{" "}
                                             <a
-                                                href="https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/SCHOLARSHIP_25-26+(4)+(1).pdf"
+                                                href="/scholarships"
                                                 className="text-[var(--button-red)] underline font-semibold ml-1"
                                                 target="_blank"
                                                 rel="noreferrer"
@@ -1344,7 +1396,7 @@ export default function FeesTabSection() {
                             )}
 
                             {/* Other Charges Tab */}
-                            {activeTab === "other" && (
+                            {/* {activeTab === "other" && (
                                 <div>
                                     <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 mt-1 text-center">
                                         Other Charges
@@ -1357,7 +1409,7 @@ export default function FeesTabSection() {
                                         </ul>
                                     </div>
                                 </div>
-                            )}
+                            )} */}
 
                             {/* ✅ Value Additions (FIXED: no extra fallback now) */}
                             {activeTab === "value" && (

@@ -112,10 +112,14 @@ const DataTable = ({
 
                     // Check if this cell should be merged (colSpan support)
                     const cellColSpan = row.colSpan && row.colSpan[column.key] !== undefined ? row.colSpan[column.key] : 1
-                    const shouldSkipCell = cellColSpan === 0
+                    const shouldSkipColCell = cellColSpan === 0
 
-                    // Skip rendering if this cell is merged into previous cell
-                    if (shouldSkipCell) {
+                    // Check if this cell should be merged (rowSpan support)
+                    const cellRowSpan = row.rowSpan && row.rowSpan[column.key] !== undefined ? row.rowSpan[column.key] : 1
+                    const shouldSkipRowCell = cellRowSpan === 0
+
+                    // Skip rendering if this cell is merged into previous cell (row or col)
+                    if (shouldSkipColCell || shouldSkipRowCell) {
                       return null
                     }
 
@@ -135,12 +139,14 @@ const DataTable = ({
                       <td
                         key={column.key || colIdx}
                         colSpan={cellColSpan > 1 ? cellColSpan : undefined}
+                        rowSpan={cellRowSpan > 1 ? cellRowSpan : undefined}
                         className={`
                           ${borderColor} border-b border-r p-3 text-gray-700 font-plus-jakarta-sans text-sm
                           ${column.widthPx ? "" : (column.width || "")}
                           ${actualColIdx === 0 ? "border-l" : ""}
                           ${isLastRow && actualColIdx === 0 ? "rounded-bl-lg" : ""}
                           ${isLastRow && actualColIdx === (tableColumns.length - 1 - (row.colSpan ? Object.values(row.colSpan).filter(v => v === 0).length : 0)) ? "rounded-br-lg" : ""}
+                          ${cellRowSpan > 1 ? "align-middle text-center" : ""}
                         `}
                         style={column.widthPx ? { width: `${column.widthPx}px` } : {}}
                       >

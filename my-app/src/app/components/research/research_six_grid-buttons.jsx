@@ -4,13 +4,27 @@ import { useState } from "react";
 import GlobalArrowButton from "../general/global-arrow_button";
 import DataTable from "../general/data-table";
 import { useFlipbook } from "../general/FlipbookContext";
+import APITable from "../general/api-table";
 
 const defaultButtons = [
+  {
+    id: 56,
+    text: "Active MoUs",
+    href: "",
+    isTable: true,
+    tableType: "mou",
+  },
+  {
+    id: 8,
+    text: "Our Plagiarism Policy",
+    href: "",
+    isContent: true,
+  },
   // Left Column
   {
     id: 1,
     text: "Research, Consultancy & IPR Policy",
-    href: "/ipr-cell",
+    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Research+Consultacy_compressed+(1).pdf",
   },
   {
     id: 2,
@@ -22,7 +36,9 @@ const defaultButtons = [
   {
     id: 3,
     text: "Software used for Plagiarism",
-    href: "/research-resources/#seedmoney",
+    href: "",
+    isContent: true,
+    contentType: "software",
   },
   {
     id: 4,
@@ -48,17 +64,13 @@ const defaultButtons = [
     isTable: true,
     tableType: "research",
   },
-  // {
-  //   id: 8,
-  //   text: "Plagiarism Policy",
-  //   href: "/research-resources",
-  //   isContent: true,
-  // },
-  // {
-  //   id: 9,`
-  //   text: "Ph.D. Admissions",
-  //   href: "/phd",
-  // },
+  {
+    id: 7,
+    text: "Research Advisory Committee",
+    href: "",
+    isTable: true,
+    tableType: "research",
+  },
   {
     id: 10,
     text: "Research Integrity & Ethics Policy",
@@ -66,7 +78,7 @@ const defaultButtons = [
   },
   {
     id: 11,
-    text: "Constitution Of the Research Advisory Committee",
+    text: "Constitution of the Research Advisory Committee",
     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Constitution+of+Research+Advisory+Committee.pdf",
   },
   // {
@@ -77,16 +89,20 @@ const defaultButtons = [
   {
     id: 13,
     text: "Seed Money",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+Money+Policy.pdf",
+    href: "",
+    isContent: true,
+    contentType: "seed-money",
   },
   {
     id: 14,
     text: "Research Paper",
-    href: "/research-papers-and-books-published",
+    href: "",
+    isTable: true,
+    tableType: "papers",
   },
   {
     id: 15,
-    text: "Book Chapters",
+    text: "Book / Book Chapters",
     href: "/book-chapters",
   },
   {
@@ -99,11 +115,11 @@ const defaultButtons = [
     text: "Chairs and their Activities",
     href: "/chairs-and-their-activities",
   },
-  {
-    id: 18,
-    text: "IPR Cell",
-    href: "/ipr-cell",
-  },
+  // {
+  //   id: 18,
+  //   text: "IPR Cell",
+  //   href: "/ipr-cell",
+  // },
   {
     id: 19,
     text: "Conferences",
@@ -191,6 +207,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
   const [isContentModalOpen, setIsContentModalOpen] = useState(false);
   const [selectedTitle, setSelectedTitle] = useState("");
   const [selectedTableType, setSelectedTableType] = useState(null);
+  const [selectedContentType, setSelectedContentType] = useState(null);
 
   const isPdfLink = (href) => {
     return href && href.startsWith("http") && href.toLowerCase().endsWith(".pdf");
@@ -200,6 +217,8 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
     // Check if this button is a content modal trigger
     if (button.isContent) {
       e.preventDefault();
+      setSelectedTitle(button.text);
+      setSelectedContentType(button.contentType || "policy");
       setIsContentModalOpen(true);
       return;
     }
@@ -229,6 +248,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
 
   const handleCloseContentModal = () => {
     setIsContentModalOpen(false);
+    setSelectedContentType(null);
   };
   return (
     <>
@@ -300,26 +320,116 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
             </div>
 
             {/* Content Body */}
-            <div className="space-y-4 text-gray-700 leading-relaxed font-lora">
-              <p>
-                We strictly follow our anti-plagiarism rules, and copying someone else’s work is not allowed in our University. We believe that our research scholars produce original work and do not copy it from somewhere else. They are required to give references for each topic and must follow ethical writing practices. We maintain high standards in research practices and appreciate their unique ideas.
-              </p>
+            <div className="space-y-4 text-gray-700 leading-relaxed font-lora max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
+              {selectedContentType === "software" ? (
+                <>
+                  <p>
+                    We use DrillBit to check plagiarism and originality in the research work. It is a cloud-based plagiarism-detection software that identifies copied or AI-generated content in academic and professional writing, and is successfully used by educational institutions, students, researchers, and publishers worldwide. This helps our researchers avoid duplicate content, ensuring the work they submit is self-generated and of high quality.
+                  </p>
+                  <div className="pt-4 flex justify-end">
+                    <button
+                      onClick={() => {
+                        window.open("https://www.drillbitplagiarism.com/", "_blank");
+                        handleCloseContentModal();
+                      }}
+                      className="bg-[#3A3B7B] hover:bg-[#4B4C9D] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
+                    >
+                      Know More
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </>
+              ) : selectedContentType === "seed-money" ? (
+                <>
+                  <div className="space-y-4">
+                    <div>
+                      <strong className="text-[var(--foreground)]">Purpose</strong>
+                      <p className="mt-1">
+                        The primary goal of this scheme is to support faculty members and researchers in developing research resources in their expertise through interdisciplinary approaches or methodologies.
+                      </p>
+                    </div>
 
-              <div className="pt-4 flex justify-end">
-                <button
-                  onClick={() => {
-                    openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research/PLAGIARISM-FILE-POLICY.pdf", "Plagiarism Policy");
-                    handleCloseContentModal();
-                  }}
-                  className="bg-[#3A3B7B] hover:bg-[#4B4C9D] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
-                >
-                  Click here for Policy
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </button>
-              </div>
+                    <div>
+                      <strong className="text-[var(--foreground)]">Objectives</strong>
+                      <ul className="list-disc list-inside mt-2 space-y-1">
+                        <li>To promote a research-friendly environment.</li>
+                        <li>To strengthen the research culture with clear guidelines.</li>
+                        <li>To encourage socially and commercially relevant research work.</li>
+                        <li>To help researchers work on real projects and gain scholarships.</li>
+                        <li>To promote collaboration among different departments.</li>
+                        <li>To attract new and talented researchers.</li>
+                        <li>To support innovation and product development.</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <strong className="text-[var(--foreground)]">Who Can Apply?</strong>
+                      <p className="mt-1">
+                        The faculty members who have been appointed as Assistant Professor, Associate Professor, and Professor at Kalinga University.
+                      </p>
+                    </div>
+
+                    <div>
+                      <strong className="text-[var(--foreground)]">Amount</strong>
+                      <p className="mt-1">
+                        Up to INR 100,000/- and in exceptional cases up to INR 300,000/-
+                      </p>
+                    </div>
+
+                    <div>
+                      <strong className="text-[var(--foreground)]">Process</strong>
+                      <p className="mt-1">
+                        The applicant has to fill in the details related to the projects along with his/her details in the format given in Kalinga University Seed Money Policy and submit the form at the Office of Vice Chancellor, Kalinga University, Raipur after getting signed by the concerned HoD and Dean Research.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="pt-6 pb-8 flex flex-wrap gap-4 justify-end">
+                    <button
+                      onClick={() => {
+                        openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+Money+Policy.pdf", "Seed Money Policy");
+                        handleCloseContentModal();
+                      }}
+                      className="bg-[#3A3B7B] hover:bg-[#4B4C9D] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
+                    >
+                      Seed Money Policy
+                    </button>
+                    <button
+                      onClick={() => {
+                        openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+money+format.pdf", "Seed Money Format");
+                        handleCloseContentModal();
+                      }}
+                      className="border-2 border-[#3A3B7B] text-[#3A3B7B] hover:bg-[#3A3B7B] hover:text-white px-6 py-2.5 rounded-full font-medium transition-all flex items-center gap-2"
+                    >
+                      Download Form
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p>
+                    We strictly follow our anti-plagiarism rules, and copying someone else’s work is not allowed in our University. We believe that our research scholars produce original work and do not copy it from somewhere else. They are required to give references for each topic and must follow ethical writing practices. We maintain high standards in research practices and appreciate their unique ideas.
+                  </p>
+                  <div className="pt-4 flex justify-end">
+                    <button
+                      onClick={() => {
+                        openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research/PLAGIARISM-FILE-POLICY.pdf", "Plagiarism Policy");
+                        handleCloseContentModal();
+                      }}
+                      className="bg-[#3A3B7B] hover:bg-[#4B4C9D] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
+                    >
+                      DrillBit
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -352,7 +462,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
             </div>
 
             {/* Table Content */}
-            <div className="w-full max-h-[calc(90vh-100px)] overflow-y-auto p-4 md:p-6">
+            <div className="w-full max-h-[calc(90vh-100px)] overflow-y-auto p-4 md:p-6 pb-12">
               {selectedTableType === "ethics" ? (
                 <DataTable
                   columns={ethicsCommitteeColumns}
@@ -360,6 +470,10 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
                   overflowX={true}
                   className="mt-4"
                 />
+              ) : selectedTableType === "mou" ? (
+                <APITable tableId="56" nested={true} overflowX={true} />
+              ) : selectedTableType === "papers" ? (
+                <APITable tableId="57" nested={true} overflowX={true} />
               ) : (
                 <DataTable
                   columns={researchAdvisoryCommitteeColumns}

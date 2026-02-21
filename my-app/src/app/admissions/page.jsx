@@ -15,7 +15,7 @@ import OrganogramOfKalinga from "../components/about/organogram_of_kalinga";
 export default function Admissions() {
   const pathname = usePathname();
 
-  
+
 
   // Handle scrolling to program search section when hash is present
   useEffect(() => {
@@ -192,8 +192,8 @@ export default function Admissions() {
 
   // QuickLinks content
   const quickLinksContent = {
-    title: "Quick Links",
-    description: "Access important admission-related resources and information to help you through your admission journey.",
+    title: "Explore More",
+    description: "Access essential information and resources to support your academic journey.",
     links: [
       {
         id: 1,
@@ -206,7 +206,7 @@ export default function Admissions() {
         id: 2,
         icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
         title: "Value Addition",
-        description: "Gain a competitive edge with our value-added courses, workshops, and certifications designed to enhance your professional and personal development.",
+        description: "Gain a competitive edge with our value-added courses, workshops, and certifAcquire real-world knowledge and skills apart from the course curriculum and become confident, career-ready, and future-focused.",
         href: "/value-addition"
       },
       {

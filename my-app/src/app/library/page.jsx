@@ -8,15 +8,14 @@ import LibraryGrid from '../components/library/library-feature'
 import LibraryResource from '../components/library/library-resource'
 
 import LibraryEAccess from '../components/library/library-login'
-
+import Gallery from '../components/campuslife/campusgallery';
 import AdmissionCareer from '../components/general/admission_cta'
 import RaipurVideoSection from '../components/about-raipur/raipurvideo';
-import LibraryEvents from '../components/library/library-events';
-
+import StudentActivities from "@/app/components/department/student_activities";
 
 const page = () => {
 
-  
+
   return (
     <>
       <style jsx global>{`
@@ -53,8 +52,14 @@ const page = () => {
         heightClass="h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
         className="" // optional wrapper class
       />
-      <LibraryEvents />
+      <StudentActivities
+        title="Events & Activities"
+        subtitle="Experience Campus Life Beyond Academics"
+        categoryId={2}
+        fallbackToGlobal={true}
+      />
       <LibraryEAccess />
+      <Gallery />
       <AdmissionCareer />
     </>
   )

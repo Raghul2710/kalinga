@@ -6,16 +6,41 @@ import SectionHeading from '../general/SectionHeading';
 const fellowshipTable = {
     columns: [
         { key: "slNo", label: "S.No.", width: "w-20" },
+        { key: "logo", label: "", width: "w-32" },
         { key: "schemeName", label: "Scheme Name", width: "w-1/4" },
         { key: "fullForm", label: "Scheme Full Form", width: "flex-1" }
     ],
     data: [
-        { slNo: "1", schemeName: "CSIR", fullForm: "COUNCIL OF SCIENTIFIC AND INDUSTRIAL RESEARCH" },
-        { slNo: "2", schemeName: "NET-JOINT-CSIR", fullForm: "JOINT COUNCIL OF SCIENTIFIC AND INDUSTRIAL RESEARCH" },
-        { slNo: "3", schemeName: "UGC-NETJRF", fullForm: "NATIONAL ELIGIBILITY TEST" },
-        // { slNo: "4", schemeName: "NFSC", fullForm: "NATIONAL FELLOWSHIP FOR SCHEDULED CASTE" },
-        // { slNo: "5", schemeName: "NFST", fullForm: "NATIONAL FELLOWSHIP FOR SCHEDULED TRIBES" },
-        // { slNo: "6", schemeName: "INSPIRE", fullForm: "INNOVATION IN SCIENCE PURSUIT FOR INSPIRED RESEARCH" },
+        {
+            slNo: "1",
+            logo: (
+                <img
+                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/csir-logo+(1).png"
+                    alt="CSIR Logo"
+                    className="h-10 object-contain mx-auto"
+                />
+            ),
+            schemeName: "CSIR",
+            fullForm: "COUNCIL OF SCIENTIFIC AND INDUSTRIAL RESEARCH"
+        },
+        {
+            slNo: "2",
+            logo: (
+                <img
+                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/CSIR-NTA-logo.png"
+                    alt="CSIR NTA Logo"
+                    className="h-10 object-contain mx-auto"
+                />
+            ),
+            schemeName: "NET-JOINT-CSIR",
+            fullForm: "JOINT COUNCIL OF SCIENTIFIC AND INDUSTRIAL RESEARCH"
+        },
+        {
+            slNo: "3",
+            logo: "-",
+            schemeName: "UGC-NETJRF",
+            fullForm: "NATIONAL ELIGIBILITY TEST"
+        },
     ]
 };
 
@@ -108,23 +133,29 @@ export default function ScholarStats() {
                 />
 
                 <div className="space-y-8 max-w-6xl mx-auto">
-                    <div className="border border-gray-200 rounded-lg overflow-hidden">
-                        <DataTable
-                            columns={fellowshipTable.columns}
-                            data={fellowshipTable.data}
-                            overflowX={true}
-                            className="shadow-none rounded-none"
-                        />
-                    </div>
+                    <DataTable
+                        columns={fellowshipTable.columns}
+                        data={fellowshipTable.data}
+                        overflowX={true}
+                        disableContainer={true}
+                        headerBgColor="bg-[var(--button-red)]"
+                        headerTextColor="text-white"
+                        rowClassName="bg-white"
+                        cellClassName="bg-white"
+                        tableClassName="bg-white"
+                    />
 
-                    <div className="border border-gray-200 rounded-lg overflow-hidden">
-                        <DataTable
-                            columns={scholarsTable.columns}
-                            data={scholarsTable.data}
-                            overflowX={true}
-                            className="shadow-none rounded-none"
-                        />
-                    </div>
+                    <DataTable
+                        columns={scholarsTable.columns}
+                        data={scholarsTable.data}
+                        overflowX={true}
+                        disableContainer={true}
+                        headerBgColor="bg-[var(--button-red)]"
+                        headerTextColor="text-white"
+                        rowClassName="bg-white"
+                        cellClassName="bg-white"
+                        tableClassName="bg-white"
+                    />
                 </div>
             </div>
         </section>

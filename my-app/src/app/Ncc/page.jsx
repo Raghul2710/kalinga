@@ -10,12 +10,13 @@ import UpcomingConferences from '../components/research/upcoming_conference';
 import RaipurVideoSection from '../components/about-raipur/raipurvideo';
 import Ncctopvideo from '../components/Ncc/ncc-topvideo';
 import Nccvideos from '../components/Ncc/ncc-videos';
-
+import Gallerys from '../components/campuslife/campusgallery';
+import StudentActivities from "@/app/components/department/student_activities";
 
 const page = () => {
 
 
-  
+
   return (
 
     <>
@@ -46,6 +47,13 @@ const page = () => {
       <NccVisionMission />
       <NccHeadMessage />
       <NccEvents />
+      <StudentActivities
+        title="Events & Activities"
+        subtitle="Experience Campus Life Beyond Academics"
+        categoryId={2}
+        fallbackToGlobal={true}
+      />
+      <Gallerys />
       <AdmissionCareer />
     </>
   )

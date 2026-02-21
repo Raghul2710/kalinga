@@ -26,6 +26,7 @@ export default function MainIntro({
   imageAlt = defaultContent.imageAlt,
   initialVisibleParagraphs = 2,
   subtitleClassName = "text-left",
+  subtitleTextColor = "text-[var(--button-red)]",
   titleClassName = "leading-tight !text-left",
   showImage = true,
   showKnowMore = true,
@@ -114,6 +115,7 @@ export default function MainIntro({
               subtitle={subtitle}
               titleClassName={titleClassName}
               subtitleClassName={subtitleClassName}
+              subtitleTextColor={subtitleTextColor}
             />
 
             <div className="space-y-4">

@@ -8,11 +8,12 @@ import MainIntro from "@/app/components/about/main_intro";
 import VisionMission from "@/app/components/about/vision-mission";
 import ImageListItem from "@/app/components/ccrc/imagelistitem";
 import Gallery from "@/app/components/general/gallery";
+import Gallerys from '../components/campuslife/campusgallery';
 import MentorIntro from "@/app/components/department/dept_head_intro";
 import WeStandOut from "@/app/components/department/we_stand_out";
 import AdmissionCareer from "@/app/components/general/admission_cta";
 import NewsEvents from "@/app/components/home/news_and_events";
-
+import StudentActivities from "@/app/components/department/student_activities";
 const aboutP1 =
   "The National Service Scheme has been promoted by the Sports Ministry & Youth Welfare Department, Government of India, and was initiated with the hope that the students engaged in higher education ought to have a sense of respect towards labour with self-motivated discipline. The motto of NSS is “Not Me, But You”, which means putting the community’s needs before individual needs.";
 
@@ -79,22 +80,22 @@ const benefitsBoxItems = benefitsItems.map((b) => ({
 }));
 
 const MentorIntroProps = [
-    {
-        id: 1,
-        title: "Dr Harsha Sharma",
-        subtitle: "A Message From the Coordinator",
-        department: "NSS Coordinator",
-        imageSrc:
-            "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/NSS+Coordinator.png",
-        imageAlt: "Harsha Sharma",
+  {
+    id: 1,
+    title: "Dr Harsha Sharma",
+    subtitle: "A Message From the Coordinator",
+    department: "NSS Coordinator",
+    imageSrc:
+      "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/NSS+Coordinator.png",
+    imageAlt: "Harsha Sharma",
 
-        quote:
-            "Transforming students into mindful citizens and changemakers.",
+    quote:
+      "Transforming students into mindful citizens and changemakers.",
 
-        message: [
-            "At Kalinga University, education goes beyond textbook knowledge as it's a place where students learn to step out, engage with people of different societies and communities, and understand their challenges and discover the power of giving back. Through our outreach programs like cleanliness campaigns, teaching underprivileged children, digital literacy, awareness sessions, tree plantation, road safety, and more, students learn to become responsible and mindful citizens. With every initiative, they learn to bring meaningful change through their collective efforts. By participating in NSS, students learn to solve challenging problems that guide them in life beyond University.",
-        ],
-    },
+    message: [
+      "At Kalinga University, education goes beyond textbook knowledge as it's a place where students learn to step out, engage with people of different societies and communities, and understand their challenges and discover the power of giving back. Through our outreach programs like cleanliness campaigns, teaching underprivileged children, digital literacy, awareness sessions, tree plantation, road safety, and more, students learn to become responsible and mindful citizens. With every initiative, they learn to bring meaningful change through their collective efforts. By participating in NSS, students learn to solve challenging problems that guide them in life beyond University.",
+    ],
+  },
 ];
 
 const objectiveItems = objectives.map((t, idx) => ({
@@ -103,22 +104,22 @@ const objectiveItems = objectives.map((t, idx) => ({
 }));
 
 const learningOutcomeCards = [
-    { id: 1, description: "Learn the importance of community service", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/communities.svg"},
-    { id: 2, description: "Become a responsible and socially aware citizen", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/customer-care.svg"},
-    { id: 3, description: "Identify sustainable solutions to social problems", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/relationship.svg"},
-    { id: 4, description: "Learn to plan, organise, and execute social issues", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/social-media-management-2.svg"},
-    { id: 5, description: "Become confident while making correct decisions", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/social-services.svg"},
+  { id: 1, description: "Learn the importance of community service", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/communities.svg" },
+  { id: 2, description: "Become a responsible and socially aware citizen", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/customer-care.svg" },
+  { id: 3, description: "Identify sustainable solutions to social problems", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/relationship.svg" },
+  { id: 4, description: "Learn to plan, organise, and execute social issues", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/social-media-management-2.svg" },
+  { id: 5, description: "Become confident while making correct decisions", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/social-services.svg" },
 ];
 
 export default function NSSPage() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <>
       <MainIntro
-      subtitle="National Service Scheme"
+        subtitle="National Service Scheme"
         title="About NSS At KU"
         description={[aboutP1, aboutP2]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nns-logo.webp"
@@ -131,30 +132,38 @@ export default function NSSPage() {
       <ImageListItem
         title="Objectives"
         items={objectiveItems}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-img-1.webp"
+        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-benefits-new.webp"
+        imageAlt="NSS Objectives"
         description=""
       />
 
-          <VisionMission data={visionMissionData} />
 
-          <div className="-mt-16 md:-mt-20">
-              <MentorIntro items={MentorIntroProps} />
-          </div>
 
+      <div className="-mt-16 md:-mt-20">
+        <MentorIntro items={MentorIntroProps} />
+      </div>
+      <VisionMission data={visionMissionData} />
       <div className="nss-benefits-equal-height">
         <ImageListItem
           title="Benefits Of Joining Our NSS Team"
-          imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-1.webp"
+          imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/students-3.jpg"
+          imageAlt="NSS Benefits"
           boxItems={benefitsBoxItems}
           description=""
+          reverseLayout={true}
         />
       </div>
 
-          <CareerPath careers={learningOutcomeCards} title="Learning Outcomes" description="" />
+      <CareerPath careers={learningOutcomeCards} title="Learning Outcomes" description="" />
 
-          <Gallery images={[]} title="NSS Activities Gallery" />
-
-      <NewsEvents categoryId="7" title="NSS Events" titleClassName="text-center" hideCalendar={true} />
+      {/* <Gallery images={[]} title="NSS Activities Gallery" /> */}
+      <StudentActivities
+        title="Events & Activities"
+        subtitle="Experience Campus Life Beyond Academics"
+        categoryId={2}
+        fallbackToGlobal={true}
+      />
+      <Gallerys />
       <AdmissionCareer />
 
       {/* ✅ FIXED + WORKING GLOBAL CSS */}
