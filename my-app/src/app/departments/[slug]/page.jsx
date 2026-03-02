@@ -9,6 +9,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 import MainIntro from "@/app/components/about/main_intro";
 import PublicationGrid from "@/app/components/research/publication-grid";
 import ProgramsOffered from "@/app/components/department/programs-offered";
@@ -30,6 +31,7 @@ import EligibilityCriteria from "@/app/components/course/eligibility_criteria";
 import CareerPath from "@/app/components/course/career_path";
 import { fetchAllDepartments, fetchDepartmentCompleteDetail, fetchAllDepartmentsCourses, parseHtmlToParagraphs, parseHtmlToText, parseHtmlListItems, fetchDesignations } from "@/app/lib/api";
 import Gallery from "@/app/components/general/gallery";
+import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 
 // import CustomScrollCard from "@/app/components/gsap/CustomScrollCard"; // No longer used
 import Specialization from "@/app/components/course/specialization";
@@ -462,6 +464,27 @@ export default function DynamicDepartmentPage() {
           initialVisibleParagraphs={mainIntroContent.initialVisibleParagraphs}
           showKnowMore={mainIntroContent.showKnowMore}
           knowMoreLabel={mainIntroContent.knowMoreLabel}
+          extraContent={
+            departmentData?.name?.toUpperCase().includes("COMMERCE") &&
+            departmentData?.name?.toUpperCase().includes("MANAGEMENT") && (
+              <div className="mt-8 flex flex-wrap gap-4">
+                <GlobalArrowButton
+                  as={Link}
+                  href="/departments/management"
+                  className="!rounded-xl"
+                >
+                  Department of Management
+                </GlobalArrowButton>
+                <GlobalArrowButton
+                  as={Link}
+                  href="/departments/commerce"
+                  className="!rounded-xl"
+                >
+                  Department of Commerce
+                </GlobalArrowButton>
+              </div>
+            )
+          }
         />
       )}
       {publicationStats && publicationStats.length > 0 && (

@@ -60,7 +60,8 @@ export default function ProgramsOffered({
   title = "Programs Offered",
   description = "Explore our diverse academic programs designed to empower your future.",
   backgroundImage = "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placements-silder-1.webp",
-  imageAlt = "Students"
+  imageAlt = "Students",
+  hideSearch = false
 }) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -93,30 +94,32 @@ export default function ProgramsOffered({
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col justify-start order-2 lg:order-2">
+          <div className="flex flex-col justify-center order-2 lg:order-2">
             {/* Search Bar */}
-            <div className="relative pb-4 px-3 lg:px-0">
-              <input
-                type="text"
-                placeholder="Search Programs...."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-[var(--button-red)] text-white placeholder-white px-4 py-5 pr-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-              />
-              <svg
-                className="absolute right-4 top-[42%] transform -translate-y-1/2 w-7 h-7 text-white mr-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            {!hideSearch && (
+              <div className="relative pb-4 px-3 lg:px-0">
+                <input
+                  type="text"
+                  placeholder="Search Programs...."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-[var(--button-red)] text-white placeholder-white px-4 py-5 pr-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50"
                 />
-              </svg>
-            </div>
+                <svg
+                  className="absolute right-4 top-[42%] transform -translate-y-1/2 w-7 h-7 text-white mr-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </div>
+            )}
 
             {/* Program List */}
             <div className="max-h-[620px] overflow-y-auto custom-scrollbar p-3">

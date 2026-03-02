@@ -89,6 +89,7 @@ const OrganogramOfKalinga = ({
                         arrowClassName={arrowClassName}
                         arrowIconClassName={arrowIconClassName}
                         textClassName={textClassName}
+                        onClick={btn.onClick}
                       >
                         {btn.text}
                       </GlobalArrowButton>

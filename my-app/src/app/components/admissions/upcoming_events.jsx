@@ -32,17 +32,25 @@ const UpcomingEvents = ({ events }) => {
           titleClassName="text-center mb-6 sm:mb-8 md:mb-10"
         />
 
-        {/* Events Slider - Mobile Only */}
-        <div className="block lg:hidden">
+        {/* Events Slider */}
+        <div className="relative group">
           <Swiper
             modules={[Navigation]}
-            spaceBetween={16}
+            spaceBetween={24}
             slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
             navigation={{
               nextEl: '.upcoming-events-next',
               prevEl: '.upcoming-events-prev',
             }}
-            className="upcoming-events-swiper"
+            className="upcoming-events-swiper !pb-12"
           >
             {events.map((event) => (
               <SwiperSlide key={event.id}>
@@ -57,57 +65,44 @@ const UpcomingEvents = ({ events }) => {
           </Swiper>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-end items-center gap-3 mt-5">
-            <button className="upcoming-events-prev w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <button className="upcoming-events-prev w-12 h-12 rounded-full bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-all shadow-md transform hover:scale-105 active:scale-95 z-20">
               <svg
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-white hover:text-[var(--button-red)] transition-colors"
+                className="text-white"
               >
                 <path
                   d="M10 12L6 8L10 4"
                   stroke="currentColor"
-                  strokeWidth="1"
+                  strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
             </button>
-            <button className="upcoming-events-next w-12 h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md">
+            <button className="upcoming-events-next w-12 h-12 rounded-full bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-all shadow-md transform hover:scale-105 active:scale-95 z-20">
               <svg
-                width="20"
-                height="20"
+                width="24"
+                height="24"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="text-white hover:text-[var(--button-red)] transition-colors"
+                className="text-white"
               >
                 <path
                   d="M6 4L10 8L6 12"
                   stroke="currentColor"
-                  strokeWidth="1"
+                  strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
             </button>
           </div>
-        </div>
-
-        {/* Events Grid - Desktop Only */}
-        <div className="hidden lg:grid grid-cols-3 gap-6">
-          {events.map((event) => (
-            <FeaturedNewsCard
-              key={event.id}
-              image={event.image}
-              alt={event.alt}
-              badgeText={event.badgeText}
-              title={event.title}
-            />
-          ))}
         </div>
       </div>
     </section>

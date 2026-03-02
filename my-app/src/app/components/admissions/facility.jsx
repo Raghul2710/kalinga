@@ -116,6 +116,11 @@ const defaultFacilities = [
     name: "Selfie Points",
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
   },
+  {
+    id: 22,
+    name: "Business Lab",
+    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/01.webp",
+  },
 ];
 
 export default function Facility({

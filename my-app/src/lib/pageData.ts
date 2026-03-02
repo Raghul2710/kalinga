@@ -221,6 +221,11 @@ export const pageDataMap: Record<string, PageData> = {
         title: "Bachelor of Animation and Visual Effects",
         banner: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-computer-course.webp",
     },
+    "/departments/management": {
+        slug: "/departments/management",
+        title: "Department of Management",
+        banner: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/01.webp",
+    },
     "/director-general": {
         slug: "/director-general",
         title: "Director General",
