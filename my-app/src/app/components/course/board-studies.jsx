@@ -22,7 +22,7 @@ export default function BoardStudies() {
       <div className="relative z-20 container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
           {/* Left Side - Text Content */}
-          <div className="flex flex-col gap-6 text-white py-20 px-5">
+          <div className="flex flex-col gap-6 text-white py-16 px-5">
             <h2 className="text-white font-stix text-4xl md:text-5xl lg:text-6xl font-bold">
               Board of Studies
             </h2>

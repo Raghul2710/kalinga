@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import SectionHeading from "../components/general/SectionHeading";
+import PublicationCard from "../components/general/PublicationCard";
 
 
 if (typeof window !== 'undefined') {
@@ -242,38 +243,6 @@ export default function Page() {
     },
   ];
 
-  const BookCard = ({ book }) => (
-    <div className="bg-[#eef2f5] rounded-xl p-4 flex gap-7 hover:shadow-lg transition-all duration-300 flex-wrap md:flex-nowrap">
-      {/* Left side: Image */}
-      <div className="w-full md:w-2/5 flex-shrink-0 max-h-52 overflow-hidden rounded-lg shadow-sm border border-black/5">
-        <img
-          src={book.img}
-          alt={book.title}
-          className="w-full h-full object-contain"
-        />
-      </div>
-
-      {/* Right side: Metadata */}
-      <div className="md:w-3/5 flex flex-col py-1 justify-around">
-        <h3 className="font-stix text-[#a34439] text-base md:text-lg lg:text-xl font-medium leading-tight font-plus-jakarta-sans">
-          {book.title}
-          <div className="w-16 h-px bg-gray-300 my-3"></div>
-        </h3>
-
-        <div className="space-y-1">
-          <p className="font-stix text-lg md:text-xl font-medium text-gray-800">
-            By {book.author}
-          </p>
-          <p className="text-xs md:text-sm">
-            {book.designation}
-          </p>
-          <p className="text-xs tracking-tight mt-1">
-            {book.faculty}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <div className="bg-white min-h-screen">
@@ -291,10 +260,10 @@ export default function Page() {
       /> */}
 
       {/* Image Grid Section */}
-      <section className="container mx-auto px-4 md:px-6 py-12 md:py-20">
+      <section className="container mx-auto px-4 md:px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
           {books.map((book, index) => (
-            <BookCard key={index} book={book} />
+            <PublicationCard key={index} data={book} />
           ))}
         </div>
       </section>

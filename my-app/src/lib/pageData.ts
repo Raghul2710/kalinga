@@ -389,7 +389,7 @@ export const pageDataMap: Record<string, PageData> = {
         banner: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-BannerImage.webp",
     },
     "/placements": {
-        slug: "/placements",
+        slug: "/training-and-placements",
         title: "Placements",
         banner: "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alumini.webp",
         imagePosition: "object-center",

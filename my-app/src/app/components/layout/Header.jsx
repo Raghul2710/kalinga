@@ -308,7 +308,7 @@ const Header = () => {
     {
       id: 'placements',
       label: 'Placements',
-      href: '/placements',
+      href: '/training-and-placements',
       megaMenu: {
         imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-intro.jpg',
         imageAlt: 'Training and Placements',
@@ -316,7 +316,7 @@ const Header = () => {
           {
             title: 'Placements',
             links: [
-              { label: 'Placement Overview', href: '/placements' },
+              { label: 'Placement Overview', href: '/training-and-placements' },
               { label: 'Placement Cell', href: '/training-and-placement-cell' },
               { label: 'Industry Collaborations', href: '/career-and-corporate-resource-centre' },
               { label: 'Kalinga Achievers', href: '#' },

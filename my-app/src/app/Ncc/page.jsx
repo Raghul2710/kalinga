@@ -12,6 +12,8 @@ import Ncctopvideo from '../components/Ncc/ncc-topvideo';
 import Nccvideos from '../components/Ncc/ncc-videos';
 import Gallerys from '../components/campuslife/campusgallery';
 import StudentActivities from "@/app/components/department/student_activities";
+import PublicationCard from "../components/general/PublicationCard";
+import SectionHeading from "../components/general/SectionHeading";
 
 const page = () => {
 
@@ -62,6 +64,29 @@ const page = () => {
     }
   ];
 
+  const nccAchievements = [
+    {
+      id: 1,
+      variant: "achievement",
+      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/01.jpg",
+      name: "Zaheen E Fatema",
+      degree: "BSC BT 2021-24",
+      status: "cleared",
+      badge: "NCC \"B\"",
+      exam: "Certificate Examination",
+    },
+    {
+      id: 2,
+      variant: "achievement",
+      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/02.jpg",
+      name: "Lt Vibha Chandrakar",
+      degree: "NCC Coordinator",
+      status: "Special Achievement",
+      badge: "NCC \"C\"",
+      exam: "Certificate Excellence",
+    }
+  ];
+
   return (
     <>
       <style jsx global>{`
@@ -90,6 +115,21 @@ const page = () => {
       <Nccvideos />
       <NccVisionMission />
       <NccHeadMessage />
+
+      {/* Reused Publication Card Section */}
+      <section className="container mx-auto px-4 md:px-6 py-12">
+        <SectionHeading
+          title="NCC Achievers"
+          description=""
+          titleClassName="text-center font-stix "
+          descriptionClassName="text-center mt-4"
+        />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto mt-12">
+          {nccAchievements.map((achievement) => (
+            <PublicationCard key={achievement.id} data={achievement} className="bg-card-sandal" />
+          ))}
+        </div>
+      </section>
       <StudentActivities
         title="Events & Activities"
         subtitle="Experience Campus Life Beyond Academics"

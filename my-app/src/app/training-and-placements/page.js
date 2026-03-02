@@ -913,7 +913,7 @@ export default function Research() {
         quote="B.Tech. 2019 <br/> Sr. Software Developer at Oracle India Private Ltd.<br/>Package: <span style='color: var(--background);'>29.98 LPA</span><br/><img src='https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/oracle.png' alt='Oracle Logo' style='height: 80px; margin-top: 10px; background: white; padding: 5px; border-radius: 4px;' />"
         showQuotes={false}
         quoteContainerClassName="pl-6 md:pl-14"
-        className="py-10 bg-white"
+        className="pb-10 bg-white"
       />
       <Partner
         blueTitle="Best Campus Placement University in Chhattisgarh"
@@ -952,6 +952,7 @@ export default function Research() {
         showKnowMore={true}
         reverseLayout={true}
         applyTransform3dSlant={false}
+        sectionClassName="bg-white !py-0 !pb-0"
       />
       <QuickLinks
         links={links}
@@ -1103,17 +1104,6 @@ export default function Research() {
         </Tabs>
       </div>
 
-      <MainIntro
-        title="Career Development Centre at KU"
-        subtitle=""
-        description={[
-          "Our Career Development Centre prepares students for successful careers by providing them with the necessary resources and guidance. The team connects students with different companies and trains them in essential skills, helping them achieve their personal and professional goals. The centre helps students identify their interests, guides them with job search strategies, conducts training programs, and provides internships and job opportunities at KU’s campus placement drives."]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
-        imageAlt="Kalinga University Placement"
-        initialVisibleParagraphs={1}
-        showKnowMore={true}
-      />
-
       <FAQ
         title="Collaborations & Activities"
         subtitle="Collaboration"
@@ -1155,7 +1145,17 @@ export default function Research() {
           }
         ]}
       />
-
+      <MainIntro
+        title="Career Development Centre at KU"
+        subtitle=""
+        description={[
+          "Our Career Development Centre prepares students for successful careers by providing them with the necessary resources and guidance. The team connects students with different companies and trains them in essential skills, helping them achieve their personal and professional goals. The centre helps students identify their interests, guides them with job search strategies, conducts training programs, and provides internships and job opportunities at KU’s campus placement drives."]}
+        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
+        imageAlt="Kalinga University Placement"
+        initialVisibleParagraphs={1}
+        showKnowMore={true}
+        sectionClassName="bg-white !py-0 !pb-0"
+      />
       <CareerPath
         title={skillsContent.title}
         description={skillsContent.description}
@@ -1338,7 +1338,8 @@ export default function Research() {
         title="Internship Opportunities At KU"
         description="At KU, you don’t have to wait till graduation, but we’ll help you get a sneak peek into the practical world with our internship programs, which will also make your CV stand out during your job interviews."
         videoItems={videoItems3}
-        cardBgClass="bg-white"
+        backgroundColor="bg-light-gray"
+        cardBgClass="bg-lite-sand"
         nameTextClass="text-[var(--button-red)]"
         descriptionTextClass=""
         swiperClassName="ccrc-video-slider"

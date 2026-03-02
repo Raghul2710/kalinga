@@ -77,16 +77,16 @@ const IQACPage = () => {
     }
   ];
   const skillsContent = {
-    title: "",
+    title: "Other Quality Initiatives",
     description: "",
     careers: [
-      {
-        id: 1,
-        title: "Other Quality inititaives",
-        description: "",
-        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/service.svg",
-        imageAlt: "Other Quality inititaives",
-      },
+      // {
+      //   id: 1,
+      //   title: "Other Quality inititaives",
+      //   description: "",
+      //   imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/service.svg",
+      //   imageAlt: "Other Quality inititaives",
+      // },
       {
         id: 2,
         title: "Setting a robust Feedback System",
@@ -134,10 +134,16 @@ const IQACPage = () => {
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/banner.webp"
         imageAlt="IQAC"
         descriptionClassName="text-[var(--foreground)]"
+        sectionClassName="bg-white !py-0 !pb-0"
       />
       {/* <TwoLogo logos={MentorIntroProps[0].logos} /> */}
       {/* <PublicationGrid stats={publicationStats} /> */}
       <DeptHeadIntro items={MentorIntroProps} className="pt-10 pb-20" />
+      <CareerPath
+        title={skillsContent.title}
+        description={skillsContent.description}
+        careers={skillsContent.careers}
+      />
       <IQACTabSection />
       <ISOCertificateSection description="Kalinga University is committed to maintaining the highest standards of quality in all its academic and administrative processes. Our ISO 9001:2015 certification demonstrates our dedication to continuous improvement and excellence in education, ensuring that we meet international quality benchmarks and provide the best possible learning experience to our students" />
       {/* <QuickLinks
@@ -155,11 +161,6 @@ const IQACPage = () => {
         fallbackToGlobal={true}
       />
       <Gallery title="Glimpses" />
-      <CareerPath
-        title={skillsContent.title}
-        description={skillsContent.description}
-        careers={skillsContent.careers}
-      />
       <ContactSection
         mail="iqac@kalingauniversity.ac.in"
         phone=""

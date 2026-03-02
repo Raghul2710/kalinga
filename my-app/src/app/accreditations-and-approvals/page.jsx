@@ -101,15 +101,15 @@ function Accreditations() {
     const accreditationsData = {
         title: "Accreditations & Approvals",
         tabs: [
-            { id: "cg", label: "C.G. Govt. Approval" },
-            { id: "ugc", label: "UGC Approval" },
-            { id: "pci", label: "PCI Approval" },
-            { id: "aicte", label: "AICTE Approval" },
-            { id: "bci", label: "BCI Approval" },
-            { id: "ncte", label: "NCTE Approval" },
-            { id: "naac", label: "National Assessment and Accreditation Council" },
-            { id: "eoa_pharmacy", label: "EOA PHARMACY" },
-            { id: "eoa_diploma", label: "EOA Diploma Engg" },
+            { id: "cg", label: "C.G. Govt. Approval", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/cg-government.webp", description: "Official recognition and approval by the Chhattisgarh State Government." },
+            { id: "ugc", label: "UGC Approval", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp", description: "Recognition under section 12B of the UGC Act, ensuring high educational standards." },
+            { id: "pci", label: "PCI Approval", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002980.png", description: "Approval by the Pharmacy Council of India for quality pharmaceutical education." },
+            { id: "aicte", label: "AICTE Approval", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/acite.webp", description: "All India Council for Technical Education approval for engineering and technical courses." },
+            { id: "bci", label: "BCI Approval", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/bci.webp", description: "Bar Council of India recognition for legal education and professional law standards." },
+            { id: "ncte", label: "NCTE Approval", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002978.png", description: "National Council for Teacher Education approval for B.Ed. and B.P.Ed. programs." },
+            { id: "naac", label: "National Assessment and Accreditation Council", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/naac.webp", description: "NAAC B+ accreditation reflecting institutional quality and excellence." },
+            { id: "eoa_pharmacy", label: "EOA PHARMACY", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/acite.webp", description: "Extension of Approval (EOA) for Pharmacy programs by AICTE." },
+            { id: "eoa_diploma", label: "EOA Diploma Engg", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/acite.webp", description: "Extension of Approval (EOA) for Diploma in Engineering programs by AICTE." },
         ],
         sections: {
             cg: {

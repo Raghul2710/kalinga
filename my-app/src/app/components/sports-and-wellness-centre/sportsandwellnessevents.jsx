@@ -49,7 +49,7 @@ function Sportsandwellnessevents() {
                     title="Sports Events"
                     subtitle=""
                     activities={defaultEvents}
-                    paddingClassName="py-20 pt-0"
+                    paddingClassName="py-16 pt-0"
 
                 />
             </div>

@@ -39,7 +39,7 @@ export default function ImageContent({
   const mainContentColSpan = hasImage ? "md:col-span-8 text-start" : "md:col-span-12  items-center justify-center text-center";
 
   return (
-    <section className={`container rounded-xl mx-auto bg-[var(--light-gray)] my-16  md:p-12 p-6 py-10 ${className}`}>
+    <section className={`container rounded-xl mx-auto bg-[var(--light-gray)] py-16  md:p-12 p-6 ${className}`}>
       <div className={`grid items-center md:grid-cols-12  ${gridColsClass} gap-6`}>
         {hasImage && (
           <Image

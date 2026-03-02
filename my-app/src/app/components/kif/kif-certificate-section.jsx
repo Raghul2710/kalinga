@@ -50,7 +50,7 @@ const KIFCertificateSection = ({ className = "" }) => {
                         </div>
 
                         <Link
-                            href="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/KIF+MCA_compressed.pdf"
+                            href="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/KIF%2BMCA_compressed_removed.pdf"
                             target="_blank"
                             className="inline-flex items-center gap-2 text-[var(--button-red)] font-semibold text-lg hover:underline transition-colors"
                         >

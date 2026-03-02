@@ -1,12 +1,13 @@
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
-import FlipbookTrigger from "../general/FlipbookTrigger";
+import Image from "next/image";
+
 
 function PdfRow({ item }) {
   const disabled = !item?.url || item.url === "#";
 
-  const row = (
+  return (
     <a
       href={disabled ? undefined : item.url}
       target={disabled ? undefined : "_blank"}
@@ -27,14 +28,6 @@ function PdfRow({ item }) {
       </p>
     </a>
   );
-
-  return disabled ? (
-    row
-  ) : (
-    <FlipbookTrigger pdfUrl={item.url} title={item.title}>
-      {row}
-    </FlipbookTrigger>
-  );
 }
 
 export default function AccreditationsApprovalsSection({ data }) {
@@ -54,6 +47,7 @@ export default function AccreditationsApprovalsSection({ data }) {
   }, [tabs, activeTab]);
 
   const section = useMemo(() => sections?.[activeTab], [sections, activeTab]);
+  const activeTabObj = useMemo(() => tabs.find((t) => t.id === activeTab), [tabs, activeTab]);
 
   const years = useMemo(() => {
     const y = section?.years ? Object.keys(section.years) : [];
@@ -122,6 +116,31 @@ export default function AccreditationsApprovalsSection({ data }) {
             <div className="flex-1">
               {/* ✅ scrollable + same height as left */}
               <div className="h-full max-h-[650px] lg:max-h-[720px] overflow-y-auto bg-gray-100 rounded-2xl p-6 md:p-8 scrollbar-hide">
+
+                {/* Right Panel Header with Organization Logo */}
+                {activeTabObj?.logo && (
+                  <div className="mb-8 w-full bg-white rounded-xl p-8 border border-gray-200 flex items-center gap-8">
+                    {/* Logo on Left */}
+                    <div className="w-56 h-36 bg-white rounded-xl flex-shrink-0 flex items-center justify-center p-2">
+                      <Image
+                        src={activeTabObj.logo}
+                        alt={activeTabObj.label}
+                        width={200}
+                        height={200}
+                        className="object-contain w-full h-full max-h-32"
+                      />
+                    </div>
+                    {/* Name and Description on Right */}
+                    <div className="flex-1">
+                      <h3 className="mb-1 leading-none">
+                        {activeTabObj.label}
+                      </h3>
+                      <p className="text-gray-500 leading-relaxed max-w-2xl">
+                        {activeTabObj.description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                      </p>
+                    </div>
+                  </div>
+                )}
                 {/* ✅ If section has docs (no years) */}
                 {Array.isArray(section?.docs) && section.docs.length > 0 ? (
                   <div className="space-y-4">

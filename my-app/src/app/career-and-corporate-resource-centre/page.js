@@ -43,7 +43,7 @@ const cards = [
     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/placement.png",
     logoSrc: "",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
-    href: "/placements",
+    href: "/training-and-placements",
   },
 ]
 
@@ -422,7 +422,7 @@ export default function CCRCPage() {
       backgroundColorcard="bg-white"
       href="/contact-us"
     />
-    <Gallery title="Glimpses" paddingClassName="py-20" />
+    <Gallery title="Glimpses" paddingClassName="py-16" />
 
     <AdmissionCareer />
 

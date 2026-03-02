@@ -28,10 +28,10 @@ export default function NccVisionMission() {
 
         /* -------------------------------------- */
         /* 📱 MOBILE ONLY: reduce Vision & Mission box padding */
-        /* Original: py-20 = 80px */
+        /* Original: py-16 = 80px */
         /* -------------------------------------- */
         @media (max-width: 767px) {
-          .ncc-vm-wrap :global(.py-20) {
+          .ncc-vm-wrap :global(.py-16) {
             padding-top: 32px !important;
             padding-bottom: 32px !important;
           }

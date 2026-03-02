@@ -37,7 +37,7 @@ const EntranceExamUpdated = () => {
   ];
 
   return (
-    <section className="bg-[var(--background)] mx-2 py-12 md:py-20 rounded-xl">
+    <section className="bg-[var(--background)] mx-2 py-12 md:py-16 rounded-xl">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-8 md:mb-16">

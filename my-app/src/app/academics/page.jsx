@@ -220,7 +220,7 @@ export default function AcademicsApi() {
       icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industrial+Visits.svg",
       title: "Internships & Placement",
       description: "Get an on-campus or off-campus internship opportunity and get placed in top companies through our Campus Placement Drives.",
-      link: "/placements"
+      link: "/training-and-placements"
     },
     {
       id: 5,

@@ -6,7 +6,7 @@ import GlobalArrowButton from "../components/general/global-arrow_button";
 
 export default function Page() {
     return (
-        <section className="min-h-[70vh] mb-10 flex items-center justify-center bg-white py-20">
+        <section className="min-h-[70vh] mb-10 flex items-center justify-center bg-white py-16">
             <div className="flex flex-col items-center text-center gap-6">
 
                 {/* Clickable Image */}

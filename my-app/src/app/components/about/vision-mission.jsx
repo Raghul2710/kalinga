@@ -299,7 +299,7 @@ export default function VisionMission({
                   >
                     {/* The Clipped Card - Inverted */}
                     <div
-                      className="bg-[var(--dark-skin)] relative w-full h-full p-[25px] py-20 flex items-center justify-center"
+                      className="bg-[var(--dark-skin)] relative w-full h-full p-[25px] py-16 flex items-center justify-center"
                       style={isDesktop ? {
                         clipPath: 'url(#rounded-polygon-inverted)',
                         WebkitClipPath: 'url(#rounded-polygon-inverted)'
@@ -345,7 +345,7 @@ export default function VisionMission({
                     style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.08))' }}
                   >
                     {/* The Clipped Card */}
-                    <div className={`${isDesktop ? 'r-3d' : 'rounded-[20px]'} bg-[var(--dark-skin)] relative w-full h-full p-[25px] py-20 flex items-center justify-center`}>
+                    <div className={`${isDesktop ? 'r-3d' : 'rounded-[20px]'} bg-[var(--dark-skin)] relative w-full h-full p-[25px] py-16 flex items-center justify-center`}>
                       <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-orange-900/5 pointer-events-none"></div>
 
                       {/* Content Container */}

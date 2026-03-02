@@ -4,22 +4,22 @@ import SectionHeading from "../general/SectionHeading";
 import Image from "next/image";
 
 export default function Partner({
-    blueTitle = "Our Partners",
-    redTitle = "Our Partners",
-    blueItems = [],
-    redItems = [],
-    ccrcLogo = null,
-    className = "",
-    singleColumn = false,
-    milestones = null,
-    description = "Organizations that have participated in skill development and professional training initiatives",
-    footerText = null,
-    noContainer = false,
+  blueTitle = "Our Partners",
+  redTitle = "Our Partners",
+  blueItems = [],
+  redItems = [],
+  ccrcLogo = null,
+  className = "",
+  singleColumn = false,
+  milestones = null,
+  description = "Organizations that have participated in skill development and professional training initiatives",
+  footerText = null,
+  noContainer = false,
 }) {
   // Duplicate items for seamless scrolling
   const duplicatedBlueItems = blueItems.length > 0 ? [...blueItems, ...blueItems] : [];
   const duplicatedRedItems = redItems.length > 0 ? [...redItems, ...redItems] : [];
-  
+
   // Combine items for single column layout
   const combinedItems = singleColumn ? [...blueItems, ...redItems] : [];
 
@@ -36,7 +36,7 @@ export default function Partner({
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
-            
+
             // Extract numeric values from milestone.value strings (e.g., "4 LPA" -> 4, "12L +" -> 12)
             const targetValues = milestones.map((milestone) => {
               const valueStr = milestone.value.toString();
@@ -90,8 +90,8 @@ export default function Partner({
       return <p className="text-white/70 text-center py-8">No partners to display</p>;
     }
 
-    const gridClass = isSingleColumn 
-      ? "grid grid-cols-4 md:grid-cols-8 gap-3 sm:gap-4" 
+    const gridClass = isSingleColumn
+      ? "grid grid-cols-4 md:grid-cols-8 gap-3 sm:gap-4"
       : "grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4";
 
     if (isSingleColumn) {
@@ -187,7 +187,7 @@ export default function Partner({
                   <SectionHeading title={blueTitle} titleClassName="!py-2 text-white text-center" />
                   <p className={`text-white text-center text-sm mt-2  ${noContainer ? '' : 'max-w-md mx-auto'}`}>{description}</p>
                 </div>
-                
+
                 {/* Milestones */}
                 {milestones && (
                   <div ref={milestonesRef} className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0 text-white">
@@ -197,16 +197,16 @@ export default function Partner({
                       const match = valueStr.match(/(\d+)(.*)/);
                       const numericValue = match ? parseInt(match[1], 10) : 0;
                       const suffix = match ? match[2] : '';
-                      
+
                       // Use counted value if available, otherwise show 0
-                      const displayValue = countedValues[idx] !== undefined 
-                        ? countedValues[idx] 
+                      const displayValue = countedValues[idx] !== undefined
+                        ? countedValues[idx]
                         : (hasAnimated ? numericValue : 0);
-                      
+
                       return (
                         <div key={idx} className="flex-1 flex items-center justify-center w-full md:w-auto">
                           <div className="flex-1 text-center">
-                            <h3 className="!text-3xl sm:!text-[35px] md:!text-[40px] text-white mb-1 sm:mb-2">
+                            <h3 className="!text-2xl sm:!text-[30px] md:!text-[34px] text-white mb-1 sm:mb-2 text-center">
                               {displayValue}{suffix} +
                             </h3>
                             <h6 className="text-sm sm:text-base text-white font-stix">{milestone.label}</h6>
@@ -220,14 +220,14 @@ export default function Partner({
                   </div>
                 )}
               </div>
-      
+
               {/* Partners Grid with Vertical Marquee */}
               {renderPartnerGrid(combinedItems.length > 0 ? combinedItems : blueItems, true, true)}
-              
+
               {/* Footer text at bottom */}
               {footerText && (
                 <div className="mt-8 md:mt-10 text-center">
-                  <p className="text-white text-lg md:text-2xl font-plus-jakarta-sans">
+                  <p className="text-white text-base md:text-lg font-plus-jakarta-sans">
                     {footerText}
                   </p>
                 </div>
@@ -244,7 +244,7 @@ export default function Partner({
               {/* Section Title */}
               <SectionHeading title={blueTitle} titleClassName="!py-2 text-white text-center" />
               <p className="text-white text-center text-sm pb-5">Companies that have partnered with us for professional training, consultancy, and campus placement drives</p>
-      
+
               {/* Partners Grid with Vertical Marquee */}
               {renderPartnerGrid(blueItems, true)}
             </div>
@@ -253,10 +253,10 @@ export default function Partner({
           {/* Red Background Grid - Right */}
           <div className="bg-[var(--button-red)] md:p-8 lg:p-12 p-6 py-10 pr-8 md:pr-10 lg:pr-12">
             <div className="flex flex-col ">
-                      {/* Section Title */}
-                      <SectionHeading title={redTitle} titleClassName="!py-2 text-white text-center" />
-                      <p className="text-white text-center text-sm pb-5"> Companies partnered with CCRC through MoUs for training and collaboration</p>
-              
+              {/* Section Title */}
+              <SectionHeading title={redTitle} titleClassName="!py-2 text-white text-center" />
+              <p className="text-white text-center text-sm pb-5"> Companies partnered with CCRC through MoUs for training and collaboration</p>
+
               {/* Partners Grid with Vertical Marquee */}
               {renderPartnerGrid(redItems, false)}
             </div>

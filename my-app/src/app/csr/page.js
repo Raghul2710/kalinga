@@ -612,7 +612,7 @@ export default function CSRPage({
       />
       <CsrForm />
       {/* <CenterOfExcellence centres={centres} title="Startup Partners" description="Explore the spaces and partnerships that power the Kalinga Incubation Foundation." /> */}
-      <Gallery title=" Glimpses" paddingClassName="py-20" />
+      <Gallery title=" Glimpses" paddingClassName="py-16" />
       <AdmissionCareer />
 
     </div>

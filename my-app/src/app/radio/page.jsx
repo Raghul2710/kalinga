@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import MainIntro from "@/app/components/about/main_intro";
 import Gallery from "@/app/components/general/gallery";
 
-const RadioGallery =[
+const RadioGallery = [
   {
     id: 1,
     image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Radio/Radio-1.webp",
@@ -53,15 +53,15 @@ const RadioGallery =[
 export default function Radio() {
   const pathname = usePathname();
 
-  
+
   return (
     <div>
       <MainIntro
         title="Kalinga Radio"
         subtitle="An Initiative By Kalinga University"
         description={[<strong key="radio-intro">Tune in to Kalinga Radio & never miss a moment!</strong>,
-            "From college happenings, trending news, live shows, and important information on examinations or on upcoming events and activities, Kalinga Radio will always keep you connected and stay updated. It offers students a great platform where they can conduct shows, host interviews, and hear inspiring stories from alumni, faculty members, and special guests. Be a part of the campus conversation - anytime, anywhere.", 
-]}
+          "From college happenings, trending news, live shows, and important information on examinations or on upcoming events and activities, Kalinga Radio will always keep you connected and stay updated. It offers students a great platform where they can conduct shows, host interviews, and hear inspiring stories from alumni, faculty members, and special guests. Be a part of the campus conversation - anytime, anywhere.",
+        ]}
         imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-radio.webp"
         imageAlt="Kalinga University Radio"
         showKnowMore={true}
@@ -69,8 +69,8 @@ export default function Radio() {
         knowMoreLabel="Download Now"
         initialVisibleParagraphs={2}
         disableClipPath={false}
-        />
-      <Gallery images={RadioGallery} title="Kalinga Radio Highlights" paddingClassName="py-20" forceSlider={true} />
+      />
+      <Gallery images={RadioGallery} title="Kalinga Radio Highlights" paddingClassName="py-16" forceSlider={true} />
     </div>
   );
 }

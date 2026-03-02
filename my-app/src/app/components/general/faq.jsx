@@ -968,7 +968,7 @@ const FAQ = ({
       description: item.answer || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       buttons: item.buttons || [
         { label: "Annual Reports", onClick: () => window.location.href = "/annual-reports" },
-        { label: "Placement Details", onClick: () => window.location.href = "/placements" }
+        { label: "Placement Details", onClick: () => window.location.href = "/training-and-placements" }
       ]
     }))
 
@@ -1181,7 +1181,7 @@ const FAQ = ({
         )}
 
         {/* FAQ Items */}
-        <div className="space-y-4 mt-10">
+        <div className="space-y-4">
           {itemsToRender.map((item) => {
             const isOpen = openItems.has(item.id)
             return (

@@ -145,7 +145,7 @@ function Academiccards() {
                 "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet2.webp",
             logoSrc: "",
             subtitle: "CAREER SERVICES",
-            link: "/placements",
+            link: "/training-and-placements",
         },
         {
             title: "Research Facilities",

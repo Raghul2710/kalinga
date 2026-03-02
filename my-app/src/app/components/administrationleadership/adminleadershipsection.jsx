@@ -48,7 +48,7 @@ const leaders = [
 
 export default function adminLeadershipSection() {
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Title could go here if needed, but wasn't explicitly asked for in the specific component request, 
             assuming it might be part of the page layout or just the grid. 

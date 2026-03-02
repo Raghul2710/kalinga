@@ -281,7 +281,7 @@ export default function EventCalendar({ items = [], departments = [], showNews =
                   })}
                 </div>
               ) : (
-                <div className="py-20 text-center text-gray-500 bg-gray-50 rounded-lg">
+                <div className="py-16 text-center text-gray-500 bg-gray-50 rounded-lg">
                   No events found matching your filters.
                 </div>
               )}

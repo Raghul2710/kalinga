@@ -30,6 +30,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-card-sandal: var(--card-sandal);
+  --color-lite-sand: var(--lite-sand);
+  --color-light-gray: var(--light-gray);
+  --color-card-gray: var(--card-gray);
 }
 
 body {
