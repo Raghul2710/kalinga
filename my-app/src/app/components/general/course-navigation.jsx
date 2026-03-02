@@ -43,10 +43,10 @@ export default function CourseNavigation({
   };
 
   return (
-    <section className=" z-50 pt-16 md:py-6 bg-white">
-      <div className="container mx-auto px-2">
-        <div className="bg-[var(--lite-sand)] rounded-full px-4 py-3 md:px-4 md:py-4 overflow-x-auto scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
-          <div className="flex md:flex-wrap md:items-center md:justify-center gap-3 md:gap-4 min-w-max md:min-w-0">
+    <section className="z-50 pt-8 pb-4 md:py-12 bg-white">
+      <div className="container mx-auto px-4 md:px-2">
+        <div className="bg-[var(--lite-sand)]/50 backdrop-blur-sm rounded-3xl md:rounded-full px-2 py-2 md:px-4 md:py-4 overflow-x-auto scrollbar-hide border border-[var(--dark-blue)]/5" style={{ WebkitOverflowScrolling: 'touch' }}>
+          <div className="flex md:flex-wrap md:items-center md:justify-center gap-1 md:gap-4 min-w-max md:min-w-0">
             {tabs.map((tab) => (
               <button
                 key={tab.id}

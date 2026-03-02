@@ -70,7 +70,7 @@ const Breadcrumb = () => {
           src={banner}
           alt={title}
           fill
-          className={`object-cover ${pageData?.imagePosition  
+          className={`object-cover ${pageData?.imagePosition
             ? (pageData.imagePosition.startsWith('object-') ? pageData.imagePosition : `object-${pageData.imagePosition}`)
             : 'object-top'
             } opacity-80`}
@@ -81,37 +81,37 @@ const Breadcrumb = () => {
       </div>
 
       {/* White Section Spacer */}
-      <div className="relative bg-white py-4 md:py-6 lg:py-8 z-0"></div>
+      <div className="relative bg-white py-0 md:py-6 lg:py-8 z-0"></div>
 
       {/* Page Title Card & Breadcrumbs Container */}
-      <div className="container mx-auto relative">
-        <div className="absolute z-[10] flex md:flex-row flex-col md:items-end items-start gap-2 md:gap-6 left-1/2 -translate-x-1/2 md:left-auto md:right-auto md:translate-x-0 md:bottom-[25px] -bottom-[35px] translate-y-1/2 mb-12 md:mb-16">
+      <div className="container mx-auto relative flex justify-center md:block">
+        <div className="relative md:absolute z-[10] flex md:flex-row flex-col md:items-end items-center justify-center md:justify-start gap-2 md:gap-6 md:left-0 md:bottom-[25px] md:translate-y-1/2 mt-8 mb-6 md:mt-0 md:mb-16 w-full md:w-auto">
 
           {/* Title Card */}
-          <div className="p-5 bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl md:min-h-[150px] min-h-[100px] flex justify-center items-center min-w-[330px] md:max-w-4/5 max-w-full">
+          <div className="p-5 bg-[var(--dark-blue)]/80 backdrop-blur-md rounded-2xl md:min-h-[150px] min-h-[100px] flex justify-center items-center min-w-[330px] md:max-w-4/5 w-[95%] md:w-auto">
             <h1 className="font-stix text-center text-white text-2xl md:text-4xl lg:text-5xl font-normal leading-tight">
               {title}
             </h1>
           </div>
 
           {/* Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center h-auto min-h-[40px] md:min-h-[50px] gap-1 md:pl-0 pl-4 md:mb-0 mt-3 mb-15">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center justify-start md:justify-start h-auto min-h-[40px] md:min-h-[50px] gap-x-1 gap-y-2 md:pl-0 md:mb-0 w-[95%] md:w-auto">
             {breadcrumbs.map((crumb, index) => {
               const isLast = index === breadcrumbs.length - 1;
 
               return (
-                <div key={crumb.href} className="flex items-center flex-shrink-0">
+                <div key={crumb.href} className="flex items-center">
                   {index > 0 && (
-                    <span className="text-[var(--dark-gray)] mx-2 text-sm">»</span>
+                    <span className="text-[var(--dark-gray)] mx-2 text-[11px] md:text-sm flex-shrink-0">»</span>
                   )}
                   {isLast ? (
-                    <span className="text-sm font-medium text-[var(--red)] break-normal">
+                    <span className="text-[13px] md:text-sm font-medium text-[var(--red)] break-normal leading-relaxed text-left">
                       {crumb.label}
                     </span>
                   ) : (
                     <Link
                       href={crumb.href}
-                      className="text-sm text-[var(--dark-gray)] hover:text-[var(--red)] transition-colors whitespace-nowrap"
+                      className="text-[13px] md:text-sm text-[var(--dark-gray)] hover:text-[var(--red)] transition-colors whitespace-nowrap"
                     >
                       {crumb.label}
                     </Link>
