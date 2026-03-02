@@ -226,7 +226,7 @@ export default function MainIntro({
                   )}
 
                   {/* Know More external Link */}
-                  {knowMoreHref && knowMoreHref !== "#" && (
+                  {knowMoreHref && knowMoreHref !== "#" ? (
                     (() => {
                       const isPdf = knowMoreHref.toLowerCase().endsWith(".pdf");
                       const buttonEl = (
@@ -262,16 +262,16 @@ export default function MainIntro({
                       );
                     })()
                   ) : (
-                  <GlobalArrowButton
-                    className="w-fit !bg-white !text-white gap-2 !px-0 !py-0"
-                    textClassName="!text-[var(--button-red)] !font-semibold !px-0"
-                    arrowClassName="p-[3px] !px-1 mr-2 !py-1 !bg-[var(--button-red)]"
-                    arrowIconClassName="!text-white"
-                    onClick={() => setShowAll(!showAll)}
-                  >
-                    {showAll ? "Show Less" : knowMoreLabel}
-                  </GlobalArrowButton>
-                    )}
+                    <GlobalArrowButton
+                      className="w-fit !bg-white !text-white gap-2 !px-0 !py-0"
+                      textClassName="!text-[var(--button-red)] !font-semibold !px-0"
+                      arrowClassName="p-[3px] !px-1 mr-2 !py-1 !bg-[var(--button-red)]"
+                      arrowIconClassName="!text-white"
+                      onClick={() => setShowAll(!showAll)}
+                    >
+                      {showAll ? "Show Less" : knowMoreLabel}
+                    </GlobalArrowButton>
+                  )}
                 </div>
               )}
             </div>
