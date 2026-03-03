@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // output: 'export', // Removed for Node.js server deployment
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -31,29 +31,28 @@ const nextConfig = {
     ],
     qualities: [75, 100],
   },
-  transpilePackages: ['motion', 'motion-dom', 'framer-motion'],
-  // Use webpack explicitly for DOMMatrix polyfill support
-  webpack: (config, { isServer, webpack }) => {
-    if (isServer) {
-      // Inject DOMMatrix polyfill before any modules are evaluated
-      const originalEntry = config.entry;
-      config.entry = async () => {
-        const entries = await originalEntry();
-        const polyfillPath = require('path').resolve(__dirname, 'polyfills/dommatrix.js');
-
-        // Add polyfill to all entry points
-        if (entries['main.js'] && !entries['main.js'].includes(polyfillPath)) {
-          entries['main.js'].unshift(polyfillPath);
-        }
-
-        return entries;
-      };
-    }
+  async redirects() {
+    return [
+      {
+        source: '/about',
+        destination: '/about-us',
+        permanent: true,
+      },
+    ];
+  },
+  transpilePackages: ['motion', 'framer-motion', 'motion-dom'],
+  webpack: (config) => {
+    config.resolve.extensionAlias = {
+      '.js': ['.js', '.ts', '.tsx', '.mjs'],
+      '.mjs': ['.mjs', '.js', '.ts', '.tsx'],
+    };
     return config;
   },
-  // Add empty turbopack config to silence the warning
-  // We're using webpack for the DOMMatrix polyfill
-  turbopack: {},
+  turbopack: {
+    resolveAlias: {
+      'motion-dom': 'node_modules/motion-dom/dist/es/index.mjs',
+    }
+  }
 };
 
 export default nextConfig;
