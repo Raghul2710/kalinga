@@ -48,11 +48,7 @@ const nextConfig = {
     };
     return config;
   },
-  turbopack: {
-    resolveAlias: {
-      'motion-dom': 'node_modules/motion-dom/dist/es/index.mjs',
-    }
-  }
+  turbopack: {},
 };
 
 export default nextConfig;
