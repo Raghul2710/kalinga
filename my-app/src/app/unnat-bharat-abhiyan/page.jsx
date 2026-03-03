@@ -21,7 +21,7 @@ const ubaSteps = [
     title: "Palaud",
     description: "",
     backDescription: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/check-box.png",
+    icon: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/check-box.png",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const ubaSteps = [
     title: "Kotni",
     description: "",
     backDescription: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/check-box.png",
+    icon: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/check-box.png",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const ubaSteps = [
     title: "Tandul",
     description: "",
     backDescription: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/check-box.png",
+    icon: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/check-box.png",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const ubaSteps = [
     title: "Kuhera",
     description: "",
     backDescription: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/check-box.png",
+    icon: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/check-box.png",
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ const ubaSteps = [
     title: "Parsada",
     description: "",
     backDescription: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/check-box.png",
+    icon: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/check-box.png",
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const ubaSteps = [
     title: "Kotara Bhantha",
     description: "",
     backDescription: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/check-box.png",
+    icon: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/check-box.png",
   },
 ];
 
@@ -93,7 +93,7 @@ const objectives = [
 const ubaContact = [
   {
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/chart+(1).png",
+      "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/chart+(1).png",
     title: "Dr. Sandeep Gandhi",
     subtitle: "UBA Principal Investigator (Coordinator)",
     department: "Registrar, Kalinga University",
@@ -125,17 +125,17 @@ const SECTION_TITLE_CLASSNAME = "font-stix text-1xl md:text-[30px] text-[var(--f
 
 /* ---------------- UBA Slider Images ---------------- */
 const ubaImages = [
-  { id: 1, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/1.jpg", alt: "UBA Activity 1" },
-  { id: 2, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/2.jpg", alt: "UBA Activity 2" },
-  { id: 3, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/3.jpg", alt: "UBA Activity 3" },
-  { id: 4, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/4.jpg", alt: "UBA Activity 4" },
-  { id: 5, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/5.jpg", alt: "UBA Activity 5" },
-  { id: 6, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/6.jpg", alt: "UBA Activity 6" },
-  { id: 7, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/7.jpg", alt: "UBA Activity 7" },
-  { id: 8, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/8.jpg", alt: "UBA Activity 8" },
-  { id: 9, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/9.jpg", alt: "UBA Activity 9" },
-  { id: 10, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/10.jpg", alt: "UBA Activity 10" },
-  { id: 11, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/11.jpg", alt: "UBA Activity 11" },
+  { id: 1, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/1.jpg", alt: "UBA Activity 1" },
+  { id: 2, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/2.jpg", alt: "UBA Activity 2" },
+  { id: 3, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/3.jpg", alt: "UBA Activity 3" },
+  { id: 4, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/4.jpg", alt: "UBA Activity 4" },
+  { id: 5, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/5.jpg", alt: "UBA Activity 5" },
+  { id: 6, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/6.jpg", alt: "UBA Activity 6" },
+  { id: 7, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/7.jpg", alt: "UBA Activity 7" },
+  { id: 8, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/8.jpg", alt: "UBA Activity 8" },
+  { id: 9, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/9.jpg", alt: "UBA Activity 9" },
+  { id: 10, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/10.jpg", alt: "UBA Activity 10" },
+  { id: 11, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/11.jpg", alt: "UBA Activity 11" },
 ];
 
 /* ---------------- Page ---------------- */
@@ -152,7 +152,7 @@ export default function UnnatBharatAbhiyanPage() {
       <ImageContent
         title="Unnat Bharat Abhiyan"
         description="Unnat Bharat Abhiyan (UBA) was launched by the Ministry of Education in 2014, which aims to address pressing challenges of rural India and connect them with higher education institutions for their holistic growth and development. Inspired by Gandhiji’s vision in Hind Swaraj, UBA supports the growth of self-sustained villages using eco-friendly and community-based technologies. The conceptualisation of Unnat Bharat Abhiyan started with the initiative of a group of dedicated faculty members of the Indian Institute of Technology (IIT) Delhi, working for a long time in the area of rural development and appropriate technology. India’s 70% of the population lives in rural areas, and this initiative will meet their needs of life, like food, energy, sanitation, education, health, and livelihood, reducing their migration towards their cities and improving growth and job opportunities in their areas."
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/news-6047.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/news-6047.webp"
         readmore={false}
         subtitle={false}
       />
@@ -162,14 +162,14 @@ export default function UnnatBharatAbhiyanPage() {
         description={[
           "Kalinga University proudly participates in the Unnat Bharat Abhiyan as a voluntary organisation by contributing towards rural progress. It has received approval on 07-10-2022. The university has taken significant measures to promote sustainable solutions and improve its infrastructure and lifestyle. Through fieldwork and surveys, it encourages rural empowerment by bridging the knowledge with the real community needs.",
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/students-3.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/students-3.jpg"
       />
 
       <VisionMission data={visionMissionData} showImg={false} />
 
       <ImageListItem
         items={objectives}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-students-2.jpg"
+        imageSrc="https://cdn.kalingauniversity.ac.in/common/kalinga-students-2.jpg"
         title="Goals of Unnat Bharat Abhiyan"
         description={false}
       />
@@ -191,7 +191,7 @@ export default function UnnatBharatAbhiyanPage() {
 
             <div className="bg-[var(--lite-sand)] rounded-2xl  p-2 w-[280px] sm:w-[320px] md:w-full max-w-[380px]">
               <img
-                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/chart+(1).png"
+                src="https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/chart+(1).png"
                 alt="Dr. Sandeep Gandhi"
                 className="w-full h-[300px] md:h-[380px]   object-cover rounded-2xl"
               />

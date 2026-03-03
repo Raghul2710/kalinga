@@ -110,7 +110,7 @@ const Header = () => {
       label: 'About Us',
       href: '/about-us',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/about/about-banner.webp',
         imageAlt: 'About Kalinga University',
         sections: [
           {
@@ -155,7 +155,7 @@ const Header = () => {
       label: 'Academics',
       href: '/academics',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/valueaddedcourses.webp',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/academic-facilities/valueaddedcourses.webp',
         imageAlt: 'Academic Programs',
         sections: [
           {
@@ -213,7 +213,7 @@ const Header = () => {
       label: 'Admissions',
       href: '/admissions',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-gathered.webp',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/departments/student-gathered.webp',
         imageAlt: 'Admissions at Kalinga',
         sections: [
           {
@@ -246,7 +246,7 @@ const Header = () => {
       label: 'Campus life',
       href: '#',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/campuslife.webp',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/campus-life/campuslife.webp',
         imageAlt: 'Campus Life at KU',
         sections: [
           {
@@ -278,7 +278,7 @@ const Header = () => {
       label: 'Research',
       href: '/research',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/research/reserarch-banner.webp',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/research/reserarch-banner.webp',
         imageAlt: 'Research and Innovation',
         sections: [
           {
@@ -310,7 +310,7 @@ const Header = () => {
       label: 'Placements',
       href: '/training-and-placements',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-intro.jpg',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/placement/placement-intro.jpg',
         imageAlt: 'Training and Placements',
         sections: [
           {
@@ -330,7 +330,7 @@ const Header = () => {
       label: 'Events & Activities',
       href: '/news-and-events',
       megaMenu: {
-        imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/student-grppic.webp',
+        imageUrl: 'https://cdn.kalingauniversity.ac.in/campus-life/student-grppic.webp',
         imageAlt: 'News and Events',
         sections: [
           {

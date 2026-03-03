@@ -11,35 +11,35 @@ const journeyData = [
     year: "1997",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/our-jounary-1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/our-jounary-1.webp",
     cardBg: "bg-white"
   },
   {
     year: "1998",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/our-jounary-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/our-jounary-2.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
     year: "1999",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/library-new.webp",
+    image: "https://cdn.kalingauniversity.ac.in/facilities/library-new.webp",
     cardBg: "bg-white"
   },
   {
     year: "2003",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/phd-biotechnology-n.webp",
+    image: "https://cdn.kalingauniversity.ac.in/Home/program/phd-biotechnology-n.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
     year: "2007",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/hostel.webp",
+    image: "https://cdn.kalingauniversity.ac.in/facilities/hostel.webp",
     cardBg: "bg-white"
   }
 ];

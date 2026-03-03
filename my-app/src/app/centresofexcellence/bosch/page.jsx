@@ -19,42 +19,42 @@ const learnCards = [
     title: "",
     description: "Automotive & Manufacturing Fundamentals",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-1.svg",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Problem Identification & Troubleshooting",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-2.svg",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Industry-Relevant Vocational Training",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-3.svg",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Hands-On Technical Training",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-4.svg",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Analytical & Problem-Solving Skills",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-5.svg",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Workplace & Communication Skills",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-6.svg",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-6.svg",
   },
 ];
 
@@ -62,21 +62,21 @@ const glimpses = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-glimpse1.webp",
     imageAlt: "BRIDGE Training Glimpse",
     title: "Training Session Glimpse",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-glimpse2.webp",
     imageAlt: "BRIDGE Training Glimpse",
     title: "Skill Development Activity",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/bosch/bosch-glimpse3.webp",
     imageAlt: "BRIDGE Training Glimpse",
     title: "Practical Lab Glimpse",
   },
@@ -89,7 +89,7 @@ const galleryImages = glimpses.map((g) => ({
 }));
 
 export default function BridgeCentrePage() {
-  
+
 
   return (
     <main className="bg-white">
@@ -97,7 +97,7 @@ export default function BridgeCentrePage() {
         title="BRIDGE Courses Training Centre"
         subtitle="In collaboration with BOSCH"
         description={aboutCentreDescription}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002989.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002989.png"
         imageAlt="BRIDGE Centre Banner"
         readmore={false}
       />

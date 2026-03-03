@@ -7,7 +7,7 @@ import GlobalArrowButton from "../general/global-arrow_button";
 import FlipbookTrigger from "../general/FlipbookTrigger";
 
 export default function StudentCell({
-  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/student-cell.webp",
+  imageSrc = "https://cdn.kalingauniversity.ac.in/international-students/student-cell.webp",
   imageAlt = "International students",
   tag = "International Students Cell",
   title = "Supporting Global Students At Every Step",

@@ -15,19 +15,19 @@ const chairsData = [
     id: 1,
     name: "Shaheed Veer Narayan Singh Chair",
     title: "In-charge: Dr. Ajay Shukla",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/shaheed.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/shaheed.webp",
   },
   {
     id: 2,
     name: "Amartya Sen Chair",
     title: "In-charge: Dr. Chandra Bhooshan Singh",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/amartya.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/amartya.webp",
   },
   {
     id: 3,
     name: "Weng Ming Hui Chair",
     title: "In-charge: Dr. Kali doss",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/weng.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/weng.webp",
   },
 ];
 
@@ -124,7 +124,7 @@ const tableData1 = [
 export default function Kalingachair() {
   const pathname = usePathname();
 
-  
+
   return (
     <>
 
@@ -135,7 +135,7 @@ export default function Kalingachair() {
         description={["At the heart of Kalinga University’s research and innovation, our distinguished chairs play a crucial role in knowledge advancement in different areas and in creating solutions that remove societal challenges. The chairs offer a platform to students, faculty members, researchers, and experts where they can share their unique ideas and conduct project works, presentations, competitions, guest lectures, training, and workshops. They not only contribute to the growth of the institution but also to the overall betterment of society.",
 
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/student.jpg"
         imageAlt="Kalinga University chairs"
       />
 

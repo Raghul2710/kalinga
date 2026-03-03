@@ -8,7 +8,7 @@ export default function CampusTour() {
     <section className="py-16" suppressHydrationWarning={true}>
       <div className="px-2">
         <div className="relative bg-cover bg-center rounded-2xl overflow-hidden shadow-xl mx-auto w-full h-[500px] sm:h-[500px] md:h-[600px] lg:h-[653px]" style={{
-          backgroundImage: `url('https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/college-ful-image.png')`,
+          backgroundImage: `url('https://cdn.kalingauniversity.ac.in/Home/college-ful-image.png')`,
           backgroundPosition: 'center',
           backgroundSize: 'cover'
         }}>
@@ -19,7 +19,7 @@ export default function CampusTour() {
           <div className="absolute inset-0 z-5 flex items-center justify-center">
             <div className="relative w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] md:w-[173px] md:h-[173px] md:opacity-100 opacity-30">
               <Image
-                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/360-degrees+2.png"
+                src="https://cdn.kalingauniversity.ac.in/logos/360-degrees+2.png"
                 alt="Campus Tour 360"
                 fill
                 className="object-contain"

@@ -25,7 +25,7 @@ export default function DeptSyllabus({
   rightCardSecondButtonLink,
   mobileImageHeight = null
 }) {
-  const defaultImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/bg-course.webp";
+  const defaultImageSrc = "https://cdn.kalingauniversity.ac.in/departments/bg-course.webp";
   const finalImageSrc = imageSrc || defaultImageSrc;
   const { openFlipbook } = useFlipbook();
 

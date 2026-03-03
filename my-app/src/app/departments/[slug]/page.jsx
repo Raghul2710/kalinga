@@ -349,7 +349,7 @@ export default function DynamicDepartmentPage() {
 
   const whyStudyContent = departmentData?.benefits && departmentData.benefits.length > 0 ? {
     sectionTitle: `Why Study ${(departmentData.name || "").replace(/^Faculty of\s+/i, '')}?`,
-    backgroundImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp",
+    backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: departmentData.benefits
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
       .map((benefit, index) => ({
@@ -430,7 +430,7 @@ export default function DynamicDepartmentPage() {
   }, [departmentData?.board_of_studies]);
 
   const breadcrumbData = (departmentData?.name && !loading) ? {
-    heroImage: departmentData?.banners?.[0]?.image || departmentData?.banners?.[0]?.image_url || "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/student-gathered.webp",
+    heroImage: departmentData?.banners?.[0]?.image || departmentData?.banners?.[0]?.image_url || "https://cdn.kalingauniversity.ac.in/departments/student-gathered.webp",
     pageTitle: departmentData.name,
     imageposition: "object-[45%_10%]",
     customBreadcrumbs: [

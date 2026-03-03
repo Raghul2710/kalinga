@@ -70,37 +70,37 @@ const CentralInstrumentationFacilityPage = () => {
   const quickLinks = [
     {
       id: 1,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/facility-management.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/facility-management.svg",
       title: "Advanced Instrumentation Access",
       description: "CIF at KU offers access to modern instruments that support advanced research work that needs high precision across multiple disciplines.",
     },
     {
       id: 2,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg",
       title: "Quick And Reliable Results",
       description: "Our time-tested machines minimise the time in delivering outcomes while maintaining accuracy and consistency in every analysis.",
     },
     {
       id: 3,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Curriculum.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/academics/icons/Curriculum.svg",
       title: "Customised Research Solutions",
       description: "To help researchers with diverse academic and industry needs, we provide personalised research support and guidance in complex data analysis and sample testing.",
     },
     {
       id: 4,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Trainings+%26+Workshops.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Trainings+%26+Workshops.svg",
       title: "Skill Development Programs",
       description: "We conduct workshops, certification courses, and training programs to promote research culture apart from offering access to instruments.",
     },
     {
       id: 5,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Experienced+Faculties.svg",
       title: "Dedicated CIF Experts",
       description: "Our committed research faculty members and coordinators work rigorously to provide researchers with complete guidance and support.",
     },
     {
       id: 6,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Build+Networks.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Build+Networks.svg",
       title: "Collaborative Research Partnerships",
       description: "We partner with researchers across various industries to work on a joint project and produce impactful research results.",
     },
@@ -144,7 +144,7 @@ const CentralInstrumentationFacilityPage = () => {
       name: "Sandeep Rajak",
       role: "Dr. C. V. Raman Institute of Pharmacy, Kota, Bilaspur, CG",
       quote: "Thank you for a great training session. Great presentation style with lots of opportunities to ask questions and connect them with real-life examples, which all made for an enjoyable and informative training.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/chart+(4).webp",
+      image: "https://cdn.kalingauniversity.ac.in/CIF/chart+(4).webp",
       theme: "orange"
     },
 
@@ -153,7 +153,7 @@ const CentralInstrumentationFacilityPage = () => {
       name: "Priya Jyoti",
       role: "Dr. C. V. Raman University, Kargi Road, Kota, Bilaspur, CG",
       quote: "I believe that the environment created by the teachers and all the staff was excellent during the training process. They helped a lot throughout the program, and I am really thankful to all the teachers for their immense support and guidance.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/chart+(3).webp",
+      image: "https://cdn.kalingauniversity.ac.in/CIF/chart+(3).webp",
       theme: "red"
     },
     {
@@ -161,7 +161,7 @@ const CentralInstrumentationFacilityPage = () => {
       name: "Twinkle Sharma",
       role: "Dr. C. V. Raman Institute of Pharmacy, Kota, Bilaspur, CG",
       quote: "The training session was presented in an enthusiastic way. The content can be related not only to theories but also to events and situations in daily life. I can highly recommend these training sessions. Thank you!!",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/chart+(7).webp",
+      image: "https://cdn.kalingauniversity.ac.in/CIF/chart+(7).webp",
       theme: "amber"
     },
     {
@@ -169,7 +169,7 @@ const CentralInstrumentationFacilityPage = () => {
       name: "Mumuksha Yadav",
       role: "Govt. Nagarjuna Post Graduate College of Science, Raipur, Chhattisgarh",
       quote: "It was a good experience for me, I learnt so many things from the workshop. I attended the workshop held on the HPLC biochemistry analyser, and so on. I also mentioned that the resource persons are knowledgeable and explain both practical and theoretical parts.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/chart+(1).webp",
+      image: "https://cdn.kalingauniversity.ac.in/CIF/chart+(1).webp",
       theme: "amber"
     }
   ];
@@ -182,7 +182,7 @@ const CentralInstrumentationFacilityPage = () => {
           "To fulfil the research needs in science and technology at a higher level, Central Instrumentation Facility are established at Kalinga University for students, faculty members, and research scholars. A wide range of advanced instruments, including an X-Ray Diffractometer (XRD), 3D Printer, Bio-Chemistry Analyser, and many more, are available for in-depth experimentation work under one roof. We also welcome researchers from other universities, organisations, and NGOs, promoting collaboration across different departments.",
           "Managed by a team of technical experts, KU ensures that researchers are well-supported through hands-on training programs and workshops, which not only teach them how to operate an instrument but also ways to analyse and manage data effectively. We aim to expand our sophisticated list of machines to become a National Leader in research excellence."
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/DSC07396.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/CIF/DSC07396.jpg"
         imageAlt="Central Instrumentation Facility"
         showKnowMore={true}
         initialVisibleParagraphs={1}
@@ -192,14 +192,14 @@ const CentralInstrumentationFacilityPage = () => {
         missionTitle="Mission"
         visionText="To position our Central Instrumentation Facility at the top in research standards in the field of basic and applied sciences. The aim is to facilitate researchers with high-end tools and technologies so that they can explore new horizons and address complex challenges. "
         missionText="To build a resource-rich environment where researchers can work with modern instruments, receive technical guidance, and produce impactful research outcomes that can be published in reputed journals."
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
+        imageSrc="https://cdn.kalingauniversity.ac.in/common/student.jpg"
         imageAlt="Central Instrumentation Facility"
         showImage={false}
         className="bg-white"
       />
       <ImageListItem
         items={items}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/cif-objectives+(1).webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/CIF/cif-objectives+(1).webp"
         title="Objectives of CIF"
         description="Explore state-of-the-art instruments that support advanced research across various disciplines."
         buttonText="Read More"
@@ -272,7 +272,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Civil Engineering, Interior Design, Product Design, or other related fields",
               resourcePerson: "Ar. Jayant Agrawal",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Google SketchUp Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/azFEvsHhhg12uFtu5",
@@ -292,7 +292,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Biotechnology, Material Science, Physics, and Engineering Students, Researchers, Industry Professionals",
               resourcePerson: "Dr. Abhishek Kumar Pandey",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "SEM & Microscopy Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/WJCVBNZNoYPzeZUG9",
@@ -313,7 +313,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Any undergraduate, postgraduate, or PhD Student, Research Scholars, Faculty Members, and Industry Professionals",
               resourcePerson: "Dr. Azim Khan",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Literature Review Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/kJNVJbsYwKK72B2J9",
@@ -335,7 +335,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Students (From any Academic Background), Professionals, Startup Founders, Business Owners, Investors, and Traders",
               resourcePerson: "Dr. Shinki K. Pandey, Dr. Deepti Pattnaik",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Stock Market Trading Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://surli.cc/vxybhb",
@@ -357,7 +357,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Aspiring Teachers, School & College Teachers, EdTech Enthusiasts",
               resourcePerson: "Dr. Shradha Verma",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "AI for Future Teachers Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/wu14sWWTFw2x7Jji8",
@@ -377,7 +377,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Biotechnology, Pharmacy, Biochemistry, Microbiology, Life Sciences, Researchers, Industry Professionals, Healthcare Professionals",
               resourcePerson: "Dr. Manoj Singh & Dr. Abhishek Ku. Pandey",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Protein Estimation Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/wBik5u8s8PqDGpH18",
@@ -396,7 +396,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Biotechnology, Pharmacy, Life Sciences, and MBA Students, Aspiring Entrepreneurs, Researchers, Industry Professionals",
               resourcePerson: "Prof. R. Shridhar",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Entrepreneurship in Biotechnology Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/etCwbWopxmboF4366",
@@ -417,7 +417,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Engineering, Architecture, Design Students, Product Designers, Researchers, Industry Professionals",
               resourcePerson: "Dr. V. C. Jha, Mr. Swapnil Shukla",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "3D Printing Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/x3wqSGyN3JVVSGkM9",
@@ -438,7 +438,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Biotechnology, Microbiology, Genetics, Molecular Biology, and Pharmacy Students, Researchers, Healthcare Professionals, Pharmacy Professionals, Forensic Experts",
               resourcePerson: "Dr. Sushma Dubey",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Molecular Techniques Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/RaXN6W95vH4QbCYd9",
@@ -459,7 +459,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Electrical, Mechanical, Electronics, and Automotive Engineering Students, Industry Professionals",
               resourcePerson: "Mr. Gaurav Tamrakar",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Electrical Vehicle Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/bjz6uvkksWoivMBH8",
@@ -479,7 +479,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Chemistry, Biotechnology, Environmental Science, and Chemical Engineering Students, Research Scholars, Industry Professionals",
               resourcePerson: "Dr. Sandip Prasad Tiwari & Dr. Preeti Pandey",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Advanced Instrumentation Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/RcuhamUeTnxTCkSNA",
@@ -500,7 +500,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Pharmacy, Forensic Science, Food Technology, Biotechnology, and Chemistry Students, Research Scholars, Industry Professionals",
               resourcePerson: "Ms. Khushboo Gupta",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "HPLC Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/PUCnH3ckUDLnuuQk9",
@@ -521,7 +521,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Management, IT, and Commerce, Business Analysts, Business Consultants, Industry Professionals, Research Scholars",
               resourcePerson: "Dr. Shinki K. Pandey, Dr. Deepti Pattnaik",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "Power BI Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://surl.lu/gcokdr",
@@ -541,7 +541,7 @@ const CentralInstrumentationFacilityPage = () => {
               ],
               participants: "Physics, Chemistry, Material Science, and Geology Students, Industry Professionals, Research Scholars",
               resourcePerson: "Dr. Swapnil Jain, Mr. Abhishek Sahu",
-              imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/cif-2.webp",
+              imageUrl: "https://cdn.kalingauniversity.ac.in/cif-2.webp",
               imageAlt: "X-Ray Diffractometer Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/gCgSQEyedH43aiBt7",

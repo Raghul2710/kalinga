@@ -228,7 +228,7 @@ export default function FacultyOfInformationTechnology() {
 
   // Prepare breadcrumb data - Only set when departmentData is fully loaded
   const breadcrumbData = departmentData ? {
-    heroImage: departmentData.banners?.[0]?.image || departmentData.banners?.[0]?.image_url || departmentData.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/student-computer.webp",
+    heroImage: departmentData.banners?.[0]?.image || departmentData.banners?.[0]?.image_url || departmentData.image || "https://cdn.kalingauniversity.ac.in/course/student-computer.webp",
     pageTitle: departmentData.name,
     customBreadcrumbs: [
       { label: 'Home', href: '/' },
@@ -423,7 +423,7 @@ export default function FacultyOfInformationTechnology() {
           programs={programsOffered}
           title="Programs Offered"
           description={programsOverview || ""}
-          backgroundImage={programsImage || "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/programs-offered.webp"}
+          backgroundImage={programsImage || "https://cdn.kalingauniversity.ac.in/departments/programs-offered.webp"}
           imageAlt={programsImageAlt}
         />
       )}

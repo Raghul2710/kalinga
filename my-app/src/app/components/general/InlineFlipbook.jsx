@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@$
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-const PAGE_FLIP_SOUND_URL = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/sound/pageflipsound.mp3';
+const PAGE_FLIP_SOUND_URL = 'https://cdn.kalingauniversity.ac.in/sound/pageflipsound.mp3';
 
 const PDFPage = React.forwardRef((props, ref) => {
     return (

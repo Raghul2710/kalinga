@@ -29,7 +29,7 @@ const page = () => {
       <CanteenMess />
       <RaipurVideoSection
         videoId="Wsv6dss4wSs"
-        thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/cafeteria-thumbnail.jpg"
+        thumbnail="https://cdn.kalingauniversity.ac.in/canteen-and-mess/cafeteria-thumbnail.jpg"
         title=""
         description="" // optional
         alt="Video thumbnail"

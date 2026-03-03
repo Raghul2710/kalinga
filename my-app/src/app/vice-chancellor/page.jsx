@@ -8,7 +8,7 @@ export default function Leadership() {
   return (
     <>
       <ChairmanMessage
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Shridhar.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/Leadership/Shridhar.png"
         imageAlt="Dr. R. Shridhar"
         name="Dr. R. Shridhar"
         title="Vice-Chancellor"

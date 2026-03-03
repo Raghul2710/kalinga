@@ -32,7 +32,7 @@ const MentorIntroProps = [
     subtitle: "Message from Head",
     department: "Head - IPR Cell",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-sir.webp",
+      "https://cdn.kalingauniversity.ac.in/ipr/ipr-sir.webp",
     imageAlt: "Dean - IPR Cell",
 
     quote: "Where unique ideas are protected, innovation flourishes.",
@@ -121,7 +121,7 @@ export default function IPRCellPage() {
             {aboutP1} {aboutP2}
           </>
         }
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/ipr-cell-logo.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/ipr/ipr-cell-logo.webp"
         imageAlt="IPR Cell Logo"
         readmore={true}
         buttonText="Download Research,Consultancy, and IPR Policy"
@@ -145,11 +145,11 @@ export default function IPRCellPage() {
       <section className="pb-12">
         <div className="container mx-auto px-4 flex justify-center">
           <FlipbookTrigger
-            pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/KU_REF_CITATION.pdf"
+            pdfUrl="https://cdn.kalingauniversity.ac.in/ipr/KU_REF_CITATION.pdf"
             title="KU Ref. Citation"
           >
             <Link
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/ipr/KU_REF_CITATION.pdf"
+              href="https://cdn.kalingauniversity.ac.in/ipr/KU_REF_CITATION.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >

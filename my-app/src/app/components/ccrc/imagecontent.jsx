@@ -6,7 +6,7 @@ import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 import SectionHeading from "@/app/components/general/SectionHeading";
 
 export default function ImageContent({
-  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/kif.png",
+  imageSrc = "https://cdn.kalingauniversity.ac.in/kif/kif.png",
   imageAlt = "CCRC Banner",
   imageWidth = 600,
   imageHeight = 400,

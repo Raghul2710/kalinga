@@ -35,72 +35,72 @@ const page = () => {
   const defaultGalleryImages = [
     {
       id: 5,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports5.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports5.jpg",
       alt: "Gallery-5"
     },
     {
       id: 3,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports(10).webp",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports(10).webp",
       alt: "Gallery-3"
     },
     {
       id: 12,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/activities3.jpeg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/activities3.jpeg",
       alt: "Gallery-10"
     },
     {
       id: 1,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/banner-std-welfare.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/banner-std-welfare.jpg",
       alt: "Gallery-1"
     },
     {
       id: 9,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports2.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports2.jpg",
       alt: "Gallery-8"
     },
     {
       id: 14,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/activities5.jpeg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/activities5.jpeg",
       alt: "Gallery-10"
     },
     {
       id: 7,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports(9).webp",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports(9).webp",
       alt: "Gallery-7"
     },
     {
       id: 4,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports.jpg",
       alt: "Gallery-4"
     },
     {
       id: 11,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/activities1.jpeg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/activities1.jpeg",
       alt: "Gallery-10"
     },
     {
       id: 2,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports3.png",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports3.png",
       alt: "Gallery-2"
     },
     {
       id: 10,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports4.png",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports4.png",
       alt: "Gallery-10"
     },
     {
       id: 6,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/Pic3.jpeg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/Pic3.jpeg",
       alt: "Gallery-6"
     },
     {
       id: 13,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/activities4.jpeg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/activities4.jpeg",
       alt: "Gallery-10"
     },
     {
       id: 8,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports6.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/student-welfare/sports6.jpg",
       alt: "Gallery-8"
     }
   ];
@@ -111,21 +111,21 @@ const page = () => {
       title: "Holi",
       description: "",
       videoUrl: "https://youtu.be/r0tBeANR5fQ?si=5AkLqQsjdDWPyPb_",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/Holi.png",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/student-welfare/Holi.png",
     },
     {
       id: 2,
       title: "Yoga",
       description: "",
       videoUrl: "https://youtu.be/EEI7mF68lwA?si=AQDVjiG6q7r49uez",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/yoga.png",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/student-welfare/yoga.png",
     },
     {
       id: 3,
       title: "Sports Fest",
       description: "",
       videoUrl: "https://youtu.be/YFK7EXdNd70?si=g1CllsrYuGzTGKBT",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports-fest.png",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/student-welfare/sports-fest.png",
     },
   ];
 
@@ -140,7 +140,7 @@ const page = () => {
       {/* <ImageContent
         title="Young Indians"
         subtitle={false}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/young-indian.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/student-welfare/young-indian.webp"
 
         imageAlt="Young Indians"
         hasImage={true}

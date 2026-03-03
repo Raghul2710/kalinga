@@ -13,7 +13,7 @@ const defaultContent = {
     "Kalinga University blends rigorous academics with hands-on learning, ensuring students are industry-ready from day one. Our curriculum aligns with NEP 2020, supported by experienced faculty, modern labs, and strong industry partnerships.",
     "With students from 50+ countries, a green smart campus, and vibrant clubs, we nurture global citizens who thrive in research, entrepreneurship, and community impact.",
   ],
-  imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/careers-about.webp",
+  imageUrl: "https://cdn.kalingauniversity.ac.in/careers/careers-about.webp",
   imageAlt: "Kalinga University campus",
 };
 

@@ -11,7 +11,7 @@ const EntranceExamCards = () => {
       id: 'kalsee',
       title: 'KALSEE',
       description: 'For All Programs Except BBA and MBA',
-      imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp',
+      imageUrl: 'https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp',
       href: '/kalsee', // Update with actual route if needed
       borderColor: 'border-blue-500',
     },
@@ -19,7 +19,7 @@ const EntranceExamCards = () => {
       id: 'kal-mat',
       title: 'KAL-MAT',
       description: 'For BBA and MBA Programs',
-      imageUrl: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-1.webp',
+      imageUrl: 'https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-1.webp',
       href: '/kalmat', // Update with actual route if needed
       borderColor: 'border-gray-800',
     },

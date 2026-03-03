@@ -14,42 +14,42 @@ const learnCards = [
     title: "",
     description: "Understanding of MSME Business Models & Industrial Practices",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-icon-new.svg",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-icon-new.svg",
   },
   {
     id: 2,
     title: "",
     description: "Real-Time Methods Used by Successful MSMEs",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-2.svg",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Effective Strategy Planning & Decision-Making Skills",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-3.svg",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Market Research & Opportunity Identification",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-4.svg",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Financial Planning & Risk Management",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-5.svg",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Communication & Negotiation Skills",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-6.svg",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-6.svg",
   },
 ];
 
@@ -57,21 +57,21 @@ const glimpsesImageItems = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-glimpse1.webp",
     imageAlt: "MSME Training Centre Glimpse 1",
     title: "MSME Centre Glimpse",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-glimpse2.webp",
     imageAlt: "MSME Training Centre Glimpse 2",
     title: "MSME Centre Glimpse",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/msme/msme-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/msme/msme-glimpse3.webp",
     imageAlt: "MSME Training Centre Glimpse 3",
     title: "MSME Centre Glimpse",
   },
@@ -86,12 +86,12 @@ const galleryImages = glimpsesImageItems.map((g) => ({
 export default function MSMETrainingCentrePage() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <main className="bg-white">
       <ImageContent
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/smeindia.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/smeindia.webp"
         title="Micro, Small, and Medium Enterprises (MSME) Training Centre"
         subtitle="In collaboration with IamSMEofIndia"
         description={[
@@ -106,14 +106,14 @@ export default function MSMETrainingCentrePage() {
       <Gallery images={galleryImages} title="Glimpses of MSME Centre Activities" />
 
       <RaipurVideoSection
-        videoId = "lqO-cvAVMvc"
-        thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/coe/msme-thumbnail.jpg"
-        title = "I am SME of India Chairman Rajiv Chawla on Kalinga University's MSME Session & Centre of Excellence"
-        description = "" // optional
-        alt = "Video thumbnail"
-        heightClass = "h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
-        className = "" // optional wrapper class
-    />
+        videoId="lqO-cvAVMvc"
+        thumbnail="https://cdn.kalingauniversity.ac.in/coe/msme-thumbnail.jpg"
+        title="I am SME of India Chairman Rajiv Chawla on Kalinga University's MSME Session & Centre of Excellence"
+        description="" // optional
+        alt="Video thumbnail"
+        heightClass="h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
+        className="" // optional wrapper class
+      />
 
       <AdmissionCareer />
       <style jsx global>{`

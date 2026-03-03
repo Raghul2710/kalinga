@@ -54,58 +54,58 @@ const annualReportButtons = [
   {
     id: 1,
     text: "Anti-Ragging UGC Policy",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/Ugc_Anti_ragging_Regulations.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/Ugc_Anti_ragging_Regulations.pdf",
   },
   {
     id: 2,
     text: "National Ragging Prevention Programme",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/antiragging-information.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/antiragging-information.pdf",
   },
 ];
 const AntiImages = [
   {
     id: 1,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(1).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(1).webp",
     alt: "anti(1)",
   },
   {
     id: 2,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(2).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(2).webp",
     alt: "anti(2)",
   },
   {
     id: 3,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(3).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(3).webp",
     alt: "anti(3)",
   },
   {
     id: 4,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(4).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(4).webp",
     alt: "anti(4)",
   },
   {
     id: 5,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(5).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(5).webp",
     alt: "anti(5)",
   },
   {
     id: 6,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(6).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(6).webp",
     alt: "anti(6)",
   },
   {
     id: 7,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(7).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(7).webp",
     alt: "anti(7)",
   },
   {
     id: 8,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(8).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(8).webp",
     alt: "anti(8)",
   },
   {
     id: 9,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/anti-ragging(9).webp",
+    image: "https://cdn.kalingauniversity.ac.in/anti-ragging-cell/anti-ragging(9).webp",
     alt: "anti(9)",
   },
 ];
@@ -114,7 +114,7 @@ const AntiImages = [
 export default function Page() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <>
@@ -128,7 +128,7 @@ export default function Page() {
         ]}
         readMoreLabel="Read More"
         readLessLabel="Read Less"
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/students-3.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/students-3.jpg"
         imageAlt="Anti-Ragging Cell - Kalinga University"
         showKnowMore={false}
         initialVisibleParagraphs={1}
@@ -138,7 +138,7 @@ export default function Page() {
 
       <ImageListItem
         items={objectives}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/anti-ragging-cell/2149502730.jpg"
+        imageSrc="https://cdn.kalingauniversity.ac.in/anti-ragging-cell/2149502730.jpg"
         title="Anti-Ragging Policy"
         description="As per the order of Supreme Court of India and subsequent Notification from University Grants Commission (UGC), ragging constitutes one or more of any intention by any student or group of students on:"
       />

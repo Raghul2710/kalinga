@@ -147,11 +147,11 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Ordinance No. 48"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ordinance+No.+48+(16.09.2013).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Ordinance+No.+48+(16.09.2013).pdf"
             />
             <LinkItem
               label="Revised Ordinance No. 48"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Amended+Ordinance+No.+48+(18.02.2022).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Amended+Ordinance+No.+48+(18.02.2022).pdf"
             />
           </ul>
         ),
@@ -162,23 +162,23 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Cover Page Format"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University-+Cover+Page+-Thesis.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Kalinga+University-+Cover+Page+-Thesis.pdf"
             />
             <LinkItem
               label="Synopsis Format"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University+-Synopsis+Format+-Cover+Page+(1).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Kalinga+University+-Synopsis+Format+-Cover+Page+(1).pdf"
             />
             <LinkItem
               label="Summary Format"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University+-Summary+Format-+Cover+page.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Kalinga+University+-Summary+Format-+Cover+page.pdf"
             />
             <LinkItem
               label="Arrangement of Thesis Content"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/ARRANGEMENT+OF+THESIS+CONTENTS.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/ARRANGEMENT+OF+THESIS+CONTENTS.pdf"
             />
             <LinkItem
               label="Thesis Chapterization"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University-+Thesis+Chapterization_Final.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Kalinga+University-+Thesis+Chapterization_Final.pdf"
             />
           </ul>
         ),
@@ -189,7 +189,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Ph.D. Admission Policy"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/2.+Admission+poilcy+(1).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/2.+Admission+poilcy+(1).pdf"
             />
           </ul>
         ),
@@ -200,7 +200,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Detailed Syllabus"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Detailed+Syllabus.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Detailed+Syllabus.pdf"
             />
           </ul>
         ),
@@ -211,7 +211,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Fellowship Scholarship Policy"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/3.+Fellowship+Scholarship+Policy+for+Ph.D.+Scholars.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/3.+Fellowship+Scholarship+Policy+for+Ph.D.+Scholars.pdf"
             />
           </ul>
         ),
@@ -222,7 +222,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Grievance Redress Policy"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/6+POLICY+FOR+GRIEVANCE+REDRESS+MECHANISM+OF+SCHOLARS.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/6+POLICY+FOR+GRIEVANCE+REDRESS+MECHANISM+OF+SCHOLARS.pdf"
             />
           </ul>
         ),
@@ -233,7 +233,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Best Practices & Process Improvement"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Best+Practices+%26+Process+Improvement+(1).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Best+Practices+%26+Process+Improvement+(1).pdf"
             />
           </ul>
         ),
@@ -244,15 +244,15 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="2022"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGC+Regulation+2022+(1).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/UGC+Regulation+2022+(1).pdf"
             />
             <LinkItem
               label="2016"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGC+Regulations+2016+(1).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/UGC+Regulations+2016+(1).pdf"
             />
             <LinkItem
               label="2018"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGCNotification_Plagiarism_2018.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/UGCNotification_Plagiarism_2018.pdf"
             />
           </ul>
         ),
@@ -263,7 +263,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Ph.D. Notification 2025-26"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2025+Notification+26-07-2025.pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Ph.+D.+2025+Notification+26-07-2025.pdf"
             />
           </ul>
         ),
@@ -328,7 +328,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
                     "YOGA",
                     <img
                       key="img1"
-                      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/phd_scholar_1.jpg"
+                      src="https://cdn.kalingauniversity.ac.in/phd/phd_scholar_1.jpg"
                       alt="ROBIN KUMAR VERMA"
                     />,
                   ],
@@ -342,7 +342,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
                     "YOGA",
                     <img
                       key="img2"
-                      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/phd_scholar_2.jpg"
+                      src="https://cdn.kalingauniversity.ac.in/phd/phd_scholar_2.jpg"
                       alt="SHUBHAM SINGH"
                     />,
                   ],
@@ -356,7 +356,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
                     "ZOOLOGY",
                     <img
                       key="img3"
-                      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-scholar-priya.webp"
+                      src="https://cdn.kalingauniversity.ac.in/phd/Phd-scholar-priya.webp"
                       alt="PRIYA"
                     />,
                   ],
@@ -370,7 +370,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
                     "ZOOLOGY",
                     <img
                       key="img4"
-                      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/phd_scholar_4.jpg"
+                      src="https://cdn.kalingauniversity.ac.in/phd/phd_scholar_4.jpg"
                       alt="SHEETAL NAIK"
                     />,
                   ],
@@ -386,7 +386,7 @@ export default function PhdResourcesAccordion({ className = "" }) {
           <ul className="flex flex-wrap gap-3">
             <LinkItem
               label="Undertaking"
-              href="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Undertaking+(1).pdf"
+              href="https://cdn.kalingauniversity.ac.in/phd/Undertaking+(1).pdf"
             />
           </ul>
         ),

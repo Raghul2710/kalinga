@@ -8,7 +8,7 @@ export default function Leadership() {
   return (
     <>
       <ChairmanMessage
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Arora.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/Leadership/Sandeep+Arora.png"
         imageAlt="Dr. Sandeep Arora"
         name="Dr. Sandeep Arora"
         title="Chancellor"

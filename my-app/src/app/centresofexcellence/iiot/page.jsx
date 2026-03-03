@@ -18,42 +18,42 @@ const learnCards = [
     title: "",
     description: "Understanding of Industrial IoT Architecture",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-1.svg",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Working of Industrial Sensors & Devices",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-2.svg",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Real-Time Data Monitoring & Analysis",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-3.svg",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Cloud Connectivity & Data Integration",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-4.svg",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "IIoT Communication Protocols",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-5.svg",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Dashboard & Visualization Tools",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-6.svg",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-6.svg",
   },
 ];
 
@@ -61,21 +61,21 @@ const glimpses = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-glimpse1.webp",
     imageAlt: "IIoT Training Session",
     title: "Training Session Glimpse",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-glimpse2.webp",
     imageAlt: "IIoT Live Dashboard",
     title: "Live Dashboard Demo",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/iiot/iiot-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/iiot/iiot-glimpse3.webp",
     imageAlt: "IIoT Industry Interaction",
     title: "Industry Expert Interaction",
   },
@@ -90,7 +90,7 @@ const galleryImages = glimpses.map((g) => ({
 export default function IIoTTrainingCentrePage() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <main className="bg-white">
@@ -98,7 +98,7 @@ export default function IIoTTrainingCentrePage() {
         title="Industrial Internet of Things (IIoT) Training Centre"
         subtitle="In collaboration with Technoviz Automation"
         description={aboutCentreDescription}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002977.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002977.png"
         imageAlt="IIoT Training Centre"
         readmore={false}
       />

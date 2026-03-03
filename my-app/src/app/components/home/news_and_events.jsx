@@ -63,7 +63,7 @@ export default function NewsEvents({ categoryId, categoryIds, title, fallback = 
             setFeaturedNews({
               id: featured.id,
               title: featured.heading,
-              image: featured.images && featured.images.length > 0 ? featured.images[0].image : 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+              image: featured.images && featured.images.length > 0 ? featured.images[0].image : 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
               date: featured.date,
               badgeText: featured.category_name,
               slug: featured.slug
@@ -78,7 +78,7 @@ export default function NewsEvents({ categoryId, categoryIds, title, fallback = 
               id: item.id,
               date: item.date,
               title: item.heading,
-              image: item.images && item.images.length > 0 ? item.images[0].image : 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+              image: item.images && item.images.length > 0 ? item.images[0].image : 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
               slug: item.slug
             }))
 
@@ -99,7 +99,7 @@ export default function NewsEvents({ categoryId, categoryIds, title, fallback = 
               id: item.id,
               date: item.date,
               title: item.heading,
-              image: item.images && item.images.length > 0 ? item.images[0].image : 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+              image: item.images && item.images.length > 0 ? item.images[0].image : 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
               slug: item.slug
             }));
           } else {
@@ -110,7 +110,7 @@ export default function NewsEvents({ categoryId, categoryIds, title, fallback = 
                 id: item.id,
                 date: item.date, // YYYY-MM-DD
                 title: item.heading,
-                image: item.images && item.images.length > 0 ? item.images[0].image : 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+                image: item.images && item.images.length > 0 ? item.images[0].image : 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
                 slug: item.slug
               }));
           }
@@ -292,7 +292,7 @@ export default function NewsEvents({ categoryId, categoryIds, title, fallback = 
                       aria-label="Previous day"
                     >
                       <img
-                        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/arrow.png"
+                        src="https://cdn.kalingauniversity.ac.in/common/arrow.png"
                         alt="Previous"
                         className="sm:w-10 sm:h-10 object-contain rotate-0"
                       />
@@ -333,7 +333,7 @@ export default function NewsEvents({ categoryId, categoryIds, title, fallback = 
                       aria-label="Next day"
                     >
                       <img
-                        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/arrow.png"
+                        src="https://cdn.kalingauniversity.ac.in/common/arrow.png"
                         alt="Next"
                         className="sm:w-10 sm:h-10 object-contain rotate-180"
                       />

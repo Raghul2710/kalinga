@@ -7,15 +7,15 @@ import SectionHeading from '../general/SectionHeading';
 const KIFCertificateSection = ({ className = "" }) => {
     const logos = [
         {
-            src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/startup+india.png",
+            src: "https://cdn.kalingauniversity.ac.in/kif/startup+india.png",
             alt: "Startup India"
         },
         {
-            src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/mca.png",
+            src: "https://cdn.kalingauniversity.ac.in/kif/mca.png",
             alt: "Ministry of Corporate Affairs"
         },
         {
-            src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/msme.png",
+            src: "https://cdn.kalingauniversity.ac.in/kif/msme.png",
             alt: "Ministry of MSME"
         }
     ];
@@ -50,7 +50,7 @@ const KIFCertificateSection = ({ className = "" }) => {
                         </div>
 
                         <Link
-                            href="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/KIF%2BMCA_compressed_removed.pdf"
+                            href="https://cdn.kalingauniversity.ac.in/kif/KIF%2BMCA_compressed_removed.pdf"
                             target="_blank"
                             className="inline-flex items-center gap-2 text-[var(--button-red)] font-semibold text-lg hover:underline transition-colors"
                         >
@@ -83,7 +83,7 @@ const KIFCertificateSection = ({ className = "" }) => {
                     {/* Right Column: Image */}
                     <div className="relative w-full h-[500px] lg:h-full min-h-[400px]">
                         <Image
-                            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k1.jpg"
+                            src="https://cdn.kalingauniversity.ac.in/kif/k1.jpg"
                             alt="Kalinga Incubation Foundation"
                             fill
                             className="object-cover rounded-2xl shadow-lg"

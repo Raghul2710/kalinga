@@ -11,28 +11,28 @@ const AccreditationRanking = ({
 }) => {
   // Default accreditations if none provided
   const defaultAccreditations = [
-    { id: 1, name: 'NIRF', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/nirf-logo-new.jpeg' },
-    { id: 2, name: 'NAAC B+', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/naac.webp' },
-    { id: 2, name: 'UGC Grant', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp' },
-    { id: 4, name: 'AICTE', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/acite.webp' },
-    { id: 5, name: 'NCTE', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002978.png' },
-    { id: 6, name: 'BCI', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/bci.webp' },
-    { id: 7, name: 'PCI', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002980.png' },
-    { id: 8, name: 'CG Government', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/cg-government.webp' },
+    { id: 1, name: 'NIRF', logo: 'https://cdn.kalingauniversity.ac.in/accreditation/nirf-logo-new.jpeg' },
+    { id: 2, name: 'NAAC B+', logo: 'https://cdn.kalingauniversity.ac.in/Home/naac.webp' },
+    { id: 2, name: 'UGC Grant', logo: 'https://cdn.kalingauniversity.ac.in/Home/ugc.webp' },
+    { id: 4, name: 'AICTE', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp' },
+    { id: 5, name: 'NCTE', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002978.png' },
+    { id: 6, name: 'BCI', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/bci.webp' },
+    { id: 7, name: 'PCI', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002980.png' },
+    { id: 8, name: 'CG Government', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/cg-government.webp' },
 
 
 
 
-    // { id: 1, name: 'Best Practices', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/best-prac.webp' },
-    // { id: 2, name: 'Best Research', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/best-res.webp' },
-    // { id: 3, name: 'Competition Success', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/comp-top.webp' },
-    // { id: 4, name: 'Outlook', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/outlook.webp' },
-    // { id: 5, name: 'Competition 3', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/comp-3.webp' },
-    // { id: 6, name: 'UGC Grant', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-gra.webp' },
-    // { id: 7, name: 'Competition', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/comp.webp' },
-    // { id: 8, name: 'India Today', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/india-today.webp' },
-    // { id: 9, name: 'Global', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/global.webp' },
-    // { id: 10, name: 'NIRF', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/nirf.png' },
+    // { id: 1, name: 'Best Practices', logo: 'https://cdn.kalingauniversity.ac.in/logos/best-prac.webp' },
+    // { id: 2, name: 'Best Research', logo: 'https://cdn.kalingauniversity.ac.in/logos/best-res.webp' },
+    // { id: 3, name: 'Competition Success', logo: 'https://cdn.kalingauniversity.ac.in/logos/comp-top.webp' },
+    // { id: 4, name: 'Outlook', logo: 'https://cdn.kalingauniversity.ac.in/logos/outlook.webp' },
+    // { id: 5, name: 'Competition 3', logo: 'https://cdn.kalingauniversity.ac.in/logos/comp-3.webp' },
+    // { id: 6, name: 'UGC Grant', logo: 'https://cdn.kalingauniversity.ac.in/logos/ugc-gra.webp' },
+    // { id: 7, name: 'Competition', logo: 'https://cdn.kalingauniversity.ac.in/logos/comp.webp' },
+    // { id: 8, name: 'India Today', logo: 'https://cdn.kalingauniversity.ac.in/logos/india-today.webp' },
+    // { id: 9, name: 'Global', logo: 'https://cdn.kalingauniversity.ac.in/logos/global.webp' },
+    // { id: 10, name: 'NIRF', logo: 'https://cdn.kalingauniversity.ac.in/logos/nirf.png' },
   ]
 
   const accreditationsList = accreditations || defaultAccreditations

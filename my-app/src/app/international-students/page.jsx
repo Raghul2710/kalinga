@@ -29,7 +29,7 @@ export default function InternationalStudents() {
       date: "November 10 · 2025",
       category: "Research & Innovation",
       description: "Join us for our annual research symposium featuring cutting-edge research presentations, keynote speakers, and networking opportunities for researchers and academics.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ export default function InternationalStudents() {
       date: "December 05 · 2025",
       category: "Education",
       description: "A global gathering of educators, policymakers, and thought leaders to discuss the future of higher education and innovative teaching methodologies.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function InternationalStudents() {
       date: "January 20 · 2026",
       category: "Technology",
       description: "Explore the latest trends in technology, artificial intelligence, and digital transformation in education and industry applications.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
     },
   ]
   const videoItems = [
@@ -53,36 +53,36 @@ export default function InternationalStudents() {
       id: 1,
       title: "David Giir Riiny",
       description: "B.tech Student",
-      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_AIML_TESTOMONIAL_02.mp4",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/david.png",
+      videoUrl: "https://cdn.kalingauniversity.ac.in/international-students/REEL_AIML_TESTOMONIAL_02.mp4",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/international-students/david.png",
     },
     {
       id: 2,
       title: "Salima Naguago",
       description: "Pharmacy Student",
-      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_01.mp4",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_01.mp4",
+      videoUrl: "https://cdn.kalingauniversity.ac.in/international-students/REEL_PHARMA_TESTIMONIALS_01.mp4",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/international-students/REEL_PHARMA_TESTIMONIALS_01.mp4",
     },
     {
       id: 3,
       title: "Khazi lupiya",
       description: "Pharmacy Student",
-      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_04.mp4",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_PHARMA_TESTIMONIALS_04.mp4",
+      videoUrl: "https://cdn.kalingauniversity.ac.in/international-students/REEL_PHARMA_TESTIMONIALS_04.mp4",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/international-students/REEL_PHARMA_TESTIMONIALS_04.mp4",
     },
     {
       id: 4,
       title: "Palchin Upadhyay",
       description: "BA Gen Student",
-      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_01.mp4",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_01.mp4",
+      videoUrl: "https://cdn.kalingauniversity.ac.in/international-students/REEL_TESTIMONIAL_BJMC_01.mp4",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/international-students/REEL_TESTIMONIAL_BJMC_01.mp4",
     },
     {
       id: 5,
       title: "Issac",
       description: "BSW Student",
-      videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_02.mp4",
-      thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/REEL_TESTIMONIAL_BJMC_02.mp4",
+      videoUrl: "https://cdn.kalingauniversity.ac.in/international-students/REEL_TESTIMONIAL_BJMC_02.mp4",
+      thumbnail: "https://cdn.kalingauniversity.ac.in/international-students/REEL_TESTIMONIAL_BJMC_02.mp4",
     },
   ]
   const boxItems = [
@@ -132,98 +132,98 @@ export default function InternationalStudents() {
       id: 1,
       title: 'From Pre-Arrival to Post-Arrival Support',
       body: 'From pre-arrival guidance on visa, travel planning, and admissions to post-arrival assistance with pickup, documentation, campus tours, and inductions, our International Students Cell will ensure that your journey is hassle-free.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/counselling.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/international-students/counselling.svg',
       variant: 'gray',
     },
     {
       id: 2,
       title: 'Career Counselling',
       body: 'Our primary aim is to navigate your journey towards the right direction by providing career guidance and support, helping you select your dream career.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/customer-service.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/international-students/customer-service.svg',
       variant: 'amber',
     },
     {
       id: 3,
       title: 'Holistic Development And Explorative Learning',
       body: 'With our 360-degree learning approach, your learning will not be limited to just classroom-based studies, but you will also learn practical skills through interactive workshops, hands-on training programs, industrial visits, project work, and case studies.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Holistic+Development.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Holistic+Development.svg',
       variant: 'gray',
     },
     {
       id: 4,
       title: 'Choose From Diverse Programs',
       body: 'Our programs are designed to provide updated industry-relevant knowledge to our students. From Fashion Designing to Biotechnology, choose from unlimited career options.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Wide+Range+of+Programs.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Wide+Range+of+Programs.svg',
       variant: 'amber',
     },
     {
       id: 5,
       title: 'English Is Our Primary Language',
       body: 'English is one of the widely spoken languages in the world, and at Kalinga, you will not face any language barrier. All our programs are taught in English by highly qualified professors, and your friends from all around the Globe will even communicate with you in English.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Global.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Global.svg',
       variant: 'gray',
     },
     {
       id: 6,
       title: 'Co-curricular And Extracurricular Activities',
       body: 'Participate in competitions, workshops, events, seminars, National and International conferences, training programs, tribal fests, and more. The University also offers indoor and outdoor sports facilities and even conducts sports competitions.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Cultural+Celebrations.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Cultural+Celebrations.svg',
       variant: 'amber',
     },
     {
       id: 7,
       title: 'Extensive Research Facilities',
       body: "With 90 + Labs, including IT Labs and CIF labs, we're Chhattisgarh's No. 1 institute, committed to innovation and groundbreaking research facilities.",
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg',
       variant: 'gray',
     },
     {
       id: 8,
       title: 'Build Networks And Lifelong Connections',
       body: "Here, you'll not just study but collaborate, meet industry leaders, make new connections, learn new languages, participate in multi-cultural programs, and grow together.",
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Networking+Opportunities.svg',
       variant: 'amber',
     },
     {
       id: 9,
       title: 'Multicultural Environment',
       body: 'With students from different countries, our campus buzzes with high energy, new cultures, ideas, friendships, and celebrations.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Cultural+Celebrations.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Cultural+Celebrations.svg',
       variant: 'gray',
     },
     {
       id: 10,
       title: 'Unmatched Support and Guidance',
       body: 'We let our students enjoy their academic journey without any obstacles, as our international student cell guides them at every step. From enrollment in a program till the convocation ceremony, we ensure that they get a seamless experience.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mentor-Mentee+System.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Mentor-Mentee+System.svg',
       variant: 'amber',
     },
     {
       id: 11,
       title: 'Residential Facilities',
       body: 'We have well-furnished separate hostels for both boys and girls for our international students where all their needs are properly taken care of and they can live comfortably in a supportive environment.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/campus+life.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/campus+life.svg',
       variant: 'gray',
     },
     {
       id: 12,
       title: 'Enjoy an Economical Lifestyle',
       body: 'Enjoy a vibrant lifestyle at a feasible rate in Raipur, Chhattisgarh. From affordable shopping markets to transportation systems, enjoy a rich culture and diversity.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Community+Services.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Community+Services.svg',
       variant: 'amber',
     },
     {
       id: 13,
       title: 'Mentor-Mentee System',
       body: 'Our faculty members build one-on-one connections with every student so that their issues can be identified and solved early.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mentor-Mentee+System.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Mentor-Mentee+System.svg',
       variant: 'gray',
     },
     {
       id: 14,
       title: 'Emotional Well-Being',
       body: 'To cope with academic stress, mental health issues, and social anxiety, we organise well-being programs for our students according to their needs so that their voices can be heard and acted upon.',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/emotional-regulation.svg',
+      image: 'https://cdn.kalingauniversity.ac.in/international-students/emotional-regulation.svg',
       variant: 'amber',
     },
   ];
@@ -312,7 +312,7 @@ export default function InternationalStudents() {
   const internationalAdmissionSteps = [
     {
       id: 1,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-2.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/step-2.svg",
       stepNumber: "01",
       title: "Step 1",
       description: "Document Verification",
@@ -320,7 +320,7 @@ export default function InternationalStudents() {
     },
     {
       id: 2,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-4.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/step-4.svg",
       stepNumber: "02",
       title: "Step 2",
       description: "Offer letter",
@@ -328,7 +328,7 @@ export default function InternationalStudents() {
     },
     {
       id: 3,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-1.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/step-1.svg",
       stepNumber: "03",
       title: "Step 3",
       description: "Registration fee",
@@ -336,7 +336,7 @@ export default function InternationalStudents() {
     },
     {
       id: 4,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-5.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/step-5.svg",
       stepNumber: "04",
       title: "Step 4",
       description: "Admission and Visa Letter",
@@ -354,7 +354,7 @@ export default function InternationalStudents() {
           "From pre-arrival to post-arrival, we're here to support them at every step of their academic journey. We conduct one-on-one counselling sessions for every student, helping them select the programs of their interest. Our highly experienced faculty members provide unparalleled mentorship to our international students in academics and personal growth. Explore Diploma, UG, PG, and Doctorate programs designed to meet your academic aspirations.",
           "At Kalinga, you're not just another student but a part of a global community where IDEAS are nurtured, and DREAMS are fulfilled."
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/international-students-intro.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/international-students/international-students-intro.jpg"
         imageAlt="International Students"
         initialVisibleParagraphs={2}
         showKnowMore={true}
@@ -366,7 +366,7 @@ export default function InternationalStudents() {
       />
 
       <ImageListItem
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-3.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/international-students/int-g-3.webp"
         boxItems={boxItems}
         title="Why study in India"
         subtitle=""
@@ -383,7 +383,7 @@ export default function InternationalStudents() {
         title="Why International Students Choose Kalinga University?"
         subtitle=""
         description="At Kalinga University, international students discover an education hub designed for global success. From academic excellence to an inclusive learning environment, every step of their journey is thoughtfully designed so that they can focus on fulfilling their aspirations."
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-why.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/international-students/int-why.jpg"
         imageAlt="International Students"
         cards={internationalStudentsFeatureCards}
       />
@@ -401,7 +401,7 @@ export default function InternationalStudents() {
           "At Kalinga University, you'll find the world in one place. With students from 29+ countries, we celebrate their cultures, faiths, and beliefs. We offer an inclusive environment to all our students where they can freely practice their religion and stay connected with their roots.",
           "Our multi-faith services are accessible to all students at our campus, which include:"
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/international-students-group.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/international-students/international-students-group.webp"
         imageAlt="International Students"
         reverseLayout={true}
         applyTransform3dSlant={false}
@@ -449,14 +449,14 @@ export default function InternationalStudents() {
         title="Download Brochure 2025-26"
         description="Kalinga University follows a well-defined governance structure that ensures smooth administration, transparency, and institutional excellence."
         buttonLabel="Download PDF"
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/International+Student_compressed.pdf"
+        href="https://cdn.kalingauniversity.ac.in/international-students/International+Student_compressed.pdf"
         useContainer={true}
       />
       <MainIntro
         subtitle="Campus Safety and Security"
         title="A Safe & Protected Learning Environment "
         description="Kalinga University is committed to maintaining a safe and secure campus environment for its students, staff members, and visitors. The entire campus area, including hostels, parking areas, and academic buildings, is very well-secured by the in-house security team. CCTV cameras are also installed all across the campus to continuously monitor all the activities of the University. We even encourage everyone on our campus to take care of their personal belongings. "
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-sage.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/international-students/int-sage.jpg"
         imageAlt="International Students"
         initialVisibleParagraphs={1}
         showKnowMore={true}
@@ -484,14 +484,14 @@ export default function InternationalStudents() {
         title="Glimpses"
         description="Explore the vibrant life of our international students at Kalinga University. From cultural celebrations to academic achievements, witness the diverse experiences that make our campus a global community."
         images={[
-          { id: 1, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-1.webp", alt: "International Students Introduction" },
-          { id: 2, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-2.webp", alt: "Why Choose Kalinga University" },
-          { id: 3, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-3.webp", alt: "International Students Group" },
-          { id: 4, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-4.webp", alt: "Campus Safety and Security" },
-          { id: 5, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-5.webp", alt: "International Students Banner" },
-          { id: 6, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-6.webp", alt: "International Students Banner" },
-          { id: 7, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-7.webp", alt: "International Students Banner" },
-          { id: 8, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/int-g-8.webp", alt: "International Students Banner" },
+          { id: 1, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-1.webp", alt: "International Students Introduction" },
+          { id: 2, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-2.webp", alt: "Why Choose Kalinga University" },
+          { id: 3, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-3.webp", alt: "International Students Group" },
+          { id: 4, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-4.webp", alt: "Campus Safety and Security" },
+          { id: 5, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-5.webp", alt: "International Students Banner" },
+          { id: 6, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-6.webp", alt: "International Students Banner" },
+          { id: 7, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-7.webp", alt: "International Students Banner" },
+          { id: 8, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-8.webp", alt: "International Students Banner" },
         ]}
       />
       <AdmissionCareer />

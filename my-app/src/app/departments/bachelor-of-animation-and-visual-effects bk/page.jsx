@@ -20,7 +20,7 @@ import QuickLinks from "@/app/components/general/quick_links";
 function Courses() {
   const pathname = usePathname();
 
-  
+
   // MainIntro content
   const mainIntroContent = {
     title: "Have you ever wondered how impossible visuals are used in movies and games?",
@@ -29,7 +29,7 @@ function Courses() {
       "A Bachelor of Animation & Visual Effects (B.An & VFX) program is a magical career option for individuals interested in bringing their unique ideas to the screen. The program focuses on creating moving images and visuals for the entertainment industry, utilising various artistic and technical skills for games, films, television, and other digital platforms.",
       "Students will learn 2D and 3D animation techniques, character design, VFX simulations, storyboarding, and the tools and software used in the industry.",
     ],
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
     imageAlt: "Kalinga University campus",
   };
 
@@ -55,7 +55,7 @@ function Courses() {
 
   // EligibilityCriteria content
   const eligibilityContent = {
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/course_page.webp",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/course/course_page.webp",
     imageAlt: "Students",
     duration: "3 Years (6 Semesters)",
     title: "Eligibility Criteria",
@@ -77,55 +77,55 @@ function Courses() {
         id: 1,
         title: "3D Animator",
         description: "Create 3D space, characters, and objects using advanced animation techniques.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/3D-Animator.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/3D-Animator.svg",
       },
       {
         id: 2,
         title: "VFX Artist",
         description: "Create realistic effects like a transformation or an explosion by combining footage.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/vfx.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/vfx.svg",
       },
       {
         id: 3,
         title: "Storyboard Artist",
         description: "Plan camera angles, shots, and scenes before production begins.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/storyboard.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/storyboard.svg",
       },
       {
         id: 4,
         title: "Motion Graphics Designer",
         description: "Create animated visuals by combining animation, graphic design, and storytelling.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/graphic-designer.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/graphic-designer.svg",
       },
       {
         id: 5,
         title: "Character Designer",
         description: "Bring characters to life through sketches, digital arts, and 3D models.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/Character+Designer.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/Character+Designer.svg",
       },
       {
         id: 6,
         title: "Video Editor",
         description: "Convert raw footage into a final polished video using different editing software.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/Video+Editor.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/Video+Editor.svg",
       },
       {
         id: 7,
         title: "Game Animator",
         description: "Use animation software to develop characters, objects, and creatures.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/Game+Animator.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/Game+Animator.svg",
       },
       {
         id: 8,
         title: "Compositing Artist",
         description: "Combine multiple visual elements and create a realistic final image.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/Compositing+Artist.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/Compositing+Artist.svg",
       },
       {
         id: 9,
         title: "Texturing Artist",
         description: "Create and apply textures to 3D models in games, movies, and animations.",
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/icons/Texturing+Artist.svg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/course/icons/Texturing+Artist.svg",
       },
     ],
   };
@@ -133,28 +133,28 @@ function Courses() {
   // WhyStudy content
   const whyStudyContent = {
     sectionTitle: "Specialization",
-    backgroundImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp",
+    backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: [
       {
         id: 1,
         title: "Become Tech-Savvy",
         body: "The world needs new technologies, and companies are hunting for skilled professionals who generate code or are good problem solvers. We'll help you turn your ideas into a viral application.",
         variant: "gray",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Global.svg",
+        image: "https://cdn.kalingauniversity.ac.in/icons/Global.svg",
       },
       {
         id: 2,
         title: "Industry-Ready Programs",
         body: "We design programs with the latest tools and industry practices so you graduate with the skills employers seek and the confidence to build real-world solutions.",
         variant: "amber",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/university.svg",
+        image: "https://cdn.kalingauniversity.ac.in/icons/university.svg",
       },
       {
         id: 3,
         title: "Future-Proof Skills",
         body: "Learn critical thinking, communication, and collaboration alongside core tech so you can adapt quickly and lead in fast-changing digital environments.",
         variant: "gray",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg",
+        image: "https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg",
       },
     ],
   };
@@ -208,19 +208,19 @@ function Courses() {
     links: [
       {
         id: 1,
-        // icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+        // icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
         title: "Kalinga Incubation Foundation (KIF)",
         description: "KIF converts students' bold and unique entrepreneurial ideas into ACTION by providing all-around support.",
       },
       {
         id: 2,
-        // icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship.svg",
+        // icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship.svg",
         title: "Corporate Training And Consultancy Division (CTCD)",
         description: "CTCD offers customised training programs to junior, middle, and senior levels of management of different companies.",
       },
       {
         id: 3,
-        // icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
+        // icon: "https://cdn.kalingauniversity.ac.in/admission/elgbility.svg",
         title: "Career Development Centre",
         description: "It connects students with different companies and trains them in essential skills, helping them achieve their personal and professional goals.",
       },

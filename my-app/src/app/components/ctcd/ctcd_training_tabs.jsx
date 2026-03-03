@@ -27,10 +27,10 @@ function BulletList({ items }) {
 
 const trainingGlimpse = [
     // Replace these URLs with your actual CTCD images (same as Figma)
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+    "https://cdn.kalingauniversity.ac.in/common/student.jpg",
+    "https://cdn.kalingauniversity.ac.in/common/student.jpg",
+    "https://cdn.kalingauniversity.ac.in/common/student.jpg",
+    "https://cdn.kalingauniversity.ac.in/common/student.jpg",
 ];
 
 // Transform trainingGlimpse to Gallery component format
@@ -49,44 +49,44 @@ const GALLERY_IMAGES = transformToGalleryImages(trainingGlimpse);
 
 // Training Projects Gallery Images
 const trainingProjectsImages = [
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(5).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(6).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-2.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-3.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-4.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(5).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(6).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects-2.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects-3.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects-4.webp",
 ];
 const TRAINING_PROJECTS_GALLERY_IMAGES = transformToGalleryImages(trainingProjectsImages);
 
 // Training Domain Gallery Images
 const trainingDomainImages = [
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(1).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(2).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(3).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(4).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-1.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-2.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-3.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-4.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(1).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(2).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(3).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(4).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-1.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-2.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-3.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-4.webp",
 ];
 const TRAINING_DOMAIN_GALLERY_IMAGES = transformToGalleryImages(trainingDomainImages);
 
 // Training Details Gallery Images
 const trainingDetailsImages = [
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(7).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(8).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(9).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ccrc-15.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-5.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-6.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-7.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-domain-8.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(5).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(6).webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-2.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-3.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects-4.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(7).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(8).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(9).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/ccrc-15.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-5.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-6.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-7.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-domain-8.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(5).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/chart+(6).webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects-2.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects-3.webp",
+    "https://cdn.kalingauniversity.ac.in/ctcd/training-projects-4.webp",
 ];
 const TRAINING_DETAILS_GALLERY_IMAGES = transformToGalleryImages(trainingDetailsImages);
 
@@ -280,7 +280,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Educational+Tours.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Educational+Tours.svg"
                                                     alt="Training Duration"
                                                     width={32}
                                                     height={32}
@@ -327,7 +327,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/university.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/university.svg"
                                                     alt="Training Venue"
                                                     width={32}
                                                     height={32}
@@ -417,7 +417,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Experienced+Faculties.svg"
                                                     alt="Trainers Profile"
                                                     width={32}
                                                     height={32}
@@ -436,7 +436,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Abundant+Scholarships.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Abundant+Scholarships.svg"
                                                     alt="Training Cost"
                                                     width={32}
                                                     height={32}
@@ -455,7 +455,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Community+Services.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Community+Services.svg"
                                                     alt="Government Trainings"
                                                     width={32}
                                                     height={32}
@@ -488,7 +488,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-center gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industry-Relevant+Curriculum.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Industry-Relevant+Curriculum.svg"
                                                     alt="Our Corporate Training Projects"
                                                     width={32}
                                                     height={32}
@@ -732,7 +732,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                                     <div key={idx} className="bg-[var(--card-skin)] p-4 rounded-xl flex flex-col items-center text-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
                                                         <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
                                                             <Image
-                                                                src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${item.icon}`}
+                                                                src={`https://cdn.kalingauniversity.ac.in/icons/${item.icon}`}
                                                                 alt={item.title}
                                                                 width={32}
                                                                 height={32}
@@ -756,7 +756,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                                     <div key={idx} className="bg-[var(--card-skin)] p-4 rounded-xl flex flex-col items-center text-center gap-3 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
                                                         <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform duration-300">
                                                             <Image
-                                                                src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${item.icon}`}
+                                                                src={`https://cdn.kalingauniversity.ac.in/icons/${item.icon}`}
                                                                 alt={item.title}
                                                                 width={32}
                                                                 height={32}
@@ -803,7 +803,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Networking+Opportunities.svg"
                                                     alt="Understanding Needs"
                                                     width={32}
                                                     height={32}
@@ -824,7 +824,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg"
                                                     alt="Pre-Assessment"
                                                     width={32}
                                                     height={32}
@@ -845,7 +845,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Wide+Range+of+Programs.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Wide+Range+of+Programs.svg"
                                                     alt="Mapping Objectives"
                                                     width={32}
                                                     height={32}
@@ -866,7 +866,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industry-Relevant+Curriculum.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Industry-Relevant+Curriculum.svg"
                                                     alt="Choosing Methodology"
                                                     width={32}
                                                     height={32}
@@ -887,7 +887,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Improve+Employability.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Improve+Employability.svg"
                                                     alt="Training Delivery"
                                                     width={32}
                                                     height={32}
@@ -920,7 +920,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                                     <div className="flex items-center gap-3">
                                                         <div className="h-10 w-10 rounded-full bg-[var(--card-skin)] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                                             <Image
-                                                                src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${method.icon}`}
+                                                                src={`https://cdn.kalingauniversity.ac.in/icons/${method.icon}`}
                                                                 alt={method.title}
                                                                 width={24}
                                                                 height={24}
@@ -941,7 +941,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg"
                                                     alt="Open Feedback"
                                                     width={32}
                                                     height={32}
@@ -962,7 +962,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <div className="flex items-start gap-4 mb-4">
                                             <div className="h-14 w-14 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0">
                                                 <Image
-                                                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Educational+Tours.svg"
+                                                    src="https://cdn.kalingauniversity.ac.in/icons/Educational+Tours.svg"
                                                     alt="Follow-Up Sessions"
                                                     width={32}
                                                     height={32}

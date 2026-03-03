@@ -6,22 +6,22 @@ import FlipbookTrigger from '../components/general/FlipbookTrigger';
 const pdfLinks = [
     {
         title: 'Pharmacy Magazine',
-        url: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/pharmacy_magazine.pdf',
+        url: 'https://cdn.kalingauniversity.ac.in/downloads/pharmacy_magazine.pdf',
         color: 'from-blue-600 to-indigo-700'
     },
     {
         title: 'NCC Newsletter',
-        url: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/ncc_newsletter.pdf',
+        url: 'https://cdn.kalingauniversity.ac.in/downloads/ncc_newsletter.pdf',
         color: 'from-emerald-600 to-teal-700'
     },
     {
         title: 'University Prospectus',
-        url: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/prospectus.pdf',
+        url: 'https://cdn.kalingauniversity.ac.in/downloads/prospectus.pdf',
         color: 'from-orange-500 to-red-600'
     },
     {
         title: 'Academic Calendar',
-        url: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/academic_calendar.pdf',
+        url: 'https://cdn.kalingauniversity.ac.in/downloads/academic_calendar.pdf',
         color: 'from-purple-600 to-pink-600'
     }
 ];

@@ -15,7 +15,7 @@ function Admissionhacks() {
             description:
                 "Select universities that have career counsellors, as they will help you identify your strengths, weaknesses, and interests.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/2.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/2.svg",
         },
         {
             title: "Select Future-Proof Careers",
@@ -29,42 +29,42 @@ function Admissionhacks() {
             description:
                 "Choose universities that have strong industry connections and provide internship opportunities or conduct campus placement drives.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/4.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/4.svg",
         },
         {
             title: "Check University Accreditation",
             description:
                 "Choose accredited universities only as they offer recognised degrees, focus on holistic development, and provide quality education.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/5.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/5.svg",
         },
         {
             title: "Think Beyond Academics",
             description:
                 "Select universities that offer hands-on training programs, facilitate research work, conduct workshops and seminars, and make you job-ready.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/6.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/6.svg",
         },
         {
             title: "Look For Student Reviews",
             description:
                 "Before making your final decision, check out other students' opinions or interact with your seniors to understand academic quality.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/7.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/7.svg",
         },
         {
             title: "Vibrant Campus Life",
             description:
                 "Take admission into a university that conducts various events, fests, celebrations, and competitions that complement academic learning.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/8.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/8.svg",
         },
         {
             title: "Location and Connectivity",
             description:
                 "If the university is far from your home, ensure it provides transportation facilities for your safety and convenience.",
             icon: "",
-            imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Admission+Procedure/9.svg",
+            imageUrl: "https://cdn.kalingauniversity.ac.in/admission/Admission+Procedure/9.svg",
         },
     ];
 

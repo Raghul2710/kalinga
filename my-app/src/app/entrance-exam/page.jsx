@@ -54,7 +54,7 @@ const EntranceExamPage = () => {
         subtitleclassName="hidden"
         description="Crack the KALSEE/KAL-MAT Exam and Join KU’s Prestigious Programs."
       />
-      <ImageListItem items={Items} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Apply For KU Entrance Exams" subtitle="" description="Take the first step towards your dream career. Our entrance examinations are designed to be student-friendly with flexible scheduling, no negative marking, and scholarships up to 100% based on performance." />
+      <ImageListItem items={Items} imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrc.webp" title="Apply For KU Entrance Exams" subtitle="" description="Take the first step towards your dream career. Our entrance examinations are designed to be student-friendly with flexible scheduling, no negative marking, and scholarships up to 100% based on performance." />
       {/* <EntranceExamFormCards /> */}
       <EntranceExamUpdated />
       {/* <CareerApplicationForm

@@ -59,7 +59,7 @@ const upcomingConferences = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "Upcoming Conference",
     title: "Upcoming Conference Title",
     buttonText: "Read More",
@@ -68,7 +68,7 @@ const upcomingConferences = [
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "Upcoming Conference",
     title: "Upcoming Conference Title",
     buttonText: "Read More",
@@ -77,7 +77,7 @@ const upcomingConferences = [
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "Upcoming Conference",
     title: "Upcoming Conference Title",
     buttonText: "Read More",
@@ -89,7 +89,7 @@ const upcomingEvents = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "Upcoming Event",
     title: "Upcoming Event Title",
     buttonText: "Read More",
@@ -98,7 +98,7 @@ const upcomingEvents = [
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "Upcoming Event",
     title: "Upcoming Event Title",
     buttonText: "Read More",
@@ -107,7 +107,7 @@ const upcomingEvents = [
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "Upcoming Event",
     title: "Upcoming Event Title",
     buttonText: "Read More",
@@ -116,14 +116,14 @@ const upcomingEvents = [
 ];
 
 export default function ConferencesAndEventsPage() {
-  
+
 
   return (
     <>
       <section className="pt-10 pb-6">
         <ImageListItem
           items={whyAttendItems}
-          imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/conferences/conferences-banner.webp"
+          imageSrc="https://cdn.kalingauniversity.ac.in/conferences/conferences-banner.webp"
           title="Why Attend Our Conferences and Events?"
           description=""
         />

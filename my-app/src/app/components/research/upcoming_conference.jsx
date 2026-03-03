@@ -91,7 +91,7 @@ export default function UpcomingConference({
               date: item.date,
               category: item.category_name,
               description: descText,
-              image: item.images && item.images.length > 0 ? item.images[0].image : 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+              image: item.images && item.images.length > 0 ? item.images[0].image : 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
               href: `/news-and-events/${item.slug}`,
               registerButtonText: "Read More"
             };

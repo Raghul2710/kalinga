@@ -21,7 +21,7 @@ const Map = () => {
 
   // Kalinga University coordinates
   const universityPosition = { lat: 21.1670404, lng: 81.8206352 };
-  const kalingaPinUrl = "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/kalinga-pin.png";
+  const kalingaPinUrl = "https://cdn.kalingauniversity.ac.in/contact-us/kalinga-pin.png";
 
   // Define nearest facilities
   const facilities = [
@@ -31,7 +31,7 @@ const Map = () => {
       distance: "8km Near By",
       icon: "🚌",
       position: { lat: 21.1540426, lng: 81.7963184 },
-      pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/bus-pin.png",
+      pinUrl: "https://cdn.kalingauniversity.ac.in/contact-us/bus-pin.png",
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const Map = () => {
       distance: "14km Near By",
       icon: "✈️",
       position: { lat: 21.1859715, lng: 81.7402786 },
-      pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/airport-pin.png",
+      pinUrl: "https://cdn.kalingauniversity.ac.in/contact-us/airport-pin.png",
     },
     {
       id: 3,
@@ -47,7 +47,7 @@ const Map = () => {
       distance: "8km Near By",
       icon: "🚂",
       position: { lat: 21.1686515, lng: 81.763609 },
-      pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/rail-pin.png",
+      pinUrl: "https://cdn.kalingauniversity.ac.in/contact-us/rail-pin.png",
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ const Map = () => {
       distance: "9km Near By",
       icon: "🏥",
       position: { lat: 21.1214716, lng: 81.7762208 },
-      pinUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/contact-us/hospital-pin.png",
+      pinUrl: "https://cdn.kalingauniversity.ac.in/contact-us/hospital-pin.png",
     }
   ];
 
@@ -82,7 +82,7 @@ const Map = () => {
         // Add bounce animation
         marker.setAnimation(google.maps.Animation.BOUNCE);
         animatedMarker.current = marker;
-        
+
         // Stop animation after 2 seconds
         setTimeout(() => {
           if (marker) {
@@ -123,7 +123,7 @@ const Map = () => {
       if (universityMarkerRef.current) {
         universityMarkerRef.current.setAnimation(google.maps.Animation.BOUNCE);
         animatedMarker.current = universityMarkerRef.current;
-        
+
         // Stop animation after 2 seconds
         setTimeout(() => {
           if (universityMarkerRef.current) {
@@ -292,7 +292,7 @@ const Map = () => {
         </div>
       </div>
     </div>
-  );  
+  );
 };
 
 export default Map;

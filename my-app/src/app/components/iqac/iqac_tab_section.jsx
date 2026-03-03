@@ -1422,86 +1422,86 @@ const IQAC_INITIATIVES = {
 // Minutes of Meeting Data
 const MINUTES_OF_MEETING = {
   "2022-23": [
-    { title: "Minutes of Meeting (18-09-2022)", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/18-09-2022-mom.pdf" },
+    { title: "Minutes of Meeting (18-09-2022)", url: "https://cdn.kalingauniversity.ac.in/IQAC/18-09-2022-mom.pdf" },
   ],
   "2021-22": [],
   "2020-21": [],
   "2019-20": [
-    { title: "Minutes of Meeting (16-01-2020)", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/16-01-2020-mom.pdf" },
-    { title: "Minutes of Meeting (23-07-2019)", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/23-07-2019-mom.pdf" },
+    { title: "Minutes of Meeting (16-01-2020)", url: "https://cdn.kalingauniversity.ac.in/IQAC/16-01-2020-mom.pdf" },
+    { title: "Minutes of Meeting (23-07-2019)", url: "https://cdn.kalingauniversity.ac.in/IQAC/23-07-2019-mom.pdf" },
   ],
   "2018-19": [
-    { title: "Minutes of Meeting 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/iqac+minutes-+2018-19-mom.pdf" },
+    { title: "Minutes of Meeting 2018-19", url: "https://cdn.kalingauniversity.ac.in/IQAC/iqac+minutes-+2018-19-mom.pdf" },
   ],
   "2017-18": [
-    { title: "Minutes of Meeting 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/iqac+minutes-+2017-18-mom.pdf" },
+    { title: "Minutes of Meeting 2018-19", url: "https://cdn.kalingauniversity.ac.in/IQAC/iqac+minutes-+2017-18-mom.pdf" },
   ],
   "2016-17": [
-    { title: "Minutes of Meeting 2016-17", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/iqac+minutes-2016-17-mom.pdf" },
+    { title: "Minutes of Meeting 2016-17", url: "https://cdn.kalingauniversity.ac.in/IQAC/iqac+minutes-2016-17-mom.pdf" },
   ],
 };
 
 // Feedback Analysis Data
 const FEEDBACK_ANALYSIS = {
   "2023-24": [
-    { title: "Students Feedback Report 2023-2024", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Students+Feedback+Report-2023-2024.pdf" },
-    { title: "Faculty Feedback 2023-2024", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Faculty+Feedback-2023-2024.pdf" },
-    { title: "Employer Feedback Report 2023-2024", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Employer+Feedback+Report-2023-2024.pdf" },
-    { title: "Alumni Feedback Report 2023-2024", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Alumni+Feedback+Report-2023-2024.pdf" },
+    { title: "Students Feedback Report 2023-2024", url: "https://cdn.kalingauniversity.ac.in/IQAC/Students+Feedback+Report-2023-2024.pdf" },
+    { title: "Faculty Feedback 2023-2024", url: "https://cdn.kalingauniversity.ac.in/IQAC/Faculty+Feedback-2023-2024.pdf" },
+    { title: "Employer Feedback Report 2023-2024", url: "https://cdn.kalingauniversity.ac.in/IQAC/Employer+Feedback+Report-2023-2024.pdf" },
+    { title: "Alumni Feedback Report 2023-2024", url: "https://cdn.kalingauniversity.ac.in/IQAC/Alumni+Feedback+Report-2023-2024.pdf" },
   ],
   "2022-23": [
-    { title: "Students Feedback Report 2022-23", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Students-Feedback-2022-23.pdf" },
-    { title: "Faculty Feedback 2022-23", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Faculty-Feedback-2022-23.pdf" },
-    { title: "Employer Feedback 2022-23", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Employer-Feedback-2022-23.pdf" },
-    { title: "Alumni Feedback 2022-23", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Alumni-Feedback-2022-23.pdf" },
+    { title: "Students Feedback Report 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/Students-Feedback-2022-23.pdf" },
+    { title: "Faculty Feedback 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/Faculty-Feedback-2022-23.pdf" },
+    { title: "Employer Feedback 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/Employer-Feedback-2022-23.pdf" },
+    { title: "Alumni Feedback 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/Alumni-Feedback-2022-23.pdf" },
   ],
   "2021-22": [
-    { title: "Student Feedback Report 2021-22", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Student-Feedback-Report-2021-22.pdf" },
-    { title: "Faculty Feedback 2021-22", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Faculty-Feedback-2021-22.pdf" },
-    { title: "Employer Feedback 2021-22", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER-FEEDBACK-updated-2021-22.pdf" },
-    { title: "Alumni Feedback Report 2021-22", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMNI-FEEDBACK-REPORT-2021-22.pdf" },
+    { title: "Student Feedback Report 2021-22", url: "https://cdn.kalingauniversity.ac.in/IQAC/Student-Feedback-Report-2021-22.pdf" },
+    { title: "Faculty Feedback 2021-22", url: "https://cdn.kalingauniversity.ac.in/IQAC/Faculty-Feedback-2021-22.pdf" },
+    { title: "Employer Feedback 2021-22", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER-FEEDBACK-updated-2021-22.pdf" },
+    { title: "Alumni Feedback Report 2021-22", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMNI-FEEDBACK-REPORT-2021-22.pdf" },
   ],
   "2020-21": [
-    { title: "Student 2020-2021", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/1.4.1-STUDENT-2020-2021.pdf" },
-    { title: "Faculty 2020-2021", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/1.4.1-FACULTY-2020-2021.pdf" },
-    { title: "Employer 2020-2021", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/1.4.1-EMPLOYER-2020-2021.pdf" },
-    { title: "Alumni 2020-2021", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/1.4.1-ALUMNI-2020-2021.pdf" },
+    { title: "Student 2020-2021", url: "https://cdn.kalingauniversity.ac.in/IQAC/1.4.1-STUDENT-2020-2021.pdf" },
+    { title: "Faculty 2020-2021", url: "https://cdn.kalingauniversity.ac.in/IQAC/1.4.1-FACULTY-2020-2021.pdf" },
+    { title: "Employer 2020-2021", url: "https://cdn.kalingauniversity.ac.in/IQAC/1.4.1-EMPLOYER-2020-2021.pdf" },
+    { title: "Alumni 2020-2021", url: "https://cdn.kalingauniversity.ac.in/IQAC/1.4.1-ALUMNI-2020-2021.pdf" },
   ],
   "2019-20": [
-    { title: "Student Feedback Report 2019-20", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Student-Feedback-Report-2019-20.pdf" },
-    { title: "Faculty Feedback 2019-20", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Faculty-Feedback-2019-20.pdf" },
-    { title: "Employer Feedback 2019-20", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER-FEEDBACK-updated-2019-20.pdf" },
-    { title: "Alumni Feedback Report 2019-20", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMNI-FEEDBACK-REPORT-2019-20.pdf" },
+    { title: "Student Feedback Report 2019-20", url: "https://cdn.kalingauniversity.ac.in/IQAC/Student-Feedback-Report-2019-20.pdf" },
+    { title: "Faculty Feedback 2019-20", url: "https://cdn.kalingauniversity.ac.in/IQAC/Faculty-Feedback-2019-20.pdf" },
+    { title: "Employer Feedback 2019-20", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER-FEEDBACK-updated-2019-20.pdf" },
+    { title: "Alumni Feedback Report 2019-20", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMNI-FEEDBACK-REPORT-2019-20.pdf" },
   ],
   "2018-19": [
-    { title: "Student 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/STUDENT2018-19.pdf" },
-    { title: "Faculty 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/FACULTY2018-19.pdf" },
-    { title: "Employer 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER2018-19.pdf" },
-    { title: "Alumni 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMNI-2018-19.pdf" },
+    { title: "Student 2018-19", url: "https://cdn.kalingauniversity.ac.in/IQAC/STUDENT2018-19.pdf" },
+    { title: "Faculty 2018-19", url: "https://cdn.kalingauniversity.ac.in/IQAC/FACULTY2018-19.pdf" },
+    { title: "Employer 2018-19", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER2018-19.pdf" },
+    { title: "Alumni 2018-19", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMNI-2018-19.pdf" },
   ],
   "2017-18": [
-    { title: "Student 2017-18", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/STUDENT-2017-18.pdf" },
-    { title: "Faculty 2017-18", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/FACULTY-2017-18.pdf" },
-    { title: "Employer 2017-18", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER-2017-18.pdf" },
-    { title: "Alumni 2017-18", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMNI-2017-18.pdf" },
+    { title: "Student 2017-18", url: "https://cdn.kalingauniversity.ac.in/IQAC/STUDENT-2017-18.pdf" },
+    { title: "Faculty 2017-18", url: "https://cdn.kalingauniversity.ac.in/IQAC/FACULTY-2017-18.pdf" },
+    { title: "Employer 2017-18", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER-2017-18.pdf" },
+    { title: "Alumni 2017-18", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMNI-2017-18.pdf" },
   ],
   "2016-17": [
-    { title: "Student 2016-17", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/STUDENT2016-17-2-5.pdf" },
-    { title: "Faculty 2016-17", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/FACULTY-2016-17.pdf" },
-    { title: "Employer 2016-17", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER-2016-17-7-16.pdf" },
-    { title: "Alumni 2016-17", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMNI-2016-17-17-18.pdf" },
+    { title: "Student 2016-17", url: "https://cdn.kalingauniversity.ac.in/IQAC/STUDENT2016-17-2-5.pdf" },
+    { title: "Faculty 2016-17", url: "https://cdn.kalingauniversity.ac.in/IQAC/FACULTY-2016-17.pdf" },
+    { title: "Employer 2016-17", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER-2016-17-7-16.pdf" },
+    { title: "Alumni 2016-17", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMNI-2016-17-17-18.pdf" },
   ],
   "2015-16": [
-    { title: "Student 2015-16", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/STUDENT-2015-16.pdf" },
-    { title: "Faculty 2015-16", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Faculty-2015-16.pdf" },
-    { title: "Employer 2015-16", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER-2015-16.pdf" },
-    { title: "Alumni 2015-16", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMNI-2015-16.pdf" },
+    { title: "Student 2015-16", url: "https://cdn.kalingauniversity.ac.in/IQAC/STUDENT-2015-16.pdf" },
+    { title: "Faculty 2015-16", url: "https://cdn.kalingauniversity.ac.in/IQAC/Faculty-2015-16.pdf" },
+    { title: "Employer 2015-16", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER-2015-16.pdf" },
+    { title: "Alumni 2015-16", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMNI-2015-16.pdf" },
   ],
   "2014-15": [
-    { title: "Student 2014-15", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/STUDENT-14-15.pdf" },
-    { title: "Faculty 2014-15", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/FACULTY-2014-15-4.pdf" },
-    { title: "Employer 2014-15", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/EMPLOYER-2014-15-5-14.pdf" },
-    { title: "Alumani 2014-15", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ALUMANI-2014-15-15.pdf" },
+    { title: "Student 2014-15", url: "https://cdn.kalingauniversity.ac.in/IQAC/STUDENT-14-15.pdf" },
+    { title: "Faculty 2014-15", url: "https://cdn.kalingauniversity.ac.in/IQAC/FACULTY-2014-15-4.pdf" },
+    { title: "Employer 2014-15", url: "https://cdn.kalingauniversity.ac.in/IQAC/EMPLOYER-2014-15-5-14.pdf" },
+    { title: "Alumani 2014-15", url: "https://cdn.kalingauniversity.ac.in/IQAC/ALUMANI-2014-15-15.pdf" },
   ],
 };
 
@@ -1920,7 +1920,7 @@ export default function IqacTabSection() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* 2025-2029 Plan */}
                       <a
-                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Perspective+Cum+Strategic+Plan+for+2025-2029.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/Perspective+Cum+Strategic+Plan+for+2025-2029.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
@@ -1950,7 +1950,7 @@ export default function IqacTabSection() {
 
                       {/* 2020-2024 Plan */}
                       <a
-                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Perspective+Cum+Strategic+Plan+for+2020-2024.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/Perspective+Cum+Strategic+Plan+for+2020-2024.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
@@ -1980,7 +1980,7 @@ export default function IqacTabSection() {
 
                       {/* 2014-2019 Plan */}
                       <a
-                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Perspective+Cum+Strategic+Plan+for+2014-2019.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/Perspective+Cum+Strategic+Plan+for+2014-2019.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
@@ -2019,9 +2019,9 @@ export default function IqacTabSection() {
                     Student Satisfaction Survey
                   </h2>
                   <div className="flex justify-center mt-6">
-                    <FlipbookTrigger pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Students+Satisfaction+Survey+2021-22.pdf" title="Student Satisfaction Survey 2021-22">
+                    <FlipbookTrigger pdfUrl="https://cdn.kalingauniversity.ac.in/IQAC/Students+Satisfaction+Survey+2021-22.pdf" title="Student Satisfaction Survey 2021-22">
                       <a
-                        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Students+Satisfaction+Survey+2021-22.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/Students+Satisfaction+Survey+2021-22.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[var(--button-red)] text-white rounded-lg hover:bg-[var(--button-red)]/90 transition-colors font-plus-jakarta-sans text-sm md:text-base font-semibold"

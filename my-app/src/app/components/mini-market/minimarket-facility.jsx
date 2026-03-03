@@ -3,12 +3,12 @@
 import Facility from "../admissions/facility";
 
 const miniMarketFacilities = [
-  { id: 1, name: "ATM", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/atm.webp" },
-  { id: 2, name: "Salon", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/salon.webp" },
-  { id: 3, name: "Stationary", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/stationary.webp" },
-  { id: 4, name: "Snacks Shop", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/snacks.webp" },
-  { id: 5, name: "Juice Center", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/juice.webp" },
-  { id: 6, name: "Chemist Shop", image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/chemist_shop.webp" },
+  { id: 1, name: "ATM", image: "https://cdn.kalingauniversity.ac.in/mini-market/atm.webp" },
+  { id: 2, name: "Salon", image: "https://cdn.kalingauniversity.ac.in/mini-market/salon.webp" },
+  { id: 3, name: "Stationary", image: "https://cdn.kalingauniversity.ac.in/mini-market/stationary.webp" },
+  { id: 4, name: "Snacks Shop", image: "https://cdn.kalingauniversity.ac.in/mini-market/snacks.webp" },
+  { id: 5, name: "Juice Center", image: "https://cdn.kalingauniversity.ac.in/mini-market/juice.webp" },
+  { id: 6, name: "Chemist Shop", image: "https://cdn.kalingauniversity.ac.in/mini-market/chemist_shop.webp" },
 ];
 
 export default function MiniMarketFacility() {

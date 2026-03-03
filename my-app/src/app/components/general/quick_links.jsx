@@ -11,37 +11,37 @@ import 'swiper/css/pagination';
 const defaultQuickLinks = [
   {
     id: 1,
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
     title: "Conferences",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     id: 2,
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
     title: "IPR",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     id: 3,
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
     title: "Patents",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     id: 4,
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
     title: "Book / Book Chapters",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     id: 5,
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
     title: "Research Papers",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },
   {
     id: 6,
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
     title: "Awards",
     description: "Lorem ipsum is simply dummy text of the printing and typesetting industry.",
   },

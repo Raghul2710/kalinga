@@ -43,7 +43,7 @@ function Newraipurvideos({
     backgroundColor = "bg-[var(--light-gray)]",
     showPagination = true,
     showNavigation = true,
-    fallbackImage = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about-raipur/raipur1.webp",
+    fallbackImage = "https://cdn.kalingauniversity.ac.in/about-raipur/raipur1.webp",
 }) {
     // Normalize videos for the slider (ensure id + image exist)
     const normalizedVideos = useMemo(() => {

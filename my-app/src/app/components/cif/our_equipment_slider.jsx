@@ -13,85 +13,85 @@ const equipments = [
     id: 1,
     title: "Scanning Electron Microscope (SEM)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/sem.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/sem.webp",
   },
   {
     id: 2,
     title: "High Performance Liquid Chromatography (HPLC)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/hpcl.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/hpcl.webp",
   },
   {
     id: 3,
     title: "FT-IR Spectrophotometer",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/ft-IR+Spectrophotometer.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/ft-IR+Spectrophotometer.webp",
   },
   {
     id: 4,
     title: "X-Ray Diffractometer (XRD)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/xrd.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/xrd.webp",
   },
   {
     id: 5,
     title: "PCR (Thermal Cycler)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/pcr-(+Thermal+Cycler).webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/pcr-(+Thermal+Cycler).webp",
   },
   {
     id: 6,
     title: "UV-Visible Double Beam Spectrophotometer",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/s-Pectrophotometer.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/s-Pectrophotometer.webp",
   },
   {
     id: 7,
     title: "3D Printer",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/3d-printer+(1).webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/3d-printer+(1).webp",
   },
   {
     id: 8,
     title: "Bio-Chemistry Analyzer",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/bio-Chemistry+Analyzer.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/bio-Chemistry+Analyzer.webp",
   },
   {
     id: 9,
     title: "Autoclave (Portable)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/autoclave-(portable).webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/autoclave-(portable).webp",
   },
   {
     id: 10,
     title: "DNA Gel Electrophoresis Setup",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/dna-Gel+Electrophoresis+setup.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/dna-Gel+Electrophoresis+setup.webp",
   },
   {
     id: 12,
     title: "UV Transilluminator",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/uv-transilluminator.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/uv-transilluminator.webp",
   },
   {
     id: 13,
     title: "Viscometer (Touch Screen)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/viscometer+touch+screen.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/viscometer+touch+screen.webp",
   },
   {
     id: 14,
     title: "Viscometer (Digital)",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/viscometer+digital.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/viscometer+digital.webp",
   },
   {
     id: 15,
     title: "Hot Air Oven",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/hot-Air+Oven.webp",
+      "https://cdn.kalingauniversity.ac.in/CIF/hot-Air+Oven.webp",
   },
 ];
 

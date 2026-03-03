@@ -7,7 +7,7 @@ export default function ScholarshipCard({ title, description, icon }) {
       <div className="absolute -top-15 left-25 transform -translate-x-1/2 z-20">
         {icon || (
           <Image
-            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/book-logo.png"
+            src="https://cdn.kalingauniversity.ac.in/logos/book-logo.png"
             alt="Scholarship icon"
             width={180}
             height={180}

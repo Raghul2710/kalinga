@@ -11,21 +11,21 @@ const videoItems = [
     title: "Dr. Sunayana Shukla",
     description: "ICF Certified Coach, NLP Trainer, Child Psychologist, Career Counsellor",
     videoUrl: "https://www.youtube.com/watch?v=WdKMix0cahA",
-    thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/podcast/podcast-2.png",
+    thumbnail: "https://cdn.kalingauniversity.ac.in/podcast/podcast-2.png",
   },
   {
     id: 2,
     title: "Dr. Sandeep Gandhi",
     description: "Registrar, Kalinga University",
     videoUrl: "https://www.youtube.com/watch?v=eSTWPTAJ-N8",
-    thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/podcast/podcast-3.png",
+    thumbnail: "https://cdn.kalingauniversity.ac.in/podcast/podcast-3.png",
   },
   {
     id: 3,
     title: "Saurabh Banwar",
     description: "Manager, CTCD",
     videoUrl: "https://www.youtube.com/watch?v=gwcT3TN_5iM",
-    thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/podcast/podcast-4.png",
+    thumbnail: "https://cdn.kalingauniversity.ac.in/podcast/podcast-4.png",
   },
 ]
 
@@ -45,7 +45,7 @@ const Podcast = () => {
           "A platform that shapes the voice of our students, faculty members, alumni, and industry leaders. From inspiring talks to engaging conversations, experience a whole new vibe at our podcast studio. Our students don’t just learn by listening, but they also learn how to create and host their own podcasts. ",
           "So, plug in your earphones and discover new stories and ideas that will inspire you.",
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/podcast.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/podcast.webp"
         imageAlt="Kalinga University Podcast"
         showKnowMore={false}
         showButton={false}

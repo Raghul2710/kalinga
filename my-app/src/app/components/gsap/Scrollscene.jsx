@@ -39,24 +39,24 @@ export const ScrollScene = () => {
     // "Cloud" layout: clustered closer to center initially, moving OUT.
     const tunnelImages = [
         // Top Left Cluster
-        { id: 1, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/1.webp", top: "15%", left: "10%", xMove: -800, yMove: -400, className: "w-32 h-40 md:w-40 md:h-52" },
-        { id: 2, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg", top: "8%", left: "28%", xMove: -400, yMove: -600, className: "hidden md:block w-24 h-24 md:w-32 md:h-32" },
+        { id: 1, src: "https://cdn.kalingauniversity.ac.in/Home/campus/1.webp", top: "15%", left: "10%", xMove: -800, yMove: -400, className: "w-32 h-40 md:w-40 md:h-52" },
+        { id: 2, src: "https://cdn.kalingauniversity.ac.in/common/student.jpg", top: "8%", left: "28%", xMove: -400, yMove: -600, className: "hidden md:block w-24 h-24 md:w-32 md:h-32" },
 
         // Top Right Cluster
-        { id: 3, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/3.webp", top: "15%", right: "20%", xMove: 600, yMove: -500, className: "w-28 h-36 md:w-36 md:h-56" },
-        { id: 4, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/4.webp", top: "5%", right: "38%", xMove: 300, yMove: -600, className: "hidden md:block w-32 h-20 md:w-48 md:h-40" },
+        { id: 3, src: "https://cdn.kalingauniversity.ac.in/Home/campus/3.webp", top: "15%", right: "20%", xMove: 600, yMove: -500, className: "w-28 h-36 md:w-36 md:h-56" },
+        { id: 4, src: "https://cdn.kalingauniversity.ac.in/Home/campus/4.webp", top: "5%", right: "38%", xMove: 300, yMove: -600, className: "hidden md:block w-32 h-20 md:w-48 md:h-40" },
 
         // Bottom Left Cluster
-        { id: 5, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/student-grppic.webp", bottom: "15%", left: "8%", xMove: -600, yMove: 400, className: "w-40 h-40 md:w-52 md:h-52" },
-        { id: 6, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/course_page.webp?w=1000", bottom: "20%", left: "30%", xMove: -300, yMove: 600, className: "w-20 h-28 md:w-28 md:h-36" },
+        { id: 5, src: "https://cdn.kalingauniversity.ac.in/campus-life/student-grppic.webp", bottom: "15%", left: "8%", xMove: -600, yMove: 400, className: "w-40 h-40 md:w-52 md:h-52" },
+        { id: 6, src: "https://cdn.kalingauniversity.ac.in/course/course_page.webp?w=1000", bottom: "20%", left: "30%", xMove: -300, yMove: 600, className: "w-20 h-28 md:w-28 md:h-36" },
 
         // Bottom Right Cluster
-        { id: 7, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/gallery3.webp", bottom: "12%", right: "8%", xMove: 600, yMove: 400, className: "w-24 h-32 md:w-32 md:h-40" },
-        { id: 8, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/arts.webp", bottom: "5%", right: "25%", xMove: 400, yMove: 600, className: "w-32 h-24 md:w-40 md:h-32" },
+        { id: 7, src: "https://cdn.kalingauniversity.ac.in/campus-life/gallery3.webp", bottom: "12%", right: "8%", xMove: 600, yMove: 400, className: "w-24 h-32 md:w-32 md:h-40" },
+        { id: 8, src: "https://cdn.kalingauniversity.ac.in/academics/arts.webp", bottom: "5%", right: "25%", xMove: 400, yMove: 600, className: "w-32 h-24 md:w-40 md:h-32" },
 
         // Fillers / Peripherals
-        { id: 9, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet1.webp", top: "35%", left: "22%", xMove: -900, yMove: 0, className: "w-28 h-28 md:w-24 md:h-24" }, // Far Left
-        { id: 10, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/filler2.webp", top: "35%", right: "5%", xMove: 900, yMove: 100, className: "w-28 h-28 md:w-36 md:h-36" }, // Far Right
+        { id: 9, src: "https://cdn.kalingauniversity.ac.in/alumini/alimini-meet1.webp", top: "35%", left: "22%", xMove: -900, yMove: 0, className: "w-28 h-28 md:w-24 md:h-24" }, // Far Left
+        { id: 10, src: "https://cdn.kalingauniversity.ac.in/Home/campus/filler2.webp", top: "35%", right: "5%", xMove: 900, yMove: 100, className: "w-28 h-28 md:w-36 md:h-36" }, // Far Right
     ];
 
     return (

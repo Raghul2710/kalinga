@@ -7,16 +7,16 @@ export default function GalleryAll() {
     const sectionRef = useRef(null)
 
     const images = [
-        { id: 1, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-1.png', alt: 'Campus speaker' },
-        { id: 2, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-2.png', alt: 'Students chatting' },
-        { id: 3, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-3.png', alt: 'Lecture' },
-        { id: 4, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-4.png', alt: 'Career guidance' },
-        { id: 5, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/sports.webp', alt: 'Sports facility' },
-        { id: 6, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/library.webp', alt: 'Library' },
-        { id: 7, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen.webp', alt: 'Canteen' },
-        { id: 8, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placements-silder-1.webp', alt: 'Campus life' },
-        { id: 9, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/about-kalinga.webp', alt: 'Students' },
-        { id: 10, src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/students-say-2.webp', alt: 'Student testimonial' },
+        { id: 1, src: 'https://cdn.kalingauniversity.ac.in/Home/social-media-1.png', alt: 'Campus speaker' },
+        { id: 2, src: 'https://cdn.kalingauniversity.ac.in/Home/social-media-2.png', alt: 'Students chatting' },
+        { id: 3, src: 'https://cdn.kalingauniversity.ac.in/Home/social-media-3.png', alt: 'Lecture' },
+        { id: 4, src: 'https://cdn.kalingauniversity.ac.in/Home/social-media-4.png', alt: 'Career guidance' },
+        { id: 5, src: 'https://cdn.kalingauniversity.ac.in/facilities/sports.webp', alt: 'Sports facility' },
+        { id: 6, src: 'https://cdn.kalingauniversity.ac.in/admission/library.webp', alt: 'Library' },
+        { id: 7, src: 'https://cdn.kalingauniversity.ac.in/facilities/canteen.webp', alt: 'Canteen' },
+        { id: 8, src: 'https://cdn.kalingauniversity.ac.in/Home/placements-silder-1.webp', alt: 'Campus life' },
+        { id: 9, src: 'https://cdn.kalingauniversity.ac.in/Home/about-kalinga.webp', alt: 'Students' },
+        { id: 10, src: 'https://cdn.kalingauniversity.ac.in/Home/students-say-2.webp', alt: 'Student testimonial' },
     ]
 
     useEffect(() => {
@@ -74,8 +74,8 @@ export default function GalleryAll() {
                                     <div
                                         key={img.id}
                                         className={`relative aspect-square rounded-lg overflow-hidden shadow-md transition-all duration-500 ${isInView
-                                                ? 'opacity-100 scale-100'
-                                                : 'opacity-0 scale-75'
+                                            ? 'opacity-100 scale-100'
+                                            : 'opacity-0 scale-75'
                                             }`}
                                         style={{
                                             transitionDelay: isInView ? `${idx * 80}ms` : '0ms'
@@ -111,8 +111,8 @@ export default function GalleryAll() {
                                             <div
                                                 key={img.id}
                                                 className={`absolute ${pos} z-10 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105 duration-300 ${isInView
-                                                        ? 'opacity-100 scale-100 animate-popup'
-                                                        : 'opacity-0 scale-75'
+                                                    ? 'opacity-100 scale-100 animate-popup'
+                                                    : 'opacity-0 scale-75'
                                                     }`}
                                                 style={{
                                                     animationDelay: isInView ? `${idx * 150}ms` : '0ms',

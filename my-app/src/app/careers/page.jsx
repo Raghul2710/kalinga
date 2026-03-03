@@ -7,7 +7,7 @@ import CareerForm from "../components/forms/CareerForm"
 import FaqSection from "../components/general/faq"
 import Gallery from '../components/campuslife/campusgallery';
 export default function Careers() {
-  
+
 
   useEffect(() => {
     // Enable scrolling but hide scrollbar - works on all devices including mobile
@@ -85,7 +85,7 @@ export default function Careers() {
       <MainIntro title="Why Work With Us?"
         description={["Kalinga University offers a work environment where people feel valued, motivated, and supported. Our faculty members and staff are empowered through continuous learning opportunities where their ideas are encouraged, their voices are heard, and their efforts are appreciated. We value teamwork, transparency, and open communication. Become a part of an academic community that believes in learning, innovation, and collaboration. "
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/whywork.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/campus-life/whywork.webp"
         imageAlt="Why Work With Us?"
         showKnowMore={false} />
 
@@ -97,14 +97,14 @@ export default function Careers() {
         title="Gallery"
         description=""
         images={[
-          { id: 1, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-1.webp", alt: "Life at Kalinga 1" },
-          { id: 2, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-2.webp", alt: "Life at Kalinga 2" },
-          { id: 3, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-3.webp", alt: "Life at Kalinga 3" },
-          { id: 4, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-4.webp", alt: "Life at Kalinga 4" },
-          { id: 5, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-5.webp", alt: "Life at Kalinga 5" },
-          { id: 6, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placement-intro-2.webp", alt: "Life at Kalinga 6" },
-          { id: 7, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp", alt: "Life at Kalinga 7" },
-          { id: 8, src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-intro.jpg", alt: "Life at Kalinga 8" },
+          { id: 1, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-1.webp", alt: "Life at Kalinga 1" },
+          { id: 2, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-2.webp", alt: "Life at Kalinga 2" },
+          { id: 3, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-3.webp", alt: "Life at Kalinga 3" },
+          { id: 4, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-4.webp", alt: "Life at Kalinga 4" },
+          { id: 5, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-5.webp", alt: "Life at Kalinga 5" },
+          { id: 6, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/placement-intro-2.webp", alt: "Life at Kalinga 6" },
+          { id: 7, src: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/placemnt-intro.webp", alt: "Life at Kalinga 7" },
+          { id: 8, src: "https://cdn.kalingauniversity.ac.in/placement/placement-intro.jpg", alt: "Life at Kalinga 8" },
         ]}
       />
     </>

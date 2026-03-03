@@ -12,7 +12,7 @@ function Academiccards() {
             description:
                 "Our classrooms have smart boards, projectors, and audio-visual tools, which make the learning fun and interactive, and students use them to give presentations.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/digitalclassrooms.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/digitalclassrooms.webp",
             logoSrc: "",
             subtitle: "ACADEMIC INFRASTRUCTURE",
         },
@@ -21,7 +21,7 @@ function Academiccards() {
             description:
                 "Our library is packed with the latest collection of resources in the form of books, journals, research papers, digital resources, magazines, and newspapers.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/resourcerichlibrary.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/resourcerichlibrary.webp",
             logoSrc: "",
             subtitle: "ACADEMIC INFRASTRUCTURE",
             link: "/library",
@@ -31,7 +31,7 @@ function Academiccards() {
             description:
                 "We have over 90 + labs, including a language lab, a central instrumentation facility, computer labs (with more than 1600 high-tech computers), and other research labs that offer sophisticated instruments, technologies, and advanced computer systems.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/modernlabrotary.webp",
             logoSrc: "",
             subtitle: "RESEARCH & PRACTICAL LEARNING",
             link: "/laboratories",
@@ -40,7 +40,7 @@ function Academiccards() {
             title: "Incubation Centre",
             description:
                 "Kalinga Incubation Foundation (KIF) supports the unique entrepreneurial ideas of our students and helps them transform into successful startup ventures. We aim to fast-track your entrepreneurial growth by providing industry insights, networking opportunities, and seed funding support.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/kif.png",
             logoSrc: "",
             subtitle: "INNOVATION & STARTUPS",
             link: "/kalinga-incubation-foundation",
@@ -50,7 +50,7 @@ function Academiccards() {
             description:
                 "Our law students get a real courtroom experience with our Moot Court, where they put their legal skills into trials and participate in competitions, and gain confidence.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/mootcourt.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/mootcourt.webp",
             logoSrc: "",
             subtitle: "LEGAL EDUCATION",
         },
@@ -59,7 +59,7 @@ function Academiccards() {
             description:
                 "We collaborate with leading industry partners to offer skill-based training across EVs (Eblu), IIoT (Technoviz Automation), Robotics, Coding & Drones (BDS Education), MSME (IamSMEofIndia), BRIDGE & Automation (BOSCH), AI & ML (IBM Innovation Centre), and Automobile Engineering (JustAuto Solutions).",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/bosch/bosch-glimpse2.webp",
+                "https://cdn.kalingauniversity.ac.in/bosch/bosch-glimpse2.webp",
             logoSrc: "",
             subtitle: "INDUSTRY COLLABORATIONS",
             link: "/centresofexcellence",
@@ -69,7 +69,7 @@ function Academiccards() {
             description:
                 "We have a vibrant film making studio at our campus, equipped with lights, cameras, speakers, and editing tools that enable students to learn script-writing, acting, direction, production, lighting techniques, video editing, set design, camera handling, live streaming, and more.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/filmmakingstudio.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/filmmakingstudio.webp",
             logoSrc: "",
             subtitle: "CREATIVE ARTS",
         },
@@ -78,7 +78,7 @@ function Academiccards() {
             description:
                 "Our podcast studio is a soundproof room equipped with high-quality microphones and equipment, providing students with an ideal space to practice and record content creation.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recording-studios.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/recording-studios.webp",
             logoSrc: "",
             subtitle: "MEDIA & COMMUNICATION",
         },
@@ -87,7 +87,7 @@ function Academiccards() {
             description:
                 "Every year, we provide on-campus internship opportunities to our students and conduct hands-on training programs on advanced instruments to improve their practical knowledge and technical expertise. We don’t just make our students academically strong but also job-ready with new skills so that they can meet industry demands.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/education.webp",
+                "https://cdn.kalingauniversity.ac.in/academics/education.webp",
             logoSrc: "",
             subtitle: "CAREER READINESS",
         },
@@ -96,7 +96,7 @@ function Academiccards() {
             description:
                 "We give every student access to the ERP portal, where they log in and get all sorts of information like the academic curriculum, exam timetable, notices, results, transportation details, and other information.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/student-erp.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/student-erp.webp",
             logoSrc: "",
             subtitle: "DIGITAL SERVICES",
         },
@@ -105,7 +105,7 @@ function Academiccards() {
             description:
                 "To support experimental studies and research in the field of pharmacy, biotechnology, and life sciences, we have a safe and well-maintained animal house on our campus. We strictly adhere to ethical guidelines and safe practices in conducting practical experiments.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/animal+house.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/animal+house.webp",
             logoSrc: "",
             subtitle: "RESEARCH FACILITIES",
         },
@@ -114,7 +114,7 @@ function Academiccards() {
             description:
                 "Our audio-visual centre offers advanced tools and resources that support interactive learning, presentations, and projects of students.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/audiovisualcentre.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/audiovisualcentre.webp",
             logoSrc: "",
             subtitle: "LEARNING SUPPORT",
         },
@@ -123,7 +123,7 @@ function Academiccards() {
             description:
                 "We have a digitally-equipped and spacious auditorium with a seating capacity of 200 people, seminar halls, and board rooms where we regularly organise conferences, meetings, guest lectures, placement programs, training programs, events and activities, and much more.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/seminar-rooms.webp",
             logoSrc: "",
             subtitle: "EVENT INFRASTRUCTURE",
             // link: "/auditorium-and-halls",
@@ -133,7 +133,7 @@ function Academiccards() {
             description:
                 "The E-Learning Rooms at Kalinga University come with high-speed internet connection, printing facilities, and modern infrastructure. Our students can have access to digital libraries, online courses, research databases, and e-resources.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/elearning.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/elearning.webp",
             logoSrc: "",
             subtitle: "DIGITAL EDUCATION",
         },
@@ -142,7 +142,7 @@ function Academiccards() {
             description:
                 "The training team conducts interview prep sessions, resume building, and soft skills training programs to fill the gap between academic learning and companies' expectations. The placement team organises campus drives to generate placement opportunities for graduate and postgraduate students.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet2.webp",
+                "https://cdn.kalingauniversity.ac.in/alumini/alimini-meet2.webp",
             logoSrc: "",
             subtitle: "CAREER SERVICES",
             link: "/training-and-placements",
@@ -151,7 +151,7 @@ function Academiccards() {
             title: "Research Facilities",
             description:
                 "We have high-tech instruments at CIF, research labs for different streams, centres of excellence, an IPR cell, and dedicated faculty members who are always ready to guide, support, and mentor undergraduate, postgraduate, and Ph.D. students and research scholars in performing experimentation work and preparing reports.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/science.webp",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/academics/science.webp",
             logoSrc: "",
             subtitle: "ADVANCED RESEARCH",
             link: "/research-facilities",
@@ -161,7 +161,7 @@ function Academiccards() {
             description:
                 "Our recording studio provides students and faculty members with a creative space where they can explore their artistic expression and produce high-quality audio and video content. It contains advanced tools, audio plugins, video systems, microphones, and pro-grade systems.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recordingstudio.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/recordingstudio.webp",
             logoSrc: "",
             subtitle: "MEDIA PRODUCTION",
         },
@@ -170,7 +170,7 @@ function Academiccards() {
             description:
                 "Our business lab features advanced computer systems and software that help commerce and management students master statistical tools, data analysis, and decision-making with an easy-to-use interface.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/businesslab.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/businesslab.webp",
             logoSrc: "",
             subtitle: "MANAGEMENT STUDIES",
         },
@@ -179,7 +179,7 @@ function Academiccards() {
             description:
                 "The lab equips students and research scholars to study various business parameters through advanced statistical analysis techniques. With our statistical database lab, they learn to analyse, interpret, and present the information in textual, tabular, and graphical forms in their research field.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/research-and-statistical-database-lab1.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/research-and-statistical-database-lab1.webp",
             logoSrc: "",
             subtitle: "DATA & ANALYTICS",
         },
@@ -188,7 +188,7 @@ function Academiccards() {
             description:
                 "A dedicated learning space designed for students to improve their language and communication skills in English and Hindi.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/arts.webp",
+                "https://cdn.kalingauniversity.ac.in/academics/arts.webp",
             logoSrc: "",
             subtitle: "DIGITAL EDUCATION",
         },

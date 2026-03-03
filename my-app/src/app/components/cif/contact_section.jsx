@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import SectionHeading from "../general/SectionHeading";
 
-const DEFAULT_IMAGE_SRC = "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/kalinga.webp";
+const DEFAULT_IMAGE_SRC = "https://cdn.kalingauniversity.ac.in/IQAC/kalinga.webp";
 const DEFAULT_TITLE = "Contact Details";
 const DEFAULT_SUBTITLE = "Head of Department";
 const DEFAULT_DEPARTMENT = "Faculty of Information Technology";

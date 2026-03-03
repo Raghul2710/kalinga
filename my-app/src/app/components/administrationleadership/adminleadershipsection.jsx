@@ -3,42 +3,42 @@ import LeadershipCard from "../leadership/LeadershipCard";
 
 const leaders = [
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Rajeev+Kumar.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Rajeev+Kumar.png",
     name: "Dr. Rajeev Kumar",
     designation: "Chairman",
     quote: "Education must not only inform minds but ignite purpose and shape responsible leaders of tomorrow.",
     profileLink: "/chairman"
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Arora.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Sandeep+Arora.png",
     name: "Dr. Sandeep Arora",
     designation: "Chancellor",
     quote: "True progress begins when learning inspires responsibility, resilience, and the courage to create change.",
     profileLink: "/chancellor"
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sajjan+Singh.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Sajjan+Singh.png",
     name: "Mr. Sajjan Singh",
     designation: "Pro-Chancellor",
     quote: "Education thrives when opportunity meets vision, and talent meets the right guidance.",
     profileLink: "/pro-chancellor"
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Shridhar.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Shridhar.png",
     name: "Dr. R. Shridhar",
     designation: "Vice-Chancellor",
     quote: "Education is not preparation for life; it is the awakening of purpose within it.",
     profileLink: "/vice-chancellor"
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Byju+John.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Byju+John.png",
     name: "Dr. Byju John",
     designation: "Director General",
     quote: "Learning has real power only when it shapes judgment, character, and responsibility.",
     profileLink: "/director-general"
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Gandhi.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Sandeep+Gandhi.png",
     name: "Dr. Sandeep Gandhi",
     designation: "Registrar",
     quote: "Education must expand perspectives, challenge limitations, and prepare minds for a global future.",

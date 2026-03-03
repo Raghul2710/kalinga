@@ -59,7 +59,7 @@ export default function ProgramsOffered({
   programs = defaultPrograms,
   title = "Programs Offered",
   description = "Explore our diverse academic programs designed to empower your future.",
-  backgroundImage = "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/aiml-banner.webp",
+  backgroundImage = "https://cdn.kalingauniversity.ac.in/aiml/aiml-banner.webp",
   imageAlt = "Students",
   hideSearch = false
 }) {

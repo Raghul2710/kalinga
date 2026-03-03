@@ -6,42 +6,42 @@ const nccActivities = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "",
     title: "",
     description:
       "",
-    
+
   },
   {
-   id: 2,
+    id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "",
     title: "",
     description:
       "",
-    
+
   },
   {
-id: 3,
+    id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "",
     title: "",
     description:
       "",
-    
+
   },
   {
     id: 4,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     imageAlt: "",
     title: "",
     description:
       "",
-    
+
   },
 ];
 
@@ -61,6 +61,6 @@ export default function NccEvents() {
         activities={nccActivities}
         paddingClassName="py-16"
       />
-    </div>  
+    </div>
   );
 }

@@ -72,7 +72,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. (Computer Science Engineering)",
       description: "Score: 81",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(1).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(1).png",
       videoUrl: "", // keep empty if no video
     },
     {
@@ -81,7 +81,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. CS - AIML with IBM",
       description: "Score: 81",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(2).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(2).png",
       videoUrl: "",
     },
     {
@@ -90,7 +90,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. (Computer Science Engineering)",
       description: "Score: 80",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(3).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(3).png",
       videoUrl: "",
     },
     {
@@ -99,7 +99,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. (Computer Science Engineering)",
       description: "Score: 81",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(4).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(4).png",
       videoUrl: "",
     },
     {
@@ -108,7 +108,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. (Computer Science Engineering)",
       description: "Score: 80",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(5).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(5).png",
       videoUrl: "",
     },
     {
@@ -117,7 +117,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. LATERAL ENTRY (Computer Science Engineering)",
       description: "Score: 80",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(6).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(6).png",
       videoUrl: "",
     },
     {
@@ -126,7 +126,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. CS - AIML WITH IBM",
       description: "Score: 81",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(7).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(7).png",
       videoUrl: "",
     },
     {
@@ -135,7 +135,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. (Computer Science Engineering)",
       description: "Score: 81",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(8).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(8).png",
       videoUrl: "",
     },
     {
@@ -144,7 +144,7 @@ export default function KalseePage() {
       subtitle: "B. TECH. (Computer Science Engineering)",
       description: "Score: 80",
       thumbnail:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-student(9).png",
+        "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-student(9).png",
       videoUrl: "",
     },
   ];
@@ -156,8 +156,8 @@ export default function KalseePage() {
       title: "Step 1: Visit & Apply",
       description: "",
       backDescription: "Visit https://admissions.kalingauniversity.ac.in/ and apply for the KALSEE Exam.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(2).png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/exam+(2).png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 2,
@@ -165,8 +165,8 @@ export default function KalseePage() {
       title: "Step 2: Fill Application Form",
       description: "",
       backDescription: "Fill out the online application form with your details.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/exam+(3).png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 3,
@@ -174,8 +174,8 @@ export default function KalseePage() {
       title: "Step 3: Pay Application Fees",
       description: "",
       backDescription: "Pay the application fees to complete your registration.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/fees.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kal-mat/fees.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 4,
@@ -183,8 +183,8 @@ export default function KalseePage() {
       title: "Step 4: Receive Login Details",
       description: "",
       backDescription: "Get login details & scheduling link within 24 hours.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/key.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kal-mat/key.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 5,
@@ -192,8 +192,8 @@ export default function KalseePage() {
       title: "Step 5: Take the CBT",
       description: "",
       backDescription: "Take the Computer-Based Test (CBT) as per your scheduled date.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/exam+(3).png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 6,
@@ -201,8 +201,8 @@ export default function KalseePage() {
       title: "Step 6: Check Results",
       description: "",
       backDescription: "Check your final results online.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/medical-result.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/medical-result.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 7,
@@ -210,8 +210,8 @@ export default function KalseePage() {
       title: "Step 7: Welcome to KU",
       description: "",
       backDescription: "Welcome to Kalinga University!",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/college-student.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/college-student.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
   ]
 
@@ -219,22 +219,22 @@ export default function KalseePage() {
     {
       title: "Rescheduling Policy",
       description: "Rescheduling of the KALSEE exam is allowed only if requested at least 48 hours before the scheduled test.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       title: "Additional Attempts",
       description: "Candidates opting for additional attempts must pay a separate examination fee.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       title: "Cancellation Policy",
       description: "The examination fee once paid is non-refundable under any circumstances.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       title: "Documents Required",
       description: "Candidates must carry a valid Driving License, Passport, Aadhaar Card, PAN Card, or any Government-approved Photo ID.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     }
   ];
 
@@ -242,47 +242,47 @@ export default function KalseePage() {
     {
       title: "Eligibility",
       description: "Required for UG, PG, and Ph.D. Programs.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/criteria+(1).png" alt="Eligibility" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/criteria+(1).png" alt="Eligibility" width={64} height={64} className="object-contain" />
     },
     {
       title: "Mode of Examination",
       description: "Computer-Based Test (CBT).",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/test.png" alt="Mode of Examination" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/test.png" alt="Mode of Examination" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Registration",
       description: "Online registration is mandatory to appear for the KALSEE exam.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/registration.png" alt="Exam Registration" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/registration.png" alt="Exam Registration" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Pattern & Duration",
       description: "MCQ-based examination. Duration is 90 minutes for UG and PG programs, and 120 minutes for Ph.D. programs.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/pattern.png" alt="Exam Pattern & Duration" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/pattern.png" alt="Exam Pattern & Duration" width={64} height={64} className="object-contain" />
     },
     {
       title: "Total Questions",
       description: "90 questions for UG and PG programs, and 100 questions for Ph.D. programs.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(1).png" alt="Total Questions" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/exam+(1).png" alt="Total Questions" width={64} height={64} className="object-contain" />
     },
     {
       title: "Negative Marking",
       description: "There is no negative marking in the KALSEE examination.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam.png" alt="Negative Marking" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/exam.png" alt="Negative Marking" width={64} height={64} className="object-contain" />
     },
     {
       title: "Passing Marks",
       description: "Candidates must secure a minimum of 50% marks to qualify.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/mark.png" alt="Passing Marks" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/mark.png" alt="Passing Marks" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Fee",
       description: "India & SAARC candidates: INR 1,400 for all UG and PG courses, and INR 3,500 for Ph.D. courses.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/hand.png" alt="Exam Fee" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/hand.png" alt="Exam Fee" width={64} height={64} className="object-contain" />
     },
     {
       title: "Scholarship Opportunities",
       description: "Merit-based scholarships are available for top scorers.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/scholarship.png" alt="Scholarship Opportunities" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/scholarship.png" alt="Scholarship Opportunities" width={64} height={64} className="object-contain" />
     }
   ];
 
@@ -290,7 +290,7 @@ export default function KalseePage() {
     <>
       <HeroSectionTwo
         id="kalsee-application-form"
-        backgroundImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-banner-new.png"
+        backgroundImage="https://cdn.kalingauniversity.ac.in/kalsee/kalsee-banner-new.png"
         title="One Entrance Exam Opens Door To 130+ Programs"
         description="KALSEE (Kalinga University Entrance Examination) is the gateway to your academic journey at Kalinga University. This comprehensive entrance exam is designed to assess your knowledge, aptitude, and readiness for various undergraduate and postgraduate programs. Prepare yourself for success and take the first step towards a bright future."
         buttonText="Apply Now"
@@ -303,10 +303,10 @@ export default function KalseePage() {
       <MainIntro
         title="Kalinga Scholastic Entrance Examination [KALSEE]"
         description="KALSEE is your gateway to secure a seat in a selected program among 130+ academic programs at KU. With amazing scholarships and endless career options, it’s time to make your dreams come true with one of the top private university in Chhattisgarh. "
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/kalsee/kalsee.webp"
         imageAlt="KALSEE"
       />
-      <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Details of KALSEE" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." hideIcons={false} />
+      <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/kif/kif.webp" boxItems={boxItems} title="Details of KALSEE" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." hideIcons={false} />
       <KalseeExamPattern />
       <QuickLinks links={links} title="Exam Policies" description="KALSEE follows comprehensive policies covering eligibility, registration, examination format, fee structure, and scholarship opportunities to ensure a fair and transparent examination process."
         textColorClassName="text-[var(--background)]" showReadMore={false} titleClassName="text-white" gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-5" />

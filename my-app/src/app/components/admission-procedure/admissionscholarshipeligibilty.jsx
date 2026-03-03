@@ -67,7 +67,7 @@ function Admissionscholarshipeligibilty() {
 
     return (
         <div>
-            <ImageListItem items={Items} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="Who Are Eligible For Our Scholarships?" subtitle="" description="" />
+            <ImageListItem items={Items} imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrc.webp" title="Who Are Eligible For Our Scholarships?" subtitle="" description="" />
         </div>
     )
 }

@@ -21,7 +21,7 @@ export default function KalseeMilestone({ imageSrc, milestones: customMilestones
   ];
 
   const milestones = customMilestones || defaultMilestones;
-  const defaultImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/kalsee-cta-img.png";
+  const defaultImageSrc = "https://cdn.kalingauniversity.ac.in/kalsee/kalsee-cta-img.png";
   const finalImageSrc = imageSrc || defaultImageSrc;
 
   // State for animated values
@@ -47,13 +47,13 @@ export default function KalseeMilestone({ imageSrc, milestones: customMilestones
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const current = Math.floor(start + (end - start) * progress);
-      
+
       setAnimatedValues(prev => {
         const newValues = [...prev];
         newValues[index] = current;
         return newValues;
       });
-      
+
       if (progress < 1) {
         requestAnimationFrame(animate);
       }
@@ -70,7 +70,7 @@ export default function KalseeMilestone({ imageSrc, milestones: customMilestones
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
-            
+
             // Animate each milestone
             milestones.forEach((milestone, index) => {
               const { number } = parseMilestoneValue(milestone.value);
@@ -97,7 +97,7 @@ export default function KalseeMilestone({ imageSrc, milestones: customMilestones
   const getAnimatedValue = (milestone, index) => {
     const { suffix } = parseMilestoneValue(milestone.value);
     const animatedNumber = animatedValues[index];
-    
+
     // Format based on suffix
     if (suffix.includes('LPA')) {
       return `${animatedNumber} ${suffix}`;
@@ -111,7 +111,7 @@ export default function KalseeMilestone({ imageSrc, milestones: customMilestones
   return (
     <section ref={sectionRef} className="relative px-2 py-2">
       <div className="">
-        
+
         {/* Dark Blue Banner */}
         <div className="relative bg-[var(--dark-blue)] rounded-2xl overflow-visible min-h-[280px] md:min-h-[140px]">
           <div className="container mx-auto relative flex flex-col md:flex-row items-center justify-center md:justify-between h-full pt-6 md:pt-0 gap-4 sm:gap-2 md:gap-6 lg:gap-8">

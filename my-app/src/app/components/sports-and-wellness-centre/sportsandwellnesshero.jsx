@@ -12,7 +12,7 @@ function SportsAndWellnessHero() {
       description: "",
       icon: (
         <Image
-          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/experttraining.svg"
+          src="https://cdn.kalingauniversity.ac.in/sports/experttraining.svg"
           alt="Expert Training"
           width={40}
           height={40}
@@ -26,7 +26,7 @@ function SportsAndWellnessHero() {
       description: "",
       icon: (
         <Image
-          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/sportscholarship.svg"
+          src="https://cdn.kalingauniversity.ac.in/sports/sportscholarship.svg"
           alt="Scholarship"
           width={40}
           height={40}
@@ -40,7 +40,7 @@ function SportsAndWellnessHero() {
       description: "",
       icon: (
         <Image
-          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/winningmindset.svg"
+          src="https://cdn.kalingauniversity.ac.in/sports/winningmindset.svg"
           alt="Winning Mindset"
           width={40}
           height={40}
@@ -105,7 +105,7 @@ function SportsAndWellnessHero() {
       <section className="sports-wellness-bg py-16">
         <div className="sports-imagelistitem max-w-7xl mx-auto px-6">
           <ImageListItem
-            imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/chess.webp"
+            imageSrc="https://cdn.kalingauniversity.ac.in/sports/chess.webp"
             boxItems={boxItems}
             title="Turning Passionate Players Into Athletes"
             description=""

@@ -60,7 +60,7 @@ export default function EkeedaPage() {
                     "Online Learning Resources are now easily available for the students of Engineering Branches at Kalinga University through the Sponsored Digital Library by Ekeeda.com.",
                     "Every student will get a separate login to access the Digital Library with easy steps.",
                 ]}
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/ekeeda.webp"
+                imageUrl="https://cdn.kalingauniversity.ac.in/common/ekeeda.webp"
                 imageAlt="Ekeeda Digital Library"
                 initialVisibleParagraphs={3}
                 showReadMore={false}

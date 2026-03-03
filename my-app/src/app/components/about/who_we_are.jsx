@@ -24,7 +24,7 @@ export default function WhoWeAre() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/who-we-are.webp"
+            src="https://cdn.kalingauniversity.ac.in/common/who-we-are.webp"
             alt="Who We Are"
             fill
             className="object-cover rounded-2xl"

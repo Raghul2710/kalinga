@@ -6,7 +6,7 @@ import Image from 'next/image';
 import SectionHeading from '../general/SectionHeading';
 
 const HeroSectionTwo = ({
-  backgroundImage = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart.webp',
+  backgroundImage = 'https://cdn.kalingauniversity.ac.in/ctcd/chart.webp',
   logoImage,
   logoAlt = '',
   title = 'Corporate Training and Consultancy Division (CTCD)',
@@ -72,8 +72,8 @@ const HeroSectionTwo = ({
           )}
           {/* <p className="md:text-base text-xs text-[var(--foreground)] ">{description}</p> */}
           {showButton && (
-            <Link 
-              href={buttonLink} 
+            <Link
+              href={buttonLink}
               className="inline-flex"
               onClick={(e) => {
                 if (buttonLink.startsWith('#')) {

@@ -18,42 +18,42 @@ const learnCards = [
     title: "",
     description: "Fundamentals of 2 & 3-Wheeler systems",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-1.svg",
+      "https://cdn.kalingauniversity.ac.in/automobile/auto-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Diagnostic Skills Using Modern Tools",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-2.svg",
+      "https://cdn.kalingauniversity.ac.in/automobile/auto-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Engine Service & Maintenance",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-3.svg",
+      "https://cdn.kalingauniversity.ac.in/automobile/auto-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Repair Procedures For 2 & 3 Wheelers",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-4.svg",
+      "https://cdn.kalingauniversity.ac.in/automobile/auto-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Preventive & Predictive Maintenance Techniques",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/auto-5.svg",
+      "https://cdn.kalingauniversity.ac.in/automobile/auto-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Exposure To Emerging Technologies in Mobility",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/automobile-icon-new.svg",
+      "https://cdn.kalingauniversity.ac.in/automobile/automobile-icon-new.svg",
   },
 ];
 
@@ -61,21 +61,21 @@ const glimpses = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/automobile-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/automobile/automobile-glimpse1.webp",
     imageAlt: "Automobile Training Glimpse",
     title: "Workshop Session / Training Glimpse",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/automobile-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/automobile/automobile-glimpse2.webp",
     imageAlt: "Automobile Training Glimpse",
     title: "Industry Expert Talk",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/automobile/automobile-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/automobile/automobile-glimpse3.webp",
     imageAlt: "Automobile Training Glimpse",
     title: "Hands-on Diagnostic Practice",
   },
@@ -98,7 +98,7 @@ export default function AutomobileTrainingCentrePage() {
         title="Automobile Training Centre"
         subtitle="In collaboration with JustAuto Solutions"
         description={aboutText}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/justauto-solutions.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/research/justauto-solutions.png"
         imageAlt="Automobile Training Centre"
         readmore={false}
       />

@@ -44,7 +44,7 @@ const WATER_MANAGEMENT_MEASURES = [
 
 const WATER_MANAGEMENT_PDF = {
     title: "Water Management Action Plan (PDF)",
-    url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Water+Management/water-mgmt.pdf",
+    url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Water+Management/water-mgmt.pdf",
 };
 
 const ENVIRONMENTAL_SUSTAINABILITY_CONTENT = `
@@ -53,7 +53,7 @@ We’re committed to maximising positive environmental impact by incorporating s
 
 const ENVIRONMENTAL_SUSTAINABILITY_PDF = {
     title: "Policy Guidelines For Environmental Sustainability (PDF)",
-    url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Environmental+Sustainability+/Environmental-Sustainability.pdf",
+    url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Environmental+Sustainability+/Environmental-Sustainability.pdf",
 };
 
 const GREEN_INITIATIVES_CONTENT = `
@@ -65,11 +65,11 @@ We regularly conduct Green Audits and promote environmental ethics to ensure tha
 `;
 
 const AUDIT_REPORTS = [
-    { title: "Audit Report 2022-23", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Audit+Reports/2022-23.pdf" },
-    { title: "Audit Report 2021-22", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Audit+Reports/2021-22.pdf" },
-    { title: "Audit Report 2020-21", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Audit+Reports/2020-21.pdf" },
-    { title: "Audit Report 2019-20", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Audit+Reports/2019-20.pdf" },
-    { title: "Audit Report 2018-19", url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Audit+Reports/2018-19.pdf" },
+    { title: "Audit Report 2022-23", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Audit+Reports/2022-23.pdf" },
+    { title: "Audit Report 2021-22", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Audit+Reports/2021-22.pdf" },
+    { title: "Audit Report 2020-21", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Audit+Reports/2020-21.pdf" },
+    { title: "Audit Report 2019-20", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Audit+Reports/2019-20.pdf" },
+    { title: "Audit Report 2018-19", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Audit+Reports/2018-19.pdf" },
 ];
 
 const GENDER_EQUITY_CONTENT = `
@@ -163,7 +163,7 @@ const GENDER_EQUITY_PROGRAMS = {
 
 const GENDER_SENSITISATION_PDF = {
     title: "Gender Sensitisation Action Plan (PDF)",
-    url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Gender-Equity.pdf",
+    url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Gender-Equity.pdf",
 };
 
 
@@ -183,7 +183,7 @@ const DISABLED_FRIENDLY_POINTS = [
 
 const DISABILITY_GUIDELINES_PDF = {
     title: "Disability Guidelines",
-    url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Disability+Guidelines.pdf",
+    url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Disability+Guidelines.pdf",
 };
 
 const CONSTITUTIONAL_OBLIGATIONS_POINTS = [
@@ -323,11 +323,11 @@ const CODE_OF_CONDUCT_POINTS = [
 const CODE_OF_CONDUCT_PDFS = [
     {
         title: "Code Of Conduct Handbook",
-        url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Code+of+Conduct.pdf",
+        url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Code+of+Conduct.pdf",
     },
     {
         title: "Student Attributes",
-        url: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Code+of+Conduct1.pdf",
+        url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Code+of+Conduct1.pdf",
     },
 ];
 
@@ -477,7 +477,7 @@ const CSR_INTRO =
 
 const CSR_INITIATIVES = [
     "The transport fees provided to the students (who avail the facility) are at subsidised rates. The bus route covers distances of up to 70 KM (one way) to facilitate students who live far from the university.",
-    "The university provides scholarships under different categories. Click to know more - <a href='https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/Scholarships+2026-2027.pdf'>Scholarships</a>",
+    "The university provides scholarships under different categories. Click to know more - <a href='https://cdn.kalingauniversity.ac.in/scholarships/Scholarships+2026-2027.pdf'>Scholarships</a>",
     "Absorption of fees or providing appropriate sponsor(s) to those students who are discontinuing or leaving their education midway due to financial difficulties (on a case-by-case basis).",
     "Taking environmental initiatives from time to time by planting 1000+ plants and trees on and around the campus.",
     "We have installed Rooftop Solar Power Panels that convert sunlight into electricity, which reduces the usage of traditional power sources. LED lights have been installed throughout the campus, which minimises energy consumption and enhances lighting quality.",
@@ -661,23 +661,23 @@ const CONTRIBUTIONS_IMAGES = [
 
 /** ✅ IMAGE PROVISIONS (leave src blank, you will fill) */
 const ENERGY_IMAGES = [
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/sgd-ecm-solar.webp", alt: "Energy measure image 1" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/sgd-ecm-bulb.webp", alt: "Energy measure image 2" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/sdg-ecm-workshop.webp", alt: "Energy measure image 3" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/sgd-ecm-solar.webp", alt: "Energy measure image 1" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/sgd-ecm-bulb.webp", alt: "Energy measure image 2" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-ecm-workshop.webp", alt: "Energy measure image 3" },
 ];
 
 const WASTE_IMAGES = [
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Waste+Management/sdg-wsmgmt-1.webp", alt: "Waste management image 1" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Waste+Management/sdg-wsmgmt-2.webp", alt: "Waste management image 2" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Waste+Management/sdg-wsmgmt-3.webp", alt: "Waste management image 3" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Waste+Management/sdg-wsmgmt-4.webp", alt: "Waste management image 4" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Waste+Management/sdg-wsmgmt-1.webp", alt: "Waste management image 1" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Waste+Management/sdg-wsmgmt-2.webp", alt: "Waste management image 2" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Waste+Management/sdg-wsmgmt-3.webp", alt: "Waste management image 3" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Waste+Management/sdg-wsmgmt-4.webp", alt: "Waste management image 4" },
 ];
 
 const WATER_IMAGES = [
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Water+Management/sdg-wa-mgmt-1.webp", alt: "Water management image 1" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Water+Management/sdg-wtmgmt-2.webp", alt: "Water management image 2" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Water+Management/sdg-wtmgmt-3.webp", alt: "Water management image 3" },
-    { src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/Water+Management/sdg-wtmgmt-4.webp", alt: "Water management image 4" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Water+Management/sdg-wa-mgmt-1.webp", alt: "Water management image 1" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Water+Management/sdg-wtmgmt-2.webp", alt: "Water management image 2" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Water+Management/sdg-wtmgmt-3.webp", alt: "Water management image 3" },
+    { src: "https://cdn.kalingauniversity.ac.in/sdg-cell/Water+Management/sdg-wtmgmt-4.webp", alt: "Water management image 4" },
 ];
 
 const ENVIRONMENT_IMAGES = [
@@ -1443,7 +1443,7 @@ export default function SdgTabSection() {
                                                 <div key={index} className="bg-[var(--card-skin)] p-6 rounded-xl flex flex-col items-center text-center gap-4 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
                                                     <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                                                         <Image
-                                                            src={`https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/${item.icon}`}
+                                                            src={`https://cdn.kalingauniversity.ac.in/icons/${item.icon}`}
                                                             alt={item.title}
                                                             width={40}
                                                             height={40}

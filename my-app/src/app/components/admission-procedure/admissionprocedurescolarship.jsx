@@ -9,7 +9,7 @@ function Admissionprocedurescolarship() {
             "With KU, you don’t have to worry about the tuition fee as we’ve got you covered. Our scholarships are designed to help bright minds succeed in their career."
         ],
         buttonLabel: "Know More",
-        href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/Scholarships+2026-2027.pdf"
+        href: "https://cdn.kalingauniversity.ac.in/scholarships/Scholarships+2026-2027.pdf"
     };
     return (
         <div>

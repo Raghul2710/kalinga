@@ -11,7 +11,7 @@ export default function Leadership() {
   return (
     <>
       <ChairmanMessage
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Rajeev+Kumar.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/Leadership/Rajeev+Kumar.png"
         imageAlt="Dr. Rajeev Kumar"
         name="Dr. Rajeev Kumar"
         title="Chairman"

@@ -180,7 +180,7 @@ export default function VisionMission({
   missionTitle = "Mission",
   visionText = defaultVision,
   missionText = defaultMission,
-  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png",
+  imageSrc = "https://cdn.kalingauniversity.ac.in/admission/student-img.png",
   imageAlt = "Vision and Mission",
   showImage = true,
   showImg, // Alias for showImage
@@ -265,7 +265,7 @@ export default function VisionMission({
           missionTitle: mt = "Mission",
           visionText: vtxt = defaultVision,
           missionText: mtxt = defaultMission,
-          imageSrc: imgSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png",
+          imageSrc: imgSrc = "https://cdn.kalingauniversity.ac.in/admission/student-img.png",
           imageAlt: imgAlt = "Vision and Mission",
           showImage: showImg = true,
           className: cls = "",

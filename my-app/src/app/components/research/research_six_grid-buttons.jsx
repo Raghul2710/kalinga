@@ -24,7 +24,7 @@ const defaultButtons = [
   {
     id: 1,
     text: "Research, Consultancy & IPR Policy",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Research+Consultacy_compressed+(1).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/research/Research+Consultacy_compressed+(1).pdf",
   },
   // {
   //   id: 2,
@@ -43,12 +43,12 @@ const defaultButtons = [
   // {
   //   id: 4,
   //   text: "Research Policy",
-  //   href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/1.+Research+Policy+(2).pdf",
+  //   href: "https://cdn.kalingauniversity.ac.in/research/1.+Research+Policy+(2).pdf",
   // },
   // {
   //   id: 5,
   //   text: "Constitution of the Ethics Board for Maintaining Research Integrity",
-  //   href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/5.+CONSTITUTION+OF+ETHICS+BOARD+FOR+MAINTAINING+RESEARCH+INTEGRITY.pdf"
+  //   href: "https://cdn.kalingauniversity.ac.in/research/5.+CONSTITUTION+OF+ETHICS+BOARD+FOR+MAINTAINING+RESEARCH+INTEGRITY.pdf"
   // },
   {
     id: 6,
@@ -74,12 +74,12 @@ const defaultButtons = [
   // {
   //   id: 10,
   //   text: "Research Integrity & Ethics Policy",
-  //   href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/RESEARCH+Ethics.pdf",
+  //   href: "https://cdn.kalingauniversity.ac.in/placement/RESEARCH+Ethics.pdf",
   // },
   // {
   //   id: 11,
   //   text: "Constitution of the Research Advisory Committee",
-  //   href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Constitution+of+Research+Advisory+Committee.pdf",
+  //   href: "https://cdn.kalingauniversity.ac.in/placement/Constitution+of+Research+Advisory+Committee.pdf",
   // },
   // {
   //   id: 12,
@@ -388,7 +388,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
                   <div className="pt-6 pb-8 flex flex-wrap gap-4 justify-end">
                     <button
                       onClick={() => {
-                        openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+Money+Policy.pdf", "Seed Money Policy");
+                        openFlipbook("https://cdn.kalingauniversity.ac.in/research-resources/Seed+Money+Policy.pdf", "Seed Money Policy");
                         handleCloseContentModal();
                       }}
                       className="bg-[#3A3B7B] hover:bg-[#4B4C9D] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"
@@ -397,7 +397,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
                     </button>
                     <button
                       onClick={() => {
-                        openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+money+format.pdf", "Seed Money Format");
+                        openFlipbook("https://cdn.kalingauniversity.ac.in/research-resources/Seed+money+format.pdf", "Seed Money Format");
                         handleCloseContentModal();
                       }}
                       className="border-2 border-[#3A3B7B] text-[#3A3B7B] hover:bg-[#3A3B7B] hover:text-white px-6 py-2.5 rounded-full font-medium transition-all flex items-center gap-2"
@@ -414,7 +414,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
                   <div className="pt-4 flex justify-end">
                     <button
                       onClick={() => {
-                        openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/research/PLAGIARISM-FILE-POLICY.pdf", "Plagiarism Policy");
+                        openFlipbook("https://cdn.kalingauniversity.ac.in/research/PLAGIARISM-FILE-POLICY.pdf", "Plagiarism Policy");
                         handleCloseContentModal();
                       }}
                       className="bg-[#3A3B7B] hover:bg-[#4B4C9D] text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg flex items-center gap-2 group"

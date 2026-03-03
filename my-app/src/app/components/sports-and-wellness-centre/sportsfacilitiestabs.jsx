@@ -16,35 +16,35 @@ import DataTable from "../general/data-table";
 
 export default function SportsFacilitiesTabs({
   // Indoor (single images)
-  caromImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/carrom-game-pieces.webp",
-  chessImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/chess+(1).webp",
-  tableTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/table_tennis.webp",
-  snookerImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/snooker.webp",
+  caromImageSrc = "https://cdn.kalingauniversity.ac.in/sports/carrom-game-pieces.webp",
+  chessImageSrc = "https://cdn.kalingauniversity.ac.in/sports/chess+(1).webp",
+  tableTennisImageSrc = "https://cdn.kalingauniversity.ac.in/sports/table_tennis.webp",
+  snookerImageSrc = "https://cdn.kalingauniversity.ac.in/sports/snooker.webp",
 
   // Outdoor (single images)
-  cricketImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/cricket.webp",
-  footballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/football.webp",
-  badmintonImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/badminton.webp",
-  basketballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/basektballevent.webp",
-  volleyballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/volleyball.webp",
-  kabaddiImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/kabaddi+(1).webp",
-  khoKhoImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/kho-kho.webp",
-  hockeyImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/hockey.webp",
-  handballImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/handball.webp",
-  lawnTennisImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/table_tennis.webp",
-  shotPutImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/shotput.webp",
-  discusThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/discthrow.webp",
-  javelinThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/javelin_throw.webp",
-  hammerThrowImageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/hammer_throw.webp",
+  cricketImageSrc = "https://cdn.kalingauniversity.ac.in/sports/cricket.webp",
+  footballImageSrc = "https://cdn.kalingauniversity.ac.in/sports/football.webp",
+  badmintonImageSrc = "https://cdn.kalingauniversity.ac.in/sports/badminton.webp",
+  basketballImageSrc = "https://cdn.kalingauniversity.ac.in/sports/basektballevent.webp",
+  volleyballImageSrc = "https://cdn.kalingauniversity.ac.in/sports/volleyball.webp",
+  kabaddiImageSrc = "https://cdn.kalingauniversity.ac.in/sports/kabaddi+(1).webp",
+  khoKhoImageSrc = "https://cdn.kalingauniversity.ac.in/sports/kho-kho.webp",
+  hockeyImageSrc = "https://cdn.kalingauniversity.ac.in/sports/hockey.webp",
+  handballImageSrc = "https://cdn.kalingauniversity.ac.in/sports/handball.webp",
+  lawnTennisImageSrc = "https://cdn.kalingauniversity.ac.in/sports/table_tennis.webp",
+  shotPutImageSrc = "https://cdn.kalingauniversity.ac.in/sports/shotput.webp",
+  discusThrowImageSrc = "https://cdn.kalingauniversity.ac.in/sports/discthrow.webp",
+  javelinThrowImageSrc = "https://cdn.kalingauniversity.ac.in/sports/javelin_throw.webp",
+  hammerThrowImageSrc = "https://cdn.kalingauniversity.ac.in/sports/hammer_throw.webp",
 
 
   // Multiple images
   gymImages = [
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/gym1.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/gym2.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/gym3.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/gym4.webp",
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp"
+    "https://cdn.kalingauniversity.ac.in/sports/gym1.webp",
+    "https://cdn.kalingauniversity.ac.in/sports/gym2.webp",
+    "https://cdn.kalingauniversity.ac.in/sports/gym3.webp",
+    "https://cdn.kalingauniversity.ac.in/sports/gym4.webp",
+    "https://cdn.kalingauniversity.ac.in/facilities/gym.webp"
   ],
   yogaImages = [],
 }) {

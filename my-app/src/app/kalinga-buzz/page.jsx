@@ -16,32 +16,32 @@ export default function KalingaBuzz() {
     {
       id: 1,
       text: "Kalinga Buzz July 2019",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/July+2019.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/July+2019.pdf",
     },
     {
       id: 2,
       text: "Kalinga Buzz August 2019",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Aug+2019.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Aug+2019.pdf",
     },
     {
       id: 3,
       text: "Kalinga Buzz September 2019",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Sep+2019.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Sep+2019.pdf",
     },
     {
       id: 4,
       text: "Kalinga Buzz October 2019",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Oct+2019.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Oct+2019.pdf",
     },
     {
       id: 5,
       text: "Kalinga Buzz November 2019",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Nov+2019.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Nov+2019.pdf",
     },
     {
       id: 6,
       text: "Kalinga Buzz December 2019",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Dec+2019.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Dec+2019.pdf",
     },
   ];
 
@@ -49,52 +49,52 @@ export default function KalingaBuzz() {
     {
       id: 1,
       text: "Kalinga Buzz January 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+Jan+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Jan+2020.pdf",
     },
     {
       id: 2,
       text: "Kalinga Buzz February 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+Feb+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Feb+2020.pdf",
     },
     {
       id: 3,
       text: "Kalinga Buzz March 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+March+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+March+2020.pdf",
     },
     {
       id: 4,
       text: "Kalinga Buzz April 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+April+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+April+2020.pdf",
     },
     {
       id: 5,
       text: "Kalinga Buzz May 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+May+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+May+2020.pdf",
     },
     {
       id: 6,
       text: "Kalinga Buzz June 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+June+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+June+2020.pdf",
     },
     {
       id: 7,
       text: "Kalinga Buzz July 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+July+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+July+2020.pdf",
     },
     {
       id: 8,
       text: "Kalinga Buzz September 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+September+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+September+2020.pdf",
     },
     {
       id: 10,
       text: "Kalinga Buzz November 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+November+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+November+2020.pdf",
     },
     {
       id: 11,
       text: "Kalinga Buzz December 2020",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+Dec+2020.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Dec+2020.pdf",
     },
   ];
 
@@ -102,17 +102,17 @@ export default function KalingaBuzz() {
     {
       id: 1,
       text: "Kalinga Buzz January 2021",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+jan+2021.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+jan+2021.pdf",
     },
     {
       id: 2,
       text: "Kalinga Buzz February 2021",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+Feb+2021.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Feb+2021.pdf",
     },
     {
       id: 3,
       text: "Kalinga Buzz April 2021",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Kalinga+Buzz+april+2021.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+april+2021.pdf",
     },
 
   ];
@@ -121,47 +121,47 @@ export default function KalingaBuzz() {
     {
       id: 1,
       text: "Kalinga Buzz January 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+January+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+January+2025.pdf",
     },
     {
       id: 2,
       text: "Kalinga Buzz February 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+February+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+February+2025.pdf",
     },
     {
       id: 3,
       text: "Kalinga Buzz March 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+March+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+March+2025.pdf",
     },
     {
       id: 4,
       text: "Kalinga Buzz April 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+April+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+April+2025.pdf",
     },
     {
       id: 5,
       text: "Kalinga Buzz May 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+May+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+May+2025.pdf",
     },
     {
       id: 6,
       text: "Kalinga Buzz June 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+June+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+June+2025.pdf",
     },
     {
       id: 8,
       text: "Kalinga Buzz August 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+August+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+August+2025.pdf",
     },
     {
       id: 10,
       text: "Kalinga Buzz October 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+October+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+October+2025.pdf",
     },
     {
       id: 11,
       text: "Kalinga Buzz November 2025",
-      href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/buzz/Buzz+November+2025.pdf",
+      href: "https://cdn.kalingauniversity.ac.in/buzz/Buzz+November+2025.pdf",
     }
   ];
 
@@ -173,7 +173,7 @@ export default function KalingaBuzz() {
         description={["Stay connected and updated with our monthly newsletters! It highlights cultural events, ceremonies, research breakthroughs, sports achievements, academic achievements, students' and faculty achievements, and much more.",
 
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-buzz.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/kalinga-buzz.webp"
         imageAlt="Kalinga University Buzz"
       />
       <KalingaBuzzTabs

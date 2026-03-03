@@ -36,10 +36,10 @@ function AdmissionProcedure() {
             "Students who have published research papers, books, technology, or product innovations",
             "Wards of Kalinga University teaching and non-teaching staff"
         ],
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/placement.png",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/ccrc/placement.png",
         imageAlt: "Scholarships & Financial Assistance",
         knowMoreLabel: "Read More",
-        extraLink: "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/Scholarships+2026-2027.pdf",
+        extraLink: "https://cdn.kalingauniversity.ac.in/scholarships/Scholarships+2026-2027.pdf",
         extraLinkLabel: "Download Scholarship Policy"
 
     }

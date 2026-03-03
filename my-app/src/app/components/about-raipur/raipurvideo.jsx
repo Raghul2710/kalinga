@@ -5,7 +5,7 @@ import SectionHeading from "../general/SectionHeading";
 
 export default function RaipurVideoSection({
     videoId = "wKYgVIOYENo",
-    thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/about-raipur/raipur1.webp",
+    thumbnail = "https://cdn.kalingauniversity.ac.in/about-raipur/raipur1.webp",
     title = "Smart City Raipur",
     description = "", // optional
     alt = "Video thumbnail",

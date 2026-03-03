@@ -7,7 +7,7 @@ export default function Leadership() {
   return (
     <>
       <ChairmanMessage
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sandeep+Gandhi.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/Leadership/Sandeep+Gandhi.png"
         imageAlt="Dr. Sandeep Gandhi"
         name="Dr. Sandeep Gandhi"
         title="Registrar"

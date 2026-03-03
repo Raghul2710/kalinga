@@ -11,7 +11,7 @@ function SportsandwellnessMainIntro() {
                 ]}
                 readMoreLabel="Read More"
                 readLessLabel="Read Less"
-                imageUrl='https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/basektballevent.webp'
+                imageUrl='https://cdn.kalingauniversity.ac.in/sports/basektballevent.webp'
                 showKnowMore={true}
                 initialVisibleParagraphs={1}
             />

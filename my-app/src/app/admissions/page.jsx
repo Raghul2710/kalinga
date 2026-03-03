@@ -52,7 +52,7 @@ export default function Admissions() {
     steps: [
       {
         id: 1,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-1.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-1.svg",
         stepNumber: "01",
         title: "Step Ⅰ",
         description: "Visit https://admissions.kalingauniversity.ac.in/",
@@ -60,7 +60,7 @@ export default function Admissions() {
       },
       {
         id: 2,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-2.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-2.svg",
         stepNumber: "02",
         title: "Step Ⅱ",
         description: "Register for the entrance exam (KALSEE/KAL-MAT)",
@@ -68,7 +68,7 @@ export default function Admissions() {
       },
       {
         id: 3,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-3.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-3.svg",
         stepNumber: "03",
         title: "Step Ⅲ",
         description: "Take the computer-based exam and get shortlisted",
@@ -76,7 +76,7 @@ export default function Admissions() {
       },
       {
         id: 4,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-4.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-4.svg",
         stepNumber: "04",
         title: "Step Ⅳ",
         description: "Fill out the online admission form after selection",
@@ -84,7 +84,7 @@ export default function Admissions() {
       },
       {
         id: 5,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-5.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-5.svg",
         stepNumber: "05",
         title: "Step Ⅴ",
         description: "Attach self-attested copies with the admission form",
@@ -92,7 +92,7 @@ export default function Admissions() {
       },
       {
         id: 6,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-3.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-3.svg",
         stepNumber: "06",
         title: "Step Ⅵ",
         description: "Pay your program fee within 10 days",
@@ -100,7 +100,7 @@ export default function Admissions() {
       },
       {
         id: 7,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-4.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/step-4.svg",
         stepNumber: "07",
         title: "Step Ⅶ",
         description: "Welcome to Kalinga University!",
@@ -124,7 +124,7 @@ export default function Admissions() {
     buttonLabel: "Explore Now",
     cardBackgroundColor: "bg-[var(--dark-blue)]",
     showImage: true,
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/admission/student-img.png",
     imageAlt: "Entrance exam",
     buttonClassName: "!bg-[var(--button-red)] !text-white",
     arrowClassName: "!bg-white",
@@ -160,32 +160,32 @@ export default function Admissions() {
       {
         id: 1,
         name: "Hostel",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/hostel.webp",
+        image: "https://cdn.kalingauniversity.ac.in/facilities/hostel.webp",
       },
       {
         id: 2,
         name: "Library",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/library.webp",
+        image: "https://cdn.kalingauniversity.ac.in/admission/library.webp",
       },
       {
         id: 3,
         name: "GYM",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp",
+        image: "https://cdn.kalingauniversity.ac.in/facilities/gym.webp",
       },
       {
         id: 4,
         name: "Sports Complex",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/DSC00047.webp",
+        image: "https://cdn.kalingauniversity.ac.in/facilities/DSC00047.webp",
       },
       {
         id: 5,
         name: "Laboratories",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/labotories.webp",
+        image: "https://cdn.kalingauniversity.ac.in/facilities/labotories.webp",
       },
       {
         id: 6,
         name: "Cafeteria",
-        image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen+mess.webp",
+        image: "https://cdn.kalingauniversity.ac.in/facilities/canteen+mess.webp",
       },
     ],
   };
@@ -197,42 +197,42 @@ export default function Admissions() {
     links: [
       {
         id: 1,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png",
+        icon: "https://cdn.kalingauniversity.ac.in/logos/check-icon.png",
         title: "Value Added Courses",
         description: "Kalinga University offers a range of short-term value-added certification courses conducted by industry experts.",
         href: "/value-added-course"
       },
       {
         id: 2,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/Value+addition.svg",
         title: "Value Addition",
         description: "Acquire real-world knowledge and skills apart from the course curriculum and become confident, career-ready, and future-focused.",
         href: "/value-additions"
       },
       {
         id: 3,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/hotel.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/hotel.svg",
         title: "Hostel",
         description: "Fully-furnished separate hostels for girls and boys with round-the-clock security, clean rooms, and mess facilities in a safe, comfortable environment.",
         href: "/hostel"
       },
       {
         id: 4,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/transport.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/transport.svg",
         title: "Transport",
         description: "Convenient, safe, and affordable transport service with 30+ buses and 4-wheelers covering pick-up and drop facilities across Raipur, up to 70 km each way.",
         href: "/transport-facility"
       },
       {
         id: 5,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/fees.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/fees.svg",
         title: "KU Fees",
         description: "Pay your fees securely online through our payment portal using debit/credit cards or online banking. View detailed fee structure and payment options.",
         href: "/ku-fees"
       },
       {
         id: 6,
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/about+us.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/admission/about+us.svg",
         title: "Why Kalinga",
         description: "From building a solid academic foundation to experiencing a diverse campus life, Kalinga University offers the best of both worlds.",
         href: "/about-us"

@@ -12,7 +12,7 @@ function Campusfacilitiescard() {
             description:
                 "We have fully-furnished hostels for girls and boys on our campus, where all necessary facilities are available along with tight security. We always strive to fulfil all the basic requirements of our hostelers, ensuring they never face any difficulty while living here.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/hostel.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/hostel.webp",
             logoSrc: "",
             subtitle: "STUDENT ACCOMMODATION",
             link: "/hostel",
@@ -22,7 +22,7 @@ function Campusfacilitiescard() {
             description:
                 "In partnership with Sodexo Food Solutions India Pvt. Ltd., we have a separate mess for boys and girls, serving 4 nutritious meals a day—breakfast, lunch, high tea, and dinner—that are freshly prepared and hygienic.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/mess.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/mess.webp",
             logoSrc: "",
             subtitle: "DINING FACILITIES",
             link: "/cafeteria-mess",
@@ -32,7 +32,7 @@ function Campusfacilitiescard() {
             description:
                 "In partnership with Sodexo Food Solutions India Pvt. Ltd., explore our regular food and fast food items at the canteen. For fresh juices, snacks, or ice creams, our campus cafeterias offer delicious options at affordable prices.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/canteenandcafteria.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/canteenandcafteria.webp",
             logoSrc: "",
             subtitle: "FOOD & REFRESHMENTS",
         },
@@ -41,7 +41,7 @@ function Campusfacilitiescard() {
             description:
                 "We have 30+ buses and four-wheel vehicles that provide pick-up and drop facilities with a comfortable travelling experience. Transport is offered at minimal rates, with faculty assigned proctorial duties in the morning and evening. Our buses and cars cover distances up to 70 km (one way).",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/transport-1.jpg",
+                "https://cdn.kalingauniversity.ac.in/campus-life/transport-1.jpg",
             logoSrc: "",
             subtitle: "CAMPUS CONNECTIVITY",
         },
@@ -50,7 +50,7 @@ function Campusfacilitiescard() {
             description:
                 "The mini mart on campus includes an ATM facility, salon, stationery store, snack shop, juice centre, and chemist. It saves time for students and hostellers by meeting daily needs without having to step outside the campus.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/mini-market2.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-life/mini-market2.webp",
             logoSrc: "",
             subtitle: "DAILY ESSENTIALS",
             link: "/mini-market",
@@ -60,7 +60,7 @@ function Campusfacilitiescard() {
             description:
                 "We have a spacious reading room in the hostel that offers a quiet and comfortable environment. Students can study individually or in groups and prepare for exams, projects, or presentations without any membership requirement.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/hostelreadingroom_campusfacility.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/hostelreadingroom_campusfacility.webp",
             logoSrc: "",
             subtitle: "STUDY SPACES",
         },
@@ -69,7 +69,7 @@ function Campusfacilitiescard() {
             description:
                 "Our on-campus health clinic has an experienced doctor and nurse who ensure the well-being of students and staff by providing general consultation, counselling, and emergency medical support.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Health+Clinic1.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-life/Health+Clinic1.webp",
             logoSrc: "",
             subtitle: "HEALTH & WELLNESS",
             link: "/health-clinic",
@@ -79,7 +79,7 @@ function Campusfacilitiescard() {
             description:
                 "We have tie-ups with Central Bank of India and Canara Bank for education loans. The campus also has two fully operational 24-hour ATMs from ICICI Bank and OBC Bank, along with support for digital payments like net banking, UPI, Paytm, and cards.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/bank-atm1.png",
+                "https://cdn.kalingauniversity.ac.in/campus-life/bank-atm1.png",
             logoSrc: "",
             subtitle: "FINANCIAL SERVICES",
         },
@@ -88,7 +88,7 @@ function Campusfacilitiescard() {
             description:
                 "Our campus is equipped with a high-speed 24/7 Wi-Fi-enabled network with multiple ISPs, offering up to 1 Gbps secure internet connectivity. The seamless Wi-Fi also supports the Learning Management System (LMS) for academic needs.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/wifienabledcampus.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/wifienabledcampus.webp",
             logoSrc: "",
             subtitle: "DIGITAL INFRASTRUCTURE",
         },
@@ -97,7 +97,7 @@ function Campusfacilitiescard() {
             description:
                 "The entire campus—including hostels, parking areas, and academic buildings—is secured by an in-house security team. CCTV cameras are installed across the campus to continuously monitor university activities.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security1.jpg",
+                "https://cdn.kalingauniversity.ac.in/campus-life/security1.jpg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY",
         },
@@ -106,7 +106,7 @@ function Campusfacilitiescard() {
             description:
                 "Our art gallery displays souvenirs from different countries brought by international students. It allows both national and international students to explore cultural diversity and global traditions.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/artgallery.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/artgallery.webp",
             logoSrc: "",
             subtitle: "CULTURAL EXPRESSION",
         },
@@ -115,7 +115,7 @@ function Campusfacilitiescard() {
             description:
                 "Sanitary napkin vending machines are installed in all girls’ washrooms and hostels to ensure hygiene and round-the-clock accessibility, supporting the well-being of female students.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/sanitary-napkin-vending-machines.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/sanitary-napkin-vending-machines.webp",
             logoSrc: "",
             subtitle: "WOMEN WELLBEING",
         },
@@ -124,7 +124,7 @@ function Campusfacilitiescard() {
             description:
                 "Need a break? Our peaceful recreational corners offer students a space to relax, socialize, and unwind from academic stress. These serene spots help students recharge and connect with peers.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/recreation.webp",
             logoSrc: "",
             subtitle: "STUDENT LIFE",
         },
@@ -133,7 +133,7 @@ function Campusfacilitiescard() {
             description:
                 "For those who love capturing moments, our picturesque selfie points across campus let students click memorable photos and share their experiences with friends and family.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/selfiepoints.webp",
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/selfiepoints.webp",
             logoSrc: "",
             subtitle: "CAMPUS EXPERIENCE",
         },
@@ -142,7 +142,7 @@ function Campusfacilitiescard() {
             description:
                 "We have indoor and outdoor sports facilities where students can play different games like carom, chess, table tennis, cricket, football, badminton, Hockey, Lawn Tennis, and more. We also have a dedicated yoga room that supports students’ emotional and mental well-being.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/sportsmain.webp",
+                "https://cdn.kalingauniversity.ac.in/sports/sportsmain.webp",
             logoSrc: "",
             subtitle: "CAMPUS EXPERIENCE",
         },
@@ -151,7 +151,7 @@ function Campusfacilitiescard() {
             description:
                 "We have separate boys’ and girls’ gym facilities on our campus for students who are residing in our hostels. ",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp",
+                "https://cdn.kalingauniversity.ac.in/facilities/gym.webp",
             logoSrc: "",
             subtitle: "CAMPUS EXPERIENCE",
         },

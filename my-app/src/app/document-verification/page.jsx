@@ -82,7 +82,7 @@ const boxItems = [{
   description: "Our process is hassle-free, and you will get a quick verification result.",
   icon: (
     <Image
-      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/document-verification/verification.svg"
+      src="https://cdn.kalingauniversity.ac.in/document-verification/verification.svg"
       alt="Effortless Verification"
       width={40}
       height={40}
@@ -94,7 +94,7 @@ const boxItems = [{
   description: "With our step-wise verification process, you’ll get precise results.",
   icon: (
     <Image
-      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/document-verification/calibration.svg"
+      src="https://cdn.kalingauniversity.ac.in/document-verification/calibration.svg"
       alt="Accuracy"
       width={40}
       height={40}
@@ -106,7 +106,7 @@ const boxItems = [{
   description: "Your personal information and documents will be safe and secure as we follow a strict protocol in maintaining the privacy of our applicants. ",
   icon: (
     <Image
-      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/document-verification/secret-file.svg"
+      src="https://cdn.kalingauniversity.ac.in/document-verification/secret-file.svg"
       alt="Prototype Development Lab"
       width={40}
       height={40}
@@ -135,13 +135,13 @@ export default function Page() {
       <MainIntro
         title="Public Notice"
         description="The general public is advised that only verifications conducted directly through Kalinga University are valid. Reports from unauthorised third parties will be considered invalid and will not receive official recognition."
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-front-banner02.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp"
         readmore={false}
         knowMoreLabel="IBC Verifications Bangalore 21st September 2024"
-        knowMoreHref="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/Public+Notice+IBC+Verifictions+Bangalore+21st+September+2024.pdf"
+        knowMoreHref="https://cdn.kalingauniversity.ac.in/common/Public+Notice+IBC+Verifictions+Bangalore+21st+September+2024.pdf"
         showKnowMore={true}
       />
-      <ImageListItem boxItems={boxItems} imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp" title="" description="" />
+      <ImageListItem boxItems={boxItems} imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrc.webp" title="" description="" />
       <FAQ
         title="Our Document Verification Procedure "
         subtitle=""
@@ -158,7 +158,7 @@ export default function Page() {
           className="px-8 py-3 text-base"
           arrowClassName="!px-2 !py-1"
           arrowSize={24}
-          onClick={() => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/common/Verification+Form.pdf", "Verification Form")}
+          onClick={() => openFlipbook("https://cdn.kalingauniversity.ac.in/common/Verification+Form.pdf", "Verification Form")}
         >
           Download Application Form
         </GlobalArrowButton>

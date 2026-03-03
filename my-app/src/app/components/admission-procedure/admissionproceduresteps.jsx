@@ -6,7 +6,7 @@ function Admissionproceduresteps() {
         steps: [
             {
                 id: 1,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-1.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-1.svg",
                 stepNumber: "01",
                 title: "Step Ⅰ",
                 description: "Visit https://admissions.kalingauniversity.ac.in/",
@@ -14,7 +14,7 @@ function Admissionproceduresteps() {
             },
             {
                 id: 2,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-2.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-2.svg",
                 stepNumber: "02",
                 title: "Step Ⅱ",
                 description: "Register for the entrance exam (KALSEE/KAL-MAT)",
@@ -22,7 +22,7 @@ function Admissionproceduresteps() {
             },
             {
                 id: 3,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-3.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-3.svg",
                 stepNumber: "03",
                 title: "Step Ⅲ",
                 description: "Take the computer-based exam and get shortlisted",
@@ -30,7 +30,7 @@ function Admissionproceduresteps() {
             },
             {
                 id: 4,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-4.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-4.svg",
                 stepNumber: "04",
                 title: "Step Ⅳ",
                 description: "Fill out the online admission form after selection",
@@ -38,7 +38,7 @@ function Admissionproceduresteps() {
             },
             {
                 id: 5,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-5.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-5.svg",
                 stepNumber: "05",
                 title: "Step Ⅴ",
                 description: "Attach self-attested copies with the admission form",
@@ -46,7 +46,7 @@ function Admissionproceduresteps() {
             },
             {
                 id: 6,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-3.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-3.svg",
                 stepNumber: "06",
                 title: "Step Ⅵ",
                 description: "Pay your program fee within 10 days",
@@ -54,7 +54,7 @@ function Admissionproceduresteps() {
             },
             {
                 id: 7,
-                icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/step-4.svg",
+                icon: "https://cdn.kalingauniversity.ac.in/admission/step-4.svg",
                 stepNumber: "07",
                 title: "Step Ⅶ",
                 description: "Welcome to Kalinga University!",

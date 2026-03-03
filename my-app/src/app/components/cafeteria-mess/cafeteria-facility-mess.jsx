@@ -6,13 +6,13 @@ import GlobalArrowButton from "../general/global-arrow_button";
 export default function CanteenMess() {
   const imageSets = [
     [
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/cafeteria-mess-img1.webp",
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/cafeteria-mess-img2.webp",
+      "https://cdn.kalingauniversity.ac.in/canteen-and-mess/cafeteria-mess-img1.webp",
+      "https://cdn.kalingauniversity.ac.in/canteen-and-mess/cafeteria-mess-img2.webp",
     ],
     [
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/cafeteria-mess-img.webp",
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/canteen-mess-5.webp",
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/canteen-and-mess/canteen-mess-4.webp",
+      "https://cdn.kalingauniversity.ac.in/canteen-and-mess/cafeteria-mess-img.webp",
+      "https://cdn.kalingauniversity.ac.in/canteen-and-mess/canteen-mess-5.webp",
+      "https://cdn.kalingauniversity.ac.in/canteen-and-mess/canteen-mess-4.webp",
     ],
   ];
 
@@ -72,8 +72,8 @@ export default function CanteenMess() {
                   <div
                     key={i}
                     className={`h-2 rounded-full ${i === indexes[index]
-                        ? "bg-[var(--dark-orange-red-light)] w-12"
-                        : "bg-[var(--light-gray)] w-4"
+                      ? "bg-[var(--dark-orange-red-light)] w-12"
+                      : "bg-[var(--light-gray)] w-4"
                       }`}
                   />
                 ))}
@@ -94,8 +94,8 @@ export default function CanteenMess() {
                   <div
                     key={i}
                     className={`h-2 rounded-full ${i === indexes[index]
-                        ? "bg-[var(--dark-orange-red-light)] w-12"
-                        : "bg-[var(--light-gray)] w-4"
+                      ? "bg-[var(--dark-orange-red-light)] w-12"
+                      : "bg-[var(--light-gray)] w-4"
                       }`}
                   />
                 ))}

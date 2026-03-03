@@ -51,7 +51,7 @@ export default function SDGCell() {
           "The Sustainable Development Goals (SDGs), also known as the Global Goals, were adopted by the United Nations in 2015. The SDGs' 17 goals aim to protect the planet, end poverty, and ensure peace and prosperity by 2030. These goals are well-connected, so if one area progresses or struggles, it will impact others, too.",
           "The SDG Cell at Kalinga University was established on 12.04.2022 to promote and implement initiatives related to the cell. We adopted all 17 practices to address global challenges and work towards impactful solutions by balancing social, economic, and environmental challenges. We integrate sustainable practices into our University’s academic, social, cultural, research, administrative, and community engagement activities."
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/sdg-cell/sdg-cell.png"
+        imageUrl="https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-cell.png"
         imageAlt="SDG Goals"
         showKnowMore={true}
         initialVisibleParagraphs={1}

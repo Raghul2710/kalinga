@@ -70,9 +70,9 @@ export const metadata = {
   title: "Kalinga University - Transforming Futures with Knowledge & Innovation",
   description: "Kalinga University is a leading institution offering world-class education in engineering, management, science, arts, and more.",
   icons: {
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/favicon.png",
-    shortcut: "https://kalinga-university.s3.ap-south-1.amazonaws.com/favicon.png",
-    apple: "https://kalinga-university.s3.ap-south-1.amazonaws.com/favicon.png",
+    icon: "https://cdn.kalingauniversity.ac.in/favicon.png",
+    shortcut: "https://cdn.kalingauniversity.ac.in/favicon.png",
+    apple: "https://cdn.kalingauniversity.ac.in/favicon.png",
   },
   other: {
     "google-fonts-inter": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap",

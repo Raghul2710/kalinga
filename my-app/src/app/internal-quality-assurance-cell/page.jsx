@@ -33,14 +33,14 @@ const IQACPage = () => {
       `,
       logos: [
         {
-          src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/nirf-new.webp",
+          src: "https://cdn.kalingauniversity.ac.in/accreditation/nirf-new.webp",
           alt: "NAAC",
           name: "NAAC",
           width: 1000,
           height: 80
         },
         {
-          src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/naac-new.webp",
+          src: "https://cdn.kalingauniversity.ac.in/accreditation/naac-new.webp",
           alt: "NIRF",
           name: "NIRF",
           width: 150,
@@ -84,42 +84,42 @@ const IQACPage = () => {
       //   id: 1,
       //   title: "Other Quality inititaives",
       //   description: "",
-      //   imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/service.svg",
+      //   imageSrc: "https://cdn.kalingauniversity.ac.in/IQAC/service.svg",
       //   imageAlt: "Other Quality inititaives",
       // },
       {
         id: 2,
         title: "Setting a robust Feedback System",
         description: "",
-        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Feedback+System.svg",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/IQAC/Feedback+System.svg",
         imageAlt: "Setting a robust Feedback System",
       },
       {
         id: 3,
         title: "Setting an Audit System",
         description: "",
-        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Audit+System.svg",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/IQAC/Audit+System.svg",
         imageAlt: "Setting an Audit System",
       },
       {
         id: 4,
         title: "Applying for Rankings",
         description: "",
-        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/ranking.svg",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/IQAC/ranking.svg",
         imageAlt: "Applying for Rankings",
       },
       {
         id: 5,
         title: "Workshops/Seminars",
         description: "",
-        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/Seminars.svg",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/IQAC/Seminars.svg",
         imageAlt: "Workshops/Seminars",
       },
       {
         id: 6,
         title: "Building a POCO Software",
         description: "",
-        imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/POCO+Software.svg",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/IQAC/POCO+Software.svg",
         imageAlt: "Building a POCO Software",
       },
     ]
@@ -131,7 +131,7 @@ const IQACPage = () => {
         description={["In pursuance of the National Action Plan of the National Assessment and Accreditation Council (NAAC) for performance evaluation, assessment and accreditation, and quality upgradation of institutions of higher education, NAAC proposes that every accredited institution should have an Internal Quality Assurance Cell (IQAC) as a post-accreditation quality sustenance measure. With this aim, Kalinga University established its internal quality assurance cell on 5th July 2016.",
           "The primary motto of our IQAC is to continuously monitor and improve the quality of every activity and propose new improvements with the cooperation of all the stakeholders. It will channelise the overall performance of the institute towards academic excellence. Our IQAC produces quality reports on various institutional activities, enabling committee members to take rational and informed decisions for continuous improvement."
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/banner.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/IQAC/banner.webp"
         imageAlt="IQAC"
         descriptionClassName="text-[var(--foreground)]"
         sectionClassName="bg-white !py-0 !pb-0"

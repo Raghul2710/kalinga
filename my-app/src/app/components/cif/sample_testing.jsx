@@ -18,7 +18,7 @@ export default function SampleTesting({
   note,
   tableColumns,
   tableData,
-  imageUrl = "https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/cif-image-9.webp",
+  imageUrl = "https://cdn.kalingauniversity.ac.in/CIF/cif-image-9.webp",
   imageAlt = "Sample Testing"
 }) {
   const defaultTableColumns = [

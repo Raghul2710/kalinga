@@ -44,7 +44,7 @@ function NewRaipur() {
 
       <div className="imagecontent-wrapper">
         <ImageContent
-          imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about-raipur/raipur1.webp"
+          imageSrc="https://cdn.kalingauniversity.ac.in/about-raipur/raipur1.webp"
           imageAlt="New Raipur image"
           subtitle=""
           title="About New Raipur"

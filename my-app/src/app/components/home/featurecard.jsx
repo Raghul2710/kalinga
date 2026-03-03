@@ -21,144 +21,144 @@ export default function FeatureCards({
       title: 'Global Exposure',
       body: 'Students from 29+ nationalities create a truly global learning environment. Collaborate, connect, and grow through multi-cultural programs and diverse perspectives.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Global.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Global.svg'
     },
     {
       id: 2,
       title: 'Vibrant Campus Life',
       body: 'Experience an unforgettable college life filled with green spaces, lively events, and a dynamic student community.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/university.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/university.svg'
     },
     {
       id: 3,
       title: 'Career Counseling',
       body: 'Get personalized guidance and support at every stage of your academic journey — from choosing the right path to landing your dream job.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg'
     },
     {
       id: 4,
       title: 'Wide Range of Programs',
       body: 'Choose from 130+ industry-relevant programs across disciplines — from Computer Science to Pharmacy — and unlock limitless career opportunities.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Wide+Range+of+Programs.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Wide+Range+of+Programs.svg'
     },
     {
       id: 5,
       title: 'Abundant Scholarships',
       body: 'Avail up to 100% scholarships through merit, sports, cultural, and achiever categories — rewarding talent and ambition.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Abundant+Scholarships.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Abundant+Scholarships.svg'
     },
     {
       id: 6,
       title: 'Industry-Relevant Curriculum',
       body: 'Aligned with the New Education Policy 2020, our curriculum bridges classroom learning with real-world industry needs.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industry-Relevant+Curriculum.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Industry-Relevant+Curriculum.svg'
     },
     {
       id: 7,
       title: 'Holistic Development',
       body: 'We focus on nurturing confident, well-rounded individuals ready to make informed life and career decisions.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Holistic+Development.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Holistic+Development.svg'
     },
     {
       id: 8,
       title: 'Extensive Research Facilities',
       body: 'With 90+ advanced labs, including IT and CIF, Kalinga University leads in innovation and research excellence.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg'
     },
     {
       id: 9,
       title: 'Experienced Faculties',
       body: 'Learn from highly qualified professors from India and abroad who inspire and guide students toward leadership and success.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Experienced+Faculties.svg'
     },
     {
       id: 10,
       title: 'Flagship Events',
       body: 'Celebrate creativity and achievement through exciting events like Hackathons, Kalinga Utsav, Sports Fest, Moot Courts, and Convocation Ceremonies.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Flagship+Events.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Flagship+Events.svg'
     },
     {
       id: 11,
       title: 'Internships & Industrial Visits',
       body: 'Gain real-world exposure with internship opportunities and industrial visits that build practical skills and confidence.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industrial+Visits.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Industrial+Visits.svg'
     },
     {
       id: 12,
       title: 'Improve Employability',
       body: 'Develop skills employers value — communication, leadership, teamwork, problem-solving, and critical thinking — beyond academics.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Improve+Employability.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Improve+Employability.svg'
     },
     {
       id: 13,
       title: 'Campus Placement Drives',
       body: 'With 400+ recruitment partners, students secure placements across top industries and leading organizations.',
       variant: 'gary',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Campus+Placement+Drives.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Campus+Placement+Drives.svg'
     },
     {
       id: 14,
       title: 'Networking Opportunities',
       body: 'Engage with industry leaders, alumni, and professionals through workshops, seminars, and conferences that strengthen your career network.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Networking+Opportunities.svg'
     },
     {
       id: 15,
       title: 'Cultural Celebrations',
       body: 'Enjoy a vibrant campus culture through festivals, concerts, talent shows, and open mic events that unite students from all backgrounds.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Cultural+Celebrations.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Cultural+Celebrations.svg'
     },
     {
       id: 16,
       title: 'Community Services',
       body: 'Join NCC and NSS initiatives and become a socially responsible citizen contributing to meaningful community work.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Community+Services.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Community+Services.svg'
     },
     {
       id: 17,
       title: 'Educational Tours',
       body: 'Experience learning beyond classrooms through national and international educational tours, including visits to top industries and destinations like Dubai.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Educational+Tours.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Educational+Tours.svg'
     },
     {
       id: 18,
       title: 'Mentor-Mentee System',
       body: 'Benefit from personalized guidance through one-on-one mentoring that supports your academic and personal growth.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mentor-Mentee+System.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Mentor-Mentee+System.svg'
     },
     {
       id: 19,
       title: 'Emotional Well-Being',
       body: 'Participate in wellness programs designed to support mental health, reduce stress, and promote a positive learning environment.',
       variant: 'gray',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Emotional+Well-Being.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/Emotional+Well-Being.svg'
     },
     {
       id: 20,
       title: '100% Automation',
       body: 'Access everything digitally through our student ERP system — from admissions and academics to results, schedules, and notifications.',
       variant: 'amber',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/100%25+Automation.svg'
+      image: 'https://cdn.kalingauniversity.ac.in/icons/100%25+Automation.svg'
     },
   ],
   fullText = "Spread across 50+ Acres of Land, the University offers fully equipped infrastructure with the most advanced curriculum that prepares students to compete in global opportunities. Every space on our campus generates curiosity and encourages motivation among young minds. We just don't focus on classroom-based learning, but our primary focus is to provide a holistic learning experience to our students so that they can become all-rounders in their personal and professional lives. With a supportive and inclusive learning environment, our students have achieved remarkable success and transformed their DREAMS into REALITY.",
-  imageUrl = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+  imageUrl = "https://cdn.kalingauniversity.ac.in/common/student.jpg",
   imageAlt = "Kalinga students celebrating",
   titleClassName = "",
   subtitleClassName = ""

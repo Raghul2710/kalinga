@@ -7,29 +7,29 @@ import GlobalArrowButton from "../general/global-arrow_button";
 export default function Page() {
   const imageSets = [
     // Academics
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Infrastructure1.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Infrastructure2.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Infrastructure3.webp"],
+    ["https://cdn.kalingauniversity.ac.in/campus-life/Infrastructure1.webp", "https://cdn.kalingauniversity.ac.in/campus-life/Infrastructure2.webp", "https://cdn.kalingauniversity.ac.in/campus-life/Infrastructure3.webp"],
     // Research
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Pic1+(1).jpeg", "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-facilities/researchfacilities-labimage.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp"],
+    ["https://cdn.kalingauniversity.ac.in/campus-life/Pic1+(1).jpeg", "https://cdn.kalingauniversity.ac.in/research-facilities/researchfacilities-labimage.webp", "https://cdn.kalingauniversity.ac.in/academic-facilities/modernlabrotary.webp"],
     // Celebrations
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/student-dance.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/gallery2.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/gallery3.webp"],
+    ["https://cdn.kalingauniversity.ac.in/campus-life/student-dance.webp", "https://cdn.kalingauniversity.ac.in/campus-life/gallery2.webp", "https://cdn.kalingauniversity.ac.in/campus-life/gallery3.webp"],
     // Sports
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/sportsmain.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/cricket.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/sports/gym1.webp"],
+    ["https://cdn.kalingauniversity.ac.in/sports/sportsmain.webp", "https://cdn.kalingauniversity.ac.in/sports/cricket.webp", "https://cdn.kalingauniversity.ac.in/sports/gym1.webp"],
     // Events & Activities
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/gallery1.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/gallery4.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/about-kalinga.webp"],
+    ["https://cdn.kalingauniversity.ac.in/campus-life/gallery1.webp", "https://cdn.kalingauniversity.ac.in/campus-life/gallery4.webp", "https://cdn.kalingauniversity.ac.in/Home/about-kalinga.webp"],
     // Networking Opportunities
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/alumini/alimini-meet1.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-1.png", "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-3.png"],
+    ["https://cdn.kalingauniversity.ac.in/alumini/alimini-meet1.webp", "https://cdn.kalingauniversity.ac.in/Home/social-media-1.png", "https://cdn.kalingauniversity.ac.in/Home/social-media-3.png"],
     // Community Service
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/1.jpg", "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/2.jpg", "https://kalinga-university.s3.ap-south-1.amazonaws.com/unnat-bharat-abhiyan/3.jpg"],
+    ["https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/1.jpg", "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/2.jpg", "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/3.jpg"],
     // Internships and Placement Drives
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placements-silder-1.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp"],
+    ["https://cdn.kalingauniversity.ac.in/Home/placements-silder-1.webp", "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/placemnt-intro.webp"],
     // Recreation Corners
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/selfiepoints.webp"],
+    ["https://cdn.kalingauniversity.ac.in/campus-facilities/recreation.webp", "https://cdn.kalingauniversity.ac.in/facilities/canteen.webp", "https://cdn.kalingauniversity.ac.in/campus-facilities/selfiepoints.webp"],
     // Eco-Friendly Campus
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/1.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/3.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/campus/4.webp"],
+    ["https://cdn.kalingauniversity.ac.in/Home/campus/1.webp", "https://cdn.kalingauniversity.ac.in/Home/campus/3.webp", "https://cdn.kalingauniversity.ac.in/Home/campus/4.webp"],
     // Hostel Life
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/occupancy.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/Acnonac.webp", "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen+mess.webp"],
+    ["https://cdn.kalingauniversity.ac.in/hostel/occupancy.webp", "https://cdn.kalingauniversity.ac.in/hostel/Acnonac.webp", "https://cdn.kalingauniversity.ac.in/facilities/canteen+mess.webp"],
     // Multicultural Learning Environment
-    ["https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg", "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/students-3.jpg", "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-students-2.jpg"]
+    ["https://cdn.kalingauniversity.ac.in/common/student.jpg", "https://cdn.kalingauniversity.ac.in/common/students-3.jpg", "https://cdn.kalingauniversity.ac.in/common/kalinga-students-2.jpg"]
   ];
 
   const [indexes, setIndexes] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
@@ -89,8 +89,8 @@ export default function Page() {
                   <div
                     key={i}
                     className={`h-2 rounded-full ${i === indexes[index]
-                        ? "bg-[var(--dark-orange-red-light)] w-12"
-                        : "bg-[var(--light-gray)] w-4"
+                      ? "bg-[var(--dark-orange-red-light)] w-12"
+                      : "bg-[var(--light-gray)] w-4"
                       }`}
                   ></div>
                 ))}
@@ -117,8 +117,8 @@ export default function Page() {
                   <div
                     key={i}
                     className={`h-2 rounded-full ${i === indexes[index]
-                        ? "bg-[var(--dark-orange-red-light)] w-12"
-                        : "bg-[var(--light-gray)] w-4"
+                      ? "bg-[var(--dark-orange-red-light)] w-12"
+                      : "bg-[var(--light-gray)] w-4"
                       }`}
                   ></div>
                 ))}

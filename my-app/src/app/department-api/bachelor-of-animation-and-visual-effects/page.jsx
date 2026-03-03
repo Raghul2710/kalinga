@@ -172,7 +172,7 @@ function Courses() {
   // Prepare breadcrumb data - Only set when courseData is fully loaded
   // Hide breadcrumb during loading by setting empty array, show only after course name and SEO data loads
   const breadcrumbData = (courseData?.name && !loading) ? {
-    heroImage: courseData?.banners?.[0]?.image || courseData?.banners?.[0]?.image_url || courseData.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/student-computer.webp",
+    heroImage: courseData?.banners?.[0]?.image || courseData?.banners?.[0]?.image_url || courseData.image || "https://cdn.kalingauniversity.ac.in/course/student-computer.webp",
     pageTitle: courseData.name,
     customBreadcrumbs: [
       { label: 'Home', href: '/' },
@@ -206,7 +206,7 @@ function Courses() {
   // WhyStudy content - Map from API specializations - Only if data exists
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
     sectionTitle: "Specialization",
-    backgroundImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp",
+    backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: courseData.specializations
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
       .map((specialization, index) => ({

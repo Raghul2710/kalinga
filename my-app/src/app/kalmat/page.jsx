@@ -74,18 +74,18 @@ export default function KalseePage() {
       name: "John Doe",
       role: "Student",
       quote: "I got my admission for KALSEE by filling out the application form online.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       name: "John Smith",
       description: "I got my admission for KALSEE by filling out the application form online.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       name: "Jane Doe",
       role: "Student",
       quote: "I got my admission for KALSEE by filling out the application form online.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
   ]
   const kifSteps = [
@@ -95,8 +95,8 @@ export default function KalseePage() {
       title: "Step 1: Visit & Apply",
       description: "",
       backDescription: "Visit https://admissions.kalingauniversity.ac.in/ and apply for the KAL-MAT Exam.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(2).png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/exam+(2).png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 2,
@@ -104,8 +104,8 @@ export default function KalseePage() {
       title: "Step 2: Fill Application Form",
       description: "",
       backDescription: "Fill out the online application form with your details.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/exam+(3).png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 3,
@@ -113,8 +113,8 @@ export default function KalseePage() {
       title: "Step 3: Pay Application Fees",
       description: "",
       backDescription: "Pay the application fees to complete your registration.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/fees.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kal-mat/fees.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 4,
@@ -122,8 +122,8 @@ export default function KalseePage() {
       title: "Step 4: Receive Login Details",
       description: "",
       backDescription: "Get login details & scheduling link within 24 hours.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/key.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kal-mat/key.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 5,
@@ -131,8 +131,8 @@ export default function KalseePage() {
       title: "Step 5: Take the CBT",
       description: "",
       backDescription: "Take the Computer-Based Test (CBT) as per your scheduled date.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(3).png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/exam+(3).png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 6,
@@ -140,8 +140,8 @@ export default function KalseePage() {
       title: "Step 6: Check Results",
       description: "",
       backDescription: "Check your final results online.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/medical-result.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/medical-result.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       id: 7,
@@ -149,8 +149,8 @@ export default function KalseePage() {
       title: "Step 7: Welcome to KU",
       description: "",
       backDescription: "Welcome to Kalinga University!",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/college-student.png",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      icon: "https://cdn.kalingauniversity.ac.in/kalsee/college-student.png",
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
   ]
 
@@ -158,99 +158,99 @@ export default function KalseePage() {
     {
       title: "Apply Now",
       description: "Apply for KALSEE by filling out the application form online.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       title: "Prepare for KALSEE",
       description: "Prepare for KALSEE by studying the exam pattern and syllabus.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
     {
       title: "Take the Exam",
       description: "Take the KALSEE exam by attending the exam center on the scheduled date.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/entrance-exam-banner.webp"
+      image: "https://cdn.kalingauniversity.ac.in/entrance-exam/entrance-exam-banner.webp"
     },
   ]
   const boxItems = [
     {
       title: "Eligibility",
       description: "10 + 2 For BBA, Graduation For MBA",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/criteria+(1).png" alt="Eligibility" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/criteria+(1).png" alt="Eligibility" width={64} height={64} className="object-contain" />
     },
     {
       title: "Mode",
       description: "Online; Flexible scheduling for BBA & fixed date for MBA",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/test.png" alt="Mode" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/test.png" alt="Mode" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Dates & Registration",
       description: "BBA - Anytime within a week after registration, MBA - Will be intimated by the University from time to time.",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/registration.png" alt="Exam Dates & Registration" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/registration.png" alt="Exam Dates & Registration" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Pattern",
       description: "MCQ-Based",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/pattern.png" alt="Exam Pattern" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/pattern.png" alt="Exam Pattern" width={64} height={64} className="object-contain" />
     },
     {
       title: "Total Questions",
       description: "90 questions, 90 minutes for BBA and MBA",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam+(1).png" alt="Total Questions" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/exam+(1).png" alt="Total Questions" width={64} height={64} className="object-contain" />
     },
     {
       title: "Negative Marking",
       description: "No Negative Marking",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/exam.png" alt="Negative Marking" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/exam.png" alt="Negative Marking" width={64} height={64} className="object-contain" />
     },
     {
       title: "Passing Marks",
       description: "Need 50% to qualify",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/mark.png" alt="Passing Marks" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/mark.png" alt="Passing Marks" width={64} height={64} className="object-contain" />
     },
     {
       title: "Exam Fee",
       description: "BBA - INR 1,400/- (Online Exam) + INR 1,000/- (Personal Interview) (one-time eligibility), MBA - INR 2,000/- (Online Exam) + INR 1,500/- (Personal Interview) (one-time eligibility)",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/hand.png" alt="Exam Fee" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/hand.png" alt="Exam Fee" width={64} height={64} className="object-contain" />
     },
     {
       title: "Scholarships",
       description: "Attractive scholarships to top scorers for BBA and MBA courses",
-      icon: <Image src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kalsee/scholarship.png" alt="Scholarships" width={64} height={64} className="object-contain" />
+      icon: <Image src="https://cdn.kalingauniversity.ac.in/kalsee/scholarship.png" alt="Scholarships" width={64} height={64} className="object-contain" />
     },
   ]
   const highScorers = [
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/Dhanajay+Sahu.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/Dhanajay+Sahu.webp",
       title: "DHANANJAY SAHU",
       description: "MBA"
     },
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/Divya+Choudhary.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/Divya+Choudhary.webp",
       title: "DIVYA CHOUDHARY",
       description: "MBA"
     },
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/Bhavika+rathi.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/Bhavika+rathi.webp",
       title: "BHAVIKA RATHI",
       description: "BBA"
     },
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/Alok+gupta.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/Alok+gupta.webp",
       title: "ALOK GUPTA",
       description: "MBA"
     },
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/Ayush+SIngh.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/Ayush+SIngh.webp",
       title: "AYUSH SINGH",
       description: "BBA"
     },
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/Yuraj+Singh.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/Yuraj+Singh.webp",
       title: "YUVRAJ SINGH CHOUHAN",
       description: "BBA"
     },
     {
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/NISHANT+SWARNKAR.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kal-mat/NISHANT+SWARNKAR.webp",
       title: "NISHANT SWARNKAR",
       description: "BBA"
     }
@@ -260,29 +260,29 @@ export default function KalseePage() {
   //   {
   //     id: 1,
   //     name: "SGS Technical Services Pvt Ltd ",
-  //     videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/SGS+Technical+services+Pvt.+ltd+Campus+Drive.mp4",
-  //     thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/campus-1.png",
+  //     videoUrl: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/SGS+Technical+services+Pvt.+ltd+Campus+Drive.mp4",
+  //     thumbnail: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/campus-1.png",
   //     description: "SGS Technical Services Pvt Ltd",
   //   },
   //   {
   //     id: 2,
   //     name: "9M India Limited",
-  //     videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/9M+india+limited+Campus+Drive+CCRC.mp4",
-  //     thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/campus-2.png",
+  //     videoUrl: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/9M+india+limited+Campus+Drive+CCRC.mp4",
+  //     thumbnail: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/campus-2.png",
   //     description: "9M India Limited",
   //   },
   //   {
   //     id: 3,
   //     name: "Hirojet Campus Drive",
-  //     videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/Hirojet+Campus+Drive.mp4",
-  //     thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/campus-3.png",
+  //     videoUrl: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/Hirojet+Campus+Drive.mp4",
+  //     thumbnail: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/campus-3.png",
   //     description: "Hirojet",
   //   },
   //   {
   //     id: 4,
   //     name: "Airtel Campus Drive",
-  //     videoUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/Airtel+Campus+Drive.mp4",
-  //     thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Campus+Drives/campus-4.png",
+  //     videoUrl: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/Airtel+Campus+Drive.mp4",
+  //     thumbnail: "https://cdn.kalingauniversity.ac.in/placement/Campus+Drives/campus-4.png",
   //     description: "Airtel",
   //   },
   // ];
@@ -290,7 +290,7 @@ export default function KalseePage() {
     <>
       <HeroSectionTwo
         id="hero-banner"
-        backgroundImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/kalmat-banner-new.png"
+        backgroundImage="https://cdn.kalingauniversity.ac.in/kal-mat/kalmat-banner-new.png"
         title="Turn Your Business Ambition Into A Thriving Career"
         description=""
         buttonText="Apply Now"
@@ -300,18 +300,18 @@ export default function KalseePage() {
       />
       <KalseeMilestone
         milestones={milestones}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/admission/student-img.png"
       />
       <MainIntro
         title="Kalinga Management Aptitude Test [KAL-MAT]"
         description="KAL-MAT is your pathway to book a spot in KU’s prestigious BBA and MBA programs. Aspiring students from India and other countries can appear for this exam and shape their destiny."
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/kal-mat/kalmat-intro.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/kal-mat/kalmat-intro.jpg"
         imageAlt="KALSEE"
       />
-      <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/kif.webp" boxItems={boxItems} title="Details of KAL-MAT" subtitle="KAL-MAT Exam Information" description="Comprehensive details about the Kalinga Management Aptitude Test (KAL-MAT) including eligibility, exam pattern, dates, fees, and more." />
+      <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/kif/kif.webp" boxItems={boxItems} title="Details of KAL-MAT" subtitle="KAL-MAT Exam Information" description="Comprehensive details about the Kalinga Management Aptitude Test (KAL-MAT) including eligibility, exam pattern, dates, fees, and more." />
       <DeptSyllabus
         title="Personal Interview"
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/bg-course.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/departments/bg-course.webp"
         imageAlt="KAL-MAT Course Materials"
         leftCardTitle="BBA"
         leftCardDescription="Within 3 days post-exam"

@@ -16,8 +16,8 @@ export default function ResearchFacilitiesIntro() {
       <MainIntro
         title="Research Facilities"
         subtitle="Explore | Experiment | Excel"
-        description={[]}  
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/research-facilities/researchfaciities-introimg1.webp"
+        description={[]}
+        imageUrl="https://cdn.kalingauniversity.ac.in/research-facilities/researchfaciities-introimg1.webp"
         readMoreLabel="Read More"
         readLessLabel="Read Less"
         showKnowMore={true}

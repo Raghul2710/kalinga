@@ -45,7 +45,7 @@ export default function ResearchResourceFaqClient() {
                     label: "Seed Money Policy",
                     onClick: () =>
                         window.open(
-                            "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+Money+Policy.pdf",
+                            "https://cdn.kalingauniversity.ac.in/research-resources/Seed+Money+Policy.pdf",
                             "_blank",
                             "noopener,noreferrer"
                         ),
@@ -54,7 +54,7 @@ export default function ResearchResourceFaqClient() {
                     label: "Download Form",
                     onClick: () =>
                         window.open(
-                            "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+money+format.pdf",
+                            "https://cdn.kalingauniversity.ac.in/research-resources/Seed+money+format.pdf",
                             "_blank",
                             "noopener,noreferrer"
                         ),
@@ -90,7 +90,7 @@ export default function ResearchResourceFaqClient() {
                     label: "Download PDF",
                     onClick: () =>
                         window.open(
-                            "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/PLAGIARISM-FILE-POLICY.pdf",
+                            "https://cdn.kalingauniversity.ac.in/research-resources/PLAGIARISM-FILE-POLICY.pdf",
                             "_blank",
                             "noopener,noreferrer"
                         ),

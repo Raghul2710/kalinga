@@ -13,37 +13,37 @@ const defaultItems = [
     id: 1,
     title: "Fundamentals of 2 & 3-Wheeler Systems",
     description: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    icon: "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   },
   {
     id: 2,
     title: "Diagnostic Skills Using Modern Tools",
     description: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    icon: "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   },
   {
     id: 3,
     title: "Engine Service & Maintenance",
     description: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    icon: "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   },
   {
     id: 4,
     title: "Repair Procedures for 2 & 3 Wheelers",
     description: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    icon: "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   },
   {
     id: 5,
     title: "Preventive & Predictive Maintenance Techniques",
     description: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    icon: "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   },
   {
     id: 6,
     title: "Exposure to Emerging Technologies in Mobility",
     description: "",
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+    icon: "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   },
 ];
 

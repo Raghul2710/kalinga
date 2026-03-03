@@ -8,33 +8,33 @@ const quickLinks = [
     {
         title: "Events",
         href: "/news-and-events",
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Flagship+Events.svg"
+        icon: "https://cdn.kalingauniversity.ac.in/icons/Flagship+Events.svg"
     },
     {
         title: "Campus Life",
         href: "/campuslife",
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/campus+life.svg"
+        icon: "https://cdn.kalingauniversity.ac.in/icons/campus+life.svg"
     },
     {
         title: "International",
         href: "/international-students",
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/international.svg"
+        icon: "https://cdn.kalingauniversity.ac.in/icons/international.svg"
     },
     {
         title: "Chat with Kalinga AI",
         href: "#",
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/chat+with+students.svg",
+        icon: "https://cdn.kalingauniversity.ac.in/icons/chat+with+students.svg",
         isChatbot: true
     },
     {
         title: "Admission",
         href: "/admissions",
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/admissions.svg"
+        icon: "https://cdn.kalingauniversity.ac.in/icons/admissions.svg"
     },
     {
         title: "Facilities",
         href: "/campus-facilities",
-        icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/facility-management.svg"
+        icon: "https://cdn.kalingauniversity.ac.in/icons/facility-management.svg"
     },
 ];
 

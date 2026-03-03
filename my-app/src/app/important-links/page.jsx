@@ -19,49 +19,49 @@ const clubSections = [
       {
         name: "University Grants Commission",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp",
+          "https://cdn.kalingauniversity.ac.in/Home/ugc.webp",
         url: "https://www.ugc.ac.in",
       },
       {
         name: "All India Council for Technical Education",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/acite.webp",
+          "https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp",
         url: "https://www.aicte-india.org",
       },
       {
         name: "Bar Council of India",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/bci.webp",
+          "https://cdn.kalingauniversity.ac.in/about/accerdation/bci.webp",
         url: "http://www.barcouncilofindia.org",
       },
       {
         name: "Pharmacy Council of India",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002980.png",
+          "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002980.png",
         url: "https://pci.nic.in",
       },
       {
         name: "National Council for Teacher Education",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002978.png",
+          "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002978.png",
         url: "https://ncte.gov.in/Website/Index.aspx",
       },
       {
         name: "National Assessment and Accreditation Council",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/naac.webp",
+          "https://cdn.kalingauniversity.ac.in/Home/naac.webp",
         url: "http://www.naac.gov.in",
       },
       {
         name: "National Institutional Ranking Framework",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/nirf-logo-new.jpeg",
+          "https://cdn.kalingauniversity.ac.in/accreditation/nirf-logo-new.jpeg",
         url: "https://www.nirfindia.org/Home",
       },
       {
         name: "All India Survey on Higher Education",
         image:
-          "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/aishe.webp",
+          "https://cdn.kalingauniversity.ac.in/about/accerdation/aishe.webp",
         url: "https://aishe.gov.in/aishe/home",
       },
     ],

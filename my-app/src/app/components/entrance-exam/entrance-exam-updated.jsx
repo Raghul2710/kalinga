@@ -19,7 +19,7 @@ const EntranceExamUpdated = () => {
       ],
       buttonText: 'Apply For KALSEE',
       href: '/kalsee',
-      studentImage: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png'
+      studentImage: 'https://cdn.kalingauniversity.ac.in/admission/student-img.png'
     },
     {
       id: 'kal-mat',
@@ -32,7 +32,7 @@ const EntranceExamUpdated = () => {
       ],
       buttonText: 'Apply For KAL-MAT',
       href: '/kalmat',
-      studentImage: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/entrance-exam/kalmat-person-img-new.png'
+      studentImage: 'https://cdn.kalingauniversity.ac.in/entrance-exam/kalmat-person-img-new.png'
     }
   ];
 

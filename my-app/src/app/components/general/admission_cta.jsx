@@ -19,7 +19,7 @@ const defaultContent = {
     tag: "Career",
   },
   image: {
-    src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/student.webp",
+    src: "https://cdn.kalingauniversity.ac.in/Home/student.webp",
     alt: "Student",
   },
 };

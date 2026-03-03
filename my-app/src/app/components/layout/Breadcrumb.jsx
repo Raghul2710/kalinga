@@ -22,7 +22,7 @@ const Breadcrumb = () => {
 
   // Default fallbacks if data is missing
   const title = pageData?.title || formatSlugToTitle(pathname.split('/').pop() || '');
-  const banner = pageData?.banner || 'https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp';
+  const banner = pageData?.banner || 'https://cdn.kalingauniversity.ac.in/about/about-banner.webp';
 
   // Generate breadcrumbs using central labels
   const paths = pathname.split('/').filter(Boolean);

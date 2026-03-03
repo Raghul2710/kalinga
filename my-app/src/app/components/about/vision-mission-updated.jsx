@@ -99,7 +99,7 @@ export default function VisionMissionUpdated({
     missionTitle = "Mission",
     visionText = defaultVision,
     missionText = defaultMission,
-    imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/student-img.png",
+    imageSrc = "https://cdn.kalingauniversity.ac.in/admission/student-img.png",
     imageAlt = "Vision and Mission Student",
 }) {
     return (

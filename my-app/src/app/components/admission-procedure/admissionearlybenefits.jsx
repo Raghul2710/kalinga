@@ -30,7 +30,7 @@ function Admissionearlybenefits() {
         <div className='mt-16'>
             <ImageListItem
                 items={items}
-                imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/CIF/cif-objectives+(1).webp"
+                imageSrc="https://cdn.kalingauniversity.ac.in/CIF/cif-objectives+(1).webp"
                 title="Your Early Decision Can Give You Big Rewards."
                 description="Apply Early For Early Benefits"
                 buttonText=""

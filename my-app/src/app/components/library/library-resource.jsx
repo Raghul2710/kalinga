@@ -10,7 +10,7 @@ const eResources = [
     description:
       "Scopus is a comprehensive abstract and citation database used for academic research across various disciplines. Developed by Elsevier, it is widely utilized by researchers, academics, and institutions to access a broad range of scientific literature and track research impact. A total of over 2900+ academic journals from various disciplines are indexed in this database.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/elsevier-scopus.jpeg",
+      "https://cdn.kalingauniversity.ac.in/library/elsevier-scopus.jpeg",
     href: "https://www.elsevier.com/en-in/products/scopus",
   },
   {
@@ -19,7 +19,7 @@ const eResources = [
     description:
       "LexisNexis is a global provider of information and analytics solutions for professionals in the legal, risk management, corporate, government, and academic sectors, offering content-enabled workflows, data analytics, and AI-powered tools to enhance decision-making and productivity. LexisNexis pioneered the electronic accessibility of legal documents and has since evolved into a comprehensive database offering a vast range of resources such as legal resources, legal news, business and company information, IPR, Taxation and Labour Law etc.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/lexis-nexis.png",
+      "https://cdn.kalingauniversity.ac.in/library/lexis-nexis.png",
     href: "https://www.lexisnexis.com/community/insights/professional/resources",
   },
   {
@@ -28,7 +28,7 @@ const eResources = [
     description:
       "DELNET was started at the India International Centre Library in January 1988 and was registered as a society in 1992. It was initially supported by the National Information System for Science and Technology (NISSAT), Department of Scientific and Industrial Research, Government of India. It was subsequently supported by the National Informatics Centre, Department of Information Technology, Ministry of Communications and Information Technology, Government of India and the Ministry of Culture, Government of India.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Delnet.jpg",
+      "https://cdn.kalingauniversity.ac.in/library/Delnet.jpg",
     href: "https://www.delnet.in/",
   },
   {
@@ -37,7 +37,7 @@ const eResources = [
     description:
       "Drillbit is a cloud-based tool designed to assist educators and students in managing and improving academic writing skills. Drillbit is designed to enhance the writing process, providing tools and resources that support better writing practices and academic integrity. Its focus on grammar, style, and feedback makes it a valuable resource for both students looking to improve their writing and educators aiming to support their students’ development.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/drillbit.svg",
+      "https://cdn.kalingauniversity.ac.in/library/drillbit.svg",
     href: "https://www.drillbitplagiarism.com/",
   },
   {
@@ -46,7 +46,7 @@ const eResources = [
     description:
       "Turnitin is widely used across educational institutions to maintain academic integrity and improve the quality of scholarly work. It’s important to note that while Turnitin is a powerful tool, it should be used as part of a broader approach to teaching academic integrity and writing skills.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Turnitin.png",
+      "https://cdn.kalingauniversity.ac.in/library/Turnitin.png",
     href: "https://www.turnitin.com/",
   },
   {
@@ -55,7 +55,7 @@ const eResources = [
     description:
       "NPTEL serves as one of the world's largest online repositories for engineering, basic sciences, and humanities courseware. It is a joint venture of the IITs and IISc, funded by the Ministry of Education (MoE), Government of India, and was launched in 2003. NPTEL offers over 70,000 hours of video content and more than 3,200 unique courses for self-study in various disciplines at both undergraduate and postgraduate levels.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/nptel.png",
+      "https://cdn.kalingauniversity.ac.in/library/nptel.png",
     href: "https://nptel.ac.in/",
   },
   {
@@ -64,7 +64,7 @@ const eResources = [
     description:
       "The National Digital Library of India (NDLI) is a virtual repository of learning resources, including textbooks, articles, videos, audio books, lectures, simulations, and fiction, sponsored by the Ministry of Education under the National Mission on Education through Information and Communication Technology (NMEICT).  It provides a single-window search facility and its interface supports 10–12 major Indian languages.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/NDL.jfif",
+      "https://cdn.kalingauniversity.ac.in/library/NDL.jfif",
     href: "https://club.ndl.iitkgp.ac.in/club-home",
   },
   {
@@ -73,7 +73,7 @@ const eResources = [
     description:
       "IRINS is web-based Research Information Management (RIM) service developed by the Information and Library Network (INFLIBNET) Centre. The portal facilitates academic, R&D organizations and faculty members, scientists to collect, curate and showcase scholarly communication activities and provide an opportunity to create the scholarly network. The IRINS is available as free software-as-service to the academic and R&D organizations in India. The IRINS would support to integrate the existing research management system such as HR system, course management, grant management system, institutional repository, open and commercial citation databases, scholarly publishers, etc. It has integrated with academic identity such as ORCID ID, ScopusID, Research ID, Microsoft Academic ID, Google Scholar ID for ingesting the scholarly publication from various sources.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/irins.jfif",
+      "https://cdn.kalingauniversity.ac.in/library/irins.jfif",
     href: "https://irins.org/",
   },
   {
@@ -82,7 +82,7 @@ const eResources = [
     description:
       "INDIAN Access Management Federation (INFED), the first Federation in India, has adopted Shibboleth, a standard-based open-source software, for authenticating authorized users from colleges and universities and provide them seamless access to e-resources from anywhere, anytime. The INFLIBNET Centre, as one of its core mandates, provides access to scholarly e-resource to universities and colleges in India under the e-ShodhSindhu. The INFED is being set-up as a centralized agency to coordinate with member institutions in the process of implementation of user authentication and access control mechanism distributed across participating institutions using standardized rules and metadata for exchange of attributes.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/infeed.jfif",
+      "https://cdn.kalingauniversity.ac.in/library/infeed.jfif",
     href: "https://infed.inflibnet.ac.in/",
   },
 ];

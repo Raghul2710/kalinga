@@ -7,7 +7,7 @@ function Hostelwarden() {
     const MentorIntroProps = [
         {
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/Mr+Manish+Singh.webp",
+                "https://cdn.kalingauniversity.ac.in/hostel/Mr+Manish+Singh.webp",
             title: "Mr. Manish Singh",
             subtitle: "Message from Chief Warden",
             department: "Chief Warden & Head - Administration",

@@ -38,7 +38,7 @@ function Valueadditioncards() {
             description:
                 "Kalinga Incubation Foundation supports students’ innovative business ideas and turns them into successful business ventures.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif.png",
+                "https://cdn.kalingauniversity.ac.in/ccrc/kif.png",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
             link: "/kalinga-incubation-foundation",
@@ -48,7 +48,7 @@ function Valueadditioncards() {
             description:
                 "Our Corporate Training and Consultancy Division (CTCD) provides customised training to organisations using experiential learning methods.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/training-projects.webp",
+                "https://cdn.kalingauniversity.ac.in/ctcd/training-projects.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
             link: "/corporate-training-and-consultancy-division", // ✅ will show Know More
@@ -58,7 +58,7 @@ function Valueadditioncards() {
             description:
                 "Facilitating researchers and students with high-end instruments in basic, applied, and life sciences.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/modernlabrotary.webp",
+                "https://cdn.kalingauniversity.ac.in/academic-facilities/modernlabrotary.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
             link: "/research-facilities",
@@ -68,7 +68,7 @@ function Valueadditioncards() {
             description:
                 "Our Centres of Excellence include: Electric Vehicles (Godawari Electric Motors Pvt. Ltd. - Eblu), IIoT (Technoviz Automation), Robotics, Coding, & Drones (BDS Education), AI-ML (IBM Innovation Centre for Education - ICE), MSME (IamSMEofIndia), BRIDGE Courses (BOSCH), Automobile Training Centre (JustAuto Solutions).",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-banner.webp",
+                "https://cdn.kalingauniversity.ac.in/godawari/godawari-banner.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
             link: "/centresofexcellence", // ✅ will show Know More
@@ -78,7 +78,7 @@ function Valueadditioncards() {
             description:
                 "Our next-gen programs will prepare you for future career roles in the tech and creative world.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-glimpse2.webp",
+                "https://cdn.kalingauniversity.ac.in/godawari/godawari-glimpse2.webp",
             logoSrc: "",
             subtitle: "EXPLORE MORE THAN JUST ACADEMICS",
             link: "/academics"

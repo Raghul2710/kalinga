@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 const defaultTab1Activities = [
   {
     id: 1,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/master-class.webp",
     imageAlt: "Grow As a Leader: A Program For First-Time Managers",
     title: "Grow As a Leader: A Program For First-Time Managers",
     description: "Resource Person: Mr. Amar Pathak",
@@ -23,7 +23,7 @@ const defaultTab1Activities = [
   },
   {
     id: 2,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Maximising Fund-Raising Resource For CSR",
     title: "Maximising Fund-Raising Resource For CSR",
     description: "Resource Person: Prof. Sanjay Vanani",
@@ -32,7 +32,7 @@ const defaultTab1Activities = [
   },
   {
     id: 3,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Crack The Code: Gen Z Connection Guide For Teachers and Parents",
     title: "Crack The Code: Gen Z Connection Guide For Teachers and Parents",
     description: "Resource Person: Dr. Sunayna Shukla",
@@ -41,7 +41,7 @@ const defaultTab1Activities = [
   },
   {
     id: 4,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "AI-Driven Benefits for Manufacturing & Operations",
     title: "AI-Driven Benefits for Manufacturing & Operations",
     description: "Resource Person: Ms. Rajashree Rajadhya",
@@ -50,7 +50,7 @@ const defaultTab1Activities = [
   },
   {
     id: 5,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "HR Analytics: Leveraging AI & Data for Strategic HR",
     title: "HR Analytics: Leveraging AI & Data for Strategic HR",
     description: "Resource Person: Saurabh Saxena",
@@ -59,7 +59,7 @@ const defaultTab1Activities = [
   },
   {
     id: 6,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Master Your Market: Sales, Marketing & Negotiating Strategies",
     title: "Master Your Market: Sales, Marketing & Negotiating Strategies",
     description: "",
@@ -68,7 +68,7 @@ const defaultTab1Activities = [
   },
   {
     id: 7,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 7",
     title: "Masterclass 7",
     description: "",
@@ -77,7 +77,7 @@ const defaultTab1Activities = [
   },
   {
     id: 8,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 8",
     title: "Masterclass 8",
     description: "",
@@ -86,7 +86,7 @@ const defaultTab1Activities = [
   },
   {
     id: 9,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 9",
     title: "Masterclass 9",
     description: "",
@@ -95,7 +95,7 @@ const defaultTab1Activities = [
   },
   {
     id: 10,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 10",
     title: "Masterclass 10",
     description: "",
@@ -108,7 +108,7 @@ const defaultTab1Activities = [
 const defaultTab2Activities = [
   {
     id: 1,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 2025-26 Event 1",
     title: "Masterclass 2025-26 Event 1",
     description: "",
@@ -117,7 +117,7 @@ const defaultTab2Activities = [
   },
   {
     id: 2,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 2025-26 Event 2",
     title: "Masterclass 2025-26 Event 2",
     description: "",
@@ -126,7 +126,7 @@ const defaultTab2Activities = [
   },
   {
     id: 3,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 2025-26 Event 3",
     title: "Masterclass 2025-26 Event 3",
     description: "",
@@ -135,7 +135,7 @@ const defaultTab2Activities = [
   },
   {
     id: 4,
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/ctcd.png",
     imageAlt: "Masterclass 2025-26 Event 4",
     title: "Masterclass 2025-26 Event 4",
     description: "",
@@ -148,17 +148,17 @@ const defaultTab2Activities = [
 const defaultTab1Gallery = [
   {
     id: 1,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/master-class.webp",
     alt: "Masterclass 2024-25 Glimpse 1"
   },
   {
     id: 2,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/master-class-2.webp",
     alt: "Masterclass 2024-25 Glimpse 2"
   },
   {
     id: 3,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-3.webp",
     alt: "Masterclass 2024-25 Glimpse 3"
   },
 ];
@@ -167,22 +167,22 @@ const defaultTab1Gallery = [
 const defaultTab2Gallery = [
   {
     id: 1,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/master-class.webp",
     alt: "Masterclass 2025-26 Glimpse 1"
   },
   {
     id: 2,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/master-class-2.webp",
     alt: "Masterclass 2025-26 Glimpse 2"
   },
   {
     id: 3,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-3.webp",
     alt: "Masterclass 2025-26 Glimpse 3"
   },
   {
     id: 4,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/master-class.webp",
     alt: "Masterclass 2025-26 Glimpse 4"
   },
 ];
@@ -231,7 +231,7 @@ const masterclassCalendar = [
 const masterclassDetails = {
   1: {
     title: "Grow As a Leader: A Program For First-Time Managers",
-    pdfUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/Masterclass+(Dark+Maroon).pdf",
+    pdfUrl: "https://cdn.kalingauniversity.ac.in/ctcd/Masterclass+(Dark+Maroon).pdf",
     date: "17.08.2024",
     resourcePerson: "Mr. Amar Pathak",
     keyDeliverables: [
@@ -247,7 +247,7 @@ const masterclassDetails = {
   },
   2: {
     title: "Maximising Fund-Raising Resource For CSR",
-    pdfUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/Maximizing+Fund+Raising+(Print).pdf",
+    pdfUrl: "https://cdn.kalingauniversity.ac.in/ctcd/Maximizing+Fund+Raising+(Print).pdf",
     date: "19.10.2024",
     resourcePerson: "Prof. Sanjay Vanani",
     keyDeliverables: [
@@ -265,7 +265,7 @@ const masterclassDetails = {
   },
   3: {
     title: "Crack The Code: Gen Z Connection Guide For Teachers and Parents",
-    pdfUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/MASTERCLASS-+SUNAYANA+WKS+UA.pdf",
+    pdfUrl: "https://cdn.kalingauniversity.ac.in/ctcd/MASTERCLASS-+SUNAYANA+WKS+UA.pdf",
     date: "21.12.2024",
     resourcePerson: "Dr. Sunayna Shukla",
     keyDeliverables: [
@@ -279,7 +279,7 @@ const masterclassDetails = {
   },
   4: {
     title: "AI-Driven Benefits for Manufacturing & Operations",
-    pdfUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/Master+Class+on+AI-Driven+Benefits+for+Manufacturing+%26+Operations.pdf",
+    pdfUrl: "https://cdn.kalingauniversity.ac.in/ctcd/Master+Class+on+AI-Driven+Benefits+for+Manufacturing+%26+Operations.pdf",
     date: "08.03.2025",
     resourcePerson: "Ms. Rajashree Rajadhya",
     keyDeliverables: [
@@ -292,7 +292,7 @@ const masterclassDetails = {
   },
   5: {
     title: "HR Analytics: Leveraging AI & Data for Strategic HR",
-    pdfUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/HR+Analytics.pdf",
+    pdfUrl: "https://cdn.kalingauniversity.ac.in/ctcd/HR+Analytics.pdf",
     date: "03.05.2025",
     resourcePerson: "Saurabh Saxena",
     keyDeliverables: [
@@ -307,7 +307,7 @@ const masterclassDetails = {
   },
   6: {
     title: "Master Your Market: Sales, Marketing & Negotiating Strategies",
-    pdfUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/Master+Class+Sales+Strategies.pdf",
+    pdfUrl: "https://cdn.kalingauniversity.ac.in/ctcd/Master+Class+Sales+Strategies.pdf",
     date: "26.07.2025",
     resourcePerson: "Meenakshi Ravi Shankar",
     keyDeliverables: [

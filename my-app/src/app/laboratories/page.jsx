@@ -171,32 +171,32 @@ const labFaqItems = [
 const galleryImages = [
   {
     id: 1,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/laboratories/laboratories-glimpse1.webp",
     alt: "Laboratories Glimpse 1",
   },
   {
     id: 2,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/laboratories/laboratories-glimpse2.webp",
     alt: "Laboratories Glimpse 2",
   },
   {
     id: 3,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-glimpse3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/laboratories/laboratories-glimpse3.webp",
     alt: "Laboratories Glimpse 3",
   },
   {
     id: 4,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/lab-1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/laboratories/lab-1.webp",
     alt: "Laboratories Glimpse 4",
   },
   {
     id: 5,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/lab-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/laboratories/lab-2.webp",
     alt: "Laboratories Glimpse 5",
   },
   {
     id: 6,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/lab-3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/laboratories/lab-3.webp",
     alt: "Laboratories Glimpse 6",
   }
 ];
@@ -204,14 +204,14 @@ const galleryImages = [
 export default function LaboratoriesPage() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <main className="bg-white">
       <MainIntro
         title="About Our Cutting-Edge Laboratories"
         description={[aboutP1, aboutP2]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/laboratories/laboratories-mainintro.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/laboratories/laboratories-mainintro.webp"
         imageAlt="Laboratories"
         showKnowMore={true}
         knowMoreLabel="Read More"

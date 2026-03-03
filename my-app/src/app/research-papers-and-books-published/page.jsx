@@ -12,7 +12,7 @@ import { useEffect } from "react";
 
 
 export default function ResearchPapersAndBooksPublished() {
-    
+
 
     /* =========================
        RESEARCH PAPERS (DO NOT TOUCH)
@@ -93,7 +93,7 @@ export default function ResearchPapersAndBooksPublished() {
             <MainIntro
                 title="Transforming Your Results Into Publications"
                 description="Kalinga University actively supports its researchers by providing them with resources, guidance, and support in their publication journey. From expert mentorship to providing access to publication tools and final printing, we’re with them at every step."
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png"
+                imageUrl="https://cdn.kalingauniversity.ac.in/common/placeholder-img.png"
                 imageAlt="Kalinga University Research"
                 showKnowMore
             />

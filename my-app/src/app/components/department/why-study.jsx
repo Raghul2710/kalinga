@@ -13,7 +13,7 @@ const whyStudyItems = [
     body:
       "The world needs new technologies, and companies are hunting for skilled professionals who generate code or are good problem solvers. We'll help you turn your ideas into a viral application.",
     variant: 'gray',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Global.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Global.svg',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const whyStudyItems = [
     body:
       'We design programs with the latest tools and industry practices so you graduate with the skills employers seek and the confidence to build real-world solutions.',
     variant: 'amber',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/university.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/university.svg',
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const whyStudyItems = [
     body:
       'Learn critical thinking, communication, and collaboration alongside core tech so you can adapt quickly and lead in fast-changing digital environments.',
     variant: 'gray',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg',
   },
 ];
 
@@ -37,7 +37,7 @@ export default function WhyStudy({
   items = whyStudyItems,
   sectionTitle = 'Why Study Information Technology?',
   sectionDescription = '',
-  backgroundImage = 'https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp',
+  backgroundImage = 'https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp',
   breakpoints = {
     768: { slidesPerView: 2 },
     1280: { slidesPerView: 2 },

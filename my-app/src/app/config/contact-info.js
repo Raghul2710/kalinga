@@ -15,7 +15,7 @@ export const contactInfo = {
     help: '+91-9907252100',
     primary: '+91-9907-252-100', // Default/primary number
   },
-  
+
   // Email addresses - single source of truth
   email: {
     admissions: 'admissions@kalingauniversity.ac.in',
@@ -23,7 +23,7 @@ export const contactInfo = {
     help: 'help@kalingauniversity.ac.in',
     primary: 'admissions@kalingauniversity.ac.in', // Default/primary email
   },
-  
+
   // Address - single source of truth
   address: {
     line1: 'Kalinga University',
@@ -34,7 +34,7 @@ export const contactInfo = {
     pincode: '492001',
     // Full address is generated from components
   },
-  
+
   // Social media links
   social: {
     facebook: '#',
@@ -42,7 +42,7 @@ export const contactInfo = {
     linkedin: '#',
     instagram: '#',
   },
-  
+
   // Quick links (for top bar)
   quickLinks: {
     campusWifi: '#',
@@ -56,17 +56,17 @@ export const contactInfo = {
 };
 
 export const logos = {
-    primary: {
-  src: '/kalingalogo.svg',
+  primary: {
+    src: '/kalingalogo.svg',
     alt: 'Kalinga University',
-       
+
   },
   secondary: {
     src: '/kalingacolorlogo.svg',
     alt: 'Kalinga University'
   },
   ctcd: {
-    src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-ctcd.svg',
+    src: 'https://cdn.kalingauniversity.ac.in/ccrc/logo-ctcd.svg',
     alt: 'CTCD - Corporate Training and Consultancy Division'
   },
 };
@@ -93,7 +93,7 @@ export const getEmail = (type = 'primary') => {
 // Helper function for address
 export const getAddress = (format = 'full') => {
   const addr = contactInfo.address;
-  
+
   switch (format) {
     case 'full':
       return `${addr.line1}, ${addr.line2}, ${addr.city}, ${addr.state} ${addr.pincode}, ${addr.country}`;
@@ -116,7 +116,7 @@ export const getAddress = (format = 'full') => {
 
 export const getLogo = (type = 'primary') => {
   return logos[type];
-};  
+};
 
 // Legacy helper functions for backward compatibility
 export const getPhoneHref = (type = 'primary') => getPhone(type).href;

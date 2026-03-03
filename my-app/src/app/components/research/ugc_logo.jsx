@@ -12,52 +12,52 @@ export default function UGCLogo() {
   const swiperRef = useRef(null);
   const logos = [
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-1.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-1.png",
       alt: "Pharmacy Council of India",
       name: "Pharmacy Council of India",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-2.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-2.png",
       alt: "Association of indian Universities",
       name: "Association of indian Universities",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-3.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-3.png",
       alt: "Chhattisgarh State Council of Science & Technology",
       name: "Chhattisgarh State Council of Science & Technology",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-4.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-4.png",
       alt: "NCTE",
       name: "NCTE",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-5.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-5.png",
       alt: "Bar Council of India",
       name: "Bar Council of India",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-1.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-1.png",
       alt: "Pharmacy Council of India",
       name: "Pharmacy Council of India",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-2.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-2.png",
       alt: "Association of indian Universities",
       name: "Association of indian Universities",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-3.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-3.png",
       alt: "Chhattisgarh State Council of Science & Technology",
       name: "Chhattisgarh State Council of Science & Technology",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-4.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-4.png",
       alt: "NCTE",
       name: "NCTE",
     },
     {
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-5.png",
+      src: "https://cdn.kalingauniversity.ac.in/logos/ugc-5.png",
       alt: "Bar Council of India",
       name: "Bar Council of India",
     },
@@ -69,7 +69,7 @@ export default function UGCLogo() {
       swiperRef.current.updateSlides();
       swiperRef.current.updateSlidesClasses();
     }
-    
+
     // Check if mobile on mount and resize
     const checkMobile = () => {
       if (typeof window !== 'undefined') {
@@ -87,7 +87,8 @@ export default function UGCLogo() {
     <div className="container mx-auto py-16 px-6">
       {/* Slider View for All Screen Sizes */}
       <div className="relative">
-        <style dangerouslySetInnerHTML={{__html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           .ugc-swiper-wrapper .swiper-wrapper {
             transition-duration: 800ms !important;
           }
@@ -138,7 +139,7 @@ export default function UGCLogo() {
             const centerOffset = isMobile ? 0 : 2;
             const centerIndex = (activeIndex + centerOffset) % 5;
             const isCenter = originalLogoIndex === centerIndex;
-            
+
             return (
               <SwiperSlide key={index} className={isCenter ? "center-highlight" : ""}>
                 <div className="relative flex flex-col items-center">

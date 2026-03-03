@@ -53,7 +53,7 @@ export default function KIFPage({
     description: "Got an idea? We’ll turn it into a successful company.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/incubator.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/incubator.svg"
         alt="Startup Incubation"
         width={40}
         height={40}
@@ -65,7 +65,7 @@ export default function KIFPage({
     description: "Get insider tips from our experienced team members and industry experts.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Expert+Mentorship.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Expert+Mentorship.svg"
         alt="Expert Mentorship"
         width={40}
         height={40}
@@ -77,7 +77,7 @@ export default function KIFPage({
     description: "Plan, design, test, and experiment with your ideas in our incubation lab. ",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Prototype+Development+Lab.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Prototype+Development+Lab.svg"
         alt="Prototype Development Lab"
         width={40}
         height={40}
@@ -89,7 +89,7 @@ export default function KIFPage({
     description: "Learn to pitch your ideas to industry experts and get financial assistance.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Funding+Support.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Funding+Support.svg"
         alt="Funding Support"
         width={40}
         height={40}
@@ -101,7 +101,7 @@ export default function KIFPage({
     description: "Work on your startup ideas in our buzzing workspace with strong Wi-Fi connectivity.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Co-Working+Space.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Co-Working+Space.svg"
         alt="Co-Working Space"
         width={40}
         height={40}
@@ -113,7 +113,7 @@ export default function KIFPage({
     description: "Learn useful tips related to branding and promotion, and launch your startup like a pro.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Marketing+Assistance.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Marketing+Assistance.svg"
         alt="Marketing Assistance"
         width={40}
         height={40}
@@ -126,7 +126,7 @@ export default function KIFPage({
     description: "Unsure about tech? We’ll help you choose the right tools and guide you through each step.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Technology+Support.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Technology+Support.svg"
         alt="Technology Support"
         width={40}
         height={40}
@@ -139,7 +139,7 @@ export default function KIFPage({
     description: "From registration to IP rights, we’ll make your paperwork process stress-free.  ",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Legal+%26+Compliance.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Legal+%26+Compliance.svg"
         alt="Legal & Compliance"
         width={40}
         height={40}
@@ -152,7 +152,7 @@ export default function KIFPage({
     description: "Whether it’s technology, healthcare, medicine, sustainable products, or social impact, KIF supports startups across different domains. Our ecosystem prompts cross-pollination of ideas and innovation.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/incubator.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/incubator.svg"
         alt="Startup "
         width={40}
         height={40}
@@ -165,7 +165,7 @@ export default function KIFPage({
     description: "We embrace fresh ideas of our champions, offering resources and mentorship to turn them into a powerful business.",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Technology+Support.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Technology+Support.svg"
         alt="Technology Support"
         width={40}
         height={40}
@@ -178,7 +178,7 @@ export default function KIFPage({
     description: "Our passionate team members, who come from different backgrounds, will constantly support you in your dreams at each step in your new journey.  ",
     icon: (
       <Image
-        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Legal+%26+Compliance.svg"
+        src="https://cdn.kalingauniversity.ac.in/kif/Legal+%26+Compliance.svg"
         alt="Legal & Compliance"
         width={40}
         height={40}
@@ -191,7 +191,7 @@ export default function KIFPage({
     name: "Nitish Jha",
     role: "Master G Academy NIIRA Educom",
     quote: "Kalinga Incubation Centre gave me a perfect platform where I turned my business idea into a successful startup, apart from my course curriculum. I have received an outstanding mentorship from them until I execute my plan. I am extremely grateful for their guidance and support. ",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/testimonial-1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/kif/testimonial-1.webp",
     theme: "red"
   },
   {
@@ -199,7 +199,7 @@ export default function KIFPage({
     name: "Shubham Bhartiya",
     role: "Graeon.ai",
     quote: "I am running a successful startup business just because of the guidance of experts at Kalinga University. From idea generation to its execution, I have received great support from them. They also conducted workshops, seminars, and guest lectures from time to time, which gave me a broader perspective and detailed knowledge about my business. Their personalised mentorship was truly a game-changer for me.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/testimonial-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/kif/testimonial-2.webp",
     theme: "red"
   },
   {
@@ -207,7 +207,7 @@ export default function KIFPage({
     name: "Shrey Singh",
     role: "Graeon.ai",
     quote: "I sincerely thank KIF team members, as they have helped me in establishing my startup business by working with me in planning and providing me with valuable industry insights. Their resources were extremely helpful for me in refining my business strategies.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/testimonial-3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/kif/testimonial-3.webp",
     theme: "red"
   }
 
@@ -219,93 +219,93 @@ export default function KIFPage({
       stepNumber: "01",
       title: "Step 1",
       description: "Brainstorm Unique Ideas",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 2,
       stepNumber: "02",
       title: "Step 2",
       description: "Polish Your Startup Plan",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 3,
       stepNumber: "03",
       title: "Step 3",
       description: "Build a Solid Business Plan",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 4,
       stepNumber: "04",
       title: "Step 4",
       description: "Develop Your Product",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 5,
       stepNumber: "05",
       title: "Step 5",
       description: "Get Expert Mentorship",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 6,
       stepNumber: "06",
       title: "Step 6",
       description: "Test & Improve",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 7,
       stepNumber: "07",
       title: "Step 7",
       description: "Launch Your Product/Service",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     },
     {
       id: 8,
       stepNumber: "08",
       title: "Step 8",
       description: "Pitch and Raise Funds",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+      image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
     }
   ];
 
   const links = linksProp ?? [
     {
       id: 1,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Entrepreneurial+Thinking.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Entrepreneurial+Thinking.svg",
       title: "Entrepreneurial Thinking ",
       description: "We’re here to put your entrepreneurial ideas into action. Here, you will not just dream but build something real that solves people's problems.",
     },
     {
       id: 2,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Backed+By+Powerful+Resources.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Backed+By+Powerful+Resources.svg",
       title: "Backed By Powerful Resources",
       description: "You won’t need to hassle anywhere to build your company; get complete support under one roof. From brainstorming ideas to product selling, you are free to utilise our in-house resources at any time.",
     },
     {
       id: 3,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Build+Networks.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Build+Networks.svg",
       title: "Build Networks",
       description: "We organise industrial visits, seminars, guest lectures, and industrial talks every week, which help our young minds build new connections and clarity in launching their businesses.",
     },
     {
       id: 4,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Trainings+%26+Workshops.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Trainings+%26+Workshops.svg",
       title: "Trainings & Workshops",
       description: "To develop an entrepreneurial spirit among young students, we organise various hands-on training programs where they learn to build a plan, product, learn selling and marketing tactics, and lead like a true leader. ",
     },
     {
       id: 5,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Fundraising.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Fundraising.svg",
       title: "Fundraising",
       description: "At Kalinga, you’ll not just learn to raise money but also to pitch ideas with power and purpose in our fundraising master class sessions. ",
     },
     {
       id: 6,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Business+Plan+Development.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/kif/Business+Plan+Development.svg",
       title: "Business Plan Development",
       description: "We will guide you in building a strategic business plan from the idea stage to the launch stage, helping you grow the right way.",
     },
@@ -326,49 +326,49 @@ export default function KIFPage({
       id: 1,
       name: "Siyaa Organics",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Siyaa+Organics.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/Siyaa+Organics.webp",
     },
     {
       id: 2,
       name: "Shree Sudarshan Drone",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Shree+Sudarshan+Drone.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/Shree+Sudarshan+Drone.webp",
     },
     {
       id: 3,
       name: "SQ7 Communications Pvt.Ltd.",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/SQ7+Communications+Pvt.+Ltd.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/SQ7+Communications+Pvt.+Ltd.webp",
     },
     {
       id: 4,
       name: "Insight Catalyst India Pvt.Ltd.",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Insight+Catalyst+India+Pvt+Ltd.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/Insight+Catalyst+India+Pvt+Ltd.webp",
     },
     {
       id: 5,
       name: "Nyson AI Solutions",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Nyson+AI+Solutions.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/Nyson+AI+Solutions.webp",
     },
     {
       id: 6,
       name: "Master G Academy NIIRA Educom",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Master+G+Academy+NIIRA+Educom.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/Master+G+Academy+NIIRA+Educom.webp",
     },
     {
       id: 7,
       name: "Graeon.ai",
       title: "",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Graeon.ai.webp",
+      image: "https://cdn.kalingauniversity.ac.in/kif/Graeon.ai.webp",
     }
   ];
   const activities = [
     {
       id: 1,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-1.png",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/image-1.png",
       imageAlt: " Events and Activities",
       title: "Startup Day Celebration 16th January 2025",
       buttonText: "Read More",
@@ -376,7 +376,7 @@ export default function KIFPage({
     },
     {
       id: 2,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-2.png",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/image-2.png",
       imageAlt: " Events and Activities",
       title: "Visit by Dr. Laxmikant Dwivedi, President, Sanskar Bharti Chhattisgarh",
       buttonText: "Read More",
@@ -384,7 +384,7 @@ export default function KIFPage({
     },
     {
       id: 3,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/image-3.png",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/image-3.png",
       imageAlt: " Events and Activities",
       title: "FDP Organised by AICTE & the Ministry of Education’s Innovation Cell",
       buttonText: "Read More",
@@ -392,7 +392,7 @@ export default function KIFPage({
     },
     {
       id: 4,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(18).webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/chart+(18).webp",
       imageAlt: " Events and Activities",
       title: "Evaluation of the Screening Session of CSVTU for MSME Ideathon",
       buttonText: "Read More",
@@ -400,7 +400,7 @@ export default function KIFPage({
     },
     {
       id: 5,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(21).webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/chart+(21).webp",
       imageAlt: " Events and Activities",
       title: "Kalinga Incubation Stall at SEML Establishment Day",
       buttonText: "Read More",
@@ -408,7 +408,7 @@ export default function KIFPage({
     },
     {
       id: 6,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(19).webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/chart+(19).webp",
       imageAlt: " Events and Activities",
       title: "Field visit to Incubation Centre Under IIC Activity @ NIT Raipur",
       buttonText: "Read More",
@@ -416,7 +416,7 @@ export default function KIFPage({
     },
     {
       id: 7,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(20).webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/kif/chart+(20).webp",
       imageAlt: " Events and Activities",
       title: "TOT Program on Entrepreneur Development organised with CSIDC & EDII, Gandhi Nagar & CSIDC C.G",
       buttonText: "Read More",
@@ -439,37 +439,37 @@ export default function KIFPage({
   const galleryImages = [
     {
       id: 1,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k1.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k1.jpg",
       alt: "KIF Gallery Image 1"
     },
     {
       id: 2,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k2.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k2.jpg",
       alt: "KIF Gallery Image 2"
     },
     {
       id: 3,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k3.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k3.jpg",
       alt: "KIF Gallery Image 3"
     },
     {
       id: 4,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k4.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k4.jpg",
       alt: "KIF Gallery Image 4"
     },
     {
       id: 5,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k5.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k5.jpg",
       alt: "KIF Gallery Image 5"
     },
     {
       id: 6,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k6.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k6.jpg",
       alt: "KIF Gallery Image 6"
     },
     {
       id: 7,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/k7.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/kif/k7.jpg",
       alt: "KIF Gallery Image 7"
     }
   ];
@@ -484,10 +484,10 @@ export default function KIFPage({
       />
       <KIFCertificateSection />
       <VisionMission data={visionMissionData} showImg={false} />
-      <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(17).webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
+      <ImageListItem textClassName="hidden" listItemTextClassName="text-black" imageSrc="https://cdn.kalingauniversity.ac.in/kif/chart+(17).webp" boxItems={boxItems} title="Our Key Offerings" subtitle="About KIF" description="Kalinga Incubation Foundation (KIF) is a platform for students to incubate their ideas and turn them into reality." />
       <QuickLinks links={links} title="What Awaits You At KIF?" description="Discover a comprehensive ecosystem with state-of-the-art infrastructure, expert mentorship, networking opportunities, seed funding support, and hands-on training through workshops and pitch sessions to transform your innovative ideas into successful startups."
         backgroundColor="bg-white" textColorClassName="text-black" showReadMore={false} />
-      <ImageContent title="Career and Corporate Resource Centre" subtitle="About CCRC" description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support." imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp" imageAlt="CCRC Banner" buttonLink="/career-and-corporate-resource-centre" buttonText="Read More" />
+      <ImageContent title="Career and Corporate Resource Centre" subtitle="About CCRC" description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support." imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrclogo.webp" imageAlt="CCRC Banner" buttonLink="/career-and-corporate-resource-centre" buttonText="Read More" />
       <AdmissionSteps
         steps={kifSteps}
         subtitleClassName="hidden"
@@ -499,7 +499,7 @@ export default function KIFPage({
         showImage={false}
         bgColor="bg-white"
       />
-      <ImageListItem textClassName="text-white" listItemTextClassName="text-black" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/chart+(16).webp" boxItems={boxItems1} title="Join Us on Your Entrepreneurial Journey" subtitle="About KIF" description="We transform young innovators' ideas into scalable and profitable ventures." />
+      <ImageListItem textClassName="text-white" listItemTextClassName="text-black" imageSrc="https://cdn.kalingauniversity.ac.in/kif/chart+(16).webp" boxItems={boxItems1} title="Join Us on Your Entrepreneurial Journey" subtitle="About KIF" description="We transform young innovators' ideas into scalable and profitable ventures." />
 
       <Testimonials testimonials={testimonials} />
 
@@ -507,7 +507,7 @@ export default function KIFPage({
         title="Join Us on Your Entrepreneurial Journey"
         description="Let’s work together on your ideas and turn them into a successful venture."
         buttonLabel="Download Form"
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/stratup_reg_form.pdf"
+        href="https://cdn.kalingauniversity.ac.in/kif/stratup_reg_form.pdf"
         cardBackgroundColor="bg-[var(--button-red)]"
         useContainer={true}
       />

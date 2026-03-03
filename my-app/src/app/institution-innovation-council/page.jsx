@@ -70,28 +70,28 @@ const annualReportButtons = [
   {
     id: 1,
     text: "2021-22",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/IIC_Appreciation_Letter_AY_2021_22.+(2).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/IIC/IIC_Appreciation_Letter_AY_2021_22.+(2).pdf",
   },
   {
     id: 2,
     text: "2022-23",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/IIC_Appreciation_Letter_AY_2022_23.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/IIC/IIC_Appreciation_Letter_AY_2022_23.pdf",
   },
   {
     id: 3,
     text: "2023-24",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/IIC_Appreciation_Letter_AY_2023_24+(1).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/IIC/IIC_Appreciation_Letter_AY_2023_24+(1).pdf",
   },
 ];
 const certificates = [
   {
     id: 1,
-    src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(5).png",
+    src: "https://cdn.kalingauniversity.ac.in/IIC/chart+(5).png",
     alt: "IIC Star Rating 2022-23",
   },
   {
     id: 2,
-    src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(6).png",
+    src: "https://cdn.kalingauniversity.ac.in/IIC/chart+(6).png",
     alt: "IIC Star Rating 2023-24",
   },
 ];
@@ -102,18 +102,18 @@ const certificates = [
 // const masterclassActivities = [
 //   {
 //     id: 1,
-//     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/1+(1).png",
+//     imageSrc: "https://cdn.kalingauniversity.ac.in/IIC/1+(1).png",
 //     imageAlt: "Grow As a Leader",
 
 //   },
 //   {
 //     id: 2,
-//     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/2+(1).png",
+//     imageSrc: "https://cdn.kalingauniversity.ac.in/IIC/2+(1).png",
 //     imageAlt: "CSR Fund Raising",
 //   },
 //   {
 //     id: 3,
-//     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/3+(1).png",
+//     imageSrc: "https://cdn.kalingauniversity.ac.in/IIC/3+(1).png",
 //     imageAlt: "Gen Z",
 
 //   },
@@ -123,19 +123,19 @@ const certificates = [
 // const masterclassActivities2 = [
 //   {
 //     id: 1,
-//     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/4.png",
+//     imageSrc: "https://cdn.kalingauniversity.ac.in/IIC/4.png",
 //     imageAlt: "Six Sigma",
 
 //   },
 //   {
 //     id: 2,
-//     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/5+(1).png",
+//     imageSrc: "https://cdn.kalingauniversity.ac.in/IIC/5+(1).png",
 //     imageAlt: "HR AI",
 
 //   },
 //   {
 //     id: 3,
-//     imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/6.png",
+//     imageSrc: "https://cdn.kalingauniversity.ac.in/IIC/6.png",
 //     imageAlt: "Green Industry",
 
 //   },
@@ -146,22 +146,22 @@ const certificates = [
 const iicTrainingAchievements = [
   {
     id: 1,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(7).png",
+    image: "https://cdn.kalingauniversity.ac.in/IIC/chart+(7).png",
     alt: "IIC Training Achievement 1",
   },
   {
     id: 2,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(8).png",
+    image: "https://cdn.kalingauniversity.ac.in/IIC/chart+(8).png",
     alt: "IIC Training Achievement 2",
   },
   {
     id: 3,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(9).png",
+    image: "https://cdn.kalingauniversity.ac.in/IIC/chart+(9).png",
     alt: "IIC Training Achievement 3",
   },
   {
     id: 4,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(10).png",
+    image: "https://cdn.kalingauniversity.ac.in/IIC/chart+(10).png",
     alt: "IIC Training Achievement 4",
   },
 ];
@@ -170,24 +170,24 @@ const annualReportButtons2 = [
   {
     id: 1,
     text: "Session - 1",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Report-on-IIC-Impact-Lecture-Series-I-(Session-1)-(2)+(2)+(1).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/IIC/Report-on-IIC-Impact-Lecture-Series-I-(Session-1)-(2)+(2)+(1).pdf",
   },
   {
     id: 2,
     text: "Session - 2",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Report-on-IIC-Impact-Lecture-Series-I-(Session-1)-(2)+(2).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/IIC/Report-on-IIC-Impact-Lecture-Series-I-(Session-1)-(2)+(2).pdf",
   },
 ];
 
 const iicfound = [
-  { id: 1, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/found-1.png", alt: "Foundation 1", overlayText: "Foundation level" },
-  { id: 2, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/found-2.png", alt: "Foundation 2", overlayText: "Foundation level" },
-  { id: 3, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/found-3.png", alt: "Foundation 3", overlayText: "Foundation level" },
+  { id: 1, image: "https://cdn.kalingauniversity.ac.in/found-1.png", alt: "Foundation 1", overlayText: "Foundation level" },
+  { id: 2, image: "https://cdn.kalingauniversity.ac.in/found-2.png", alt: "Foundation 2", overlayText: "Foundation level" },
+  { id: 3, image: "https://cdn.kalingauniversity.ac.in/found-3.png", alt: "Foundation 3", overlayText: "Foundation level" },
 ];
 const iicfounds = [
-  { id: 4, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/found-4.png", alt: "Foundation 4", overlayText: "Advanced level" },
-  { id: 5, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/found-5.png", alt: "Foundation 5", overlayText: "Advanced level" },
-  { id: 6, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/found-6.png", alt: "Foundation 6", overlayText: "Advanced level" },
+  { id: 4, image: "https://cdn.kalingauniversity.ac.in/found-4.png", alt: "Foundation 4", overlayText: "Advanced level" },
+  { id: 5, image: "https://cdn.kalingauniversity.ac.in/found-5.png", alt: "Foundation 5", overlayText: "Advanced level" },
+  { id: 6, image: "https://cdn.kalingauniversity.ac.in/found-6.png", alt: "Foundation 6", overlayText: "Advanced level" },
 ];
 
 
@@ -200,7 +200,7 @@ export default function InstitutionInnovationCouncil() {
 
 
       <ImageContent
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/research-main-content.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/research/research-main-content.webp"
         description="An Initiative of the Ministry of Education"
         additionalContent={[
           "In 2018, the Ministry of Education (MoE), through the MoE’s Innovation Cell (MIC), launched the Institution’s Innovation Council (IIC) in collaboration with AICTE for Higher Educational Institutions (HEIs) to promote the culture of innovation and start-up ecosystem in educational institutions. The main objective of IIC is to engage a large number of faculty members and students in various entrepreneurship and innovation-related activities. It includes IPR, Ideathon, Proof of Concept Development, Design Thinking, and project handling and management at the pre-incubation level. The IIC model enables HEIs to address key challenges such as limited people’s involvement, occasional or unplanned Innovation and Entrepreneurship (I&E) activities, limited engagement of top leaders, poor coordination, weak resource planning, and underutilization of students’ creative potential."
@@ -215,7 +215,7 @@ export default function InstitutionInnovationCouncil() {
         <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center">
             <Image
-              src="https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/chart+(2).png"
+              src="https://cdn.kalingauniversity.ac.in/institution-innovation-council/chart+(2).png"
               alt="Innovation & Startups"
               width={500}
               height={400}
@@ -238,7 +238,7 @@ export default function InstitutionInnovationCouncil() {
       {/* IIC Functions */}
       <ImageListItem
         items={objectives}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/kalinga-students-2.jpg"
+        imageSrc="https://cdn.kalingauniversity.ac.in/common/kalinga-students-2.jpg"
         title="Functions of IIC at Kalinga University"
         description={false}
       />
@@ -270,7 +270,7 @@ export default function InstitutionInnovationCouncil() {
         title=" About Kalinga Incubation Foundation"
         subtitle={false}
         description="KIF was established in ----, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION. Our motive is to promote the spirit of research, innovation, and entrepreneurship among students and faculty members of our university."
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/chart+(4).png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/IIC/chart+(4).png"
         imageAlt="Kalinga Incubation Foundation"
         hasImage={true}
         additionalContent={[
@@ -475,22 +475,22 @@ Kalinga University hosted its first session of the Impact Lecture Series on 15th
         title="Glimpses"
 
         images={[
-          { id: 1, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/DSC06210.jpg", alt: "Institution Innovation Council" },
-          { id: 2, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Vikshit+Bharat.jpg", alt: "Institution Innovation Council" },
-          { id: 3, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Q1.7.png", alt: "Institution Innovation Council" },
-          { id: 4, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Q1.6.png", alt: "Institution Innovation Council" },
-          { id: 5, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Machine+Learning+2.jpeg", alt: "Institution Innovation Council" },
-          { id: 6, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/IIC+Meet.jpeg", alt: "Institution Innovation Council" },
-          { id: 7, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Hackathon+2.jpeg", alt: "Institution Innovation Council" },
-          { id: 8, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IIC/Hackathon+1.jpg", alt: "Institution Innovation Council" },
-          // { id: 9, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-1.jpg", alt: "Institution Innovation Council" },
-          // { id: 10, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-2.jpeg", alt: "Institution Innovation Council" },
-          // { id: 11, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-2.jpeg", alt: "Institution Innovation Council" },
-          // { id: 12, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-3.png", alt: "Institution Innovation Council" },
-          // { id: 13, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-4.jfif", alt: "Institution Innovation Council" },
-          // { id: 14, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-5.png", alt: "Institution Innovation Council" },
-          // { id: 15, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-5.jpg", alt: "Institution Innovation Council" },
-          // { id: 16, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/institution-innovation-council/iic-6.jpg", alt: "Institution Innovation Council" },
+          { id: 1, image: "https://cdn.kalingauniversity.ac.in/IIC/DSC06210.jpg", alt: "Institution Innovation Council" },
+          { id: 2, image: "https://cdn.kalingauniversity.ac.in/IIC/Vikshit+Bharat.jpg", alt: "Institution Innovation Council" },
+          { id: 3, image: "https://cdn.kalingauniversity.ac.in/IIC/Q1.7.png", alt: "Institution Innovation Council" },
+          { id: 4, image: "https://cdn.kalingauniversity.ac.in/IIC/Q1.6.png", alt: "Institution Innovation Council" },
+          { id: 5, image: "https://cdn.kalingauniversity.ac.in/IIC/Machine+Learning+2.jpeg", alt: "Institution Innovation Council" },
+          { id: 6, image: "https://cdn.kalingauniversity.ac.in/IIC/IIC+Meet.jpeg", alt: "Institution Innovation Council" },
+          { id: 7, image: "https://cdn.kalingauniversity.ac.in/IIC/Hackathon+2.jpeg", alt: "Institution Innovation Council" },
+          { id: 8, image: "https://cdn.kalingauniversity.ac.in/IIC/Hackathon+1.jpg", alt: "Institution Innovation Council" },
+          // { id: 9, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-1.jpg", alt: "Institution Innovation Council" },
+          // { id: 10, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-2.jpeg", alt: "Institution Innovation Council" },
+          // { id: 11, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-2.jpeg", alt: "Institution Innovation Council" },
+          // { id: 12, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-3.png", alt: "Institution Innovation Council" },
+          // { id: 13, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-4.jfif", alt: "Institution Innovation Council" },
+          // { id: 14, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-5.png", alt: "Institution Innovation Council" },
+          // { id: 15, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-5.jpg", alt: "Institution Innovation Council" },
+          // { id: 16, image: "https://cdn.kalingauniversity.ac.in/institution-innovation-council/iic-6.jpg", alt: "Institution Innovation Council" },
 
 
         ]}

@@ -29,7 +29,7 @@ export const renderProgramCard = (program) => {
           {program.scholarships && (
             <li className="flex items-start gap-2">
               <Image
-                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
+                src="https://cdn.kalingauniversity.ac.in/logos/hand-graduation-icon.png"
                 alt="Scholarships icon"
                 width={20}
                 height={20}

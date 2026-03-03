@@ -7,7 +7,7 @@ export default function BoardStudies() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/course/board-group.webp"
+          src="https://cdn.kalingauniversity.ac.in/course/board-group.webp"
           alt="Board of Studies"
           fill
           className="object-cover"
@@ -45,7 +45,7 @@ export default function BoardStudies() {
           <div className="flex items-center justify-center relative">
             <div className="relative w-full h-full">
               <Image
-                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/course/globe.png"
+                src="https://cdn.kalingauniversity.ac.in/course/globe.png"
                 alt="World Map"
                 width={600}
                 height={600}

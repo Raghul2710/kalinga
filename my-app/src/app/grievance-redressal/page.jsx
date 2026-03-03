@@ -47,7 +47,7 @@ const committeeMembers = [
 
 
 export default function GrievanceRedressalPage() {
-  
+
 
   const columns = [
     { key: "sno", label: "S. No.", width: "w-24" },
@@ -66,7 +66,7 @@ export default function GrievanceRedressalPage() {
       <MainIntro
         title="Grievance Redressal Cell"
         description={[aboutP1, aboutP2]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/grievance/grievance-main-intro.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/grievance/grievance-main-intro.webp"
         imageAlt="Grievance Redressal Cell"
         showKnowMore={true}
         initialVisibleParagraphs={2}
@@ -76,7 +76,7 @@ export default function GrievanceRedressalPage() {
         title="Functions"
         subtitle=""
         items={functionsList}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/grievance/grievance-functions.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/grievance/grievance-functions.webp"
         description=""
       />
 

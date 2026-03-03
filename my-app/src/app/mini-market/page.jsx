@@ -25,7 +25,7 @@ const page = () => {
       <MiniMarketFacility />
       <RaipurVideoSection
         videoId="8bqYKGqQ8XI"
-        thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/mini-market/thumbnail.webp"
+        thumbnail="https://cdn.kalingauniversity.ac.in/mini-market/thumbnail.webp"
         title=""
         description="" // optional
         alt="Video thumbnail"

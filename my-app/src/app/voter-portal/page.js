@@ -17,7 +17,7 @@ export default function Page() {
                     className="group"
                 >
                     <img
-                        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/Voter-Portal/chart.png"
+                        src="https://cdn.kalingauniversity.ac.in/Voter-Portal/chart.png"
                         alt="Voter Portal"
                         className="
     w-[360px] h-[360px]

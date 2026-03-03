@@ -9,37 +9,37 @@ export default function EmployeeBenefits({ counsellingAreas, headingTextColor })
       id: 1,
       title: "Competitive Compensation",
       description: "We provide industry-aligned salary packages that reward expertise, performance, and dedication.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/wages.svg",
+      img: "https://cdn.kalingauniversity.ac.in/careers/wages.svg",
     },
     {
       id: 2,
       title: "Professional Development",
       description: "Enhance your skills through ongoing training programs, faculty development workshops, and research collaborations.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/professional-development.svg"
+      img: "https://cdn.kalingauniversity.ac.in/careers/professional-development.svg"
     },
     {
       id: 3,
       title: "Health & Wellness",
       description: "Comprehensive health and wellness initiatives like free checkup camps and wellness initiatives ensure the physical and mental well-being of our employees.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Health+%26+Wellness.svg"
+      img: "https://cdn.kalingauniversity.ac.in/careers/Health+%26+Wellness.svg"
     },
     {
       id: 4,
       title: "Employee Friendly Policies and Facilities",
       description: "A positive and flexible work environment that promotes productivity while supporting personal commitments.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Work%E2%80%93Life+Balance.svg"
+      img: "https://cdn.kalingauniversity.ac.in/careers/Work%E2%80%93Life+Balance.svg"
     },
     {
       id: 5,
       title: "Research & Innovation Support",
       description: "Access institutional funding, advanced facilities, and resources to pursue innovative research and academic excellence.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Research.svg"
+      img: "https://cdn.kalingauniversity.ac.in/academics/icons/Research.svg"
     },
     {
       id: 6,
       title: "Recognition & Growth",
       description: "We celebrate achievements through awards, promotions, and opportunities for career progression.",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/Recognition+%26+Growth.svg"
+      img: "https://cdn.kalingauniversity.ac.in/careers/Recognition+%26+Growth.svg"
     }
   ];
 

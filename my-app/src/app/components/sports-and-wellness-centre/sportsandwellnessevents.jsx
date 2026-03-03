@@ -8,7 +8,7 @@ function Sportsandwellnessevents() {
         {
             id: 1,
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
             imageAlt: "",
             title:
                 "",
@@ -21,7 +21,7 @@ function Sportsandwellnessevents() {
         {
             id: 2,
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+                "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
             imageAlt: "",
             title: "",
             description: [

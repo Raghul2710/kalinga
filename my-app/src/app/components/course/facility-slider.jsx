@@ -15,9 +15,9 @@ export default function FacilitySlider({
     subtitle = "Legal Skills into Trials",
     description = "Our law students get a real courtroom experience with our Moot Court, where they put their legal skills into trials and participate in competitions, and gain confidence.",
     images = [
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/mootcourt.webp",
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/seminar-rooms.webp",
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/audiovisualcentre.webp"
+        "https://cdn.kalingauniversity.ac.in/academic-facilities/mootcourt.webp",
+        "https://cdn.kalingauniversity.ac.in/academic-facilities/seminar-rooms.webp",
+        "https://cdn.kalingauniversity.ac.in/academic-facilities/audiovisualcentre.webp"
     ],
     ctaText,
     ctaLink = "#",

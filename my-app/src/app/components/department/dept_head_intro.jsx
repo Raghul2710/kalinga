@@ -4,7 +4,7 @@ import Image from "next/image";
 import SectionHeading from "../general/SectionHeading";
 import GlobalArrowButton from '../general/global-arrow_button';
 
-const DEFAULT_IMAGE_SRC = "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/chart.webp";
+const DEFAULT_IMAGE_SRC = "https://cdn.kalingauniversity.ac.in/IQAC/chart.webp";
 const DEFAULT_TITLE = "Mr. Omprakash Dewangan";
 const DEFAULT_SUBTITLE = "Head of Department";
 const DEFAULT_DEPARTMENT = "Faculty of Information Technology";

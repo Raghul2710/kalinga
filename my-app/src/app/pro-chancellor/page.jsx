@@ -7,7 +7,7 @@ export default function Leadership() {
   return (
     <>
       <ChairmanMessage
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Leadership/Sajjan+Singh.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/Leadership/Sajjan+Singh.png"
         imageAlt="Mr. Sajjan Singh"
         name="Mr. Sajjan Singh"
         title="Pro-Chancellor"

@@ -20,47 +20,47 @@ const page = () => {
   const nccgallery = [
     {
       id: 1,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/01.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/01.jpg",
     },
     {
       id: 2,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/02.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/02.jpg",
     },
     {
       id: 3,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/03.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/03.jpg",
     },
     {
       id: 4,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/04.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/04.jpg",
     },
     {
       id: 5,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/05.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/05.jpg",
     },
     {
       id: 6,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/06.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/06.jpg",
     },
     {
       id: 7,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/07.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/07.jpg",
     },
     {
       id: 8,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/08.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/08.jpg",
     },
     {
       id: 9,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/09.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/09.jpg",
     },
     {
       id: 10,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/10.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/10.jpg",
     },
     {
       id: 11,
-      src: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/11.jpg",
+      src: "https://cdn.kalingauniversity.ac.in/ncc/11.jpg",
     }
   ];
 
@@ -68,7 +68,7 @@ const page = () => {
     {
       id: 1,
       variant: "achievement",
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/01.jpg",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ncc/01.jpg",
       name: "Zaheen E Fatema",
       degree: "BSC BT 2021-24",
       status: "cleared",
@@ -78,7 +78,7 @@ const page = () => {
     {
       id: 2,
       variant: "achievement",
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/02.jpg",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ncc/02.jpg",
       name: "Lt Vibha Chandrakar",
       degree: "NCC Coordinator",
       status: "Special Achievement",
@@ -104,7 +104,7 @@ const page = () => {
       <NccIntro />
       <RaipurVideoSection
         videoId="u2yYHsX52Y"
-        thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
+        thumbnail="https://cdn.kalingauniversity.ac.in/about/about-banner.webp"
         title=""
         description="" // optional
         alt="Video thumbnail"

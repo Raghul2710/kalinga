@@ -251,7 +251,7 @@ export default function EventCalendar({ items = [], departments = [], showNews =
                         <div className="relative p-3 md:p-5 w-full md:w-auto flex-shrink-0">
                           <div className="relative w-full md:w-[280px] h-[200px] md:h-[200px] !bg-[var(--light-sand)]">
                             <Image
-                              src={item.images?.[0]?.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"}
+                              src={item.images?.[0]?.image || "https://cdn.kalingauniversity.ac.in/common/student.jpg"}
                               alt={item.heading}
                               fill
                               sizes="(max-width: 768px) 100vw, 280px"
@@ -354,7 +354,7 @@ export default function EventCalendar({ items = [], departments = [], showNews =
                         <div className={`flex gap-3 items-start pb-4 ${index !== latestNews.length - 1 ? 'border-b border-white/20' : ''}`}>
                           <div className="flex-shrink-0 pt-1">
                             <Image
-                              src={news.images?.[0]?.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"}
+                              src={news.images?.[0]?.image || "https://cdn.kalingauniversity.ac.in/common/student.jpg"}
                               alt={news.heading}
                               width={80}
                               height={80}

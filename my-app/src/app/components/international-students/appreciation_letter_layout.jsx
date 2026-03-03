@@ -2,7 +2,7 @@ import Image from "next/image";
 import SectionHeading from "../general/SectionHeading";
 
 export default function AppreciationLetterLayout({
-  imageSrc = "https://kalinga-university.s3.ap-south-1.amazonaws.com/international-students/appreciation-letter.png",
+  imageSrc = "https://cdn.kalingauniversity.ac.in/international-students/appreciation-letter.png",
   imageAlt = "Appreciation Letter",
   subtitle = "",
   title = "Appreciation Letter",

@@ -15,53 +15,53 @@ import StudentActivities from "../components/department/student_activities";
 
 const placementGalleryImages = [
   // // Training and Placement Cell
-  // { id: 1, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-1.webp", title: "Training and Placement Gallery" },
-  // { id: 2, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-2.webp", title: "Training and Placement Gallery" },
-  // { id: 3, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-3.webp", title: "Training and Placement Gallery" },
+  // { id: 1, image: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-1.webp", title: "Training and Placement Gallery" },
+  // { id: 2, image: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-2.webp", title: "Training and Placement Gallery" },
+  // { id: 3, image: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-3.webp", title: "Training and Placement Gallery" },
 
   // // Aditya Biotech Lab
-  // { id: 4, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-4.webp", title: "Aditya Biotech Lab" },
-  // { id: 5, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-glimple-5.webp", title: "Aditya Biotech Lab" },
+  // { id: 4, image: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-4.webp", title: "Aditya Biotech Lab" },
+  // { id: 5, image: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-glimple-5.webp", title: "Aditya Biotech Lab" },
 
   // International Students / Campus (IDs 6-9)
-  { id: 6, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-1.jpeg", title: "Aditya Biotech Lab" },
-  { id: 7, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-2.jpeg", title: "Aditya Biotech Lab" },
-  { id: 8, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-3.jpeg", title: "Aditya Biotech Lab" },
-  { id: 9, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-4.jpg", title: "Automobile Expo Visit" },
+  { id: 6, image: "https://cdn.kalingauniversity.ac.in/placement/ind-1.jpeg", title: "Aditya Biotech Lab" },
+  { id: 7, image: "https://cdn.kalingauniversity.ac.in/placement/ind-2.jpeg", title: "Aditya Biotech Lab" },
+  { id: 8, image: "https://cdn.kalingauniversity.ac.in/placement/ind-3.jpeg", title: "Aditya Biotech Lab" },
+  { id: 9, image: "https://cdn.kalingauniversity.ac.in/placement/ind-4.jpg", title: "Automobile Expo Visit" },
 
   // Automobile Expo Visit
-  { id: 10, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-5.jpg", title: "Automobile Expo Visit" },
-  { id: 11, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-6.jpg", title: "Automobile Expo Visit" },
-  { id: 12, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-7.jpg", title: "Automobile Expo Visit" },
-  { id: 13, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-8.jpg", title: "Automobile Expo Visit" },
-  { id: 14, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-9.jpg", title: "Automobile Expo Visit" },
-  { id: 15, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-10.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 16, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-11.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 17, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-12.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 18, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-13.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 19, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-14.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 20, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-15.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 10, image: "https://cdn.kalingauniversity.ac.in/placement/ind-5.jpg", title: "Automobile Expo Visit" },
+  { id: 11, image: "https://cdn.kalingauniversity.ac.in/placement/ind-6.jpg", title: "Automobile Expo Visit" },
+  { id: 12, image: "https://cdn.kalingauniversity.ac.in/placement/ind-7.jpg", title: "Automobile Expo Visit" },
+  { id: 13, image: "https://cdn.kalingauniversity.ac.in/placement/ind-8.jpg", title: "Automobile Expo Visit" },
+  { id: 14, image: "https://cdn.kalingauniversity.ac.in/placement/ind-9.jpg", title: "Automobile Expo Visit" },
+  { id: 15, image: "https://cdn.kalingauniversity.ac.in/placement/ind-10.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 16, image: "https://cdn.kalingauniversity.ac.in/placement/ind-11.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 17, image: "https://cdn.kalingauniversity.ac.in/placement/ind-12.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 18, image: "https://cdn.kalingauniversity.ac.in/placement/ind-13.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 19, image: "https://cdn.kalingauniversity.ac.in/placement/ind-14.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 20, image: "https://cdn.kalingauniversity.ac.in/placement/ind-15.jpg", title: "Bhilai Steel Plant Industrial Visit" },
 
   // Bhilai Steel Plant Industrial Visit
-  { id: 21, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-16.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 22, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-17.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 21, image: "https://cdn.kalingauniversity.ac.in/placement/ind-16.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 22, image: "https://cdn.kalingauniversity.ac.in/placement/ind-17.jpg", title: "Bhilai Steel Plant Industrial Visit" },
 
   // CIPET Visit
-  { id: 23, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-18.jpg", title: "Bhilai Steel Plant Industrial Visit" },
-  { id: 24, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ind-19.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 23, image: "https://cdn.kalingauniversity.ac.in/placement/ind-18.jpg", title: "Bhilai Steel Plant Industrial Visit" },
+  { id: 24, image: "https://cdn.kalingauniversity.ac.in/placement/ind-19.jpg", title: "Bhilai Steel Plant Industrial Visit" },
 ];
 
 const customImages = [
-  { id: 4, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/new-year.png", alt: "New Year Celebration" },
-  { id: 5, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/Gallery-1.webp", alt: "gallery-1" },
-  { id: 6, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/Gallery-2.webp", alt: "gallery-2" },
-  { id: 7, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/Gallery-3.webp", alt: "gallery-3" },
-  { id: 8, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/Gallery-4.webp", alt: "gallery-4" },
-  { id: 9, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/gallery-5.webp", alt: "gallery-5" },
-  { id: 10, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/Gallery-6.webp", alt: "gallery-6" },
-  { id: 11, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/gallery-7.webp", alt: "gallery-7" },
-  { id: 12, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/gallery-8.webp", alt: "gallery-8" },
-  { id: 13, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/news-and-events/gallery-9.webp", alt: "gallery-9" }
+  { id: 4, image: "https://cdn.kalingauniversity.ac.in/news-and-events/new-year.png", alt: "New Year Celebration" },
+  { id: 5, image: "https://cdn.kalingauniversity.ac.in/news-and-events/Gallery-1.webp", alt: "gallery-1" },
+  { id: 6, image: "https://cdn.kalingauniversity.ac.in/news-and-events/Gallery-2.webp", alt: "gallery-2" },
+  { id: 7, image: "https://cdn.kalingauniversity.ac.in/news-and-events/Gallery-3.webp", alt: "gallery-3" },
+  { id: 8, image: "https://cdn.kalingauniversity.ac.in/news-and-events/Gallery-4.webp", alt: "gallery-4" },
+  { id: 9, image: "https://cdn.kalingauniversity.ac.in/news-and-events/gallery-5.webp", alt: "gallery-5" },
+  { id: 10, image: "https://cdn.kalingauniversity.ac.in/news-and-events/Gallery-6.webp", alt: "gallery-6" },
+  { id: 11, image: "https://cdn.kalingauniversity.ac.in/news-and-events/gallery-7.webp", alt: "gallery-7" },
+  { id: 12, image: "https://cdn.kalingauniversity.ac.in/news-and-events/gallery-8.webp", alt: "gallery-8" },
+  { id: 13, image: "https://cdn.kalingauniversity.ac.in/news-and-events/gallery-9.webp", alt: "gallery-9" }
 ];
 
 
@@ -144,7 +144,7 @@ function NewsAndEvents() {
       return isFutureEvent(item.date);
     }).map(item => ({
       id: item.id,
-      image: item.images?.[0]?.image || 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+      image: item.images?.[0]?.image || 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
       title: item.heading,
       badgeText: item.date,
       slug: item.slug
@@ -169,7 +169,7 @@ function NewsAndEvents() {
         date: item.date,
         category: item.category_name,
         description: item.short_para ? parseHtmlToText(item.short_para) : getTruncatedContent(item.content),
-        image: item.images?.[0]?.image || 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+        image: item.images?.[0]?.image || 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
         href: `/news-and-events/${item.slug}`,
         registerButtonText: "Read More"
       };

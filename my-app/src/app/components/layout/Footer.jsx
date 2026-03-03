@@ -111,13 +111,13 @@ export default function Footer() {
                   </ul>
                   <ul className="text-white/80 space-y-2 sm:space-y-3">
                     <li>
-                      <FlipbookTrigger pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/KU+NIRF+2024+DCF.pdf" title="NIRF Ranking">
-                        <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/KU+NIRF+2024+DCF.pdf", "NIRF Ranking")}>NIRF Ranking</a>
+                      <FlipbookTrigger pdfUrl="https://cdn.kalingauniversity.ac.in/downloads/KU+NIRF+2024+DCF.pdf" title="NIRF Ranking">
+                        <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://cdn.kalingauniversity.ac.in/downloads/KU+NIRF+2024+DCF.pdf", "NIRF Ranking")}>NIRF Ranking</a>
                       </FlipbookTrigger>
                     </li>
                     <li>
-                      <FlipbookTrigger pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/UGC+(Detailed+Info.).pdf" title="UGC Detailed Information">
-                        <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/common/UGC+(Detailed+Info.).pdf", "UGC Detailed Information")}>UGC Detailed Information</a>
+                      <FlipbookTrigger pdfUrl="https://cdn.kalingauniversity.ac.in/common/UGC+(Detailed+Info.).pdf" title="UGC Detailed Information">
+                        <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://cdn.kalingauniversity.ac.in/common/UGC+(Detailed+Info.).pdf", "UGC Detailed Information")}>UGC Detailed Information</a>
                       </FlipbookTrigger>
                     </li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/privacy-policy">Privacy Policy</a></li>
@@ -125,8 +125,8 @@ export default function Footer() {
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/refund-policy">Refund Policy</a></li>
                     {/* <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="#">Accessibility</a></li> */}
                     <li>
-                      <FlipbookTrigger pdfUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/IT+Policy+-+KU.pdf" title="IT Policy">
-                        <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://kalinga-university.s3.ap-south-1.amazonaws.com/downloads/IT+Policy+-+KU.pdf", "IT Policy")}>IT Policy</a>
+                      <FlipbookTrigger pdfUrl="https://cdn.kalingauniversity.ac.in/downloads/IT+Policy+-+KU.pdf" title="IT Policy">
+                        <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://cdn.kalingauniversity.ac.in/downloads/IT+Policy+-+KU.pdf", "IT Policy")}>IT Policy</a>
                       </FlipbookTrigger>
                     </li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/grievance-redressal">Grievance Redressal</a></li>

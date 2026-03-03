@@ -17,7 +17,7 @@ const page = () => {
                 description={[
                     "To align academic learning with industrial knowledge, we have partnered with seven leading companies that offer skill-based training to students in various high-demanding sectors like electric vehicles, drone technology, AI, cybersecurity, automobiles, and many more. We’re a leading research university, empowering students to go from textbooks to real-world innovation and become ready to stand out in the competitive job market."
                 ]}
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/research-facilities/researchfaciities-introimg1.webp"
+                imageUrl="https://cdn.kalingauniversity.ac.in/research-facilities/researchfaciities-introimg1.webp"
                 imageAlt="Research Facilities"
                 showButton={false}
                 showKnowMore={false}
@@ -28,7 +28,7 @@ const page = () => {
             <ResearchLab />
             <CenterOfExcellenceMain
                 breadcrumbData={{
-                    heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-intro.jpg",
+                    heroImage: "https://cdn.kalingauniversity.ac.in/placement/placement-intro.jpg",
                     pageTitle: "Centres of Excellence",
                     customBreadcrumbs: [
                         { label: "Home", href: "/" },

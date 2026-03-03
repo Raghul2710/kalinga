@@ -18,42 +18,42 @@ const learnCards = [
     title: "",
     description: "Complete Electric Vehicle Architecture",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-1.svg",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Battery Technology & Management Systems",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-2.svg",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Motor & Controller Operations",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-3.svg",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "EV Diagnostics & Troubleshooting",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-4.svg",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Assembly & Disassembly of EV Components",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-5.svg",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Safety, Maintenance & Repair Techniques",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-6.svg",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-6.svg",
   },
 ];
 
@@ -61,21 +61,21 @@ const glimpses = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-glimpse1.webp",
     imageAlt: "EV Training Glimpse",
     title: "Practical Training Session",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-glimpse2.webp",
     imageAlt: "EV Training Glimpse",
     title: "Hands-on Diagnostics Glimpse",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/godawari/godawari-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/godawari/godawari-glimpse3.webp",
     imageAlt: "EV Training Glimpse",
     title: "Expert-led Workshop",
   },
@@ -90,7 +90,7 @@ const galleryImages = glimpses.map((g) => ({
 export default function ElectricVehiclesTrainingCentrePage() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <main className="bg-white">
@@ -98,7 +98,7 @@ export default function ElectricVehiclesTrainingCentrePage() {
         title="Electric Vehicles Training Centre"
         subtitle="In collaboration with Godawari Electric Motors Pvt. Ltd. (Eblu)"
         description={aboutCentreDescription}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/godawari.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/logos/godawari.png"
         imageAlt="Electric Vehicles Training Centre"
         readmore={false}
       />

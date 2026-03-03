@@ -27,7 +27,7 @@ export default function CommerceDepartmentPage() {
             "The Department of Commerce focuses on imparting the highest quality of education and exposure related to the economy and businesses to produce next-gen leaders. Learn how to operate a business while exploring the impact of economic, social, cultural, political, and technological decisions positively or negatively on companies and society.",
             "With our innovative teaching pedagogy, students become well-equipped with various problem-solving skills through case studies and practical exposure. Our programs offer units that focus on key principles of commerce and their application in the industry. The vision of this department is to ensure that our students have an industry-relevant degree"
         ],
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/cm-1.webp",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/cm-1.webp",
         imageAlt: "Department of Commerce",
     };
 
@@ -132,7 +132,7 @@ export default function CommerceDepartmentPage() {
             id: 1,
             name: "Aditi Singh",
             videoUrl: "",
-            thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Aditi+singh.jpeg",
+            thumbnail: "https://cdn.kalingauniversity.ac.in/placement/Aditi+singh.jpeg",
             description: "Aditya Birla Fashion Retail Ltd.",
             title: "Aditi Singh - BBA",
         },
@@ -140,7 +140,7 @@ export default function CommerceDepartmentPage() {
             id: 2,
             name: "Nayna Chakhiyar",
             videoUrl: "",
-            thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Nayna.jpeg",
+            thumbnail: "https://cdn.kalingauniversity.ac.in/placement/Nayna.jpeg",
             description: "Tata Steel Ltd.",
             title: "Nayna Chakhiyar - BCOM B&F",
         },
@@ -148,7 +148,7 @@ export default function CommerceDepartmentPage() {
             id: 3,
             name: "Abhishek Namdeo",
             videoUrl: "",
-            thumbnail: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/student.jpg",
+            thumbnail: "https://cdn.kalingauniversity.ac.in/placement/student.jpg",
             description: "Godrej & Boyce Mfg. Co. Ltd.",
             title: "Abhishek Namdeo - B.Com",
         }
@@ -312,7 +312,7 @@ export default function CommerceDepartmentPage() {
             id: 1,
             title: "Ideathon 1.0",
             date: "26 & 27 Nov, 2021",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
             imageAlt: "Ideathon 1.0",
             description: "Ideathon 1.0 - A flagship event providing a platform for students to showcase their innovative ideas, business plans, and entrepreneurial spirit.",
             buttonText: "Read More"
@@ -321,7 +321,7 @@ export default function CommerceDepartmentPage() {
             id: 2,
             title: "Ideathon 2.0",
             date: "16 - 18 Nov, 2022",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-2.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-2.jpeg",
             imageAlt: "Ideathon 2.0",
             description: "Ideathon 2.0 - Building on the success of the first edition, this event brought together brilliant minds to solve complex business challenges.",
             buttonText: "Read More"
@@ -430,7 +430,7 @@ export default function CommerceDepartmentPage() {
             <StudentCell
                 subtitle=""
                 title="Library"
-                imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/library-new.webp"
+                imageSrc="https://cdn.kalingauniversity.ac.in/facilities/library-new.webp"
                 imageAlt="Kalinga University Central Library"
                 description="Kalinga University, Raipur, hosts a modern and fully digitized Central Library that serves as a pivotal academic resource center supporting the learning, teaching, and research needs of the Commerce program. Designed to foster a scholarly environment, the library integrates both traditional and digital resources with state-of-the-art services."
                 functionsTitle="Library Resources & Automation"
@@ -447,7 +447,7 @@ export default function CommerceDepartmentPage() {
                 useContainer={true}
                 description="Kalinga University follows a well-structured governance model to ensure smooth administration and institutional integrity."
                 showImage={false}
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Organogram.png"
+                imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
                 imageAlt="Kalinga University Organogram"
                 buttons={[
                     {

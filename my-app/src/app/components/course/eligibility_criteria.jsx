@@ -6,7 +6,7 @@ import SectionHeading from "../general/SectionHeading";
 import { Tabs, TabsList, TabsTrigger } from "../general/tab";
 
 const defaultContent = {
-  imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/course_page.webp",
+  imageUrl: "https://cdn.kalingauniversity.ac.in/course/course_page.webp",
   imageAlt: "Students",
   duration: "3 Years (6 Semesters)",
   title: "Eligibility Criteria",

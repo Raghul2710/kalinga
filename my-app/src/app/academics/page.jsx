@@ -48,7 +48,7 @@ const truncateToWords = (text, maxWords = 30) => {
 };
 
 // Placeholder image
-const PLACEHOLDER_IMAGE = "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/arts.webp";
+const PLACEHOLDER_IMAGE = "https://cdn.kalingauniversity.ac.in/academics/arts.webp";
 
 export default function AcademicsApi() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -156,7 +156,7 @@ export default function AcademicsApi() {
         const phdDepartment = {
           id: 'static-phd',
           title: 'Ph.D.',
-          img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-BannerImage.webp",
+          img: "https://cdn.kalingauniversity.ac.in/phd/Phd-BannerImage.webp",
           summary: "Pursuing a doctoral program can be a transformative step for the growth of your career...",
           fullSummary: "Pursuing a doctoral program can be a transformative step for the growth of your career and to earn a name and recognition in society. It will not just provide you with in-depth knowledge, but you will also get an opportunity to contribute to research and development. A Ph.D. degree will make you stand out in both the academic and corporate worlds.",
           programs: "Research", // Specific label for PhD
@@ -196,42 +196,42 @@ export default function AcademicsApi() {
   const quickLinks = [
     {
       id: 1,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Programs.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/academics/icons/Programs.svg",
       title: "Student Clubs",
       description: "Our vibrant clubs motivate students to learn and grow with confidence inside and outside their classrooms.",
       link: "/student-clubs"
     },
     {
       id: 2,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/teachings.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/academics/icons/teachings.svg",
       title: "Value Added Courses",
       description: "Explore a wide range of short-term value-added certification courses conducted by industry experts at the University. ",
       link: "/value-added-course"
     },
     {
       id: 3,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Curriculum.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/academics/icons/Curriculum.svg",
       title: "Industrial Visits",
       description: "To understand the industry dynamics, we conduct industrial visits where students interact with industry professionals and explore real-world applications.",
       link: "/news-and-events#industrial-visits"
     },
     {
       id: 4,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industrial+Visits.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Industrial+Visits.svg",
       title: "Internships & Placement",
       description: "Get an on-campus or off-campus internship opportunity and get placed in top companies through our Campus Placement Drives.",
       link: "/training-and-placements"
     },
     {
       id: 5,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/elgbility.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/elgbility.svg",
       title: "Academic Facilities",
       description: "Our top-notch academic facilities will support your dreams by giving an all-around practical exposure at every step of your journey.",
       link: "/academic-facilities"
     },
     {
       id: 6,
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/Events.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/academics/icons/Events.svg",
       title: "Conferences & Events",
       description: "Discover various National and International conferences held at Kalinga University, offering a dynamic platform for knowledge sharing.",
       link: "/conferences-and-events"
@@ -418,7 +418,7 @@ function DepartmentCard({ program }) {
         {program.scholarships && (
           <li className="flex items-start gap-2">
             <Image
-              src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
+              src="https://cdn.kalingauniversity.ac.in/logos/hand-graduation-icon.png"
               alt="Scholarships icon"
               width={20}
               height={20}
@@ -435,7 +435,7 @@ function DepartmentCard({ program }) {
         {program.programs && (
           <li className="flex items-start gap-2">
             <Image
-              src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/hand-graduation-icon.png"
+              src="https://cdn.kalingauniversity.ac.in/logos/hand-graduation-icon.png"
               alt="Programs icon"
               width={20}
               height={20}

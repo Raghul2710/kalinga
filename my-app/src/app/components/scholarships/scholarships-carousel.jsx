@@ -12,7 +12,7 @@ const defaultCards = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     href: "/",
   },
   {
@@ -21,7 +21,7 @@ const defaultCards = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     href: "/",
   },
   {
@@ -30,7 +30,7 @@ const defaultCards = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     image:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+      "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
     href: "/",
   },
 ];
@@ -120,7 +120,7 @@ export default function ScholarshipsCarousel({
           <div className="md:pt-2">
             <GlobalArrowButton
               className="w-fit cursor-pointer"
-              onClick={onExplore || (() => {})}
+              onClick={onExplore || (() => { })}
             >
               {buttonLabel}
             </GlobalArrowButton>

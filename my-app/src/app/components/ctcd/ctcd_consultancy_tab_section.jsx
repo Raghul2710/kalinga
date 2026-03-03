@@ -31,31 +31,31 @@ const SERVICE_OFFERINGS = [
     id: 1,
     title: "Process benchmarking",
     description: "Facilitate the design and adoption of best practices for holistic transformation, covering HR processes in an organisation.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/process.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/process.webp",
   },
   {
     id: 2,
     title: "Operational Excellence through HR Processes",
     description: "Assess and understand business needs and design integrated HR Processes to create ongoing improvement in the company's strategic, competitive performance through employee efficiency programmes and productivity improvement.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/operation.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/operation.webp",
   },
   {
     id: 3,
     title: "Capability improvement",
     description: "Assess competencies and design a framework, and build customised interventions to develop employee & team capabilities through various developmental programmes.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/capability.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/capability.webp",
   },
 ];
 
 // Consultancy Areas content
 const CONSULTANCY_AREAS_CONTENT = `We help companies improve their productivity and employee engagement by streamlining their processes with our customised solutions. Some of our core consultancy areas include: designing and implementing HRIS and HRMS, workforce planning strategies, automation of HR systems, digital tools for maintaining employee registries and compliance, management of contract labours, integration of IoT and AI & ML in manufacturing processes, development of employee engagement surveys and action plans, designing employee wellness programs, building recruitment strategies, designing customized training modules, hybrid workforce management, and much more.`;
 
-const CONSULTANCY_IMAGE = "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/consultancy.webp";
+const CONSULTANCY_IMAGE = "https://cdn.kalingauniversity.ac.in/ctcd/consultancy.webp";
 
 // Performance Management System
 const PMS_CONTENT = `We design and implement a Performance Management System (PMS) that helps companies track the performance of their employees and identify ways for performance improvement. Our system simplifies HR solutions and makes work easier, ensuring that every employee contributes towards the organisation's objectives.`;
 
-const PMS_IMAGE = "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/execution.webp";
+const PMS_IMAGE = "https://cdn.kalingauniversity.ac.in/ctcd/execution.webp";
 
 // Industrial Technical Consultancy Solutions
 const TECHNICAL_SOLUTIONS = [
@@ -76,43 +76,43 @@ const CLIENT_CASE_STUDIES = [
   {
     id: 1,
     name: "N.H. Goel",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/goel.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/goel.webp",
     description: "Consultancy on Psychometric Test followed by Career Counselling for IX and X students",
   },
   {
     id: 2,
     name: "WANFENG Aluminium Wheel (INDIA) Pvt. Ltd.",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/wanfeng.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/wanfeng.webp",
     description: "Consultancy on PMS Implementation for the top 50 Employees",
   },
   {
     id: 3,
     name: "RAMA TMT Bars",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/rama.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/rama.webp",
     description: "Job Description (JD), KRA, KPI & Performance Management System",
   },
   {
     id: 4,
     name: "Techno Blast Mining",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/tmc.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/tmc.webp",
     description: "Consultancy on a Job Description, Key Result Areas (KRA) Structure & Performance Management System (PMS) Process",
   },
   {
     id: 5,
     name: "Jayaswal Neco Industries Ltd",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/jayaswal.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/jayaswal.webp",
     description: "360 Degree Appraisal Program",
   },
   {
     id: 6,
     name: "Kamlakant Shukla Institute",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/kamlakant.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/kamlakant.webp",
     description: "Consultancy Service for training and placement Activities",
   },
   {
     id: 7,
     name: "Institute of Advanced Research (IAR)",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/innovation.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ctcd/innovation.webp",
     description: "External Assessment of Non-teaching Staff of IAR Gandhi Nagar",
   },
 ];

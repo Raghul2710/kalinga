@@ -84,7 +84,7 @@ export default async function NewsEventDetailsPage({ params }) {
     const mainImage = {
         src: newsEvent.images && newsEvent.images.length > 0
             ? newsEvent.images.find(img => img.is_featured)?.image || newsEvent.images[0].image
-            : 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+            : 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
         alt: newsEvent.heading
     };
 

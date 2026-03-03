@@ -30,7 +30,7 @@ export default function CareerCard({ title, description, icon, imageUrl, maxWord
           />
         ) : (
           <Image
-            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/check-icon.png"
+            src="https://cdn.kalingauniversity.ac.in/logos/check-icon.png"
             alt="Career icon"
             width={48}
             height={48}

@@ -12,7 +12,7 @@ function StudentReportmainintro() {
                 ]}
                 readMoreLabel="Read More"
                 readLessLabel="Read Less"
-                imageUrl='https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg'
+                imageUrl='https://cdn.kalingauniversity.ac.in/common/student.jpg'
                 showKnowMore={true}
                 initialVisibleParagraphs={1}
             />

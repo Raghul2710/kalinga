@@ -45,7 +45,7 @@ const NIRFRankings = ({
                 </div>
                 <div className="bg-white p-5 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-300 self-center md:self-start">
                     <img
-                        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/nirf-logo-new.jpeg"
+                        src="https://cdn.kalingauniversity.ac.in/accreditation/nirf-logo-new.jpeg"
                         alt="NIRF Logo"
                         className="h-24 md:h-24 object-contain"
                     />

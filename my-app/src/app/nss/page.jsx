@@ -55,14 +55,14 @@ const benefitsItems = [
 ];
 
 const benefitIconMap = {
-  1: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-1.svg",
-  2: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-2.svg",
-  3: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-3.svg",
-  4: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-new.svg",
-  5: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-5.svg",
-  6: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-6.svg",
-  7: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-7.svg",
-  8: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-icon-8.svg",
+  1: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-1.svg",
+  2: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-2.svg",
+  3: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-3.svg",
+  4: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-new.svg",
+  5: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-5.svg",
+  6: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-6.svg",
+  7: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-7.svg",
+  8: "https://cdn.kalingauniversity.ac.in/nss/nss-icon-8.svg",
 };
 
 const benefitsBoxItems = benefitsItems.map((b) => ({
@@ -86,7 +86,7 @@ const MentorIntroProps = [
     subtitle: "A Message From the Coordinator",
     department: "NSS Coordinator",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/NSS+Coordinator.png",
+      "https://cdn.kalingauniversity.ac.in/nss/NSS+Coordinator.png",
     imageAlt: "Harsha Sharma",
 
     quote:
@@ -104,11 +104,11 @@ const objectiveItems = objectives.map((t, idx) => ({
 }));
 
 const learningOutcomeCards = [
-  { id: 1, description: "Learn the importance of community service", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/communities.svg" },
-  { id: 2, description: "Become a responsible and socially aware citizen", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/customer-care.svg" },
-  { id: 3, description: "Identify sustainable solutions to social problems", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/relationship.svg" },
-  { id: 4, description: "Learn to plan, organise, and execute social issues", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/social-media-management-2.svg" },
-  { id: 5, description: "Become confident while making correct decisions", imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/social-services.svg" },
+  { id: 1, description: "Learn the importance of community service", imageUrl: "https://cdn.kalingauniversity.ac.in/nss/communities.svg" },
+  { id: 2, description: "Become a responsible and socially aware citizen", imageUrl: "https://cdn.kalingauniversity.ac.in/nss/customer-care.svg" },
+  { id: 3, description: "Identify sustainable solutions to social problems", imageUrl: "https://cdn.kalingauniversity.ac.in/nss/relationship.svg" },
+  { id: 4, description: "Learn to plan, organise, and execute social issues", imageUrl: "https://cdn.kalingauniversity.ac.in/nss/social-media-management-2.svg" },
+  { id: 5, description: "Become confident while making correct decisions", imageUrl: "https://cdn.kalingauniversity.ac.in/nss/social-services.svg" },
 ];
 
 export default function NSSPage() {
@@ -122,7 +122,7 @@ export default function NSSPage() {
         subtitle="National Service Scheme"
         title="About NSS At KU"
         description={[aboutP1, aboutP2]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nns-logo.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/nss/nns-logo.webp"
         imageAlt="NSS at Kalinga University"
         showKnowMore={true}
         knowMoreLabel="Read More"
@@ -132,7 +132,7 @@ export default function NSSPage() {
       <ImageListItem
         title="Objectives"
         items={objectiveItems}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/nss/nss-benefits-new.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/nss/nss-benefits-new.webp"
         imageAlt="NSS Objectives"
         description=""
       />
@@ -146,7 +146,7 @@ export default function NSSPage() {
       <div className="nss-benefits-equal-height">
         <ImageListItem
           title="Benefits Of Joining Our NSS Team"
-          imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/students-3.jpg"
+          imageSrc="https://cdn.kalingauniversity.ac.in/common/students-3.jpg"
           imageAlt="NSS Benefits"
           boxItems={benefitsBoxItems}
           description=""

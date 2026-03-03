@@ -13,57 +13,57 @@ function Hostelfacilities() {
         {
             id: 1,
             name: "Mess Facility",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen+mess.webp",
+            image: "https://cdn.kalingauniversity.ac.in/facilities/canteen+mess.webp",
         },
         {
             id: 2,
             name: "Different Occupancy Options",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/occupancy.webp",
+            image: "https://cdn.kalingauniversity.ac.in/hostel/occupancy.webp",
         },
         {
             id: 3,
             name: "Reading Room",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/hostelreadingroom_campusfacility.webp",
+            image: "https://cdn.kalingauniversity.ac.in/campus-facilities/hostelreadingroom_campusfacility.webp",
         },
         {
             id: 4,
             name: "AC / Non-AC Rooms",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/Acnonac.webp",
+            image: "https://cdn.kalingauniversity.ac.in/hostel/Acnonac.webp",
         },
         {
             id: 5,
             name: "Wi-Fi Facility",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/wifienabledcampus.webp",
+            image: "https://cdn.kalingauniversity.ac.in/campus-facilities/wifienabledcampus.webp",
         },
         {
             id: 6,
             name: "Attached Washroom",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/hostel/attached.webp",
+            image: "https://cdn.kalingauniversity.ac.in/hostel/attached.webp",
         },
         {
             id: 7,
             name: "CCTV Surveillance",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security1.jpg",
+            image: "https://cdn.kalingauniversity.ac.in/campus-life/security1.jpg",
         },
         {
             id: 8,
             name: "24/7 Security",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security2.jpeg",
+            image: "https://cdn.kalingauniversity.ac.in/campus-life/security2.jpeg",
         },
         {
             id: 9,
             name: "Recreational Corners",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-facilities/recreation.webp",
+            image: "https://cdn.kalingauniversity.ac.in/campus-facilities/recreation.webp",
         },
         {
             id: 10,
             name: "Gym",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp",
+            image: "https://cdn.kalingauniversity.ac.in/facilities/gym.webp",
         },
         {
             id: 11,
             name: "Staff Nurse",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Health+Clinic1.webp",
+            image: "https://cdn.kalingauniversity.ac.in/campus-life/Health+Clinic1.webp",
         },
     ];
 

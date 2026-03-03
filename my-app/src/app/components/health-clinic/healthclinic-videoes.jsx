@@ -58,7 +58,7 @@ function HealthClinicVideos({
     backgroundColor = "bg-[var(--light-gray)]",
     showPagination = true,
     showNavigation = true,
-    fallbackImage = "https://kalinga-university.s3.ap-south-1.amazonaws.com/health-clinic/clinic-fallback.webp",
+    fallbackImage = "https://cdn.kalingauniversity.ac.in/health-clinic/clinic-fallback.webp",
 }) {
     // Normalize videos for slider
     const normalizedVideos = useMemo(() => {

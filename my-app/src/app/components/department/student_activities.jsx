@@ -16,7 +16,7 @@ const defaultActivities = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+      "https://cdn.kalingauniversity.ac.in/departments/image+15.png",
     imageAlt: " Events and Activities",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description:
@@ -27,7 +27,7 @@ const defaultActivities = [
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+      "https://cdn.kalingauniversity.ac.in/departments/image+15.png",
     imageAlt: " Events and Activities",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description:
@@ -38,7 +38,7 @@ const defaultActivities = [
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+      "https://cdn.kalingauniversity.ac.in/departments/image+15.png",
     imageAlt: " Events and Activities",
     title: "Lorem ipsum dolor sit amet, consectetur",
     description:
@@ -129,7 +129,7 @@ export default function StudentActivities({
             title: item.heading,
             description: item.short_para ? parseHtmlToText(item.short_para) : getPreviewText(parseHtmlToText(item.content)),
             fullDescription: parseHtmlToText(item.content),
-            imageSrc: item.primary_image?.image || item.images?.[0]?.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/image+15.png",
+            imageSrc: item.primary_image?.image || item.images?.[0]?.image || "https://cdn.kalingauniversity.ac.in/departments/image+15.png",
             imageAlt: item.primary_image?.alt || item.images?.[0]?.alt || item.heading || "Events & Activities",
             date: item.date,
             buttonText: "Read More",

@@ -9,7 +9,7 @@ const swCardsData = [
     description:
       "Every year, we organise National & International trips for a fun learning experience.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/Tours.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/Tours.webp",
     logoSrc: "",
     href: "/campuslife",
   },
@@ -18,7 +18,7 @@ const swCardsData = [
     description:
       "Every year, we organise Kalinga Utsav, Sports Day, and celebrate different cultural festivals.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/cultural-event-2.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/cultural-event-2.webp",
     logoSrc: "",
     href: "/news-and-events",
   },
@@ -27,7 +27,7 @@ const swCardsData = [
     description:
       "We proudly celebrate National Days like Independence Day, Republic Day, and other important days.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/cultural-events.jpg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/cultural-events.jpg",
     logoSrc: "",
     href: "",
   },
@@ -36,7 +36,7 @@ const swCardsData = [
     description:
       "We support every learner regardless of their religion or nationality. Together we grow with unity, respect, and equal opportunity.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/inclusive-environment.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/inclusive-environment.webp",
     logoSrc: "",
     href: "",
   },
@@ -45,7 +45,7 @@ const swCardsData = [
     description:
       "We provide a vibrant learning environment for global students where ideas are nurtured and dreams are fulfilled.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/international-student-support.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/international-student-support.webp",
     logoSrc: "",
     href: "/international-students",
   },
@@ -54,7 +54,7 @@ const swCardsData = [
     description:
       "We have experienced counsellors at our campus who conduct one-on-one sessions with every student. Whether they are dealing with academic stress or any other issues, a dedicated counsellor will first listen and then take necessary action.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/councelling-support.jpg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/councelling-support.jpg",
     logoSrc: "",
     href: "/students-counselling-cell",
   },
@@ -63,7 +63,7 @@ const swCardsData = [
     description:
       "Our inclusive learning environment supports individuals who need special attention and support in their academic journey and personal development.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/facilities-for-pwd-students.jpg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/facilities-for-pwd-students.jpg",
     logoSrc: "",
     href: "",
   },
@@ -72,7 +72,7 @@ const swCardsData = [
     description:
       "We have a separate community that addresses issues and raises awareness to prevent sexual harassment cases.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sexual-harassment-prevention-committee.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/sexual-harassment-prevention-committee.webp",
     logoSrc: "",
     href: "/other-committees",
   },
@@ -81,7 +81,7 @@ const swCardsData = [
     description:
       "We follow a ‘Zero-Tolerance Policy’ towards ragging, and we take strict action against those who violate our policy.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/anti-ragging-committee-squad.jpg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/anti-ragging-committee-squad.jpg",
     logoSrc: "",
     href: "/anti-ragging-cell",
   },
@@ -90,7 +90,7 @@ const swCardsData = [
     description:
       "Our cell records the complaints of each student, and the experts take necessary action to solve them.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/grievance-redressal-cell.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/grievance-redressal-cell.webp",
     logoSrc: "",
     href: "/grievance-redressal",
   },
@@ -99,7 +99,7 @@ const swCardsData = [
     description:
       "Our on-campus health clinic has an experienced doctor and nurse who ensure the well-being of our staff members and students by providing consultation and urgent care at no charge.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/health-clinic/health-clinic-1.webp",
+      "https://cdn.kalingauniversity.ac.in/health-clinic/health-clinic-1.webp",
     logoSrc: "",
     href: "/health-clinic",
   },
@@ -108,7 +108,7 @@ const swCardsData = [
     description:
       "It is available in every girls’ washroom on campus and in hostels.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sanitary-napkin-vending-machines.jpeg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/sanitary-napkin-vending-machines.jpeg",
     logoSrc: "",
     href: "",
   },
@@ -117,7 +117,7 @@ const swCardsData = [
     description:
       "Every year, we organise free health checkup camps for our students and faculty members in collaboration with various hospitals.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/free-health-checkup.png",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/free-health-checkup.png",
     logoSrc: "",
     href: "",
   },
@@ -126,7 +126,7 @@ const swCardsData = [
     description:
       "We organise blood donation camps in which students and faculty members actively participate and support a good cause.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/blood-dontaion.jpeg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/blood-dontaion.jpeg",
     logoSrc: "",
     href: "",
   },
@@ -135,7 +135,7 @@ const swCardsData = [
     description:
       "Our NCC cadets develop leadership, discipline, confidence, and a sense of responsibility.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-1.webp",
+      "https://cdn.kalingauniversity.ac.in/ncc/Ncc-1.webp",
     logoSrc: "",
     href: "/Ncc",
   },
@@ -144,7 +144,7 @@ const swCardsData = [
     description:
       "It encourages students to actively participate in community service and outreach programs.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp",
+      "https://cdn.kalingauniversity.ac.in/ncc/Ncc-3.webp",
     logoSrc: "",
     href: "/nss",
   },
@@ -153,7 +153,7 @@ const swCardsData = [
     description:
       "We have spacious Indoor & Outdoor sports centres where students play different games and become champions.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/sports-studentwelfare.jpg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/sports-studentwelfare.jpg",
     logoSrc: "",
     href: "/sports-and-wellness-centre",
   },
@@ -162,7 +162,7 @@ const swCardsData = [
     description:
       "We have well-equipped hostels for girls and boys on our campus, where all necessary facilities are available for students.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/hostel-facilities.jpeg",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/hostel-facilities.jpeg",
     logoSrc: "",
     href: "/hostel",
   },
@@ -171,7 +171,7 @@ const swCardsData = [
     description:
       "Enrolling in a University is to enter into a new life, and students may initially feel lost and unsettled. We help them feel comfortable in hostels and even introduce them to their classmates and professors.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/First-weeks.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/First-weeks.webp",
     logoSrc: "",
     href: "",
   },
@@ -180,7 +180,7 @@ const swCardsData = [
     description:
       "Every year, we conduct FIRST-STEP Induction Programs for our freshers in which they meet with their professors, make new connections, understand college culture and policies, explore classrooms and student amenities, understand academic structure, and get motivational support for their new journey.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/induction-program.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/induction-program.webp",
     logoSrc: "",
     href: "",
   },
@@ -189,7 +189,7 @@ const swCardsData = [
     description:
       "Obtain up to 100% scholarships as per our eligibility criteria and make your finances more manageable. Students who face financial difficulties at the time of admission can get scholarships such as merit-based, sports-based, entrance exam, content creators, and more.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-intro.webp",
+      "https://cdn.kalingauniversity.ac.in/phd/Phd-intro.webp",
     logoSrc: "",
     href: "/scholarships",
   },
@@ -198,7 +198,7 @@ const swCardsData = [
     description:
       "Young Indians (Yi) is an integral part of the Confederation of Indian Industry (CII), India’s premier business association, formed in the year 2002, with an objective of creating a platform for young Indians to realise the dream of a developed nation. YI has over 1300 direct members in 40 city chapters. Yi has 160 members in 3 corporate chapters and engages another 12,000 members through its district chapter, Farmer Nets, and Student Nets.",
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/student-welfare/young-indian.webp",
+      "https://cdn.kalingauniversity.ac.in/student-welfare/young-indian.webp",
     logoSrc: "",
     href: "",
     showModal: true, // Flag to indicate this card should open a modal

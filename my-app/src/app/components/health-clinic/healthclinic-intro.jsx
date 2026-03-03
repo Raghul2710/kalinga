@@ -4,7 +4,7 @@ import MainIntro from "../about/main_intro";
 
 const hcIntroContent = {
   imageUrl:
-    "https://kalinga-university.s3.ap-south-1.amazonaws.com/health-clinic/health-clinic-2.webp",
+    "https://cdn.kalingauniversity.ac.in/health-clinic/health-clinic-2.webp",
   title: "Doctor on call",
   description: [
     "Our on-campus health clinic has an experienced doctor available on call and nurse who ensures the well-being of our staff members and students by providing them with general consultation, counselling, and emergency support. Our health clinic has 4 beds, a first-aid facility, and also provides ambulance service.",

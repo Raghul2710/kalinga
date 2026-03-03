@@ -15,7 +15,7 @@ const journeyData = [
       "NIRF Rank Band 101-150 for 4th Consecutive Year."
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/our-jounary-1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/our-jounary-1.webp",
     cardBg: "bg-white"
   },
   {
@@ -27,7 +27,7 @@ const journeyData = [
       "Launch of SDG Logo"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/our-jounary-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/our-jounary-2.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
@@ -39,7 +39,7 @@ const journeyData = [
       "India Today Ranking (51)"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/library-new.webp",
+    image: "https://cdn.kalingauniversity.ac.in/facilities/library-new.webp",
     cardBg: "bg-white"
   },
   {
@@ -50,7 +50,7 @@ const journeyData = [
       "Establishment of SDG Cell"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/Phd-mba.webp",
+    image: "https://cdn.kalingauniversity.ac.in/Home/program/Phd-mba.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
@@ -60,7 +60,7 @@ const journeyData = [
       "NAAC Accreditation"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/about-kalinga.webp",
+    image: "https://cdn.kalingauniversity.ac.in/Home/about-kalinga.webp",
     cardBg: "bg-white"
   },
   {
@@ -69,7 +69,7 @@ const journeyData = [
       "Establishment of Central Instrumentation Facility"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/phd-biotechnology-n.webp",
+    image: "https://cdn.kalingauniversity.ac.in/Home/program/phd-biotechnology-n.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
@@ -78,7 +78,7 @@ const journeyData = [
       "Establishment of IIC, Kalinga University"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/mca.webp",
+    image: "https://cdn.kalingauniversity.ac.in/Home/program/mca.webp",
     cardBg: "bg-white"
   },
   {
@@ -87,7 +87,7 @@ const journeyData = [
       "Addition of Faculty of Education & Faculty of Pharmacy"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/img-1.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
@@ -96,7 +96,7 @@ const journeyData = [
       "Establishment of IQAC"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-2.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/img-2.webp",
     cardBg: "bg-white"
   },
   {
@@ -105,7 +105,7 @@ const journeyData = [
       "Commencement of Faculty of Law & Faculty of Technology"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/img-3.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
   {
@@ -114,7 +114,7 @@ const journeyData = [
       "Commencement of Faculty of Arts & Humanities , Commerce & Management, Science & IT"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-4.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/img-4.webp",
     cardBg: "bg-white"
   },
   {
@@ -123,7 +123,7 @@ const journeyData = [
       "Establishment of University"
     ],
     description: "",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/img-5.webp",
+    image: "https://cdn.kalingauniversity.ac.in/about/img-5.webp",
     cardBg: "bg-[var(--lite-sand)]"
   },
 ];

@@ -9,7 +9,7 @@ export default function Organogram() {
         <div className="flex justify-center">
           <div className="relative w-full max-w-6xl">
             <Image
-              src="https://kalinga-university.s3.ap-south-1.amazonaws.com/organogram/kalinga-org+(1).webp"
+              src="https://cdn.kalingauniversity.ac.in/organogram/kalinga-org+(1).webp"
               alt="Kalinga University Organogram"
               width={1200}
               height={800}

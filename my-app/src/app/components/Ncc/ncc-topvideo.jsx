@@ -6,7 +6,7 @@ function Ncctopvideo() {
         <div>
             <RaipurVideoSection
                 videoId="-u2yYHsX52Y"
-                thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp"
+                thumbnail="https://cdn.kalingauniversity.ac.in/ncc/Ncc-3.webp"
                 title="Nation Cadet Corps"
                 description=""
                 alt="Nation Cadet Corps"

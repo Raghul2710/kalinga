@@ -246,7 +246,7 @@ export default function AwardsScrollbar({
                     <>
                       <div className="flex items-center justify-center gap-2 mb-2">
                         <Image
-                          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
+                          src="https://cdn.kalingauniversity.ac.in/common/awards-leaf.png"
                           alt="Award leaf left"
                           width={50}
                           height={50}
@@ -281,7 +281,7 @@ export default function AwardsScrollbar({
                         )}
 
                         <Image
-                          src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
+                          src="https://cdn.kalingauniversity.ac.in/common/awards-leaf.png"
                           alt="Award leaf right"
                           width={50}
                           height={50}
@@ -297,7 +297,7 @@ export default function AwardsScrollbar({
                       <div className="flex items-center justify-center gap-2 mb-2">
                         {!hideTopLeaves && (
                           <Image
-                            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
+                            src="https://cdn.kalingauniversity.ac.in/common/awards-leaf.png"
                             alt="Award leaf left"
                             width={50}
                             height={50}
@@ -317,7 +317,7 @@ export default function AwardsScrollbar({
 
                         {!hideTopLeaves && (
                           <Image
-                            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
+                            src="https://cdn.kalingauniversity.ac.in/common/awards-leaf.png"
                             alt="Award leaf right"
                             width={50}
                             height={50}
@@ -330,7 +330,7 @@ export default function AwardsScrollbar({
                       <div className="flex items-center justify-center gap-2 mb-2">
                         {showLeavesAroundButton && (
                           <Image
-                            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
+                            src="https://cdn.kalingauniversity.ac.in/common/awards-leaf.png"
                             alt="Award leaf left"
                             width={50}
                             height={50}
@@ -365,7 +365,7 @@ export default function AwardsScrollbar({
 
                         {showLeavesAroundButton && (
                           <Image
-                            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/awards-leaf.png"
+                            src="https://cdn.kalingauniversity.ac.in/common/awards-leaf.png"
                             alt="Award leaf right"
                             width={50}
                             height={50}

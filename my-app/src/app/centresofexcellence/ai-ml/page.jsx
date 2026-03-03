@@ -17,37 +17,37 @@ const learnCards = [
     id: 1,
     title: "",
     description: "Programming Languages & Tools For AI & ML",
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-1.svg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/aiml/ai-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Deep Understanding Of Artificial Intelligence & Machine Learning",
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-2.svg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/aiml/ai-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Algorithm & Model Development",
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-3.svg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/aiml/ai-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "Management of Large Data Sets",
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-4.svg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/aiml/ai-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Deep Learning & Neural Networks",
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-5.svg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/aiml/ai-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Designing Intelligent Systems & Software",
-    imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/ai-6.svg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/aiml/ai-6.svg",
   },
 ];
 
@@ -55,21 +55,21 @@ const glimpses = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/aiml-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/aiml/aiml-glimpse1.webp",
     imageAlt: "AI & ML Glimpse",
     title: "Lab Session Glimpse",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/aiml-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/aiml/aiml-glimpse2.webp",
     imageAlt: "AI & ML Glimpse",
     title: "Project Showcase",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/aiml/aiml-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/aiml/aiml-glimpse3.webp",
     imageAlt: "AI & ML Glimpse",
     title: "Expert-led Workshop",
   },
@@ -84,7 +84,7 @@ const galleryImages = glimpses.map((g) => ({
 export default function AIMLCentrePage() {
   const pathname = usePathname();
 
-  
+
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function AIMLCentrePage() {
         title="Artificial Intelligence and Machine Learning Courses Training Centre"
         subtitle="In collaboration with the IBM Innovation Centre for Education"
         description={aboutCentreDescription}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/ibm.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/ibm.webp"
         imageAlt="Centre Banner"
         readmore={false}
       />

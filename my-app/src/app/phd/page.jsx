@@ -26,30 +26,30 @@ export default function PhdPage() {
 
   const phdResources = [
     { id: 0, text: "Research Overview", href: "/research" },
-    // { id: 1, text: "Ethics Committee Constitution", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Undertaking+(1).pdf" },
-    { id: 2, text: "Constitution of the Ethics Board for Maintaining Research Integrity", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/5.+CONSTITUTION+OF+ETHICS+BOARD+FOR+MAINTAINING+RESEARCH+INTEGRITY.pdf" },
-    { id: 3, text: "Research Integrity & Ethics Policy", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Undertaking+(1).pdf" },
-    // { id: 4, text: "Research Advisory Committee", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Undertaking+(1).pdf" },
-    { id: 5, text: "Constitution of the Research Advisory Committee and Departmental Research Committee", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Constitution+of+Research+Advisory+Committee.pdf" },
-    { id: 6, text: "Ordinance No. 48", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ordinance+No.+48+(16.09.2013).pdf" },
-    { id: 7, text: "Revised Ordinance No. 48", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Amended+Ordinance+No.+48+(18.02.2022).pdf" },
-    { id: 8, text: "Cover Page Format", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University-+Cover+Page+-Thesis.pdf" },
-    { id: 9, text: "Synopsis Format", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University+-Synopsis+Format+-Cover+Page+(1).pdf" },
-    { id: 10, text: "Summary Format", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University+-Summary+Format-+Cover+page.pdf" },
-    { id: 11, text: "Arrangement of Thesis Content", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/ARRANGEMENT+OF+THESIS+CONTENTS.pdf" },
-    { id: 12, text: "Thesis Chapterization", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Kalinga+University-+Thesis+Chapterization_Final.pdf" },
-    { id: 13, text: "Ph.D. Admission Policy", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/2.+Admission+poilcy+(1).pdf" },
-    { id: 14, text: "Detailed Syllabus of Research Methodology", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Detailed+Syllabus.pdf" },
-    { id: 15, text: "Fellowship Scholarship Policy", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/3.+Fellowship+Scholarship+Policy+for+Ph.D.+Scholars.pdf" },
-    { id: 16, text: "Grievance Redress Policy", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/6+POLICY+FOR+GRIEVANCE+REDRESS+MECHANISM+OF+SCHOLARS.pdf" },
-    { id: 17, text: "Best Practices & Process Improvement", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Best+Practices+%26+Process+Improvement+(1).pdf" },
-    { id: 18, text: "UGC Regulation 2022", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGC+Regulation+2022+(1).pdf" },
-    { id: 19, text: "UGC Notification Plagiarism 2018", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGCNotification_Plagiarism_2018.pdf" },
-    { id: 20, text: "UGC Regulation 2016", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/UGC+Regulations+2016+(1).pdf" },
-    // { id: 21, text: "Ph.D. Notification 2026", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2026+Notification.pdf" },
-    { id: 23, text: "Ph.d. Scholars", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/DETAILS+OF+CURRENTLY+ENROLLED+Ph.D.+SCHOLARS+(1).pdf" },
-    { id: 24, text: "Ph.d. Supervisors", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/DETAILS+OF+SUPERVISOR.pdf" },
-    { id: 25, text: "Undertaking", href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Undertaking+(1).pdf" },
+    // { id: 1, text: "Ethics Committee Constitution", href: "https://cdn.kalingauniversity.ac.in/phd/Undertaking+(1).pdf" },
+    { id: 2, text: "Constitution of the Ethics Board for Maintaining Research Integrity", href: "https://cdn.kalingauniversity.ac.in/research/5.+CONSTITUTION+OF+ETHICS+BOARD+FOR+MAINTAINING+RESEARCH+INTEGRITY.pdf" },
+    { id: 3, text: "Research Integrity & Ethics Policy", href: "https://cdn.kalingauniversity.ac.in/phd/Undertaking+(1).pdf" },
+    // { id: 4, text: "Research Advisory Committee", href: "https://cdn.kalingauniversity.ac.in/phd/Undertaking+(1).pdf" },
+    { id: 5, text: "Constitution of the Research Advisory Committee and Departmental Research Committee", href: "https://cdn.kalingauniversity.ac.in/phd/Constitution+of+Research+Advisory+Committee.pdf" },
+    { id: 6, text: "Ordinance No. 48", href: "https://cdn.kalingauniversity.ac.in/phd/Ordinance+No.+48+(16.09.2013).pdf" },
+    { id: 7, text: "Revised Ordinance No. 48", href: "https://cdn.kalingauniversity.ac.in/phd/Amended+Ordinance+No.+48+(18.02.2022).pdf" },
+    { id: 8, text: "Cover Page Format", href: "https://cdn.kalingauniversity.ac.in/phd/Kalinga+University-+Cover+Page+-Thesis.pdf" },
+    { id: 9, text: "Synopsis Format", href: "https://cdn.kalingauniversity.ac.in/phd/Kalinga+University+-Synopsis+Format+-Cover+Page+(1).pdf" },
+    { id: 10, text: "Summary Format", href: "https://cdn.kalingauniversity.ac.in/phd/Kalinga+University+-Summary+Format-+Cover+page.pdf" },
+    { id: 11, text: "Arrangement of Thesis Content", href: "https://cdn.kalingauniversity.ac.in/phd/ARRANGEMENT+OF+THESIS+CONTENTS.pdf" },
+    { id: 12, text: "Thesis Chapterization", href: "https://cdn.kalingauniversity.ac.in/phd/Kalinga+University-+Thesis+Chapterization_Final.pdf" },
+    { id: 13, text: "Ph.D. Admission Policy", href: "https://cdn.kalingauniversity.ac.in/phd/2.+Admission+poilcy+(1).pdf" },
+    { id: 14, text: "Detailed Syllabus of Research Methodology", href: "https://cdn.kalingauniversity.ac.in/phd/Detailed+Syllabus.pdf" },
+    { id: 15, text: "Fellowship Scholarship Policy", href: "https://cdn.kalingauniversity.ac.in/phd/3.+Fellowship+Scholarship+Policy+for+Ph.D.+Scholars.pdf" },
+    { id: 16, text: "Grievance Redress Policy", href: "https://cdn.kalingauniversity.ac.in/phd/6+POLICY+FOR+GRIEVANCE+REDRESS+MECHANISM+OF+SCHOLARS.pdf" },
+    { id: 17, text: "Best Practices & Process Improvement", href: "https://cdn.kalingauniversity.ac.in/phd/Best+Practices+%26+Process+Improvement+(1).pdf" },
+    { id: 18, text: "UGC Regulation 2022", href: "https://cdn.kalingauniversity.ac.in/phd/UGC+Regulation+2022+(1).pdf" },
+    { id: 19, text: "UGC Notification Plagiarism 2018", href: "https://cdn.kalingauniversity.ac.in/phd/UGCNotification_Plagiarism_2018.pdf" },
+    { id: 20, text: "UGC Regulation 2016", href: "https://cdn.kalingauniversity.ac.in/phd/UGC+Regulations+2016+(1).pdf" },
+    // { id: 21, text: "Ph.D. Notification 2026", href: "https://cdn.kalingauniversity.ac.in/phd/Ph.+D.+2026+Notification.pdf" },
+    { id: 23, text: "Ph.d. Scholars", href: "https://cdn.kalingauniversity.ac.in/phd/DETAILS+OF+CURRENTLY+ENROLLED+Ph.D.+SCHOLARS+(1).pdf" },
+    { id: 24, text: "Ph.d. Supervisors", href: "https://cdn.kalingauniversity.ac.in/phd/DETAILS+OF+SUPERVISOR.pdf" },
+    { id: 25, text: "Undertaking", href: "https://cdn.kalingauniversity.ac.in/phd/Undertaking+(1).pdf" },
   ];
 
   const Items = [
@@ -118,7 +118,7 @@ export default function PhdPage() {
       <WhyChoosePhd />
       <ImageListItem
         items={Items}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/research-toolkit.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/research-resources/research-toolkit.webp"
         title="Your Research Toolkit"
         description=""
       />

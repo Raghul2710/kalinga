@@ -7,11 +7,11 @@ import OrganogramTree from "../components/general/organogram";
 
 
 export default function Organogram() {
-    
+
     return (
         <>
             <ImageContent
-                imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/organogram/univ.webp"
+                imageSrc="https://cdn.kalingauniversity.ac.in/organogram/univ.webp"
                 hasImage={true}
                 readmore={false}
                 className="items-center justify-center"

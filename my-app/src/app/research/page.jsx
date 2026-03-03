@@ -37,7 +37,7 @@ export default function Research() {
       date: "Nov 28, 2025 · 10:00 A.M.",
       category: "Academic Event",
       description: "Hybrid workshop on Scopus analytics and publishing insights with experts.",
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/Pic1+(1).jpeg",
+      image: "https://cdn.kalingauniversity.ac.in/campus-life/Pic1+(1).jpeg",
       href: "/contact-us"
     }
   ];
@@ -46,19 +46,19 @@ export default function Research() {
       id: 1,
       name: "Rajasthan Global Security Pvt. Ltd.",
 
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Rajasthan+Global+Security+Pvt.+Ltd..png",
+      image: "https://cdn.kalingauniversity.ac.in/research/Rajasthan+Global+Security+Pvt.+Ltd..png",
     },
     {
       id: 2,
       name: "WANFENG Aluminium Wheel (INDIA) Pvt. Ltd.",
 
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/WANFENG+Aluminium+Wheel+(INDIA)+Pvt.+Ltd+(2).png",
+      image: "https://cdn.kalingauniversity.ac.in/research/WANFENG+Aluminium+Wheel+(INDIA)+Pvt.+Ltd+(2).png",
     },
     {
       id: 3,
       name: "Real Care Foundation",
 
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Real+Care+Foundation.png",
+      image: "https://cdn.kalingauniversity.ac.in/research/Real+Care+Foundation.png",
     },
 
   ];
@@ -72,43 +72,43 @@ export default function Research() {
     {
       id: 1,
       year: "2024-25",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Awards+2024-25+(1).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/Awards+2024-25+(1).pdf",
       active: true,
     },
     {
       id: 2,
       year: "2023-24",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/Awards+2023-24+(1).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/Awards+2023-24+(1).pdf",
       active: true,
     },
     {
       id: 3,
       year: "2022-23",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2022-23+(2).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/2022-23+(2).pdf",
       active: true,
     },
     {
       id: 4,
       year: "2021-22",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2021-22+(2).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/2021-22+(2).pdf",
       active: true,
     },
     {
       id: 5,
       year: "2020-21",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2020-21+(2).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/2020-21+(2).pdf",
       active: true,
     },
     {
       id: 6,
       year: "2019-20",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2019-20+(2).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/2019-20+(2).pdf",
       active: true,
     },
     {
       id: 7,
       year: "2018-19",
-      link: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/2018-19+(2)+(1).pdf",
+      link: "https://cdn.kalingauniversity.ac.in/placement/2018-19+(2)+(1).pdf",
       active: true,
     },
   ];
@@ -121,7 +121,7 @@ export default function Research() {
           "Kalinga University promotes research through a knowledge-sharing mechanism that goes beyond textbooks and classroom-based studies. The primary aim of our research department is to make the outcome impactful by collaborating with renowned universities and R&D institutions. Our research-ready curriculum is constantly updated with innovative programs to tackle real-world challenges, encouraging interdisciplinary and multidisciplinary education.",
           "Our IPR cell supports patent filing, technology development, and commercialisation, while our incubation cell connects us with local/national industry, research labs & institutions, civil society, and the Government. We conduct research work under our well-designed research policy, and to promote that, we have ample online study material, SPSS tools for research, and Drillbit to check plagiarism in research. The Central Instrumentation Facility at Kalinga has all the high-tech instruments available only in limited institutions in Central India."
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/research-main-content.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/research/research-main-content.webp"
         imageAlt="Kalinga University Research"
         showButton={false}
         showKnowMore={true}
@@ -138,7 +138,7 @@ export default function Research() {
         ]}
         readMoreLabel="Read More"
         readLessLabel="Read Less"
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/whywork.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/campus-life/whywork.webp"
         showKnowMore={true}
         initialVisibleParagraphs={1}
       />
@@ -161,42 +161,42 @@ export default function Research() {
           {
             id: 1,
             href: "/ipr-cell",
-            icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Entrepreneurial+Thinking.svg",
+            icon: "https://cdn.kalingauniversity.ac.in/kif/Entrepreneurial+Thinking.svg",
             title: "IPR Cell",
             description: "Whether you are developing an app or a gadget, our IPR cell will always guide you in protecting your unique work, providing patents, and launching them on different platforms.",
           },
           {
             id: 2,
             href: "/laboratories",
-            icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/facility-management.svg",
+            icon: "https://cdn.kalingauniversity.ac.in/icons/facility-management.svg",
             title: "Laboratories",
             description: "Our laboratories offer all-around facilities with modern machines, helping young researchers acquire complete practical knowledge and support in their research pursuits.",
           },
           {
             id: 3,
             href: "/central-instrumentation-facility",
-            icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg",
+            icon: "https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg",
             title: "Central Instrumentation Facility",
             description: "Convert your bold ideas into a great discovery! Our CIF are packed with high-end instruments like an X-Ray Diffractometer, 3D Printer, Bio-Chemistry Analyser, Scanning Electron Microscope, and more.",
           },
           {
             id: 4,
             href: "/library",
-            icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/icons/teachings.svg",
+            icon: "https://cdn.kalingauniversity.ac.in/academics/icons/teachings.svg",
             title: "Library",
             description: "Curious minds, get ready to explore the pool of resources! Our library houses vast academic materials in both physical and digital forms, where students gain new knowledge at every stage of their research journey.",
           },
           // {
           //   id: 5,
           //   href: "/research-resources",
-          //   icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Build+Networks.svg",
+          //   icon: "https://cdn.kalingauniversity.ac.in/kif/Build+Networks.svg",
           //   title: "Research Resources",
           //   description: "Kalinga University is one of the best Research-Intensive University as it is more than just your academic curriculum; it's about generating curiosity, creativity, and a continuous learning environment.",
           // },
           // {
           //   id: 6,
           //   href: " ",
-          //   icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg",
+          //   icon: "https://cdn.kalingauniversity.ac.in/icons/Experienced+Faculties.svg",
           //   title: "Research Facilities",
           //   description: "State-of-the-art laboratories, high-tech instrumentation, and dedicated research centers equipped with cutting-edge tools for groundbreaking research across all disciplines.",
           // },
@@ -205,7 +205,7 @@ export default function Research() {
         showDescriptionReadMore={false}
       />
 
-      <MentorIntro imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/harsha.webp"
+      <MentorIntro imageSrc="https://cdn.kalingauniversity.ac.in/research/harsha.webp"
         title="Dr. Harsha Patil"
         subtitle="Message from HoD"
         department="HoD - Research"
@@ -273,7 +273,7 @@ export default function Research() {
       {/* <ImageContent
         hasImage={false}
         buttonText="Know More"
-        buttonLink="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/Constitution+of+Research+Advisory+Committee.pdf"
+        buttonLink="https://cdn.kalingauniversity.ac.in/research/Constitution+of+Research+Advisory+Committee.pdf"
         className="items-center justify-center"
         title="Our Research Advisory Committee"
         subtitleclassName="hidden"

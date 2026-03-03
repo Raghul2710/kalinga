@@ -6,35 +6,35 @@ import LogoLoop from '../gsap/LogoLoop'
 import SectionHeading from '../general/SectionHeading'
 
 const logos = [
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/infosys.webp',
-  // 'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/byjus.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/capgemini.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/airtel.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/amul.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/cipla.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/wipro.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/adani.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/bosch.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/biocon.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/apollo.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/asahi.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/axis.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/cognizant.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/suzuki.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/himalaya.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/decathlon.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/force.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/goorej.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/genpact.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/hdfc.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/jio.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/justdail.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/lg.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/nestle.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/sail.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/tata-motors.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/tech+mahindra.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/ultratech.webp'
+  'https://cdn.kalingauniversity.ac.in/placement/infosys.webp',
+  // 'https://cdn.kalingauniversity.ac.in/placement/byjus.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/capgemini.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/airtel.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/amul.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/cipla.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/wipro.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/adani.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/bosch.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/biocon.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/apollo.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/asahi.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/axis.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/cognizant.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/suzuki.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/himalaya.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/decathlon.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/force.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/goorej.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/genpact.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/hdfc.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/jio.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/justdail.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/lg.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/nestle.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/sail.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/tata-motors.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/tech+mahindra.webp',
+  'https://cdn.kalingauniversity.ac.in/placement/ultratech.webp'
 ]
 
 const Placements = ({ hideMarquee = false, hideMilestones = false, bgColor = "bg-[var(--light-gray)]", marginClassName = "-mb-28", placementData, customImages }) => {
@@ -65,17 +65,17 @@ const Placements = ({ hideMarquee = false, hideMilestones = false, bgColor = "bg
     : placementPhotos.length > 0
       ? placementPhotos.map(photo => photo.image).filter(Boolean)
       : [
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement1.webp',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement2.webp',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement3.webp',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement4.webp',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement5.webp',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/placement6.webp',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-1.png',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-2.png',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-3.png',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-4.png',
-        'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-5.png'
+        'https://cdn.kalingauniversity.ac.in/Home/placement1.webp',
+        'https://cdn.kalingauniversity.ac.in/Home/placement2.webp',
+        'https://cdn.kalingauniversity.ac.in/Home/placement3.webp',
+        'https://cdn.kalingauniversity.ac.in/Home/placement4.webp',
+        'https://cdn.kalingauniversity.ac.in/Home/placement5.webp',
+        'https://cdn.kalingauniversity.ac.in/Home/placement6.webp',
+        'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
+        'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
+        'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
+        'https://cdn.kalingauniversity.ac.in/Home/place-4.png',
+        'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
       ]
 
   // Get title and description from API or use defaults

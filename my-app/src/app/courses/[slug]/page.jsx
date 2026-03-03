@@ -362,7 +362,7 @@ export default function DynamicCoursePage() {
       courseData?.image ||
       (departmentData?.program_syllabus_images?.[0]?.image || departmentData?.program_syllabus_images?.[0]?.image_url) ||
       departmentData?.programs_image ||
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/course_page.webp",
+      "https://cdn.kalingauniversity.ac.in/course/course_page.webp",
     imageAlt: courseData.eligibility_criteria[0].image_alt ||
       courseData?.image_alt ||
       departmentData?.programs_image_alt ||
@@ -394,7 +394,7 @@ export default function DynamicCoursePage() {
   } : null;
 
   const breadcrumbData = (courseData?.name && !loading && metadataLoaded) ? {
-    heroImage: courseData?.banners?.[0]?.image || courseData?.banners?.[0]?.image_url || courseData.image || "https://kalinga-university.s3.ap-south-1.amazonaws.com/course/student-computer.webp",
+    heroImage: courseData?.banners?.[0]?.image || courseData?.banners?.[0]?.image_url || courseData.image || "https://cdn.kalingauniversity.ac.in/course/student-computer.webp",
     pageTitle: courseData.name,
     customBreadcrumbs: [
       { label: 'Home', href: '/' },
@@ -422,7 +422,7 @@ export default function DynamicCoursePage() {
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
     sectionTitle: "Specialisation",
     sectionDescription: "Choose a specialisation of your choice and master what’s trending.",
-    backgroundImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/why-this-course-1.webp",
+    backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: courseData.specializations
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
       .map((specialization, index) => ({
@@ -762,8 +762,8 @@ export default function DynamicCoursePage() {
           subtitle=""
           description="The Library at Kalinga University, Naya Raipur, is the biggest learning platform that offers a large number of books, magazines, Indian & International journals, and other online resources, providing students and faculty members with an outstanding learning experience. It has a reading room capacity for 400 students, which is divided into 2 halls of 200 students each. With modern infrastructure and facilities, students get the highest level of comfort and academic support throughout their journey."
           images={[
-            "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-1.webp",
-            "https://kalinga-university.s3.ap-south-1.amazonaws.com/library/Library-2.webp"
+            "https://cdn.kalingauniversity.ac.in/library/Library-1.webp",
+            "https://cdn.kalingauniversity.ac.in/library/Library-2.webp"
           ]}
           ctaText="Know More"
           ctaLink="/library"
@@ -775,8 +775,8 @@ export default function DynamicCoursePage() {
           subtitle="Lights, Camera, Action!"
           description="Kalinga doesn’t teach film making from slides, but hands you the camera so that you can produce your own story. Our studio will give you the vibe of a mini production house where you can write scripts, shoot, edit, collaborate, and make impactful films. With pro-level cameras, lightning setup, sound gear, professional editing software, makeup and costume area, and a soundproof room, learn the A-Z of filmmaking and produce a masterpiece."
           images={[
-            "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/filmmakingstudio.webp",
-            "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/recordingstudio.webp"
+            "https://cdn.kalingauniversity.ac.in/academic-facilities/filmmakingstudio.webp",
+            "https://cdn.kalingauniversity.ac.in/academic-facilities/recordingstudio.webp"
           ]}
           ctaText=""
           ctaLink=""

@@ -97,7 +97,7 @@ const AboutKalinga = () => {
                     style={{ transform: `translateY(${isExpanded ? '10px' : '-35px'})` }}
                   >
                     <Image
-                      src="https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/girl-stand.webp"
+                      src="https://cdn.kalingauniversity.ac.in/Home/girl-stand.webp"
                       alt="Students"
                       fill
                       sizes="(max-width: 768px) 0vw, 555px"
@@ -111,7 +111,7 @@ const AboutKalinga = () => {
               <div className={`mt-8 md:hidden flex justify-center ${isExpanded ? 'mb-8' : 'mb-0'}`}>
                 <div className="relative w-full max-w-[320px] h-[230px] rounded-lg overflow-hidden shadow-2xl">
                   <Image
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/about-kalinga.webp"
+                    src="https://cdn.kalingauniversity.ac.in/Home/about-kalinga.webp"
                     alt="Students"
                     fill
                     sizes="(max-width: 768px) 320px, 0vw"

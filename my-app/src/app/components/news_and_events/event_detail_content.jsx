@@ -13,7 +13,7 @@ const EventDetailContent = ({
   title = '',
   description = [],
   mainImage = {
-    src: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+    src: 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
     alt: 'Event Gallery'
   },
   galleryImages = []

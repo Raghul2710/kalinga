@@ -71,12 +71,12 @@ const formatDuration = (course) => {
 
 // Diverse placeholder images to be used sequentially
 const PROGRAM_PLACEHOLDERS = [
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/information.png',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/MBA.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/Phd-mba.webp',
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/computer.webp', // Add more if available, otherwise cycle
-  'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/program/information.png'
+  'https://cdn.kalingauniversity.ac.in/Home/program/computer.webp',
+  'https://cdn.kalingauniversity.ac.in/Home/program/information.png',
+  'https://cdn.kalingauniversity.ac.in/Home/program/MBA.webp',
+  'https://cdn.kalingauniversity.ac.in/Home/program/Phd-mba.webp',
+  'https://cdn.kalingauniversity.ac.in/Home/program/computer.webp', // Add more if available, otherwise cycle
+  'https://cdn.kalingauniversity.ac.in/Home/program/information.png'
 ]
 
 const Programs = () => {
@@ -191,7 +191,7 @@ const Programs = () => {
       program_type: "phd",
       specialization: spec,
       courseSlug: "phd",
-      img: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/phd-placeholder.jpg", // Fallback image
+      img: "https://cdn.kalingauniversity.ac.in/logos/phd-placeholder.jpg", // Fallback image
       duration: "3 Years",
       scholarships: "Check eligibility",
       showSpecializationDropdown: false,

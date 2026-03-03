@@ -12,7 +12,7 @@ function Valueadditionsmainintro() {
                 ]}
                 readMoreLabel="Read More"
                 readLessLabel="Read Less"
-                imageUrl='https://kalinga-university.s3.ap-south-1.amazonaws.com/Value-Added-Courses/banner+(1).webp'
+                imageUrl='https://cdn.kalingauniversity.ac.in/Value-Added-Courses/banner+(1).webp'
                 showKnowMore={true}
                 initialVisibleParagraphs={1}
             />

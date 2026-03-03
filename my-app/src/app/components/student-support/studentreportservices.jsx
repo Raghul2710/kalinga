@@ -17,7 +17,7 @@ function Studentreportservices() {
         <section className="py-12 md:py-16 px-4 md:px-6">
             <ImageListItem
                 items={Items}
-                imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrc.webp"
+                imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrc.webp"
                 title="Our services can help you:"
                 description=""
             />

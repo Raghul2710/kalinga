@@ -1,7 +1,7 @@
 Model breradcrumb
 
 const breadcrumbData = {
-  heroImage: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+  heroImage: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
   pageTitle: "Corpodsdssrate Social Responsibility",
   customBreadcrumbs: [
     { label: 'Home', href: '/' },

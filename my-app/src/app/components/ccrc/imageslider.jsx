@@ -6,30 +6,30 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export default function ImageSlider({ 
+export default function ImageSlider({
   items = [],
-  className = "pt-6 " 
+  className = "pt-6 "
 }) {
   // Default items if none provided
   const defaultItems = [
     {
       id: 1,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
     },
     {
       id: 2,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
       text: "Sed do eiusmod tempor incididunt ut labore et dolore"
     },
     {
       id: 3,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
       text: "Ut enim ad minim veniam, quis nostrud exercitation"
     },
     {
       id: 4,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+      image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
       text: "Ut enim ad minim veniam, quis nostrud exercitation"
     }
   ];
@@ -41,7 +41,7 @@ export default function ImageSlider({
       <Swiper
         modules={[Navigation]}
         spaceBetween={20}
-        slidesPerView={1}   
+        slidesPerView={1}
         loop={false}
         grabCursor={true}
         breakpoints={{
@@ -87,7 +87,7 @@ export default function ImageSlider({
 
       {/* Custom Navigation Arrows */}
       <div className="flex justify-end items-center gap-3 mt-6">
-        <button 
+        <button
           className="ccrc-image-slider-button-prev w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md"
           aria-label="Previous slide"
         >
@@ -108,7 +108,7 @@ export default function ImageSlider({
             />
           </svg>
         </button>
-        <button 
+        <button
           className="ccrc-image-slider-button-next w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-[var(--button-red)] hover:bg-[#A2A2A2] flex items-center justify-center hover:opacity-90 transition-opacity shadow-md"
           aria-label="Next slide"
         >

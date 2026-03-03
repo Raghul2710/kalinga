@@ -10,57 +10,57 @@ const annualReportButtons = [
   {
     id: 1,
     text: "Annual Report 2022–23 (Volume I)",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2022-23-(Vol-1).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/Annual-Report-2022-23-(Vol-1).pdf",
   },
   {
     id: 2,
     text: "Annual Report 2022–23 (Volume II)",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual+Report+2022-23+(Vol.+2).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/Annual+Report+2022-23+(Vol.+2).pdf",
   },
   {
     id: 3,
     text: "Annual Report 2021–22 (Volume I)",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual+Report-2021-22+(Vol.+1).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/Annual+Report-2021-22+(Vol.+1).pdf",
   },
   {
     id: 4,
     text: "Annual Report 2021–22 (Volume II)",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2021-22-(Vol-2).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/Annual-Report-2021-22-(Vol-2).pdf",
   },
   {
     id: 5,
     text: "Annual Report 2020–21",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/Annual-Report-2020-21.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/Annual-Report-2020-21.pdf",
   },
   {
     id: 6,
     text: "Annual Report 2019–20",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT+2019-20_09-01-2021.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/FINAL+ANNUAL+REPORT+2019-20_09-01-2021.pdf",
   },
   {
     id: 7,
     text: "Annual Report 2018–19",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT+2018-19_15-01-2021.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/FINAL+ANNUAL+REPORT+2018-19_15-01-2021.pdf",
   },
   {
     id: 8,
     text: "Annual Report 2017–18",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT+2017-18_18-01-2021.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/FINAL+ANNUAL+REPORT+2017-18_18-01-2021.pdf",
   },
   {
     id: 9,
     text: "Annual Report 2016–17",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT_2016-17_18-01-2021.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/FINAL+ANNUAL+REPORT_2016-17_18-01-2021.pdf",
   },
   {
     id: 10,
     text: "Annual Report 2015–16",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT_2015-16_18-01-2021.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/FINAL+ANNUAL+REPORT_2015-16_18-01-2021.pdf",
   },
   {
     id: 11,
     text: "Annual Report 2014–15",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/annual-reports/FINAL+ANNUAL+REPORT_2014-15_18-01-2021.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/annual-reports/FINAL+ANNUAL+REPORT_2014-15_18-01-2021.pdf",
   },
 ];
 

@@ -20,42 +20,42 @@ const learnCards = [
     title: "",
     description: "Programming Languages used in robotics & automation tasks",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-1.svg",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-1.svg",
   },
   {
     id: 2,
     title: "",
     description: "Robotics Mechanisms & Control",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-2.svg",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-2.svg",
   },
   {
     id: 3,
     title: "",
     description: "Drone Mechanisms & Safe Flying Practices",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-3.svg",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-3.svg",
   },
   {
     id: 4,
     title: "",
     description: "AI Principles Used in Smart Gadgets",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-4.svg",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-4.svg",
   },
   {
     id: 5,
     title: "",
     description: "Project-Based Learning & Experimentation",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-5.svg",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-5.svg",
   },
   {
     id: 6,
     title: "",
     description: "Develop Your Own Tech-Based Ideas",
     imageUrl:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-6.svg",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-6.svg",
   },
 ];
 
@@ -63,21 +63,21 @@ const glimpses = [
   {
     id: 1,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-glimpse1.webp",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-glimpse1.webp",
     imageAlt: "Robotics & Drones Glimpse - Training Session",
     title: "Training Session Glimpse",
   },
   {
     id: 2,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-glimpse2.webp",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-glimpse2.webp",
     imageAlt: "Robotics & Drones Glimpse - Project Demonstration",
     title: "Project Demonstration",
   },
   {
     id: 3,
     imageSrc:
-      "https://kalinga-university.s3.ap-south-1.amazonaws.com/robotics/robotics-glimpse3.webp",
+      "https://cdn.kalingauniversity.ac.in/robotics/robotics-glimpse3.webp",
     imageAlt: "Robotics & Drones Glimpse - Drone Practice",
     title: "Drone Practice Glimpse",
   },
@@ -90,7 +90,7 @@ const galleryImages = glimpses.map((g) => ({
 }));
 
 export default function RoboticsCodingDronesTrainingCentrePage() {
-  
+
 
   return (
     <main className="bg-white">
@@ -98,7 +98,7 @@ export default function RoboticsCodingDronesTrainingCentrePage() {
         title="Robotics, Coding, & Drones Training Centre"
         subtitle="In collaboration with BDS Education"
         description={aboutCentreDescription}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002988.png"
+        imageSrc="https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002988.png"
         imageAlt="Robotics, Coding, & Drones Training Centre"
         readmore={false}
       />
@@ -111,14 +111,14 @@ export default function RoboticsCodingDronesTrainingCentrePage() {
       />
 
       <RaipurVideoSection
-        videoId = "XZ8gVVzu8Ts"
-        thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/coe/bds-thumbnail.jpg"
-        title = "Empowering Students with AI and Robotics: A Tour of Kalinga University's Centre of Excellence Lab"
-        description = "" // optional
-        alt = "Video thumbnail"
-        heightClass = "h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
-        className = "" // optional wrapper class
-    />
+        videoId="XZ8gVVzu8Ts"
+        thumbnail="https://cdn.kalingauniversity.ac.in/coe/bds-thumbnail.jpg"
+        title="Empowering Students with AI and Robotics: A Tour of Kalinga University's Centre of Excellence Lab"
+        description="" // optional
+        alt="Video thumbnail"
+        heightClass="h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default
+        className="" // optional wrapper class
+      />
 
       <AdmissionCareer />
       <style jsx global>{`

@@ -16,15 +16,15 @@ const cards = [
   {
     title: "Corporate Training and Consultancy Division (CTCD)",
     description: "CTCD helps businesses effectively utilise their most valuable asset, i.e., THEIR PEOPLE, through one-on-one consultancy services and training programs using experiential methods.",
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ctcd.png",
-    logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-ctcd.svg",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/ctcd.png",
+    logoSrc: "https://cdn.kalingauniversity.ac.in/ccrc/logo-ctcd.svg",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
     href: "/corporate-training-and-consultancy-division",
   },
   {
     title: "Corporate Social Responsibility (CSR) ",
     description: "The CSR initiatives at Kalinga come under Bhagwan Shri Bala Sai Educational and Charitable Society, which assists organisations in staying ahead in sustainable and social welfare.",
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/csr.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/csr.png",
     logoSrc: "",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
     href: "/csr",
@@ -32,15 +32,15 @@ const cards = [
   {
     title: "Kalinga Incubation Foundation (KIF)",
     description: "KIF was established in 2023, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION.",
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/IMG-20250409-WA0026-Picsart-AiImageEnhancer.webp",
-    logoSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-kif.svg",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/IMG-20250409-WA0026-Picsart-AiImageEnhancer.webp",
+    logoSrc: "https://cdn.kalingauniversity.ac.in/ccrc/logo-kif.svg",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
     href: "/kalinga-incubation-foundation",
   },
   {
     title: "Training & Placements",
     description: "CCRC is a hub for career guidance, training, and corporate partnerships. With modern infrastructure and resources, the centre meets industry standards and has even received appreciation from top organisations.",
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/placement.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/placement.png",
     logoSrc: "",
     subtitle: "CORPORATE TRAINING & CONSULTANCY DIVISION",
     href: "/training-and-placements",
@@ -50,84 +50,84 @@ const cards = [
 const sliderItems = [
   {
     id: 1,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/hear-clients-1.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/hear-clients-1.webp",
     text: "Goeld"
   },
   {
     id: 2,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/Jayaswal+Neco+Industries+Ltd.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/Jayaswal+Neco+Industries+Ltd.webp",
     text: "Jayaswal Neco Industries Ltd"
   },
   {
     id: 3,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/hear-clients-3.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/hear-clients-3.webp",
     text: "पुलिस प्रशिक्षण विद्यालय"
   },
   {
     id: 4,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/hear-clients-4.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/hear-clients-4.webp",
     text: "Real Ispat and Power Ltd."
   },
   {
     id: 5,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/Ramkrishna+Care+Hospitals.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/Ramkrishna+Care+Hospitals.webp",
     text: "Ramkrishna Care Hospitals "
   },
   {
     id: 6,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/Sarda+Energy+%26+Minerals+Ltd..webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/Sarda+Energy+%26+Minerals+Ltd..webp",
     text: "Sarda Energy & Minerals Ltd."
   },
   {
     id: 7,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/TMC.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/TMC.webp",
     text: "TMC"
   },
   {
     id: 8,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/94.3+MY+FM.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/94.3+MY+FM.webp",
     text: "94.3 MY FM"
   },
   {
     id: 9,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/Technoviz+Automation.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/Technoviz+Automation.webp",
     text: "Technoviz Automation"
   },
   {
     id: 10,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/from-clients-12.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/from-clients-12.webp",
     text: "छत्तीसगढ़ पर्यावरण संरक्षण मंडल"
   },
   {
     id: 11,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/sing.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/sing.webp",
     text: "Singhal Steel and Power Pvt. Ltd."
   },
   {
     id: 12,
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/simba.webp",
+    image: "https://cdn.kalingauniversity.ac.in/ccrc/simba.webp",
     text: "Simba Brewery"
   },
 
 ]
 const ccrcBenefitsData = [
   {
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg",
+    icon: "https://cdn.kalingauniversity.ac.in/icons/Networking+Opportunities.svg",
     title: "Collaborative",
     description: "Industry + Academia Expertise"
   },
   {
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
+    icon: "https://cdn.kalingauniversity.ac.in/admission/Value+addition.svg",
     title: "Customized",
     description: "Solutions for the Industry"
   },
   {
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/kif/Entrepreneurial+Thinking.svg",
+    icon: "https://cdn.kalingauniversity.ac.in/kif/Entrepreneurial+Thinking.svg",
     title: "Result-Oriented",
     description: "Turn Key Execution"
   },
   {
-    icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Holistic+Development.svg",
+    icon: "https://cdn.kalingauniversity.ac.in/icons/Holistic+Development.svg",
     title: "Comprehensive",
     description: "Single Window Solution on HR Consultancy, Training and Development, Recruitment"
   }
@@ -135,196 +135,196 @@ const ccrcBenefitsData = [
 
 const blueItems = [
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/abbott.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/abbott.png",
     imageAlt: "abbott",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/ag-enterprise.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/ag-enterprise.png",
     imageAlt: "ag-enterprise",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/central+bank+of+india.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/central+bank+of+india.png",
     imageAlt: "central bank of india",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/cisco.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/cisco.png",
     imageAlt: "cisco",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/denso.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/denso.png",
     imageAlt: "denso",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/edunet.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/edunet.png",
     imageAlt: "edunet",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/glenmarl.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/glenmarl.png",
     imageAlt: "glenmarl",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/godwari.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/godwari.png",
     imageAlt: "godwari",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/Group+75.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/Group+75.png",
     imageAlt: "CCRC Logo-9",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/Group+83.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/Group+83.png",
     imageAlt: "CCRC Logo-10",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/paytm.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/paytm.png",
     imageAlt: "paytm",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/saint-gobin.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/saint-gobin.png",
     imageAlt: "saint-gobin",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/subros.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/subros.png",
     imageAlt: "subros",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/suzuki.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/suzuki.png",
     imageAlt: "suzuki",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/techonviz.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/techonviz.png",
     imageAlt: "techonviz",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/abbott.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/abbott.png",
     imageAlt: "abbott",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/industry/veterans.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/industry/veterans.png",
     imageAlt: "veterans",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-1.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-1.webp",
     imageAlt: "clients-1",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-2.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-2.webp",
     imageAlt: "clients-2",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-3.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-3.webp",
     imageAlt: "clients-3",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-4.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-4.webp",
     imageAlt: "clients-4",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-5.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-5.webp",
     imageAlt: "clients-5",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-6.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-6.webp",
     imageAlt: "clients-6",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-7.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-7.webp",
     imageAlt: "clients-7",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-8.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-8.webp",
     imageAlt: "Clients-8",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-9.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-9.webp",
     imageAlt: "Clients-9",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-10.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-10.webp",
     imageAlt: "Clients-10",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-11.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-11.webp",
     imageAlt: "Clients-11",
   }
 ]
 const redItems = [
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/agenterprise.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/agenterprise.png",
     imageAlt: "agenterprise",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/care.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/care.png",
     imageAlt: "care",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/central+bank+of+india.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/central+bank+of+india.png",
     imageAlt: "central bank of india",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/cisco.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/cisco.png",
     imageAlt: "cisco",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/edunet.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/edunet.png",
     imageAlt: "denso",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/eduskills.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/eduskills.png",
     imageAlt: "eduskills",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/godwari.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/godwari.png",
     imageAlt: "godwari",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/Group+86.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/Group+86.png",
     imageAlt: "mou",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/ibm.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/ibm.png",
     imageAlt: "ibm",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/incube.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/incube.png",
     imageAlt: "incube",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/just.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/just.png",
     imageAlt: "just",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/singhania.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/singhania.png",
     imageAlt: "singhania",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/subros.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/subros.png",
     imageAlt: "subros",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/techoviz.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/techoviz.png",
     imageAlt: "techoviz",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/utkarsh.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/utkarsh.png",
     imageAlt: "utkarsh",
   },
   {
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/mou/veterans.png",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/mou/veterans.png",
     imageAlt: "veterans",
   },
 ]
 const accreditations = [
-  { id: 1, name: 'clients-1', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-1.webp' },
-  { id: 2, name: 'clients-2', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-2.webp' },
-  { id: 3, name: 'clients-3', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-3.webp' },
-  { id: 4, name: 'clients-4', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-4.webp' },
-  { id: 5, name: 'clients-5', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-5.webp' },
-  { id: 6, name: 'clients-6', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-6.webp' },
-  { id: 7, name: 'clients-7', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-7.webp' },
-  { id: 8, name: 'Clients-8', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-8.webp' },
-  { id: 9, name: 'Clients-9', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-9.webp' },
-  { id: 10, name: 'Clients-10', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-10.webp' },
-  { id: 11, name: 'Clients-11', logo: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/clients-we/clients-11.webp' },
+  { id: 1, name: 'clients-1', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-1.webp' },
+  { id: 2, name: 'clients-2', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-2.webp' },
+  { id: 3, name: 'clients-3', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-3.webp' },
+  { id: 4, name: 'clients-4', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-4.webp' },
+  { id: 5, name: 'clients-5', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-5.webp' },
+  { id: 6, name: 'clients-6', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-6.webp' },
+  { id: 7, name: 'clients-7', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-7.webp' },
+  { id: 8, name: 'Clients-8', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-8.webp' },
+  { id: 9, name: 'Clients-9', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-9.webp' },
+  { id: 10, name: 'Clients-10', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-10.webp' },
+  { id: 11, name: 'Clients-11', logo: 'https://cdn.kalingauniversity.ac.in/ccrc/clients-we/clients-11.webp' },
 ]
 const videoItems = [
   {
@@ -360,7 +360,7 @@ const videoItems = [
 const MentorIntroProps = [
   {
     cardClassName: "",
-    imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/kif/Mr.+Pankaj+Tiwari.webp",
+    imageSrc: "https://cdn.kalingauniversity.ac.in/ccrc/kif/Mr.+Pankaj+Tiwari.webp",
     title: "Mr. Pankaj Tiwari",
     subtitle: "Message from CCRC Head",
     department: "Director, Career & Corporate Resource Centre",
@@ -372,7 +372,7 @@ export default function CCRCPage() {
   return <>
 
     <ImageContent
-      imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp"
+      imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrclogo.webp"
       description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support."
       additionalContent={[
         "With skill-based training programs, workshops, guest lectures, corporate mentorship, industrial visits, soft skill trainings, personality development workshops, internships, industrial training, campus placement drives, and industry-certified programs, we're able to maximise the output and save the time of students and working professionals, and build a future-ready workforce. The Centre features state-of-the-art infrastructure and resources that meet industry standards and has earned high appreciation from leading organisations across India and abroad. With experiential learning strategies and an updated curriculum, our students are placed at top companies, and corporate professionals have learned to deliver maximum output and maintain consistent performance."
@@ -407,7 +407,7 @@ export default function CCRCPage() {
       redTitle="MoU Partners"
       blueItems={blueItems}
       redItems={redItems}
-      ccrcLogo="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp"
+      ccrcLogo="https://cdn.kalingauniversity.ac.in/ccrc/ccrclogo.webp"
     />
     {/* <AccreditationRanking
       heading="Clients We Served"

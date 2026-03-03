@@ -76,105 +76,105 @@ const aboutFeatureCards = [
     id: 1,
     title: 'Industry-Relevant Curriculum',
     body: 'Our curriculum is aligned with the New Education Policy 2020. All our educational programs match industry standards that equip our students with essential practical skills and updated industrial knowledge.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Industry-Relevant+Curriculum.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Industry-Relevant+Curriculum.svg',
     variant: 'gray',
   },
   {
     id: 2,
     title: 'Extensive Research Facilities',
     body: 'With 90 + Labs, including IT Labs and CIF labs, we’re Chhattisgarh’s No. 1 institute, committed to innovation and groundbreaking research facilities.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg',
     variant: 'amber',
   },
   {
     id: 3,
     title: 'Experienced Faculties',
     body: 'Learn from highly experienced professors of KU who are from across India and abroad. Their expertise helps students become future leaders.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Experienced+Faculties.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Experienced+Faculties.svg',
     variant: 'gray',
   },
   {
     id: 4,
     title: 'Our Flagship Events',
     body: 'Every year, we organise memorable events and competitions where students showcase their creativity and talent and win amazing prizes. It includes: First Step Induction Programs, Science Working Model Competition, Anand Mela, Moot Court Competitions, Hackathons, Ideathons, Kalinga Utsav, Sports Fest, Toppers Felicitation Ceremony, Convocation Ceremony, Best HEI Teachers’ Award, and more...',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Flagship+Events.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Flagship+Events.svg',
     variant: 'amber',
   },
   {
     id: 5,
     title: 'Internships & Industrial Visits',
     body: 'All Kalinga University students are provided with internship opportunities and are encouraged to work on practical projects and visit industrial sites.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/international.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/international.svg',
     variant: 'gray',
   },
   {
     id: 6,
     title: 'Networking Opportunities',
     body: 'Connect with industry leaders, alumni, and working professionals through our workshops, seminars, National and International conferences, and future-proof your career.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Networking+Opportunities.svg',
     variant: 'amber',
   },
   {
     id: 7,
     title: 'Cultural Celebrations',
     body: 'Become a part of a campus that celebrates both National and International events. Cultural fests, concerts, talent shows, sports day, Kalinga Utsav, and open mic competitions are some of our lively events that unite our students.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Cultural+Celebrations.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Cultural+Celebrations.svg',
     variant: 'gray',
   },
   {
     id: 8,
     title: 'Community Services',
     body: 'You will not just graduate from Kalinga with a degree, but you’ll become a socially responsible citizen too. Join our NCC and NSS team and become a part of a community that serves the Nation.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Community+Services.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Community+Services.svg',
     variant: 'amber',
   },
   {
     id: 9,
     title: 'National & International Tours',
     body: 'Our educational tours are all about a fun learning experience. From visiting top industries across India to exploring mega-infrastructure in Dubai, we’ve planned more exciting tours in the coming years.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Educational+Tours.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Educational+Tours.svg',
     variant: 'gray',
   },
   {
     id: 10,
     title: 'Emotional Well-Being',
     body: 'To cope with academic stress, mental health issues, or social anxiety, we organise well-being programs for our students according to their needs so that their voices can be heard and acted upon.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Emotional+Well-Being.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Emotional+Well-Being.svg',
     variant: 'amber',
   },
   {
     id: 11,
     title: 'Prominent Personalities Visit',
     body: 'We organise special guest visits where industry leaders, Padma Bhushan award winners, popular sportspersons, actors, social media influencers, and other National award winners interact with our students.',
-    image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Mentor-Mentee+System.svg',
+    image: 'https://cdn.kalingauniversity.ac.in/icons/Mentor-Mentee+System.svg',
     variant: 'gray',
   },
 ];
 
 const aboutAccreditations = [
-  { id: 4, name: "Outlook", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/outlook.webp" },
-  { id: 5, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002974.png" },
-  { id: 6, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002953.png" },
-  { id: 7, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/accreditation/nirf-logo-new.jpeg" },
-  { id: 8, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002976.png" },
-  // { id: 11, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002979.png" },
-  { id: 13, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002981.png" },
-  { id: 14, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ieee.jpeg" },
-  { id: 15, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/uba.jpg" },
-  { id: 16, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/cii.png" },
-  { id: 17, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/nss.jpg" },
-  { id: 18, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ncc.jpg" },
-  { id: 19, name: "NIRF", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/ugc-2.png" },
+  { id: 4, name: "Outlook", logo: "https://cdn.kalingauniversity.ac.in/Home/outlook.webp" },
+  { id: 5, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002974.png" },
+  { id: 6, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002953.png" },
+  { id: 7, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/accreditation/nirf-logo-new.jpeg" },
+  { id: 8, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002976.png" },
+  // { id: 11, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002979.png" },
+  { id: 13, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002981.png" },
+  { id: 14, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/ieee.jpeg" },
+  { id: 15, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/uba.jpg" },
+  { id: 16, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/cii.png" },
+  { id: 17, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/nss.jpg" },
+  { id: 18, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/ncc.jpg" },
+  { id: 19, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/ugc-2.png" },
 
 ];
 
 const aboutApproval = [
-  { id: 3, name: "UGC Grant", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/ugc.webp" },
-  { id: 10, name: "NCTE", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002978.png" },
-  { id: 12, name: "PCI", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/Group+1000002980.png" },
-  { id: 12, name: "BCI", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/bci.webp" },
-  { id: 12, name: "ACITE", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/acite.webp" },
-  { id: 12, name: "CGG", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/about/accerdation/cg-government.webp" },
+  { id: 3, name: "UGC Grant", logo: "https://cdn.kalingauniversity.ac.in/Home/ugc.webp" },
+  { id: 10, name: "NCTE", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002978.png" },
+  { id: 12, name: "PCI", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002980.png" },
+  { id: 12, name: "BCI", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/bci.webp" },
+  { id: 12, name: "ACITE", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp" },
+  { id: 12, name: "CGG", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/cg-government.webp" },
 ]
 
 const aboutQuickLinks = [
@@ -232,7 +232,7 @@ const universityAchievements = [
     title: "2018-19",
     description: "Best University in Research & Innovation",
     backDescription: "Best University in Research & Innovation - Global Leaders Award",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 2,
@@ -240,7 +240,7 @@ const universityAchievements = [
     title: "2018-19",
     description: "Excellent Work in the Educational Sector",
     backDescription: "Excellent Work in the Educational Sector - National Majesty Awards",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 3,
@@ -248,7 +248,7 @@ const universityAchievements = [
     title: "2018-19",
     description: "Educational Inculcation Award",
     backDescription: "Educational Inculcation Award - Prayag Foundation",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 4,
@@ -256,7 +256,7 @@ const universityAchievements = [
     title: "2019-20",
     description: "Best Private University",
     backDescription: "Best Private University - ASSOCHAM National Educational Awards 2020",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 5,
@@ -264,7 +264,7 @@ const universityAchievements = [
     title: "2019-20",
     description: "Knowledge Partner",
     backDescription: "Knowledge Partner - Chhattisgarh Youth Parliament - II",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 6,
@@ -272,7 +272,7 @@ const universityAchievements = [
     title: "2022-23",
     description: "Best Universities Ranking",
     backDescription: "Best Universities Ranking - All India Rank - 51 - India Today",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 7,
@@ -280,7 +280,7 @@ const universityAchievements = [
     title: "2022-23",
     description: "National Institutional Ranking Framework (NIRF)",
     backDescription: "National Institutional Ranking Framework (NIRF) - Rank Band: 101-150 - Ministry of Education (MoE)",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 8,
@@ -288,7 +288,7 @@ const universityAchievements = [
     title: "2022-23",
     description: "Institution's Innovation Council (IIC)",
     backDescription: "Institution's Innovation Council (IIC) - MoE, Innovation Cell",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 9,
@@ -296,7 +296,7 @@ const universityAchievements = [
     title: "2023-24",
     description: "Recognition as Scientific and Industrial Research Organization (SIRO)",
     backDescription: "Recognition as Scientific and Industrial Research Organization (SIRO) - Department of Scientific & Industrial Research (DSIR)",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 10,
@@ -304,7 +304,7 @@ const universityAchievements = [
     title: "2023-24",
     description: "IEEE WIE KU SB Champion",
     backDescription: "IEEE WIE KU SB selected as IEEE R10 WIE Champion as Mentor of IEEE WIE IIIT Naya Raipur - IEEE R10",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
   {
     id: 11,
@@ -312,7 +312,7 @@ const universityAchievements = [
     title: "2023-24",
     description: "Global University Rankings",
     backDescription: "Global University Rankings - Top 250 Institutions in India - GU Rankings, London",
-    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+    image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
   },
 ];
 
@@ -336,7 +336,7 @@ export default function AboutUs() {
         readMoreLabel="Read More"
         readLessLabel="Read Less"
 
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/student.jpg"
         imageAlt="Kalinga University campus"
         showKnowMore={true}
         initialVisibleParagraphs={1}
@@ -390,7 +390,7 @@ export default function AboutUs() {
         subtitle="Best Private University In India"
         description="From building a solid academic foundation to experiencing a diverse campus life, Kalinga University offers the best of both worlds and stands as one of the top private university. With students from all across the world, our campus gives a global vibe through cultural exchange, collaborations, fresh ideas, and lifelong connections."
         cards={aboutFeatureCards}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/common/student.jpg"
         titleClassName="!text-left"
         subtitleClassName="!text-left"
       />
@@ -410,7 +410,7 @@ export default function AboutUs() {
       title="Expanding Horizons Through Global Partnerships"
       description="Kalinga University is home to students from 29+ countries, fostering a truly international learning environment. Through academic exchange programs, research collaborations, and strategic global alliances, the University prepares students to become globally competent professionals and leaders."
       logos={['Infosys','Citi','Microsoft','Adobe','Cognizant','PayPal']}
-      imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/globe-skin-color.png"
+      imageUrl="https://cdn.kalingauniversity.ac.in/Home/globe-skin-color.png"
       imageAlt="Kalinga University global presence map"
       subtitleColor="text-[var(--button-red)]"
       titleColor="text-[var(--foreground)]"

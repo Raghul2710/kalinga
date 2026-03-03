@@ -10,17 +10,17 @@ const annualReportButtons = [
   {
     id: 0,
     text: "B. Pharmacy",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-calendar/Academic+Calendar+(Tentative)+2025-26+Only+for+B.+Pharmacy.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/academic-calendar/Academic+Calendar+(Tentative)+2025-26+Only+for+B.+Pharmacy.pdf",
   },
   {
     id: 1,
     text: "D. Pharmacy & Pharm D (Revised)",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-calendar/Academic+Calendar+D.+Pharmacy+%26+Pharm+D+(Revised).pdf",
+    href: "https://cdn.kalingauniversity.ac.in/academic-calendar/Academic+Calendar+D.+Pharmacy+%26+Pharm+D+(Revised).pdf",
   },
   {
     id: 2,
     text: "Except Annual Mode & B. Pharmacy",
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-calendar/Academic+Calendar+(Tentative)+2025-26+(Except+Annual+Mode+%26+B.+Pharmacy.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/academic-calendar/Academic+Calendar+(Tentative)+2025-26+(Except+Annual+Mode+%26+B.+Pharmacy.pdf",
   },
 
 ];

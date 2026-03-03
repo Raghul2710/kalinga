@@ -6,8 +6,8 @@ export default function NccBenefits() {
   return (
     <div className="pt-20 pb-10 md:py-28">
       <ImageListItem
-       className="!pt-6 !pb-2 md:!py-16"   // ✅ reduce section padding on mobile only
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ncc/Ncc-3.webp"
+        className="!pt-6 !pb-2 md:!py-16"   // ✅ reduce section padding on mobile only
+        imageSrc="https://cdn.kalingauniversity.ac.in/ncc/Ncc-3.webp"
         imageAlt="NCC Benefits"
         imageWidth={500}
         imageHeight={240}

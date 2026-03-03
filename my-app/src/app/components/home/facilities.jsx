@@ -15,38 +15,38 @@ export default function Facilities() {
     {
       id: 1,
       title: 'Library',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/library-new.webp',
+      image: 'https://cdn.kalingauniversity.ac.in/facilities/library-new.webp',
       description: 'Quiet, inviting, and rich with resources — our library is a favorite spot for learners. With thousands of books, journals, digital materials, and peaceful study corners, it encourages deep focus and academic excellence. It’s where ideas grow and curiosity thrives.'
     },
     {
       id: 2,
       title: 'Canteen',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/canteen+mess.webp',
+      image: 'https://cdn.kalingauniversity.ac.in/facilities/canteen+mess.webp',
       description: 'The KU canteen offers more than just food — it offers comfort. Fresh, hygienic meals and a variety of snacks keep students energized throughout the day. Whether you’re grabbing a quick bite between classes or relaxing with friends, the canteen is a space everyone loves.'
     },
     {
       id: 3,
       title: 'Sports',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/DSC00047.webp',
+      image: 'https://cdn.kalingauniversity.ac.in/facilities/DSC00047.webp',
       description: 'Sports at KU go beyond just play - they build teamwork, discipline, and confidence. With spacious grounds, indoor arenas, and trained coaches, students get the perfect space to unwind, compete, and stay active. Whether you\'re into football, cricket, athletics, or indoor games, there\'s a place for everyone.'
     },
     {
       id: 4,
       title: 'Gym',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/gym.webp',
+      image: 'https://cdn.kalingauniversity.ac.in/facilities/gym.webp',
       description: 'Our campus gym helps students prioritize both physical and mental well-being. Equipped with modern machines and guided by trained staff, it offers a supportive environment for workouts, fitness routines, and stress relief after a busy day of classes.'
     },
     {
       id: 5,
       title: 'Labs',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/labotories.webp',
+      image: 'https://cdn.kalingauniversity.ac.in/facilities/labotories.webp',
       description: 'Learning at KU is deeply practical. Our modern, well-equipped laboratories allow students to experiment, explore, and put theory into action. Every lab session is guided by experienced faculty, helping students build confidence, clarity, and industry-ready skills.'
     }
     ,
     {
       id: 6,
       title: 'Hostel',
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/hostel.webp',
+      image: 'https://cdn.kalingauniversity.ac.in/facilities/hostel.webp',
       description: 'Our hostels are designed to feel like a second home. Clean, well-furnished rooms, round-the-clock security, and a friendly residential atmosphere ensure comfort and safety. Students get the perfect blend of privacy, community living, and support to focus on their academic journey without worries.'
     }
   ]

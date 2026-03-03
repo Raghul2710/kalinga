@@ -13,7 +13,7 @@ function Academicvideo() {
                 {
                     title: "Academic Excellence at Kalinga University",
                     videoUrl: "https://www.youtube.com/watch?v=vXnjBfvu8RY",
-                    image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/academic-facilities/mootcourt.webp"
+                    image: "https://cdn.kalingauniversity.ac.in/academic-facilities/mootcourt.webp"
                 },
             ]}
         />

@@ -41,7 +41,7 @@ export default function ScholarshipsPage() {
     };
   }, []);
 
-  const scholarshipPolicyPdf = "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/Scholarships+2026-2027.pdf";
+  const scholarshipPolicyPdf = "https://cdn.kalingauniversity.ac.in/scholarships/Scholarships+2026-2027.pdf";
 
 
   const whyStudyItems = [
@@ -125,7 +125,7 @@ export default function ScholarshipsPage() {
       title:
         "Canara Bank provides education loans and financial assistance to needy and meritorious students seeking admission to Kalinga University, subject to the fulfilment of the bank’s terms, conditions, and eligibility norms.",
       image:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/canara.webp",
+        "https://cdn.kalingauniversity.ac.in/scholarships/canara.webp",
     },
     {
       id: 2,
@@ -133,7 +133,7 @@ export default function ScholarshipsPage() {
       title:
         "Central Bank of India offers education loans and financial assistance to students pursuing studies at Kalinga University, in accordance with the bank’s guidelines and applicable norms.",
       image:
-        "https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/central-1.webp",
+        "https://cdn.kalingauniversity.ac.in/scholarships/central-1.webp",
     },
   ];
 
@@ -143,63 +143,63 @@ export default function ScholarshipsPage() {
       title: "Social Scholarships",
       description:
         "Scholarships supporting special categories and social causes (as per KU policy).",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/logos/book-logo.png",
+      icon: "https://cdn.kalingauniversity.ac.in/logos/book-logo.png",
     },
     {
       id: 2,
       title: "Merit Scholarships",
       description:
         "Scholarships based on aggregate percentage in qualifying examination.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/merit.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/merit.svg",
     },
     {
       id: 3,
       title: "Entrance Exam Scholarships",
       description:
         "Scholarships based on percentile in national/state entrance & competitive exams.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/social.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/social.svg",
     },
     {
       id: 4,
       title: "Culture & Achievers Scholarships",
       description:
         "Scholarships for cultural excellence and exceptional achievements (case-to-case).",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship/scholarship-2.png",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship/scholarship-2.png",
     },
     {
       id: 5,
       title: "Siblings Scholarships",
       description:
         "Scholarships for direct blood relations of current KU students (as per policy).",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship/scholarship-3.png",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship/scholarship-3.png",
     },
     {
       id: 6,
       title: "Sports Scholarships",
       description:
         "Scholarships for participation at District/State/National/International levels.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship/sports-bg.png",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship/sports-bg.png",
     },
     {
       id: 7,
       title: "Social Media Scholarships",
       description:
         "Scholarships for strong social media presence involved in knowledge dissemination.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship/social_media-bg.png",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship/social_media-bg.png",
     },
     {
       id: 8,
       title: "Innovation & Research Scholarships",
       description:
         "Scholarships for research publications, books, startups, and product innovation.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship/research-bg.png",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship/research-bg.png",
     },
     {
       id: 9,
       title: "Other Scholarships",
       description:
         "Additional KU-specific scholarships as per scholarship committee/policy.",
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/scholarship/scholarship-10bg.png",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/scholarship/scholarship-10bg.png",
     },
   ];
 
@@ -348,7 +348,7 @@ export default function ScholarshipsPage() {
         title="Rewarding the Hard Work and Academic Excellence of Meritorious Students"
         subtitle=""
         description={["We recognize the hard work of every student, and Kalinga University’s scholarships encourage them to dream bigger and confidently step forward towards their career goals."]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/scholarships/scholarship-about.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/scholarships/scholarship-about.webp"
       />
 
       <div className="whyStudyWrapper">

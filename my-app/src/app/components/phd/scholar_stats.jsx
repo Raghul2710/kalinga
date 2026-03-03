@@ -15,7 +15,7 @@ const fellowshipTable = {
             slNo: "1",
             logo: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/csir-logo+(1).png"
+                    src="https://cdn.kalingauniversity.ac.in/phd/csir-logo+(1).png"
                     alt="CSIR Logo"
                     className="h-10 object-contain mx-auto"
                 />
@@ -27,7 +27,7 @@ const fellowshipTable = {
             slNo: "2",
             logo: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/CSIR-NTA-logo.png"
+                    src="https://cdn.kalingauniversity.ac.in/phd/CSIR-NTA-logo.png"
                     alt="CSIR NTA Logo"
                     className="h-10 object-contain mx-auto"
                 />
@@ -39,7 +39,7 @@ const fellowshipTable = {
             slNo: "3",
             logo: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/nta-1.png"
+                    src="https://cdn.kalingauniversity.ac.in/phd/nta-1.png"
                     alt="CSIR NTA Logo"
                     className="h-10 object-contain mx-auto"
                 />
@@ -70,7 +70,7 @@ const scholarsTable = {
             subject: "YOGA",
             image: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/phd_scholar_1.jpg"
+                    src="https://cdn.kalingauniversity.ac.in/phd/phd_scholar_1.jpg"
                     alt="ROBIN KUMAR VERMA"
                     className="w-[60px] h-[60px] object-cover rounded-lg mx-auto"
                 />
@@ -85,7 +85,7 @@ const scholarsTable = {
             subject: "YOGA",
             image: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/phd_scholar_2.jpg"
+                    src="https://cdn.kalingauniversity.ac.in/phd/phd_scholar_2.jpg"
                     alt="SHUBHAM SINGH"
                     className="w-[60px] h-[60px] object-cover rounded-lg mx-auto"
                 />
@@ -100,7 +100,7 @@ const scholarsTable = {
             subject: "ZOOLOGY",
             image: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Phd-scholar-priya.webp"
+                    src="https://cdn.kalingauniversity.ac.in/phd/Phd-scholar-priya.webp"
                     alt="PRIYA"
                     className="w-[60px] h-[60px] object-cover rounded-lg mx-auto"
                 />
@@ -115,7 +115,7 @@ const scholarsTable = {
             subject: "ZOOLOGY",
             image: (
                 <img
-                    src="https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/phd_scholar_4.jpg"
+                    src="https://cdn.kalingauniversity.ac.in/phd/phd_scholar_4.jpg"
                     alt="SHEETAL NAIK"
                     className="w-[60px] h-[60px] object-cover rounded-lg mx-auto"
                 />

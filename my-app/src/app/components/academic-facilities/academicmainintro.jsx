@@ -26,7 +26,7 @@ function Academicmainintro() {
                     description={[
                         "We nurture our students by providing them with all the essential academic facilities and support they need to excel in their chosen fields. They don’t just learn theoretical knowledge, but also learn from practical exposure and an experiential learning environment. With hands-on learning, they become confident and ready to take up challenges and stand out as a better individual.",
                     ]}
-                    imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/academics/commerce-management.webp"
+                    imageUrl="https://cdn.kalingauniversity.ac.in/academics/commerce-management.webp"
                     imageAlt="Academic Facilities"
                     readMoreLabel="Read More"
                     readLessLabel="Read Less"

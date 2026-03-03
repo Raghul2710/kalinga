@@ -58,7 +58,7 @@ const Items = [
 export default function ResearchResources() {
   const pathname = usePathname();
 
-  
+
   const { openFlipbook } = useFlipbook();
 
   const resourceFaqItems = [
@@ -103,7 +103,7 @@ export default function ResearchResources() {
           label: "Seed Money Policy",
           onClick: () =>
             openFlipbook(
-              "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+Money+Policy.pdf",
+              "https://cdn.kalingauniversity.ac.in/research-resources/Seed+Money+Policy.pdf",
               "Seed Money Policy",
             ),
         },
@@ -111,7 +111,7 @@ export default function ResearchResources() {
           label: "Download Form",
           onClick: () =>
             openFlipbook(
-              "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/Seed+money+format.pdf",
+              "https://cdn.kalingauniversity.ac.in/research-resources/Seed+money+format.pdf",
               "Seed Money Format",
             ),
         },
@@ -143,7 +143,7 @@ export default function ResearchResources() {
           label: "Download PDF",
           onClick: () =>
             openFlipbook(
-              "https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/PLAGIARISM-FILE-POLICY.pdf",
+              "https://cdn.kalingauniversity.ac.in/research-resources/PLAGIARISM-FILE-POLICY.pdf",
               "Plagiarism Policy",
             ),
         },
@@ -175,7 +175,7 @@ export default function ResearchResources() {
         ]}
         readMoreLabel="Read More"
         readLessLabel="Read Less"
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/whywork.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/campus-life/whywork.webp"
         showKnowMore={true}
         initialVisibleParagraphs={1}
       />
@@ -184,7 +184,7 @@ export default function ResearchResources() {
 
       <ImageListItem
         items={Items}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/research-resources/research-toolkit.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/research-resources/research-toolkit.webp"
         title="Your Research Toolkit"
         description=""
       />

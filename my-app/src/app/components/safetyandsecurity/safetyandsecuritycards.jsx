@@ -11,7 +11,7 @@ function Safetyandsecuritycards() {
             title: "Well-Trained Security Team",
             description:
                 "Our well-trained security guards are available 24/7 at every point, ensuring the safety of the campus at all times.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security3.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/campus-life/security3.jpeg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY & SECURITY",
         },
@@ -20,7 +20,7 @@ function Safetyandsecuritycards() {
             description:
                 "We have installed high-performing cameras to capture every minute activity, even when security guards are not present.",
             imageSrc:
-                "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security1.jpg",
+                "https://cdn.kalingauniversity.ac.in/campus-life/security1.jpg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY & SECURITY",
         },
@@ -28,7 +28,7 @@ function Safetyandsecuritycards() {
             title: "Fire Extinguishers",
             description:
                 "Fire extinguishers are installed at key locations in every building, which will keep everyone safe in case of emergencies.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/fire+extinguisher.jpg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/common/fire+extinguisher.jpg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY & SECURITY",
         },
@@ -36,7 +36,7 @@ function Safetyandsecuritycards() {
             title: "Anti-Ragging Cell",
             description:
                 "Our anti-ragging cell ensures that every student pursues their education without the fear of harassment or bullying.",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/helpline.jpg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/common/helpline.jpg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY & SECURITY",
         },
@@ -44,7 +44,7 @@ function Safetyandsecuritycards() {
             title: "Women Cell",
             description:
                 "Our women's cell ensures a secure and respectful campus environment. If women face any issue, they can directly approach the cell members or call at - +91 9303097012",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/campus-life/security2.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/campus-life/security2.jpeg",
             logoSrc: "",
             subtitle: "CAMPUS SAFETY & SECURITY",
         },

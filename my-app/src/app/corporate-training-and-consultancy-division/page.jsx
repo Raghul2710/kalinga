@@ -13,37 +13,37 @@ import CTCDConsultancyTabSection from '../components/ctcd/ctcd_consultancy_tab_s
 export default function CorporateTrainingAndConsultancyDivision() {
   const benefitsData = [
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/facility-management.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/facility-management.svg",
       title: "Improved workflow across different departments",
       description: ""
     },
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg",
       title: "Better employee management with optimised HR processes",
       description: ""
     },
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Holistic+Development.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Holistic+Development.svg",
       title: "Improved performance management systems",
       description: ""
     },
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/careers/wages.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/careers/wages.svg",
       title: "Cost-cutting and reduced wastage of resources",
       description: ""
     },
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/admission/Value+addition.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/admission/Value+addition.svg",
       title: "Improved efficiency in day-to-day processes",
       description: ""
     },
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg",
       title: "Seamless integration of digital tools",
       description: ""
     },
     {
-      icon: "https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Future+Career+Planning.svg",
+      icon: "https://cdn.kalingauniversity.ac.in/icons/Future+Career+Planning.svg",
       title: "Long-term growth and profitability",
       description: " "
     },
@@ -111,7 +111,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
   const masterclassActivities = [
     {
       id: 1,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/master-class.webp",
       imageAlt: "Grow As a Leader: A Program For First-Time Managers",
       title: "Grow As a Leader: A Program For First-Time Managers",
       description: "Resource Person: Mr. Amar Pathak",
@@ -122,7 +122,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 2,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/master-class-2.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/master-class-2.webp",
       imageAlt: "Maximising Fund-Raising Resource For CSR",
       title: "Maximising Fund-Raising Resource For CSR",
       description: "Resource Person: Prof. Sanjay Vanani",
@@ -133,7 +133,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 3,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-3.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-3.webp",
       imageAlt: "Crack The Code: Gen Z Connection Guide For Teachers and Parents",
       title: "Crack The Code: Gen Z Connection Guide For Teachers and Parents",
       description: "Resource Person: Dr. Sunayna Shukla",
@@ -144,7 +144,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 4,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-4.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-4.webp",
       imageAlt: "AI-Driven Benefits for Manufacturing & Operations",
       title: "AI-Driven Benefits for Manufacturing & Operations",
       description: "Resource Person: Ms. Rajashree Rajadhya",
@@ -155,7 +155,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 5,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-5.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-5.webp",
       imageAlt: "HR Analytics: Leveraging AI & Data for Strategic HR",
       title: "HR Analytics: Leveraging AI & Data for Strategic HR",
       description: "Resource Person: Saurabh Saxena",
@@ -166,7 +166,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 6,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-6.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-6.webp",
       imageAlt: "Master Your Market: Sales, Marketing & Negotiating Strategies",
       title: "Master Your Market: Sales, Marketing & Negotiating Strategies",
       description: "Resource Person: Meenakshi Ravi Shankar",
@@ -181,7 +181,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
   const masterclassActivities2 = [
     {
       id: 1,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-5.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/annual-5.webp",
       imageAlt: "Operational Excellence with Six Sigma: Driving Productivity & Cost Efficiency",
       title: "Operational Excellence with Six Sigma: Driving Productivity & Cost Efficiency",
       description: "",
@@ -192,7 +192,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 2,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-6.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/annual-6.webp",
       imageAlt: "HR in the Age of AI: Reimagining People, Performance & Potential",
       title: "HR in the Age of AI: Reimagining People, Performance & Potential",
       description: "",
@@ -203,7 +203,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 3,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-7.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/annual-7.webp",
       imageAlt: "Sustainable Industry Practices: Green Technologies & Compliance",
       title: "Sustainable Industry Practices: Green Technologies & Compliance",
       description: "",
@@ -214,7 +214,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 4,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-8.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/annual-8.webp",
       title: "Future-Ready Classrooms: AI & Digital Tools in Education and Beyond",
       description: "",
       buttonText: "",
@@ -224,7 +224,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 5,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-9.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/annual-9.webp",
       imageAlt: "AI & Data for Industrial Efficiency: From Buzzword to Business Value",
       title: "AI & Data for Industrial Efficiency: From Buzzword to Business Value",
       description: "",
@@ -235,7 +235,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
     },
     {
       id: 6,
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-10.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/ctcd/annual-10.webp",
       imageAlt: "Life Skills & Emotional Intelligence for the 21st Century Professional",
       title: "Life Skills & Emotional Intelligence for the 21st Century Professional",
       description: "",
@@ -249,37 +249,37 @@ export default function CorporateTrainingAndConsultancyDivision() {
   const galleryImages = [
     {
       id: 1,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(1).webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/chart+(1).webp",
       alt: "Masterclass 2024-25 Glimpse 1"
     },
     {
       id: 2,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-7.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-7.webp",
       alt: "Masterclass 2024-25 Glimpse 4"
     },
     {
       id: 3,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-8.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-8.webp",
       alt: "Masterclass 2024-25 Glimpse 5"
     },
     {
       id: 4,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-9.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-9.webp",
       alt: "Masterclass 2024-25 Glimpse 6"
     },
     {
       id: 5,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/masterclass-10.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/masterclass-10.webp",
       alt: "Masterclass 2024-25 Glimpse 7"
     },
     {
       id: 6,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(14).webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/chart+(14).webp",
       alt: "Masterclass 2024-25 Glimpse 8"
     },
     {
       id: 7,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(15).webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/chart+(15).webp",
       alt: "Masterclass 2024-25 Glimpse 9"
     },
   ];
@@ -288,37 +288,37 @@ export default function CorporateTrainingAndConsultancyDivision() {
   const galleryImages2 = [
     {
       id: 1,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-1.png",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/annual-1.png",
       alt: "Masterclass 2025-26 Glimpse 1"
     },
     {
       id: 2,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-2.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/annual-2.webp",
       alt: "Masterclass 2025-26 Glimpse 2"
     },
     {
       id: 3,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-3.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/annual-3.webp",
       alt: "Masterclass 2025-26 Glimpse 3"
     },
     {
       id: 4,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/annual-4.webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/annual-4.webp",
       alt: "Masterclass 2025-26 Glimpse 4"
     },
     {
       id: 1,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(11).webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/chart+(11).webp",
       alt: "Masterclass 2025-26 Glimpse 5"
     },
     {
       id: 2,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(12).webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/chart+(12).webp",
       alt: "Masterclass 2025-26 Glimpse 6"
     },
     {
       id: 7,
-      image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/chart+(13).webp",
+      image: "https://cdn.kalingauniversity.ac.in/ctcd/chart+(13).webp",
       alt: "Masterclass 2025-26 Glimpse 7"
     },
   ];
@@ -331,7 +331,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
         subtitleTextColor="text-white"
         subtitle=""
         hideBorder={true}
-        subtitleImage="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/logo-ctcd.svg"
+        subtitleImage="https://cdn.kalingauniversity.ac.in/ccrc/logo-ctcd.svg"
         subtitleImageAlt="CTCD Logo"
         customForm={<CTCDApplicationForm />}
         showButton={false}
@@ -350,7 +350,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
             "To measure the effectiveness of training through employees' performance evaluation and business results",
             "To use the Phase-Wise training approach for continuous performance improvement"
           ]}
-          imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/csr/csr-intro.png"
+          imageUrl="https://cdn.kalingauniversity.ac.in/csr/csr-intro.png"
           imageAlt="CTCD"
           initialVisibleParagraphs={1}
           hidePointsUntilExpanded={true}
@@ -401,7 +401,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
           "Boosts employees' retention",
           "Improves workforce competitiveness"
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/ctcd-meeting.jpg"
+        imageUrl="https://cdn.kalingauniversity.ac.in/ctcd/ctcd-meeting.jpg"
         imageAlt="CTCD"
         initialVisibleParagraphs={2}
         hidePointsUntilExpanded={true}
@@ -425,7 +425,7 @@ export default function CorporateTrainingAndConsultancyDivision() {
         title="Download Brochure 2025-26"
         description="Download our comprehensive Corporate Training and Consultancy Division (CTCD) brochure to explore our training programs, consultancy services, masterclasses, and how we can help your organization enhance employee skills, boost productivity, and achieve business excellence through customized training solutions."
         buttonLabel="Explore Now"
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/ctcd/CTCD+-+Corporate+Training+and+Consultancy+Division_compressed+(1).pdf"
+        href="https://cdn.kalingauniversity.ac.in/ctcd/CTCD+-+Corporate+Training+and+Consultancy+Division_compressed+(1).pdf"
         cardBackgroundColor="bg-[var(--button-red)]"
         useContainer={true}
       />

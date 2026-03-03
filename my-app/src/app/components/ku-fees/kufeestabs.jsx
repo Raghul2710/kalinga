@@ -1071,7 +1071,7 @@ const FEES_RESEARCH = {
             "Total Fees (INR)": "4,03,000/-",
         },
     ],
-    knowMoreHref: "https://kalinga-university.s3.ap-south-1.amazonaws.com/phd/Ph.+D.+2026+Notification.pdf",
+    knowMoreHref: "https://cdn.kalingauniversity.ac.in/phd/Ph.+D.+2026+Notification.pdf",
     notes: [],
 };
 

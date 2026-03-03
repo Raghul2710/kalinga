@@ -19,215 +19,215 @@ const TrainingAndPlacementCell = () => {
 
   const blueItems = [
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-1.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-1.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-2.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-2.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-3.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-3.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-4.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-4.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-5.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-5.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-6.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-6.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-7.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-7.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-8.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-8.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-9.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-9.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-10.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-10.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-11.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-11.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-12.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-12.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-13.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-13.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-14.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-14.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-15.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-15.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-16.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-16.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-17.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-17.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-18.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-18.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-19.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-19.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-20.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-20.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-21.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-21.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-22.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-22.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-23.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-23.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-24.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-24.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-25.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-25.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-26.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-26.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-27.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-27.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-28.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-28.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-29.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-29.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-30.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-30.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-31.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-31.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-32.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-32.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-33.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-33.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-34.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-34.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-35.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-35.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-36.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-36.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-37.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-37.webp",
       imageAlt: "",
     },
     // {
-    //   imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-38.webp",
+    //   imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-38.webp",
     //   imageAlt: "",
     // },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-39.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-39.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-40.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-40.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-41.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-41.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-42.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-42.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-43.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-43.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-44.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-44.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-45.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-45.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-46.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-46.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-47.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-47.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-48.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-48.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-49.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-49.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-50.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-50.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-51.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-51.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-52.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-52.webp",
       imageAlt: "",
     },
     {
-      imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/pt-53.webp",
+      imageSrc: "https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/pt-53.webp",
       imageAlt: "",
     },
   ]
@@ -305,16 +305,16 @@ const TrainingAndPlacementCell = () => {
           "The Career and Corporate Centre of Kalinga University is a hub for career guidance and training, and corporate partnerships. With modern infrastructure and resources, the centre meets industry standards and has even received appreciation from top organisations. The Kalinga University campus placements support cell introduces you to the professional world. We don't just prepare you for the corporate world, but give you a 360-degree training so that you can turn out to be a confident individual who is ready to tackle any challenge in life.",
           "With our personalised training programs, expert-led sessions, and interview preparation, you will be well-prepared to clear any job interview according to your skill set. Our expert mentors go beyond and guide you with skills that companies are looking for in the current job market, and even update the training modules accordingly. Apart from this, we also keep the database of job openings in various companies up-to-date, so that our students don't miss out on any opportunities. With our strong industry connections, we conduct campus drives each year, ensuring that our graduates are placed in leading companies with competitive salary packages."
         ]}
-        imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placemnt-intro.webp"
+        imageUrl="https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/placemnt-intro.webp"
         imageAlt="Objectives"
         initialVisibleParagraphs={1}
         showKnowMore={true}
       />
-      <ImageListItem items={items} description="" imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/placement/placement-training-cell/placement-intro-2.webp" title="Training And Placement Cell" />
+      <ImageListItem items={items} description="" imageSrc="https://cdn.kalingauniversity.ac.in/placement/placement-training-cell/placement-intro-2.webp" title="Training And Placement Cell" />
       <ImageContent
         title="Our Career And Corporate Resource Centre"
         description="The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS, Corporate Social Responsibility, Training and Placements, and Incubation support."
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/ccrc/ccrclogo.webp"
         imageAlt="Training And Placement Cell"
         buttonLink="/career-and-corporate-resource-centre"
         buttonText="Explore More"
@@ -470,7 +470,7 @@ const TrainingAndPlacementCell = () => {
         blueTitle="Our Prominent Recruiters"
         redTitle=""
         blueItems={blueItems}
-        ccrcLogo="https://kalinga-university.s3.ap-south-1.amazonaws.com/ccrc/ccrclogo.webp"
+        ccrcLogo="https://cdn.kalingauniversity.ac.in/ccrc/ccrclogo.webp"
         singleColumn={true}
         description=""
       />
@@ -481,61 +481,61 @@ const TrainingAndPlacementCell = () => {
           {
             id: 1,
             name: "Anisha Hussain",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(1).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(1).png",
             description: "MBA ",
           },
           {
             id: 2,
             name: "Yash Agarwal",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(2).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(2).png",
             description: "B.Pharma",
           },
           {
             id: 3,
             name: "Karishma meher",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(3).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(3).png",
             description: "B.com",
           },
           {
             id: 4,
             name: "David Kisku",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(4).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(4).png",
             description: "B.pharmacy",
           },
           {
             id: 5,
             name: "Aryan Prakash Gupta",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(5).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(5).png",
             description: "MBA",
           },
           {
             id: 6,
             name: "Ashley Christeena Thomas",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(6).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(6).png",
             description: "B.pharmacy",
           },
           {
             id: 7,
             name: "Gautam Mandal",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(7).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(7).png",
             description: "B.Tech CS",
           },
           {
             id: 8,
             name: "Mehek Sharma",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(8).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(8).png",
             description: "B.com",
           },
           {
             id: 9,
             name: "Adarsh choudhary",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(9).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(9).png",
             description: "B.com(Banking and Finance)",
           },
           {
             id: 10,
             name: "Rupali Sahu",
-            image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/training-and-placement-cell/Our-Outstanding-Achievers(10).png",
+            image: "https://cdn.kalingauniversity.ac.in/training-and-placement-cell/Our-Outstanding-Achievers(10).png",
             description: "MBA",
           },
 

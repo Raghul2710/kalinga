@@ -4,14 +4,14 @@ import React from 'react'
 import Image from 'next/image'
 
 const items = [
-  { id: 1, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-1.png', alt: 'Campus speaker' },
-  { id: 2, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-2.png', alt: 'Students chatting' },
-  { id: 3, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-3.png', alt: 'Lecture' },
-  { id: 4, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/social-media-4.png', alt: 'Career guidance' },
-  { id: 4, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/insta-6.png', alt: 'Career guidance' },
-  { id: 4, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/int-7.png', alt: 'Career guidance' },
-  { id: 4, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/int-8.png', alt: 'Career guidance' },
-  { id: 4, img: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/int-9.png', alt: 'Career guidance' },
+  { id: 1, img: 'https://cdn.kalingauniversity.ac.in/Home/social-media-1.png', alt: 'Campus speaker' },
+  { id: 2, img: 'https://cdn.kalingauniversity.ac.in/Home/social-media-2.png', alt: 'Students chatting' },
+  { id: 3, img: 'https://cdn.kalingauniversity.ac.in/Home/social-media-3.png', alt: 'Lecture' },
+  { id: 4, img: 'https://cdn.kalingauniversity.ac.in/Home/social-media-4.png', alt: 'Career guidance' },
+  { id: 4, img: 'https://cdn.kalingauniversity.ac.in/Home/insta-6.png', alt: 'Career guidance' },
+  { id: 4, img: 'https://cdn.kalingauniversity.ac.in/Home/int-7.png', alt: 'Career guidance' },
+  { id: 4, img: 'https://cdn.kalingauniversity.ac.in/Home/int-8.png', alt: 'Career guidance' },
+  { id: 4, img: 'https://cdn.kalingauniversity.ac.in/Home/int-9.png', alt: 'Career guidance' },
 ]
 
 export default function SocialThumbs({ className = '' }) {

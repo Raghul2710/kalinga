@@ -296,7 +296,7 @@ export default function Map({ backgroundColor = "", textColor = "", subtitleText
         <p className={`text-center ${textColor}`}>KU is a top private university in India that offers a dynamic platform to its National and International students, where unique ideas are appreciated and cultural diversity is celebrated. Our global students from 29+ Countries receive unparalleled mentorship and guidance throughout their academic journey.</p>
         <div className="relative flex justify-center">
           <Image
-            src="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/globe-new.png"
+            src="https://cdn.kalingauniversity.ac.in/about/globe-new.png"
             alt="Global Presence Map"
             width={900}
             height={600}

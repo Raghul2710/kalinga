@@ -35,7 +35,7 @@ const admissionOrganogramContent = {
   description: "MINDROID is a reflection of IEEE KU Student Branch’s journey into technology, innovation, and research. It highlights student articles, futuristic tech topics, and hands-on learning experiences.",
   buttonLabel: "Explore MINDROID",
   onClick: null,
-  href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE-KU-SB-Magazine_Apr-Sept-2022.pdf",
+  href: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE-KU-SB-Magazine_Apr-Sept-2022.pdf",
   buttonClassName: "!bg-white !text-black",
   arrowClassName: "!bg-[var(--dark-orange-red)]",
   arrowIconClassName: "!text-white",
@@ -57,31 +57,31 @@ const Gallery = dynamic(
 /* ---------------- GALLERY IMAGES ---------------- */
 
 const galleryImages = [
-  { id: 1, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(1).webp", alt: "IEEE(1)" },
-  { id: 2, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(2).webp", alt: "IEEE(2)" },
-  { id: 3, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(3).webp", alt: "IEEE(3)" },
-  { id: 4, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(4).webp", alt: "IEEE(4)" },
-  { id: 5, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(5).webp", alt: "IEEE(5)" },
-  { id: 6, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(6).webp", alt: "IEEE(6)" },
-  { id: 7, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(7).webp", alt: "IEEE(7)" },
-  { id: 8, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(8).webp", alt: "IEEE(8)" },
-  { id: 9, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(9).webp", alt: "IEEE(9)" },
-  { id: 10, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(10).webp", alt: "IEEE(10)" },
-  { id: 11, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(11).webp", alt: "IEEE(11)" },
-  { id: 12, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(12).webp", alt: "IEEE(12)" },
-  { id: 13, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(13).webp", alt: "IEEE(13)" },
-  { id: 14, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(14).webp", alt: "IEEE(14)" },
-  { id: 15, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(15).webp", alt: "IEEE(15)" },
-  { id: 16, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(16).webp", alt: "IEEE(16)" },
-  // { id: 17, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(17).webp", alt: "IEEE(17)" },
-  { id: 18, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(18).webp", alt: "IEEE(18)" },
-  { id: 19, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(19).webp", alt: "IEEE(19)" },
-  // { id: 20, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(20).webp", alt: "IEEE(20)" },
-  { id: 21, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(21).webp", alt: "IEEE(21)" },
-  { id: 22, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(22).webp", alt: "IEEE(22)" },
-  { id: 23, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(23).webp", alt: "IEEE(23)" },
-  { id: 24, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(24).webp", alt: "IEEE(24)" },
-  { id: 25, image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(25).webp", alt: "IEEE(25)" },
+  { id: 1, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(1).webp", alt: "IEEE(1)" },
+  { id: 2, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(2).webp", alt: "IEEE(2)" },
+  { id: 3, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(3).webp", alt: "IEEE(3)" },
+  { id: 4, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(4).webp", alt: "IEEE(4)" },
+  { id: 5, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(5).webp", alt: "IEEE(5)" },
+  { id: 6, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(6).webp", alt: "IEEE(6)" },
+  { id: 7, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(7).webp", alt: "IEEE(7)" },
+  { id: 8, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(8).webp", alt: "IEEE(8)" },
+  { id: 9, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(9).webp", alt: "IEEE(9)" },
+  { id: 10, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(10).webp", alt: "IEEE(10)" },
+  { id: 11, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(11).webp", alt: "IEEE(11)" },
+  { id: 12, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(12).webp", alt: "IEEE(12)" },
+  { id: 13, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(13).webp", alt: "IEEE(13)" },
+  { id: 14, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(14).webp", alt: "IEEE(14)" },
+  { id: 15, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(15).webp", alt: "IEEE(15)" },
+  { id: 16, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(16).webp", alt: "IEEE(16)" },
+  // { id: 17, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(17).webp", alt: "IEEE(17)" },
+  { id: 18, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(18).webp", alt: "IEEE(18)" },
+  { id: 19, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(19).webp", alt: "IEEE(19)" },
+  // { id: 20, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(20).webp", alt: "IEEE(20)" },
+  { id: 21, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(21).webp", alt: "IEEE(21)" },
+  { id: 22, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(22).webp", alt: "IEEE(22)" },
+  { id: 23, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(23).webp", alt: "IEEE(23)" },
+  { id: 24, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(24).webp", alt: "IEEE(24)" },
+  { id: 25, image: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE(25).webp", alt: "IEEE(25)" },
 ];
 
 /* ---------------- BREADCRUMB DATA ---------------- */
@@ -124,30 +124,30 @@ const researchSixGridButtons = [
 ];
 
 const aboutAccreditations = [
-  { id: 1, name: "KU Logo", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/ku+sb+logo.jpeg" },
-  { id: 2, name: "IEEE MP", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+MP+SECTION.jpg" },
-  { id: 3, name: "IEEE CS", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE-CS_LogoTM-black.png" },
-  { id: 4, name: "WIE", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/WIE+logo.png" },
+  { id: 1, name: "KU Logo", logo: "https://cdn.kalingauniversity.ac.in/IEEE/ku+sb+logo.jpeg" },
+  { id: 2, name: "IEEE MP", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+MP+SECTION.jpg" },
+  { id: 3, name: "IEEE CS", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE-CS_LogoTM-black.png" },
+  { id: 4, name: "WIE", logo: "https://cdn.kalingauniversity.ac.in/IEEE/WIE+logo.png" },
 ];
 
 const aboutsponsors = [
-  { id: 1, name: "A", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/A.png" },
-  { id: 2, name: "IEEE HTB", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+HTB.png" },
-  { id: 3, name: "IEEE CS", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+CS.png" },
-  { id: 5, name: "Chhattisgarh", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/chhattisgarh.png" },
-  { id: 6, name: "IEEE GGV", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+GGV.png" },
-  { id: 7, name: "IEEE B", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+B.png" },
-  { id: 8, name: "IEEE NRSB", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+NRSB.png" },
-  { id: 9, name: "KU", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/KU.png" },
-  { id: 10, name: "IEEE CT", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE+CT.png" },
-  { id: 11, name: "Global", logo: "https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/global.png" },
+  { id: 1, name: "A", logo: "https://cdn.kalingauniversity.ac.in/IEEE/A.png" },
+  { id: 2, name: "IEEE HTB", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+HTB.png" },
+  { id: 3, name: "IEEE CS", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+CS.png" },
+  { id: 5, name: "Chhattisgarh", logo: "https://cdn.kalingauniversity.ac.in/IEEE/chhattisgarh.png" },
+  { id: 6, name: "IEEE GGV", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+GGV.png" },
+  { id: 7, name: "IEEE B", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+B.png" },
+  { id: 8, name: "IEEE NRSB", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+NRSB.png" },
+  { id: 9, name: "KU", logo: "https://cdn.kalingauniversity.ac.in/IEEE/KU.png" },
+  { id: 10, name: "IEEE CT", logo: "https://cdn.kalingauniversity.ac.in/IEEE/IEEE+CT.png" },
+  { id: 11, name: "Global", logo: "https://cdn.kalingauniversity.ac.in/IEEE/global.png" },
 ];
 /* ---------------- PAGE COMPONENT ---------------- */
 
 
 // REQUIRED CONSTANTS
 const imageSrc =
-  "https://kalinga-university.s3.ap-south-1.amazonaws.com/IQAC/kalinga.webp";
+  "https://cdn.kalingauniversity.ac.in/IQAC/kalinga.webp";
 
 const message =
   "For research collaboration, testing services, and technical support, please contact us.";
@@ -158,49 +158,49 @@ const defaultButtons = [
     id: 1,
     text: "Edition 8 - Volume 4, Issue -2 July 2025 - December 2025",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/Vol4+issue+2.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/Vol4+issue+2.pdf",
   },
   {
     id: 2,
     text: "Edition 7 - Volume 4, Issue -1 January 2025 - June 2025",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/Vol4+issue+1.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/Vol4+issue+1.pdf",
   },
   {
     id: 3,
     text: "Edition 6 - Volume 3, Issue - 2 July - December 2024",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/vol3+issue+2.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/vol3+issue+2.pdf",
   },
   {
     id: 4,
     text: "Edition 5 - Volume 3, Issue- 1 January - June 2024",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/vol3+issue+1.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/vol3+issue+1.pdf",
   },
   {
     id: 5,
     text: "Edition 4 - Volume 2, Issue 2 July 2023-December 2023",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/vol+2+issue+2.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/vol+2+issue+2.pdf",
   },
   {
     id: 6,
     text: "Edition 3 - Volume 2, Issue 1 January - June 2023",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/vol+2+issue+1.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/vol+2+issue+1.pdf",
   },
   {
     id: 7,
     text: "Edition 2 - Volume 1, Issue 2 October –December 2022",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/vol+1+issue+2.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/vol+1+issue+2.pdf",
   },
   {
     id: 8,
     text: "Edition 1 - Volume 1, Issue 1 April-September 2022",
     onClick: null,
-    href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/ieee/vol1+issue+1.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/ieee/vol1+issue+1.pdf",
   },
 ];
 
@@ -209,7 +209,7 @@ export default function Page() {
     <>
       <ImageListItem
         items={objectives}
-        imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/IEEE(12).webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/IEEE/IEEE(12).webp"
         title="IEEE at a Glance"
         description={false}
         className="mt-16"
@@ -648,7 +648,7 @@ export default function Page() {
 
 
       <section className="w-full h-full container mx-auto  py-6">
-        <img src="https://kalinga-university.s3.ap-south-1.amazonaws.com/IEEE/posters.jpeg" alt=" Symposium Poster" className="w-full h-auto object-cover" />
+        <img src="https://cdn.kalingauniversity.ac.in/IEEE/posters.jpeg" alt=" Symposium Poster" className="w-full h-auto object-cover" />
       </section>
       <AccreditationRanking
         heading="Sponsors"

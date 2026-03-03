@@ -12,7 +12,7 @@ const UpcomingEvents = ({ events }) => {
   const displayEvents = events || [
     {
       id: 1,
-      image: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg',
+      image: 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
       alt: 'Event 1',
       badgeText: 'Day 5 Highlights',
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing'

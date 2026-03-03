@@ -45,7 +45,7 @@ const page = () => {
       <LibraryResource />
       <RaipurVideoSection
         videoId="hdL0Eeb6Moc"
-        thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/library/student-experience-library.webp"
+        thumbnail="https://cdn.kalingauniversity.ac.in/library/student-experience-library.webp"
         title=""
         description="" // optional
         alt="Video thumbnail"

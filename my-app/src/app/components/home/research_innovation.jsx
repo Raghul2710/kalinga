@@ -115,7 +115,7 @@ export default function ResearchInnovation() {
           <div className="relative flex justify-center md:justify-end items-center mt-6 md:mt-0">
             <div className="relative w-full h-[400px] rounded-[10px] overflow-hidden shadow-2xl">
               <Image
-                src="https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/staff-guiding.png"
+                src="https://cdn.kalingauniversity.ac.in/Home/staff-guiding.png"
                 alt="Research & Innovation"
                 fill
                 className="object-cover"

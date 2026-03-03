@@ -14,7 +14,7 @@ export default function ResearchPapersPage() {
                     "Browse through the research papers published by our esteemed faculty and students. Kalinga University remains committed to fostering a culture of rigorous inquiry and knowledge dissemination through high-impact research publications.",
                     "Our research community continues to contribute significantly to various disciplines, sharing insights and discoveries that address contemporary challenges and drive innovation forward."
                 ]}
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/research/research-main-content.webp"
+                imageUrl="https://cdn.kalingauniversity.ac.in/research/research-main-content.webp"
                 imageAlt="Research Papers"
                 showKnowMore={false}
             /> */}

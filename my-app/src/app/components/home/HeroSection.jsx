@@ -10,7 +10,7 @@ const HeroSection = () => {
         suppressHydrationWarning={true}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat  h-full w-full md:rounded-2xl"
         style={{
-          backgroundImage: `url('https://kalinga-university.s3.ap-south-1.amazonaws.com/kalingabanner.webp')`,
+          backgroundImage: `url('https://cdn.kalingauniversity.ac.in/kalingabanner.webp')`,
           backgroundColor: '#e6e9f2', // fallback color
         }}
       >

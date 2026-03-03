@@ -28,7 +28,7 @@ export default function ManagementDepartmentPage() {
             "The Department of Management Studies of KU trains young managers with a global level of knowledge about managerial and entrepreneurial skills. They will be prepared to tackle industrial challenges using skills that drive success in the competitive business environment. With seminars, guest lectures, and industrial visits, they will experience a complete holistic development.",
             "Our programs related to the department of management are designed to make future leaders plan wisely, make strategic decisions, and execute every action confidently. These programs are tailored to develop skilled professionals who can contribute meaningfully to the industry and economy."
         ],
-        imageUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/student.jpg",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
         imageAlt: "Department of Management",
     };
 
@@ -213,7 +213,7 @@ export default function ManagementDepartmentPage() {
             component: (
                 <div className="w-full h-[600px] bg-white rounded-lg overflow-hidden shadow-inner">
                     <iframe
-                        src="https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/MBA+all+COs+compiled.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                        src="https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/MBA+all+COs+compiled.pdf#toolbar=0&navpanes=0&scrollbar=0"
                         className="w-full h-full border-none"
                         title="MBA Course Outcomes"
                     />
@@ -227,7 +227,7 @@ export default function ManagementDepartmentPage() {
             id: 1,
             title: "Ideathon 1.0",
             date: "26 & 27 Nov, 2021",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
             imageAlt: "Ideathon 1.0",
             description: "Ideathon 1.0 - A flagship event providing a platform for students to showcase their innovative ideas, business plans, and entrepreneurial spirit.",
             buttonText: "Read More"
@@ -236,7 +236,7 @@ export default function ManagementDepartmentPage() {
             id: 2,
             title: "Ideathon 2.0",
             date: "16 - 18 Nov, 2022",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-2.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-2.jpeg",
             imageAlt: "Ideathon 2.0",
             description: "Ideathon 2.0 - Building on the success of the first edition, this event brought together brilliant minds to solve complex business challenges.",
             buttonText: "Read More"
@@ -245,7 +245,7 @@ export default function ManagementDepartmentPage() {
             id: 3,
             title: "Ideathon 3.0",
             date: "5 - 6 Jan, 2024",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-3.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-3.jpeg",
             imageAlt: "Ideathon 3.0",
             description: "Ideathon 3.0 - Continued the tradition of fostering innovation and providing students with industry insights and mentorship.",
             buttonText: "Read More"
@@ -254,7 +254,7 @@ export default function ManagementDepartmentPage() {
             id: 4,
             title: "Ideathon 4.0",
             date: "22 & 23 Nov, 2024",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-4.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-4.jpeg",
             imageAlt: "Ideathon 4.0",
             description: "Ideathon 4.0 - Focused on sustainable business models and creative problem-solving in a rapidly changing global economy.",
             buttonText: "Read More"
@@ -263,7 +263,7 @@ export default function ManagementDepartmentPage() {
             id: 5,
             title: "Ideathon 5.0",
             date: "4 & 5 Nov, 2025",
-            imageSrc: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/ma-e-5.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-5.jpeg",
             imageAlt: "Ideathon 5.0",
             description: "Ideathon 5.0 - The latest iteration of the competition, pushing boundaries and celebrating the entrepreneurial achievements of our students.",
             buttonText: "Read More"
@@ -356,7 +356,7 @@ export default function ManagementDepartmentPage() {
             <StudentCell
                 subtitle=""
                 title="Library"
-                imageSrc="https://kalinga-university.s3.ap-south-1.amazonaws.com/facilities/library-new.webp"
+                imageSrc="https://cdn.kalingauniversity.ac.in/facilities/library-new.webp"
                 imageAlt="Kalinga University Central Library"
                 description="Kalinga University, Raipur, hosts a modern and fully digitized Central Library that serves as a pivotal academic resource center supporting the learning, teaching, and research needs of the MBA program. Designed to foster a scholarly environment, the library integrates both traditional and digital resources with state-of-the-art services. 
                 
@@ -387,12 +387,12 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 1,
                         text: "Management Journal List",
-                        fileUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerece+and+Management/Management+Journal+List.pdf"
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/Management+Journal+List.pdf"
                     },
                     {
                         id: 2,
                         text: "Commerce & Management Title List",
-                        fileUrl: "https://kalinga-university.s3.ap-south-1.amazonaws.com/departments/Faculty+of+Commerce+%26+Management+Title+List+1.pdf"
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerce+%26+Management+Title+List+1.pdf"
                     }
                 ]}
             />
@@ -402,7 +402,7 @@ export default function ManagementDepartmentPage() {
                 useContainer={true}
                 description="Kalinga University follows a well-structured governance model to ensure smooth administration and institutional integrity."
                 showImage={false}
-                imageUrl="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/Organogram.png"
+                imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
                 imageAlt="Kalinga University Organogram"
                 buttons={[
                     {
@@ -471,10 +471,10 @@ export default function ManagementDepartmentPage() {
                 bgColor="bg-white"
                 marginClassName="mt-10"
                 customImages={[
-                    'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-1.png',
-                    'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-2.png',
-                    'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-3.png',
-                    'https://kalinga-university.s3.ap-south-1.amazonaws.com/Home/place-5.png'
+                    'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
                 ]}
             />
 

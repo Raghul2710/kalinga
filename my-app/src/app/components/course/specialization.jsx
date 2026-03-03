@@ -4,22 +4,22 @@ import Image from 'next/image';
 
 const cardData = [
     {
-        icon: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Extensive+Research+Facilities.svg',
+        icon: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg',
         title: "Become Tech-Savvy",
         description: "The world needs new technologies, and companies are hunting for skilled professionals who generate code or are good problem solvers. We'll help you turn your ideas into a viral application."
     },
     {
-        icon: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Networking+Opportunities.svg',
+        icon: 'https://cdn.kalingauniversity.ac.in/icons/Networking+Opportunities.svg',
         title: "Innovation & Creativity",
         description: "Transform your innovative ideas into reality with cutting-edge technology and creative problem-solving approaches that make a real impact in the digital world."
     },
     {
-        icon: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg',
+        icon: 'https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg',
         title: "Fast-Track Your Career",
         description: "Accelerate your professional growth with industry-relevant skills and hands-on experience that employers are actively seeking in today's competitive market."
     },
     {
-        icon: 'https://kalinga-university.s3.ap-south-1.amazonaws.com/icons/Career+Counseling.svg',
+        icon: 'https://cdn.kalingauniversity.ac.in/icons/Career+Counseling.svg',
         title: "Fast-Track Your Career",
         description: "Accelerate your professional growth with industry-relevant skills and hands-on experience that employers are actively seeking in today's competitive market."
     }

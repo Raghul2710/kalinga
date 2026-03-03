@@ -21,17 +21,17 @@ import SectionHeading from "../components/general/SectionHeading";
 //   {
 //     id: 3,
 //     text: "Details of Sanctioned Programme along with Annual Intake",
-//     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/List+of+Programmes+Running+in+KU.pdf",
+//     href: "https://cdn.kalingauniversity.ac.in/common/national-council/List+of+Programmes+Running+in+KU.pdf",
 //   },
 //   {
 //     id: 4,
 //     text: "Details of Faculty",
-//     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/List+of+Teaching+Staff+of+Faculty+of+Education.pdf",
+//     href: "https://cdn.kalingauniversity.ac.in/common/national-council/List+of+Teaching+Staff+of+Faculty+of+Education.pdf",
 //   },
 //   {
 //     id: 5,
 //     text: "Details of Students",
-//     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/List+of+Students+(Education+Deptt.)+2024-2026+%26+2023-2025.pdf",
+//     href: "https://cdn.kalingauniversity.ac.in/common/national-council/List+of+Students+(Education+Deptt.)+2024-2026+%26+2023-2025.pdf",
 //   },
 //   {
 //     id: 6,
@@ -61,17 +61,17 @@ import SectionHeading from "../components/general/SectionHeading";
 //   {
 //     id: 11,
 //     text: "Balance Sheet as on the Last Date of the Last Financial Year",
-//     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/K.+Balance+Sheet.pdf",
+//     href: "https://cdn.kalingauniversity.ac.in/common/national-council/K.+Balance+Sheet.pdf",
 //   },
 //   {
 //     id: 12,
 //     text: "Income and Expenditure Account for the Last Financial Year",
-//     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/L.+Income+%26+Expenditure.pdf",
+//     href: "https://cdn.kalingauniversity.ac.in/common/national-council/L.+Income+%26+Expenditure.pdf",
 //   },
 //   {
 //     id: 13,
 //     text: "Receipt and Payment Account for the Last Financial Year",
-//     href: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/M.+Receipt+%26+Payments.pdf",
+//     href: "https://cdn.kalingauniversity.ac.in/common/national-council/M.+Receipt+%26+Payments.pdf",
 //   },
 //   {
 //     id: 14,
@@ -107,7 +107,7 @@ const tableData = [
     title: "Balance sheet as on the last date of the last financial year",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/K.+Balance+Sheet.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/K.+Balance+Sheet.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"
@@ -135,7 +135,7 @@ const tableData = [
     title: "Details of faculty",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/List+of+Teaching+Staff+of+Faculty+of+Education.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/List+of+Teaching+Staff+of+Faculty+of+Education.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"
@@ -163,7 +163,7 @@ const tableData = [
     title: "Details of sanctioned programme along with annual intake",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/List+of+Programmes+Running+in+KU.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/List+of+Programmes+Running+in+KU.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"
@@ -177,7 +177,7 @@ const tableData = [
     title: "Details of students",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/List+of+Students+(Education+Deptt.)+2024-2026+%26+2023-2025.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/List+of+Students+(Education+Deptt.)+2024-2026+%26+2023-2025.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"
@@ -233,7 +233,7 @@ const tableData = [
     title: "Income and expenditure account for the last financial year",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/L.+Income+%26+Expenditure.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/L.+Income+%26+Expenditure.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"
@@ -275,7 +275,7 @@ const tableData = [
     title: "Receipt and payment account for the last financial year",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/M.+Receipt+%26+Payments.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/M.+Receipt+%26+Payments.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"
@@ -289,7 +289,7 @@ const tableData = [
     title: "Resolution NCTE ITEP",
     action: (
       <a
-        href="https://kalinga-university.s3.ap-south-1.amazonaws.com/common/national-council/Resolution+NCTE+ITEP.pdf"
+        href="https://cdn.kalingauniversity.ac.in/common/national-council/Resolution+NCTE+ITEP.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="text-[var(--button-red)] hover:underline"

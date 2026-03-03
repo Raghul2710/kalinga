@@ -32,7 +32,7 @@ export default function MediaCardSlider({
   cardBgClass = "bg-white",
   nameTextClass = "text-[var(--button-red)]",
   descriptionTextClass = "text-gray-600",
-  thumbnail = "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/placeholder-img.png",
+  thumbnail = "https://cdn.kalingauniversity.ac.in/common/placeholder-img.png",
   className = "",
   backgroundColor = "bg-white",
   swiperClassName = "media-card-slider",

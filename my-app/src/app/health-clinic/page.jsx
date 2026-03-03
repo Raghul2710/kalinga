@@ -39,7 +39,7 @@ const page = () => {
       <HealthClinicTable />
       <RaipurVideoSection
         videoId="ogUpFzbzP1c"
-        thumbnail="https://kalinga-university.s3.ap-south-1.amazonaws.com/about/about-banner.webp"
+        thumbnail="https://cdn.kalingauniversity.ac.in/about/about-banner.webp"
         title=""
         description="" // optional
         alt="Video thumbnail"

@@ -44,7 +44,7 @@ const admissionSteps = stepData.map((step, index) => ({
   title: step.title,
   description: step.description,
   backDescription: step.backDescription ?? step.description,
-  image: "https://kalinga-university.s3.ap-south-1.amazonaws.com/common/step1.png",
+  image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
 }));
 
 export default function AdmissionSteps({
