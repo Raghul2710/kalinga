@@ -1,34 +1,36 @@
-"use client"
-import React, { useEffect } from 'react'
-import { usePathname } from 'next/navigation'
-import StudentReportmainintro from '@/app/components/student-support/studentreportmainintro'
-import AdmissionCareer from '@/app/components/general/admission_cta'
-import Studentreportservices from '@/app/components/student-support/studentreportservices'
-import Studentreportcards from '@/app/components/student-support/studentreportcards'
+import StudentSupportClient from "./StudentSupportClient";
 
-function StudentReport() {
-  const pathname = usePathname();
+export const metadata = {
+  title: "Student Support Services | Academic & Emotional Guidance | Kalinga University",
+  description: "Explore the comprehensive student support services at Kalinga University. From academic counseling to emotional well-being, we ensure our students have the resources they need to thrive.",
+  keywords: "student support Kalinga University, academic counseling Raipur, emotional well-being university Chhattisgarh, student services India",
+  alternates: {
+    canonical: "https://kalingauniversity.ac.in/student-support",
+  },
+};
 
-  
+export default function StudentSupportPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Student Support - Kalinga University",
+    "description": "Dedicated support services for the holistic development and well-being of students at Kalinga University.",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kalingauniversity.ac.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Student Support", "item": "https://kalingauniversity.ac.in/student-support" }
+      ]
+    }
+  };
+
   return (
     <>
-      <style jsx global>{`
-      .absolute.inset-0 > img {
-        object-position: center 60% !important;
-      }
-    
-      @media (max-width: 768px) {
-        .absolute.inset-0 > img {
-          object-position: center 5% !important;
-        }
-      }
-    `}</style>
-      <StudentReportmainintro />
-      <Studentreportservices />
-      <Studentreportcards />
-      <AdmissionCareer />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <StudentSupportClient />
     </>
-  )
+  );
 }
-
-export default StudentReport

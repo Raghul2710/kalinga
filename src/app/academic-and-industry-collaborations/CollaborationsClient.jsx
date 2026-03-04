@@ -1,0 +1,343 @@
+"use client";
+
+import React from "react";
+import AdmissionCareer from "../components/general/admission_cta";
+import CenterOfExcellence from "../components/about/center_of_excellence";
+
+const clubSections = [
+    {
+        id: 1,
+        title: "MOU Partners",
+        clubs: [
+            {
+                name: "Profsys Softwares Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Profsys+Softwares+Pvt.+Ltd..webp",
+            },
+            {
+                name: "LG Electronics India Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/LG+Electronics+India+Pvt.+Ltd..webp",
+            },
+            {
+                name: "Kalpataru Power Transmission Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Kalpataru+Power+Transmission+Ltd..webp",
+            },
+            {
+                name: "Network computer",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Network+company.webp",
+            },
+            {
+                name: "Primeone Workforce Pvt.Ltd",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Primeone+Workforce+Pvt.+Ltd..webp",
+            },
+            {
+                name: "A1 Galaxy Trademark Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/A1+Galaxy+Trademark+Pvt.+Ltd..webp",
+            },
+            {
+                name: "R.R. Ispat",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/R.R.+Ispat.webp",
+            },
+            {
+                name: "JV Realty",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/JV+Realty.webp",
+            },
+            {
+                name: "Globecorp Microfinance Foundation",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Globecorp+Microfinance+Foundation.webp",
+            },
+            {
+                name: "Saubhagya Ventures Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Saubhagya+Ventures+Pvt.+Ltd..webp",
+            },
+            {
+                name: "Patidar Furniture House",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Patidar+Furniture+House.webp",
+            },
+            {
+                name: "CAD Academy",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/cad.webp",
+            },
+            {
+                name: "Magic Color Planet",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Magic+Color+Planet.webp",
+            },
+            {
+                name: " Lucintel Services India Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Lucintel+Services+India+Pvt.+Ltd..webp",
+            },
+            {
+                name: "Krishna Holidays",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Krishna+Holidays.webp",
+            },
+            {
+                name: "Param Web Info",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Param+Web+Info.webp",
+            },
+            {
+                name: "Just Dial Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Just+Dial+Ltd..webp",
+            },
+            {
+                name: "Adecco Group India",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Adecco+Group+India.webp",
+            },
+            {
+                name: "Globussoft Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Globussoft+Pvt.+Ltd..webp",
+            },
+            {
+                name: "Globecorp Skill Council Services Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Globecorp+Skill+Council+Services+Pvt.+Ltd..webp",
+            },
+            {
+                name: "Construction Industry Development Council (CIDC)",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Construction+Industry+Development+Council+(CIDC).webp",
+            },
+            {
+                name: "Bansod Realtors",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Bansod+Realtors.webp",
+            },
+            {
+                name: " Saluja Graphix",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Saluja+Graphix.webp",
+            },
+            {
+                name: "Swastik Group",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Swastik+Group.webp",
+            },
+            {
+                name: "Tata Power",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Tata+Power.webp",
+            },
+            {
+                name: " SaiSun Outsourcing Services Pvt. Ltd.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/SaiSun+Outsourcing+Services+Pvt.+Ltd..webp",
+            },
+            {
+                name: " 195 Holidays",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/195+Holidays.webp",
+            },
+            {
+                name: " 3S Inc.",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/3S+Inc.webp",
+            },
+            {
+                name: "Cytogene Research & Development",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Cytogene+Research+%26+Development.webp",
+            },
+            {
+                name: "Eiffcon",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Eiffcon.webp",
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "Certificates",
+        clubs: [
+            {
+                name: "IICCI – Gold",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/IICCI+-Gold1.webp",
+            },
+            {
+                name: "PHD Chamber",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/PHD-Chamber.webp",
+            },
+            {
+                name: "BNI – 2019",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/BNI+-+2019.webp",
+            },
+            {
+                name: "BNI – 2018",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/BNI+-+2018.webp",
+            },
+            {
+                name: "EDU-CLOUD",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/certificate-1.webp",
+            },
+        ],
+    },
+    {
+        id: 3,
+        title: "Partnership with National Academic Institutes",
+        clubs: [
+            {
+                name: "Dr. Radhabai Govt. Naveen Girls College, Raipur – Chhattisgarh",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Dr.+Radhabai+Govt.+Naveen+Girls+College%2C+Raipur+%E2%80%93+Chhattisgarh.webp",
+            },
+            {
+                name: "Rajamahendri Institute of Engineering & Technology – Andhra Pradesh",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Rajamahendri+Institute+of+Engineering+%26+Technology+%E2%80%93+Andhra+Pradesh.webp",
+            },
+            {
+                name: "Sathyabama Institute of Science & Technology – Chennai, Tamil Nadu",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Sathyabama+Institute+of+Science+%26+Technology+%E2%80%93+Chennai%2C+Tamil+Nadu.webp",
+            },
+            {
+                name: "Mgm's college of engineering Nanded-Maharashtra",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Mgm's+college+of+engineering+Nanded-Maharashtra.webp",
+            },
+            {
+                name: "Rajiv Gandhi National University of Law, Punjab",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Rajiv+Gandhi+National+University+of+Law%2C+Punjab.webp",
+            },
+            {
+                name: "Govt. Digvijay PG Autonomous College, Rajnandgaon – Chhattisgarh",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Govt.+Digvijay+PG+Autonomous+College%2C+Rajnandgaon+%E2%80%93+Chhattisgarh.webp",
+            },
+        ],
+    },
+    {
+        id: 4,
+        title: "Partnership with International Academic Institutions",
+        clubs: [
+            {
+                name: "Shaheed Prof.Rabbani Education University",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/international-institutions-1.webp",
+            },
+            {
+                name: "Academy of Journalism and Communication",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/international-institutions-2.webp",
+            },
+            {
+                name: "Hewad University",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/international-institutions-3.webp",
+            },
+            {
+                name: "Tribhuvan University",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/international-institutions-4.webp",
+            },
+            {
+                name: "Université Nano Conarxy Guinée",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/international-institutions-5.webp",
+            },
+            {
+                name: "International Mind Education Institute",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/international-institutions-6.webp",
+            },
+        ],
+    },
+    {
+        id: 5,
+        title: "MoU Signing",
+        clubs: [
+            {
+                name: "Young India",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/mou-1.webp",
+            },
+            {
+                name: "Davara University",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Davara+University.webp",
+            },
+            {
+                name: "CEED(Centre for Environment Education & Development)",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/CEED.webp",
+            },
+            {
+                name: "Brokenshire College",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Brokenshire+College.webp",
+            },
+            {
+                name: "CGWB (Central Ground Water Board)",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/CGWB.webp",
+            },
+            {
+                name: "Golf Federation of India",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Golf+Federation+of+India.webp",
+            },
+            {
+                name: "DADB (German Academy of Digital Education)",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/DADB_+German+Academy+of+Digital+Education.webp",
+            },
+            {
+                name: "Hi Tech Animation Pvt Ltd",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/Hi+Tech+Animation+Pvt.+Ltd.webp",
+            },
+            {
+                name: "NIILM University, Kaithal, Haryana",
+                image:
+                    "https://cdn.kalingauniversity.ac.in/Academic-and-Industry-Collaborations/NIILM+University.webp",
+            },
+        ],
+    },
+];
+
+const CollaborationsClient = () => {
+    return (
+        <>
+            {clubSections.map((section) => (
+                <CenterOfExcellence
+                    key={section.id}
+                    title={section.title}
+                    description=""
+                    showDescription={false}
+                    centres={section.clubs.map((club, index) => ({
+                        id: index + 1,
+                        name: club.name || " ",
+                        title: "",
+                        image: club.image || "/placeholder-logo.svg",
+                    }))}
+                />
+            ))}
+
+            <AdmissionCareer />
+        </>
+    );
+};
+
+export default CollaborationsClient;

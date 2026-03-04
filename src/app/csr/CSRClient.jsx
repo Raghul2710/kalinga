@@ -22,9 +22,28 @@ const CSRClient = ({
     aboutQuickLinks,
     targetGroups,
     villagesAdopted,
-    FAQItems,
-    renderCardGrid
+    FAQItems
 }) => {
+    const renderCardGrid = (items) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
+            {items.map((item, idx) => (
+                <div key={idx} className="bg-[var(--card-skin)] p-6 rounded-xl flex flex-col items-center text-center gap-4 hover:shadow-lg transition-all duration-300 group cursor-pointer border border-transparent hover:border-[var(--button-red)]/20">
+                    <div className="h-16 w-16 rounded-full bg-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                        <Image
+                            src={`https://cdn.kalingauniversity.ac.in/icons/${item.icon}`}
+                            alt={item.title}
+                            width={40}
+                            height={40}
+                            className="w-10 h-10 object-contain"
+                        />
+                    </div>
+                    <span className="font-semibold text-[var(--foreground)] text-lg leading-tight">
+                        {item.title}
+                    </span>
+                </div>
+            ))}
+        </div>
+    );
     return (
         <div>
             <ImageContent
