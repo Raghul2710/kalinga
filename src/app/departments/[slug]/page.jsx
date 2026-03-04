@@ -36,6 +36,7 @@ import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 // import CustomScrollCard from "@/app/components/gsap/CustomScrollCard"; // No longer used
 import Specialization from "@/app/components/course/specialization";
 import Image from "next/image";
+import { lawFaqs } from "@/app/lib/law-data";
 
 // Generate slug from department name if slug is not available
 const generateSlug = (name) => {
@@ -361,6 +362,8 @@ export default function DynamicDepartmentPage() {
       }))
   } : null;
 
+
+
   const faqItems = useMemo(() => {
     if (!departmentData?.faqs || !Array.isArray(departmentData.faqs) || departmentData.faqs.length === 0) {
       return [];
@@ -672,7 +675,17 @@ export default function DynamicDepartmentPage() {
         departmentId={departmentData?.id}
         fallbackToGlobal={true}
       />
+      .
       <Gallery title="Glimpses" images={galleryImages.length > 0 ? galleryImages : undefined} paddingClassName="py-0" />
+
+      {slug === "faculty-of-law" && lawFaqs && lawFaqs.length > 0 && (
+        <FAQ
+          title="Faculty of Law Details"
+          subtitle=""
+          items={lawFaqs}
+          key={`law-special-${departmentData.id}`}
+        />
+      )}
 
       {faqItems && faqItems.length > 0 && (
         <FAQ
