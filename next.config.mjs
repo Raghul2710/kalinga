@@ -41,6 +41,14 @@ const nextConfig = {
     ];
   },
   transpilePackages: ['motion', 'framer-motion', 'motion-dom', 'motion-utils'],
+  async rewrites() {
+    return [
+      {
+        source: '/pdf-proxy/:path*',
+        destination: 'https://cdn.kalingauniversity.ac.in/:path*',
+      },
+    ];
+  },
 };
 
 export default nextConfig;

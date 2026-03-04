@@ -230,7 +230,7 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
                         {/* Flipbook Content area */}
                         <div className="p-1">
                             <Document
-                                file={pdfUrl}
+                                file={pdfUrl?.includes('cdn.kalingauniversity.ac.in') ? pdfUrl.replace('https://cdn.kalingauniversity.ac.in', '/pdf-proxy') : pdfUrl}
                                 onLoadSuccess={onDocumentLoadSuccess}
                                 loading={
                                     <div className="flex flex-col items-center justify-center min-h-[400px] min-w-[300px]">

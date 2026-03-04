@@ -192,12 +192,12 @@ export default function AdmissionSteps({
           {showHeaderButton && (
             <div className="flex-shrink-0">
               {onCtaClick ? (
-                <GlobalArrowButton onClick={onCtaClick}>
+                <GlobalArrowButton onClick={onCtaClick} variant="white">
                   {ctaLabel}
                 </GlobalArrowButton>
               ) : (
                 <Link href={ctaHref} className="inline-flex">
-                  <GlobalArrowButton>
+                  <GlobalArrowButton variant="white">
                     {ctaLabel}
                   </GlobalArrowButton>
                 </Link>

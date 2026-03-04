@@ -62,7 +62,7 @@ const QuickLinks = ({
   iconWrapperClassName,
   children,
 }) => {
-  const isSlider = slider !== undefined ? slider : (links.length === 4 || links.length === 5);
+  const isSlider = slider !== undefined ? slider : (links.length >= 3);
   const [expandedCount, setExpandedCount] = useState(0)
   const swiperRef = useRef(null)
 

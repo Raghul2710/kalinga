@@ -139,16 +139,55 @@ const aboutQuickLinks = [
         title: "New-Age Programs",
         description: "Our next-gen programs, like Cinematography, Stock Market Trading, and Advanced IoT Applications.",
     },
+    {
+        id: 3,
+        title: "Industry Aligned",
+        description: "Curriculum aligned with NEP 2020 and industry standards to equip students with practical skills.",
+    },
+    {
+        id: 4,
+        title: "Research Excellence",
+        description: "90+ state-of-the-art labs and SIRO recognition fostering a culture of innovation.",
+    },
+    {
+        id: 5,
+        title: "Global Exposure",
+        description: "Students from 20+ countries and partnerships with international universities.",
+    },
 ];
 
 const universityAchievements = [
     {
         id: 1,
         stepNumber: "01",
-        title: "2018-19",
-        description: "Best University in Research & Innovation",
-        backDescription: "Best University in Research & Innovation - Global Leaders Award",
+        title: "2024-25",
+        description: "NIRF Rank Band 101-150",
+        backDescription: "Ranked among top 150 universities in India for the 4th consecutive year by NIRF.",
         image: "https://cdn.kalingauniversity.ac.in/common/step1.png",
+    },
+    {
+        id: 2,
+        stepNumber: "02",
+        title: "2023-24",
+        description: "SIRO Recognition",
+        backDescription: "Recognized as a Scientific and Industrial Research Organization (SIRO) by DSIR.",
+        image: "https://cdn.kalingauniversity.ac.in/common/step2.png",
+    },
+    {
+        id: 3,
+        stepNumber: "03",
+        title: "2021-22",
+        description: "NAAC B+ Accreditation",
+        backDescription: "Accredited with B+ Grade by NAAC, reflecting our commitment to quality education.",
+        image: "https://cdn.kalingauniversity.ac.in/common/step3.png",
+    },
+    {
+        id: 4,
+        stepNumber: "04",
+        title: "2018-19",
+        description: "Best Research University",
+        backDescription: "Awarded Best University in Research & Innovation by Global Leaders Award.",
+        image: "https://cdn.kalingauniversity.ac.in/common/step4.png",
     },
 ];
 
