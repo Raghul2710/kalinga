@@ -49,6 +49,20 @@ const nextConfig = {
       },
     ];
   },
+  // Best practice: short cache for HTML (speed + fresh after deploy), static assets keep Next default long cache.
+  async headers() {
+    return [
+      {
+        source: '/((?!_next/|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=60, s-maxage=60, stale-while-revalidate=86400',
+          },
+        ],
+      },
+    ];
+  },
   // Use webpack explicitly for DOMMatrix polyfill support
   webpack: (config, { isServer, webpack }) => {
     if (isServer) {
