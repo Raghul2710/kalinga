@@ -46,7 +46,7 @@ if (typeof window === 'undefined' && typeof global !== 'undefined') {
   }
 }
 
-// import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Breadcrumb from "./components/layout/Breadcrumb";
@@ -56,7 +56,6 @@ import { FlipbookProvider } from "./components/general/FlipbookContext";
 import ChatbotPopup from "./components/layout/ChatbotPopup";
 import { ChatbotProvider } from "./components/layout/ChatbotContext";
 
-/*
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -66,7 +65,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-*/
 
 export const metadata = {
   metadataBase: new URL("https://kalingauniversity.ac.in"),
@@ -101,7 +99,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`antialiased bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
         suppressHydrationWarning
       >
         <ChatbotProvider>
