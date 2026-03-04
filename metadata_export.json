@@ -1,0 +1,305 @@
+{
+  "about-raipur\\page.jsx": {
+    "static": "{\r\n  title: \"About Raipur | Smart City Raipur Chhattisgarh\",\r\n  description: \"Explore Raipur, the heart of Chhattisgarh and a growing smart city. Learn about its heritage, modern infrastructure, and student life at Kalinga University.\",\r\n  keywords: \"Raipur city guide, Naya Raipur smart city, Raipur tourism Chhattisgarh, Life in Raipur for students\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/about-raipur\",\r\n  },\r\n}"
+  },
+  "about-us\\page.jsx": {
+    "static": "{\r\n  title: \"About Kalinga University Raipur | Top Private University in Chhattisgarh\",\r\n  description: \"Discover Kalinga University Raipur, a NAAC B+ & UGC approved private university in Chhattisgarh offering top UG, PG, and PhD programs with excellent placements.\",\r\n  keywords: \"Kalinga University, Kalinga University Raipur, Private university in Chhattisgarh, UGC approved private university, NAAC accredited private university\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/about-us\",\r\n  },\r\n}"
+  },
+  "academic-and-industry-collaborations\\page.jsx": {
+    "static": "{\r\n  title: \"Academic & Industry Collaborations | Global Partnerships | Kalinga University\",\r\n  description: \"Explore Kalinga University's extensive academic and industry collaborations. Our global partnerships with MOU partners and international institutions enhance research and learning.\",\r\n  keywords: \"university collaborations Kalinga University, industry partnerships Raipur, MOU partners university Chhattisgarh, international academic partnerships India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/academic-and-industry-collaborations\",\r\n  },\r\n}"
+  },
+  "academic-calendar\\page.jsx": {
+    "static": "{\r\n  title: \"Academic Calendar 2025-26 | Important Dates | Kalinga University\",\r\n  description: \"Stay updated with Kalinga University's academic calendar 2025-26. Find important dates for semesters, exams, holidays, and academic events for all departments.\",\r\n  keywords: \"Academic calendar Kalinga University, university dates 2025-26 Raipur, semester schedule Chhattisgarh, exam dates Kalinga\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/academic-calendar\",\r\n  },\r\n}"
+  },
+  "academic-facilities\\page.jsx": {
+    "static": "{\r\n  title: \"Academic Facilities at Kalinga University | Labs & Libraries\",\r\n  description: \"Explore the academic facilities at Kalinga University Raipur. Our campus features 90+ advanced labs, a vast central library, and modern learning resources.\",\r\n  keywords: \"University academic facilities, 90+ Labs Kalinga University, Central Instrumentation Facility Raipur, Academic resources university\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/academic-facilities\",\r\n  },\r\n}"
+  },
+  "academic-planner\\page.jsx": {
+    "static": "{\r\n  title: \"Academic Planner | Semester Workflow | Kalinga University\",\r\n  description: \"Plan your semester with Kalinga University's academic planner. Detailed schedule of classes, assignments, and academic milestones for all programs.\",\r\n  keywords: \"Academic planner Kalinga University, university semester plan Raipur, student study schedule Chhattisgarh\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/academic-planner\",\r\n  },\r\n}"
+  },
+  "academics\\page.jsx": {
+    "static": "{\r\n  title: \"Academics at Kalinga University | Excellence in Education\",\r\n  description: \"Explore the academic excellence at Kalinga University. Discover our diverse range of UG, PG, and PhD programs, industry-aligned curriculum, and world-class faculty.\",\r\n  keywords: \"Academics Kalinga University, courses in Raipur, higher education Chhattisgarh, university programs India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/academics\",\r\n  },\r\n}"
+  },
+  "accreditations-and-approvals\\page.jsx": {
+    "static": "{\r\n    title: \"Accreditations & Approvals | Kalinga University Raipur\",\r\n    description: \"Kalinga University is UGC recognized, NAAC B+ accredited, and approved by AICTE, PCI, BCI, and NCTE. Explore our official rankings and approvals.\",\r\n    keywords: \"UGC approved university Chhattisgarh, NAAC accredited university Raipur, AICTE approved engineering college, PCI BCI approved courses\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/accreditations-and-approvals\",\r\n    },\r\n}"
+  },
+  "admission-procedure\\page.jsx": {
+    "static": "{\r\n    title: \"Admission Procedure 2026 | How to Apply | Kalinga University\",\r\n    description: \"Find out how to apply for admissions at Kalinga University for 2026. Step-by-step guide to the admission process, entrance exams, and eligibility criteria.\",\r\n    keywords: \"Kalinga University admission process, how to apply Raipur university, admission steps India 2026, university entrance exam Raipur\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/admission-procedure\",\r\n    },\r\n}"
+  },
+  "admissions\\page.jsx": {
+    "static": "{\r\n  title: \"University Admissions 2026 | Kalinga University Raipur Open\",\r\n  description: \"Apply for Kalinga University admissions 2026. Explore courses, eligibility criteria, fee structure, and scholarships at the best private university in Raipur.\",\r\n  keywords: \"University admissions 2026, Admission open 2026 university, How to apply for university admission, University eligibility criteria, University fees structure, University scholarship India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/admissions\",\r\n  },\r\n}"
+  },
+  "all-forms\\page.jsx": {
+    "static": "{\r\n    title: \"All Forms | Centralized Registration & Inquiry | Kalinga University\",\r\n    description: \"Access all Kalinga University forms in one place. Centralized access to application, registration, alumni, and inquiry forms for students and staff.\",\r\n    keywords: \"Kalinga University forms, university application Raipur, student registration Chhattisgarh, inquiry forms India\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/all-forms\",\r\n    },\r\n}"
+  },
+  "alumini\\page.js": {
+    "static": "{\r\n  title: \"Alumni Association | Global Network | Kalinga University\",\r\n  description: \"Join the Kalinga University Alumni Association. Connect with our global network of successful professionals, share experiences, and stay updated with university news.\",\r\n  keywords: \"Kalinga University alumni Raipur, university graduates network Chhattisgarh, alumni association India, KU alumni success stories\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/alumini\",\r\n  },\r\n}"
+  },
+  "annual-reports\\page.jsx": {
+    "static": "{\r\n  title: \"Annual Reports | Transparency | Kalinga University\",\r\n  description: \"View the annual reports of Kalinga University. Discover our institutional progress, financial reports, and academic achievements over the years.\",\r\n  keywords: \"Annual reports Kalinga University, university performance Raipur, institutional reports Chhattisgarh\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/annual-reports\",\r\n  },\r\n}"
+  },
+  "anti-ragging-cell\\page.jsx": {
+    "static": "{\r\n  title: \"Anti-Ragging Cell | Zero Tolerance Policy | Kalinga University\",\r\n  description: \"Kalinga University maintains a ragging-free campus with a zero-tolerance policy. Explore our anti-ragging committee, squads, and reporting mechanisms.\",\r\n  keywords: \"Anti ragging university Raipur, Zero tolerance policy ragging India, Student safety campus Chhattisgarh, Kalinga University grievance cell\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/anti-ragging-cell\",\r\n  },\r\n}"
+  },
+  "book-chapters\\page.jsx": {
+    "static": "{\r\n    title: \"Book Chapters Published | Faculty Research | Kalinga University\",\r\n    description: \"Explore the scholarly contributions of Kalinga University faculty. A comprehensive list of published book chapters across various academic disciplines.\",\r\n    keywords: \"Book chapters Kalinga University, research publications Raipur, faculty research Chhattisgarh\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/book-chapters\",\r\n    },\r\n}"
+  },
+  "book-publications\\page.jsx": {
+    "static": "{\r\n  title: \"Book Publications | Faculty Research | Kalinga University\",\r\n  description: \"Discover the books authored and published by the faculty of Kalinga University. Explore our contribution to global research and literature across disciplines.\",\r\n  keywords: \"Book publications Kalinga University, faculty authors Raipur, university research books Chhattisgarh\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/book-publications\",\r\n  },\r\n}"
+  },
+  "cafeteria-mess\\page.jsx": {
+    "static": "{\r\n  title: \"Cafeteria & Mess Facilities | Healthy Dining | Kalinga University\",\r\n  description: \"Enjoy a variety of healthy and delicious food options at Kalinga University. Our cafeteria and mess facilities provide hygienic dining for students and staff.\",\r\n  keywords: \"University cafeteria Raipur, Campus dining Chhattisgarh, Student mess facilities Kalinga, Hygienic food university India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/cafeteria-mess\",\r\n  },\r\n}"
+  },
+  "campus-facilities\\page.jsx": {
+    "static": "{\r\n  title: \"University Campus Facilities | Kalinga University Hostel & Sports\",\r\n  description: \"Explore Kalinga University campus facilities. We offer world-class hostels, libraries, gym, sports complex, and cafeteria in a 50+ acre eco-friendly campus.\",\r\n  keywords: \"University campus facilities, University hostel facilities, Student life in university, Kalinga University Raipur campus\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/campus-facilities\",\r\n  },\r\n}"
+  },
+  "campuslife\\page.jsx": {
+    "static": "{\r\n  title: \"Campus Life at Kalinga University | Student Experience\",\r\n  description: \"Experience the vibrant campus life at Kalinga University. Discover student clubs, sports, events, hostel facilities, and a supportive community for holistic growth.\",\r\n  keywords: \"Campus life Kalinga University, student life in Raipur, university facilities Chhattisgarh, student community India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/campuslife\",\r\n  },\r\n}"
+  },
+  "career-and-corporate-resource-centre\\page.js": {
+    "static": "{\r\n  title: \"Career and Corporate Resource Centre (CCRC) | Placements | Kalinga University\",\r\n  description: \"Explore the Career and Corporate Resource Centre at Kalinga University. We provide training, career guidance, internships, and placement support for all students.\",\r\n  keywords: \"CCRC Kalinga University, university placements Raipur, career guidance Chhattisgarh, student internships India, corporate training India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/career-and-corporate-resource-centre\",\r\n  },\r\n}"
+  },
+  "careers\\page.jsx": {
+    "static": "{\r\n  title: \"Careers at Kalinga University | Job Opportunities in Raipur\",\r\n  description: \"Join the faculty and staff at Kalinga University. Explore job openings for teaching, non-teaching, and administrative roles. Apply now for a rewarding career.\",\r\n  keywords: \"University jobs Raipur, Teaching vacancies Chhattisgarh, Kalinga University careers, Higher education recruitment India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/careers\",\r\n  },\r\n}"
+  },
+  "central-instrumentation-facility\\page.jsx": {
+    "static": "{\r\n  title: \"Central Instrumentation Facility (CIF) | Research Hub | Kalinga University\",\r\n  description: \"Discover the state-of-the-art Central Instrumentation Facility at Kalinga University. Supporting high-end research and analytical needs for faculty and external researchers.\",\r\n  keywords: \"CIF Kalinga University, research facilities Raipur, analytical instrumentation Chhattisgarh, university research hub India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/central-instrumentation-facility\",\r\n  },\r\n}"
+  },
+  "centresofexcellence\\page.jsx": {
+    "static": "{\r\n  title: \"Centres of Excellence | Innovation Hub | Kalinga University\",\r\n  description: \"Explore the various Centres of Excellence at Kalinga University. Advancing research, innovation, and industry collaborations in emerging fields of technology and management.\",\r\n  keywords: \"Centres of Excellence Kalinga University, innovation hubs Raipur, research centres Chhattisgarh, university industry collaboration India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/centresofexcellence\",\r\n  },\r\n}"
+  },
+  "chairman\\page.jsx": {
+    "static": "{\r\n  title: \"Chairman's Message | Leadership | Kalinga University\",\r\n  description: \"Read the message from the Chairman of Kalinga University. Learn about our commitment to providing quality education and fostering an environment of innovation and growth.\",\r\n  keywords: \"Chairman Kalinga University, university leadership Raipur, educational vision Chhattisgarh, academic growth India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/chairman\",\r\n  },\r\n}"
+  },
+  "chairs-and-their-activities\\page.jsx": {
+    "static": "{\r\n    title: \"Chairs and Their Activities | Academic Leadership | Kalinga University\",\r\n    description: \"Discover the various Academic Chairs at Kalinga University and their diverse activities. Promoting scholarly research, academic discourse, and leadership in specialized fields.\",\r\n    keywords: \"Academic Chairs Kalinga University, scholarly research Raipur, academic leadership Chhattisgarh, university discourse India\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/chairs-and-their-activities\",\r\n    },\r\n}"
+  },
+  "chancellor\\page.jsx": {
+    "static": "{\r\n  title: \"Chancellor's Message | Leadership | Kalinga University\",\r\n  description: \"Read the message from the Chancellor of Kalinga University. Discover our mission to empower students through transformative education and research excellence.\",\r\n  keywords: \"Chancellor Kalinga University, university leadership Raipur, academic mission Chhattisgarh, research excellence India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/chancellor\",\r\n  },\r\n}"
+  },
+  "chhattisgarh\\page.jsx": {
+    "static": "{\r\n  title: \"Discover Chhattisgarh | Culture & Heritage | Rice Bowl of India\",\r\n  description: \"Explore Chhattisgarh, the rice bowl of India. Known for its temples, waterfalls, bell metal art, and rich tribal heritage. Learn more about the state with Kalinga University.\",\r\n  keywords: \"Chhattisgarh tourism attractions, Rice bowl of India, Dhokra art Chhattisgarh, Bastar tribal culture tourism\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/chhattisgarh\",\r\n  },\r\n}"
+  },
+  "conferences-and-events\\page.jsx": {
+    "static": "{\r\n  title: \"Conferences and Events | Knowledge Exchange | Kalinga University\",\r\n  description: \"Explore the national and international conferences and events hosted by Kalinga University. A platform for scholars, researchers, and students to exchange knowledge and innovation.\",\r\n  keywords: \"University conferences Raipur, academic events Chhattisgarh, knowledge exchange India, Kalinga University event calendar\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/conferences-and-events\",\r\n  },\r\n}"
+  },
+  "contact-us\\page.jsx": {
+    "static": "{\r\n  title: \"Contact Kalinga University Raipur | Campus Address & Support\",\r\n  description: \"Get in touch with Kalinga University Raipur. Find our campus address, contact number, and email. Visit us for admissions inquiry or career guidance.\",\r\n  keywords: \"University contact number, University address Raipur, Kalinga University contact, Raipur university helpdesk\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/contact-us\",\r\n  },\r\n}"
+  },
+  "corporate-training-and-consultancy-division\\page.jsx": {
+    "static": "{\r\n  title: \"Corporate Training & Consultancy | Skill Development | Kalinga University\",\r\n  description: \"Discover the Corporate Training and Consultancy Division at Kalinga University. We offer specialized training programs and consultancy services for professionals and organizations.\",\r\n  keywords: \"Corporate training Raipur, consultancy services Chhattisgarh, professional development India, CTCD Kalinga University\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/corporate-training-and-consultancy-division\",\r\n  },\r\n}"
+  },
+  "courses\\[slug]\\page.jsx": {
+    "dynamic": "Uses generateMetadata function"
+  },
+  "csr\\page.js": {
+    "static": "{\r\n  title: \"Corporate Social Responsibility (CSR) | Social Initiative | Kalinga University\",\r\n  description: \"Explore the CSR initiatives at Kalinga University. Our commitment to community welfare, sustainable development, and social impact through education and empowerment.\",\r\n  keywords: \"CSR initiatives Kalinga University, social welfare Raipur, sustainable development Chhattisgarh, community empowerment India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/csr\",\r\n  },\r\n}"
+  },
+  "departments\\commerce\\page.jsx": {
+    "static": "{\r\n    title: \"Department of Commerce | Kalinga University Raipur\",\r\n    description: \"Explore the Department of Commerce at Kalinga University. Offering B.Com, M.Com, and PhD programs with industry-relevant training, diverse clubs, and excellent placement opportunities.\",\r\n    keywords: \"Kalinga University Raipur, Private university in Chhattisgarh, UG courses in Raipur, PG courses in Raipur, B.Com admission 2026, M.Com in Raipur, commerce colleges in Chhattisgarh\",\r\n    alternates: {\r\n        canonical: \"/departments/commerce/\",\r\n    },\r\n}"
+  },
+  "departments\\management\\page.jsx": {
+    "static": "{\r\n    title: \"Department of Management | Kalinga University Raipur\",\r\n    description: \"Discover the Department of Management at Kalinga University. Offering MBA, BBA, and specialized management programs with a focus on leadership, innovation, and industry readiness.\",\r\n    keywords: \"Kalinga University Raipur, Private university in Chhattisgarh, MBA admission 2026, BBA in Raipur, management colleges in Chhattisgarh, business studies, leadership training\",\r\n    alternates: {\r\n        canonical: \"/departments/management/\",\r\n    },\r\n}"
+  },
+  "departments\\[slug]\\page.jsx": {
+    "dynamic": "Uses generateMetadata function"
+  },
+  "director-general\\page.jsx": {
+    "static": "{\r\n  title: \"Director General's Message | Leadership | Kalinga University\",\r\n  description: \"Read the message from the Director General of Kalinga University. Learn about our vision for academic excellence, professional development, and student success.\",\r\n  keywords: \"Director General Kalinga University, university leadership Raipur, academic excellence Chhattisgarh, professional growth India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/director-general\",\r\n  },\r\n}"
+  },
+  "document-verification\\page.jsx": {
+    "static": "{\r\n  title: \"Document Verification | Student Services | Kalinga University\",\r\n  description: \"Request and complete document verification at Kalinga University. A streamlined process for verifying academic records and certificates for students and alumni.\",\r\n  keywords: \"Document verification Kalinga University, degree verification Raipur, transcript verification Chhattisgarh, university certificate verification India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/document-verification\",\r\n  },\r\n}"
+  },
+  "downloads\\page.jsx": {
+    "static": "{\r\n  title: \"Downloads | Resources | Kalinga University\",\r\n  description: \"Access and download important forms, brochures, syllabus, and academic resources from Kalinga University. All necessary documents for students and applicants in one place.\",\r\n  keywords: \"University downloads Kalinga University, admission forms Raipur, syllabus download Chhattisgarh, academic brochures India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/downloads\",\r\n  },\r\n}"
+  },
+  "ekeeda-digital-library\\page.jsx": {
+    "static": "{\r\n    title: \"Ekeeda Digital Library | Online Resources | Kalinga University\",\r\n    description: \"Access the Ekeeda Digital Library at Kalinga University. A comprehensive online platform with engineering, technology, and management resources for enhanced learning.\",\r\n    keywords: \"Digital library Kalinga University, Ekeeda online resources Raipur, university e-library Chhattisgarh, academic digital portal India\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/ekeeda-digital-library\",\r\n    },\r\n}"
+  },
+  "entrance-exam\\page.jsx": {
+    "static": "{\r\n  title: \"University Entrance Exams 2026 | KALSEE & KAL-MAT\",\r\n  description: \"Apply for KALSEE and KAL-MAT entrance exams at Kalinga University. Earn up to 100% scholarship. No negative marking, flexible scheduling, and online mode.\",\r\n  keywords: \"University entrance exam 2026, KALSEE exam registration, KAL-MAT admission test, University scholarship exam India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/entrance-exam\",\r\n  },\r\n}"
+  },
+  "executive-development-program\\page.jsx": {
+    "static": "{\r\n  title: \"Executive Development Program | Kalinga University\",\r\n  description: \"Prepare for new business challenges with Kalinga University's 1-year Executive Development Program. Enhance leadership skills and identifies innovative solutions.\",\r\n  keywords: [\"Executive Development Program\", \"Business Leadership\", \"Kalinga University\", \"Management Skills\"],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/executive-development-program/\",\r\n  },\r\n}"
+  },
+  "grievance-redressal\\page.jsx": {
+    "static": "{\r\n  title: \"Grievance Redressal | Student Welfare | Kalinga University\",\r\n  description: \"Submit and track grievances at Kalinga University. We provide a transparent and efficient mechanism for addressing student concerns and ensuring a fair academic environment.\",\r\n  keywords: \"Grievance redressal Kalinga University, student complaints Raipur, university welfare Chhattisgarh, academic concern resolution India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/grievance-redressal\",\r\n  },\r\n}"
+  },
+  "health-clinic\\page.jsx": {
+    "static": "{\r\n  title: \"University Health Clinic | Medical Facilities | Kalinga University\",\r\n  description: \"Ensuring student well-being at Kalinga University. Our on-campus health clinic provides medical assistance, first aid, and wellness support for all students.\",\r\n  keywords: \"University health clinic Raipur, Medical facilities Chhattisgarh, Student wellness support Kalinga, On-campus physician India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/health-clinic\",\r\n  },\r\n}"
+  },
+  "hostel\\page.jsx": {
+    "static": "{\r\n  title: \"University Hostels & Accommodation | Home Away From Home | Kalinga University\",\r\n  description: \"Experience comfortable and secure living at Kalinga University hostels. Explore our separate boys' and girls' hostels, modern amenities, mess facilities, and fee structures.\",\r\n  keywords: \"University hostels Raipur, Student accommodation Chhattisgarh, Boys and girls hostel Kalinga, Hostel fees and facilities India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/hostel\",\r\n  },\r\n}"
+  },
+  "ieee\\page.jsx": {
+    "static": "{\r\n  title: \"IEEE Student Branch | Kalinga University\",\r\n  description: \"Join the IEEE Student Branch at Kalinga University. Advance your technology skills through workshops, seminars, and global networking opportunities.\",\r\n  keywords: [\r\n    \"IEEE\",\r\n    \"Kalinga University\",\r\n    \"Student Branch\",\r\n    \"Engineering\",\r\n    \"Technology\",\r\n    \"Research\",\r\n    \"Workshops\",\r\n    \"Conferences\",\r\n    \"CS Chapter\",\r\n    \"AESS Chapter\",\r\n    \"WIE Affinity Group\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/ieee/\",\r\n  },\r\n}"
+  },
+  "important-links\\page.jsx": {
+    "static": "{\r\n  title: \"Important Links & Regulatory Bodies | Kalinga University\",\r\n  description:\r\n    \"Access important links to regulatory bodies like UGC, AICTE, BCI, and PCI. Stay informed about Kalinga University's affiliations and rankings.\",\r\n  keywords: [\r\n    \"UGC\",\r\n    \"AICTE\",\r\n    \"BCI\",\r\n    \"PCI\",\r\n    \"NAAC\",\r\n    \"NIRF\",\r\n    \"AISHE\",\r\n    \"Kalinga University\",\r\n    \"Regulatory Bodies\",\r\n    \"Affiliations\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/important-links/\",\r\n  },\r\n}"
+  },
+  "institution-innovation-council\\page.jsx": {
+    "static": "{\r\n  title: \"Institution's Innovation Council (IIC) | Kalinga University\",\r\n  description: \"Fostering a culture of innovation and entrepreneurship at Kalinga University. Our IIC promotes startups, IPR, and design thinking through MIC and AICTE initiatives.\",\r\n  keywords: \"Institution Innovation Council Raipur, IIC Kalinga University, Startup ecosystem Chhattisgarh, Innovation and entrepreneurship India HEIs, MIC AICTE initiatives\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/institution-innovation-council\",\r\n  },\r\n}"
+  },
+  "internal-quality-assurance-cell\\page.jsx": {
+    "static": "{\r\n  title: \"Internal Quality Assurance Cell (IQAC) | Kalinga University\",\r\n  description: \"The IQAC at Kalinga University ensures continuous improvement in academic and administrative performance. Explore our quality initiatives, audits, and certifications.\",\r\n  keywords: \"IQAC university Raipur, Internal Quality Assurance Cell Chhattisgarh, NIRF NAAC quality standards, University academic audits India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/internal-quality-assurance-cell\",\r\n  },\r\n}"
+  },
+  "international\\page.jsx": {
+    "static": "{\r\n  title: \"Visa & FRRO Guidelines for International Students | Kalinga University\",\r\n  description:\r\n    \"Important Visa and FRRO (Foreign Regional Registration Office) guidelines for international students at Kalinga University. Learn about registration, extension, and compliance.\",\r\n  keywords: [\r\n    \"Visa Guidelines\",\r\n    \"FRRO\",\r\n    \"International Students\",\r\n    \"Kalinga University\",\r\n    \"Foreign Student Registration\",\r\n    \"Student Visa India\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/international/\",\r\n  },\r\n}"
+  },
+  "international-students\\page.jsx": {
+    "static": "{\r\n  title: \"International Students Admissions | Kalinga University Raipur\",\r\n  description: \"Join Kalinga University, a global learning hub with students from 29+ countries. Explore UG, PG, and PhD programs for international students in India.\",\r\n  keywords: \"International student admission India, Study in India for foreign students, Kalinga University international collaborations, NRI admissions 2026\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/international-students\",\r\n  },\r\n}"
+  },
+  "ipr-cell\\page.jsx": {
+    "static": "{\r\n  title: \"Intellectual Property Rights (IPR) Cell | Kalinga University\",\r\n  description:\r\n    \"The IPR Cell at Kalinga University promotes awareness and management of Intellectual Property Rights. Learn about patents, copyrights, and trademarks for research and innovation.\",\r\n  keywords: [\r\n    \"IPR Cell\",\r\n    \"Intellectual Property Rights\",\r\n    \"Patents\",\r\n    \"Copyright\",\r\n    \"Trademark\",\r\n    \"Innovation\",\r\n    \"Kalinga University\",\r\n    \"Research Protection\",\r\n    \"IP Policy\",\r\n    \"IPR Committee\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/ipr-cell/\",\r\n  },\r\n}"
+  },
+  "kalinga-buzz\\page.jsx": {
+    "static": "{\r\n  title: \"Kalinga Buzz - Monthly Newsletters | Kalinga University\",\r\n  description:\r\n    \"Stay updated with Kalinga Buzz, the monthly newsletter of Kalinga University. Discover campus news, academic achievements, research breakthroughs, and events.\",\r\n  keywords: [\r\n    \"Kalinga Buzz\",\r\n    \"University Newsletter\",\r\n    \"Kalinga University News\",\r\n    \"Campus Updates\",\r\n    \"Academic Achievements\",\r\n    \"Monthly Newsletter\",\r\n    \"Kalinga University\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/kalinga-buzz/\",\r\n  },\r\n}"
+  },
+  "kalinga-incubation-foundation\\page.jsx": {
+    "static": "{\r\n  title: \"Kalinga Incubation Foundation (KIF) | Startup Incubation Centre\",\r\n  description:\r\n    \"Kalinga Incubation Foundation (KIF) is a leading startup incubation centre at Kalinga University. We provide mentorship, funding support, workspace, and legal guidance for budding entrepreneurs.\",\r\n  keywords: [\r\n    \"KIF\",\r\n    \"Kalinga Incubation Foundation\",\r\n    \"Startup Incubation\",\r\n    \"Entrepreneurship\",\r\n    \"Mentorship\",\r\n    \"Business Incubator India\",\r\n    \"Kalinga University\",\r\n    \"Seed Funding\",\r\n    \"Venture Capital\",\r\n    \"MSME Host Institute\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/kalinga-incubation-foundation/\",\r\n  },\r\n}"
+  },
+  "kalmat\\page.jsx": {
+    "static": "{\r\n  title: \"KAL-MAT - Kalinga Management Aptitude Test | BBA & MBA Entrance Exam\",\r\n  description:\r\n    \"KAL-MAT is the entrance exam for BBA and MBA programs at Kalinga University. Learn about exam pattern, eligibility, syllabus, and registration for management studies.\",\r\n  keywords: [\r\n    \"KAL-MAT\",\r\n    \"Kalinga Management Aptitude Test\",\r\n    \"BBA Entrance Exam\",\r\n    \"MBA Entrance Exam\",\r\n    \"Kalinga University\",\r\n    \"Management Entrance India\",\r\n    \"Business School Admissions\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/kal-mat/\",\r\n  },\r\n}"
+  },
+  "kalsee\\page.jsx": {
+    "static": "{\r\n  title: \"KALSEE - Kalinga Scholastic Entrance Examination | Admissions 2026-27\",\r\n  description:\r\n    \"KALSEE is the gateway to 130+ academic programs at Kalinga University. Apply online for UG, PG, and Ph.D. entrance exams. Check eligibility, exam pattern, and scholarship details.\",\r\n  keywords: [\r\n    \"KALSEE\",\r\n    \"Kalinga Scholastic Entrance Examination\",\r\n    \"University Entrance Exam\",\r\n    \"Kalinga University Admissions\",\r\n    \"UG PG Entrance Exam\",\r\n    \"Ph.D. Entrance Exam India\",\r\n    \"Scholarship Entrance Exam\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/kalsee/\",\r\n  },\r\n}"
+  },
+  "ku-fees\\page.jsx": {
+    "static": "{\r\n  title: \"Fee Structure 2026-27 | Kalinga University\",\r\n  description:\r\n    \"Detailed fee structure for various undergraduate, postgraduate, and Ph.D. programs at Kalinga University. Check course fees, hostel charges, and payment options.\",\r\n  keywords: [\r\n    \"Kalinga University Fees\",\r\n    \"Course Fee Structure\",\r\n    \"Hostel Fees\",\r\n    \"Tuition Fees\",\r\n    \"University Payment\",\r\n    \"KU Fees\",\r\n    \"Admission Fees\",\r\n    \"Scholarship Discounts\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/ku-fees/\",\r\n  },\r\n}"
+  },
+  "laboratories\\page.jsx": {
+    "static": "{\r\n  title: \"Advanced Laboratories & Research Facilities | Kalinga University\",\r\n  description: \"Experience practical learning in our state-of-the-art laboratories. From Engineering and Pharmacy to Fashion Design and Forensic Science, our facilities support innovation.\",\r\n  keywords: \"Engineering labs Raipur, Pharmacy research facilities Chhattisgarh, Computer science labs India, Forensic science laboratory university\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/laboratories\",\r\n  },\r\n}"
+  },
+  "layout.js": {
+    "static": "{\r\n  metadataBase: new URL(\"https://kalingauniversity.ac.in\"),\r\n  title: \"Kalinga University - Transforming Futures with Knowledge & Innovation\",\r\n  description: \"Kalinga University is a leading institution offering world-class education in engineering, management, science, arts, and more.\",\r\n  icons: {\r\n    icon: \"https://cdn.kalingauniversity.ac.in/favicon.png\",\r\n    shortcut: \"https://cdn.kalingauniversity.ac.in/favicon.png\",\r\n    apple: \"https://cdn.kalingauniversity.ac.in/favicon.png\",\r\n  },\r\n  other: {\r\n    \"google-fonts-inter\": \"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap\",\r\n    \"google-fonts-stix\": \"https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap\",\r\n  },\r\n}"
+  },
+  "leadership\\page.jsx": {
+    "static": "{\r\n  title: \"University Leadership & Administration | Kalinga University\",\r\n  description: \"Meet the visionary leaders of Kalinga University. Our administration is dedicated to operational excellence, academic quality, and student success.\",\r\n  keywords: \"University leadership Raipur, Kalinga University administration, Academic governance Chhattisgarh, Higher education management India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/leadership\",\r\n  },\r\n}"
+  },
+  "library\\page.jsx": {
+    "static": "{\r\n  title: \"Central Library | Digital & Physical Resources | Kalinga University\",\r\n  description: \"Access a world of knowledge at Kalinga University's Central Library. Explore thousands of books, digital journals, and e-resources through our e-access portal.\",\r\n  keywords: \"University library Raipur, Digital library Chhattisgarh, Kalinga University e-resources, Academic journals India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/library\",\r\n  },\r\n}"
+  },
+  "media\\page.jsx": {
+    "static": "{\r\n  title: \"Media Coverage & Awards | Kalinga University\",\r\n  description:\r\n    \"Explore Kalinga University's media coverage, press releases, and prestigious awards. Stay updated with our latest achievements and news highlights from top newspapers and media houses.\",\r\n  keywords: [\r\n    \"Kalinga University Media\",\r\n    \"Press Coverage\",\r\n    \"University Awards\",\r\n    \"News Highlights\",\r\n    \"Kalinga University Achievements\",\r\n    \"Press Releases\",\r\n    \"Dainik Bhaskar Kalinga\",\r\n    \"Patrika Kalinga University\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/media/\",\r\n  },\r\n}"
+  },
+  "mini-market\\page.jsx": {
+    "static": "{\r\n  title: \"On-Campus Mini Market | Student Conveniences | Kalinga University\",\r\n  description: \"Get daily essentials without leaving campus. Kalinga University's mini market offers groceries, stationery, and other supplies for the convenience of students and staff.\",\r\n  keywords: \"University mini market Raipur, Campus convenience store Chhattisgarh, Student essentials Kalinga University, Stationery and groceries campus India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/mini-market\",\r\n  },\r\n}"
+  },
+  "mou\\page.jsx": {
+    "static": "{\r\n    title: \"Memorandum of Understanding (MOU) | Kalinga University\",\r\n    description:\r\n        \"Kalinga University has signed several MOUs with national and international institutions, industries, and research organizations to promote academic excellence and research.\",\r\n    keywords: [\r\n        \"Kalinga University MOU\",\r\n        \"Memorandum of Understanding\",\r\n        \"Academic Collaboration\",\r\n        \"Industry Partnership\",\r\n        \"University Tie-ups\",\r\n        \"International Collaborations\",\r\n    ],\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/mou/\",\r\n    },\r\n}"
+  },
+  "national-council-teacher-education\\page.jsx": {
+    "static": "{\r\n  title: \"National Council for Teacher Education (NCTE) Compliance | Kalinga University\",\r\n  description:\r\n    \"Public disclosure and compliance documents for the National Council for Teacher Education (NCTE) at Kalinga University. View details on sanctioned programs, faculty, and infrastructure for teacher education.\",\r\n  keywords: [\r\n    \"NCTE\",\r\n    \"National Council for Teacher Education\",\r\n    \"Kalinga University\",\r\n    \"Teacher Education Compliance\",\r\n    \"B.Ed. M.Ed. Programs\",\r\n    \"Education Faculty\",\r\n    \"Public Disclosure NCTE\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/national-council-teacher-education/\",\r\n  },\r\n}"
+  },
+  "Ncc\\page.jsx": {
+    "static": "{\r\n  title: \"National Cadet Corps (NCC) | Discipline & Valor | Kalinga University\",\r\n  description: \"Shape your character and develop leadership with the NCC at Kalinga University. Our active unit offers training, camps, and opportunities to serve the nation.\",\r\n  keywords: \"NCC university Raipur, National Cadet Corps Chhattisgarh, NCC training and camps India, Student leadership and discipline Kalinga\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/ncc\",\r\n  },\r\n}"
+  },
+  "news-and-events\\[slug]\\page.jsx": {
+    "dynamic": "Uses generateMetadata function"
+  },
+  "nss\\page.jsx": {
+    "static": "{\r\n  title: \"National Service Scheme (NSS) | Not Me, But You | Kalinga University\",\r\n  description: \"Join the NSS at Kalinga University and contribute to community development. Our 'Not Me, But You' motto drives students to engage in social service and nation-building.\",\r\n  keywords: \"NSS university Raipur, National Service Scheme Chhattisgarh, Community service students Kalinga, NSS activities and volunteers India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/nss\",\r\n  },\r\n}"
+  },
+  "organogram\\page.jsx": {
+    "static": "{\r\n    title: \"University Organogram | Governance & Hierarchy | Kalinga University\",\r\n    description:\r\n        \"Explore the organizational structure of Kalinga University. Understand our governance model, leadership hierarchy, and administrative flow from the Chancellor to academic departments.\",\r\n    keywords: [\r\n        \"Kalinga University Organogram\",\r\n        \"University Hierarchy\",\r\n        \"Governance Structure\",\r\n        \"Administrative Flow\",\r\n        \"University Leadership\",\r\n        \"Organizational Chart\",\r\n    ],\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/organogram/\",\r\n    },\r\n}"
+  },
+  "other-committees\\page.jsx": {
+    "static": "{\r\n  title: \"Statutory Committees & Grievance Redressal | Kalinga University\",\r\n  description: \"Explore the various statutory committees at Kalinga University, including the Internal Complaint Committee, Women Cell, and SC/ST Cell, ensuring a safe academic environment.\",\r\n  keywords: \"University committees Raipur, Grievance redressal Chhattisgarh, Women cell university India, SC ST cell academic governance\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/other-committees\",\r\n  },\r\n}"
+  },
+  "page.js": {
+    "static": "{\r\n  title: \"Kalinga University Raipur | UGC Approved Private University\",\r\n  description: \"Kalinga University Raipur is a NAAC accredited, UGC approved private university in Chhattisgarh. Admission open 2026 for B.Tech, MBA, Law, and 100+ UG/PG courses.\",\r\n  keywords: \"Kalinga University Raipur, Private university in Chhattisgarh, UGC approved private university, NAAC accredited private university, University admissions 2026\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/\",\r\n  },\r\n}"
+  },
+  "patents\\page.jsx": {
+    "static": "{\r\n    title: \"Patents & Intellectual Property | Kalinga University\",\r\n    description:\r\n        \"Explore the innovative research and patents filed by Kalinga University. Our commitment to intellectual property and technological advancement is reflected in our growing list of national and international patents.\",\r\n    keywords: [\r\n        \"Kalinga University Patents\",\r\n        \"Intellectual Property Rights\",\r\n        \"Research Innovations\",\r\n        \"University Patents India\",\r\n        \"Scientific Research\",\r\n        \"Innovation & Research\",\r\n    ],\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/patents/\",\r\n    },\r\n}"
+  },
+  "pay-online\\page.jsx": {
+    "static": "{\r\n  title: \"Online Fee Payment | National & International | Kalinga University\",\r\n  description:\r\n    \"Securely pay your university fees online at Kalinga University. Options available for both national and international students. Quick, safe, and convenient payment gateway.\",\r\n  keywords: [\r\n    \"Kalinga University Pay Online\",\r\n    \"Online Fee Payment\",\r\n    \"University Payment Gateway\",\r\n    \"Student Fee Payment\",\r\n    \"International Student Payment\",\r\n    \"Net Banking University Fees\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/pay-online/\",\r\n  },\r\n}"
+  },
+  "phd\\page.jsx": {
+    "static": "{\r\n  title: \"Ph.D. Programs | Research & Doctoral Studies | Kalinga University\",\r\n  description:\r\n    \"Pursue advanced research with Ph.D. programs at Kalinga University. Explore our doctoral research departments, eligibility criteria, admission policy, and research resources.\",\r\n  keywords: [\r\n    \"Ph.D. Programs\",\r\n    \"Doctoral Studies India\",\r\n    \"Research at Kalinga University\",\r\n    \"Ph.D. Admission Policy\",\r\n    \"Research Methodology\",\r\n    \"Doctor of Philosophy\",\r\n    \"Research Scholars\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/phd/\",\r\n  },\r\n}"
+  },
+  "podcast\\page.jsx": {
+    "static": "{\r\n  title: \"Kalinga Podcast | Big Ideas & Bold Voices | Kalinga University\",\r\n  description:\r\n    \"Listen to inspiring conversations, expert talks, and student stories on the Kalinga University Podcast. A platform for students, faculty, alumni, and industry leaders to share bold ideas.\",\r\n  keywords: [\r\n    \"Kalinga Podcast\",\r\n    \"University Podcast\",\r\n    \"Educational Podcast India\",\r\n    \"Student Voices\",\r\n    \"Academic Conversations\",\r\n    \"Industry Leader Interviews\",\r\n    \"Student Media Kalinga\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/podcast/\",\r\n  },\r\n}"
+  },
+  "privacy-policy\\page.jsx": {
+    "static": "{\r\n  title: \"Privacy Policy | Kalinga University\",\r\n  description:\r\n    \"Learn about how Kalinga University collects, uses, and protects your personal information. Our privacy policy ensures transparency and security for all our website visitors and students.\",\r\n  keywords: [\r\n    \"Privacy Policy\",\r\n    \"Data Protection\",\r\n    \"Kalinga University Privacy\",\r\n    \"Information Security\",\r\n    \"User Data Policy\",\r\n    \"Privacy Terms\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/privacy-policy/\",\r\n  },\r\n}"
+  },
+  "pro-chancellor\\page.jsx": {
+    "static": "{\r\n  title: \"Pro-Chancellor's Message | Leadership | Kalinga University\",\r\n  description: \"Read the message from the Pro-Chancellor of Kalinga University. Our focus on student success, industry collaboration, and global academic standards.\",\r\n  keywords: \"Pro-Chancellor Kalinga University, university leadership Raipur, student success Chhattisgarh, global education India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/pro-chancellor\",\r\n  },\r\n}"
+  },
+  "radio\\page.jsx": {
+    "static": "{\r\n  title: \"Kalinga Radio | Campus Voice & Live Updates | Kalinga University\",\r\n  description:\r\n    \"Tune into Kalinga Radio, the official voice of Kalinga University. Stay updated with campus news, trending topics, live shows, and interviews with students, faculty, and experts.\",\r\n  keywords: [\r\n    \"Kalinga Radio\",\r\n    \"University Radio Station\",\r\n    \"Campus Radio India\",\r\n    \"Live Campus News\",\r\n    \"Student Radio Kalinga\",\r\n    \"University Broadcast\",\r\n    \"Kalinga Radio App\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/radio/\",\r\n  },\r\n}"
+  },
+  "refund-policy\\page.jsx": {
+    "static": "{\r\n    title: \"Refund & Cancellation Policy | Kalinga University\",\r\n    description:\r\n        \"Review Kalinga University's refund and cancellation policy. Our guidelines follow the University Grants Commission (UGC) norms for fee refunds and course cancellations.\",\r\n    keywords: [\r\n        \"Refund Policy\",\r\n        \"Cancellation Policy\",\r\n        \"Kalinga University Refund\",\r\n        \"UGC Refund Guidelines\",\r\n        \"Fee Refund Policy\",\r\n        \"University Cancellation Terms\",\r\n    ],\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/refund-policy/\",\r\n    },\r\n}"
+  },
+  "registrar\\page.jsx": {
+    "static": "{\r\n  title: \"Registrar's Message | Kalinga University Raipur\",\r\n  description: \"Read the message from Dr. Sandeep Gandhi, Registrar of Kalinga University. Learn about our commitment to placement, internships, and student success.\",\r\n  keywords: \"Registrar Kalinga University, Dr. Sandeep Gandhi, University administration, Admissions and placements Raipur\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/registrar\",\r\n  },\r\n}"
+  },
+  "research\\page.jsx": {
+    "static": "{\r\n  title: \"Research & Innovation | Kalinga University Raipur\",\r\n  description: \"Explore research and innovation at Kalinga University. Our high-tech laboratories, IPR cell, and CIF support groundbreaking research across all disciplines.\",\r\n  keywords: \"University research Raipur, IPR cell university India, Research publications Chhattisgarh, Ph.D. research Kalinga University\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/research\",\r\n  },\r\n}"
+  },
+  "research-conferences\\page.jsx": {
+    "static": "{\r\n  title: \"Research Conferences | Global & National Academic Events | Kalinga University\",\r\n  description:\r\n    \"Explore the upcoming and past research conferences organized by Kalinga University. A platform for scholars, experts, and students to discuss innovative ideas in technology, law, pharmacy, and more.\",\r\n  keywords: [\r\n    \"Research Conferences\",\r\n    \"International Conference 2025\",\r\n    \"National Conference Kalinga\",\r\n    \"Academic Events Raipur\",\r\n    \"Scientific Gatherings\",\r\n    \"IEEE Conferences\",\r\n    \"Research Symposia\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/research-conferences/\",\r\n  },\r\n}"
+  },
+  "research-facilities\\page.jsx": {
+    "static": "{\r\n    title: \"Research Facilities & CoE | Kalinga University Raipur\",\r\n    description: \"Discover the research facilities at Kalinga University. Our Centres of Excellence provide skill-based training in AI, EV, Drone Technology, and Cyber Security.\",\r\n    keywords: \"Research university Raipur, Centres of Excellence Kalinga, University innovation hub, Skill-based training Raipur, Kalinga University Research\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/research-facilities\",\r\n    },\r\n}"
+  },
+  "research-papers\\page.jsx": {
+    "static": "{\r\n    title: \"Research Papers & Publications | Kalinga University\",\r\n    description:\r\n        \"Browse the research papers and academic publications by the faculty and students of Kalinga University. We are committed to fostering a culture of rigorous inquiry and innovation.\",\r\n    keywords: [\r\n        \"Research Papers\",\r\n        \"Academic Publications\",\r\n        \"Kalinga University Research\",\r\n        \"Faculty Publications\",\r\n        \"Scientific Research Papers\",\r\n        \"Journal Articles\",\r\n        \"Research Innovation\",\r\n    ],\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/research-papers/\",\r\n    },\r\n}"
+  },
+  "research-papers-and-books-published\\page.jsx": {
+    "static": "{\r\n    title: \"Publications, Patents & Books | Research Output | Kalinga University\",\r\n    description:\r\n        \"Comprehensive record of research papers, patents filed, and books published by Kalinga University. Discover our academic contributions across multiple years and disciplines.\",\r\n    keywords: [\r\n        \"Research Papers\",\r\n        \"Patents Filed\",\r\n        \"Books Published\",\r\n        \"Academic Publications\",\r\n        \"University Research Output\",\r\n        \"Scientific Patents India\",\r\n        \"Kalinga University Faculty Research\",\r\n    ],\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/research-papers-and-books-published/\",\r\n    },\r\n}"
+  },
+  "research-resources\\page.jsx": {
+    "static": "{\r\n  title: \"Research Resources | Academic Toolkit | Kalinga University\",\r\n  description: \"Access a wide range of research resources at Kalinga University, including library access, SPSS software, high-performance computing, and seed money for innovation.\",\r\n  keywords: \"research resources Kalinga University, academic toolkit Raipur, university research facilities Chhattisgarh, library access university India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/research-resources\",\r\n  },\r\n}"
+  },
+  "rti\\page.jsx": {
+    "static": "{\r\n  title: \"Right to Information (RTI) | Transparency | Kalinga University\",\r\n  description: \"Kalinga University adheres to the RTI Act, 2005. Details of the Public Information Officer (PIO) and Appellate Authority for submitting RTI applications.\",\r\n  keywords: \"RTI university Raipur, Right to Information act India, University transparency portal Chhattisgarh, PIO Kalinga University\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/rti\",\r\n  },\r\n}"
+  },
+  "safety-and-security\\page.jsx": {
+    "static": "{\r\n  title: \"Campus Safety & Security | 24/7 Protection | Kalinga University\",\r\n  description: \"Your safety is our priority. Kalinga University provides 24/7 security, CCTV surveillance, and a dedicated security team to ensure a safe learning environment.\",\r\n  keywords: \"Campus security Raipur, Student safety Chhattisgarh, University CCTV surveillance India, 24/7 security campus Kalinga\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/safety-and-security\",\r\n  },\r\n}"
+  },
+  "scholarships\\page.jsx": {
+    "static": "{\r\n  title: \"Scholarships 2026-27 | Kalinga University Raipur\",\r\n  description: \"Explore Kalinga University scholarships for meritorious students. We offer social, merit, and sports scholarships worth 3 Crores+ distributed. Apply now.\",\r\n  keywords: \"University scholarship India, Merit scholarship Raipur, Scholarships for students 2026, Kalinga University financial aid, SC/ST scholarships Chhattisgarh\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/scholarships\",\r\n  },\r\n}"
+  },
+  "sports-and-wellness-centre\\page.jsx": {
+    "static": "{\r\n  title: \"Sports & Wellness Centre | Fitness Facilities | Kalinga University\",\r\n  description: \"Promoting a healthy lifestyle at Kalinga University. Explore our world-class indoor and outdoor sports facilities, gymnasium, and wellness programs for students.\",\r\n  keywords: \"University sports facilities Raipur, Gymnasium Chhattisgarh, Indoor outdoor sports university India, Fitness and wellness for students\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/sports-and-wellness-centre\",\r\n  },\r\n}"
+  },
+  "student-clubs\\page.jsx": {
+    "static": "{\r\n  title: \"Student Clubs | Academic & Creative Societies | Kalinga University\",\r\n  description:\r\n    \"Join the vibrant student clubs at Kalinga University. From technology and law to arts and humanities, our clubs foster leadership, creativity, and professional skills in a collaborative environment.\",\r\n  keywords: [\r\n    \"Student Clubs\",\r\n    \"University Societies\",\r\n    \"Academic Clubs\",\r\n    \"Vibrant Campus Life\",\r\n    \"Student Leadership\",\r\n    \"Extra-curricular Activities\",\r\n    \"Student Organizations Raipur\",\r\n  ],\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/student-clubs/\",\r\n  },\r\n}"
+  },
+  "student-support\\page.jsx": {
+    "static": "{\r\n  title: \"Student Support Services | Academic & Emotional Guidance | Kalinga University\",\r\n  description: \"Explore the comprehensive student support services at Kalinga University. From academic counseling to emotional well-being, we ensure our students have the resources they need to thrive.\",\r\n  keywords: \"student support Kalinga University, academic counseling Raipur, emotional well-being university Chhattisgarh, student services India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/student-support\",\r\n  },\r\n}"
+  },
+  "student-welfare\\page.jsx": {
+    "static": "{\r\n    title: \"Student Welfare | Activities, Sports & NSS | Kalinga University\",\r\n    description: \"Learn about student welfare initiatives at Kalinga University, including sports, cultural activities, NSS, NCC, and young Indians (Yi) activities. Supporting our students' holistic development.\",\r\n    keywords: \"student welfare Kalinga University, sports activities university Raipur, NSS Kalinga, NCC university Chhattisgarh, university cultural events India\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/student-welfare\",\r\n    },\r\n}"
+  },
+  "students-counselling-cell\\page.jsx": {
+    "static": "{\r\n    title: \"Students Counselling Cell | Wellness & Career Support | Kalinga University\",\r\n    description: \"Kalinga University's Counselling Cell provides emotional, mental, and career support for students. Navigate your academic journey with confidence and clarity through our wellness programs.\",\r\n    keywords: \"Students counselling Kalinga University, mental health support Raipur, career counselling university Chhattisgarh, student wellness India\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/students-counselling-cell\",\r\n    },\r\n}"
+  },
+  "Sustainability\\page.jsx": {
+    "static": "{\r\n  title: \"Sustainability & SGD Cell | Green Campus | Kalinga University\",\r\n  description: \"Kalinga University is committed to the UN Sustainable Development Goals (SDGs). Explore our green initiatives, waste management, and solar energy projects for a better future.\",\r\n  keywords: \"Sustainability university Raipur, Sustainable Development Goals Chhattisgarh, Green campus Kalinga, SDG implementation India higher education\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/sustainability\",\r\n  },\r\n}"
+  },
+  "terms-conditions\\page.jsx": {
+    "static": "{\r\n  title: \"Terms and Conditions | Online Payments | Kalinga University\",\r\n  description: \"Read the terms and conditions for using Kalinga University's online payment services. Understand our policies on general terms, limitation of liability, and personal information.\",\r\n  keywords: \"terms and conditions Kalinga University, online payment terms Raipur, university payment policies Chhattisgarh, Kalinga University e-payment India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/terms-conditions\",\r\n  },\r\n}"
+  },
+  "thank-you\\page.jsx": {
+    "static": "{\r\n    title: \"Thank You | Submission Received | Kalinga University\",\r\n    description: \"Thank you for contacting Kalinga University. Your submission has been received successfully, and our team will get back to you shortly.\",\r\n    keywords: \"thank you Kalinga University, submission successful Raipur, contact university Chhattisgarh\",\r\n    alternates: {\r\n        canonical: \"https://kalingauniversity.ac.in/thank-you\",\r\n    },\r\n    robots: {\r\n        index: false,\r\n        follow: true,\r\n    }\r\n}"
+  },
+  "training-and-placement-cell\\page.jsx": {
+    "static": "{\r\n  title: \"Training & Placement Cell | Kalinga University Placements\",\r\n  description: \"The Training and Placement Cell at Kalinga University Raipur prepares students for successful careers through CRT, CEAT, and top recruiter collaborations.\",\r\n  keywords: \"Training and Placement Cell, CRT training university, Campus recruitment Raipur, University placement support, Kalinga University career guidance\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/training-and-placement-cell\",\r\n  },\r\n}"
+  },
+  "training-and-placements\\page.js": {
+    "static": "{\r\n  title: \"Training & Placement Cell | Top Placements at Kalinga Raipur\",\r\n  description: \"Explore the Training & Placement cell at Kalinga University Raipur. We offer 100% placement support, industry-relevant training, and top recruiter tie-ups.\",\r\n  keywords: \"Best university for placements, University placement record, Campus placement India, Top recruiters university, Placement cell Chhattisgarh\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/training-and-placements\",\r\n  },\r\n}"
+  },
+  "transport-facility\\page.jsx": {
+    "static": "{\r\n  title: \"School Transport Facility | Bus Routes | Kalinga University\",\r\n  description: \"Convenient and safe transport facilities for students and staff at Kalinga University. With 30+ buses covering up to 70 KM, we ensure reliable commuting to campus.\",\r\n  keywords: \"University transport Raipur, Bus facility Chhattisgarh, Kalinga University bus routes, Student commuting Raipur India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/transport-facility\",\r\n  },\r\n}"
+  },
+  "unnat-bharat-abhiyan\\page.jsx": {
+    "static": "{\r\n  title: \"Unnat Bharat Abhiyan (UBA) | Rural Development | Kalinga University\",\r\n  description: \"Kalinga University actively participates in Unnat Bharat Abhiyan to transform rural India. Explore our adopted villages, rural development initiatives, and community engagement.\",\r\n  keywords: \"Unnat Bharat Abhiyan university Raipur, UBA Kalinga University, Rural development initiatives Chhattisgarh, Village adoption program India higher education\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/unnat-bharat-abhiyan\",\r\n  },\r\n}"
+  },
+  "vice-chancellor\\page.jsx": {
+    "static": "{\r\n  title: \"Vice-Chancellor's Message | Kalinga University Raipur\",\r\n  description: \"Read the message from Dr. R. Shridhar, Vice-Chancellor of Kalinga University. Discover our commitment to global education standards and research innovation.\",\r\n  keywords: \"Vice-Chancellor Kalinga University, Dr. R. Shridhar, University leadership messages, Higher education standards India\",\r\n  alternates: {\r\n    canonical: \"https://kalingauniversity.ac.in/vice-chancellor\",\r\n  },\r\n}"
+  }
+}
