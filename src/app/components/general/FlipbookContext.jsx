@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import FlipbookModal from './FlipbookModal';
+import { getProxyPdfUrl } from '@/app/lib/pdfProxy';
 
 const FlipbookContext = createContext(undefined);
 
@@ -11,7 +12,7 @@ export const FlipbookProvider = ({ children }) => {
     const [title, setTitle] = useState('');
 
     const openFlipbook = useCallback((url, docTitle = '') => {
-        setPdfUrl(url);
+        setPdfUrl(getProxyPdfUrl(url) || url);
         setTitle(docTitle);
         setIsOpen(true);
     }, []);

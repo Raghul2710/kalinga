@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../general/tab";
 import { Document, Page as ReactPdfPage, pdfjs } from 'react-pdf';
 import { useFlipbook } from "../general/FlipbookContext";
+import { getProxyPdfUrl } from "@/app/lib/pdfProxy";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
@@ -42,11 +43,12 @@ function PdfThumbnail({ url, alt }) {
 
 function NewsletterCard({ title, href }) {
     const { openFlipbook } = useFlipbook();
+    const proxyUrl = href ? getProxyPdfUrl(href) : null;
 
     const handleClick = (e) => {
         e.preventDefault();
-        if (href) {
-            openFlipbook(href, title);
+        if (proxyUrl) {
+            openFlipbook(proxyUrl, title);
         }
     };
 
@@ -55,9 +57,9 @@ function NewsletterCard({ title, href }) {
             onClick={handleClick}
             className="group relative w-full aspect-[3/3] overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-lg focus:outline-none"
         >
-            {/* Image Area (PDF Thumbnail) */}
+            {/* Image Area (PDF Thumbnail) - proxy URL avoids CORS on localhost/live */}
             <div className="absolute inset-0 w-full h-full">
-                <PdfThumbnail url={href} alt={title} />
+                <PdfThumbnail url={proxyUrl || href} alt={title} />
             </div>
 
             {/* Gradient Overlay */}
