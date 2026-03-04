@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../general/tab";
 import { Document, Page as ReactPdfPage, pdfjs } from 'react-pdf';
 import { useFlipbook } from "../general/FlipbookContext";
+import { getProxiedPdfUrl } from "../../lib/pdf-utils";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
@@ -15,7 +16,7 @@ function PdfThumbnail({ url, alt }) {
     return (
         <div className="w-full h-full bg-gray-100 relative overflow-hidden">
             <Document
-                file={url}
+                file={getProxiedPdfUrl(url)}
                 loading={
                     <div className="absolute inset-0 flex items-center justify-center bg-gray-100 text-gray-400">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--button-red)]"></div>
@@ -57,7 +58,7 @@ function NewsletterCard({ title, href }) {
         >
             {/* Image Area (PDF Thumbnail) */}
             <div className="absolute inset-0 w-full h-full">
-                <PdfThumbnail url={href} alt={title} />
+                <PdfThumbnail url={getProxiedPdfUrl(href)} alt={title} />
             </div>
 
             {/* Gradient Overlay */}

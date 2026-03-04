@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import { Document, Page as ReactPdfPage, pdfjs } from 'react-pdf';
+import { getProxiedPdfUrl } from '../../lib/pdf-utils';
 
 // Set up PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -230,7 +231,7 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
                         {/* Flipbook Content area */}
                         <div className="p-1">
                             <Document
-                                file={pdfUrl?.includes('cdn.kalingauniversity.ac.in') ? pdfUrl.replace('https://cdn.kalingauniversity.ac.in', '/pdf-proxy') : pdfUrl}
+                                file={getProxiedPdfUrl(pdfUrl)}
                                 onLoadSuccess={onDocumentLoadSuccess}
                                 loading={
                                     <div className="flex flex-col items-center justify-center min-h-[400px] min-w-[300px]">
