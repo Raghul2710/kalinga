@@ -1,3 +1,8 @@
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -45,7 +50,7 @@ const nextConfig = {
       const originalEntry = config.entry;
       config.entry = async () => {
         const entries = await originalEntry();
-        const polyfillPath = require('path').resolve(__dirname, 'polyfills/dommatrix.js');
+        const polyfillPath = path.resolve(__dirname, 'polyfills/dommatrix.js');
 
         // Add polyfill to all entry points
         if (entries['main.js'] && !entries['main.js'].includes(polyfillPath)) {
