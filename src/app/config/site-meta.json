@@ -3,9 +3,9 @@
   "title": "Kalinga University - Transforming Futures with Knowledge & Innovation",
   "description": "Kalinga University is a leading institution offering world-class education in engineering, management, science, arts, and more.",
   "icons": {
-    "icon": "https://cdn.kalingauniversity.ac.in/favicon.png",
-    "shortcut": "https://cdn.kalingauniversity.ac.in/favicon.png",
-    "apple": "https://cdn.kalingauniversity.ac.in/favicon.png"
+    "icon": "/fav-icon.png",
+    "shortcut": "/fav-icon.png",
+    "apple": "/fav-icon.png"
   },
   "openGraph": {
     "title": "Kalinga University - Transforming Futures with Knowledge & Innovation",
