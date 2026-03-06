@@ -18,6 +18,7 @@ import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 import StudentCell from "@/app/components/international-students/student_cell";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Placements from "@/app/components/home/placements";
+import SurveyForm from "@/app/components/general/SurveyForm";
 
 export default function ManagementDepartmentPage() {
     const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
@@ -425,64 +426,42 @@ export default function ManagementDepartmentPage() {
                 buttons={[
                     {
                         id: 1,
-                        text: "Faculty Feedback Form",
+                        text: "Course Exit Survey – MBA",
                         onClick: () => setIsFeedbackModalOpen(true)
-                    }
+                    },
+                    {
+                        id: 2,
+                        text: "Feedback Form for Students",
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Students.pdf"
+                    },
+                    {
+                        id: 3,
+                        text: "Feedback Form for Teachers",
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Teachers.pdf"
+                    },
+                    {
+                        id: 4,
+                        text: "Satisfaction Survey for Employer",
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Satisfaction-Survey-for-Employer.pdf"
+                    },
+                    {
+                        id: 5,
+                        text: "Satisfaction Survey for Employer",
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-form-Satisfaction-Survey-for-Alumni.pdf"
+                    },
                 ]}
             />
 
             <Modal
                 isOpen={isFeedbackModalOpen}
                 onClose={() => setIsFeedbackModalOpen(false)}
-                title="Faculty Feedback Form"
+                title="Course Exit Survey - Management"
             >
-                <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse min-w-[600px]">
-                        <thead>
-                            <tr className="bg-gray-100">
-                                <th className="p-3 border font-plus-jakarta-sans font-semibold text-sm">S. No</th>
-                                <th className="p-3 border font-plus-jakarta-sans font-semibold text-sm">I am able to</th>
-                                {[5, 4, 3, 2, 1].map(num => (
-                                    <th key={num} className="p-3 border text-center font-plus-jakarta-sans font-semibold text-sm">{num}</th>
-                                ))}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {[
-                                "Understand and get acquainted with the concept of Financial, Cost and Management Accounting.",
-                                "Apply the principles of accounting and learn how to prepare financial statements in accordance with generally accepted accounting principles.",
-                                "Apply the knowledge and develop thinking about analysis and interpretation of financial data.",
-                                "Analyze and develop the ability to support decision-making, formulate recommendations, and enhance business performance.",
-                                "Evaluate the financial data and develop the ability to Control the cost through Budgetary Control & Standard Costing."
-                            ].map((question, idx) => (
-                                <tr key={idx} className={idx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
-                                    <td className="p-3 border text-sm font-plus-jakarta-sans">{idx + 1}</td>
-                                    <td className="p-3 border text-sm font-plus-jakarta-sans">{question}</td>
-                                    {[5, 4, 3, 2, 1].map(num => (
-                                        <td key={num} className="p-3 border text-center">
-                                            <input
-                                                type="radio"
-                                                name={`q-${idx}`}
-                                                className="w-4 h-4 accent-[var(--button-red)] cursor-pointer"
-                                            />
-                                        </td>
-                                    ))}
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                    <div className="mt-8 flex justify-end">
-                        <GlobalArrowButton
-                            className="!bg-[var(--button-red)] !text-white"
-                            onClick={() => {
-                                alert("Thank you for your feedback!");
-                                setIsFeedbackModalOpen(false);
-                            }}
-                        >
-                            Submit Feedback
-                        </GlobalArrowButton>
-                    </div>
-                </div>
+                <SurveyForm
+                    courseId={17} // Using 2 for Management as it's typically an ID, but backend can accept it
+                    category="course-exit-survey"
+                    onSuccess={() => setIsFeedbackModalOpen(false)}
+                />
             </Modal>
             <Placements
                 placementData={departmentData}

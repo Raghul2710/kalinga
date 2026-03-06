@@ -26,12 +26,12 @@ const galleryItems = [
     alt: "Chess",
     description: "Indoor Sports",
   },
-  {
-    id: 3,
-    image: "https://cdn.kalingauniversity.ac.in/sports/table_tennis.webp",
-    alt: "Table Tennis",
-    description: "Indoor Sports",
-  },
+  // {
+  //   id: 3,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/table_tennis.webp",
+  //   alt: "Table Tennis",
+  //   description: "Indoor Sports",
+  // },
   {
     id: 4,
     image: "https://cdn.kalingauniversity.ac.in/sports/snooker.webp",
@@ -39,18 +39,18 @@ const galleryItems = [
     description: "Indoor Sports",
   },
   // Outdoor Sports
-  {
-    id: 5,
-    image: "https://cdn.kalingauniversity.ac.in/sports/cricket.webp",
-    alt: "Cricket",
-    description: "Outdoor Sports",
-  },
-  {
-    id: 6,
-    image: "https://cdn.kalingauniversity.ac.in/sports/football.webp",
-    alt: "Football",
-    description: "Outdoor Sports",
-  },
+  // {
+  //   id: 5,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/cricket.webp",
+  //   alt: "Cricket",
+  //   description: "Outdoor Sports",
+  // },
+  // {
+  //   id: 6,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/football.webp",
+  //   alt: "Football",
+  //   description: "Outdoor Sports",
+  // },
   {
     id: 7,
     image: "https://cdn.kalingauniversity.ac.in/sports/badminton.webp",
@@ -63,12 +63,12 @@ const galleryItems = [
     alt: "Basketball",
     description: "Outdoor Sports",
   },
-  {
-    id: 9,
-    image: "https://cdn.kalingauniversity.ac.in/sports/volleyball.webp",
-    alt: "Volleyball",
-    description: "Outdoor Sports",
-  },
+  // {
+  //   id: 9,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/volleyball.webp",
+  //   alt: "Volleyball",
+  //   description: "Outdoor Sports",
+  // },
   {
     id: 10,
     image: "https://cdn.kalingauniversity.ac.in/sports/kabaddi+(1).webp",
@@ -81,42 +81,42 @@ const galleryItems = [
     alt: "Kho-Kho",
     description: "Outdoor Sports",
   },
-  {
-    id: 12,
-    image: "https://cdn.kalingauniversity.ac.in/sports/hockey.webp",
-    alt: "Hockey",
-    description: "Outdoor Sports",
-  },
+  // {
+  //   id: 12,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/hockey.webp",
+  //   alt: "Hockey",
+  //   description: "Outdoor Sports",
+  // },
   {
     id: 13,
     image: "https://cdn.kalingauniversity.ac.in/sports/handball.webp",
     alt: "Handball",
     description: "Outdoor Sports",
   },
-  {
-    id: 14,
-    image: "https://cdn.kalingauniversity.ac.in/sports/shotput.webp",
-    alt: "Shot Put",
-    description: "Outdoor Sports",
-  },
-  {
-    id: 15,
-    image: "https://cdn.kalingauniversity.ac.in/sports/discthrow.webp",
-    alt: "Discus Throw",
-    description: "Outdoor Sports",
-  },
-  {
-    id: 16,
-    image: "https://cdn.kalingauniversity.ac.in/sports/javelin_throw.webp",
-    alt: "Javelin Throw",
-    description: "Outdoor Sports",
-  },
-  {
-    id: 17,
-    image: "https://cdn.kalingauniversity.ac.in/sports/hammer_throw.webp",
-    alt: "Hammer Throw",
-    description: "Outdoor Sports",
-  },
+  // {
+  //   id: 14,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/shotput.webp",
+  //   alt: "Shot Put",
+  //   description: "Outdoor Sports",
+  // },
+  // {
+  //   id: 15,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/discthrow.webp",
+  //   alt: "Discus Throw",
+  //   description: "Outdoor Sports",
+  // },
+  // {
+  //   id: 16,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/javelin_throw.webp",
+  //   alt: "Javelin Throw",
+  //   description: "Outdoor Sports",
+  // },
+  // {
+  //   id: 17,
+  //   image: "https://cdn.kalingauniversity.ac.in/sports/hammer_throw.webp",
+  //   alt: "Hammer Throw",
+  //   description: "Outdoor Sports",
+  // },
   // Gymnasium
   {
     id: 18,

@@ -82,7 +82,8 @@ const OrganogramOfKalinga = ({
               <div className="flex flex-wrap gap-3 md:gap-4 justify-start">
                 {buttons && buttons.length > 0 ? (
                   buttons.map((btn) => {
-                    const isPdf = btn.fileUrl && btn.fileUrl.toLowerCase().endsWith(".pdf");
+                    const destinationUrl = btn.link || btn.fileUrl;
+                    const isPdf = destinationUrl && destinationUrl.toLowerCase().endsWith(".pdf") && !btn.disableFlipbook;
                     const buttonEl = (
                       <GlobalArrowButton
                         className={buttonClassName}
@@ -96,9 +97,9 @@ const OrganogramOfKalinga = ({
                     );
 
                     return isPdf ? (
-                      <FlipbookTrigger key={btn.id} pdfUrl={btn.fileUrl} title={btn.text}>
+                      <FlipbookTrigger key={btn.id} pdfUrl={destinationUrl} title={btn.text}>
                         <a
-                          href={btn.fileUrl}
+                          href={destinationUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex"
@@ -109,10 +110,17 @@ const OrganogramOfKalinga = ({
                     ) : (
                       <a
                         key={btn.id}
-                        href={btn.fileUrl || "#"}
-                        target={btn.fileUrl ? "_blank" : undefined}
-                        rel={btn.fileUrl ? "noopener noreferrer" : undefined}
+                        href={destinationUrl ? destinationUrl : undefined}
+                        target={destinationUrl && !destinationUrl.startsWith('#') ? "_blank" : undefined}
+                        rel={destinationUrl && !destinationUrl.startsWith('#') ? "noopener noreferrer" : undefined}
                         className="inline-flex"
+                        onClick={(e) => {
+                          if (btn.onClick) {
+                            btn.onClick(e);
+                          } else if (destinationUrl && destinationUrl.startsWith('#')) {
+                            handleAnchorClick(e, destinationUrl);
+                          }
+                        }}
                       >
                         {buttonEl}
                       </a>
