@@ -32,7 +32,7 @@ export default function Page() {
       <FeaturesSection />
       <CampusLife />
       {/* <ImageAnimation /> */}
-      <ScrollScene />
+      {/* <ScrollScene /> */}
 
       {/* 
         Show events from Sports (6) and NCC (7).

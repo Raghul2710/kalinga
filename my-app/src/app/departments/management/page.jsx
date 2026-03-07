@@ -470,6 +470,7 @@ export default function ManagementDepartmentPage() {
                 placementData={departmentData}
                 bgColor="bg-white"
                 marginClassName="mt-10"
+                customRecruiterTitle="Top Management recruiters"
                 customImages={[
                     'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
                     'https://cdn.kalingauniversity.ac.in/Home/place-2.png',

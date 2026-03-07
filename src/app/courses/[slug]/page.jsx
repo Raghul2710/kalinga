@@ -419,9 +419,16 @@ export default function DynamicCoursePage() {
       .filter(career => career.title || career.description) // Filter out empty careers
   } : null;
 
+  const isMtechSpecializationCourse = slug && [
+    "master-of-technology-in-computer-science-engineering",
+    "master-of-technology-in-electrical-engineering",
+    "master-of-technology-in-mechanical-engineering",
+    "master-of-technology-in-civil-engineering"
+  ].includes(slug);
+
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
-    sectionTitle: "Specialisation",
-    sectionDescription: "Choose a specialisation of your choice and master what’s trending.",
+    sectionTitle: isMtechSpecializationCourse ? "Sub Specialisations" : "Specialisation",
+    sectionDescription: "Choose a Specialisation of Your Choice and Master What’s Trending",
     backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: courseData.specializations
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
@@ -722,6 +729,7 @@ export default function DynamicCoursePage() {
             href={eligibilityContent.href}
             additionalButtons={eligibilityContent.additionalButtons}
             lateralEntryData={eligibilityContent.lateralEntryData}
+            truncationLimit={slug === "bachelor-of-physical-education" ? 60 : 80}
           />
         </div>
       )}

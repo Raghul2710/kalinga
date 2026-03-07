@@ -141,7 +141,7 @@ function MentorCard({
             <div className="relative z-10">
               <div
                 ref={quoteRef}
-                className="text-white text-base leading-relaxed [&_a]:text-white [&_a]:underline [&_a]:font-bold transition-colors"
+                className="text-white text-base leading-relaxed [&_a]:text-white [&_a]:underline [&_a]:font-bold transition-colors py-10"
                 style={!isQuoteExpanded ? {
                   display: '-webkit-box',
                   WebkitLineClamp: 4,

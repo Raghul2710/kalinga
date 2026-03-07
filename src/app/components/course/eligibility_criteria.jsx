@@ -18,7 +18,7 @@ const defaultContent = {
   admissionButtonLabel: "Admission Open",
 };
 
-const CriterionItem = ({ criterion }) => {
+const CriterionItem = ({ criterion, limit = 80 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Helper to strip HTML and count words
@@ -29,7 +29,7 @@ const CriterionItem = ({ criterion }) => {
 
   const text = stripHtml(criterion);
   const words = text.split(" ").filter((word) => word.length > 0);
-  const isTooLong = words.length > 200;
+  const isTooLong = words.length > limit;
 
   if (!isTooLong) {
     return (
@@ -40,7 +40,7 @@ const CriterionItem = ({ criterion }) => {
     );
   }
 
-  const truncatedText = words.slice(0, 200).join(" ") + " ...";
+  const truncatedText = words.slice(0, limit).join(" ") + " ...";
 
   return (
     <div className="flex flex-col gap-1">
@@ -72,6 +72,7 @@ export default function EligibilityCriteria({
   href = "https://admissions.kalingauniversity.ac.in/",
   additionalButtons = [], // Array of { label, href } objects
   lateralEntryData = null, // Optional lateral entry data
+  truncationLimit = 80,
 }) {
   const [activeTab, setActiveTab] = useState("direct");
 
@@ -174,7 +175,7 @@ export default function EligibilityCriteria({
                         />
                       </svg>
                     </div>
-                    <CriterionItem criterion={criterion} />
+                    <CriterionItem criterion={criterion} limit={truncationLimit} />
                   </li>
                 ))}
               </ul>

@@ -13,6 +13,7 @@ import FAQ from "../components/general/faq";
 import ResearchSixGridButtons from "../components/research/research_six_grid-buttons";
 import AdmissionCareer from "../components/general/admission_cta";
 import MentorIntro from "../components/department/dept_head_intro";
+import CapacityTabSection from "../components/general/capacity-tab-section";
 import CenterOfExcellence from "../components/about/center_of_excellence";
 import AwardsScrollbar from "../components/home/awards-scrollbar";
 import MediaCardSlider from "@/app/components/general/media-card-slider";
@@ -875,6 +876,15 @@ export default function Research() {
     )
   }));
 
+  const capacityData = {
+    "2024 - 2025": CapacityInitiatives202425FAQItems,
+    "2023 - 2024": CapacityInitiatives202324FAQItems,
+    "2022 - 2023": CapacityInitiatives202223FAQItems,
+    "2021 - 2022": CapacityInitiatives202122FAQItems,
+    "2020 - 2021": CapacityInitiatives202021FAQItems,
+    "2018 - 2019": CapacityInitiatives201819FAQItems,
+  };
+
   return (
     <>
       <MainIntro
@@ -1199,13 +1209,9 @@ export default function Research() {
         pyClassName="py-8"
       />
 
-      <FAQ
-        items={[...CapacityInitiatives202425FAQItems, ...CapacityInitiatives202324FAQItems, ...CapacityInitiatives202223FAQItems, ...CapacityInitiatives202122FAQItems, ...CapacityInitiatives202021FAQItems, ...CapacityInitiatives201819FAQItems]}
-        title="Capacity Development and Skill Enhancement"
-        showHeading={true}
-        subtitle=""
-        variant="default"
-        pyClassName="py-8 pt-16"
+      <CapacityTabSection 
+        data={capacityData} 
+        title="Capacity Development and Skill Enhancement" 
       />
 
 

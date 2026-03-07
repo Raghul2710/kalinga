@@ -618,7 +618,7 @@ const FAQ = ({
                   </button>
 
                   <div
-                    className={`overflow-hidden hover:overflow-y-auto transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    className={`overflow-y-auto transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                       }`}
                   >
                     <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
@@ -719,7 +719,7 @@ const FAQ = ({
                     </svg>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    className={`overflow-y-auto transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                       }`}
                   >
                     <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
@@ -842,7 +842,7 @@ const FAQ = ({
                   </button>
 
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[10000px] opacity-100' : 'max-h-0 opacity-0'
+                    className={`overflow-y-auto transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                       }`}
                   >
                     <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
@@ -985,7 +985,7 @@ const FAQ = ({
                     </svg>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
+                    className={`overflow-y-auto transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                       }`}
                   >
                     <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">
@@ -1080,7 +1080,7 @@ const FAQ = ({
 
                 {/* Content with Buttons */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${isCollapsed ? 'max-h-0' : 'max-h-[2000px]'
+                  className={`overflow-y-auto transition-all duration-300 ${isCollapsed ? 'max-h-0' : 'max-h-[1000px]'
                     }`}
                 >
                   <div className="bg-[var(--lite-sand)] p-6">
@@ -1334,7 +1334,7 @@ const FAQ = ({
 
                 {/* Answer Content */}
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+                  className={`overflow-y-auto transition-all duration-300 ${isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
                     }`}
                 >
                   <div className="p-4 sm:p-5 md:p-6 bg-[var(--lite-sand)]">

@@ -421,7 +421,7 @@ export default function DynamicCoursePage() {
 
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
     sectionTitle: "Specialisation",
-    sectionDescription: "Choose a specialisation of your choice and master what’s trending.",
+    sectionDescription: "Choose a Specialisation of Your Choice and Master What’s Trending",
     backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: courseData.specializations
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))

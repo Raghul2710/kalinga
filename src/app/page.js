@@ -79,7 +79,7 @@ export default function Home() {
         description="Spread across 50+ Acres of Land, the University offers fully equipped infrastructure with the most advanced curriculum that prepares students to compete in global opportunities. Every space on our campus generates curiosity and encourages motivation among young minds. We just don't focus on classroom-based learning, but our primary focus is to provide a holistic learning experience to our students so that they can become all-rounders in their personal and professional lives. With a supportive and inclusive learning environment, our students have achieved remarkable success and transformed their DREAMS into REALITY."
       />
       {/* <ImageAnimation /> */}
-      <ScrollScene />
+      {/*  <ScrollScene /> */}
 
       <Facilities />
       <Placements hideMilestones={false} />
