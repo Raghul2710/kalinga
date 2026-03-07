@@ -598,5 +598,140 @@
         "source": "/ku/cg-fee/",
         "destination": "/ku-fees",
         "permanent": true
+    },
+    {
+        "source": "/doc_veri.php",
+        "destination": "/documents-verification",
+        "permanent": true
+    },
+    {
+        "source": "/student-services",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Education/programs.php",
+        "destination": "/departments/faculty-of-education",
+        "permanent": true
+    },
+    {
+        "source": "/academic_calendar.php",
+        "destination": "/academic-calendar",
+        "permanent": true
+    },
+    {
+        "source": "/internshipprogram/",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Law",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Technology/",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
+        "source": "/placement_cell.php",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/conferences.php",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/e-journals-portal.php",
+        "destination": "/library",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_of_mass_communication_media_and_journalism.php",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/ku/job-openings/",
+        "destination": "/careers",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_of_engineering_and_technology.php",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
+        "source": "/contact-us.php",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/ku/admission-procedure",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_research.php",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/student-services.php",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/contact.php",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/kalsee_2021.php",
+        "destination": "/kalsee",
+        "permanent": true
+    },
+    {
+        "source": "/approvals.php",
+        "destination": "/about-us",
+        "permanent": true
+    },
+    {
+        "source": "/International-Journal-of-Research-and-Studies",
+        "destination": "/international-journal-of-research-and-studies",
+        "permanent": true
+    },
+    {
+        "source": "/admission_formp.php",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_of_law.php",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/ku/admission-procedure/",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Law/",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Law/",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/brochures.php",
+        "destination": "/downloads",
+        "permanent": true
     }
 ]
