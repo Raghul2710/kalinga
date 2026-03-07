@@ -558,5 +558,10 @@
         "source": "/sanitary-napkin-vending-machines",
         "destination": "/campus-facilities",
         "permanent": true
+    },
+    {
+        "source": "/how_to_reach_campus",
+        "destination": "/contact-us",
+        "permanent": true
     }
 ]

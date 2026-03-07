@@ -17,7 +17,7 @@ export default function Page() {
     // Events & Activities
     ["https://cdn.kalingauniversity.ac.in/campus-life/gallery1.webp", "https://cdn.kalingauniversity.ac.in/campus-life/gallery4.webp", "https://cdn.kalingauniversity.ac.in/Home/about-kalinga.webp"],
     // Networking Opportunities
-    ["https://cdn.kalingauniversity.ac.in/alumini/alimini-meet1.webp", "https://cdn.kalingauniversity.ac.in/Home/social-media-1.png", "https://cdn.kalingauniversity.ac.in/Home/social-media-3.png"],
+    ["https://cdn.kalingauniversity.ac.in/alumini/alimini-meet1.webp", "https://cdn.kalingauniversity.ac.in/kalinga_backend/files/news_events/images/Pic4.webp", "https://cdn.kalingauniversity.ac.in/kalinga_backend/files/news_events/images/PIC211.JPE"],
     // Community Service
     ["https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/1.jpg", "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/2.jpg", "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/3.jpg"],
     // Internships and Placement Drives

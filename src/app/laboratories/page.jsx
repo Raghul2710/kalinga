@@ -27,7 +27,7 @@ const labFaqItems = [
   },
   {
     id: 3,
-    question: "Faculty of Computer Science",
+    question: "Department of CS & Faculty of IT",
     answer: [
       "Basic Electronics Lab",
       "Data Structures Using C Lab",
@@ -52,11 +52,6 @@ const labFaqItems = [
     id: 4,
     question: "Faculty of Education",
     answer: ["Teaching Aid Lab", "Psychology Lab", "Computer Lab (E.T. Lab)"],
-  },
-  {
-    id: 5,
-    question: "Faculty of Information Technology",
-    answer: ["Computer Lab"],
   },
   {
     id: 6,

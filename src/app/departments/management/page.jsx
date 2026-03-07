@@ -404,13 +404,13 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 1,
                         text: "Management Journal List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/Management+Journal+List.pdf",
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/course/management/Management-Journal-List.pdf",
                         disableFlipbook: true
                     },
                     {
                         id: 2,
                         text: "Commerce & Management Title List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerce+%26+Management+Title+List+1.pdf",
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/course/management/Faculty-of-Commerce-Management-Title.pdf",
                         disableFlipbook: true
                     }
                 ]}
@@ -432,22 +432,22 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 2,
                         text: "Feedback Form for Students",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Students.pdf"
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Students.pdf",
                     },
                     {
                         id: 3,
                         text: "Feedback Form for Teachers",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Teachers.pdf"
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Teachers.pdf",
                     },
                     {
                         id: 4,
                         text: "Satisfaction Survey for Employer",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Satisfaction-Survey-for-Employer.pdf"
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Satisfaction-Survey-for-Employer.pdf",
                     },
                     {
                         id: 5,
                         text: "Satisfaction Survey for Employer",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-form-Satisfaction-Survey-for-Alumni.pdf"
+                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-form-Satisfaction-Survey-for-Alumni.pdf",
                     },
                 ]}
             />

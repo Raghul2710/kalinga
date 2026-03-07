@@ -138,6 +138,44 @@ const CentralInstrumentationFacilityPage = () => {
     },
   ];
 
+  const galleryImages = [
+    {
+      id: 1,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00007.jpg",
+      alt: "Gallery-1"
+    },
+    {
+      id: 2,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00011.jpg",
+      alt: "Gallery-2"
+    },
+    {
+      id: 3,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00075.jpg",
+      alt: "Gallery-3"
+    },
+    {
+      id: 4,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00110.jpg",
+      alt: "Gallery-4"
+    },
+    {
+      id: 5,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00116.jpg",
+      alt: "Gallery-5"
+    },
+    {
+      id: 6,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00154.jpg",
+      alt: "Gallery-6"
+    },
+    {
+      id: 7,
+      image: "https://cdn.kalingauniversity.ac.in/CIF/glimpses/DSC00184.jpg",
+      alt: "Gallery-7"
+    },
+  ];
+
   const cifTestimonials = [
     {
       id: 1,
@@ -173,6 +211,8 @@ const CentralInstrumentationFacilityPage = () => {
       theme: "amber"
     }
   ];
+
+
 
   return (
     <>
@@ -258,7 +298,7 @@ const CentralInstrumentationFacilityPage = () => {
             {
               title: "Google SketchUp for 3D Developments",
               startDate: "20 - 09 - 2025",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Architecture & Construction, Interior Design, Product Prototyping, Landscape Design, Urban Planning, Engineering Projects",
               skills: [
                 "Project visualisation",
@@ -276,13 +316,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Google SketchUp Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/azFEvsHhhg12uFtu5",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/azFEvsHhhg12uFtu5"
             },
             {
               title: "SEM & Microscopy",
               startDate: "27 - 09 - 2025",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Material Science & Engineering, Nanotechnology Research, Biomedical & Life Sciences, Forensic Science, Electronics Manufacturing",
               skills: [
                 "SEM Principles",
@@ -296,13 +336,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "SEM & Microscopy Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/WJCVBNZNoYPzeZUG9",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/WJCVBNZNoYPzeZUG9"
             },
             {
               title: "Mastering the Art of Literature Review: A Hands-On Training For Aspiring Researchers",
               startDate: "04-10-2025",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Research Proposal Development, Identifying Research Gaps, Systematic Literature Reviews, Publication & Journal Writing",
               skills: [
                 "Advanced Literature Search Techniques",
@@ -317,13 +357,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Literature Review Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/kJNVJbsYwKK72B2J9",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/kJNVJbsYwKK72B2J9"
             },
             {
               title: "Stock Market Trading",
               startDate: "08 - 11 - 2025",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Personal Investments, Wealth Management, Fintech & Banking Sector, Corporate Finance, Financial Consultancy Roles",
               skills: [
                 "Stock Market Basics",
@@ -339,13 +379,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Stock Market Trading Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://surli.cc/vxybhb",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://surli.cc/vxybhb"
             },
             {
               title: "Artificial Intelligence (AI) for Future Teachers",
               startDate: "15-11-2025",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Smart Classrooms, Personalised Learning, Automated Assessment, Performance Analysis, Educational Content Creation",
               skills: [
                 "AI Fundamentals",
@@ -361,13 +401,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "AI for Future Teachers Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/wu14sWWTFw2x7Jji8",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/wu14sWWTFw2x7Jji8"
             },
             {
               title: "Protein Estimation & Biochemistry Analyser",
               startDate: "22 - 11 - 2025",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Clinical Diagnostics, Pharmaceutical Research, Food and Beverage Industry, Biotechnology, Agricultural and Veterinary Sciences",
               skills: [
                 "Protein Quantification Techniques",
@@ -381,13 +421,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Protein Estimation Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/wBik5u8s8PqDGpH18",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/wBik5u8s8PqDGpH18"
             },
             {
               title: "Entrepreneurship in Biotechnology",
               startDate: "17 - 01 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Biotech Startups, Healthcare and Pharma Ventures, Agricultural and Food Biotechnology, Environmental Biotechnology, Global Biotech Ecosystem",
               skills: [
                 "Identify and Develop Innovative Solutions for Biotech-Based Problems",
@@ -400,13 +440,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Entrepreneurship in Biotechnology Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/etCwbWopxmboF4366",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/etCwbWopxmboF4366"
             },
             {
               title: "3D Printing",
               startDate: "31 - 01 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Rapid Prototyping, Medical Implants, Automotive Design, Industrial Manufacturing Solutions",
               skills: [
                 "Introduction to 3D Printing Technologies",
@@ -421,13 +461,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "3D Printing Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/x3wqSGyN3JVVSGkM9",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/x3wqSGyN3JVVSGkM9"
             },
             {
               title: "Molecular Techniques (PCR, Electrophoresis, UV Transilluminator)",
               startDate: "07 - 02 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Genetic Research, Clinical Diagnostics, Forensic Analysis, Drug Discovery Studies, Industrial Research",
               skills: [
                 "Polymerase Chain Reaction Techniques",
@@ -442,13 +482,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Molecular Techniques Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/RaXN6W95vH4QbCYd9",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/RaXN6W95vH4QbCYd9"
             },
             {
               title: "Electrical Vehicle",
               startDate: "14-02-2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "EV Design and Development, Charging Infrastructure, Battery Technology, EV Maintenance",
               skills: [
                 "Fundamentals of EVs",
@@ -463,13 +503,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Electrical Vehicle Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/bjz6uvkksWoivMBH8",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/bjz6uvkksWoivMBH8"
             },
             {
               title: "Advanced Instrumentation & Water Analysis",
               startDate: "21 - 02 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Environmental Monitoring, Industrial Labs, Chemical Industries, Water Resource Management, R&D",
               skills: [
                 "Water Quality Testing",
@@ -483,13 +523,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Advanced Instrumentation Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/RcuhamUeTnxTCkSNA",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/RcuhamUeTnxTCkSNA"
             },
             {
               title: "High-Performance Liquid Chromatography",
               startDate: "28 - 02 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Pharmaceutical Quality Control, Forensic Science, Food Safety, Biotechnology, Environmental Monitoring, R&D",
               skills: [
                 "Principles of HPLC",
@@ -504,13 +544,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "HPLC Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/PUCnH3ckUDLnuuQk9",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/PUCnH3ckUDLnuuQk9"
             },
             {
               title: "Microsoft Power Business Intelligence",
               startDate: "14 - 03 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Business Analytics Performance Tracking, Data-Driven Decision Making, KPI Monitoring",
               skills: [
                 "Power BI Tools",
@@ -525,13 +565,13 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "Power BI Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://surl.lu/gcokdr",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://surl.lu/gcokdr"
             },
             {
               title: "X-Ray Diffractometer",
               startDate: "11 - 04 - 2026",
-              price: "INR 1,000/-",
+              price: "",
               applications: "Crystal Structure Analysis, Nanotechnology, Material Testing, and Geological Research",
               skills: [
                 "XRD Principles",
@@ -545,7 +585,7 @@ const CentralInstrumentationFacilityPage = () => {
               imageAlt: "X-Ray Diffractometer Course",
               knowMoreButton: "Know More",
               knowMoreLink: "https://forms.gle/gCgSQEyedH43aiBt7",
-              registrationButton: "Registration Now",
+              registrationButton: "Register Now",
               registrationLink: "https://forms.gle/gCgSQEyedH43aiBt7"
             }
           ];
@@ -589,7 +629,10 @@ const CentralInstrumentationFacilityPage = () => {
         subtitleClassName="!text-[var(--button-red)]"
         subtitleTextColor="!text-[var(--button-red)]"
       />
-      <Gallery title="Glimpses" />
+      <Gallery
+        title="Glimpses"
+        images={galleryImages}
+      />
       <div id="cif-form" className="scroll-mt-24">
         <EnquiryForm />
       </div>
