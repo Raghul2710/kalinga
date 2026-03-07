@@ -99,7 +99,7 @@ const nextConfig = {
     return config;
   },
   // We're using webpack for the DOMMatrix polyfill
-  // Trigger reload again - final check
+  // Trigger reload again - bulk check - ver 2
 };
 
 export default nextConfig;

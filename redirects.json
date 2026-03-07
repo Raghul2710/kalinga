@@ -20,6 +20,11 @@
         "permanent": true
     },
     {
+        "source": "/downloads_information",
+        "destination": "/downloads",
+        "permanent": true
+    },
+    {
         "source": "/contact",
         "destination": "/contact-us",
         "permanent": true
@@ -36,6 +41,11 @@
     },
     {
         "source": "/rti.php",
+        "destination": "/rti",
+        "permanent": true
+    },
+    {
+        "source": "/rti",
         "destination": "/rti",
         "permanent": true
     },
@@ -75,11 +85,6 @@
         "permanent": true
     },
     {
-        "source": "/ciftrainingprogram",
-        "destination": "/central-instrumentation-facility",
-        "permanent": true
-    },
-    {
         "source": "/kalsee_2021",
         "destination": "/kalsee",
         "permanent": true
@@ -105,11 +110,6 @@
         "permanent": true
     },
     {
-        "source": "/SIMETGSD-2024",
-        "destination": "/departments/faculty-of-commerce-and-management",
-        "permanent": true
-    },
-    {
         "source": "/reel_competition2022",
         "destination": "/news-and-events",
         "permanent": true
@@ -122,11 +122,6 @@
     {
         "source": "/ICETSD-2024",
         "destination": "/news-and-events",
-        "permanent": true
-    },
-    {
-        "source": "/Law-Conference",
-        "destination": "/departments/faculty-of-law",
         "permanent": true
     },
     {
@@ -410,11 +405,6 @@
         "permanent": true
     },
     {
-        "source": "/kalinga_faqs",
-        "destination": "/admissions",
-        "permanent": true
-    },
-    {
         "source": "/medical-facility",
         "destination": "/health-clinic",
         "permanent": true
@@ -570,13 +560,13 @@
         "permanent": true
     },
     {
-        "source": "/job_openings.php",
-        "destination": "/careers",
+        "source": "/academic-facilities-student-erp",
+        "destination": "/campus-facilities",
         "permanent": true
     },
     {
-        "source": "/downloads_information.php",
-        "destination": "/downloads",
+        "source": "/job_openings.php",
+        "destination": "/careers",
         "permanent": true
     },
     {
@@ -615,12 +605,22 @@
         "permanent": true
     },
     {
+        "source": "/Faculty-of-Education/programs",
+        "destination": "/departments/faculty-of-education",
+        "permanent": true
+    },
+    {
         "source": "/academic_calendar.php",
         "destination": "/academic-calendar",
         "permanent": true
     },
     {
-        "source": "/internshipprogram/",
+        "source": "/academic_calendar",
+        "destination": "/academic-calendar",
+        "permanent": true
+    },
+    {
+        "source": "/internshipprogram",
         "destination": "/training-and-placements",
         "permanent": true
     },
@@ -640,7 +640,17 @@
         "permanent": true
     },
     {
+        "source": "/placement_cell",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
         "source": "/conferences.php",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/conferences",
         "destination": "/news-and-events",
         "permanent": true
     },
@@ -650,7 +660,17 @@
         "permanent": true
     },
     {
+        "source": "/e-journals-portal",
+        "destination": "/library",
+        "permanent": true
+    },
+    {
         "source": "/faculty_of_mass_communication_media_and_journalism.php",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_of_mass_communication_media_and_journalism",
         "destination": "/admissions",
         "permanent": true
     },
@@ -665,7 +685,17 @@
         "permanent": true
     },
     {
+        "source": "/faculty_of_engineering_and_technology",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
         "source": "/contact-us.php",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/contact-us",
         "destination": "/contact-us",
         "permanent": true
     },
@@ -676,6 +706,11 @@
     },
     {
         "source": "/faculty_research.php",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_research",
         "destination": "/research",
         "permanent": true
     },
@@ -700,6 +735,11 @@
         "permanent": true
     },
     {
+        "source": "/approvals",
+        "destination": "/about-us",
+        "permanent": true
+    },
+    {
         "source": "/International-Journal-of-Research-and-Studies",
         "destination": "/international-journal-of-research-and-studies",
         "permanent": true
@@ -710,18 +750,23 @@
         "permanent": true
     },
     {
+        "source": "/admission_formp",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
         "source": "/faculty_of_law.php",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_of_law",
         "destination": "/departments/faculty-of-law",
         "permanent": true
     },
     {
         "source": "/ku/admission-procedure/",
         "destination": "/admissions",
-        "permanent": true
-    },
-    {
-        "source": "/Faculty-of-Law/",
-        "destination": "/departments/faculty-of-law",
         "permanent": true
     },
     {
@@ -740,12 +785,27 @@
         "permanent": true
     },
     {
+        "source": "/kalinga_university_fraud",
+        "destination": "/",
+        "permanent": true
+    },
+    {
         "source": "/Faculty-of-Arts-and-Humanities/Our-Faculties.php",
         "destination": "/departments/faculty-of-arts-humanities",
         "permanent": true
     },
     {
+        "source": "/Faculty-of-Arts-and-Humanities/Our-Faculties",
+        "destination": "/departments/faculty-of-arts-humanities",
+        "permanent": true
+    },
+    {
         "source": "/photo_gallery.php",
+        "destination": "/news-and-events#events-activities",
+        "permanent": true
+    },
+    {
+        "source": "/photo_gallery",
         "destination": "/news-and-events#events-activities",
         "permanent": true
     },
@@ -760,7 +820,17 @@
         "permanent": true
     },
     {
+        "source": "/faculty_of_education",
+        "destination": "/departments/faculty-of-education",
+        "permanent": true
+    },
+    {
         "source": "/kuhighlights.php",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/kuhighlights",
         "destination": "/news-and-events",
         "permanent": true
     },
@@ -770,12 +840,27 @@
         "permanent": true
     },
     {
+        "source": "/faculty_of_computer_science",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
         "source": "/for_recruiters.php",
         "destination": "/",
         "permanent": true
     },
     {
+        "source": "/for_recruiters",
+        "destination": "/",
+        "permanent": true
+    },
+    {
         "source": "/Faculty-of-Technology/Scheme-and-Syllabus.php",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Technology/Scheme-and-Syllabus",
         "destination": "/departments/faculty-of-technology",
         "permanent": true
     },
@@ -790,12 +875,27 @@
         "permanent": true
     },
     {
+        "source": "/hostel-kulanga-uni",
+        "destination": "/hostel",
+        "permanent": true
+    },
+    {
         "source": "/list-of-holiday.php",
         "destination": "/academic-calendar",
         "permanent": true
     },
     {
+        "source": "/list-of-holiday",
+        "destination": "/academic-calendar",
+        "permanent": true
+    },
+    {
         "source": "/Faculty-of-Law/Faculty-Profile.php",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Law/Faculty-Profile",
         "destination": "/departments/faculty-of-law",
         "permanent": true
     },
@@ -815,6 +915,11 @@
         "permanent": true
     },
     {
+        "source": "/faculty_of_management_studies",
+        "destination": "/departments/management",
+        "permanent": true
+    },
+    {
         "source": "/Faculty-of-Science/programs.php",
         "destination": "/departments/faculty-of-science",
         "permanent": true
@@ -825,7 +930,17 @@
         "permanent": true
     },
     {
+        "source": "/PO-PSO-CO/Bachelor-of-Arts",
+        "destination": "/departments/faculty-of-arts-humanities",
+        "permanent": true
+    },
+    {
         "source": "/Faculty-of-Arts-and-Humanities/programs.php",
+        "destination": "/departments/faculty-of-arts-humanities",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Arts-and-Humanities/programs",
         "destination": "/departments/faculty-of-arts-humanities",
         "permanent": true
     },
@@ -835,7 +950,17 @@
         "permanent": true
     },
     {
+        "source": "/Faculty-of-Science/research",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
         "source": "/research-papers-till.php",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/research-papers-till",
         "destination": "/research",
         "permanent": true
     },
@@ -845,7 +970,17 @@
         "permanent": true
     },
     {
+        "source": "/hostel_fee",
+        "destination": "/hostel",
+        "permanent": true
+    },
+    {
         "source": "/libraries.php",
+        "destination": "/library",
+        "permanent": true
+    },
+    {
+        "source": "/libraries",
         "destination": "/library",
         "permanent": true
     }
