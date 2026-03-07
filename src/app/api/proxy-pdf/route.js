@@ -41,6 +41,8 @@ export async function GET(request) {
 
     const contentType = res.headers.get("content-type") || "application/pdf";
     const contentLength = res.headers.get("content-length");
+    const forceDownload = searchParams.get("download") === "1" || searchParams.get("download") === "true";
+    const filename = searchParams.get("filename");
 
     const headers = new Headers();
     headers.set("Content-Type", contentType);
@@ -48,6 +50,10 @@ export async function GET(request) {
     headers.set("Cache-Control", "public, max-age=3600");
     // Allow localhost and production so preview/flipbook work everywhere
     headers.set("Access-Control-Allow-Origin", "*");
+    if (forceDownload) {
+      const downloadFilename = (filename || "document.pdf").replace(/"/g, "");
+      headers.set("Content-Disposition", `attachment; filename="${downloadFilename}"`);
+    }
 
     return new Response(res.body, {
       status: 200,
