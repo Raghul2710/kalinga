@@ -1003,5 +1003,60 @@
         "source": "/faculty_of_pharmacy",
         "destination": "/departments/faculty-of-pharmacy",
         "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Information-and-Technology",
+        "destination": "/departments/faculty-of-information-technology",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Information-and-Technology/",
+        "destination": "/departments/faculty-of-information-technology",
+        "permanent": true
+    },
+    {
+        "source": "/examination.php",
+        "destination": "/academic-calendar",
+        "permanent": true
+    },
+    {
+        "source": "/wp/admission-procedure",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/wp/admission-procedure/",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/result.php",
+        "destination": "/kalsee",
+        "permanent": true
+    },
+    {
+        "source": "/application_process/admission_registration.php",
+        "destination": "/admissions",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Commerce-and-Management/faculty_of_fashion_and_interior_design.php",
+        "destination": "/departments/faculty-of-commerce-and-management",
+        "permanent": true
+    },
+    {
+        "source": "/newsletter/Kalinga Buzz August 2020.PDF",
+        "destination": "/kalinga-buzz",
+        "permanent": true
+    },
+    {
+        "source": "/newsletter/Kalinga%20Buzz%20August%202020.PDF",
+        "destination": "/kalinga-buzz",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/overview.php",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
     }
 ]
