@@ -45,11 +45,6 @@
         "permanent": true
     },
     {
-        "source": "/rti",
-        "destination": "/rti",
-        "permanent": true
-    },
-    {
         "source": "/brochures",
         "destination": "/downloads",
         "permanent": true
@@ -695,11 +690,6 @@
         "permanent": true
     },
     {
-        "source": "/contact-us",
-        "destination": "/contact-us",
-        "permanent": true
-    },
-    {
         "source": "/ku/admission-procedure",
         "destination": "/admissions",
         "permanent": true
@@ -1057,6 +1047,11 @@
     {
         "source": "/Faculty-of-Science/overview.php",
         "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/faculty_of_management",
+        "destination": "/departments/faculty-of-management",
         "permanent": true
     }
 ]

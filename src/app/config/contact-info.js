@@ -10,10 +10,10 @@ const emailToHref = (email) => `mailto:${email}`;
 export const contactInfo = {
   // Phone numbers - single source of truth
   phone: {
-    admissions: '+91-9907252100',
-    general: '+91-9907252100',
-    help: '+91-9907252100',
-    primary: '+91-9907-252-100', // Default/primary number
+    admissions: '+91-990-725-2100',
+    general: '+91-990-725-2100',
+    help: '+91-990-725-2100',
+    primary: '+91-990-725-2100', // Default/primary number
   },
 
   // Email addresses - single source of truth
