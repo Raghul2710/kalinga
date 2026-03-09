@@ -426,7 +426,7 @@
     },
     {
         "source": "/faculty_of_management.php/1000",
-        "destination": "/departments/faculty-of-management",
+        "destination": "/departments/faculty-of-commerce-and-management",
         "permanent": true
     },
     {
@@ -1051,7 +1051,7 @@
     },
     {
         "source": "/faculty_of_management",
-        "destination": "/departments/faculty-of-management",
+        "destination": "/departments/faculty-of-commerce-and-management",
         "permanent": true
     }
 ]
