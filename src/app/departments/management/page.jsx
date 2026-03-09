@@ -231,6 +231,7 @@ export default function ManagementDepartmentPage() {
         }
     ];
 
+
     const ideathonActivities = [
         {
             id: 1,
@@ -298,7 +299,8 @@ export default function ManagementDepartmentPage() {
         { name: "Prof. Byju John", designation: "Director General" }
     ];
 
-    const aboutFaqData = [
+
+    const aboutFaqDatanew = [
         {
             id: 1,
             title: "Board of Studies",
@@ -314,6 +316,98 @@ export default function ManagementDepartmentPage() {
                 { slNo: 5, member: "Students and Alumni Representative - Members" }
             ]
         },
+        {
+            id: 2,
+            title: "Guest Sessions",
+            columns: [
+                { key: "guestSpeaker", label: "Guest Speaker", width: "w-40" },
+                { key: "designation", label: "Designation", width: "w-60" },
+                { key: "topic", label: "Topic", width: "w-60" },
+                { key: "eventDate", label: "Event Date", width: "w-30" }
+            ],
+            data: [
+                { guestSpeaker: "Dr. Ravindra K Brahme", designation: "General Secretary, Indian Economic Association", topic: "Role of Industrial Sector in Viksit Bharat", eventDate: "31-01-2025" },
+                { guestSpeaker: "Ms. Ambika Agrawal", designation: "Legal Consultant, KPMG, London, U.K", topic: "Guest Lecture on Job Opportunity in U.K", eventDate: "14-08-2024" },
+                { guestSpeaker: "Mr. Rahul Patel", designation: "Freelance Trainer, Minimalist, Motivational Speaker", topic: "Paiso Ki Pathshala", eventDate: "01-03-2023" },
+                { guestSpeaker: "Mr. Sudip Nag Mr. Abhishek Kumar", designation: "National Securities Depository Limited", topic: "National Securities Depository Limited", eventDate: "15-10-2022" },
+                { guestSpeaker: "Mr. Chintan Dave", designation: "Stock Market Institute, Bangalore", topic: "National Workshop on Cryptocurrency & Blockchain Technology", eventDate: "01-10-2022" },
+                { guestSpeaker: "Mr. Raj Mehrotra Mrs. Vinita Raj", designation: "Research Analyst, E&Y MD, World Dealers Pvt. Ltd.", topic: "Budget Analysis and Quiz", eventDate: "09-02-2023 to 10-02-2023" },
+                { guestSpeaker: "Molly Faulkner, Keith Koo, Sanjay Kumar Agrawal, Victoria McClure, William Du, Jona Lemmonds, Sameer Kaila, Sebastian Jude, Anthony Jarrin, Sebastian Gerona, Bianca Ventura, Amresh Kumar Singh", designation: "CEO – Falcon Phoenix Group, Vice President – US Capital, Gupta Success Private Limited, Venture Capitalist, CEO, Ingenious Haus Group, Managing Partner – Ashtree Wealth Group, MD – Dhancreators, Actor, Director, Writer, Investor, CEO/President – TCG Capital, Founder/CEO – Liquid Minds, Lead Advisor – Ashtree Wealth Group, President – IFBI", topic: "Investor Summit", eventDate: "18-02-2023" }
+            ]
+        },
+        {
+            id: 3,
+            title: "FDP Organized 2024-25",
+            columns: [
+                { key: "Sno", label: "S.No", width: "w-10" },
+                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
+                { key: "topic", label: "Title of the Programme", width: "w-50" },
+                { key: "eventDate", label: "Duration", width: "w-30" },
+                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
+            ],
+            data: [
+                { Sno: "1", AcademicYear: "2025-26", topic: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.", eventDate: "17 to 22 June, 2024", noofcandidates: "46" },
+            ]
+        },
+        {
+            id: 4,
+            title: "FDP Organized 2023-24",
+            columns: [
+                { key: "Sno", label: "S.No", width: "w-10" },
+                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
+                { key: "topic", label: "Title of the Programme", width: "w-50" },
+                { key: "eventDate", label: "Duration", width: "w-30" },
+                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
+            ],
+            data: [
+                { Sno: "1", AcademicYear: "2023-24", topic: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.", eventDate: "20 to 29 May, 2023", noofcandidates: "11" },
+            ]
+        },
+        {
+            id: 5,
+            title: "FDP Organized 2022-23",
+            columns: [
+                { key: "Sno", label: "S.No", width: "w-10" },
+                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
+                { key: "topic", label: "Title of the Programme", width: "w-50" },
+                { key: "eventDate", label: "Duration", width: "w-30" },
+                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
+            ],
+            data: [
+                { Sno: "1", AcademicYear: "2022-23", topic: "Two Week FDP on “Innovative Trends in Teaching and Professional Skills Acquisition in Management.", eventDate: "14 to 27 June, 2022", noofcandidates: "35" },
+                { Sno: "2", AcademicYear: "2022-23", topic: "FDP on Outcome Based Education", eventDate: "18-04-2022 to 23-04-2022", noofcandidates: "26" },
+                { Sno: "3", AcademicYear: "2022-23", topic: "One Week National Workshop on Data Analytics in Research using SPSS", eventDate: "02/01/2023 to 06/01/2023", noofcandidates: "77" },
+            ]
+        },
+        {
+            id: 6,
+            title: "FDP Organized 2021-22",
+            columns: [
+                { key: "Sno", label: "S.No", width: "w-10" },
+                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
+                { key: "topic", label: "Title of the Programme", width: "w-50" },
+                { key: "eventDate", label: "Duration", width: "w-30" },
+                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
+            ],
+            data: [
+                { Sno: "1", AcademicYear: "2021-22", topic: "Two Days Boot Camp (FDP) on Personal Effectiveness", eventDate: "12 to 13 August, 2022", noofcandidates: "97" },
+            ]
+        },
+        {
+            id: 7,
+            title: "FDP Organized 2020-21",
+            columns: [
+                { key: "Sno", label: "S.No", width: "w-10" },
+                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
+                { key: "topic", label: "Title of the Programme", width: "w-50" },
+                { key: "eventDate", label: "Duration", width: "w-30" },
+                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
+            ],
+            data: [
+                { Sno: "1", AcademicYear: "2020-21", topic: "One Week FDP on Emerging Business Issues", eventDate: "12 to 13 August, 2022", noofcandidates: "41" },
+            ]
+        },
+
     ];
 
     return (
@@ -423,6 +517,9 @@ export default function ManagementDepartmentPage() {
                     }
                 ]}
             />
+            <h2 className="text-center text-gray-800 mt-8">Testimonial</h2>
+            <APITable tableId="87" title="" showTableTitle={false} />
+            <FAQ variant="table-display" tableSections={aboutFaqDatanew} items={[]} subtitle="" title="" id="about-faq" />
 
             <OrganogramOfKalinga
                 title="Feedback"
@@ -485,7 +582,7 @@ export default function ManagementDepartmentPage() {
             />
 
             <Facility />
-            <FAQ variant="table-display" tableSections={aboutFaqData} items={[]} subtitle="" title="" id="governance-structure" />
+
         </>
     );
 }

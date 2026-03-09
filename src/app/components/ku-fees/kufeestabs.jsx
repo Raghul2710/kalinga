@@ -131,7 +131,7 @@ const FEES_COMMERCE = {
         },
     ],
     notes: [
-        "* MBA Specialisations (select any from mba): Banking & Insurance, Business Analytics, Digital Marketing & E-Commerce, Finance, Healthcare & Hospital Management, Hotel & Hospitality Management, Human Resource Management, Information Technology, International Business, Logistics & Supply Chain Management, Marketing Management, NGO Management.",
+        "* MBA Specialisations (select any from mba): Business Analytics, Digital Marketing & E-Commerce, Finance Management, Healthcare and Hospital Management, Human Resource Management, International Business Management, Logistics and Supply Chain Management, Marketing Management, Pharmaceutical Business Management, Startup and Entrepreneurship",
         "BBA Specialisations (select any from bba): Airline & Airport Operations Management, Digital Marketing & E-Commerce, Event Management & Public Relations, Family Business & Startups, Finance, Fintech, Hospital Administration, Human Resource Management, Marketing Management, Aviation.",
     ],
 };
