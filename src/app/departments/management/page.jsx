@@ -21,7 +21,15 @@ import Placements from "@/app/components/home/placements";
 import SurveyForm from "@/app/components/general/SurveyForm";
 
 export default function ManagementDepartmentPage() {
-    const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
+    const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
+
+    const handleOpenSurvey = (category, title) => {
+        setFeedbackModalConfig({ isOpen: true, category, title });
+    };
+
+    const handleCloseSurvey = () => {
+        setFeedbackModalConfig(prev => ({ ...prev, isOpen: false }));
+    };
     const mainIntroContent = {
         title: "About the Department of Management",
         description: [
@@ -427,40 +435,40 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 1,
                         text: "Course Exit Survey – MBA",
-                        onClick: () => setIsFeedbackModalOpen(true)
+                        onClick: () => handleOpenSurvey("course_exit", "Course Exit Survey - MBA")
                     },
                     {
                         id: 2,
-                        text: "Feedback Form for Students",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Students.pdf",
+                        text: "Students - MBA",
+                        onClick: () => handleOpenSurvey("students", "Students - MBA")
                     },
                     {
                         id: 3,
-                        text: "Feedback Form for Teachers",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-Form-for-Teachers.pdf",
+                        text: "Teachers - MBA",
+                        onClick: () => handleOpenSurvey("teachers", "Teachers - MBA")
                     },
                     {
                         id: 4,
-                        text: "Satisfaction Survey for Employer",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Satisfaction-Survey-for-Employer.pdf",
+                        text: "Employer - MBA",
+                        onClick: () => handleOpenSurvey("employer", "Employer - MBA")
                     },
                     {
                         id: 5,
-                        text: "Satisfaction Survey for Employer",
-                        link: "https://cdn.kalingauniversity.ac.in/course/management/Feedback-form-Satisfaction-Survey-for-Alumni.pdf",
+                        text: "Alumni - MBA",
+                        onClick: () => handleOpenSurvey("alumni", "Alumni - MBA")
                     },
                 ]}
             />
 
             <Modal
-                isOpen={isFeedbackModalOpen}
-                onClose={() => setIsFeedbackModalOpen(false)}
-                title="Course Exit Survey - Management"
+                isOpen={feedbackModalConfig.isOpen}
+                onClose={handleCloseSurvey}
+                title={feedbackModalConfig.title}
             >
                 <SurveyForm
                     courseId={17} // Using 2 for Management as it's typically an ID, but backend can accept it
-                    category="course-exit-survey"
-                    onSuccess={() => setIsFeedbackModalOpen(false)}
+                    category={feedbackModalConfig.category}
+                    onSuccess={handleCloseSurvey}
                 />
             </Modal>
             <Placements
