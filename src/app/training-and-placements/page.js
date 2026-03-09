@@ -1173,7 +1173,7 @@ export default function Research() {
       <Placements hideMarquee={true} hideMilestones={true} bgColor="bg-[var(--light-gray)] mx-2 rounded-xl" marginClassName="mb-0" />
       <MediaCardSlider
         categoryTitle="Video Interviews"
-        title="Hear From Our Success Stories"
+        title="Hear their Success Stories"
         videoItems={videoItems}
         cardBgClass="bg-white"
         nameTextClass="text-[var(--button-red)]"
@@ -1209,9 +1209,9 @@ export default function Research() {
         pyClassName="py-8"
       />
 
-      <CapacityTabSection 
-        data={capacityData} 
-        title="Capacity Development and Skill Enhancement" 
+      <CapacityTabSection
+        data={capacityData}
+        title="Capacity Development and Skill Enhancement"
       />
 
 

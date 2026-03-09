@@ -1045,7 +1045,7 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Science/overview.php",
+        "source": "/Faculty-of-Science/overview",
         "destination": "/departments/faculty-of-science",
         "permanent": true
     },

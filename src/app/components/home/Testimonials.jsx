@@ -82,7 +82,7 @@ const defaultTestimonialsData = [
     // }
 ];
 
-export default function Testimonials({ testimonials = [], className = "", subtitle = "Journeys that Inspire", title = "Stories that Define Kalinga's Spirit", titleClassName = "", subtitleClassName = "", subtitleTextColor = "" }) {
+export default function Testimonials({ testimonials = [], className = "", subtitle = "Journeys that Inspire", title = "Success Stories From KIF Startups", titleClassName = "", subtitleClassName = "", subtitleTextColor = "" }) {
     const testimonialsData = testimonials.length > 0 ? testimonials : defaultTestimonialsData;
     const [activeIndex, setActiveIndex] = useState(1);
     const [isMobile, setIsMobile] = useState(false);

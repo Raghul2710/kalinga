@@ -12,12 +12,12 @@ import GlobalArrowButton from '../general/global-arrow_button';
 
 export default function FacilitySlider({
     title = "Moot Court",
-    subtitle = "Legal Skills into Trials",
-    description = "Our law students get a real courtroom experience with our Moot Court, where they put their legal skills into trials and participate in competitions, and gain confidence.",
+    subtitle = "From Classroom to Courtroom",
+    description = "Our law students gain real courtroom experience through our Moot Court, where they apply their legal knowledge in simulated trials, participate in practical training sessions and competitions, and build the confidence required for a successful legal career.",
     images = [
         "https://cdn.kalingauniversity.ac.in/academic-facilities/mootcourt.webp",
-        "https://cdn.kalingauniversity.ac.in/academic-facilities/seminar-rooms.webp",
-        "https://cdn.kalingauniversity.ac.in/academic-facilities/audiovisualcentre.webp"
+        "https://cdn.kalingauniversity.ac.in/course/Law-1.webp",
+        "https://cdn.kalingauniversity.ac.in/course/law-2.webp"
     ],
     ctaText,
     ctaLink = "#",
@@ -77,6 +77,7 @@ export default function FacilitySlider({
                                         fill
                                         className="object-cover object-center"
                                         priority={index === 0}
+                                        unoptimized={true}
                                     />
                                 </div>
                             </SwiperSlide>

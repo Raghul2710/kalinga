@@ -501,7 +501,7 @@ export default function CtcdTrainingTabs({ customTabs, heading }) {
                                         <p>Our corporate training team has conducted impactful training programs, supporting thousands of working professionals from top organisations in different sectors. They first understand their challenges and then design customised training programs. Some of our core topics include communication, leadership, team productivity, sales & marketing, digital knowledge, and much more. We have seen positive results in our feedback sessions, where employees have seen improved confidence and mindset, and companies were able to build a strong leadership pipeline. This makes us one of the trusted growth partners for organisations that seek sustainable growth and excellence. </p>
 
                                         {/* Projects Table */}
-                                        <div className="overflow-x-auto overflow-y-auto max-h-[600px] border border-gray-200 rounded-lg">
+                                        <div className="overflow-x-auto overflow-y-auto max-h-[600px] border border-gray-200 rounded-lg mt-6">
                                             <table className="w-full border-collapse min-w-[800px]">
                                                 <thead className="sticky top-0 z-10">
                                                     <tr className="bg-[var(--dark-blue)] text-white">

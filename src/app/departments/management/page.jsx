@@ -435,7 +435,7 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 1,
                         text: "Course Exit Survey – MBA",
-                        onClick: () => handleOpenSurvey("course_exit", "Course Exit Survey - MBA")
+                        onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - MBA")
                     },
                     {
                         id: 2,

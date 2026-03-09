@@ -353,7 +353,7 @@ export default function CommerceDepartmentPage() {
 
     return (
         <>
-            {/* <MainIntro
+            <MainIntro
                 title={mainIntroContent.title}
                 description={mainIntroContent.description}
                 imageUrl={mainIntroContent.imageUrl}
@@ -510,7 +510,7 @@ export default function CommerceDepartmentPage() {
                 </div>
             </Modal>
 
-            <Facility /> */}
+            <Facility />
         </>
     );
 }

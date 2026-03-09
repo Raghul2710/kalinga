@@ -790,6 +790,19 @@ export default function DynamicCoursePage() {
           ctaLink=""
         />
       )}
+      {['bachelor-of-pharmacy', 'diploma-in-pharmacy', 'doctor-of-pharmacy', 'master-of-pharmacy'].includes(slug) && (
+        <FacilitySlider
+          title="Explore Pharmacy Labs"
+          subtitle=""
+          description="Get hands-on training at our Pharmaceutics, Pharmaceutical Chemistry, Pharmaceutical Analysis, Pharmacology, Pharmacognosy, Central Instrument Room, Machine Room, and Pharmacy Practice Lab. Develop an in-depth understanding of the chemical properties of medicines, drug formulation, explore traditional medicines, learn the influence of genetics on drugs, understand side effects and reactions, and much more."
+          images={[
+            "https://cdn.kalingauniversity.ac.in/course/pharamcy-1.webp",
+            "https://cdn.kalingauniversity.ac.in/course/pharamcy-courses.webp"
+          ]}
+          ctaText=""
+          ctaLink=""
+        />
+      )}
       {syllabusContent && !(syllabusContent.buttons && syllabusContent.buttons.length === 1) && (
         <div id="syllabus" className="scroll-mt-24 md:scroll-mt-28">
           <OrganogramOfKalinga

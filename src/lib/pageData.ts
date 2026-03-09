@@ -571,6 +571,72 @@ export const pageDataMap: Record<string, PageData> = {
         title: "Master of Law [Dual Specialisation] ",
         banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
     },
+    "/courses/bachelor-of-technology-in-computer-science": {
+        slug: "/courses/bachelor-of-technology-in-computer-science",
+        title: "Bachelor of Technology in Computer Science Engineering",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/bachelor-of-library-information-science": {
+        slug: "/courses/bachelor-of-library-information-science",
+        title: "Bachelor of Library and Information Science",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/master-of-library-information-science": {
+        slug: "/courses/master-of-library-information-science",
+        title: "Master of Library and Information Science",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/bachelor-of-technology-in-computer-science-artificial-intelligence-machine-learning": {
+        slug: "/courses/bachelor-of-technology-in-computer-science-artificial-intelligence-machine-learning",
+        title: "Bachelor of Technology in Computer Science in AI & ML",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/bachelor-of-arts-with-psc-coaching": {
+        slug: "/courses/bachelor-of-arts-with-psc-coaching",
+        title: "Bachelor of Arts with PSC Coaching",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/master-of-arts-with-psc-coaching": {
+        slug: "/courses/master-of-arts-with-psc-coaching",
+        title: "Master of Arts with PSC Coaching",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/bachelor-of-social-work-with-psc-coaching": {
+        slug: "/courses/bachelor-of-social-work-with-psc-coaching",
+        title: "Bachelor of Social Work with PSC Coaching",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/master-of-social-work-with-psc-coaching": {
+        slug: "/courses/master-of-social-work-with-psc-coaching",
+        title: "Master of Social Work with PSC Coaching",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/bachelor-of-arts-in-journalism-and-mass-communication-with-psc-coaching": {
+        slug: "/courses/bachelor-of-arts-in-journalism-and-mass-communication-with-psc-coaching",
+        title: "Bachelor of Arts in Journalism and Mass Communication with PSC Coaching",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/master-of-arts-in-journalism-and-mass-communication-with-psc-coaching": {
+        slug: "/courses/master-of-arts-in-journalism-and-mass-communication-with-psc-coaching",
+        title: "Master of Arts in Journalism and Mass Communication with PSC Coaching",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/bachelor-of-computer-science-in-ai-ml-and-cybersecurity": {
+        slug: "/courses/bachelor-of-computer-science-in-ai-ml-and-cybersecurity",
+        title: "Bachelor of Computer Science in AI & ML and Cybersecurity",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/master-of-animation-visual-effects": {
+        slug: "/courses/master-of-animation-visual-effects",
+        title: "Master of Animation & Visual Effects",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+    "/courses/master-of-computer-science-in-artificial-intelligence-machine-learning-and-cybersecurity": {
+        slug: "/courses/master-of-computer-science-in-artificial-intelligence-machine-learning-and-cybersecurity",
+        title: "Master of Computer Science in AI & ML and Cybersecurity",
+        banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
+    },
+
 };
 
 

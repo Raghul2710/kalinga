@@ -86,12 +86,12 @@ export default function Footer() {
                   <ul className="text-white/80 space-y-2 sm:space-y-3">
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/student-welfare">Student Welfare</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="https://wpengineering.kalingauniversity.ac.in/">Working Professionals</a></li>
-                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/sustainability">SDG Cell</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/sustainability">Sustainability</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/ieee">IEEE Student Branch</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/executive-development-program">Executive <br />Development Program</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/csr">CSR @ KU</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="kalinga-incubation-foundation">KIF</a></li>
-                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="#">SC & ST Grievance Cell</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/anti-ragging">Anti Ragging</a></li>
 
                   </ul>
                   <ul className="text-white/80 space-y-2 sm:space-y-3">
@@ -132,6 +132,7 @@ export default function Footer() {
                     </li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/grievance-redressal">Grievance Redressal</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/other-committees">Other Committees</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/national-council-teacher-education">NCTE</a></li>
 
 
                   </ul>

@@ -34,7 +34,7 @@ export default async function HtmlSitemapPage() {
         <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Sitemap</h1>
         <p className="text-gray-600 mb-8">
           All pages on the Kalinga University website. You can also use{' '}
-          <a href="/sitemap.xml" className="text-[var(--dark-orange-red)] underline">sitemap.xml</a> for search engines.
+          <a href="/sitemap.xml" className="text-[var(--dark-orange-red)] underline">sitemap.xml</a>
         </p>
 
         <section className="mb-10">

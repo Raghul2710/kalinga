@@ -40,7 +40,7 @@ function Newraipurvideos({
     subtitle = "",
     title = "New Raipur in Action",
     description = "Explore New Raipur through videos showcasing smart infrastructure, planning, lifestyle, and future-ready development.",
-    backgroundColor = "bg-[var(--light-gray)]",
+    backgroundColor = "bg-[var(--white)]",
     showPagination = true,
     showNavigation = true,
     fallbackImage = "https://cdn.kalingauniversity.ac.in/about-raipur/raipur1.webp",

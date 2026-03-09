@@ -128,7 +128,7 @@ export default function IPRCellPage() {
         buttonLink={IPR_READMORE_PDF}
       />
 
-      <div className="-mt-16 md:-mt-20">
+      <div>
         <MentorIntro items={MentorIntroProps} />
       </div>
 
