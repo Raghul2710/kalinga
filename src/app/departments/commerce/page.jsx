@@ -15,11 +15,22 @@ import Facility from "@/app/components/admissions/facility";
 import Modal from "@/app/components/general/Modal";
 import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 import StudentCell from "@/app/components/international-students/student_cell";
+import SurveyForm from "@/app/components/general/SurveyForm";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import MediaCardSlider from "@/app/components/general/media-card-slider";
 
 export default function CommerceDepartmentPage() {
     const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
+    const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
+
+    const handleOpenSurvey = (category, title) => {
+        setFeedbackModalConfig({ isOpen: true, category, title });
+    };
+
+    const handleCloseSurvey = () => {
+        setFeedbackModalConfig(prev => ({ ...prev, isOpen: false }));
+    };
+
     const mainIntroContent = {
         title: "About the Department of Commerce",
         description: [
@@ -27,7 +38,7 @@ export default function CommerceDepartmentPage() {
             "The Department of Commerce focuses on imparting the highest quality of education and exposure related to the economy and businesses to produce next-gen leaders. Learn how to operate a business while exploring the impact of economic, social, cultural, political, and technological decisions positively or negatively on companies and society.",
             "With our innovative teaching pedagogy, students become well-equipped with various problem-solving skills through case studies and practical exposure. Our programs offer units that focus on key principles of commerce and their application in the industry. The vision of this department is to ensure that our students have an industry-relevant degree"
         ],
-        imageUrl: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/cm-1.webp",
+        imageUrl: "https://cdn.kalingauniversity.ac.in/common/kalinga-students-2.jpg",
         imageAlt: "Department of Commerce",
     };
 
@@ -312,7 +323,7 @@ export default function CommerceDepartmentPage() {
             id: 1,
             title: "Ideathon 1.0",
             date: "26 & 27 Nov, 2021",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-1.webp",
             imageAlt: "Ideathon 1.0",
             description: "Ideathon 1.0 - A flagship event providing a platform for students to showcase their innovative ideas, business plans, and entrepreneurial spirit.",
             buttonText: "Read More"
@@ -321,7 +332,7 @@ export default function CommerceDepartmentPage() {
             id: 2,
             title: "Ideathon 2.0",
             date: "16 - 18 Nov, 2022",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-2.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-2.webp",
             imageAlt: "Ideathon 2.0",
             description: "Ideathon 2.0 - Building on the success of the first edition, this event brought together brilliant minds to solve complex business challenges.",
             buttonText: "Read More"
@@ -444,6 +455,7 @@ export default function CommerceDepartmentPage() {
                 ]}
             />
             <OrganogramOfKalinga
+                title="Feedback"
                 useContainer={true}
                 description="Kalinga University follows a well-structured governance model to ensure smooth administration and institutional integrity."
                 showImage={false}
@@ -452,11 +464,43 @@ export default function CommerceDepartmentPage() {
                 buttons={[
                     {
                         id: 1,
-                        text: "Faculty Feedback Form",
-                        onClick: () => setIsFeedbackModalOpen(true)
-                    }
+                        text: "Course Exit Survey – Commerce",
+                        onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - Commerce")
+                    },
+                    {
+                        id: 2,
+                        text: "Students - Commerce",
+                        onClick: () => handleOpenSurvey("students", "Students - Commerce")
+                    },
+                    {
+                        id: 3,
+                        text: "Teachers - Commerce",
+                        onClick: () => handleOpenSurvey("teachers", "Teachers - Commerce")
+                    },
+                    {
+                        id: 4,
+                        text: "Employer - Commerce",
+                        onClick: () => handleOpenSurvey("employer", "Employer - Commerce")
+                    },
+                    {
+                        id: 5,
+                        text: "Alumni - Commerce",
+                        onClick: () => handleOpenSurvey("alumni", "Alumni - Commerce")
+                    },
                 ]}
             />
+
+            <Modal
+                isOpen={feedbackModalConfig.isOpen}
+                onClose={handleCloseSurvey}
+                title={feedbackModalConfig.title}
+            >
+                <SurveyForm
+                    courseId={18} // updated for commerce, adjust if necessary
+                    category={feedbackModalConfig.category}
+                    onSuccess={handleCloseSurvey}
+                />
+            </Modal>
 
             <Modal
                 isOpen={isFeedbackModalOpen}

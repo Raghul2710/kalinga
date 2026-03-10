@@ -179,6 +179,13 @@ export default function ManagementDepartmentPage() {
                     className="text-center"
                 />
             )
+        },
+        {
+            id: 2,
+            question: "Testimonial",
+            component: (
+                <APITable tableId="87" title="" showTableTitle={false} />
+            )
         }
     ];
 
@@ -237,37 +244,41 @@ export default function ManagementDepartmentPage() {
             id: 1,
             title: "Ideathon 1.0",
             date: "26 & 27 Nov, 2021",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-1.webp",
             imageAlt: "Ideathon 1.0",
             description: "Ideathon 1.0 - A flagship event providing a platform for students to showcase their innovative ideas, business plans, and entrepreneurial spirit.",
-            buttonText: "Read More"
+            buttonText: "Read More",
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-1.0.webp"
         },
         {
             id: 2,
             title: "Ideathon 2.0",
             date: "16 - 18 Nov, 2022",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-2.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-2.webp",
             imageAlt: "Ideathon 2.0",
             description: "Ideathon 2.0 - Building on the success of the first edition, this event brought together brilliant minds to solve complex business challenges.",
-            buttonText: "Read More"
+            buttonText: "Read More",
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-2.0.png"
         },
         {
             id: 3,
             title: "Ideathon 3.0",
             date: "5 - 6 Jan, 2024",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-3.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-3.webp",
             imageAlt: "Ideathon 3.0",
             description: "Ideathon 3.0 - Continued the tradition of fostering innovation and providing students with industry insights and mentorship.",
-            buttonText: "Read More"
+            buttonText: "Read More",
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-3.0.png"
         },
         {
             id: 4,
             title: "Ideathon 4.0",
             date: "22 & 23 Nov, 2024",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-4.jpeg",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-1.jpeg",
             imageAlt: "Ideathon 4.0",
             description: "Ideathon 4.0 - Focused on sustainable business models and creative problem-solving in a rapidly changing global economy.",
-            buttonText: "Read More"
+            buttonText: "Read More",
+            buttonlink: "s3://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-4.0.png"
         },
         {
             id: 5,
@@ -276,7 +287,8 @@ export default function ManagementDepartmentPage() {
             imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/ma-e-5.jpeg",
             imageAlt: "Ideathon 5.0",
             description: "Ideathon 5.0 - The latest iteration of the competition, pushing boundaries and celebrating the entrepreneurial achievements of our students.",
-            buttonText: "Read More"
+            buttonText: "Read More",
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-5.0.png"
         }
     ];
 
@@ -299,8 +311,108 @@ export default function ManagementDepartmentPage() {
         { name: "Prof. Byju John", designation: "Director General" }
     ];
 
+    const mappedEventActivities = [
+        {
+            id: 1,
+            title: "Role of Industrial Sector in Viksit Bharat",
+            description: "Category: Guest Session\nGuest Speaker: Dr. Ravindra K Brahme\nDesignation: General Secretary, Indian Economic Association",
+            date: "31-01-2025",
+            buttonText: false
+        },
+        {
+            id: 2,
+            title: "Guest Lecture on Job Opportunity in U.K",
+            description: "Category: Guest Session\nGuest Speaker: Ms. Ambika Agrawal\nDesignation: Legal Consultant, KPMG, London, U.K",
+            date: "14-08-2024",
+            buttonText: false
+        },
+        {
+            id: 3,
+            title: "Paiso Ki Pathshala",
+            description: "Category: Guest Session\nGuest Speaker: Mr. Rahul Patel\nDesignation: Freelance Trainer, Minimalist, Motivational Speaker",
+            date: "01-03-2023",
+            buttonText: false
+        },
+        {
+            id: 4,
+            title: "National Securities Depository Limited",
+            description: "Category: Guest Session\nGuest Speaker: Mr. Sudip Nag & Mr. Abhishek Kumar\nDesignation: National Securities Depository Limited",
+            date: "15-10-2022",
+            buttonText: false
+        },
+        {
+            id: 5,
+            title: "National Workshop on Cryptocurrency & Blockchain Technology",
+            description: "Category: Guest Session\nGuest Speaker: Mr. Chintan Dave\nDesignation: Stock Market Institute, Bangalore",
+            date: "01-10-2022",
+            buttonText: false
+        },
+        {
+            id: 6,
+            title: "Budget Analysis and Quiz",
+            description: "Category: Guest Session\nGuest Speaker: Mr. Raj Mehrotra & Mrs. Vinita Raj\nDesignation: Research Analyst, E&Y MD, World Dealers Pvt. Ltd.",
+            date: "09-02-2023 to 10-02-2023",
+            buttonText: false
+        },
+        {
+            id: 7,
+            title: "Investor Summit",
+            description: "Category: Guest Session\nGuest Speakers: Molly Faulkner, Keith Koo, Sanjay Kumar Agrawal, Victoria McClure, William Du, Jona Lemmonds, Sameer Kaila, Sebastian Jude, Anthony Jarrin, Sebastian Gerona, Bianca Ventura, Amresh Kumar Singh\nDesignations: Various CEOs, Vice Presidents, Investors, Founders, Managing Partners",
+            date: "18-02-2023",
+            buttonText: false
+        },
+        {
+            id: 8,
+            title: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.”",
+            description: "Category: Faculty Development Program\nAcademic Year: 2025-26\nCandidates Attended: 46",
+            date: "17-06-2024 to 22-06-2024",
+            buttonText: false
+        },
+        {
+            id: 9,
+            title: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.",
+            description: "Category: Faculty Development Program\nAcademic Year: 2023-24\nCandidates Attended: 11",
+            date: "20-05-2023 to 29-05-2023",
+            buttonText: false
+        },
+        {
+            id: 10,
+            title: "Two Week FDP on “Innovative Trends in Teaching and Professional Skills Acquisition in Management.”",
+            description: "Category: Faculty Development Program\nAcademic Year: 2022-23\nCandidates Attended: 35",
+            date: "14-06-2022 to 27-06-2022",
+            buttonText: false
+        },
+        {
+            id: 11,
+            title: "FDP on Outcome Based Education",
+            description: "Category: Faculty Development Program\nAcademic Year: 2022-23\nCandidates Attended: 26",
+            date: "18-04-2022 to 23-04-2022",
+            buttonText: false
+        },
+        {
+            id: 12,
+            title: "One Week National Workshop on Data Analytics in Research using SPSS",
+            description: "Category: Faculty Development Program\nAcademic Year: 2022-23\nCandidates Attended: 77",
+            date: "02-01-2023 to 06-01-2023",
+            buttonText: false
+        },
+        {
+            id: 13,
+            title: "Two Days Boot Camp (FDP) on Personal Effectiveness",
+            description: "Category: Faculty Development Program\nAcademic Year: 2021-22\nCandidates Attended: 97",
+            date: "12-08-2022 to 13-08-2022",
+            buttonText: false
+        },
+        {
+            id: 14,
+            title: "One Week FDP on Emerging Business Issues",
+            description: "Category: Faculty Development Program\nAcademic Year: 2020-21\nCandidates Attended: 41",
+            date: "12-08-2022 to 13-08-2022",
+            buttonText: false
+        }
+    ];
 
-    const aboutFaqDatanew = [
+    const boardOfStudiesData = [
         {
             id: 1,
             title: "Board of Studies",
@@ -316,98 +428,6 @@ export default function ManagementDepartmentPage() {
                 { slNo: 5, member: "Students and Alumni Representative - Members" }
             ]
         },
-        {
-            id: 2,
-            title: "Guest Sessions",
-            columns: [
-                { key: "guestSpeaker", label: "Guest Speaker", width: "w-40" },
-                { key: "designation", label: "Designation", width: "w-60" },
-                { key: "topic", label: "Topic", width: "w-60" },
-                { key: "eventDate", label: "Event Date", width: "w-30" }
-            ],
-            data: [
-                { guestSpeaker: "Dr. Ravindra K Brahme", designation: "General Secretary, Indian Economic Association", topic: "Role of Industrial Sector in Viksit Bharat", eventDate: "31-01-2025" },
-                { guestSpeaker: "Ms. Ambika Agrawal", designation: "Legal Consultant, KPMG, London, U.K", topic: "Guest Lecture on Job Opportunity in U.K", eventDate: "14-08-2024" },
-                { guestSpeaker: "Mr. Rahul Patel", designation: "Freelance Trainer, Minimalist, Motivational Speaker", topic: "Paiso Ki Pathshala", eventDate: "01-03-2023" },
-                { guestSpeaker: "Mr. Sudip Nag Mr. Abhishek Kumar", designation: "National Securities Depository Limited", topic: "National Securities Depository Limited", eventDate: "15-10-2022" },
-                { guestSpeaker: "Mr. Chintan Dave", designation: "Stock Market Institute, Bangalore", topic: "National Workshop on Cryptocurrency & Blockchain Technology", eventDate: "01-10-2022" },
-                { guestSpeaker: "Mr. Raj Mehrotra Mrs. Vinita Raj", designation: "Research Analyst, E&Y MD, World Dealers Pvt. Ltd.", topic: "Budget Analysis and Quiz", eventDate: "09-02-2023 to 10-02-2023" },
-                { guestSpeaker: "Molly Faulkner, Keith Koo, Sanjay Kumar Agrawal, Victoria McClure, William Du, Jona Lemmonds, Sameer Kaila, Sebastian Jude, Anthony Jarrin, Sebastian Gerona, Bianca Ventura, Amresh Kumar Singh", designation: "CEO – Falcon Phoenix Group, Vice President – US Capital, Gupta Success Private Limited, Venture Capitalist, CEO, Ingenious Haus Group, Managing Partner – Ashtree Wealth Group, MD – Dhancreators, Actor, Director, Writer, Investor, CEO/President – TCG Capital, Founder/CEO – Liquid Minds, Lead Advisor – Ashtree Wealth Group, President – IFBI", topic: "Investor Summit", eventDate: "18-02-2023" }
-            ]
-        },
-        {
-            id: 3,
-            title: "FDP Organized 2024-25",
-            columns: [
-                { key: "Sno", label: "S.No", width: "w-10" },
-                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
-                { key: "topic", label: "Title of the Programme", width: "w-50" },
-                { key: "eventDate", label: "Duration", width: "w-30" },
-                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
-            ],
-            data: [
-                { Sno: "1", AcademicYear: "2025-26", topic: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.", eventDate: "17 to 22 June, 2024", noofcandidates: "46" },
-            ]
-        },
-        {
-            id: 4,
-            title: "FDP Organized 2023-24",
-            columns: [
-                { key: "Sno", label: "S.No", width: "w-10" },
-                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
-                { key: "topic", label: "Title of the Programme", width: "w-50" },
-                { key: "eventDate", label: "Duration", width: "w-30" },
-                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
-            ],
-            data: [
-                { Sno: "1", AcademicYear: "2023-24", topic: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.", eventDate: "20 to 29 May, 2023", noofcandidates: "11" },
-            ]
-        },
-        {
-            id: 5,
-            title: "FDP Organized 2022-23",
-            columns: [
-                { key: "Sno", label: "S.No", width: "w-10" },
-                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
-                { key: "topic", label: "Title of the Programme", width: "w-50" },
-                { key: "eventDate", label: "Duration", width: "w-30" },
-                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
-            ],
-            data: [
-                { Sno: "1", AcademicYear: "2022-23", topic: "Two Week FDP on “Innovative Trends in Teaching and Professional Skills Acquisition in Management.", eventDate: "14 to 27 June, 2022", noofcandidates: "35" },
-                { Sno: "2", AcademicYear: "2022-23", topic: "FDP on Outcome Based Education", eventDate: "18-04-2022 to 23-04-2022", noofcandidates: "26" },
-                { Sno: "3", AcademicYear: "2022-23", topic: "One Week National Workshop on Data Analytics in Research using SPSS", eventDate: "02/01/2023 to 06/01/2023", noofcandidates: "77" },
-            ]
-        },
-        {
-            id: 6,
-            title: "FDP Organized 2021-22",
-            columns: [
-                { key: "Sno", label: "S.No", width: "w-10" },
-                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
-                { key: "topic", label: "Title of the Programme", width: "w-50" },
-                { key: "eventDate", label: "Duration", width: "w-30" },
-                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
-            ],
-            data: [
-                { Sno: "1", AcademicYear: "2021-22", topic: "Two Days Boot Camp (FDP) on Personal Effectiveness", eventDate: "12 to 13 August, 2022", noofcandidates: "97" },
-            ]
-        },
-        {
-            id: 7,
-            title: "FDP Organized 2020-21",
-            columns: [
-                { key: "Sno", label: "S.No", width: "w-10" },
-                { key: "AcademicYear", label: "Academic Year", width: "w-20" },
-                { key: "topic", label: "Title of the Programme", width: "w-50" },
-                { key: "eventDate", label: "Duration", width: "w-30" },
-                { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
-            ],
-            data: [
-                { Sno: "1", AcademicYear: "2020-21", topic: "One Week FDP on Emerging Business Issues", eventDate: "12 to 13 August, 2022", noofcandidates: "41" },
-            ]
-        },
-
     ];
 
     return (
@@ -517,9 +537,6 @@ export default function ManagementDepartmentPage() {
                     }
                 ]}
             />
-            <h2 className="text-center text-gray-800 mt-8">Testimonial</h2>
-            <APITable tableId="87" title="" showTableTitle={false} />
-            <FAQ variant="table-display" tableSections={aboutFaqDatanew} items={[]} subtitle="" title="" id="about-faq" />
 
             <OrganogramOfKalinga
                 title="Feedback"
@@ -568,6 +585,22 @@ export default function ManagementDepartmentPage() {
                     onSuccess={handleCloseSurvey}
                 />
             </Modal>
+            <section className="py-10 mt-10">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <SectionHeading
+                        title="Board of Studies"
+                        titleClassName="text-center mb-6"
+                    />
+                    <div className="overflow-hidden border border-gray-100 p-2">
+                        <DataTable
+                            columns={boardOfStudiesData[0].columns}
+                            data={boardOfStudiesData[0].data}
+                            overflowX={true}
+                            className="text-center"
+                        />
+                    </div>
+                </div>
+            </section>
             <Placements
                 placementData={departmentData}
                 bgColor="bg-white"
@@ -582,6 +615,13 @@ export default function ManagementDepartmentPage() {
             />
 
             <Facility />
+            <StudentActivities
+                id="events-activities"
+                title="Events"
+                subtitle=""
+                activities={mappedEventActivities}
+                useModal={true}
+            />
 
         </>
     );

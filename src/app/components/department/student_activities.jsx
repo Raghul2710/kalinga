@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import { useRef, useEffect, useMemo, useState } from "react";
 import { fetchNewsEvents, parseHtmlToText } from "@/app/lib/api";
 import Modal from "../general/Modal";
+import DataTable from "../general/data-table";
 
 const defaultActivities = [
   {
@@ -557,6 +558,23 @@ export default function StudentActivities({
                   </li>
                 ))}
               </ul>
+            </div>
+          )}
+          
+          {(selectedActivity?.columns && selectedActivity?.data) && (
+            <div className="space-y-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm mt-4">
+               <h4 className="text-lg font-bold flex items-center gap-2 text-[var(--button-red)] uppercase tracking-wide">
+                <span className="w-8 h-[2px] bg-[var(--button-red)]"></span>
+                Details List
+              </h4>
+               <div className="overflow-x-auto w-full">
+                 <DataTable
+                   columns={selectedActivity.columns}
+                   data={selectedActivity.data}
+                   overflowX={true}
+                   className="text-center"
+                 />
+               </div>
             </div>
           )}
         </div>
