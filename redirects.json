@@ -730,11 +730,6 @@
         "permanent": true
     },
     {
-        "source": "/International-Journal-of-Research-and-Studies",
-        "destination": "/international-journal-of-research-and-studies",
-        "permanent": true
-    },
-    {
         "source": "/admission_formp.php",
         "destination": "/admissions",
         "permanent": true
