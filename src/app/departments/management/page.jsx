@@ -244,31 +244,31 @@ export default function ManagementDepartmentPage() {
             id: 1,
             title: "Ideathon 1.0",
             date: "26 & 27 Nov, 2021",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-1.webp",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/ideathon-images-1.webp",
             imageAlt: "Ideathon 1.0",
             description: "Ideathon 1.0 - A flagship event providing a platform for students to showcase their innovative ideas, business plans, and entrepreneurial spirit.",
             buttonText: "Read More",
-            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-1.0.webp"
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/Ideathon-1.0.webp"
         },
         {
             id: 2,
             title: "Ideathon 2.0",
             date: "16 - 18 Nov, 2022",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-2.webp",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/ideathon-images-2.webp",
             imageAlt: "Ideathon 2.0",
             description: "Ideathon 2.0 - Building on the success of the first edition, this event brought together brilliant minds to solve complex business challenges.",
             buttonText: "Read More",
-            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-2.0.png"
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/Ideathon-2.0.png"
         },
         {
             id: 3,
             title: "Ideathon 3.0",
             date: "5 - 6 Jan, 2024",
-            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/ideathon-images-3.webp",
+            imageSrc: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/ideathon-images-3.webp",
             imageAlt: "Ideathon 3.0",
             description: "Ideathon 3.0 - Continued the tradition of fostering innovation and providing students with industry insights and mentorship.",
             buttonText: "Read More",
-            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-3.0.png"
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/Ideathon-3.0.png"
         },
         {
             id: 4,
@@ -278,7 +278,7 @@ export default function ManagementDepartmentPage() {
             imageAlt: "Ideathon 4.0",
             description: "Ideathon 4.0 - Focused on sustainable business models and creative problem-solving in a rapidly changing global economy.",
             buttonText: "Read More",
-            buttonlink: "s3://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-4.0.png"
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/Ideathon-4.0.png"
         },
         {
             id: 5,
@@ -288,7 +288,7 @@ export default function ManagementDepartmentPage() {
             imageAlt: "Ideathon 5.0",
             description: "Ideathon 5.0 - The latest iteration of the competition, pushing boundaries and celebrating the entrepreneurial achievements of our students.",
             buttonText: "Read More",
-            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/Faculty of Commerece and Management/Ideathon/Ideathon-5.0.png"
+            buttonlink: "https://cdn.kalingauniversity.ac.in/departments/MBA/Ideathon/Ideathon-5.0.png"
         }
     ];
 
@@ -311,106 +311,7 @@ export default function ManagementDepartmentPage() {
         { name: "Prof. Byju John", designation: "Director General" }
     ];
 
-    const mappedEventActivities = [
-        {
-            id: 1,
-            title: "Role of Industrial Sector in Viksit Bharat",
-            description: "Category: Guest Session\nGuest Speaker: Dr. Ravindra K Brahme\nDesignation: General Secretary, Indian Economic Association",
-            date: "31-01-2025",
-            buttonText: false
-        },
-        {
-            id: 2,
-            title: "Guest Lecture on Job Opportunity in U.K",
-            description: "Category: Guest Session\nGuest Speaker: Ms. Ambika Agrawal\nDesignation: Legal Consultant, KPMG, London, U.K",
-            date: "14-08-2024",
-            buttonText: false
-        },
-        {
-            id: 3,
-            title: "Paiso Ki Pathshala",
-            description: "Category: Guest Session\nGuest Speaker: Mr. Rahul Patel\nDesignation: Freelance Trainer, Minimalist, Motivational Speaker",
-            date: "01-03-2023",
-            buttonText: false
-        },
-        {
-            id: 4,
-            title: "National Securities Depository Limited",
-            description: "Category: Guest Session\nGuest Speaker: Mr. Sudip Nag & Mr. Abhishek Kumar\nDesignation: National Securities Depository Limited",
-            date: "15-10-2022",
-            buttonText: false
-        },
-        {
-            id: 5,
-            title: "National Workshop on Cryptocurrency & Blockchain Technology",
-            description: "Category: Guest Session\nGuest Speaker: Mr. Chintan Dave\nDesignation: Stock Market Institute, Bangalore",
-            date: "01-10-2022",
-            buttonText: false
-        },
-        {
-            id: 6,
-            title: "Budget Analysis and Quiz",
-            description: "Category: Guest Session\nGuest Speaker: Mr. Raj Mehrotra & Mrs. Vinita Raj\nDesignation: Research Analyst, E&Y MD, World Dealers Pvt. Ltd.",
-            date: "09-02-2023 to 10-02-2023",
-            buttonText: false
-        },
-        {
-            id: 7,
-            title: "Investor Summit",
-            description: "Category: Guest Session\nGuest Speakers: Molly Faulkner, Keith Koo, Sanjay Kumar Agrawal, Victoria McClure, William Du, Jona Lemmonds, Sameer Kaila, Sebastian Jude, Anthony Jarrin, Sebastian Gerona, Bianca Ventura, Amresh Kumar Singh\nDesignations: Various CEOs, Vice Presidents, Investors, Founders, Managing Partners",
-            date: "18-02-2023",
-            buttonText: false
-        },
-        {
-            id: 8,
-            title: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.”",
-            description: "Category: Faculty Development Program\nAcademic Year: 2025-26\nCandidates Attended: 46",
-            date: "17-06-2024 to 22-06-2024",
-            buttonText: false
-        },
-        {
-            id: 9,
-            title: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.",
-            description: "Category: Faculty Development Program\nAcademic Year: 2023-24\nCandidates Attended: 11",
-            date: "20-05-2023 to 29-05-2023",
-            buttonText: false
-        },
-        {
-            id: 10,
-            title: "Two Week FDP on “Innovative Trends in Teaching and Professional Skills Acquisition in Management.”",
-            description: "Category: Faculty Development Program\nAcademic Year: 2022-23\nCandidates Attended: 35",
-            date: "14-06-2022 to 27-06-2022",
-            buttonText: false
-        },
-        {
-            id: 11,
-            title: "FDP on Outcome Based Education",
-            description: "Category: Faculty Development Program\nAcademic Year: 2022-23\nCandidates Attended: 26",
-            date: "18-04-2022 to 23-04-2022",
-            buttonText: false
-        },
-        {
-            id: 12,
-            title: "One Week National Workshop on Data Analytics in Research using SPSS",
-            description: "Category: Faculty Development Program\nAcademic Year: 2022-23\nCandidates Attended: 77",
-            date: "02-01-2023 to 06-01-2023",
-            buttonText: false
-        },
-        {
-            id: 13,
-            title: "Two Days Boot Camp (FDP) on Personal Effectiveness",
-            description: "Category: Faculty Development Program\nAcademic Year: 2021-22\nCandidates Attended: 97",
-            date: "12-08-2022 to 13-08-2022",
-            buttonText: false
-        },
-        {
-            id: 14,
-            title: "One Week FDP on Emerging Business Issues",
-            description: "Category: Faculty Development Program\nAcademic Year: 2020-21\nCandidates Attended: 41",
-            date: "12-08-2022 to 13-08-2022",
-            buttonText: false
-        }
-    ];
+
 
     const boardOfStudiesData = [
         {
@@ -615,13 +516,7 @@ export default function ManagementDepartmentPage() {
             />
 
             <Facility />
-            <StudentActivities
-                id="events-activities"
-                title="Events"
-                subtitle=""
-                activities={mappedEventActivities}
-                useModal={true}
-            />
+
 
         </>
     );
@@ -726,77 +621,140 @@ function NewsEventsTabs() {
         { key: "date", label: "Date", width: "w-48" }
     ];
 
-    const eventsData2425 = [
-        { sno: 1, event: "Online Seminar on Six Sigma", date: "17.04.2025" },
-        { sno: 2, event: "Workshop on “Raising Capital & Managing Finance for Start-ups” in collaboration with IIC", date: "08.04.2025" },
-        { sno: 3, event: "Online Workshop on Business Model Canvas in collaboration with IIC", date: "24.03.2025" },
-        { sno: 4, event: "International Conference on Innovative Management Techniques for Sustainable Development (IMTSD-25)", date: "21.02.2025 & 22.02.2025" },
-        { sno: 5, event: "Workshop on “E-Commerce & Effective Sales & Marketing Strategies for Entrepreneurs/Startups” in collaboration with IIC", date: "13.02.2025" },
-        { sno: 6, event: "Guest Lecture on “Role of Industrial Sector in Viksit Bharat” under Amartya Sen Chair", date: "31.01.2025" },
-        { sno: 7, event: "Ideathon 4.0", date: "22.11.2024 to 23.11.2024" },
-        { sno: 8, event: "Workshop on - Hands-On Training Program on “Stock Market Trading”.", date: "05.10.2024" },
-        { sno: 9, event: "Workshop on Investment Awareness Session by SEBI", date: "30.09.2024" },
-        { sno: 10, event: "Workshop on GST", date: "28.09.2024" },
-        { sno: 11, event: "Guest Lecture on a session on AI Leadership: The Future of Management", date: "13.09.2024" },
-        { sno: 12, event: "Workshop on Job Ready for BFSI", date: "10.09.2024" },
-        { sno: 13, event: "Guest Lecture on Job Opportunities in the UK", date: "14.08.2024" },
-        { sno: 14, event: "Guest Lecture on “Future-Ready Commerce Education: Implementing NEP & OBE Aligned Practicums Using Tech-Enabled Experiential Tools”.", date: "13.08.2024" },
+    const eventsData = [
+        {
+            id: 1,
+            question: "2024-25",
+            component: <DataTable columns={eventsColumns} data={[
+                { sno: 1, event: "Online Seminar on Six Sigma", date: "17.04.2025" },
+                { sno: 2, event: "Workshop on “Raising Capital & Managing Finance for Start-ups” in collaboration with IIC", date: "08.04.2025" },
+                { sno: 3, event: "Online Workshop on Business Model Canvas in collaboration with IIC", date: "24.03.2025" },
+                { sno: 4, event: "International Conference on Innovative Management Techniques for Sustainable Development (IMTSD-25)", date: "21.02.2025 & 22.02.2025" },
+                { sno: 5, event: "Workshop on “E-Commerce & Effective Sales & Marketing Strategies for Entrepreneurs/Startups” in collaboration with IIC", date: "13.02.2025" },
+                { sno: 6, event: "Guest Lecture on “Role of Industrial Sector in Viksit Bharat” under Amartya Sen Chair", date: "31.01.2025" },
+                { sno: 7, event: "Ideathon 4.0", date: "22.11.2024 to 23.11.2024" },
+                { sno: 8, event: "Workshop on - Hands-On Training Program on “Stock Market Trading”.", date: "05.10.2024" },
+                { sno: 9, event: "Workshop on Investment Awareness Session by SEBI", date: "30.09.2024" },
+                { sno: 10, event: "Workshop on GST", date: "28.09.2024" },
+                { sno: 11, event: "Guest Lecture on a session on AI Leadership: The Future of Management", date: "13.09.2024" },
+                { sno: 12, event: "Workshop on Job Ready for BFSI", date: "10.09.2024" },
+                { sno: 13, event: "Guest Lecture on Job Opportunities in the UK", date: "14.08.2024" },
+                { sno: 14, event: "Guest Lecture on “Future-Ready Commerce Education: Implementing NEP & OBE Aligned Practicums Using Tech-Enabled Experiential Tools”.", date: "13.08.2024" },
+            ]} overflowX={true} />
+        },
+        {
+            id: 2,
+            question: "2023-24",
+            component: <DataTable columns={eventsColumns} data={[
+                { sno: 1, event: "Seminar on “Latest Trends in HRM”", date: "22.03.2024" },
+                { sno: 2, event: "Entrepreneurship and Innovation as Career Opportunity", date: "09.11.2023" },
+                { sno: 3, event: "Anand Mela", date: "13.10.2023 to 14.10.2023" },
+                { sno: 4, event: "Research Paper Writing Using Time Series", date: "30.09.2023" },
+            ]} overflowX={true} />
+        },
+        {
+            id: 3,
+            question: "2022-23",
+            component: <DataTable columns={eventsColumns} data={[
+                { sno: 1, event: "Junior MBA Program", date: "05.06.2023 to 09.06.2023" },
+                { sno: 2, event: "E-Workshop", date: "08.05.2023 & 09.05.2023" },
+                { sno: 3, event: "G-20 Events – Quiz Competition on theme “One Earth, One Family, One Future”", date: "06.05.2023" },
+                { sno: 4, event: "Webinar on Creativity and Innovation Driving Modern Business", date: "21.04.2023" },
+                { sno: 5, event: "Global Peace and Sustainable Development Summit, 2023", date: "17.04.2023" },
+                { sno: 6, event: "Annual Sports Meet", date: "21.02.2023" },
+                { sno: 7, event: "Paiso ki Pathshala", date: "01.03.2023" },
+                { sno: 8, event: "Annual Sports Meet", date: "21.02.2023" },
+                { sno: 9, event: "Connecting Dots – The Investor Summit", date: "18.02.2023" },
+                { sno: 10, event: "Budget Analysis Session and Quiz Competition", date: "09.02.2023 to 10.02.2023" },
+                { sno: 11, event: "Workshop on Design Thinking, Critical Thinking & Innovation Design", date: "01.02.2023 to 02.02.2023" },
+                { sno: 12, event: "Seminar on Preventive Strategies to Combat Counterfeiting and Smuggling", date: "10.01.2023" },
+                { sno: 13, event: "National Workshop on Data Analysis in Research using SPSS", date: "02.01.2023 to 06.01.2023" },
+                { sno: 14, event: "Kathak Dance in Collaboration with Jan Shikshan Sansthan Raipur", date: "21.11.2022" },
+                { sno: 15, event: "Annual Function", date: "18.11.2022 & 19.11.2022" },
+                { sno: 16, event: "IDEATHON 2.0", date: "14.11.2022 to 16.11.2022" },
+                { sno: 17, event: "Webinar on Career Opportunities in Banking and Finance", date: "05.11.2022" },
+                { sno: 18, event: "Certification in Tally ERP", date: "04.11.2022" },
+                { sno: 19, event: "Webinar on Mutual Funds and Wealth Creation", date: "14.10.2022" },
+                { sno: 20, event: "Student Clubs", date: "11.10.2022" },
+                { sno: 21, event: "Kalinga University inks pact with Infosys Limited for Academic and Internship Collaboration", date: "10.10.2022" },
+                { sno: 22, event: "Guest Session on “Mental Health with YPV Sadhna” on the Occasion of World Mental Health Day", date: "10.10.2022" },
+                { sno: 23, event: "Webinar “Powerful Career in Digital World” in Collaboration with London School of Digital Business", date: "04.10.2022" },
+                { sno: 24, event: "Workshop on Cryptocurrency and Blockchain Technology", date: "01.10.2022" },
+                { sno: 25, event: "MSME Entrepreneurship Awareness Camp", date: "31.08.2022" },
+                { sno: 26, event: "National Seminar on Advanced Research", date: "27.08.2022" },
+                { sno: 27, event: "Industrial Visit to Vachan Dairy at Kharora (BBA & BCOM Sem-5 Students)", date: "27.08.2022" },
+                { sno: 28, event: "Departmental Induction Organized", date: "25.08.2022" },
+                { sno: 29, event: "Town Hall Meeting for Senior Batch Students", date: "25.08.2022" },
+                { sno: 30, event: "Adverto – The AD MAD Show", date: "18.08.2022" }
+            ]} overflowX={true} />
+        },
     ];
 
-    const eventsData2324 = [
-        { sno: 1, event: "Seminar on “Latest Trends in HRM”", date: "22.03.2024" },
-        { sno: 2, event: "Entrepreneurship and Innovation as Career Opportunity", date: "09.11.2023" },
-        { sno: 3, event: "Anand Mela", date: "13.10.2023 to 14.10.2023" },
-        { sno: 4, event: "Research Paper Writing Using Time Series", date: "30.09.2023" },
+    const guestLectureColumns = [
+        { key: "guestSpeaker", label: "Guest Speaker", width: "w-40" },
+        { key: "designation", label: "Designation", width: "w-60" },
+        { key: "topic", label: "Topic", width: "w-60" },
+        { key: "eventDate", label: "Event Date", width: "w-30" }
     ];
 
-    const eventsData2223 = [
-        { sno: 1, event: "Junior MBA Program", date: "05.06.2023 to 09.06.2023" },
-        { sno: 2, event: "E-Workshop", date: "08.05.2023 & 09.05.2023" },
-        { sno: 3, event: "G-20 Events – Quiz Competition on theme “One Earth, One Family, One Future”", date: "06.05.2023" },
-        { sno: 4, event: "Webinar on Creativity and Innovation Driving Modern Business", date: "21.04.2023" },
-        { sno: 5, event: "Global Peace and Sustainable Development Summit, 2023", date: "17.04.2023" },
-        { sno: 6, event: "Annual Sports Meet", date: "21.02.2023" },
-        { sno: 7, event: "Paiso ki Pathshala", date: "01.03.2023" },
-        { sno: 8, event: "Annual Sports Meet", date: "21.02.2023" },
-        { sno: 9, event: "Connecting Dots – The Investor Summit", date: "18.02.2023" },
-        { sno: 10, event: "Budget Analysis Session and Quiz Competition", date: "09.02.2023 to 10.02.2023" },
-        { sno: 11, event: "Workshop on Design Thinking, Critical Thinking & Innovation Design", date: "01.02.2023 to 02.02.2023" },
-        { sno: 12, event: "Seminar on Preventive Strategies to Combat Counterfeiting and Smuggling", date: "10.01.2023" },
-        { sno: 13, event: "National Workshop on Data Analysis in Research using SPSS", date: "02.01.2023 to 06.01.2023" },
-        { sno: 14, event: "Kathak Dance in Collaboration with Jan Shikshan Sansthan Raipur", date: "21.11.2022" },
-        { sno: 15, event: "Annual Function", date: "18.11.2022 & 19.11.2022" },
-        { sno: 16, event: "IDEATHON 2.0", date: "14.11.2022 to 16.11.2022" },
-        { sno: 17, event: "Webinar on Career Opportunities in Banking and Finance", date: "05.11.2022" },
-        { sno: 18, event: "Certification in Tally ERP", date: "04.11.2022" },
-        { sno: 19, event: "Webinar on Mutual Funds and Wealth Creation", date: "14.10.2022" },
-        { sno: 20, event: "Student Clubs", date: "11.10.2022" },
-        { sno: 21, event: "Kalinga University inks pact with Infosys Limited for Academic and Internship Collaboration", date: "10.10.2022" },
-        { sno: 22, event: "Guest Session on “Mental Health with YPV Sadhna” on the Occasion of World Mental Health Day", date: "10.10.2022" },
-        { sno: 23, event: "Webinar “Powerful Career in Digital World” in Collaboration with London School of Digital Business", date: "04.10.2022" },
-        { sno: 24, event: "Workshop on Cryptocurrency and Blockchain Technology", date: "01.10.2022" },
-        { sno: 25, event: "MSME Entrepreneurship Awareness Camp", date: "31.08.2022" },
-        { sno: 26, event: "National Seminar on Advanced Research", date: "27.08.2022" },
-        { sno: 27, event: "Industrial Visit to Vachan Dairy at Kharora (BBA & BCOM Sem-5 Students)", date: "27.08.2022" },
-        { sno: 28, event: "Departmental Induction Organized", date: "25.08.2022" },
-        { sno: 29, event: "Town Hall Meeting for Senior Batch Students", date: "25.08.2022" },
-        { sno: 30, event: "Adverto – The AD MAD Show", date: "18.08.2022" },
+    const guestLectureData = [
+        { guestSpeaker: "Dr. Ravindra K Brahme", designation: "General Secretary, Indian Economic Association", topic: "Role of Industrial Sector in Viksit Bharat", eventDate: "31-01-2025" },
+        { guestSpeaker: "Ms. Ambika Agrawal", designation: "Legal Consultant, KPMG, London, U.K", topic: "Guest Lecture on Job Opportunity in U.K", eventDate: "14-08-2024" },
+        { guestSpeaker: "Mr. Rahul Patel", designation: "Freelance Trainer, Minimalist, Motivational Speaker", topic: "Paiso Ki Pathshala", eventDate: "01-03-2023" },
+        { guestSpeaker: "Mr. Sudip Nag & Mr. Abhishek Kumar", designation: "National Securities Depository Limited", topic: "National Securities Depository Limited", eventDate: "15-10-2022" },
+        { guestSpeaker: "Mr. Chintan Dave", designation: "Stock Market Institute, Bangalore", topic: "National Workshop on Cryptocurrency & Blockchain Technology", eventDate: "01-10-2022" },
+        { guestSpeaker: "Mr. Raj Mehrotra & Mrs. Vinita Raj", designation: "Research Analyst, E&Y MD, World Dealers Pvt. Ltd.", topic: "Budget Analysis and Quiz", eventDate: "09-02-2023 to 10-02-2023" },
+        { guestSpeaker: "Molly Faulkner, Keith Koo, Sanjay Kumar Agrawal, Victoria McClure, William Du, Jona Lemmonds, Sameer Kaila, Sebastian Jude, Anthony Jarrin, Sebastian Gerona, Bianca Ventura, Amresh Kumar Singh", designation: "Various CEOs, Vice Presidents, Investors, Founders, Managing Partners", topic: "Investor Summit", eventDate: "18-02-2023" }
     ];
 
-    const tabs = [
-        { id: "24-25", label: "2024-25", data: eventsData2425 },
-        { id: "23-24", label: "2023-24", data: eventsData2324 },
-        { id: "22-23", label: "2022-23", data: eventsData2223 },
+    const fdpColumns = [
+        { key: "Sno", label: "S.No", width: "w-10" },
+        { key: "AcademicYear", label: "Academic Year", width: "w-20" },
+        { key: "topic", label: "Title of the Programme", width: "w-50" },
+        { key: "eventDate", label: "Duration", width: "w-30" },
+        { key: "noofcandidates", label: "No of Candidates Attended", width: "w-30" }
     ];
 
-    const [activeTab, setActiveTab] = useState("24-25");
+    const fdpData = [
+        {
+            id: 1, question: "2024-25", component: <DataTable columns={fdpColumns} data={[
+                { Sno: "1", AcademicYear: "2025-26", topic: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.", eventDate: "17 to 22 June, 2024", noofcandidates: "46" }
+            ]} overflowX={true} />
+        },
+        {
+            id: 2, question: "2023-24", component: <DataTable columns={fdpColumns} data={[
+                { Sno: "1", AcademicYear: "2023-24", topic: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.", eventDate: "20 to 29 May, 2023", noofcandidates: "11" }
+            ]} overflowX={true} />
+        },
+        {
+            id: 3, question: "2022-23", component: <DataTable columns={fdpColumns} data={[
+                { Sno: "1", AcademicYear: "2022-23", topic: "Two Week FDP on “Innovative Trends in Teaching and Professional Skills Acquisition in Management.", eventDate: "14 to 27 June, 2022", noofcandidates: "35" },
+                { Sno: "2", AcademicYear: "2022-23", topic: "FDP on Outcome Based Education", eventDate: "18-04-2022 to 23-04-2022", noofcandidates: "26" },
+                { Sno: "3", AcademicYear: "2022-23", topic: "One Week National Workshop on Data Analytics in Research using SPSS", eventDate: "02/01/2023 to 06/01/2023", noofcandidates: "77" }
+            ]} overflowX={true} />
+        },
+        {
+            id: 4, question: "2021-22", component: <DataTable columns={fdpColumns} data={[
+                { Sno: "1", AcademicYear: "2021-22", topic: "Two Days Boot Camp (FDP) on Personal Effectiveness", eventDate: "12 to 13 August, 2022", noofcandidates: "97" }
+            ]} overflowX={true} />
+        },
+        {
+            id: 5, question: "2020-21", component: <DataTable columns={fdpColumns} data={[
+                { Sno: "1", AcademicYear: "2020-21", topic: "One Week FDP on Emerging Business Issues", eventDate: "12 to 13 August, 2022", noofcandidates: "41" }
+            ]} overflowX={true} />
+        }
+    ];
 
-    const toggleAccordion = (id) => {
-        setActiveTab((prev) => (prev === id ? "" : id));
-    };
+    const mainTabs = [
+        { id: "events", label: "Events" },
+        { id: "guest-lectures", label: "Guest Lectures" },
+        { id: "fdp", label: "FDP Organized" },
+    ];
+
+    const [activeMainTab, setActiveMainTab] = useState("events");
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white pt-8">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-10">
                     <SectionHeading
@@ -805,15 +763,15 @@ function NewsEventsTabs() {
                     />
                 </div>
                 <div className="mx-auto max-w-6xl rounded-3xl bg-[var(--dark-blue)] p-4 md:p-6 shadow-xl">
-                    <div className="hidden md:flex gap-3 overflow-x-auto pb-4 custom-scrollbar">
-                        {tabs.map((t) => (
+                    <div className="flex gap-2 overflow-x-auto pb-4 custom-scrollbar md:justify-center">
+                        {mainTabs.map((t) => (
                             <button
                                 key={t.id}
                                 type="button"
-                                onClick={() => setActiveTab(t.id)}
+                                onClick={() => setActiveMainTab(t.id)}
                                 className={[
-                                    "whitespace-nowrap rounded-lg border px-4 py-2 text-sm font-medium transition-all duration-200",
-                                    t.id === activeTab
+                                    "whitespace-nowrap rounded-lg border px-6 py-2 text transition-all duration-200",
+                                    t.id === activeMainTab
                                         ? "bg-[var(--button-red)] text-white border-white/20 shadow-lg scale-105"
                                         : "bg-white text-[var(--foreground)] border-transparent hover:bg-gray-100",
                                 ].join(" ")}
@@ -823,45 +781,22 @@ function NewsEventsTabs() {
                         ))}
                     </div>
 
-                    <div className="mt-2 rounded-2xl bg-white p-4 md:p-8 min-h-[400px]">
-                        <div className="md:hidden space-y-3">
-                            {tabs.map((t) => {
-                                const isOpen = t.id === activeTab;
-                                return (
-                                    <div key={t.id} className="rounded-xl border border-black/10 overflow-hidden">
-                                        <button
-                                            type="button"
-                                            onClick={() => toggleAccordion(t.id)}
-                                            className={[
-                                                "w-full flex items-center justify-between px-4 py-3 text-left transition-colors",
-                                                isOpen ? "bg-black/5" : "bg-white",
-                                            ].join(" ")}
-                                        >
-                                            <span className="font-plus-jakarta-sans font-semibold text-[var(--foreground)]">{t.label}</span>
-                                            <svg
-                                                width="20"
-                                                height="20"
-                                                viewBox="0 0 24 24"
-                                                className={`transition-transform ${isOpen ? "rotate-180" : "rotate-0"}`}
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </button>
-                                        {isOpen && (
-                                            <div className="px-3 py-4">
-                                                <DataTable columns={eventsColumns} data={t.data} overflowX={true} />
-                                            </div>
-                                        )}
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-                        <div className="hidden md:block">
-                            <DataTable columns={eventsColumns} data={tabs.find(t => t.id === activeTab)?.data || []} overflowX={true} />
-                        </div>
+                    <div className="mt-4 rounded-2xl bg-white p-4 md:p-8 min-h-[400px]">
+                        {activeMainTab === "events" && (
+                            <div className="animate-fadeIn">
+                                <FAQ items={eventsData} title="" subtitle="" backgroundColor="bg-white" />
+                            </div>
+                        )}
+                        {activeMainTab === "guest-lectures" && (
+                            <div className="animate-fadeIn rounded-xl border border-black/10 p-2 overflow-hidden shadow-sm">
+                                <DataTable columns={guestLectureColumns} data={guestLectureData} overflowX={true} />
+                            </div>
+                        )}
+                        {activeMainTab === "fdp" && (
+                            <div className="animate-fadeIn">
+                                <FAQ items={fdpData} title="" subtitle="" backgroundColor="bg-white" />
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

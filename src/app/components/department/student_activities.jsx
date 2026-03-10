@@ -218,7 +218,19 @@ export default function StudentActivities({
 
         {showReadMore && (activity.buttonText !== "" && activity.buttonText !== false) && (
           <div className="mt-4">
-            {useModal ? (
+            {activity.buttonlink ? (
+              <a href={activity.buttonlink} target="_blank" rel="noopener noreferrer" className="inline-block">
+                <GlobalArrowButton
+                  as="span"
+                  className="w-fit !bg-[var(--light-gray)] !shadow-none hover:!shadow-none gap-3 !px-0"
+                  textClassName="!text-[var(--button-red)] !px-0"
+                  arrowClassName="p-[3px] !px-1 mr-2 !py-1 !bg-[var(--button-red)]"
+                  arrowIconClassName="!text-white"
+                >
+                  {activity.buttonText || "Read More"}
+                </GlobalArrowButton>
+              </a>
+            ) : useModal ? (
               <GlobalArrowButton
                 as="button"
                 onClick={() => openActivityModal(activity)}
