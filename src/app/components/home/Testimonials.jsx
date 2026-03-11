@@ -19,8 +19,8 @@ const defaultTestimonialsData = [
     {
         id: 2,
         name: "Tanjila Khan",
-        role: "Student- B.Tech CSE",
-        quote: "Tanjila’s journey in the field of Computer Science reflects her passion towards technology and innovation. Through practical lab sessions, coding projects, Hackathons, and constant mentorship by expert faculty members, she is building strong technical skills and preparing for a successful career.",
+        role: "Student – B.Tech Civil",
+        quote: "With a passion for building futuristic structures, Tanjila is making the most of her Civil Engineering journey at Kalinga University. Through hands-on training, industrial visits, workshops, and practical projects, she is gaining the latest industry knowledge and skills that will help her become a successful engineer.",
         image: "https://cdn.kalingauniversity.ac.in/Home/tanjila.webp",
         theme: "red"
     },
