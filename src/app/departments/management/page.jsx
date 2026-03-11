@@ -182,7 +182,7 @@ export default function ManagementDepartmentPage() {
         },
         {
             id: 2,
-            question: "Testimonial",
+            question: "Appreciation from Industry",
             component: (
                 <APITable tableId="87" title="" showTableTitle={false} />
             )
@@ -293,22 +293,22 @@ export default function ManagementDepartmentPage() {
     ];
 
     const facultyMembers = [
-        { name: "Dr. R. Shridhar", designation: "Vice-Chancellor, Professor" },
-        { name: "Dr. Akash Bhattacharya", designation: "Assistant Professor" },
+        { name: "Dr. R. Shridhar", designation: "Professor" },
         { name: "Dr. Arup Kumar Haldar", designation: "Associate Professor" },
         { name: "Dr. Arvind Kumar Saxena", designation: "Associate Professor" },
         { name: "Dr. Atul Bhardwaj", designation: "Associate Professor" },
         { name: "Dr. Lalit Sachdeva", designation: "Associate Professor" },
-        { name: "Dr. Lincy Roy", designation: "Assistant Professor" },
         { name: "Dr. Pankaj Tiwari", designation: "Associate Professor" },
         { name: "Dr. Saurabh Banwar", designation: "Associate Professor" },
+        { name: "Dr. Akash Bhattacharya", designation: "Assistant Professor" },
+        { name: "Dr. Lincy Roy", designation: "Assistant Professor" },
         { name: "Ms. Dawakit Lepcha", designation: "Assistant Professor" },
         { name: "Mr. Rakshak Bharti", designation: "Assistant Professor" },
         { name: "Dr. Deepti Patnaik", designation: "Assistant Professor" },
         { name: "Dr. Kanchan Thakur", designation: "Assistant Professor" },
         { name: "Ms. Milan Singh", designation: "Assistant Professor" },
         { name: "Dr. Nishtha Sharma", designation: "Assistant Professor" },
-        { name: "Prof. Byju John", designation: "Director General" }
+        { name: "Prof. Byju John", designation: "Professor" }
     ];
 
 
@@ -360,6 +360,22 @@ export default function ManagementDepartmentPage() {
                 subtitle="Outcome"
                 backgroundColor="bg-white"
             />
+            <section className="py-10">
+                <div className="container mx-auto px-4 max-w-5xl">
+                    <SectionHeading
+                        title="Board of Studies"
+                        titleClassName="text-center mb-6"
+                    />
+                    <div className="overflow-hidden border border-gray-100 p-2">
+                        <DataTable
+                            columns={boardOfStudiesData[0].columns}
+                            data={boardOfStudiesData[0].data}
+                            overflowX={true}
+                            className="text-center"
+                        />
+                    </div>
+                </div>
+            </section>
             <FAQ
                 items={swayamFaqItems}
                 title="SWAYAM / NPTEL Certifications"
@@ -486,22 +502,7 @@ export default function ManagementDepartmentPage() {
                     onSuccess={handleCloseSurvey}
                 />
             </Modal>
-            <section className="py-10 mt-10">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <SectionHeading
-                        title="Board of Studies"
-                        titleClassName="text-center mb-6"
-                    />
-                    <div className="overflow-hidden border border-gray-100 p-2">
-                        <DataTable
-                            columns={boardOfStudiesData[0].columns}
-                            data={boardOfStudiesData[0].data}
-                            overflowX={true}
-                            className="text-center"
-                        />
-                    </div>
-                </div>
-            </section>
+
             <Placements
                 placementData={departmentData}
                 bgColor="bg-white"
@@ -525,20 +526,22 @@ export default function ManagementDepartmentPage() {
 function ResearchPublicationsTabs() {
     const tabs = useMemo(
         () => [
-            { id: "73", label: "Patents (2025)" },
-            { id: "74", label: "Patents (2024)" },
-            { id: "75", label: "Patents (2023)" },
-            { id: "86", label: "Patents (2022)" },
-            { id: "76", label: "Patents (2021)" },
+            { id: "85", label: "Research Papers (2025)" },
+            { id: "84", label: "Research Papers (2024)" },
+            { id: "83", label: "Research Papers (2023)" },
+            { id: "82", label: "Research Papers (2022)" },
             { id: "81", label: "Book Chapters (2025)" },
             { id: "80", label: "Book Chapters (2024)" },
             { id: "79", label: "Book Chapters (2023)" },
             { id: "78", label: "Book Chapters (2022)" },
             { id: "77", label: "Book Chapters (2021)" },
-            { id: "85", label: "Research Papers (2025)" },
-            { id: "84", label: "Research Papers (2024)" },
-            { id: "83", label: "Research Papers (2023)" },
-            { id: "82", label: "Research Papers (2022)" },
+            { id: "73", label: "Patents (2025)" },
+            { id: "74", label: "Patents (2024)" },
+            { id: "75", label: "Patents (2023)" },
+            { id: "86", label: "Patents (2022)" },
+            { id: "76", label: "Patents (2021)" },
+
+
         ],
         []
     );
@@ -582,26 +585,26 @@ function ResearchPublicationsTabs() {
                     </div>
 
                     {/* Content area */}
-                    <div className="rounded-2xl bg-white p-4 md:p-8 min-h-[400px] flex-1 w-full">
+                    <div className="rounded-2xl bg-white p-4 md:p-8 h-[500px] overflow-auto flex-1 w-full min-w-0">
                         <style jsx global>{`
                             .custom-scrollbar::-webkit-scrollbar {
-                                width: 6px;
-                                height: 6px;
+                                width: 8px;
+                                height: 8px;
                             }
                             .custom-scrollbar::-webkit-scrollbar-track {
-                                background: rgba(255, 255, 255, 0.1);
+                                background: #f1f1f1;
                                 border-radius: 10px;
                             }
                             .custom-scrollbar::-webkit-scrollbar-thumb {
-                                background: rgba(255, 255, 255, 0.3);
+                                background: #c1c1c1;
                                 border-radius: 10px;
                             }
                             .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                                background: rgba(255, 255, 255, 0.5);
+                                background: #a8a8a8;
                             }
                             .custom-scrollbar {
                                 scrollbar-width: thin;
-                                scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+                                scrollbar-color: #c1c1c1 #f1f1f1;
                             }
                         `}</style>
                         <div className="h-full">
@@ -747,7 +750,7 @@ function NewsEventsTabs() {
 
     const mainTabs = [
         { id: "events", label: "Events" },
-        { id: "guest-lectures", label: "Guest Lectures" },
+        { id: "guest-lectures", label: "Guest Lectures by Industry Experts" },
         { id: "fdp", label: "FDP Organized" },
     ];
 

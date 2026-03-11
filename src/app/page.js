@@ -87,7 +87,10 @@ export default function Home() {
         title="We Promised. We Delivered."
         description=""
       />
-      <Testimonials />
+      <Testimonials
+        title="Stories that Define Kalinga's Spirit"
+        subtitle="Journeys that Inspire"
+      />
       <MediaCardSlider
         categoryTitle="Transformative Learning Experience"
         title="Hear From Our Students"

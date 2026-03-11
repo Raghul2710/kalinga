@@ -94,7 +94,7 @@ export default function SurveyForm({ courseId, category, onSuccess }) {
             {data.questions.map((q, idx) => (
                 <div key={q.id} className="bg-gray-50 border rounded-xl p-5 shadow-sm">
                     <p className="font-semibold text-gray-800 text-lg mb-4">
-                        {idx + 1}. {q.question}
+                        {idx + 1}. {q.question_text || q.question}
                     </p>
                     <div className="space-y-3">
                         {scaleValues.map(num => (

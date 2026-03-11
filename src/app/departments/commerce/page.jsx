@@ -501,7 +501,7 @@ export default function CommerceDepartmentPage() {
                 title={feedbackModalConfig.title}
             >
                 <SurveyForm
-                    courseId={18} // updated for commerce, adjust if necessary
+                    courseId={5} // Using courseId: 5 as specified
                     category={feedbackModalConfig.category}
                     onSuccess={handleCloseSurvey}
                 />
