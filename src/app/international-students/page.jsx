@@ -366,7 +366,7 @@ export default function InternationalStudents() {
       />
 
       <ImageListItem
-        imageSrc="https://cdn.kalingauniversity.ac.in/international-students/int-g-3.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/international-students/int-g-1.webp"
         boxItems={boxItems}
         title="Why study in India"
         subtitle=""
@@ -486,7 +486,6 @@ export default function InternationalStudents() {
         images={[
           { id: 1, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-1.webp", alt: "International Students Introduction" },
           { id: 2, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-2.webp", alt: "Why Choose Kalinga University" },
-          { id: 3, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-3.webp", alt: "International Students Group" },
           { id: 4, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-4.webp", alt: "Campus Safety and Security" },
           { id: 5, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-5.webp", alt: "International Students Banner" },
           { id: 6, src: "https://cdn.kalingauniversity.ac.in/international-students/int-g-6.webp", alt: "International Students Banner" },

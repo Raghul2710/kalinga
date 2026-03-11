@@ -575,7 +575,7 @@ const UnivistaJournalPage = () => {
                 exploreLabel="Download PDF"
                 searchPlaceholder="Search Archives...."
                 hideSearch={false}
-                backgroundImage="https://cdn.kalingauniversity.ac.in/library/student-experience-library.webp"
+                backgroundImage="https://cdn.kalingauniversity.ac.in/international-students/international-students-intro.jpg"
                 backgroundColor="bg-white"
                 textColor="text-gray-700"
                 titleColor="text-[var(--foreground)]"
