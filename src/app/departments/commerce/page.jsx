@@ -114,11 +114,16 @@ export default function CommerceDepartmentPage() {
     const programsOverview = programSyllabusImage?.programs_offered_overview || departmentData?.programs_offered_overview || "Explore our commerce programs designed to empower your professional journey.";
 
     const visionMissionContent = {
-        visionText: "Vision will be shared.",
+        visionText: "To educate and empower young business leaders through innovative teaching, hands-on training, and impactful research, fostering successful managers and entrepreneurs with a strong sense of social responsibility.",
         missionText: {
-            paragraphs: ["Mission will be shared."],
+            paragraphs: ["The Department of Management is committed to achieving excellence through its core mission goals:"],
             pointsHeading: "Mission Statements",
-            points: []
+            points: [
+                "M1: To equip students with essential skills by providing exposure to cutting-edge knowledge through innovative teaching and impactful research.",
+                "M2: To foster entrepreneurship, nurture creativity, and promote ethical, values-based education.",
+                "M3: To enhance competitiveness and create ample opportunities for rewarding managerial careers.",
+                "M4: To impart the knowledge, skills, and mindset required for effective managerial roles while instilling a strong sense of responsibility and corporate citizenship."
+            ]
         }
     };
 
