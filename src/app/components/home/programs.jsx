@@ -330,7 +330,7 @@ const Programs = () => {
         summary: finalSummary,
         scholarships: course.hideScholarshipLink ? null : 'Check eligibility',
         courseSlug: courseSlug,
-        courseUrl: course.courseUrl,
+        courseUrl: mappedLevel === 'Ph.D' ? '/phd' : course.courseUrl,
         duration: course.hideDuration ? null : formatDuration(course),
         // Pass custom links
         applyNowLink: course.applyNowLink

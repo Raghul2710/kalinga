@@ -17,7 +17,7 @@ import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 import StudentCell from "@/app/components/international-students/student_cell";
 import SurveyForm from "@/app/components/general/SurveyForm";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
-import MediaCardSlider from "@/app/components/general/media-card-slider";
+import Placements from "@/app/components/home/placements";
 
 export default function CommerceDepartmentPage() {
     const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
@@ -396,7 +396,7 @@ export default function CommerceDepartmentPage() {
                 backgroundColor="bg-white"
             />
 
-            <MediaCardSlider
+            {/* <MediaCardSlider
                 categoryTitle=""
                 title="Internship Opportunities At KU"
                 description="At KU, you don’t have to wait till graduation, but we’ll help you get a sneak peek into the practical world with our internship programs, which will also make your CV stand out during your job interviews."
@@ -407,7 +407,7 @@ export default function CommerceDepartmentPage() {
                 descriptionTextClass=""
                 swiperClassName="ccrc-video-slider"
                 imageObjectPosition="object-center"
-            />
+            /> */}
             <StudentActivities
                 activities={commerceActivities}
                 title="Commerce Events & Activities"
@@ -558,6 +558,15 @@ export default function CommerceDepartmentPage() {
                     </div>
                 </div>
             </Modal>
+            <Placements
+                placementData={departmentData}
+                bgColor="bg-white"
+                marginClassName="mt-10"
+                customRecruiterTitle="Top Management recruiters"
+                customImages={[
+                    'https://cdn.kalingauniversity.ac.in/Home/placement3.webp'
+                ]}
+            />
 
             <Facility />
         </>
