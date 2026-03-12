@@ -52,8 +52,8 @@ const nextConfig = {
     }
 
     return [
-      // Single favicon: serve fav-icon.png for legacy favicon.ico requests
-      { source: '/favicon.ico', destination: '/fav-icon.png', permanent: true },
+      // Single favicon: serve fav-icon-new.png for legacy favicon.ico requests
+      { source: '/favicon.ico', destination: '/fav-icon-new.png', permanent: true },
       ...customRedirects.map(r => ({
         source: r.source,
         destination: r.destination,
