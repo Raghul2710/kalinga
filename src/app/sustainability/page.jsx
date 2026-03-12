@@ -3,6 +3,7 @@
 import React from "react";
 import ImageContent from "../components/ccrc/imagecontent";
 import MainIntro from "../components/about/main_intro";
+import SdgImageGrid from "../components/sdg-cell/sdg-image-grid";
 import SdgTabSection from "../components/sdg-cell/sdg-tab-section";
 import FAQ from "../components/general/faq";
 // import SpecializationCard from "../components/department/specialization-card";
@@ -59,8 +60,9 @@ export default function SDGCell() {
         imageObjectFit="contain"
       />
       <SdgTabSection />
-      {/* <FacilitySlider /> */}
-      {/* <SpecializationCard /> */}
+      <SdgImageGrid />
+
+
       {/* <FAQ
         title="SDG Cell Resources"
         subtitle=""

@@ -294,6 +294,7 @@ export default function ManagementDepartmentPage() {
 
     const facultyMembers = [
         { name: "Dr. R. Shridhar", designation: "Professor" },
+        { name: "Prof. Byju John", designation: "Professor" },
         { name: "Dr. Arup Kumar Haldar", designation: "Associate Professor" },
         { name: "Dr. Arvind Kumar Saxena", designation: "Associate Professor" },
         { name: "Dr. Atul Bhardwaj", designation: "Associate Professor" },
@@ -308,7 +309,9 @@ export default function ManagementDepartmentPage() {
         { name: "Dr. Kanchan Thakur", designation: "Assistant Professor" },
         { name: "Ms. Milan Singh", designation: "Assistant Professor" },
         { name: "Dr. Nishtha Sharma", designation: "Assistant Professor" },
-        { name: "Prof. Byju John", designation: "Professor" }
+        { name: "Dr. Parvinder Shesh", designation: "Assistant Professor" },
+        { name: "Dr. Ankita Nihlani", designation: "Assistant Professor" },
+
     ];
 
 
@@ -546,7 +549,7 @@ function ResearchPublicationsTabs() {
         []
     );
 
-    const [activeTab, setActiveTab] = useState("73");
+    const [activeTab, setActiveTab] = useState("85");
 
     const toggleAccordion = (id) => {
         setActiveTab((prev) => (prev === id ? "" : id));
@@ -719,14 +722,15 @@ function NewsEventsTabs() {
     ];
 
     const fdpData = [
-        {
-            id: 1, question: "2024-25", component: <DataTable columns={fdpColumns} data={[
-                { Sno: "1", AcademicYear: "2025-26", topic: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.", eventDate: "17 to 22 June, 2024", noofcandidates: "46" }
-            ]} overflowX={true} />
-        },
+        // {
+        //     id: 1, question: "2024-25", component: <DataTable columns={fdpColumns} data={[
+        //         { Sno: "1", AcademicYear: "2025-26", topic: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.", eventDate: "17 to 22 June, 2024", noofcandidates: "46" }
+        //     ]} overflowX={true} />
+        // },
         {
             id: 2, question: "2023-24", component: <DataTable columns={fdpColumns} data={[
-                { Sno: "1", AcademicYear: "2023-24", topic: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.", eventDate: "20 to 29 May, 2023", noofcandidates: "11" }
+                { Sno: "1", AcademicYear: "2023-24", topic: "10 Days FDP on An Experience with Research Methodology on Statistical Programming in R.", eventDate: "20 to 29 May, 2023", noofcandidates: "11" },
+                { Sno: "2", AcademicYear: "2023-24", topic: "One Week FDP on “Next-Gen Teaching: Enhancing Pedagogy, Leadership & Innovation.", eventDate: "17 to 22 June, 2024", noofcandidates: "46" }
             ]} overflowX={true} />
         },
         {
