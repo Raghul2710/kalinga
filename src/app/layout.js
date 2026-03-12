@@ -102,8 +102,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/fav-icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/fav-icon.png" />
         {/* Google Tag Manager - as high in head as possible */}
         <script
           dangerouslySetInnerHTML={{

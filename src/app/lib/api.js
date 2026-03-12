@@ -773,3 +773,54 @@ export async function fetchDesignations() {
     throw error;
   }
 }
+
+/**
+ * Fetches latest news and events for the sidebar
+ * @returns {Promise<Array>} Array of news/event objects
+ */
+export async function fetchLatestNewsEvents() {
+  try {
+    const url = getApiUrl(API_CONFIG.newsEvents.latest());
+    const response = await fetch(url, {
+      method: 'GET',
+      next: { revalidate: 3600 },
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return extractResults(data);
+  } catch (error) {
+    console.error('Error fetching latest news events:', error);
+    throw error;
+  }
+}
+
+/**
+ * Fetches specialization heading for a given course/department ID
+ * @param {string|number} id - ID of the course or department
+ * @returns {Promise<Object>} Object containing the heading and other info
+ */
+export async function fetchSpecializationHeading(id) {
+  if (!id) return null;
+  try {
+    const url = getApiUrl(API_CONFIG.courses.specializationHeading(id));
+    const response = await fetch(url, {
+      method: 'GET',
+      next: { revalidate: 3600 },
+    });
+
+    if (!response.ok) {
+      if (response.status === 404) return null;
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.warn(`Error fetching specialization heading for ${id}:`, error);
+    return null; // Fail gracefully
+  }
+}

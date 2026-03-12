@@ -7,13 +7,28 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import GlobalArrowButton from "../general/global-arrow_button";
-import { parseHtmlToText } from "../../lib/api";
+import { parseHtmlToText, fetchLatestNewsEvents } from "../../lib/api";
 
 export default function EventCalendar({ items = [], departments = [], showNews = true, categories = [], hideNewsCategory = false }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedDate, setSelectedDate] = useState(null); // Stores the full date string
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
+  const [latestNewsEvents, setLatestNewsEvents] = useState([]);
+
+  useEffect(() => {
+    const getLatestEvents = async () => {
+      try {
+        const data = await fetchLatestNewsEvents();
+        setLatestNewsEvents(Array.isArray(data) ? data : []);
+      } catch (error) {
+        console.error("Error fetching latest news events:", error);
+      }
+    };
+    if (showNews) {
+      getLatestEvents();
+    }
+  }, [showNews]);
 
   const eventsPerPage = 3;
 
@@ -349,27 +364,23 @@ export default function EventCalendar({ items = [], departments = [], showNews =
                   </div>
 
                   <div className="space-y-4 mb-6 flex-grow overflow-y-auto pr-2 custom-scrollbar">
-                    {latestNews.map((news, index) => (
-                      <Link href={`/news-and-events/${news.slug}`} key={news.id} className="block group">
-                        <div className={`flex gap-3 items-start pb-4 ${index !== latestNews.length - 1 ? 'border-b border-white/20' : ''}`}>
-                          <div className="flex-shrink-0 pt-1">
-                            <Image
-                              src={news.images?.[0]?.image || "https://cdn.kalingauniversity.ac.in/common/student.jpg"}
-                              alt={news.heading}
-                              width={80}
-                              height={80}
-                              className="w-20 h-20 object-cover rounded-lg group-hover:opacity-90 transition-opacity"
-                            />
-                          </div>
+                    {latestNewsEvents.map((news, index) => (
+                      <a href={news.link} key={news.id || index} target="_blank" rel="noopener noreferrer" className="block group">
+                        <div className={`flex flex-col gap-1 pb-4 ${index !== latestNewsEvents.length - 1 ? 'border-b border-white/20' : ''}`}>
                           <div className="flex-1 min-w-0">
-                            <p className="text-[var(--dark-orange-red-light)] text-xs mb-1 font-semibold">{news.date}</p>
-                            <p className="text-white text-sm leading-snug group-hover:text-gray-200 transition-colors line-clamp-3">
-                              {news.heading}
-                            </p>
+                            <p className="text-[var(--dark-orange-red-light)] text-xs mb-1 font-semibold">{news.event_date}</p>
+                            <h3 className="text-white text-xl leading-snug group-hover:text-gray-200 transition-colors line-clamp-3 font-medium">
+                              {news.event_name}
+                            </h3>
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     ))}
+                    {latestNewsEvents.length === 0 && (
+                      <div className="text-white/60 text-sm text-center py-4 italic">
+                        No recent news or events
+                      </div>
+                    )}
                   </div>
 
                   {/* <div className="mt-auto flex-shrink-0 flex justify-center pt-2">

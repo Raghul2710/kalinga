@@ -7,6 +7,7 @@ export const API_CONFIG = {
     list: () => `/courses/`,
     completeDetail: (courseId) => `/courses/${courseId}/complete-detail/`,
     about: () => `/course-about/`,
+    specializationHeading: (courseId) => `/courses/specialization-heading/${courseId}/`,
   },
 
   // Department endpoints
@@ -36,7 +37,8 @@ export const API_CONFIG = {
   newsEvents: {
     list: (params = '') => `/news-events/${params}`,
     detail: (slug) => `/news-events/${slug}/`,
-    seo: (slug) => `/news-events/${slug}/seo/`,
+    seo: (slug) => `/news-events/${slug}/`,
+    latest: () => '/latest-news-events/data/?status=true',
   },
 
   // Tables endpoints

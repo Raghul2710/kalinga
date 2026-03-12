@@ -24,7 +24,7 @@ import CourseNavigation from "@/app/components/general/course-navigation";
 import QuickLinks from "@/app/components/general/quick_links";
 import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 import { useFlipbook } from "@/app/components/general/FlipbookContext";
-import { fetchAllCourses, fetchCourseCompleteDetail, fetchDepartmentCompleteDetail, parseHtmlToParagraphs, parseHtmlToText, parseHtmlListItems, fetchClubs, fetchClubDetail } from "@/app/lib/api";
+import { fetchAllCourses, fetchCourseCompleteDetail, fetchDepartmentCompleteDetail, parseHtmlToParagraphs, parseHtmlToText, parseHtmlListItems, fetchClubs, fetchClubDetail, fetchSpecializationHeading } from "@/app/lib/api";
 import FacilitySlider from "@/app/components/course/facility-slider";
 // Helper function to format duration
 const formatDuration = (duration, semester) => {
@@ -66,6 +66,7 @@ export default function DynamicCoursePage() {
   const [departmentData, setDepartmentData] = useState(null);
   const [metadataLoaded, setMetadataLoaded] = useState(false);
   const [clubsData, setClubsData] = useState([]);
+  const [specializationHeading, setSpecializationHeading] = useState("");
   const { openFlipbook } = useFlipbook();
 
   // Find course data from slug
@@ -189,6 +190,24 @@ export default function DynamicCoursePage() {
 
     loadCourseData();
   }, [courseId, courseData]);
+
+  // Fetch Specialization Heading
+  useEffect(() => {
+    if (!courseId) return;
+
+    const loadSpecializationHeading = async () => {
+      try {
+        const data = await fetchSpecializationHeading(courseId);
+        if (data && data.specialisation_heading) {
+          setSpecializationHeading(data.specialisation_heading);
+        }
+      } catch (err) {
+        console.warn('[Course Page] Failed to fetch specialization heading:', err);
+      }
+    };
+
+    loadSpecializationHeading();
+  }, [courseId]);
 
   // Fetch clubs data
   useEffect(() => {
@@ -745,9 +764,8 @@ export default function DynamicCoursePage() {
       {whyStudyContent && whyStudyContent.items && whyStudyContent.items.length > 0 && (
         <div id="specialization" className="scroll-mt-24 md:scroll-mt-28">
           <Specialization
-
             title={whyStudyContent.sectionTitle}
-            subtitle={whyStudyContent.sectionDescription}
+            subtitle={specializationHeading || whyStudyContent.sectionDescription}
             // description={whyStudyContent.sectionDescription}
             items={whyStudyContent.items.map(item => ({
               title: item.title,
