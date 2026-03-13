@@ -163,8 +163,8 @@ export default function DynamicDepartmentPage() {
       element.setAttribute('content', content);
     };
 
-    const displayDepartmentName = slug === "faculty-of-commerce-and-management" 
-      ? "Department of Commerce and Management" 
+    const displayDepartmentName = slug === "faculty-of-commerce-and-management"
+      ? "Department of Management"
       : (departmentData.name || "");
 
     if (departmentData?.meta_title) {
@@ -277,8 +277,8 @@ export default function DynamicDepartmentPage() {
     const designationName = rawDesignationName.split(',')[0].trim();
 
     // Override department name for specific slug
-    const displayDepartmentName = slug === "faculty-of-commerce-and-management" 
-      ? "Department of Commerce and Management" 
+    const displayDepartmentName = slug === "faculty-of-commerce-and-management"
+      ? "Department of Commerce and Management"
       : (departmentData.name || "");
 
     return {
