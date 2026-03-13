@@ -163,10 +163,14 @@ export default function DynamicDepartmentPage() {
       element.setAttribute('content', content);
     };
 
+    const displayDepartmentName = slug === "faculty-of-commerce-and-management" 
+      ? "Department of Commerce and Management" 
+      : (departmentData.name || "");
+
     if (departmentData?.meta_title) {
       document.title = departmentData.meta_title;
-    } else if (departmentData?.name) {
-      document.title = departmentData.name;
+    } else if (displayDepartmentName) {
+      document.title = displayDepartmentName;
     }
 
     updateMetaTag('description', departmentData?.meta_description);
@@ -184,7 +188,7 @@ export default function DynamicDepartmentPage() {
       canonical.setAttribute('href', departmentData.canonical_url);
     }
 
-    updateMetaTag('og:title', departmentData?.og_title || departmentData?.meta_title || departmentData?.name, 'property');
+    updateMetaTag('og:title', departmentData?.og_title || departmentData?.meta_title || displayDepartmentName, 'property');
     updateMetaTag('og:description', departmentData?.og_description || departmentData?.meta_description, 'property');
     updateMetaTag('og:image', departmentData?.og_image, 'property');
     updateMetaTag('og:type', departmentData?.og_type, 'property');
@@ -193,7 +197,7 @@ export default function DynamicDepartmentPage() {
     updateMetaTag('og:url', departmentData?.og_url || departmentData?.canonical_url, 'property');
 
     updateMetaTag('twitter:card', departmentData?.twitter_card);
-    updateMetaTag('twitter:title', departmentData?.twitter_title || departmentData?.meta_title || departmentData?.name);
+    updateMetaTag('twitter:title', departmentData?.twitter_title || departmentData?.meta_title || displayDepartmentName);
     updateMetaTag('twitter:description', departmentData?.twitter_description || departmentData?.meta_description);
     updateMetaTag('twitter:image', departmentData?.twitter_image);
 
@@ -272,10 +276,15 @@ export default function DynamicDepartmentPage() {
     const rawDesignationName = designationObj ? designationObj.name : (faculty.qualification || "Dean");
     const designationName = rawDesignationName.split(',')[0].trim();
 
+    // Override department name for specific slug
+    const displayDepartmentName = slug === "faculty-of-commerce-and-management" 
+      ? "Department of Commerce and Management" 
+      : (departmentData.name || "");
+
     return {
       title: faculty.name || "",
       subtitle: `Message from the ${designationName}`,
-      department: departmentData.name || "",
+      department: displayDepartmentName,
       imageSrc: faculty.image || "",
       quote: faculty.quote_description || "",
       message: faculty.about || "",
@@ -349,7 +358,7 @@ export default function DynamicDepartmentPage() {
   };
 
   const whyStudyContent = departmentData?.benefits && departmentData.benefits.length > 0 ? {
-    sectionTitle: `Why Study ${(departmentData.name || "").replace(/^Faculty of\s+/i, '')}?`,
+    sectionTitle: `Why Study ${(slug === "faculty-of-commerce-and-management" ? "Commerce and Management" : (departmentData.name || "").replace(/^Faculty of\s+/i, ''))}?`,
     backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: departmentData.benefits
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
@@ -434,12 +443,12 @@ export default function DynamicDepartmentPage() {
 
   const breadcrumbData = (departmentData?.name && !loading) ? {
     heroImage: departmentData?.banners?.[0]?.image || departmentData?.banners?.[0]?.image_url || "https://cdn.kalingauniversity.ac.in/departments/student-gathered.webp",
-    pageTitle: departmentData.name,
+    pageTitle: slug === "faculty-of-commerce-and-management" ? "Department of Commerce and Management" : departmentData.name,
     imageposition: "object-[45%_10%]",
     customBreadcrumbs: [
       { label: 'Home', href: '/' },
       {
-        label: departmentData.name,
+        label: slug === "faculty-of-commerce-and-management" ? "Department of Commerce and Management" : departmentData.name,
         href: `/departments/${departmentData.slug || generateSlug(departmentData.name)}`
       }
     ]
@@ -610,7 +619,7 @@ export default function DynamicDepartmentPage() {
       )}
       {departmentData?.clubs && departmentData.clubs.length > 0 && (
         <UpcomingConference
-          title={`Introducing Our ${(departmentData.name || "").replace(/^Faculty of\s+/i, '')} Club`}
+          title={`Introducing Our ${(slug === "faculty-of-commerce-and-management" ? "Commerce and Management" : (departmentData.name || "").replace(/^Faculty of\s+/i, ''))} Club`}
           registerButtonText="Join Now"
           imageContainerClass="object-contain py-16 h-[350px]"
 

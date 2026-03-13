@@ -160,7 +160,7 @@ const aboutAccreditations = [
   // { id: 11, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002979.png" },
   { id: 13, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002981.png" },
   { id: 14, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/ieee.jpeg" },
-  { id: 15, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/uba.jpg" },
+  { id: 15, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/news-6047.webp" },
   { id: 16, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/cii.png" },
   { id: 17, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/nss.jpg" },
   { id: 18, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/logos/ncc.jpg" },

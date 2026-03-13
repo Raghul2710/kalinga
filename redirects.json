@@ -1058,176 +1058,175 @@
         "source": "/dr_krushna_chandra",
         "destination": "/leadership",
         "permanent": true
-    }
+    },
     {
         "source": "/iqac/Financial-Audited-Statements",
         "destination": "/internal-quality-assurance-cell",
         "permanent": true
-    }
+    },
     {
         "source": "/ku/bba/",
         "destination": "/courses/bachelor-of-business-administration",
         "permanent": true
-    }
+    },
     {
         "source": "/department/botany",
         "destination": "/courses/bachelor-of-science-zoology-botany-chemistry",
         "permanent": true
-    }
+    },
     {
         "source": "/eligibility_and_fee_structure.php/ipr-cell",
         "destination": "/ku-fees",
         "permanent": true
-    }
+    },
     {
         "source": "/voter_portal",
         "destination": "/voter-portal",
         "permanent": true
-    }
+    },
     {
         "source": "/ku/fee_structure/",
         "destination": "/ku-fees",
         "permanent": true
-    }
+    },
     {
         "source": "/how_to_reach_campus.php/ipr-cell",
         "destination": "/ipr-cell",
         "permanent": true
-    }
+    },
     {
         "source": "/faculty_of_engineering_and_technology",
         "destination": "/departments/faculty-of-technology",
         "permanent": true
-    }
+    },
     {
         "source": "/faculty_of_law",
         "destination": "/departments/faculty-of-law",
         "permanent": true
-    }
+    },
     {
         "source": "/KAL-MAT-2025-26/",
         "destination": "/kalmat",
         "permanent": true
-    }
+    },
     {
         "source": "/job_openings.php/ipr-cell.php",
         "destination": "/ipr-cell",
         "permanent": true
-    }
+    },
     {
         "source": "/contact.php/1000",
         "destination": "/contact-us",
         "permanent": true
-    }
+    },
     {
         "source": "/transport-facilities",
         "destination": "/transport-facility",
         "permanent": true
-    }
+    },
     {
         "source": "/contact.php/overview",
         "destination": "/contact-us",
         "permanent": true
-    }
+    },
     {
         "source": "/research/Students-list-2025-Uploading-for-Portal",
         "destination": "/research",
         "permanent": true
-    }
+    },
     {
         "source": "/research/seed-money",
         "destination": "/research",
         "permanent": true
-    }
+    },
     {
         "source": "/hostel-kulanga-uni",
         "destination": "/hostel",
         "permanent": true
-    }
+    },
     {
         "source": "/ncc-ku",
         "destination": "/Ncc",
         "permanent": true
-    }
+    },
     {
         "source": "/academic_calendar",
         "destination": "/academic-calendar",
         "permanent": true
-    }
+    },
     {
         "source": "/hostel-reading-rooms",
         "destination": "/hostel",
         "permanent": true
-    }
+    },
     {
         "source": "/IIC/Innovation-Ambassadors",
         "destination": "/institution-innovation-council",
         "permanent": true
-    }
+    },
     {
         "source": "/ku/cg-fee",
         "destination": "/ku-fees",
         "permanent": true
-    }
+    },
     {
         "source": "/doc_veri.php/ipr-cell",
         "destination": "/ipr-cell",
         "permanent": true
-    }
+    },
     {
         "source": "/placement/voter_portal",
         "destination": "/voter-portal",
         "permanent": true
-    }
+    },
     {
         "source": "/kalinga-buzz/Kalinga-Buzz-Feb-2020",
         "destination": "/kalinga-buzz",
         "permanent": true
-    }
+    },
     {
         "source": "/other-committees/minority-cell",
         "destination": "/other-committees",
         "permanent": true
-    }
+    },
     {
         "source": "/kalingaplus/ipr-cell",
         "destination": "/ipr-cell",
         "permanent": true
-    }
+    },
     {
         "source": "/Faculty-of-Information-and-Technology/programs",
         "destination": "/departments/information-technology",
         "permanent": true
-    }
+    },
     {
         "source": "/Faculty-of-Information-and-Technology/",
         "destination": "/departments/information-technology",
         "permanent": true
-    }
+    },
     {
         "source": "/examination",
         "destination": "/entrance-exam",
         "permanent": true
-    }
+    },
     {
         "source": "/application_process/admission_registration",
         "destination": "/admissions",
         "permanent": true
-    }
+    },
     {
         "source": "/Faculty-of-Commerce-and-Management/faculty_of_fashion_and_interior_design",
         "destination": "/departments/faculty-of-commerce-and-management",
         "permanent": true
-    }
+    },
     {
         "source": "/Faculty-of-Science/overview",
         "destination": "/departments/faculty-of-science",
         "permanent": true
-    }
+    },
     {
         "source": "/uba/hostel_fee",
         "destination": "/ku-fees",
         "permanent": true
     }
-    
 ]
