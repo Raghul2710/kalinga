@@ -87,7 +87,8 @@ const Gallery = ({
   paddingClassName = "py-16",
   titleClassName = "",
   forceSliderOnMobile = false,
-  forceSlider = false
+  forceSlider = false,
+  showTitles = false
 }) => {
   const useSlider = forceSlider || images.length > 4 || forceSliderOnMobile
 
@@ -143,6 +144,15 @@ const Gallery = ({
                     />
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    
+                    {/* Title Overlay */}
+                    {showTitles && item.title && (
+                      <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-white text-sm font-semibold truncate text-center">
+                          {item.title}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 );
 
@@ -194,6 +204,15 @@ const Gallery = ({
                         />
                         {/* Overlay on hover */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                        
+                        {/* Title Overlay */}
+                        {showTitles && item.title && (
+                          <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <p className="text-white text-sm font-semibold truncate text-center">
+                              {item.title}
+                            </p>
+                          </div>
+                        )}
                       </div>
                     );
 
@@ -231,6 +250,15 @@ const Gallery = ({
                     />
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                    
+                    {/* Title Overlay */}
+                    {showTitles && item.title && (
+                      <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <p className="text-white text-sm font-semibold truncate text-center">
+                          {item.title}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 );
 

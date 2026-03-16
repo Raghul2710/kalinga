@@ -1,14 +1,24 @@
 "use client";
 
 import React from "react";
+import FlipbookTrigger from "../general/FlipbookTrigger";
 
 const SdgImageGrid = () => {
   const images = Array.from({ length: 17 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
+    const id = i + 1;
+    let pdfUrl = "#";
+    
+    // PDF link for Goal 03
+    if (id === 3) {
+      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-3-Good-Health-and-Well-Being.pdf";
+    }
+
     return {
-      id: i + 1,
+      id,
       src: `https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-logo/E-WEB-Goal-${num}.png`,
       alt: `SDG Goal ${num}`,
+      pdfUrl
     };
   });
 
@@ -25,22 +35,33 @@ const SdgImageGrid = () => {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center items-center">
-          {images.map((img) => (
-            <a
-              key={img.id}
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 p-3 aspect-square flex items-center justify-center cursor-pointer"
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </a>
-          ))}
+          {images.map((img) => {
+            const content = (
+              <a
+                href={img.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 p-3 aspect-square flex items-center justify-center cursor-pointer"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </a>
+            );
+
+            return img.pdfUrl !== "#" ? (
+              <FlipbookTrigger key={img.id} pdfUrl={img.pdfUrl} title={img.alt}>
+                {content}
+              </FlipbookTrigger>
+            ) : (
+              <React.Fragment key={img.id}>
+                {content}
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
     </section>

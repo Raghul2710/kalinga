@@ -550,42 +550,32 @@
         "permanent": true
     },
     {
-        "source": "/academic-facilities-student-erp.php",
-        "destination": "/campus-facilities",
-        "permanent": true
-    },
-    {
         "source": "/academic-facilities-student-erp",
         "destination": "/campus-facilities",
         "permanent": true
     },
     {
-        "source": "/job_openings.php",
+        "source": "/job_openings",
         "destination": "/careers",
         "permanent": true
     },
     {
-        "source": "/about_kalinga.php",
+        "source": "/about_kalinga",
         "destination": "/about-us",
         "permanent": true
     },
     {
-        "source": "/ph.d-admissions.php",
+        "source": "/ph.d-admissions",
         "destination": "/admissions",
         "permanent": true
     },
     {
-        "source": "/admission_procedure.php",
-        "destination": "/admissions",
-        "permanent": true
-    },
-    {
-        "source": "/ku/cg-fee/",
+        "source": "/ku/cg-fee",
         "destination": "/ku-fees",
         "permanent": true
     },
     {
-        "source": "/doc_veri.php",
+        "source": "/doc_veri",
         "destination": "/document-verification",
         "permanent": true
     },
@@ -595,18 +585,8 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Education/programs.php",
-        "destination": "/departments/faculty-of-education",
-        "permanent": true
-    },
-    {
         "source": "/Faculty-of-Education/programs",
         "destination": "/departments/faculty-of-education",
-        "permanent": true
-    },
-    {
-        "source": "/academic_calendar.php",
-        "destination": "/academic-calendar",
         "permanent": true
     },
     {
@@ -625,13 +605,8 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Technology/",
+        "source": "/Faculty-of-Technology",
         "destination": "/departments/faculty-of-technology",
-        "permanent": true
-    },
-    {
-        "source": "/placement_cell.php",
-        "destination": "/training-and-placements",
         "permanent": true
     },
     {
@@ -640,18 +615,8 @@
         "permanent": true
     },
     {
-        "source": "/conferences.php",
-        "destination": "/news-and-events",
-        "permanent": true
-    },
-    {
         "source": "/conferences",
         "destination": "/news-and-events",
-        "permanent": true
-    },
-    {
-        "source": "/e-journals-portal.php",
-        "destination": "/library",
         "permanent": true
     },
     {
@@ -660,23 +625,13 @@
         "permanent": true
     },
     {
-        "source": "/faculty_of_mass_communication_media_and_journalism.php",
-        "destination": "/admissions",
-        "permanent": true
-    },
-    {
         "source": "/faculty_of_mass_communication_media_and_journalism",
         "destination": "/admissions",
         "permanent": true
     },
     {
-        "source": "/ku/job-openings/",
+        "source": "/ku/job-openings",
         "destination": "/careers",
-        "permanent": true
-    },
-    {
-        "source": "/faculty_of_engineering_and_technology.php",
-        "destination": "/departments/faculty-of-technology",
         "permanent": true
     },
     {
@@ -685,18 +640,8 @@
         "permanent": true
     },
     {
-        "source": "/contact-us.php",
-        "destination": "/contact-us",
-        "permanent": true
-    },
-    {
         "source": "/ku/admission-procedure",
         "destination": "/admissions",
-        "permanent": true
-    },
-    {
-        "source": "/faculty_research.php",
-        "destination": "/research",
         "permanent": true
     },
     {
@@ -705,23 +650,13 @@
         "permanent": true
     },
     {
-        "source": "/student-services.php",
-        "destination": "/student-support",
-        "permanent": true
-    },
-    {
-        "source": "/contact.php",
+        "source": "/contact",
         "destination": "/contact-us",
         "permanent": true
     },
     {
-        "source": "/kalsee_2021.php",
+        "source": "/kalsee_2021",
         "destination": "/kalsee",
-        "permanent": true
-    },
-    {
-        "source": "/approvals.php",
-        "destination": "/about-us",
         "permanent": true
     },
     {
@@ -730,18 +665,8 @@
         "permanent": true
     },
     {
-        "source": "/admission_formp.php",
-        "destination": "/admissions",
-        "permanent": true
-    },
-    {
         "source": "/admission_formp",
         "destination": "/admissions",
-        "permanent": true
-    },
-    {
-        "source": "/faculty_of_law.php",
-        "destination": "/departments/faculty-of-law",
         "permanent": true
     },
     {
@@ -750,23 +675,8 @@
         "permanent": true
     },
     {
-        "source": "/ku/admission-procedure/",
-        "destination": "/admissions",
-        "permanent": true
-    },
-    {
-        "source": "/Faculty-of-Law/",
+        "source": "/Faculty-of-Law",
         "destination": "/departments/faculty-of-law",
-        "permanent": true
-    },
-    {
-        "source": "/brochures.php",
-        "destination": "/downloads",
-        "permanent": true
-    },
-    {
-        "source": "/kalinga_university_fraud.php",
-        "destination": "/",
         "permanent": true
     },
     {
@@ -775,18 +685,8 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Arts-and-Humanities/Our-Faculties.php",
-        "destination": "/departments/faculty-of-arts-humanities",
-        "permanent": true
-    },
-    {
         "source": "/Faculty-of-Arts-and-Humanities/Our-Faculties",
         "destination": "/departments/faculty-of-arts-humanities",
-        "permanent": true
-    },
-    {
-        "source": "/photo_gallery.php",
-        "destination": "/news-and-events#events-activities",
         "permanent": true
     },
     {
@@ -800,18 +700,8 @@
         "permanent": true
     },
     {
-        "source": "/faculty_of_education.php",
-        "destination": "/departments/faculty-of-education",
-        "permanent": true
-    },
-    {
         "source": "/faculty_of_education",
         "destination": "/departments/faculty-of-education",
-        "permanent": true
-    },
-    {
-        "source": "/kuhighlights.php",
-        "destination": "/news-and-events",
         "permanent": true
     },
     {
@@ -820,28 +710,13 @@
         "permanent": true
     },
     {
-        "source": "/faculty_of_computer_science.php",
-        "destination": "/departments/faculty-of-technology",
-        "permanent": true
-    },
-    {
         "source": "/faculty_of_computer_science",
         "destination": "/departments/faculty-of-technology",
         "permanent": true
     },
     {
-        "source": "/for_recruiters.php",
-        "destination": "/",
-        "permanent": true
-    },
-    {
         "source": "/for_recruiters",
         "destination": "/",
-        "permanent": true
-    },
-    {
-        "source": "/Faculty-of-Technology/Scheme-and-Syllabus.php",
-        "destination": "/departments/faculty-of-technology",
         "permanent": true
     },
     {
@@ -855,18 +730,8 @@
         "permanent": true
     },
     {
-        "source": "/hostel-kulanga-uni.php",
-        "destination": "/hostel",
-        "permanent": true
-    },
-    {
         "source": "/hostel-kulanga-uni",
         "destination": "/hostel",
-        "permanent": true
-    },
-    {
-        "source": "/list-of-holiday.php",
-        "destination": "/academic-calendar",
         "permanent": true
     },
     {
@@ -875,28 +740,13 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Law/Faculty-Profile.php",
-        "destination": "/departments/faculty-of-law",
-        "permanent": true
-    },
-    {
         "source": "/Faculty-of-Law/Faculty-Profile",
         "destination": "/departments/faculty-of-law",
         "permanent": true
     },
     {
-        "source": "/registrar_message.php",
-        "destination": "/registrar",
-        "permanent": true
-    },
-    {
         "source": "/National-Moot-Court-Competition",
-        "destination": "/",
-        "permanent": true
-    },
-    {
-        "source": "/faculty_of_management_studies.php",
-        "destination": "/departments/management",
+        "destination": "/departments/faculty-of-law",
         "permanent": true
     },
     {
@@ -905,22 +755,7 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Science/programs.php",
-        "destination": "/departments/faculty-of-science",
-        "permanent": true
-    },
-    {
-        "source": "/PO-PSO-CO/Bachelor-of-Arts.php",
-        "destination": "/departments/faculty-of-arts-humanities",
-        "permanent": true
-    },
-    {
         "source": "/PO-PSO-CO/Bachelor-of-Arts",
-        "destination": "/departments/faculty-of-arts-humanities",
-        "permanent": true
-    },
-    {
-        "source": "/Faculty-of-Arts-and-Humanities/programs.php",
         "destination": "/departments/faculty-of-arts-humanities",
         "permanent": true
     },
@@ -930,18 +765,8 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Science/research.php",
-        "destination": "/departments/faculty-of-science",
-        "permanent": true
-    },
-    {
         "source": "/Faculty-of-Science/research",
         "destination": "/departments/faculty-of-science",
-        "permanent": true
-    },
-    {
-        "source": "/research-papers-till.php",
-        "destination": "/research",
         "permanent": true
     },
     {
@@ -950,18 +775,8 @@
         "permanent": true
     },
     {
-        "source": "/hostel_fee.php",
-        "destination": "/hostel",
-        "permanent": true
-    },
-    {
         "source": "/hostel_fee",
         "destination": "/hostel",
-        "permanent": true
-    },
-    {
-        "source": "/libraries.php",
-        "destination": "/library",
         "permanent": true
     },
     {
@@ -995,32 +810,17 @@
         "permanent": true
     },
     {
-        "source": "/Faculty-of-Information-and-Technology/",
-        "destination": "/departments/faculty-of-information-technology",
-        "permanent": true
-    },
-    {
-        "source": "/examination.php",
-        "destination": "/academic-calendar",
-        "permanent": true
-    },
-    {
         "source": "/wp/admission-procedure",
         "destination": "/admissions",
         "permanent": true
     },
     {
-        "source": "/wp/admission-procedure/",
-        "destination": "/admissions",
-        "permanent": true
-    },
-    {
-        "source": "/result.php",
+        "source": "/result",
         "destination": "/kalsee",
         "permanent": true
     },
     {
-        "source": "/application_process/admission_registration.php",
+        "source": "/application_process/admission_registration",
         "destination": "/admissions",
         "permanent": true
     },
@@ -1080,16 +880,6 @@
         "permanent": true
     },
     {
-        "source": "/voter_portal",
-        "destination": "/voter-portal",
-        "permanent": true
-    },
-    {
-        "source": "/ku/fee_structure/",
-        "destination": "/ku-fees",
-        "permanent": true
-    },
-    {
         "source": "/how_to_reach_campus.php/ipr-cell",
         "destination": "/ipr-cell",
         "permanent": true
@@ -1100,17 +890,12 @@
         "permanent": true
     },
     {
-        "source": "/faculty_of_law",
-        "destination": "/departments/faculty-of-law",
-        "permanent": true
-    },
-    {
         "source": "/KAL-MAT-2025-26/",
         "destination": "/kalmat",
         "permanent": true
     },
     {
-        "source": "/job_openings.php/ipr-cell.php",
+        "source": "/job_openings.php/ipr-cell",
         "destination": "/ipr-cell",
         "permanent": true
     },
@@ -1227,6 +1012,21 @@
     {
         "source": "/uba/hostel_fee",
         "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/director-general",
+        "destination": "/leadership",
+        "permanent": true
+    },
+    {
+        "source": "/courses/phd---biochemistry",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/PO-PSO-CO/Bachelor-Of-Design",
+        "destination": "/departments/faculty-of-science",
         "permanent": true
     }
 ]

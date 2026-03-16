@@ -147,6 +147,14 @@ export default function DynamicDepartmentPage() {
     loadDepartmentCourses();
   }, [slug]);
 
+  // Consolidate department name overrides
+  const displayDepartmentName = useMemo(() => {
+    if (slug === "faculty-of-commerce-and-management") {
+      return "Department of Management";
+    }
+    return departmentData?.name || "";
+  }, [slug, departmentData?.name]);
+
   // Update SEO metadata when departmentData is available
   useEffect(() => {
     if (!departmentData) return;
@@ -163,9 +171,9 @@ export default function DynamicDepartmentPage() {
       element.setAttribute('content', content);
     };
 
-    const displayDepartmentName = slug === "faculty-of-commerce-and-management"
-      ? "Department of Management"
-      : (departmentData.name || "");
+    // const displayDepartmentName = slug === "faculty-of-commerce-and-management"
+    //   ? "Department of Management"
+    //   : (departmentData.name || "");
 
     if (departmentData?.meta_title) {
       document.title = departmentData.meta_title;
@@ -277,14 +285,14 @@ export default function DynamicDepartmentPage() {
     const designationName = rawDesignationName.split(',')[0].trim();
 
     // Override department name for specific slug
-    const displayDepartmentName = slug === "faculty-of-commerce-and-management"
-      ? "Department of Commerce and Management"
-      : (departmentData.name || "");
+    const headDepartmentName = slug === "faculty-of-commerce-and-management"
+      ? "Department of Management"
+      : displayDepartmentName;
 
     return {
       title: faculty.name || "",
       subtitle: `Message from the ${designationName}`,
-      department: displayDepartmentName,
+      department: headDepartmentName,
       imageSrc: faculty.image || "",
       quote: faculty.quote_description || "",
       message: faculty.about || "",
@@ -358,7 +366,7 @@ export default function DynamicDepartmentPage() {
   };
 
   const whyStudyContent = departmentData?.benefits && departmentData.benefits.length > 0 ? {
-    sectionTitle: `Why Study ${(slug === "faculty-of-commerce-and-management" ? "Commerce and Management" : (departmentData.name || "").replace(/^Faculty of\s+/i, ''))}?`,
+    sectionTitle: `Why Study ${displayDepartmentName.replace(/^(Faculty|Department) of\s+/i, '')}?`,
     backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: departmentData.benefits
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
@@ -443,12 +451,12 @@ export default function DynamicDepartmentPage() {
 
   const breadcrumbData = (departmentData?.name && !loading) ? {
     heroImage: departmentData?.banners?.[0]?.image || departmentData?.banners?.[0]?.image_url || "https://cdn.kalingauniversity.ac.in/departments/student-gathered.webp",
-    pageTitle: slug === "faculty-of-commerce-and-management" ? "Department of Commerce and Management" : departmentData.name,
+    pageTitle: displayDepartmentName,
     imageposition: "object-[45%_10%]",
     customBreadcrumbs: [
       { label: 'Home', href: '/' },
       {
-        label: slug === "faculty-of-commerce-and-management" ? "Department of Commerce and Management" : departmentData.name,
+        label: displayDepartmentName,
         href: `/departments/${departmentData.slug || generateSlug(departmentData.name)}`
       }
     ]
@@ -619,7 +627,7 @@ export default function DynamicDepartmentPage() {
       )}
       {departmentData?.clubs && departmentData.clubs.length > 0 && (
         <UpcomingConference
-          title={`Introducing Our ${(slug === "faculty-of-commerce-and-management" ? "Commerce and Management" : (departmentData.name || "").replace(/^Faculty of\s+/i, ''))} Club`}
+          title={`Introducing Our ${displayDepartmentName.replace(/^(Faculty|Department) of\s+/i, '')} Club`}
           registerButtonText="Join Now"
           imageContainerClass="object-contain py-16 h-[350px]"
 

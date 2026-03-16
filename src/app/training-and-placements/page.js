@@ -260,8 +260,8 @@ export default function Research() {
   }
   const milestones = [
     { value: "400", label: "Recruitment Partners" },
-    { value: "12 L ", label: "Highest Package" },
-    { value: "4 Lakh ", label: "Average Package" },
+    { value: "12 LPA", label: "Highest Package" },
+    { value: "4 LPA", label: "Average Package" },
   ]
 
   const links = [

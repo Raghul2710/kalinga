@@ -6,7 +6,7 @@ import ChairmanMessage from "../components/leadership/chairman_message";
 export default function Leadership() {
   return (
     <>
-      <ChairmanMessage
+      {/* <ChairmanMessage
         imageSrc="https://cdn.kalingauniversity.ac.in/about/Leadership/Byju+John.png"
         imageAlt="Dr. Byju John"
         name="Dr. Byju John"
@@ -21,7 +21,7 @@ export default function Leadership() {
           "I invite you to prepare yourself for the opportunities of the new millennium at Kalinga University with its mix of academic offerings and new-age programs in the emerging areas."
         ]
         }
-      />
+      /> */}
     </>
   );
 }

@@ -6,6 +6,7 @@ import FeatureCards from "@/app/components/home/featurecard";
 import RaipurMainIntro from '@/app/components/about-raipur/raipur_main_intro'
 import SectionHeading from "../components/general/SectionHeading";
 import ImageContent from "@/app/components/ccrc/imagecontent";
+import Gallery from "@/app/components/general/gallery";
 
 
 const cards = [
@@ -155,8 +156,44 @@ const cards = [
     body: "<strong>Places To Visit</strong> - Indravati National Park, Bhairamgarh Wildlife Sanctuary, Nambi Waterfalls, Neelam Sarai Waterfall, Lankapalli Waterfall, Muchnar River Beach, Bijapur Fort, Gagan Mahal, Citadel, Bhairamdev Temple",
   }
 
-
-
+];
+const galleryImages = [
+  {
+    id: 1,
+    image: "https://cdn.kalingauniversity.ac.in/Chhattisgarh/Dholkal-Ganesh-Temple.webp",
+    alt: "Dholkal Ganesh Temple",
+    title: "Dholkal Ganesh Temple",
+  },
+  {
+    id: 2,
+    image: "https://cdn.kalingauniversity.ac.in/Chhattisgarh/Chitrakote-Falls.png",
+    alt: "Chitrakote Falls",
+    title: "Chitrakote Falls",
+  },
+  {
+    id: 3,
+    image: "https://cdn.kalingauniversity.ac.in/Chhattisgarh/Mungeli-Forest.webp",
+    alt: "Mungeli Forest",
+    title: "Mungeli Forest",
+  },
+  {
+    id: 4,
+    image: "https://cdn.kalingauniversity.ac.in/Chhattisgarh/Sri-Laxman-Temple.png",
+    alt: "Sri Laxman Temple",
+    title: "Sri Laxman Temple",
+  },
+  {
+    id: 5,
+    image: "https://cdn.kalingauniversity.ac.in/Chhattisgarh/Tamda-Ghumar-Waterfalls.png",
+    alt: "Tamda Ghumar Waterfalls",
+    title: "Tamda Ghumar Waterfalls",
+  },
+  {
+    id: 6,
+    image: "https://cdn.kalingauniversity.ac.in/Chhattisgarh/Narayanpal-Temple.png",
+    alt: "Narayanpal Temple",
+    title: "Narayanpal Temple",
+  },
 ];
 export default function Chhattisgarh() {
   const pathname = usePathname();
@@ -177,6 +214,12 @@ export default function Chhattisgarh() {
         cardMinHeight="180px"
         cardLineClamp={3}
         imageUrl="https://cdn.kalingauniversity.ac.in/common/Map-chat.webp"
+      />
+      <Gallery
+        images={galleryImages}
+        title="Glimpses"
+        paddingClassName="py-16"
+        showTitles={true}
       />
     </div>
   );

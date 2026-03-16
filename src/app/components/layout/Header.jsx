@@ -338,6 +338,7 @@ const Header = () => {
             links: [
               { label: 'Events & Activities', href: '/news-and-events#events-activities' },
               { label: 'Conferences & Events', href: '/conferences-and-events' },
+              { label: 'Upcoming Conference', href: 'https://kalingaplus.kalingauniversity.ac.in/international-conference-on-sustainable-development-towards-a-greener-future-icsdgf-2026/' },
               { label: 'Industrial Visits', href: '/news-and-events#industrial-visits' },
               { label: 'Excursions', href: '/news-and-events#events-activities' },
             ]
