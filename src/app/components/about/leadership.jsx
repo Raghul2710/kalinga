@@ -36,13 +36,13 @@ const leadership = [
     image: "https://cdn.kalingauniversity.ac.in/about/Leadership/Shridhar.png",
     link: "/vice-chancellor",
   },
-  {
-    id: 5,
-    name: "Dr. Byju John",
-    title: "Director General",
-    image: "https://cdn.kalingauniversity.ac.in/about/Leadership/Byju+John.png",
-    link: "/director-general",
-  },
+  // {
+  //   id: 5,
+  //   name: "Dr. Byju John",
+  //   title: "Director General",
+  //   image: "https://cdn.kalingauniversity.ac.in/about/Leadership/Byju+John.png",
+  //   link: "/director-general",
+  // },
   {
     id: 6,
     name: "Dr. Sandeep Gandhi",

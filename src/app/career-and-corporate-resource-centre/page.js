@@ -382,7 +382,7 @@ export default function CCRCPage() {
       <h2 className="font-stix text-center mb-8">Benefits for Organisations</h2>
       <Specialization cards={ccrcBenefitsData} />
     </div>
-    <DeptHeadIntro items={MentorIntroProps} />
+    {/* <DeptHeadIntro items={MentorIntroProps} /> */}
     <SectionHeading
       title="Our Domains"
       titleClassName="text-center mt-10"

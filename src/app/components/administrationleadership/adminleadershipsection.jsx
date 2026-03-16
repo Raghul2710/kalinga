@@ -30,13 +30,13 @@ const leaders = [
     quote: "Education is not preparation for life; it is the awakening of purpose within it.",
     profileLink: "/vice-chancellor"
   },
-  {
-    imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Byju+John.png",
-    name: "Dr. Byju John",
-    designation: "Director General",
-    quote: "Learning has real power only when it shapes judgment, character, and responsibility.",
-    profileLink: "/director-general"
-  },
+  // {
+  //   imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Byju+John.png",
+  //   name: "Dr. Byju John",
+  //   designation: "Director General",
+  //   quote: "Learning has real power only when it shapes judgment, character, and responsibility.",
+  //   profileLink: "/director-general"
+  // },
   {
     imageSrc: "https://cdn.kalingauniversity.ac.in/about/Leadership/Sandeep+Gandhi.png",
     name: "Dr. Sandeep Gandhi",
