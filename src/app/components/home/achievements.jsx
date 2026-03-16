@@ -154,13 +154,13 @@ export default function Achievements() {
                 title="Our Growth Story in Numbers"
                 titleClassName="text-[var(--foreground)] mb-6 lg:mb-8"
               />
-              <div>
+              {/* <div>
                 <Link href="/about-us" className="inline-flex">
                   <GlobalArrowButton as="span" className="w-full sm:w-[160px] h-[44px] justify-between">
                     Learn More
                   </GlobalArrowButton>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Side - Swiper Slider */}

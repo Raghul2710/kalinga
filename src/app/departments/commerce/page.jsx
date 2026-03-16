@@ -462,7 +462,7 @@ export default function CommerceDepartmentPage() {
             <OrganogramOfKalinga
                 title="Feedback"
                 useContainer={true}
-                description="Kalinga University follows a well-structured governance model to ensure smooth administration and institutional integrity."
+                description="Your responses will help us improve our academic quality and learning experience."
                 showImage={false}
                 imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
                 imageAlt="Kalinga University Organogram"
