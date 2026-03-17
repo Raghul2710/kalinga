@@ -36,98 +36,120 @@ const IQAC_TABS = [
 ];
 
 const FEES_COMMERCE = {
-    title: "Faculty of Commerce & Management",
-    columns: [
-        "S.No.",
-        "Course",
-        "Tenure (Years)",
-        "Sem",
-        "Proposed Tuition Fee Per Sem (INR)",
-        "Prospectus/ KLSEE Fees (One Time) (INR)",
-        "Personal Interview Fee (INR)",
-        "Caution Money (One Time) Refundable (INR)",
-        "Uniform Fee (One Time) (INR)",
-        "Exam Fees (Per Sem) (INR)",
-        "Total Fees (INR)",
-    ],
-    rows: [
+    tables: [
         {
-            "S.No.": 1,
-            Course: "MBA**",
-            "Tenure (Years)": 2,
-            Sem: 4,
-            "Proposed Tuition Fee Per Sem (INR)": "1,25,000/-",
-            "Prospectus/ KLSEE Fees (One Time) (INR)": "2,000/-",
-            "Personal Interview Fee (INR)": "1,500/-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "5,15,950/-",
+            title: "Department of Commerce",
+            columns: [
+                "S.No.",
+                "Course",
+                "Tenure (Years)",
+                "Sem",
+                "Proposed Tuition Fee Per Sem (INR)",
+                "Prospectus/ KLSEE Fees (One Time) (INR)",
+                "Personal Interview Fee (INR)",
+                "Caution Money (One Time) Refundable (INR)",
+                "Uniform Fee (One Time) (INR)",
+                "Exam Fees (Per Sem) (INR)",
+                "Total Fees (INR)",
+            ],
+            rows: [
+                {
+                    "S.No.": 1,
+                    Course: "BBA* (Single Specialisation)",
+                    "Tenure (Years)": 3,
+                    Sem: 6,
+                    "Proposed Tuition Fee Per Sem (INR)": "55,000/-",
+                    "Prospectus/ KLSEE Fees (One Time) (INR)": "1,000/-",
+                    "Personal Interview Fee (INR)": "1,400/-",
+                    "Caution Money (One Time) Refundable (INR)": "3,000/-",
+                    "Uniform Fee (One Time) (INR)": "4,950/-",
+                    "Exam Fees (Per Sem) (INR)": "1,500/-",
+                    "Total Fees (INR)": "3,48,350/-",
+                },
+                {
+                    "S.No.": 2,
+                    Course: "Master of Commerce (M. Com. Pass)",
+                    "Tenure (Years)": 2,
+                    Sem: 4,
+                    "Proposed Tuition Fee Per Sem (INR)": "30,000/-",
+                    "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
+                    "Personal Interview Fee (INR)": "-",
+                    "Caution Money (One Time) Refundable (INR)": "3,000/-",
+                    "Uniform Fee (One Time) (INR)": "-",
+                    "Exam Fees (Per Sem) (INR)": "1,500/-",
+                    "Total Fees (INR)": "1,30,400/-",
+                },
+                {
+                    "S.No.": 3,
+                    Course: "Master of Commerce (M. Com.) (Banking & Finance)",
+                    "Tenure (Years)": 2,
+                    Sem: 4,
+                    "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
+                    "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
+                    "Personal Interview Fee (INR)": "-",
+                    "Caution Money (One Time) Refundable (INR)": "3,000/-",
+                    "Uniform Fee (One Time) (INR)": "-",
+                    "Exam Fees (Per Sem) (INR)": "1,500/-",
+                    "Total Fees (INR)": "1,50,400/-",
+                },
+                {
+                    "S.No.": 4,
+                    Course: "Bachelor of Commerce (B. Com. Pass)",
+                    "Tenure (Years)": 3,
+                    Sem: 6,
+                    "Proposed Tuition Fee Per Sem (INR)": "25,000/-",
+                    "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
+                    "Personal Interview Fee (INR)": "-",
+                    "Caution Money (One Time) Refundable (INR)": "3,000/-",
+                    "Uniform Fee (One Time) (INR)": "4,950/-",
+                    "Exam Fees (Per Sem) (INR)": "1,500/-",
+                    "Total Fees (INR)": "1,68,350/-",
+                },
+                {
+                    "S.No.": 5,
+                    Course: "B. Com. (Banking & Finance) {Includes Taxation & GST}",
+                    "Tenure (Years)": 3,
+                    Sem: 6,
+                    "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
+                    "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
+                    "Personal Interview Fee (INR)": "-",
+                    "Caution Money (One Time) Refundable (INR)": "3,000/-",
+                    "Uniform Fee (One Time) (INR)": "4,950/-",
+                    "Exam Fees (Per Sem) (INR)": "1,500/-",
+                    "Total Fees (INR)": "2,28,350/-",
+                },
+            ],
         },
         {
-            "S.No.": 2,
-            Course: "BBA* (Single Specialisation)",
-            "Tenure (Years)": 3,
-            Sem: 6,
-            "Proposed Tuition Fee Per Sem (INR)": "55,000/-",
-            "Prospectus/ KLSEE Fees (One Time) (INR)": "1,000/-",
-            "Personal Interview Fee (INR)": "1,400/-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "3,48,350/-",
-        },
-        {
-            "S.No.": 3,
-            Course: "Master of Commerce (M. Com. Pass)",
-            "Tenure (Years)": 2,
-            Sem: 4,
-            "Proposed Tuition Fee Per Sem (INR)": "30,000/-",
-            "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
-            "Personal Interview Fee (INR)": "-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "1,30,400/-",
-        },
-        {
-            "S.No.": 4,
-            Course: "Master of Commerce (M. Com.) (Banking & Finance)",
-            "Tenure (Years)": 2,
-            Sem: 4,
-            "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
-            "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
-            "Personal Interview Fee (INR)": "-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "1,50,400/-",
-        },
-        {
-            "S.No.": 5,
-            Course: "Bachelor of Commerce (B. Com. Pass)",
-            "Tenure (Years)": 3,
-            Sem: 6,
-            "Proposed Tuition Fee Per Sem (INR)": "25,000/-",
-            "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
-            "Personal Interview Fee (INR)": "-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "1,68,350/-",
-        },
-        {
-            "S.No.": 6,
-            Course: "B. Com. (Banking & Finance) {Includes Taxation & GST}",
-            "Tenure (Years)": 3,
-            Sem: 6,
-            "Proposed Tuition Fee Per Sem (INR)": "35,000/-",
-            "Prospectus/ KLSEE Fees (One Time) (INR)": "1,400/-",
-            "Personal Interview Fee (INR)": "-",
-            "Caution Money (One Time) Refundable (INR)": "3,000/-",
-            "Uniform Fee (One Time) (INR)": "4,950/-",
-            "Exam Fees (Per Sem) (INR)": "1,500/-",
-            "Total Fees (INR)": "2,28,350/-",
+            title: "Department of Management",
+            columns: [
+                "S.No.",
+                "Course",
+                "Tenure (Years)",
+                "Sem",
+                "Proposed Tuition Fee Per Sem (INR)",
+                "Prospectus/ KLSEE Fees (One Time) (INR)",
+                "Personal Interview Fee (INR)",
+                "Caution Money (One Time) Refundable (INR)",
+                "Uniform Fee (One Time) (INR)",
+                "Exam Fees (Per Sem) (INR)",
+                "Total Fees (INR)",
+            ],
+            rows: [
+                {
+                    "S.No.": 1,
+                    Course: "MBA**",
+                    "Tenure (Years)": 2,
+                    Sem: 4,
+                    "Proposed Tuition Fee Per Sem (INR)": "1,25,000/-",
+                    "Prospectus/ KLSEE Fees (One Time) (INR)": "2,000/-",
+                    "Personal Interview Fee (INR)": "1,500/-",
+                    "Caution Money (One Time) Refundable (INR)": "3,000/-",
+                    "Uniform Fee (One Time) (INR)": "4,950/-",
+                    "Exam Fees (Per Sem) (INR)": "1,500/-",
+                    "Total Fees (INR)": "5,15,950/-",
+                },
+            ],
         },
     ],
     notes: [
@@ -1299,11 +1321,23 @@ export default function FeesTabSection() {
                                 activeTab !== "hostel" &&
                                 !["scholarship", "transport", "other", "value"].includes(activeTab) && (
                                     <div>
-                                        <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
-                                            {faculty.title}
-                                        </h2>
-
-                                        <ScrollTable columns={faculty.columns} rows={faculty.rows} />
+                                        {faculty.tables ? (
+                                            faculty.tables.map((table, idx) => (
+                                                <div key={idx} className={idx > 0 ? "mt-12" : ""}>
+                                                    <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
+                                                        {table.title}
+                                                    </h2>
+                                                    <ScrollTable columns={table.columns} rows={table.rows} />
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <>
+                                                <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-1">
+                                                    {faculty.title}
+                                                </h2>
+                                                <ScrollTable columns={faculty.columns} rows={faculty.rows} />
+                                            </>
+                                        )}
                                         <Notes items={faculty.notes} />
                                         {activeTab !== "research" && <OtherChargesSection />}
 

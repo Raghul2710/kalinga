@@ -514,14 +514,14 @@ export default function DynamicDepartmentPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <GlobalArrowButton
                   as={Link}
-                  href="/departments/management"
+                  href="/academics/management"
                   className="!rounded-xl"
                 >
                   Department of Management
                 </GlobalArrowButton>
                 <GlobalArrowButton
                   as={Link}
-                  href="/departments/commerce"
+                  href="/academics/commerce"
                   className="!rounded-xl"
                 >
                   Department of Commerce

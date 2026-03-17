@@ -294,7 +294,7 @@ export default function ManagementDepartmentPage() {
 
     const facultyMembers = [
         { name: "Dr. R. Shridhar", designation: "Professor" },
-        { name: "Prof. Byju John", designation: "Professor" },
+        { name: "Prof. Byju John", designation: "Professor & Dean" },
         { name: "Dr. Arup Kumar Haldar", designation: "Associate Professor" },
         { name: "Dr. Arvind Kumar Saxena", designation: "Associate Professor" },
         { name: "Dr. Atul Bhardwaj", designation: "Associate Professor" },
@@ -305,7 +305,7 @@ export default function ManagementDepartmentPage() {
         { name: "Dr. Lincy Roy", designation: "Assistant Professor" },
         { name: "Dr. Deepti Patnaik", designation: "Assistant Professor" },
         { name: "Dr. Kanchan Thakur", designation: "Assistant Professor" },
-        { name: "Dr. Nishtha Sharma", designation: "Assistant Professor" },
+        { name: "Dr. Nishtha Sharma", designation: "Assistant Professor and Head of Department" },
         { name: "Dr. Parvinder Shesh", designation: "Assistant Professor" },
         { name: "Dr. Ankita Nihlani", designation: "Assistant Professor" },
         { name: "Ms. Dawakit Lepcha", designation: "Assistant Professor" },
@@ -348,7 +348,7 @@ export default function ManagementDepartmentPage() {
                 visionText={visionMissionContent.visionText}
                 missionText={visionMissionContent.missionText}
             />
-            {!loading && programsOffered.length > 0 && (
+            {/* {!loading && programsOffered.length > 0 && (
                 <ProgramsOffered
                     programs={programsOffered}
                     title="Programs Offered"
@@ -356,7 +356,7 @@ export default function ManagementDepartmentPage() {
                     hideSearch={true}
                     {...(programsImage && { backgroundImage: programsImage })}
                 />
-            )}
+            )} */}
             <FAQ
                 items={faqItems}
                 title="Academic Objectives & Outcomes"
@@ -446,13 +446,13 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 1,
                         text: "Management Journal List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/course/management/Management-Journal-List.pdf",
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Journal-List.pdf",
                         disableFlipbook: true
                     },
                     {
                         id: 2,
-                        text: "Commerce & Management Title List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/course/management/Faculty-of-Commerce-Management-Title.pdf",
+                        text: "Management Title List",
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Faculty-of-Commerce-&-Management-Title-List.pdf",
                         disableFlipbook: true
                     }
                 ]}
@@ -516,6 +516,7 @@ export default function ManagementDepartmentPage() {
                     'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
                     'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
                     'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
+
                 ]}
             />
 

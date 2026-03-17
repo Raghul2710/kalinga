@@ -518,7 +518,7 @@ export default function CommerceDepartmentPage() {
                 visionText={visionMissionContent.visionText}
                 missionText={visionMissionContent.missionText}
             />
-            {!loading && programsOffered.length > 0 && (
+            {/* {!loading && programsOffered.length > 0 && (
                 <ProgramsOffered
                     programs={programsOffered}
                     title="Programs Offered"
@@ -526,7 +526,7 @@ export default function CommerceDepartmentPage() {
                     hideSearch={true}
                     {...(programsImage && { backgroundImage: programsImage })}
                 />
-            )}
+            )} */}
             <FAQ
                 items={faqItems}
                 title="Academic Objectives & Outcomes"
@@ -708,7 +708,17 @@ export default function CommerceDepartmentPage() {
                 marginClassName="mt-10"
                 customRecruiterTitle="Top Management recruiters"
                 customImages={[
-                    'https://cdn.kalingauniversity.ac.in/Home/placement3.webp'
+                    'https://cdn.kalingauniversity.ac.in/Home/placement1.webp',
+                    'https://cdn.kalingauniversity.ac.in/Home/placement2.webp',
+                    'https://cdn.kalingauniversity.ac.in/Home/placement3.webp',
+                    'https://cdn.kalingauniversity.ac.in/Home/placement4.webp',
+                    'https://cdn.kalingauniversity.ac.in/Home/placement5.webp',
+                    'https://cdn.kalingauniversity.ac.in/Home/placement6.webp',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-4.png',
+                    'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
                 ]}
             />
 

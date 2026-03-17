@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
-import FlipbookTrigger from "../general/FlipbookTrigger";
+import GlobalArrowButton from "../general/global-arrow_button";
 
 const SdgImageGrid = () => {
   const images = Array.from({ length: 17 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
     const id = i + 1;
-    let pdfUrl = "#";
-    
+    let pdfUrl = "";
+
     // PDF link for Goal 03
     if (id === 3) {
       pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-3-Good-Health-and-Well-Being.pdf";
@@ -30,38 +29,38 @@ const SdgImageGrid = () => {
             Sustainable Development Goals
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-
           </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center items-center">
-          {images.map((img) => {
-            const content = (
-              <a
-                href={img.pdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 p-3 aspect-square flex items-center justify-center cursor-pointer"
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </a>
-            );
+          {images.map((img) => (
+            <div
+              key={img.id}
+              className="group relative block rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 p-3 aspect-square flex items-center justify-center bg-white shadow-sm hover:shadow-md"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
 
-            return img.pdfUrl !== "#" ? (
-              <FlipbookTrigger key={img.id} pdfUrl={img.pdfUrl} title={img.alt}>
-                {content}
-              </FlipbookTrigger>
-            ) : (
-              <React.Fragment key={img.id}>
-                {content}
-              </React.Fragment>
-            );
-          })}
+              {/* Hover Overlay with Button */}
+              {img.pdfUrl && (
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                  <GlobalArrowButton
+                    as="a"
+                    href={img.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="!py-2 !px-4 !rounded-full scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl"
+                  >
+                    View Report
+                  </GlobalArrowButton>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
