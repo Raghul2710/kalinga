@@ -206,6 +206,55 @@ export default function CommerceDepartmentPage() {
                             <li>The courses aim at instituting entrepreneurial skills in the students by instilling in them competencies needed to become an entrepreneur. These would lead to develop an attitude of life-long learning.</li>
                         </ul>
                     </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Business Administration</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li><b>PO1: Management Knowledge:</b> Apply fundamental and advanced theoretical knowledge of management and business principles to address practical challenges in organizational and entrepreneurial contexts. </li>
+                            <li><b>PO2: Communication Skills:</b> Demonstrate effective oral and written communication skills to convey ideas, arguments, and business strategies clearly and professionally. </li>
+                            <li><b>PO3: Critical Thinking and Problem Solving:</b> Identify, analyze, and solve business problems using data-driven reasoning, logical analysis, and informed judgment. </li>
+                            <li><b>PO4: Business Environment Analysis:</b> Articulate and critically evaluate Indian and global business environments and apply contextual understanding in decision-making. </li>
+                            <li><b>PO5: Leadership and Managerial Skills:</b> Recognize and demonstrate leadership, managerial, and entrepreneurial capabilities for effective business management and team success. </li>
+                            <li><b>PO6: Ethics and Professionalism:</b> Practice ethical standards, professional integrity, and responsible behaviour in business and organizational settings. </li>
+                            <li><b>PO7: Teamwork and Collaboration:</b> Work effectively as an individual and as a member or leader in diverse teams, demonstrating respect for multi-cultural and cross-functional collaboration. </li>
+                            <li><b>PO8: Creativity and Innovation:</b> Apply innovative thinking and creative problem-solving skills in business planning, product development, and strategic decision-making. </li>
+                            <li><b>PO9: Emotional Intelligence and Decision-Making:</b> Demonstrate emotional intelligence, self-awareness, and the ability to make sound decisions in dynamic and complex business situations. </li>
+                            <li><b>PO10: Lifelong Learning:</b> Engage in continuous learning and professional development to adapt to evolving business trends, tools, and technologies. </li>
+                            <li><b>PO11: Research Aptitude:</b> Develop research skills and inquiry-based learning to conduct independent studies on Indian and global business challenges. </li>
+                            <li><b>PO12: Social and Global Responsibility:</b> Exhibit civic responsibility and awareness of cultural, legal, environmental, and social issues, contributing meaningfully to national development and global citizenship. </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">B.Com - Banking and Finance</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li><b>PO1: Disciplinary Knowledge & Application:</b> Demonstrate a comprehensive understanding of concepts, principles, and practices in areas such as Accounting, Taxation, Finance, Auditing, and Business, with the ability to apply them in real-world business contexts.</li>
+                            <li><b>PO2: Critical Thinking & Problem Solving:</b> Analyze, evaluate, and interpret business, financial, and economic issues using logical reasoning, quantitative tools, and strategic frameworks to propose innovative solutions.</li>
+                            <li><b>PO3: Communication & Interpersonal Skills:</b> Exhibit effective oral and written communication skills and collaborate productively in diverse teams and professional environments.</li>
+                            <li><b>PO4: Entrepreneurship & Innovation:</b> Identify and assess business opportunities, plan and manage entrepreneurial ventures, and contribute to economic development through innovative thinking.</li>
+                            <li><b>PO5: Research Aptitude & Analytical Skills:</b> Apply research methodology, statistical tools, and data analysis techniques to conduct business research and inform decision-making.</li>
+                            <li><b>PO6: Ethics, Responsibility & Sustainability:</b> Demonstrate ethical reasoning, social responsibility, and sensitivity to environmental and sustainability issues in personal and professional practices.</li>
+                            <li><b>PO7: Digital & Technological Proficiency:</b> Utilize digital tools, platforms, and emerging technologies to enhance productivity and manage commerce-related functions effectively.</li>
+                            <li><b>PO8: Global Outlook & Cross-Cultural Competence:</b> Develop awareness of global business, financial systems, and cross-cultural dynamics to operate effectively in international and multicultural environments.</li>
+                            <li><b>PO9: Leadership & Teamwork:</b> Demonstrate leadership qualities, collaborative abilities, and conflict management skills to achieve organizational goals in dynamic business settings.</li>
+                            <li><b>PO10: Lifelong Learning & Leadership:</b> Develop a growth mindset for lifelong learning, career development, and leadership roles in an evolving global business environment.</li>
+                            <li><b>PO11: Quantitative & Financial Literacy:</b> Apply mathematical, statistical, and financial tools to analyze, interpret, and solve complex problems in banking, taxation, investment, and corporate finance.</li>
+                            <li><b>PO12: Employability & Career Readiness:</b> Exhibit professional competence, career-oriented skills, and industry readiness to excel in corporate, banking, financial, and entrepreneurial careers.</li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">M.com - Banking and Finance</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PO1: To create for the students of Kalinga University an additional avenue of self-employment and also to benefit Industries by providing them with suitable trained persons in the field of Commerce.</li>
+                            <li>PO2: To prepare students to explore opportunities, being newly created, in the field of Commerce due to Globalization, Privatization and Liberalization.</li>
+                            <li>PO3: To give an adequate exposure to operational environment in the field of Commerce.</li>
+                            <li>PO4: To provide adequate basic understanding about the field of Commerce.</li>
+                            <li>PO5: To inculcate training and practical approach among the students by using modern technologies in the field of Commerce.</li>
+                            <li>PO6: The students are trained with the help of different presentations, projects and assignments to understand the dynamics of Trade in a better way.</li>
+
+
+                        </ul>
+                    </div>
                 </div>
             )
         },
@@ -234,11 +283,79 @@ export default function CommerceDepartmentPage() {
                             <li>To impart knowledge regarding strategic financial planning.</li>
                         </ul>
                     </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Business Administration</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li><b>PSO1: Functional Domain Expertise:</b> Apply analytical and conceptual knowledge across key functional areas of business (such as marketing, finance, HR, and operations) to contribute effectively to organizational performance. </li>
+                            <li><b>PSO2: Strategic and Analytical Thinking:</b> Demonstrate strategic thinking, data interpretation, and problem-solving abilities to make informed and impactful business decisions in complex and dynamic environments. </li>
+                            <li><b>PSO3: Ethical and Sustainable Practices:</b> Adopt and promote ethical, responsible, and sustainable business practices across various domains of business administration. </li>
+                            <li><b>PSO4: Industry Readiness and Application:</b> Translate academic learning into practical solutions by engaging with industry practices, tools, and technologies relevant to contemporary business needs. </li>
+                            <li><b>PSO5: Innovation and Value Creation:</b> Foster innovative thinking to create value-driven solutions that align with business goals and societal needs. </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">B.Com - Banking and Finance</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li><b>PSO1: Banking Operations and Regulatory Knowledge:</b> Demonstrate conceptual clarity and practical understanding of banking operations, financial services, risk management, and regulatory frameworks.</li>
+                            <li><b>PSO2: Financial Systems, Investment, and Credit Management Expertise:</b> Apply knowledge of financial systems, investment strategies, and credit management to pursue careers in banking, financial institutions, or competitive financial roles.</li>
+                            <li><b>PSO3: Accounting, Auditing, and Taxation for Financial Decision-Making:</b> Utilize accounting, auditing, taxation, and financial reporting skills to analyze organizational performance, ensure compliance, and support strategic financial decision-making.</li>
+                            <li><b>PSO4: Digital Finance, FinTech, and Data Analytics Applications:</b> Integrate digital finance tools, FinTech applications, and data analytics techniques to improve efficiency, innovation, and decision-making in banking and financial services.</li>
+                            <li><b>PSO5: Entrepreneurial Finance and Strategic Problem-Solving Skills:</b> Develop entrepreneurial thinking and financial problem-solving abilities to design business solutions, assess investment opportunities, and contribute to sustainable economic growth.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">M.Com - Banking and Finance</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PSO1: The program is structured in such a way that it provides training in the field of finance, accounting, law, etc, among others.</li>
+                            <li>PSO2: It covers the subjects of commerce, and communication skills. It also helps to train candidates how to efficiently handle technologies used in the field of Commerce.</li>
+                            <li>PSO3: The main aim of this program is to provide students with a deep insight into the real world of Commerce through theory and practical sessions.</li>
+                            <li>PSO4: It is structured to give a great career choice for those who wish to pursue their career in the Commerce field.</li>
+                            <li>PSO5: It not only provides you with theoretical knowledge but also helps in its practical application and to provide ample exposure to students with market reforms, new policies and regulations.</li>
+                        </ul>
+                    </div>
                 </div>
             )
         },
         {
             id: 3,
+            question: "Program Educational Objectives (PEOs)",
+            component: (
+                <div className="space-y-6">
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Commerce</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PEO1: To apply core business and management concepts effectively in real-world contexts, including entrepreneurial ventures and start-up initiatives.</li>
+                            <li>PEO2: To demonstrate awareness and responsibility in areas such as safety, health, environmental sustainability, legal compliance, and cultural diversity to contribute positively to society. </li>
+                            <li>PEO3: To pursue ongoing personal and professional growth through continuous learning, skill enhancement, and staying updated with industry standards and regulatory frameworks.</li>
+                            <li>PEO4: To foster professionalism by actively collaborating with peers and stakeholders at local, national, and international levels to solve business challenges.</li>
+                            <li>PEO5: To develop a global outlook and civic consciousness to effectively serve in diverse environments, upholding values that benefit both national interest and the broader global community. </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">B.Com - Banking and Finance</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PEO1: To equip students with in-depth knowledge and understanding of Banking and Finance, enabling them to build successful careers in accounting, taxation, financial management, entrepreneurship, and corporate sectors.</li>
+                            <li>PEO2: To develop the ability to apply analytical, logical, and critical thinking skills to identify, analyze, and solve real-world business problems using appropriate tools, technologies, and research methodologies.</li>
+                            <li>PEO3: To nurture leadership, ethical values, and interpersonal competencies among students, preparing them to work effectively in diverse teams and dynamic environments across domestic and global organizations.</li>
+                            <li>PEO4: To inspire students to pursue lifelong learning, innovation, and professional development in the field of commerce and finance.</li>
+                            <li>PEO5: To create socially responsible graduates who demonstrate a strong sense of civic responsibility and sustainability, contributing meaningfully to society through inclusive and ethical business practices.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">M.Com - Banking and Finance</h4>
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PEO1: To provide knowledge and skills for being successful entrepreneurs and finance professionals in the field of Banking, Insurance, Manufacturing, Transport, Telecom, Service, Hospitality, IT, and Academics.</li>
+                            <li>PEO2: To equip students with quantitative, qualitative, cognitive and analytical skills for identifying, analysing, designing, and creating business opportunities in a global dynamic environment.</li>
+                            <li>PEO3: To make competent professionals with ethics, humility and societal needs through their holistic development.</li>
+                            <li>PEO4: To transform graduates capable of thinking strategically and to lead, motivate and manage multi-disciplinary teams thereby enhancing managerial effectiveness under all circumstances.</li>
+                            <li>PEO5: To prepare committed professionals with a sense of ‘giving back to the society’ through display of professional ethics, human dignity, empathy and humility in their professional and personal life.</li>
+                        </ul>
+                    </div>
+                </div>
+            )
+        },
+        {
+            id: 4,
             question: "Course Outcomes (COs)",
             component: (
                 <div className="space-y-8 max-h-[600px] overflow-y-auto pr-2">
@@ -345,14 +462,35 @@ export default function CommerceDepartmentPage() {
     ];
 
     const facultyMembers = [
-        { name: "Dr. R. Shridhar", designation: "Vice-Chancellor, Professor" },
-        { name: "Dr. Akash Bhattacharya", designation: "Assistant Professor" },
-        { name: "Dr. Arup Kumar Haldar", designation: "Associate Professor" },
-        { name: "Dr. Arvind Kumar Saxena", designation: "Associate Professor" },
-        { name: "Dr. Atul Bhardwaj", designation: "Associate Professor" },
-        { name: "Dr. Lalit Sachdeva", designation: "Associate Professor" },
-        { name: "Mr. Rakshak Bharti", designation: "Assistant Professor" },
-        { name: "Prof. Byju John", designation: "Director General" }
+        { name: "Dr. Deepak Tiwari", designation: "Assistant Professor" },
+        { name: "Dr. Arvind Kumar Tiwari", designation: "Assistant Professor" },
+        { name: "Dr. Poonam Singh", designation: "Assistant Professor" },
+        { name: "Ms. Shivangi Makade", designation: "Assistant Professor" },
+        { name: "Dr. Prashant Kumar Jha", designation: "Assistant Professor" },
+        { name: "Dr. Chandra Bhooshan Singh", designation: "Assistant Professor" },
+        { name: "Mr. Shubham Singh Chandel", designation: "Assistant Professor" },
+        { name: "Ms. Angel Mary Xess", designation: "Assistant Professor" },
+        { name: "Dr. Jyotsna Dwivedi", designation: "Assistant Professor" },
+        { name: "Dr. Priyam Vishwakarma", designation: "Assistant Professor" },
+        { name: "Dr. Divya Nandini Sharma", designation: "Assistant Professor" }
+    ];
+
+    const bbaFacultyMembers = [
+        { name: "Dr. Satvik Jain", designation: "Assistant Professor" },
+        { name: "Dr. Utkarsh Anand", designation: "Assistant Professor" },
+        { name: "Dr. Sandeep Soni", designation: "Assistant Professor" },
+        { name: "Ms. Mariyam Ahmed", designation: "Assistant Professor" },
+        { name: "Dr. Abhishek Sharma", designation: "Assistant Professor" },
+        { name: "Dr. Sonam Dubey", designation: "Assistant Professor" },
+        { name: "Dr. Jagan Mohan", designation: "Assistant Professor" },
+        { name: "Dr. Ashish Kumar Sahu", designation: "Assistant Professor" },
+        { name: "Dr. Aida Ventkat Rao Dora", designation: "Assistant Professor" },
+        { name: "Dr. T Gayatri Murty", designation: "Assistant Professor" },
+        { name: "Dr. Amitesh Barman", designation: "Assistant Professor" },
+        { name: "Dr. Shilpi Nishant Tanwani", designation: "Assistant Professor" },
+        { name: "Dr. Ankita Saxena", designation: "Assistant Professor" },
+        { name: "Ms. Shreya Sharma", designation: "Assistant Professor" },
+        { name: "Ms.Milan Singh", designation: "Assistant Professor" }
     ];
 
     const swayamCoursesColumns = [
@@ -408,10 +546,10 @@ export default function CommerceDepartmentPage() {
                 swiperClassName="ccrc-video-slider"
                 imageObjectPosition="object-center"
             /> */}
-            <StudentActivities
+            {/* <StudentActivities
                 activities={commerceActivities}
                 title="Commerce Events & Activities"
-            />
+            /> */}
             {clubsData && clubsData.length > 0 && (
                 <UpcomingConference
                     title={`Introducing Our Commerce Club`}
@@ -426,10 +564,16 @@ export default function CommerceDepartmentPage() {
             <FacultyList
                 items={facultyMembers}
                 title="Our Commerce Faculty"
-                description="Faculty of Commerce and Management"
+                description="Commerce Faculty"
                 departmentName={departmentData?.name}
             />
-            <section className="py-16 bg-white">
+            <FacultyList
+                items={bbaFacultyMembers}
+                title="BBA Faculty"
+                description="BBA Faculty"
+                departmentName={departmentData?.name}
+            />
+            {/* <section className="py-16 bg-white">
                 <div className="text-center mb-10">
                     <SectionHeading
                         title="List of Faculty Completed SWAYAM / NPTEL Course"
@@ -442,7 +586,7 @@ export default function CommerceDepartmentPage() {
                     overflowX={true}
                     className="mb-12 text-center"
                 />
-            </section>
+            </section> */}
             <StudentCell
                 subtitle=""
                 title="Library"
