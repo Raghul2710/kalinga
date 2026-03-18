@@ -18,6 +18,7 @@ import StudentCell from "@/app/components/international-students/student_cell";
 import SurveyForm from "@/app/components/general/SurveyForm";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Placements from "@/app/components/home/placements";
+import { AccordionItem } from "@/app/components/general/accordion";
 
 export default function CommerceDepartmentPage() {
     const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
@@ -175,9 +176,8 @@ export default function CommerceDepartmentPage() {
             id: 1,
             question: "Program Outcomes (POs)",
             component: (
-                <div className="space-y-6">
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Commerce</h4>
+                <div className="space-y-4">
+                    <AccordionItem title="Bachelor Of Commerce" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>To create for the students of Kalinga University an additional avenue of self-employment and also to benefit Industries by providing them with suitable trained persons in the field of Commerce.</li>
                             <li>To prepare students to explore opportunities, being newly created, in the field of Commerce due to Globalization, Privatization and Liberalization.</li>
@@ -190,9 +190,8 @@ export default function CommerceDepartmentPage() {
                             <li>The courses aim at instituting entrepreneurial skills in the students by instilling in them competencies needed to become an entrepreneur</li>
                             <li>The courses included in the programme teach the students to cultivate such characteristics keeping the larger societal goal in mind</li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Master Of Commerce</h4>
+                    </AccordionItem>
+                    <AccordionItem title="Master Of Commerce" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>To create for the students of Kalinga University an additional avenue of self-employment and also to benefit Industries by providing them with suitable trained persons in the field of Commerce.</li>
                             <li>To prepare students to explore opportunities, being newly created, in the field of Commerce due to Globalization, Privatization and Liberalization.</li>
@@ -205,9 +204,8 @@ export default function CommerceDepartmentPage() {
                             <li>This course broadens the horizons of the students by making them understand the intricacies of the business world and overall the economics of the country as well as the world</li>
                             <li>The courses aim at instituting entrepreneurial skills in the students by instilling in them competencies needed to become an entrepreneur. These would lead to develop an attitude of life-long learning.</li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Business Administration</h4>
+                    </AccordionItem>
+                    <AccordionItem title="Bachelor Of Business Administration" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li><b>PO1: Management Knowledge:</b> Apply fundamental and advanced theoretical knowledge of management and business principles to address practical challenges in organizational and entrepreneurial contexts. </li>
                             <li><b>PO2: Communication Skills:</b> Demonstrate effective oral and written communication skills to convey ideas, arguments, and business strategies clearly and professionally. </li>
@@ -221,11 +219,9 @@ export default function CommerceDepartmentPage() {
                             <li><b>PO10: Lifelong Learning:</b> Engage in continuous learning and professional development to adapt to evolving business trends, tools, and technologies. </li>
                             <li><b>PO11: Research Aptitude:</b> Develop research skills and inquiry-based learning to conduct independent studies on Indian and global business challenges. </li>
                             <li><b>PO12: Social and Global Responsibility:</b> Exhibit civic responsibility and awareness of cultural, legal, environmental, and social issues, contributing meaningfully to national development and global citizenship. </li>
-
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">B.Com - Banking and Finance</h4>
+                    </AccordionItem>
+                    {/* <AccordionItem title="B.Com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li><b>PO1: Disciplinary Knowledge & Application:</b> Demonstrate a comprehensive understanding of concepts, principles, and practices in areas such as Accounting, Taxation, Finance, Auditing, and Business, with the ability to apply them in real-world business contexts.</li>
                             <li><b>PO2: Critical Thinking & Problem Solving:</b> Analyze, evaluate, and interpret business, financial, and economic issues using logical reasoning, quantitative tools, and strategic frameworks to propose innovative solutions.</li>
@@ -239,11 +235,9 @@ export default function CommerceDepartmentPage() {
                             <li><b>PO10: Lifelong Learning & Leadership:</b> Develop a growth mindset for lifelong learning, career development, and leadership roles in an evolving global business environment.</li>
                             <li><b>PO11: Quantitative & Financial Literacy:</b> Apply mathematical, statistical, and financial tools to analyze, interpret, and solve complex problems in banking, taxation, investment, and corporate finance.</li>
                             <li><b>PO12: Employability & Career Readiness:</b> Exhibit professional competence, career-oriented skills, and industry readiness to excel in corporate, banking, financial, and entrepreneurial careers.</li>
-
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">M.com - Banking and Finance</h4>
+                    </AccordionItem> */}
+                    {/* <AccordionItem title="M.com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>PO1: To create for the students of Kalinga University an additional avenue of self-employment and also to benefit Industries by providing them with suitable trained persons in the field of Commerce.</li>
                             <li>PO2: To prepare students to explore opportunities, being newly created, in the field of Commerce due to Globalization, Privatization and Liberalization.</li>
@@ -251,10 +245,8 @@ export default function CommerceDepartmentPage() {
                             <li>PO4: To provide adequate basic understanding about the field of Commerce.</li>
                             <li>PO5: To inculcate training and practical approach among the students by using modern technologies in the field of Commerce.</li>
                             <li>PO6: The students are trained with the help of different presentations, projects and assignments to understand the dynamics of Trade in a better way.</li>
-
-
                         </ul>
-                    </div>
+                    </AccordionItem> */}
                 </div>
             )
         },
@@ -262,9 +254,8 @@ export default function CommerceDepartmentPage() {
             id: 2,
             question: "Program Specific Outcomes (PSOs)",
             component: (
-                <div className="space-y-6">
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Commerce</h4>
+                <div className="space-y-4">
+                    <AccordionItem title="Bachelor Of Commerce" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>Apply different concepts in starting and managing business and realize the social responsibilities, social realities and inculcate an essential value system</li>
                             <li>An ability to apply conceptual foundations of management to solve practical decision-making problems.</li>
@@ -272,9 +263,8 @@ export default function CommerceDepartmentPage() {
                             <li>Develop excellent adaptability to function in the multi-disciplinary work environment, good interpersonal skills as a leader in a team in appreciation of professional ethics and societal responsibilities.</li>
                             <li>To ignite a passion for a multidisciplinary approach to problem solving, critical analysis, and decision making by giving due importance for lateral thanking so that management graduates see things from aa perspective that is not just simple but effective.</li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Master Of Commerce</h4>
+                    </AccordionItem>
+                    <AccordionItem title="Master Of Commerce" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>Develop an ability to apply the knowledge acquired in problem-solving</li>
                             <li>Ability to work in teams with enhanced interpersonal skills and communication.</li>
@@ -282,9 +272,8 @@ export default function CommerceDepartmentPage() {
                             <li>To inculcate the understanding of rules of measurement and reporting relating to various types of business entities.</li>
                             <li>To impart knowledge regarding strategic financial planning.</li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Business Administration</h4>
+                    </AccordionItem>
+                    <AccordionItem title="Bachelor Of Business Administration" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li><b>PSO1: Functional Domain Expertise:</b> Apply analytical and conceptual knowledge across key functional areas of business (such as marketing, finance, HR, and operations) to contribute effectively to organizational performance. </li>
                             <li><b>PSO2: Strategic and Analytical Thinking:</b> Demonstrate strategic thinking, data interpretation, and problem-solving abilities to make informed and impactful business decisions in complex and dynamic environments. </li>
@@ -292,9 +281,8 @@ export default function CommerceDepartmentPage() {
                             <li><b>PSO4: Industry Readiness and Application:</b> Translate academic learning into practical solutions by engaging with industry practices, tools, and technologies relevant to contemporary business needs. </li>
                             <li><b>PSO5: Innovation and Value Creation:</b> Foster innovative thinking to create value-driven solutions that align with business goals and societal needs. </li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">B.Com - Banking and Finance</h4>
+                    </AccordionItem>
+                    {/* <AccordionItem title="B.Com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li><b>PSO1: Banking Operations and Regulatory Knowledge:</b> Demonstrate conceptual clarity and practical understanding of banking operations, financial services, risk management, and regulatory frameworks.</li>
                             <li><b>PSO2: Financial Systems, Investment, and Credit Management Expertise:</b> Apply knowledge of financial systems, investment strategies, and credit management to pursue careers in banking, financial institutions, or competitive financial roles.</li>
@@ -302,9 +290,8 @@ export default function CommerceDepartmentPage() {
                             <li><b>PSO4: Digital Finance, FinTech, and Data Analytics Applications:</b> Integrate digital finance tools, FinTech applications, and data analytics techniques to improve efficiency, innovation, and decision-making in banking and financial services.</li>
                             <li><b>PSO5: Entrepreneurial Finance and Strategic Problem-Solving Skills:</b> Develop entrepreneurial thinking and financial problem-solving abilities to design business solutions, assess investment opportunities, and contribute to sustainable economic growth.</li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">M.Com - Banking and Finance</h4>
+                    </AccordionItem> */}
+                    {/* <AccordionItem title="M.Com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>PSO1: The program is structured in such a way that it provides training in the field of finance, accounting, law, etc, among others.</li>
                             <li>PSO2: It covers the subjects of commerce, and communication skills. It also helps to train candidates how to efficiently handle technologies used in the field of Commerce.</li>
@@ -312,7 +299,7 @@ export default function CommerceDepartmentPage() {
                             <li>PSO4: It is structured to give a great career choice for those who wish to pursue their career in the Commerce field.</li>
                             <li>PSO5: It not only provides you with theoretical knowledge but also helps in its practical application and to provide ample exposure to students with market reforms, new policies and regulations.</li>
                         </ul>
-                    </div>
+                    </AccordionItem> */}
                 </div>
             )
         },
@@ -320,9 +307,8 @@ export default function CommerceDepartmentPage() {
             id: 3,
             question: "Program Educational Objectives (PEOs)",
             component: (
-                <div className="space-y-6">
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">Bachelor Of Commerce</h4>
+                <div className="space-y-4">
+                    <AccordionItem title="Bachelor Of Commerce" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>PEO1: To apply core business and management concepts effectively in real-world contexts, including entrepreneurial ventures and start-up initiatives.</li>
                             <li>PEO2: To demonstrate awareness and responsibility in areas such as safety, health, environmental sustainability, legal compliance, and cultural diversity to contribute positively to society. </li>
@@ -330,19 +316,26 @@ export default function CommerceDepartmentPage() {
                             <li>PEO4: To foster professionalism by actively collaborating with peers and stakeholders at local, national, and international levels to solve business challenges.</li>
                             <li>PEO5: To develop a global outlook and civic consciousness to effectively serve in diverse environments, upholding values that benefit both national interest and the broader global community. </li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">B.Com - Banking and Finance</h4>
+                    </AccordionItem>
+                    <AccordionItem title="Bachelor Of Business Administration" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PEO1: To apply core business and management concepts effectively in real-world contexts, including entrepreneurial ventures and start-up initiatives.</li>
+                            <li>PEO2: To demonstrate awareness and responsibility in areas such as safety, health, environmental sustainability, legal compliance, and cultural diversity to contribute positively to society. </li>
+                            <li>PEO3: To pursue ongoing personal and professional growth through continuous learning, skill enhancement, and staying updated with industry standards and regulatory frameworks. </li>
+                            <li>PEO4: To foster professionalism by actively collaborating with peers and stakeholders at local, national, and international levels to solve business challenges. </li>
+                            <li>PEO5: To develop a global outlook and civic consciousness to effectively serve in diverse environments, upholding values that benefit both national interest and the broader global community. </li>
+                        </ul>
+                    </AccordionItem>
+                    {/* <AccordionItem title="B.Com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>PEO1: To equip students with in-depth knowledge and understanding of Banking and Finance, enabling them to build successful careers in accounting, taxation, financial management, entrepreneurship, and corporate sectors.</li>
                             <li>PEO2: To develop the ability to apply analytical, logical, and critical thinking skills to identify, analyze, and solve real-world business problems using appropriate tools, technologies, and research methodologies.</li>
-                            <li>PEO3: To nurture leadership, ethical values, and interpersonal competencies among students, preparing them to work effectively in diverse teams and dynamic environments across domestic and global organizations.</li>
+                            <li>PEO3: To nurture leadership, ethical values, and interpersonal competencies among students, preparing them to work effectively in diverse teams and dynamic environments across domestic and organizations.</li>
                             <li>PEO4: To inspire students to pursue lifelong learning, innovation, and professional development in the field of commerce and finance.</li>
                             <li>PEO5: To create socially responsible graduates who demonstrate a strong sense of civic responsibility and sustainability, contributing meaningfully to society through inclusive and ethical business practices.</li>
                         </ul>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-lg mb-2 text-[var(--button-red)]">M.Com - Banking and Finance</h4>
+                    </AccordionItem> */}
+                    {/* <AccordionItem title="M.Com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>PEO1: To provide knowledge and skills for being successful entrepreneurs and finance professionals in the field of Banking, Insurance, Manufacturing, Transport, Telecom, Service, Hospitality, IT, and Academics.</li>
                             <li>PEO2: To equip students with quantitative, qualitative, cognitive and analytical skills for identifying, analysing, designing, and creating business opportunities in a global dynamic environment.</li>
@@ -350,7 +343,7 @@ export default function CommerceDepartmentPage() {
                             <li>PEO4: To transform graduates capable of thinking strategically and to lead, motivate and manage multi-disciplinary teams thereby enhancing managerial effectiveness under all circumstances.</li>
                             <li>PEO5: To prepare committed professionals with a sense of ‘giving back to the society’ through display of professional ethics, human dignity, empathy and humility in their professional and personal life.</li>
                         </ul>
-                    </div>
+                    </AccordionItem> */}
                 </div>
             )
         },
@@ -358,10 +351,9 @@ export default function CommerceDepartmentPage() {
             id: 4,
             question: "Course Outcomes (COs)",
             component: (
-                <div className="space-y-8 max-h-[600px] overflow-y-auto pr-2">
-                    <div>
-                        <h4 className="font-bold text-xl mb-4 text-[var(--button-red)] border-b pb-2">Bachelor Of Commerce</h4>
-                        <div className="space-y-4">
+                <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
+                    <AccordionItem title="Bachelor Of Commerce" titleClassName="font-bold text-xl text-[var(--button-red)]" bgClassName="bg-white" defaultOpen={true}>
+                        <div className="space-y-4 mt-4">
                             {[
                                 { code: "BCOM101", name: "Financial Accounting", outcomes: "CO1: Understand the theoretical framework of accounting and to prepare financial statements.\nCO2: Determine depreciation and value of inventory\nCO3: Learn accounting for hire purchase transactions, leases, branches and departments.\nCO4: Understand the concepts of partnership firm and prepare accounts for dissolution of a partnership firm.\nCO5: Develop the skill of preparation of trading and profit and loss account and balance sheet using computerized accounting." },
                                 { code: "BCOM102", name: "Principles And Practices of Management", outcomes: "CO1: Understand the evolution of management and apprehend its effect on future managers.\nCO2: Analyze how organizations adapt to an uncertain environment and decipher decision making techniques managers use to influence and control the internal environment.\nCO3: Comprehend the changes happening in organization structure over time\nCO4: Analyze the relationship amongst functions of management i.e. planning, organizing, directing and controlling\nCO5: Appreciate the changing dynamics of management practice." },
@@ -396,22 +388,22 @@ export default function CommerceDepartmentPage() {
                                 { code: "BCOM607", name: "Performance Appraisal and Compensation Management", outcomes: "CO1: To understand performance appraisals is to measure and improve the performance of employees and increase their future potential and value to the company.\nCO2: To Review the appraisee's performance and clearly summaries the agreed level of performance.\nCO3: To understand about the role of human resources management in dealing with employees, and methods used to provide compensation\nCO4: To understand a sound knowledge of job evaluation approaches and provide an understanding of how job evaluation fits into the broader context of human resources management, and to provide practical skills in the application of job evaluation systems.\nCO5: To understand profit sharing plans to retain employee in order to improve productivity" },
                                 { code: "BCOM608", name: "Advertising And Brand Management", outcomes: "CO1: To understand key concept of Advertising.\nCO2: To understand about the Advertising aids and Media.\nCO3: To understand about the Brand\nCO4: To understand in more specific Brand Adoption Practices" }
                             ].map((course, idx) => (
-                                <div key={idx} className="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <div key={idx} className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
                                     <h5 className="font-bold text-[var(--foreground)] mb-1">{course.code}: {course.name}</h5>
                                     <div className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">{course.outcomes}</div>
                                 </div>
                             ))}
                         </div>
-                    </div>
-                    <div>
-                        <h4 className="font-bold text-xl mb-4 text-[var(--button-red)] border-b pb-2">Master Of Commerce</h4>
-                        <div className="space-y-4">
+                    </AccordionItem>
+
+                    <AccordionItem title="Master Of Commerce" titleClassName="font-bold text-xl text-[var(--button-red)]" bgClassName="bg-white">
+                        <div className="space-y-4 mt-4">
                             {[
                                 { code: "MCOM101", name: "Business Statistics", outcomes: "CO1: To impart knowledge of theory of Probability and Probability Distribution.\nCO2: To understand the statistical decision theory.\nCO3: To discern the sampling distribution and estimation.\nCO4: To examine general methodology of Hypothesis testing.\nCO5: Assess the analysis of variance and Non-parametric Tests." },
                                 { code: "MCOM102", name: "MANAGERIAL ACCOUNTING", outcomes: "CO1: To understand the nature and functions of Management Accounting.\nCO2: To Learn about Activity Based Costing.\nCO3: To examine the variable and absorption costing.\nCO4: To discuss about managerial decision making.\nCO5: To discern about the Responsibility Accounting and Divisional Performance Measurement." },
                                 { code: "MCOM103", name: "FINANCIAL PLANNING", outcomes: "CO1: To know basic introduction of financial planning.\nCO2: To understand the types of Investment Environment.\nCO3: To discuss about the return risk assessment.\nCO4: To discern about personal financial planning and process.\nCO5: To recognize the credit planning and retirement planning." },
                                 { code: "MCOM104", name: "COMMUNICATION SKILLS", outcomes: "CO1: Understand the role of communication in personal & professional success.\nCO2: Prepare and present messages with a specific intent.\nCO3: Will develop knowledge, skills, and judgment around human communication that facilitate their ability to work collaboratively with others.\nCO4: Will learn etiquettes and gestures for business purpose.\nCO5: Will have a practical knowledge of employability quotient." },
-                                { code: "MCOM105", name: "ORGANISATIONAL THEORY AND BEHAVIOUR", outcomes: "CO1: Understand the concept of organizational behavior.\nCO2: Strengthen the foundations of individual behavior with an understanding of human personality, perception, learning and emotions.\nCO3: Understand the process of leadership.\nCO4: Understand the behavioral approach to Managerial decision-making.\nCO5: Develop an understanding of teams and groups in organizations." },
+                                { code: "MCOM105", name: "ORGANISATIONAL THEORY AND BEHAVIOUR", outcomes: "CO1: Understand the concept of organizational behavior.\nCO2: Strengthen the foundations of individual behavior with an understanding of human personality, perception, leading and emotions.\nCO3: Understand the process of leadership.\nCO4: Understand the behavioral approach to Managerial decision-making.\nCO5: Develop an understanding of teams and groups in organizations." },
                                 { code: "MCOM201", name: "QUANTITATIVE TECHNIQUES FOR BUSINESS DECISIONS", outcomes: "CO1: To understand the fundamental of decision making.\nCO2: To acquainted with the concepts of linear programming and Sensitivity analysis.\nCO3: To discuss about the transportation, assignment and trans-shipment.\nCO4: To examine the concepts of inventory management.\nCO5: To assess the concepts and application of PERT and CPM techniques." },
                                 { code: "MCOM202", name: "FINANCIAL MANAGEMENT AND POLICY", outcomes: "CO1: Explain the concept of fundamental financial concepts, especially time value of money.\nCO2: Apply capital budgeting projects using traditional methods.\nCO3: Analyze the main ways of raising capital and their respective advantages and disadvantages in different circumstances.\nCO4: Integrate the concept and apply the financial concepts to calculate ratios and do the capital budgeting." },
                                 { code: "MCOM203", name: "LEGAL ASPECTS OF BUSINESS", outcomes: "CO1: To have knowledge of law relating to transfer of property.\nCO2: To understand the general concept relating to registration of societies.\nCO3: Discern the concept and development of intellectual property law in India.\nCO4: Get acquainted with law relating to competition and consumer protection.\nCO5: Assess the law relating to Right to Information Act, 2005." },
@@ -428,13 +420,13 @@ export default function CommerceDepartmentPage() {
                                 { code: "MCOM405", name: "INDUSTRIAL LAW", outcomes: "CO1: Become familiar with Employees Provident fund and schemes.\nCO2: Understand the Employees state Insurance Act 1948.\nCO3: Gain knowledge about Factories Act 1948.\nCO4: Discern about the topic Industrial Disputes Act 1947.\nCO5: Discuss about Trade Unions act 1926." },
                                 { code: "MCOM406", name: "ACCOUNTING THEORY AND FINANCIAL REPORTING", outcomes: "CO1: Get acquainted with Accounting theory and Accounting Principles.\nCO2: Knowledge of various concepts of Income measurement.\nCO3: Understand the nature and benefits of financial reporting.\nCO4: Discuss an issue in corporate financial reporting.\nCO5: Assess the human resource accounting and social reporting." }
                             ].map((course, idx) => (
-                                <div key={idx} className="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm">
+                                <div key={idx} className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
                                     <h5 className="font-bold text-[var(--foreground)] mb-1">{course.code}: {course.name}</h5>
                                     <div className="text-sm text-gray-700 whitespace-pre-line leading-relaxed">{course.outcomes}</div>
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </AccordionItem>
                 </div>
             )
         }
@@ -518,7 +510,7 @@ export default function CommerceDepartmentPage() {
                 visionText={visionMissionContent.visionText}
                 missionText={visionMissionContent.missionText}
             />
-            {/* {!loading && programsOffered.length > 0 && (
+            {!loading && programsOffered.length > 0 && (
                 <ProgramsOffered
                     programs={programsOffered}
                     title="Programs Offered"
@@ -526,7 +518,7 @@ export default function CommerceDepartmentPage() {
                     hideSearch={true}
                     {...(programsImage && { backgroundImage: programsImage })}
                 />
-            )} */}
+            )}
             <FAQ
                 items={faqItems}
                 title="Academic Objectives & Outcomes"

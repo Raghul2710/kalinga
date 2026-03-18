@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 
-export function AccordionItem({ title, children, defaultOpen = false, titleClassName = "" }) {
+export function AccordionItem({ title, children, defaultOpen = false, titleClassName = "", bgClassName = "" }) {
   const [open, setOpen] = useState(defaultOpen);
   
   const defaultTitleClassName = "font-stix text-[24px] leading-[30px] text-[var(--button-red)]";
   const finalTitleClassName = titleClassName || defaultTitleClassName;
+  const finalBgClassName = bgClassName || "bg-[var(--card-sandal)]";
 
   return (
-    <div className="rounded-[16px] bg-[var(--card-sandal)] p-[22px] md:p-[26px]">
+    <div className={`rounded-[16px] ${finalBgClassName} p-[22px] md:p-[26px]`}>
       {/* Header */}
       <button
         type="button"
