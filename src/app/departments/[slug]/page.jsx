@@ -11,6 +11,7 @@ import { useState, useEffect, useMemo } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import MainIntro from "@/app/components/about/main_intro";
+import SectionHeading from "@/app/components/general/SectionHeading";
 import PublicationGrid from "@/app/components/research/publication-grid";
 import ProgramsOffered from "@/app/components/department/programs-offered";
 import DeptHeadIntro from "@/app/components/department/dept_head_intro";
@@ -26,7 +27,6 @@ import WeStandOut from "@/app/components/department/we_stand_out";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Testimonials from "@/app/components/home/Testimonials";
 import DataTable from "@/app/components/general/data-table";
-import SectionHeading from "@/app/components/general/SectionHeading";
 import EligibilityCriteria from "@/app/components/course/eligibility_criteria";
 import CareerPath from "@/app/components/course/career_path";
 import { fetchAllDepartments, fetchDepartmentCompleteDetail, fetchAllDepartmentsCourses, parseHtmlToParagraphs, parseHtmlToText, parseHtmlListItems, fetchDesignations, fetchCollegePictures } from "@/app/lib/api";
@@ -534,7 +534,8 @@ export default function DynamicDepartmentPage() {
       {publicationStats && publicationStats.length > 0 && (
         <PublicationGrid stats={publicationStats} />
       )}
-      {programsOffered && programsOffered.length > 0 && (
+      {/* Temporarily hidden for faculty-of-commerce-and-management */}
+      {programsOffered && programsOffered.length > 0 && slug !== "faculty-of-commerce-and-management" && (
         <ProgramsOffered
           programs={programsOffered}
           title="Programs Offered"
@@ -569,6 +570,7 @@ export default function DynamicDepartmentPage() {
       )}
 
       <Placements placementData={placementData} bgColor="bg-white" title="Placements" />
+
       <Facility subtitle="Campus Facilities" title="Step into a World-Class Infrastructure" description="Every space of our campus is designed to support learning, innovation, and comfort. Our eco-friendly campus and state-of-the-art facilities are designed to create an environment where students can focus, collaborate, and make life-long memories. " />
       {/* {whyStudyContent && whyStudyContent.items && whyStudyContent.items.length > 0 && (
         <WhyStudy

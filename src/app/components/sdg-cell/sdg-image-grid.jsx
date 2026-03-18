@@ -8,9 +8,17 @@ const SdgImageGrid = () => {
     const id = i + 1;
     let pdfUrl = "";
 
-    // PDF link for Goal 03
+    // PDF links
     if (id === 3) {
       pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-3-Good-Health-and-Well-Being.pdf";
+    } else if (id === 6) {
+      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-6-Water-Conservation.pdf";
+    } else if (id === 7) {
+      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-7-Energy-Conservation.pdf";
+    } else if (id === 12) {
+      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-12-Waste-Management.pdf";
+    } else if (id === 15) {
+      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-15-Sustainable-initiatives-For-Green-Campus.pdf";
     }
 
     return {
