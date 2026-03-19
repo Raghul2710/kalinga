@@ -1232,7 +1232,7 @@ const IQAC_TABS = [
   { id: "naac", label: "NAAC SSR" },
   { id: "financial", label: "Financial Audited Statements" },
   { id: "feedback-form", label: "Feedback Form" },
-  { id: "https://kalingauniversity.ac.in/international-journal-of-research-and-studies", label: "Univista: International Journal of Research and Studies" },
+  { id: "https://kalingauniversity.ac.in/International-Journal-of-Research-and-Studies", label: "Univista: International Journal of Research and Studies" },
 ];
 
 const IQAC_OBJECTIVES = [
@@ -1591,9 +1591,9 @@ export default function IqacTabSection() {
                         font-plus-jakarta-sans text-sm md:text-base font-semibold
                         transition-all duration-200
                         ${isActive && !isExternal
-                          ? "bg-[var(--button-red)] text-white font-semibold"
-                          : "bg-[var(--lite-sand)] text-[var(--foreground)] hover:opacity-90"
-                        }
+                      ? "bg-[var(--button-red)] text-white font-semibold"
+                      : "bg-[var(--lite-sand)] text-[var(--foreground)] hover:opacity-90"
+                    }
                       `;
 
                   if (isExternal) {

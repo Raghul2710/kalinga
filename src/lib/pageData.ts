@@ -636,8 +636,8 @@ export const pageDataMap: Record<string, PageData> = {
         title: "Master of Computer Science in AI & ML and Cybersecurity",
         banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
     },
-    "/international-journal-of-research-and-studies": {
-        slug: "/international-journal-of-research-and-studies",
+    "/International-Journal-of-Research-and-Studies": {
+        slug: "/International-Journal-of-Research-and-Studies",
         title: "Univista: International Journal of Research and Studies",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
