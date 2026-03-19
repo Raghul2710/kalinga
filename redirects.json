@@ -1028,5 +1028,10 @@
         "source": "/PO-PSO-CO/Bachelor-Of-Design",
         "destination": "/departments/faculty-of-science",
         "permanent": true
+    },
+    {
+        "source": "/International-Journal-of-Research-and-Studies",
+        "destination": "/international-journal-of-research-and-studies",
+        "permanent": true
     }
 ]
