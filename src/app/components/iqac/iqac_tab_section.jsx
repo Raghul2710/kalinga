@@ -1232,6 +1232,7 @@ const IQAC_TABS = [
   { id: "naac", label: "NAAC SSR" },
   { id: "financial", label: "Financial Audited Statements" },
   { id: "feedback-form", label: "Feedback Form" },
+  { id: "https://kalingauniversity.ac.in/international-journal-of-research-and-studies", label: "Univista: International Journal of Research and Studies" },
 ];
 
 const IQAC_OBJECTIVES = [
@@ -1584,19 +1585,36 @@ export default function IqacTabSection() {
               <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-hide">
                 {IQAC_TABS.map((tab) => {
                   const isActive = activeTab === tab.id;
+                  const isExternal = tab.id.startsWith("http");
+                  const className = `
+                        flex-shrink-0 lg:w-full text-left px-4 py-5 rounded-[8px] 
+                        font-plus-jakarta-sans text-sm md:text-base font-semibold
+                        transition-all duration-200
+                        ${isActive && !isExternal
+                          ? "bg-[var(--button-red)] text-white font-semibold"
+                          : "bg-[var(--lite-sand)] text-[var(--foreground)] hover:opacity-90"
+                        }
+                      `;
+
+                  if (isExternal) {
+                    return (
+                      <a
+                        key={tab.id}
+                        href={tab.id}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={className}
+                      >
+                        {tab.label}
+                      </a>
+                    );
+                  }
+
                   return (
                     <button
                       key={tab.id}
                       onClick={() => handleTabClick(tab.id)}
-                      className={`
-                        flex-shrink-0 lg:w-full text-left px-4 py-5 rounded-[8px] 
-                        font-plus-jakarta-sans text-sm md:text-base font-semibold
-                        transition-all duration-200
-                        ${isActive
-                          ? "bg-[var(--button-red)] text-white font-semibold"
-                          : "bg-[var(--lite-sand)] text-[var(--foreground)] hover:opacity-90"
-                        }
-                      `}
+                      className={className}
                     >
                       {tab.label}
                     </button>

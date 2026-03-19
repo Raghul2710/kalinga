@@ -518,7 +518,7 @@ const UnivistaJournalPage = () => {
             // email: "univista.journal@kalingauniversity.ac.in",
             phone: "+91-9754766411"
         },
-        imageSrc: "https://cdn.kalingauniversity.ac.in/laboratories/laboratories-mainintro.webp",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/phd/Phd-Objectives.webp",
         showQuotes: false
     };
 
@@ -575,7 +575,7 @@ const UnivistaJournalPage = () => {
                 exploreLabel="Download PDF"
                 searchPlaceholder="Search Archives...."
                 hideSearch={false}
-                backgroundImage="https://cdn.kalingauniversity.ac.in/international-students/international-students-intro.jpg"
+                backgroundImage="https://cdn.kalingauniversity.ac.in/international-students/int-g-1.webp"
                 backgroundColor="bg-white"
                 textColor="text-gray-700"
                 titleColor="text-[var(--foreground)]"
