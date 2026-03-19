@@ -258,6 +258,7 @@ const Header = () => {
               { label: 'Student Welfare', href: '/student-welfare' },
               { label: 'Library', href: '/library' },
               { label: 'Clubs & Societies', href: '/student-clubs' },
+              { label: 'Alumni', href: '/alumini' },
             ]
           },
           {

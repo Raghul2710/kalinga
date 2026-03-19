@@ -66,7 +66,8 @@ export default function ProgramsOffered({
   searchPlaceholder = "Search Programs....",
   backgroundColor = "bg-[var(--dark-blue)]",
   textColor = "text-white",
-  titleColor = "text-white"
+  titleColor = "text-white",
+  listHeading = null
 }) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -123,6 +124,15 @@ export default function ProgramsOffered({
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
+              </div>
+            )}
+
+            {/* List Heading */}
+            {listHeading && (
+              <div className="px-3 lg:px-0 mb-4">
+                <h3 className="text-xl md:text-2xl font-bold font-plus-jakarta-sans text-[var(--button-red)] tracking-wide">
+                  {listHeading}
+                </h3>
               </div>
             )}
 

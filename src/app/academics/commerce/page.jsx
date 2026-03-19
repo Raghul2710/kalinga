@@ -115,15 +115,17 @@ export default function CommerceDepartmentPage() {
     const programsOverview = programSyllabusImage?.programs_offered_overview || departmentData?.programs_offered_overview || "Explore our commerce programs designed to empower your professional journey.";
 
     const visionMissionContent = {
-        visionText: "To educate and empower young business leaders through innovative teaching, hands-on training, and impactful research, fostering successful managers and entrepreneurs with a strong sense of social responsibility.",
+        visionText: "Kalinga University aims to be an outstanding institution for Talent Development and Knowledge Creation for a vibrant and inclusive society.",
         missionText: {
-            paragraphs: ["The Department of Management is committed to achieving excellence through its core mission goals:"],
-            pointsHeading: "Mission Statements",
+            paragraphs: ["The primary purpose of Kalinga University is to become a global education hub in which faculty, staff, and students can discover, examine critically, preserve, and transmit the knowledge, wisdom, and values that will ensure the survival of future generations and improve the quality of life for all.",
+                "The University seeks to help students develop an understanding and appreciation for the complex cultural and physical worlds in which they live and to realise their highest potential of intellectual, physical, and human development."],
+            pointsHeading: "To fulfill our mission, we:",
             points: [
-                "M1: To equip students with essential skills by providing exposure to cutting-edge knowledge through innovative teaching and impactful research.",
-                "M2: To foster entrepreneurship, nurture creativity, and promote ethical, values-based education.",
-                "M3: To enhance competitiveness and create ample opportunities for rewarding managerial careers.",
-                "M4: To impart the knowledge, skills, and mindset required for effective managerial roles while instilling a strong sense of responsibility and corporate citizenship."
+                "Offer broad and balanced academic programs that are mutually reinforcing and emphasise high-quality and creative instruction at the undergraduate, graduate, professional, and postgraduate levels.",
+                "Generate new knowledge through a broad array of scholarly research and creative endeavours, which provide a foundation for dealing with the immediate and long-range needs of society.",
+                "Achieve leadership in each discipline, strengthen interdisciplinary studies, and pioneer new fields of learning.",
+                "Promote the use of new technologies in Teaching and Research.",
+                "Inculcate the right values in students for their holistic development."
             ]
         }
     };

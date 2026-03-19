@@ -528,11 +528,11 @@ const UnivistaJournalPage = () => {
                 title="Univista: International Journal of Research and Studies"
                 subtitle="About the Journal"
                 description={[
+                    "<b style=\"color: #0d3b66\">Medium: Online Only | Subject Focus: Multidisciplinary | Language: English | Frequency: Quarterly | Starting Year of Journal: 2026</b>",
                     "Univista: International Journal of Research and Studies is a peer-reviewed, multidisciplinary journal committed to advancing knowledge across diverse fields of study. The journal provides a platform for scholars, researchers, and practitioners from around the world to share innovative research, critical analyses, and evidence-based insights. By embracing a broad spectrum of disciplines, UIJRS encourages dialogue and collaboration that transcend traditional academic boundaries, encouraging holistic and integrative approaches to research.",
                     "The journal publishes original research articles, research papers, review papers, and case studies that contribute to the understanding of complex global, social, and scientific challenges. Emphasizing both conceptual and applied research, UIJRS seeks to bridge the gap between theory and practice, promoting knowledge that is both academically rigorous and socially relevance.",
                     "UIJRS is dedicated to upholding the highest standards of academic integrity and ethical scholarship. All submissions undergo a thorough peer-review process to ensure originality, methodological soundness, and contribution to the field. The journal values diversity of thought and perspective, welcoming contributions from researchers at all career stages, from early-career scholars to established experts.",
                     "As an international platform, UIJRS encourages cross-cultural and interdisciplinary collaboration, recognizing that complex problems often require solutions that draw on multiple fields of expertise. By publishing high-quality research that spans disciplines, regions, and methodologies, Univista: International Journal of Research & Studies aims to inspire innovation, promote critical thinking, and advance global knowledge.",
-                    "Medium: Online Only | Subject Focus: Multidisciplinary | Language: English | Frequency: Quarterly | Starting Year of Journal: 2026"
                 ]}
                 imageUrl="https://cdn.kalingauniversity.ac.in/research/research-main-content.webp"
                 imageAlt="Univista: International Journal of Research and Studies"
@@ -579,6 +579,7 @@ const UnivistaJournalPage = () => {
                 backgroundColor="bg-white"
                 textColor="text-gray-700"
                 titleColor="text-[var(--foreground)]"
+                listHeading="Volume 1 Issues 1"
             />
             {/* Reused Publication Card Section */}
             <section className="bg-gray-50">

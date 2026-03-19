@@ -133,6 +133,7 @@ export default function Footer() {
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/grievance-redressal">Grievance Redressal</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/other-committees">Other Committees</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/national-council-teacher-education">NCTE</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/rti">RTI</a></li>
 
 
                   </ul>
