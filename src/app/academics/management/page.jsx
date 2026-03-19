@@ -348,7 +348,7 @@ export default function ManagementDepartmentPage() {
                 visionText={visionMissionContent.visionText}
                 missionText={visionMissionContent.missionText}
             />
-            {/* {!loading && programsOffered.length > 0 && (
+            {!loading && programsOffered.length > 0 && (
                 <ProgramsOffered
                     programs={programsOffered}
                     title="Programs Offered"
@@ -356,7 +356,7 @@ export default function ManagementDepartmentPage() {
                     hideSearch={true}
                     {...(programsImage && { backgroundImage: programsImage })}
                 />
-            )} */}
+            )}
             <FAQ
                 items={faqItems}
                 title="Academic Objectives & Outcomes"

@@ -34,7 +34,7 @@ export function AccordionItem({ title, children, defaultOpen = false, titleClass
       {/* Content */}
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          open ? "mt-4 max-h-[2000px]" : "max-h-0"
+          open ? "mt-4 max-h-[15000px]" : "max-h-0"
         }`}
       >
         {children}

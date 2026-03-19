@@ -544,7 +544,7 @@ export default function DynamicDepartmentPage() {
           {...(programsImageAlt && { imageAlt: programsImageAlt })}
         />
       )}
-      {deptHeadIntroContent && (
+      {deptHeadIntroContent && slug !== "faculty-of-commerce-and-management" && (
         <DeptHeadIntro
           title={deptHeadIntroContent.title}
           subtitle={deptHeadIntroContent.subtitle}
