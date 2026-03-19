@@ -97,19 +97,15 @@ const videoItems = [
 /* ---------------- PDF Data ---------------- */
 const pdfData = {
   "2024-25":
-    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/2024-25.pdf",
+    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac-files/VAC-Syllabus-2024-25.pdf",
   "2023-24":
-    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/2023-24.pdf",
+    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac-files/VAC-Syllabus-2023-24.pdf",
   "2022-23":
-    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/2022-23.pdf",
+    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac-files/VAC-Syllabus-2022-23.pdf",
   "2021-22":
-    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/2021-22.pdf",
+    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac-files/VAC-Syllabus-2021-22.pdf",
   "2020-21":
     "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/20-21.pdf",
-  "2019-20":
-    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/19-20.pdf",
-  "2018-19":
-    "https://cdn.kalingauniversity.ac.in/Value-Added-Courses/vac/18-19.pdf",
 };
 
 export default function ValueAddedPage() {
