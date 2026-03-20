@@ -19,6 +19,7 @@ import StudentCell from "@/app/components/international-students/student_cell";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Placements from "@/app/components/home/placements";
 import SurveyForm from "@/app/components/general/SurveyForm";
+// import CourseNavigation from "@/app/components/general/course-navigation";
 
 export default function ManagementDepartmentPage() {
     const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
@@ -334,28 +335,44 @@ export default function ManagementDepartmentPage() {
         },
     ];
 
+    // const navigationTabs = [
+    //     { id: 'about', label: 'About' },
+    //     { id: 'programs', label: 'Programs' },
+    //     { id: 'board-of-studies', label: 'Board of Studies' },
+    //     { id: 'activities', label: 'Events & Activities' },
+    //     { id: 'faculty', label: 'Faculty' },
+    //     { id: 'research', label: 'Research' },
+    //     { id: 'placements', label: 'Placements' },
+    //     { id: 'facilities', label: 'Facilities' },
+    // ];
+
     return (
         <>
-            <MainIntro
-                title={mainIntroContent.title}
-                description={mainIntroContent.description}
-                imageUrl={mainIntroContent.imageUrl}
-                imageAlt={mainIntroContent.imageAlt}
-                showKnowMore={false}
-                sectionClassName="bg-white"
-            />
-            <VisionMissionUpdated
-                visionText={visionMissionContent.visionText}
-                missionText={visionMissionContent.missionText}
-            />
-            {!loading && programsOffered.length > 0 && (
-                <ProgramsOffered
-                    programs={programsOffered}
-                    title="Programs Offered"
-                    description={programsOverview}
-                    hideSearch={true}
-                    {...(programsImage && { backgroundImage: programsImage })}
+            {/* <CourseNavigation tabs={navigationTabs} /> */}
+            <div id="about" className="scroll-mt-24 md:scroll-mt-28">
+                <MainIntro
+                    title={mainIntroContent.title}
+                    description={mainIntroContent.description}
+                    imageUrl={mainIntroContent.imageUrl}
+                    imageAlt={mainIntroContent.imageAlt}
+                    showKnowMore={false}
+                    sectionClassName="bg-white"
                 />
+                <VisionMissionUpdated
+                    visionText={visionMissionContent.visionText}
+                    missionText={visionMissionContent.missionText}
+                />
+            </div>
+            {!loading && programsOffered.length > 0 && (
+                <div id="programs" className="scroll-mt-24 md:scroll-mt-28">
+                    <ProgramsOffered
+                        programs={programsOffered}
+                        title="Programs Offered"
+                        description={programsOverview}
+                        hideSearch={true}
+                        {...(programsImage && { backgroundImage: programsImage })}
+                    />
+                </div>
             )}
             <FAQ
                 items={faqItems}
@@ -363,7 +380,7 @@ export default function ManagementDepartmentPage() {
                 subtitle="Outcome"
                 backgroundColor="bg-white"
             />
-            <section className="py-10">
+            <section id="board-of-studies" className="py-10 scroll-mt-24 md:scroll-mt-28">
                 <div className="container mx-auto px-4 max-w-5xl">
                     <SectionHeading
                         title="Board of Studies"
@@ -385,11 +402,13 @@ export default function ManagementDepartmentPage() {
                 subtitle="Faculty Achievements"
                 backgroundColor="bg-gray-50"
             />
-            <StudentActivities
-                activities={ideathonActivities}
-                title="Ideathon- Business Plan Competitions"
-            />
-            <NewsEventsTabs />
+            <div id="activities" className="scroll-mt-24 md:scroll-mt-28">
+                <StudentActivities
+                    activities={ideathonActivities}
+                    title="Ideathon- Business Plan Competitions"
+                />
+                <NewsEventsTabs />
+            </div>
 
 
             {clubsData && clubsData.length > 0 && (
@@ -403,15 +422,19 @@ export default function ManagementDepartmentPage() {
                 />
             )}
 
-            <FacultyList
-                items={facultyMembers}
-                title="Meet our Faculty"
-                description=""
-                departmentName={departmentData?.name}
-                sectionClassName="pt-16 bg-white"
-            />
+            <div id="faculty" className="scroll-mt-24 md:scroll-mt-28">
+                <FacultyList
+                    items={facultyMembers}
+                    title="Meet our Faculty"
+                    description=""
+                    departmentName={departmentData?.name}
+                    sectionClassName="pt-16 bg-white"
+                />
+            </div>
 
-            <ResearchPublicationsTabs />
+            <div id="research" className="scroll-mt-24 md:scroll-mt-28">
+                <ResearchPublicationsTabs />
+            </div>
             <StudentCell
                 subtitle=""
                 title="Library"
@@ -506,21 +529,25 @@ export default function ManagementDepartmentPage() {
                 />
             </Modal>
 
-            <Placements
-                placementData={departmentData}
-                bgColor="bg-white"
-                marginClassName="mt-10"
-                customRecruiterTitle="Top Management recruiters"
-                customImages={[
-                    'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
+            <div id="placements" className="scroll-mt-24 md:scroll-mt-28">
+                <Placements
+                    placementData={departmentData}
+                    bgColor="bg-white"
+                    marginClassName="mt-10"
+                    customRecruiterTitle="Top Management recruiters"
+                    customImages={[
+                        'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
 
-                ]}
-            />
+                    ]}
+                />
+            </div>
 
-            <Facility />
+            <div id="facilities" className="scroll-mt-24 md:scroll-mt-28">
+                <Facility />
+            </div>
 
 
         </>

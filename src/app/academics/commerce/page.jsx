@@ -328,6 +328,16 @@ export default function CommerceDepartmentPage() {
                             <li>PEO5: To develop a global outlook and civic consciousness to effectively serve in diverse environments, upholding values that benefit both national interest and the broader global community. </li>
                         </ul>
                     </AccordionItem>
+
+                    <AccordionItem title="Master of Commerce" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
+                        <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
+                            <li>PEO-1: To provide knowledge and skills for being successful entrepreneurs and finance professionals in the field of Banking, Insurance, Manufacturing, Transport, Telecom, Service, Hospitality, IT and Academics. </li>
+                            <li>PEO-2: To equip student with quantitative, qualitative, cognitive and analytical skills for identifying, analysing, designing and creating business opportunities in a global dynamic environment. </li>
+                            <li>PEO-3: To make competent professionals with ethics, humility and societal needs through their holistic development. </li>
+                            <li>PEO-4: To transform graduates capable of thinking strategically and to lead, motivate and manage multi-disciplinary teams thereby enhancing managerial effectiveness under all circumstances.</li>
+                            <li>PEO-5: To prepare committed professionals with a sense of ‘giving back to the society’ through display of professional ethics, human dignity, empathy and humility in their professional and personal life.</li>
+                        </ul>
+                    </AccordionItem>
                     {/* <AccordionItem title="B.Com - Banking and Finance" titleClassName="font-bold text-lg text-[var(--button-red)]" bgClassName="bg-white">
                         <ul className="list-decimal pl-5 space-y-1 text-sm text-gray-700">
                             <li>PEO1: To equip students with in-depth knowledge and understanding of Banking and Finance, enabling them to build successful careers in accounting, taxation, financial management, entrepreneurship, and corporate sectors.</li>

@@ -363,9 +363,8 @@ export default function CorporateTrainingAndConsultancyDivision() {
         tab1Gallery={galleryImages}
         tab1GalleryTitle="Glimpses"
         tab2Activities={masterclassActivities2}
-        tab2Gallery={galleryImages2}
-        tab2GalleryTitle="Glimpses"
-        tab2GalleryclassName="mt-10"
+        showTab1Gallery={false}
+        showTab2Gallery={false}
       />
       <AdmissionSteps
         title="Our Training Cycle"
