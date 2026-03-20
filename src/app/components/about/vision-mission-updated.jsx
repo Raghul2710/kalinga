@@ -123,9 +123,9 @@ export default function VisionMissionUpdated({
                         <div className="bg-[#FFC670] rounded-[30px] p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow relative z-20">
                             <SectionHeading title={missionTitle} titleClassName="text-center mb-4" />
                             <div className="text-justify">
-                                <p>
+                                <div>
                                     <ReadMoreParagraphs text={missionText} />
-                                </p>
+                                </div>
                             </div>
                         </div>
 

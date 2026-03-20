@@ -117,7 +117,7 @@ const defaultFacilities = [
     image: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
   },
   {
-    id: 22,
+    id: 23,
     name: "Business Lab",
     image: "https://cdn.kalingauniversity.ac.in/departments/Faculty+of+Commerece+and+Management/01.webp",
   },

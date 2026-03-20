@@ -9,6 +9,9 @@ import QuickLinks from "@/app/components/general/quick_links";
 import Stack from '@/app/components/gsap/Stack'
 import { fetchAllDepartments, fetchDepartmentCompleteDetail, parseHtmlToText, fetchDepartmentCourseCounts } from '@/app/lib/api'
 import GlobalArrowButton from '@/app/components/general/global-arrow_button'
+import Modal from "@/app/components/general/Modal";
+import SurveyForm from "@/app/components/general/SurveyForm";
+import OrganogramOfKalinga from "@/app/components/about/organogram_of_kalinga";
 
 // Function to convert text to proper title case
 const toTitleCase = (str) => {
@@ -56,6 +59,15 @@ export default function AcademicsApi() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [expandedDept, setExpandedDept] = useState(null) // Track which department is expanded
+  const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
+
+  const handleOpenSurvey = (category, title) => {
+    setFeedbackModalConfig({ isOpen: true, category, title });
+  };
+
+  const handleCloseSurvey = () => {
+    setFeedbackModalConfig(prev => ({ ...prev, isOpen: false }));
+  };
 
   // Register breadcrumb data
   // Fetch all departments and their complete details
@@ -369,6 +381,53 @@ export default function AcademicsApi() {
         links={quickLinks}
         titleClassName="text-white"
       />
+      <OrganogramOfKalinga
+        title="Feedback"
+        useContainer={true}
+        description="Your responses will help us improve our academic quality and learning experience."
+        showImage={false}
+        imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
+        imageAlt="Kalinga University Organogram"
+        buttons={[
+          {
+            id: 1,
+            text: "Course Exit Survey",
+            onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey")
+          },
+          {
+            id: 2,
+            text: "Students Feedback",
+            onClick: () => handleOpenSurvey("students", "Students Feedback")
+          },
+          {
+            id: 3,
+            text: "Teachers Feedback",
+            onClick: () => handleOpenSurvey("teachers", "Teachers Feedback")
+          },
+          {
+            id: 4,
+            text: "Employer Feedback",
+            onClick: () => handleOpenSurvey("employer", "Employer Feedback")
+          },
+          {
+            id: 5,
+            text: "Alumni Feedback",
+            onClick: () => handleOpenSurvey("alumni", "Alumni Feedback")
+          },
+        ]}
+      />
+
+      <Modal
+        isOpen={feedbackModalConfig.isOpen}
+        onClose={handleCloseSurvey}
+        title={feedbackModalConfig.title}
+      >
+        <SurveyForm
+          courseId={5} // Using Commerce as a default or general placeholder
+          category={feedbackModalConfig.category}
+          onSuccess={handleCloseSurvey}
+        />
+      </Modal>
       <AdmissionCareer />
     </>
   )

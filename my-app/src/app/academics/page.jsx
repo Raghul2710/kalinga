@@ -16,18 +16,18 @@ const toTitleCase = (str) => {
   // Words that should be lowercase unless they're the first word
   const lowercaseWords = ['of', 'and', 'the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'with', 'by'];
 
-  return str
+  
     .toLowerCase()
-    .split(' ')
-    .map((word, index) => {
-      // Always capitalize first word, or if word is not in lowercase list
-      if (index === 0 || !lowercaseWords.includes(word)) {
-        return word.charAt(0).toUpperCase() + word.slice(1);
-      }
-      // Keep lowercase for words in the list (except first word)
-      return word;
-    })
-    .join(' ');
+  .split(' ')
+  .map((word, index) => {
+    // Always capitalize first word, or if word is not in lowercase list
+    if (index === 0 || !lowercaseWords.includes(word)) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+    // Keep lowercase for words in the list (except first word)
+    return word;
+  })
+  .join(' ');
 };
 
 // Generate slug from department name if slug is not available
