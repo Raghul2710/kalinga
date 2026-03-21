@@ -234,7 +234,7 @@ const Header = () => {
             title: 'Admission Process',
             links: [
               { label: 'Admission Procedure', href: '/admission-procedure' },
-              { label: 'Fees structure of ku', href: '/ku-fees' },
+              { label: 'Fees structure', href: '/ku-fees' },
 
             ]
           }
