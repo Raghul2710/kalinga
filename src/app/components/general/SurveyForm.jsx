@@ -20,7 +20,26 @@ export default function SurveyForm({ courseId, category, onSuccess }) {
         async function loadQuestions() {
             try {
                 setLoading(true);
+                setError(null);
+                setSuccess(false);
+                setData(null); // Clear old data to prevent showing duplicates/stale content while loading
+                
                 const res = await getSurveyQuestions(courseId, category);
+                console.log(`[SurveyForm] Fetched questions from API:`, res);
+                if (res && res.questions) {
+                    const seenText = new Set();
+                    const uniqueQuestions = [];
+                    
+                    res.questions.forEach(q => {
+                        // Use text-only key to deduplicate identical questions with different IDs
+                        const text = (q.question_text || q.question || "").trim().toLowerCase();
+                        if (!seenText.has(text) && text !== "") {
+                            seenText.add(text);
+                            uniqueQuestions.push(q);
+                        }
+                    });
+                    res.questions = uniqueQuestions;
+                }
                 setData(res);
             } catch (err) {
                 setError("Failed to load survey questions. Please try again later.");
@@ -71,6 +90,11 @@ export default function SurveyForm({ courseId, category, onSuccess }) {
             });
 
             setSuccess(true);
+            console.log(`[SurveyForm] Submission successful for ${category}. Payload:`, {
+                course_id: String(courseId),
+                category: category,
+                answers: payloadAnswers
+            });
             if (onSuccess) {
                 setTimeout(onSuccess, 2000);
             }
