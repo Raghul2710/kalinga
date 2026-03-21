@@ -332,6 +332,8 @@ export default function MasterClassTab({
   tab2Gallery = defaultTab2Gallery,
   tab2GalleryTitle = "Annual Masterclass Calendar 2025-26 Glimpse",
   tab2GalleryclassName = "",
+  showTab1Gallery = true,
+  showTab2Gallery = true,
 }) {
   const [activeTab, setActiveTab] = useState('tab1');
   const [showCalendar, setShowCalendar] = useState(false);
@@ -553,14 +555,16 @@ export default function MasterClassTab({
                   );
                 })()}
               </div>
-              <Gallery
-                title={tab1GalleryTitle}
-                images={gallery1}
-                backgroundColor="bg-white"
-                paddingClassName="py-0"
-                titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 mt-5 text-[var(--foreground)] text-center"
-                forceSliderOnMobile={true}
-              />
+              {showTab1Gallery && (
+                <Gallery
+                  title={tab1GalleryTitle}
+                  images={gallery1}
+                  backgroundColor="bg-white"
+                  paddingClassName="py-0"
+                  titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 mt-5 text-[var(--foreground)] text-center"
+                  forceSliderOnMobile={true}
+                />
+              )}
             </>
           )}
           {activeTab === 'tab2' && (
@@ -582,14 +586,16 @@ export default function MasterClassTab({
                 paddingClassName="py-0"
                 cardHeightClass="h-max"
               />
-              <Gallery
-                title={tab2GalleryTitle}
-                images={gallery2}
-                backgroundColor="bg-white"
-                paddingClassName={`py-0 ${tab2GalleryclassName}`}
-                titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 text-[var(--foreground)] text-center mt-10"
-                forceSliderOnMobile={true}
-              />
+              {showTab2Gallery && (
+                <Gallery
+                  title={tab2GalleryTitle}
+                  images={gallery2}
+                  backgroundColor="bg-white"
+                  paddingClassName={`py-0 ${tab2GalleryclassName}`}
+                  titleClassName="font-plus-jakarta-sans text-lg font-medium sm:text-xl md:text-2xl mb-6 sm:mb-8 md:mb-10 text-[var(--foreground)] text-center mt-10"
+                  forceSliderOnMobile={true}
+                />
+              )}
 
               {/* Calendar Modal */}
               {showCalendar && (

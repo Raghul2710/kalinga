@@ -315,7 +315,7 @@ export const pageDataMap: Record<string, PageData> = {
     },
     "/ku-fees": {
         slug: "/ku-fees",
-        title: "KU Fees",
+        title: "Fee Structure",
         banner: "https://cdn.kalingauniversity.ac.in/contact-us/contact-us-banner.webp",
     },
     "/laboratories": {
