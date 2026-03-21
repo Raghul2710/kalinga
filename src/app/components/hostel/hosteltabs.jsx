@@ -103,7 +103,7 @@ export default function HostelFeeTabs() {
 function HostelFeeTable({ rows }) {
     const columns = useMemo(
         () => [
-            { key: "hostelName", label: "Hostel Name", widthPx: 220 },
+            { key: "hostelName", label: "Hostel Name", widthPx: 120 },
             { key: "food", label: "Food", widthPx: 140 },
             { key: "occupancy", label: "Occupancy", widthPx: 120 },
             { key: "waterCooled", label: "Water Cooled Room (₹)", widthPx: 210 },
@@ -241,14 +241,18 @@ function HostelDeliverables() {
         "Bed",
         "Table",
         "Chair",
-        "Pillow",
-        "Mattress",
+        "Pillow (One-Time issuance)",
+        "Mattress (One-Time issuance)",
         "Almirah",
-        "Medical Facility",
+        "Medical Assistance",
         "Cooler",
         "Shoe Rack",
         "Wi-Fi",
-        "2 Outings per Month",
+        "City visits for students will be organised on alternate Sundays",
+    ];
+
+
+    const fooditems = [
         "Breakfast",
         "Lunch",
         "Tea",
@@ -263,6 +267,19 @@ function HostelDeliverables() {
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[var(--light-text-gray)]">
                 {items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                        <Icons name="arrowBox" />
+                        <span className="leading-snug">{item}</span>
+                    </li>
+                ))}
+            </ul>
+
+            <h2 className="font-stix !text-lg md:!text-2xl text-[var(--foreground)]  mt-16 mb-4">
+                Food Deliverables
+            </h2>
+
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[var(--light-text-gray)]">
+                {fooditems.map((item) => (
                     <li key={item} className="flex items-start gap-3">
                         <Icons name="arrowBox" />
                         <span className="leading-snug">{item}</span>
