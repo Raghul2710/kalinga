@@ -1043,55 +1043,18 @@ const FEES_EDUCATION = {
 
 const FEES_RESEARCH = {
     title: "PhD Programs",
-    columns: [
-        "S.No.",
-        "Course",
-        "Year",
-        "Sem",
-        "Fee Sem-1 (INR)",
-        "Fee Sem-2 (INR)",
-        "Fee Sem-3 (INR)",
-        "Fee Sem-4 (INR)",
-        "Fee Sem-5 (INR)",
-        "Fee Sem-6 (INR)",
-        "Fee Sem-7 (INR)",
-        "Fee Sem-8 (INR)",
-        "KALSEE Fees (One Time) (INR)",
-        "Total Fees (INR)",
-    ],
+    columns: ["Particulars", "Ph. D. (Part Time)", "Ph. D. (Full Time)"],
     rows: [
-        {
-            "S.No.": 1,
-            Course: "Ph. D. (Part Time)",
-            Year: 4,
-            Sem: 8,
-            "Fee Sem-1 (INR)": "50,000",
-            "Fee Sem-2 (INR)": "50,000",
-            "Fee Sem-3 (INR)": "50,000",
-            "Fee Sem-4 (INR)": "50,000",
-            "Fee Sem-5 (INR)": "50,000",
-            "Fee Sem-6 (INR)": "50,000",
-            "Fee Sem-7 (INR)": "50,000",
-            "Fee Sem-8 (INR)": "50,000",
-            "KALSEE Fees (One Time) (INR)": "3,000",
-            "Total Fees (INR)": "4,03,000/-",
-        },
-        {
-            "S.No.": 2,
-            Course: "Ph. D. (Full Time)",
-            Year: 3,
-            Sem: 6,
-            "Fee Sem-1 (INR)": "80,000",
-            "Fee Sem-2 (INR)": "80,000",
-            "Fee Sem-3 (INR)": "80,000",
-            "Fee Sem-4 (INR)": "60,000",
-            "Fee Sem-5 (INR)": "50,000",
-            "Fee Sem-6 (INR)": "50,000",
-            "Fee Sem-7 (INR)": "NA",
-            "Fee Sem-8 (INR)": "NA",
-            "KALSEE Fees (One Time) (INR)": "3,000",
-            "Total Fees (INR)": "4,03,000/-",
-        },
+        { Particulars: "Fee Semester-1", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "80,000" },
+        { Particulars: "Fee Semester-2", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "80,000" },
+        { Particulars: "Fee Semester-3", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "80,000" },
+        { Particulars: "Fee Semester-4", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "80,000" },
+        { Particulars: "Fee Semester-5", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "60,000" },
+        { Particulars: "Fee Semester-6", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "60,000" },
+        { Particulars: "Fee Semester-7", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "NA" },
+        { Particulars: "Fee Semester-8", "Ph. D. (Part Time)": "55,000", "Ph. D. (Full Time)": "NA" },
+        { Particulars: "Kalsee", "Ph. D. (Part Time)": "4000", "Ph. D. (Full Time)": "4000" },
+        { Particulars: "Total Fees (INR)", "Ph. D. (Part Time)": "4,44,000/-", "Ph. D. (Full Time)": "4,44,000/-" },
     ],
     knowMoreHref: "https://cdn.kalingauniversity.ac.in/phd/Ph.+D.+2026+Notification.pdf",
     notes: [],
@@ -1119,22 +1082,26 @@ const OTHER_CHARGES = {
     lateralEntryFee: "One Time - Rs. 3,000/-",
     creditTransfer: "(One time) - Rs. 5,000/-",
     transport: [
-        { route: "From Dhamtari", fee: "INR 38,000/- Per Year" },
-        { route: "From Kurud", fee: "INR 32,000/- Per Year" },
-        { route: "From Bhilai", fee: "INR 33,000/- Per Year" },
-        { route: "From Patan, Siltara, Urla & Mandhar", fee: "INR 31,000/- Per Year" },
-        { route: "From Durg, Tilda & Simga", fee: "INR 34,000/- Per Year" },
-        { route: "From Mahasamund", fee: "INR 33,000/- Per Year" },
-        { route: "From Bhansoj", fee: "INR 25,000/- Per Year" },
-        { route: "From Rajim & Beergaon", fee: "INR 30,000/- Per Year" },
-        { route: "From Raipur City", fee: "INR 25,000/- Per Year" },
-        { route: "From Arang & Abhanpur", fee: "INR 24,000/- Per Year" },
+        { route: "From Dhamtari", fee: "INR 40,000/- Per Year" },
+        { route: "From Kurud", fee: "INR 34,000/- Per Year" },
+        { route: "From Bhilai", fee: "INR 35,000/- Per Year" },
+        { route: "From Patan, Siltara, Urla & Mandhar", fee: "INR 33,000/- Per Year" },
+        { route: "From Durg, Tilda & Simga", fee: "INR 36,000/- Per Year" },
+        { route: "From Mahasamund", fee: "INR 35,000/- Per Year" },
+        { route: "From Bhansoj", fee: "INR 26,000/- Per Year" },
+        { route: "From Rajim & Beergaon", fee: "INR 31,000/- Per Year" },
+        { route: "From Raipur City", fee: "INR 26,000/- Per Year" },
+        { route: "From Arang & Abhanpur", fee: "INR 25,000/- Per Year" },
         {
             route:
-                "From New Raipur (Sector – 27, 29, 17, Chicha, CO Hospital, Stadium, Palaud, Kotni)",
-            fee: "INR 18,000/- Per Year",
+                "From New Raipur (Sector – 27, 29, 17, Chicha,Balco Hospital, Stadium, Palaud, Kotni)",
+            fee: "INR 19,000/- Per Year",
         },
-        { route: "From Mandir Hasaud", fee: "INR 18,000/- Per Year" },
+        { route: "From Mandir Hasaud", fee: "INR 19,000/- Per Year" },
+    ],
+    notes: [
+        "The above mentioned transport fee is for the academic session 2026-27.",
+        "The above mentioned transport fee is for the academic session 2026-27.",
     ],
     scholarship:
         "Scholarships (General, Merit & Girl Student) are available on Tuition Fees. The scholarships are not applicable to Pharmacy, Education, and Research Programs.",
@@ -1397,7 +1364,7 @@ export default function FeesTabSection() {
                             {activeTab === "transport" && (
                                 <div>
                                     <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 mt-1 text-center">
-                                        Transport Charges (To &amp; From)
+                                        Transport Charges(To-and-From)
                                     </h2>
 
                                     <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
@@ -1426,6 +1393,7 @@ export default function FeesTabSection() {
                                             </table>
                                         </div>
                                     </div>
+                                    <Notes items={OTHER_CHARGES.notes} />
                                 </div>
                             )}
 
