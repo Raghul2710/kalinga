@@ -143,6 +143,7 @@ export default function Footer() {
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/podcast">Kalinga Podcast</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="/kalinga-buzz">Kalinga Buzz</a></li>
                     <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => setIsFraudModalOpen(true)}>Fraud Awareness Guidelines</a></li>
+                    <li><a className="hover:text-white transition-colors lg:whitespace-nowrap break-words" href="https://www.aicte.gov.in/schemes/students-development-schemes">AICTE Scholarship/Fellowship Schemes</a></li>
                   </ul>
 
                 </div>

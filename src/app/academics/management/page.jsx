@@ -19,7 +19,7 @@ import StudentCell from "@/app/components/international-students/student_cell";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Placements from "@/app/components/home/placements";
 import SurveyForm from "@/app/components/general/SurveyForm";
-// import CourseNavigation from "@/app/components/general/course-navigation";
+import CourseNavigation from "@/app/components/general/course-navigation";
 
 export default function ManagementDepartmentPage() {
     const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
@@ -335,20 +335,20 @@ export default function ManagementDepartmentPage() {
         },
     ];
 
-    // const navigationTabs = [
-    //     { id: 'about', label: 'About' },
-    //     { id: 'programs', label: 'Programs' },
-    //     { id: 'board-of-studies', label: 'Board of Studies' },
-    //     { id: 'activities', label: 'Events & Activities' },
-    //     { id: 'faculty', label: 'Faculty' },
-    //     { id: 'research', label: 'Research' },
-    //     { id: 'placements', label: 'Placements' },
-    //     { id: 'facilities', label: 'Facilities' },
-    // ];
+    const navigationTabs = [
+        { id: 'about', label: 'About' },
+        { id: 'programs', label: 'Programs' },
+        { id: 'board-of-studies', label: 'Board of Studies' },
+        { id: 'activities', label: 'Events & Activities' },
+        { id: 'faculty', label: 'Faculty' },
+        { id: 'research', label: 'Research' },
+        { id: 'placements', label: 'Placements' },
+        { id: 'facilities', label: 'Facilities' },
+    ];
 
     return (
         <>
-            {/* <CourseNavigation tabs={navigationTabs} /> */}
+            <CourseNavigation tabs={navigationTabs} />
             <div id="about" className="scroll-mt-24 md:scroll-mt-28">
                 <MainIntro
                     title={mainIntroContent.title}
