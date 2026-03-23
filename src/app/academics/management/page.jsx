@@ -20,6 +20,8 @@ import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Placements from "@/app/components/home/placements";
 import SurveyForm from "@/app/components/general/SurveyForm";
 import CourseNavigation from "@/app/components/general/course-navigation";
+import VisionFeedbackForm from "@/app/components/forms/VisionFeedbackForm";
+import StakeholderFeedbackForm from "@/app/components/forms/StakeholderFeedbackForm";
 
 export default function ManagementDepartmentPage() {
     const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
@@ -493,7 +495,18 @@ export default function ManagementDepartmentPage() {
                         id: 1,
                         text: "Course Exit Survey – MBA",
                         onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - MBA")
-                    },
+                    }
+                ]}
+            />
+
+            <OrganogramOfKalinga
+                title="On Curriculum, Course, Teaching-Learning and Evaluation"
+                useContainer={true}
+                description="Your responses will help us improve our academic quality and learning experience."
+                showImage={false}
+                imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
+                imageAlt="Kalinga University Organogram"
+                buttons={[
                     {
                         id: 2,
                         text: "Students - MBA",
@@ -516,17 +529,44 @@ export default function ManagementDepartmentPage() {
                     },
                 ]}
             />
+            <OrganogramOfKalinga
+                title="Vision_Mission_PEOs_PSOs"
+                useContainer={true}
+                description="Your responses will help us improve our academic quality and learning experience."
+                showImage={false}
+                imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
+                imageAlt="Kalinga University Organogram"
+                buttons={[
+                    {
+                        id: 6,
+                        text: "(Alumni/ Employer/ Industry Expert/Others)",
+                        onClick: () => handleOpenSurvey("vision-feedback", "Vision Statement Feedback")
+                    },
+                    {
+                        id: 7,
+                        text: "(Faculty Member / Parent / Student / Professional Body)",
+                        onClick: () => handleOpenSurvey("stakeholder-external", "External Stakeholder Feedback")
+                    }
+                ]}
+            />
+
 
             <Modal
                 isOpen={feedbackModalConfig.isOpen}
                 onClose={handleCloseSurvey}
                 title={feedbackModalConfig.title}
             >
-                <SurveyForm
-                    courseId={17} // Using 2 for Management as it's typically an ID, but backend can accept it
-                    category={feedbackModalConfig.category}
-                    onSuccess={handleCloseSurvey}
-                />
+                {feedbackModalConfig.category === "vision-feedback" ? (
+                    <VisionFeedbackForm onSuccess={handleCloseSurvey} />
+                ) : feedbackModalConfig.category === "stakeholder-external" ? (
+                    <StakeholderFeedbackForm onSuccess={handleCloseSurvey} />
+                ) : (
+                    <SurveyForm
+                        courseId={17}
+                        category={feedbackModalConfig.category}
+                        onSuccess={handleCloseSurvey}
+                    />
+                )}
             </Modal>
 
             <div id="placements" className="scroll-mt-24 md:scroll-mt-28">
