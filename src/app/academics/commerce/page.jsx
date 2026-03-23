@@ -19,6 +19,7 @@ import SurveyForm from "@/app/components/general/SurveyForm";
 import UpcomingConference from "@/app/components/research/upcoming_conference";
 import Placements from "@/app/components/home/placements";
 import { AccordionItem } from "@/app/components/general/accordion";
+import CourseNavigation from "@/app/components/general/course-navigation";
 
 export default function CommerceDepartmentPage() {
     const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
@@ -560,27 +561,43 @@ export default function CommerceDepartmentPage() {
         { year: "2024", facultyName: "Mr. Rakshak Bharati", programTitle: "Organization Development and Change in 21st Century", organizedBy: "NPTEL / SWAYAM", duration: "July–Sep 2024 (8 Weeks)" }
     ];
 
+    const navigationTabs = [
+        { id: 'about', label: 'About' },
+        { id: 'programs', label: 'Programs' },
+        { id: 'activities', label: 'Events & Activities' },
+        { id: 'faculty', label: 'Faculty' },
+        { id: 'library', label: 'Library' },
+        { id: 'feedback', label: 'Feedback' },
+        { id: 'placements', label: 'Placements' },
+        { id: 'facilities', label: 'Facilities' },
+    ];
+
     return (
         <>
-            <MainIntro
-                title={mainIntroContent.title}
-                description={mainIntroContent.description}
-                imageUrl={mainIntroContent.imageUrl}
-                imageAlt={mainIntroContent.imageAlt}
-                showKnowMore={false}
-            />
-            <VisionMissionUpdated
-                visionText={visionMissionContent.visionText}
-                missionText={visionMissionContent.missionText}
-            />
-            {!loading && programsOffered.length > 0 && (
-                <ProgramsOffered
-                    programs={programsOffered}
-                    title="Programs Offered"
-                    description={programsOverview}
-                    hideSearch={true}
-                    {...(programsImage && { backgroundImage: programsImage })}
+            <CourseNavigation tabs={navigationTabs} />
+            <div id="about" className="scroll-mt-24 md:scroll-mt-28">
+                <MainIntro
+                    title={mainIntroContent.title}
+                    description={mainIntroContent.description}
+                    imageUrl={mainIntroContent.imageUrl}
+                    imageAlt={mainIntroContent.imageAlt}
+                    showKnowMore={false}
                 />
+                <VisionMissionUpdated
+                    visionText={visionMissionContent.visionText}
+                    missionText={visionMissionContent.missionText}
+                />
+            </div>
+            {!loading && programsOffered.length > 0 && (
+                <div id="programs" className="scroll-mt-24 md:scroll-mt-28">
+                    <ProgramsOffered
+                        programs={programsOffered}
+                        title="Programs Offered"
+                        description={programsOverview}
+                        hideSearch={true}
+                        {...(programsImage && { backgroundImage: programsImage })}
+                    />
+                </div>
             )}
             <FAQ
                 items={faqItems}
@@ -601,10 +618,12 @@ export default function CommerceDepartmentPage() {
                 swiperClassName="ccrc-video-slider"
                 imageObjectPosition="object-center"
             /> */}
-            {/* <StudentActivities
-                activities={commerceActivities}
-                title="Commerce Events & Activities"
-            /> */}
+            <div id="activities" className="scroll-mt-24 md:scroll-mt-28">
+                <StudentActivities
+                    activities={commerceActivities}
+                    title="Commerce Events & Activities"
+                />
+            </div>
             {clubsData && clubsData.length > 0 && (
                 <UpcomingConference
                     title={`Introducing Our Commerce Club`}
@@ -616,18 +635,20 @@ export default function CommerceDepartmentPage() {
                 />
             )}
 
-            <FacultyList
-                items={facultyMembers}
-                title="Our Commerce Faculty"
-                description="Commerce Faculty"
-                departmentName={departmentData?.name}
-            />
-            <FacultyList
-                items={bbaFacultyMembers}
-                title="BBA Faculty"
-                description="BBA Faculty"
-                departmentName={departmentData?.name}
-            />
+            <div id="faculty" className="scroll-mt-24 md:scroll-mt-28">
+                <FacultyList
+                    items={facultyMembers}
+                    title="Our Commerce Faculty"
+                    description="Commerce Faculty"
+                    departmentName={departmentData?.name}
+                />
+                <FacultyList
+                    items={bbaFacultyMembers}
+                    title="BBA Faculty"
+                    description="BBA Faculty"
+                    departmentName={departmentData?.name}
+                />
+            </div>
             {/* <section className="py-16 bg-white">
                 <div className="text-center mb-10">
                     <SectionHeading
@@ -642,57 +663,61 @@ export default function CommerceDepartmentPage() {
                     className="mb-12 text-center"
                 />
             </section> */}
-            <StudentCell
-                subtitle=""
-                title="Library"
-                imageSrc="https://cdn.kalingauniversity.ac.in/facilities/library-new.webp"
-                imageAlt="Kalinga University Central Library"
-                description="Kalinga University, Raipur, hosts a modern and fully digitized Central Library that serves as a pivotal academic resource center supporting the learning, teaching, and research needs of the Commerce program. Designed to foster a scholarly environment, the library integrates both traditional and digital resources with state-of-the-art services."
-                functionsTitle="Library Resources & Automation"
-                functionsSubtitle="Commerce Department Specifics & Digital Services:"
-                functionsList={[
-                    "Comprehensive collection of volumes of commerce and management books",
-                    "National and International e-Journals",
-                    "Fully automated using KOHA Library Management Software",
-                    "Online Public Access Catalogue (OPAC)",
-                    "Turnitin and Drillbit anti-plagiarism softwares"
-                ]}
-            />
-            <OrganogramOfKalinga
-                title="Feedback"
-                useContainer={true}
-                description="Your responses will help us improve our academic quality and learning experience."
-                showImage={false}
-                imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
-                imageAlt="Kalinga University Organogram"
-                buttons={[
-                    {
-                        id: 1,
-                        text: "Course Exit Survey – Commerce",
-                        onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - Commerce")
-                    },
-                    {
-                        id: 2,
-                        text: "Students - Commerce",
-                        onClick: () => handleOpenSurvey("students", "Students - Commerce")
-                    },
-                    {
-                        id: 3,
-                        text: "Teachers - Commerce",
-                        onClick: () => handleOpenSurvey("teachers", "Teachers - Commerce")
-                    },
-                    {
-                        id: 4,
-                        text: "Employer - Commerce",
-                        onClick: () => handleOpenSurvey("employer", "Employer - Commerce")
-                    },
-                    {
-                        id: 5,
-                        text: "Alumni - Commerce",
-                        onClick: () => handleOpenSurvey("alumni", "Alumni - Commerce")
-                    },
-                ]}
-            />
+            <div id="library" className="scroll-mt-24 md:scroll-mt-28">
+                <StudentCell
+                    subtitle=""
+                    title="Library"
+                    imageSrc="https://cdn.kalingauniversity.ac.in/facilities/library-new.webp"
+                    imageAlt="Kalinga University Central Library"
+                    description="Kalinga University, Raipur, hosts a modern and fully digitized Central Library that serves as a pivotal academic resource center supporting the learning, teaching, and research needs of the Commerce program. Designed to foster a scholarly environment, the library integrates both traditional and digital resources with state-of-the-art services."
+                    functionsTitle="Library Resources & Automation"
+                    functionsSubtitle="Commerce Department Specifics & Digital Services:"
+                    functionsList={[
+                        "Comprehensive collection of volumes of commerce and management books",
+                        "National and International e-Journals",
+                        "Fully automated using KOHA Library Management Software",
+                        "Online Public Access Catalogue (OPAC)",
+                        "Turnitin and Drillbit anti-plagiarism softwares"
+                    ]}
+                />
+            </div>
+            <div id="feedback" className="scroll-mt-24 md:scroll-mt-28">
+                <OrganogramOfKalinga
+                    title="Feedback"
+                    useContainer={true}
+                    description="Your responses will help us improve our academic quality and learning experience."
+                    showImage={false}
+                    imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
+                    imageAlt="Kalinga University Organogram"
+                    buttons={[
+                        {
+                            id: 1,
+                            text: "Course Exit Survey – Commerce",
+                            onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - Commerce")
+                        },
+                        {
+                            id: 2,
+                            text: "Students - Commerce",
+                            onClick: () => handleOpenSurvey("students", "Students - Commerce")
+                        },
+                        {
+                            id: 3,
+                            text: "Teachers - Commerce",
+                            onClick: () => handleOpenSurvey("teachers", "Teachers - Commerce")
+                        },
+                        {
+                            id: 4,
+                            text: "Employer - Commerce",
+                            onClick: () => handleOpenSurvey("employer", "Employer - Commerce")
+                        },
+                        {
+                            id: 5,
+                            text: "Alumni - Commerce",
+                            onClick: () => handleOpenSurvey("alumni", "Alumni - Commerce")
+                        },
+                    ]}
+                />
+            </div>
 
             <Modal
                 isOpen={feedbackModalConfig.isOpen}
@@ -705,27 +730,31 @@ export default function CommerceDepartmentPage() {
                     onSuccess={handleCloseSurvey}
                 />
             </Modal>
-            <Placements
-                placementData={departmentData}
-                bgColor="bg-white"
-                marginClassName="mt-10"
-                customRecruiterTitle="Top Management recruiters"
-                customImages={[
-                    'https://cdn.kalingauniversity.ac.in/Home/placement1.webp',
-                    'https://cdn.kalingauniversity.ac.in/Home/placement2.webp',
-                    'https://cdn.kalingauniversity.ac.in/Home/placement3.webp',
-                    'https://cdn.kalingauniversity.ac.in/Home/placement4.webp',
-                    'https://cdn.kalingauniversity.ac.in/Home/placement5.webp',
-                    'https://cdn.kalingauniversity.ac.in/Home/placement6.webp',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-4.png',
-                    'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
-                ]}
-            />
+            <div id="placements" className="scroll-mt-24 md:scroll-mt-28">
+                <Placements
+                    placementData={departmentData}
+                    bgColor="bg-white"
+                    marginClassName="mt-10"
+                    customRecruiterTitle="Top Management recruiters"
+                    customImages={[
+                        'https://cdn.kalingauniversity.ac.in/Home/placement1.webp',
+                        'https://cdn.kalingauniversity.ac.in/Home/placement2.webp',
+                        'https://cdn.kalingauniversity.ac.in/Home/placement3.webp',
+                        'https://cdn.kalingauniversity.ac.in/Home/placement4.webp',
+                        'https://cdn.kalingauniversity.ac.in/Home/placement5.webp',
+                        'https://cdn.kalingauniversity.ac.in/Home/placement6.webp',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-1.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-2.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-3.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-4.png',
+                        'https://cdn.kalingauniversity.ac.in/Home/place-5.png'
+                    ]}
+                />
+            </div>
 
-            <Facility />
+            <div id="facilities" className="scroll-mt-24 md:scroll-mt-28">
+                <Facility />
+            </div>
         </>
     );
 }
