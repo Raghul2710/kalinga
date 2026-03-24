@@ -10,7 +10,7 @@ const SdgImageGrid = () => {
 
     // PDF links
     if (id === 3) {
-      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-3-Good-Health-and-Well-Being.pdf";
+      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-3-Good-Health-and-Well-Being-new.pdf";
     } else if (id === 6) {
       pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-6-Water-Conservation.pdf";
     } else if (id === 7) {

@@ -477,7 +477,7 @@ export default function ManagementDepartmentPage() {
                     {
                         id: 2,
                         text: "Management Title List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Faculty-of-Commerce-&-Management-Title-List.pdf",
+                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Title-List.pdf",
                         disableFlipbook: true
                     }
                 ]}
