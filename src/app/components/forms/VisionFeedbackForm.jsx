@@ -123,11 +123,19 @@ export default function VisionFeedbackForm({ courseId, onSuccess }) {
         setError("");
 
         try {
-            // Map the flat formData to the structured answers payload for the dynamic API
+            // Metadata fields should be sent at the root level, not in the answers array
+            // based on the mapping guide failing for 'name'
+            const metadataFields = ["name", "role", "department", "contact", "email"];
+
+            // Map the questions based on the mapping guide provided
             const answers = Object.entries(formData)
-                .filter(([key, value]) => value !== "" && key !== 'signature') // Skip empty fields and non-question fields
+                .filter(([key, value]) => 
+                    !metadataFields.includes(key) && 
+                    key !== 'signature' && 
+                    value !== ""
+                )
                 .map(([key, value]) => {
-                    const isLikert = /^[bcde][1-4]$|^q[1-3]$|^f1$/.test(key);
+                    const isLikert = /^[cde][1-4]$|^q[1-3]$|^f1$/.test(key);
                     return {
                         question_id: key, // Using the field key as question_id identifier
                         rating: isLikert ? parseInt(value, 10) : null,
@@ -135,18 +143,26 @@ export default function VisionFeedbackForm({ courseId, onSuccess }) {
                     };
                 });
 
-            // Add the signature as a special field
+            // Add the signature as a special field (it's in the mapping guide)
             answers.push({
                 question_id: "signature",
                 rating: null,
                 answer_text: formData.signature
             });
 
-            await submitSurvey({
+            const payload = {
                 course_id: String(courseId),
                 category: "vision-feedback",
+                // Top-level metadata
+                respondent_name: formData.name,
+                respondent_role: formData.role,
+                respondent_department: formData.department,
+                respondent_contact: formData.contact,
+                respondent_email: formData.email,
                 answers: answers
-            });
+            };
+
+            await submitSurvey(payload);
 
             setIsSubmitted(true);
             if (onSuccess) {

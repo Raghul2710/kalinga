@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { submitSurvey } from "@/app/lib/survey";
+import SectionHeading from "@/app/components/general/SectionHeading";
 import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 
 const LIKERT_OPTIONS = [
@@ -14,9 +15,10 @@ const LIKERT_OPTIONS = [
 ];
 
 const ROLES = [
-    "Alumni",
-    "Employer",
-    "Industry Expert"
+    "Faculty Member",
+    "Parent",
+    "Student",
+    "Professional Body Representative"
 ];
 
 const MISSION_POINTS = [
@@ -42,13 +44,14 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
     const [formData, setFormData] = useState({
         name: "",
         role: "",
-        organization: "",
-        contactInfo: "",
+        department: "",
+        contact: "",
+        email: "",
         // Section B: Vision
-        b1: "",
-        b2: "",
-        b3: "",
-        b4_suggestions: "",
+        q1: "",
+        q2: "",
+        q3: "",
+        suggestions: "",
         // Section C: Mission
         c1: "",
         c2: "",
@@ -57,13 +60,11 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
         // Section D: PEOs
         d1: "",
         d2: "",
-        d3: "",
-        d4_suggestions: "",
+        d3_suggestions: "",
         // Section E: PSOs
         e1: "",
         e2: "",
-        e3: "",
-        e4_suggestions: "",
+        e3_suggestions: "",
         // Section F: Overall
         f1: "",
         f2_comments: "",
@@ -92,11 +93,11 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
     const validateForm = () => {
         const requiredFields = [
-            "name", "role", "contactInfo",
-            "b1", "b2", "b3",
+            "name", "role", "email",
+            "q1", "q2", "q3",
             "c1", "c2", "c3",
-            "d1", "d2", "d3",
-            "e1", "e2", "e3",
+            "d1", "d2",
+            "e1", "e2",
             "f1",
             "signature"
         ];
@@ -106,22 +107,34 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
             setError("Please fill in all required fields and sign the form.");
             return false;
         }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            setError("Please enter a valid email address.");
+            return false;
+        }
         return true;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
-        
+
         setIsSubmitting(true);
         setError("");
 
         try {
-            // Map the flat formData to the structured answers payload for the dynamic API
+            // Metadata fields should be sent at the root level, not in the answers array
+            const metadataFields = ["name", "role", "department", "contact", "email"];
+
+            // Map the questions based on the mapping guide provided
             const answers = Object.entries(formData)
-                .filter(([key, value]) => value !== "" && key !== 'signature') // Skip empty fields and non-question fields
+                .filter(([key, value]) => 
+                    !metadataFields.includes(key) && 
+                    key !== 'signature' && 
+                    value !== ""
+                )
                 .map(([key, value]) => {
-                    const isLikert = /^[bcdef]1$|^b[23]$|^c[23]$|^d[23]$|^e[23]$/.test(key);
+                    const isLikert = /^[cde][1-4]$|^q[1-3]$|^f1$/.test(key);
                     return {
                         question_id: key, // Using the field key as question_id identifier
                         rating: isLikert ? parseInt(value, 10) : null,
@@ -129,18 +142,26 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     };
                 });
 
-            // Add the signature as a special field
+            // Add the signature as a special field (it's in the mapping guide)
             answers.push({
                 question_id: "signature",
                 rating: null,
                 answer_text: formData.signature
             });
 
-            await submitSurvey({
+            const payload = {
                 course_id: String(courseId),
                 category: "stakeholder-feedback",
+                // Top-level metadata
+                respondent_name: formData.name,
+                respondent_role: formData.role,
+                respondent_department: formData.department,
+                respondent_contact: formData.contact,
+                respondent_email: formData.email,
                 answers: answers
-            });
+            };
+
+            await submitSurvey(payload);
 
             setIsSubmitted(true);
             if (onSuccess) {
@@ -156,7 +177,7 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
     if (isSubmitted) {
         return (
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="w-full py-16 text-center bg-white rounded-2xl"
@@ -167,8 +188,8 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-3 font-stix">Thank You!</h3>
-                <p className="text-gray-600 text-base mb-8 px-4 text-pretty font-plus-jakarta-sans">Your expertise and feedback are invaluable to our department's growth.</p>
-                <button 
+                <p className="text-gray-600 text-base mb-8 px-4 text-pretty font-plus-jakarta-sans">Your valuable feedback will help us improve our academic quality and learning experience.</p>
+                <button
                     onClick={() => setIsSubmitted(false)}
                     className="text-[var(--button-red)] text-sm font-bold hover:underline"
                 >
@@ -181,18 +202,18 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
     return (
         <div className="bg-white rounded-2xl overflow-hidden max-h-[70vh] overflow-y-auto custom-scrollbar md:px-2">
             <form onSubmit={handleSubmit} className="p-4 md:p-6 space-y-12">
-                {/* Section A: Stakeholder Details */}
+                {/* Section A */}
                 <div className="space-y-6">
                     <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
                         <span className="bg-[var(--button-red)] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">A</span>
-                        <h3 className="text-xl font-bold text-gray-800 font-stix">Stakeholder Details</h3>
+                        <h3 className="text-xl font-bold text-gray-800 font-stix">Basic Information</h3>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
                             <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Full Name *</label>
-                            <input 
-                                type="text" 
+                            <input
+                                type="text"
                                 name="name"
                                 value={formData.name}
                                 onChange={handleChange}
@@ -201,24 +222,35 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Organization / Institution</label>
-                            <input 
-                                type="text" 
-                                name="organization"
-                                value={formData.organization}
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Email ID *</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
                                 onChange={handleChange}
-                                placeholder="Enter your org or institution"
+                                placeholder="you@example.com"
                                 className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all"
                             />
                         </div>
-                        <div className="space-y-2 md:col-span-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Contact Number / Email ID *</label>
-                            <input 
-                                type="text" 
-                                name="contactInfo"
-                                value={formData.contactInfo}
+                        <div className="space-y-2">
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Contact Number</label>
+                            <input
+                                type="text"
+                                name="contact"
+                                value={formData.contact}
                                 onChange={handleChange}
-                                placeholder="Enter your contact details"
+                                placeholder="Enter your contact number"
+                                className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all"
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Department/Organization</label>
+                            <input
+                                type="text"
+                                name="department"
+                                value={formData.department}
+                                onChange={handleChange}
+                                placeholder="Enter your department or org"
                                 className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all"
                             />
                         </div>
@@ -226,17 +258,16 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
                     <div className="space-y-3">
                         <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Designation / Role *</label>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {ROLES.map((role) => (
                                 <button
                                     key={role}
                                     type="button"
                                     onClick={() => handleRoleChange(role)}
-                                    className={`px-4 py-2.5 rounded-xl border-2 transition-all text-[10px] font-bold text-left uppercase tracking-tight ${
-                                        formData.role === role 
-                                        ? "border-[var(--button-red)] bg-red-50 text-[var(--button-red)]" 
-                                        : "border-gray-100 bg-gray-50 text-gray-400 hover:border-gray-200"
-                                    }`}
+                                    className={`px-4 py-2.5 rounded-xl border-2 transition-all text-[10px] font-bold text-left uppercase tracking-tight ${formData.role === role
+                                            ? "border-[var(--button-red)] bg-red-50 text-[var(--button-red)]"
+                                            : "border-gray-100 bg-gray-50 text-gray-400 hover:border-gray-200"
+                                        }`}
                                 >
                                     {role}
                                 </button>
@@ -253,7 +284,7 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     </div>
 
                     <div className="p-5 bg-blue-50 border-l-4 border-[var(--dark-blue)] rounded-r-xl">
-                        <h4 className="text-xs font-bold text-[var(--dark-blue)] uppercase tracking-widest mb-2 font-plus-jakarta-sans">Vision of the Department:</h4>
+                        <h4 className="text-xs font-bold text-[var(--dark-blue)] uppercase tracking-widest mb-2 font-plus-jakarta-sans">Vision Statement of the Department:</h4>
                         <p className="text-sm italic text-gray-700 leading-relaxed font-serif">
                             “To educate and empower young business leaders through innovative teaching, hands-on training, and impactful research, fostering successful managers and entrepreneurs with a strong sense of social responsibility.”
                         </p>
@@ -261,11 +292,11 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
                     <div className="space-y-8">
                         {[
-                            { id: "b1", label: "1. Do you think the Vision Statement is clear and easy to understand?" },
-                            { id: "b2", label: "2. Does the Vision Statement align with current industrial, professional, and social requirements?" },
-                            { id: "b3", label: "3. Does the Vision Statement inspire long-term growth and excellence?" }
+                            { id: "q1", label: "Q1. The Vision statement clearly reflects the future aspirations of the Department." },
+                            { id: "q2", label: "Q2. The Vision effectively supports holistic student development." },
+                            { id: "q3", label: "Q3. The Vision aligns with current industry and societal needs." }
                         ].map((q) => (
-                            <LikertQuestion 
+                            <LikertQuestion
                                 key={q.id}
                                 id={q.id}
                                 label={q.label}
@@ -274,10 +305,10 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                             />
                         ))}
                         <div className="space-y-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">4. Suggestions for improvement (if any):</label>
-                            <textarea 
-                                name="b4_suggestions"
-                                value={formData.b4_suggestions}
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Suggestions for improvement (if any):</label>
+                            <textarea
+                                name="suggestions"
+                                value={formData.suggestions}
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all resize-none text-sm"
                                 rows={2}
@@ -302,11 +333,11 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
                     <div className="space-y-8">
                         {[
-                            { id: "c1", label: "1. Is the Mission Statement aligned with the Vision of the Department?" },
-                            { id: "c2", label: "2. Does the Mission Statement adequately reflect teaching, research, and community engagement?" },
-                            { id: "c3", label: "3. Does it emphasize employability, entrepreneurship, and ethical values?" }
+                            { id: "c1", label: "Q1. The Mission clearly defines the purpose and objectives of the Department." },
+                            { id: "c2", label: "Q2. The Mission aligns with the University’s goals." },
+                            { id: "c3", label: "Q3. The Mission effectively supports holistic student development." }
                         ].map((q) => (
-                            <LikertQuestion 
+                            <LikertQuestion
                                 key={q.id}
                                 id={q.id}
                                 label={q.label}
@@ -315,13 +346,13 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                             />
                         ))}
                         <div className="space-y-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">4. Suggestions for improvement (if any):</label>
-                            <textarea 
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Suggestions for improvement (if any):</label>
+                            <textarea
                                 name="c4_suggestions"
                                 value={formData.c4_suggestions}
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all resize-none text-sm"
-                                rows={3}
+                                rows={2}
                             />
                         </div>
                     </div>
@@ -335,7 +366,7 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     </div>
 
                     <div className="p-5 bg-blue-50 border-l-4 border-[var(--dark-blue)] rounded-r-xl space-y-3">
-                        <h4 className="text-xs font-bold text-[var(--dark-blue)] uppercase tracking-widest font-plus-jakarta-sans">PEOs of the Department:</h4>
+                        <h4 className="text-xs font-bold text-[var(--dark-blue)] uppercase tracking-widest font-plus-jakarta-sans">Programme Educational Objectives (PEOs):</h4>
                         <ul className="text-xs text-gray-700 space-y-2 font-serif list-disc pl-4 italic">
                             {PEO_POINTS.map((p, i) => <li key={i}>{p}</li>)}
                         </ul>
@@ -343,11 +374,10 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
                     <div className="space-y-8">
                         {[
-                            { id: "d1", label: "1. Are the PEOs clearly stated and easy to understand?" },
-                            { id: "d2", label: "2. Do the PEOs reflect the expected professional and academic growth of graduates?" },
-                            { id: "d3", label: "3. Are the PEOs aligned with industry and societal needs?" }
+                            { id: "d1", label: "Q1. The PEOs are relevant to current professional, Student, societal, and industry requirements." },
+                            { id: "d2", label: "Q2. The PEOs are clearly defined and achievable." }
                         ].map((q) => (
-                            <LikertQuestion 
+                            <LikertQuestion
                                 key={q.id}
                                 id={q.id}
                                 label={q.label}
@@ -356,13 +386,13 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                             />
                         ))}
                         <div className="space-y-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">4. Suggestions for improvement (if any):</label>
-                            <textarea 
-                                name="d4_suggestions"
-                                value={formData.d4_suggestions}
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Suggestions for improvement (if any):</label>
+                            <textarea
+                                name="d3_suggestions"
+                                value={formData.d3_suggestions}
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all resize-none text-sm"
-                                rows={3}
+                                rows={2}
                             />
                         </div>
                     </div>
@@ -376,7 +406,7 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     </div>
 
                     <div className="p-5 bg-blue-50 border-l-4 border-[var(--dark-blue)] rounded-r-xl space-y-3">
-                        <h4 className="text-xs font-bold text-[var(--dark-blue)] uppercase tracking-widest font-plus-jakarta-sans">PSOs of the Department:</h4>
+                        <h4 className="text-xs font-bold text-[var(--dark-blue)] uppercase tracking-widest font-plus-jakarta-sans">Programme Specific Outcomes (PSOs):</h4>
                         <ul className="text-xs text-gray-700 space-y-2 font-serif list-disc pl-4 italic">
                             {PSO_POINTS.map((p, i) => <li key={i}>{p}</li>)}
                         </ul>
@@ -384,11 +414,10 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
 
                     <div className="space-y-8">
                         {[
-                            { id: "e1", label: "1. Are the PSOs relevant to current business and management practices?" },
-                            { id: "e2", label: "2. Do the PSOs reflect skills and competencies expected from management graduates?" },
-                            { id: "e3", label: "3. Are the PSOs aligned with Programme Outcomes?" }
+                            { id: "e1", label: "Q1. The PSOs are clear, measurable, and aligned with the program’s objectives." },
+                            { id: "e2", label: "Q2. The PSOs prepare students effectively for employability and entrepreneurship." }
                         ].map((q) => (
-                            <LikertQuestion 
+                            <LikertQuestion
                                 key={q.id}
                                 id={q.id}
                                 label={q.label}
@@ -397,19 +426,19 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                             />
                         ))}
                         <div className="space-y-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">4. Suggestions for improvement (if any):</label>
-                            <textarea 
-                                name="e4_suggestions"
-                                value={formData.e4_suggestions}
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Suggestions for improvement (if any):</label>
+                            <textarea
+                                name="e3_suggestions"
+                                value={formData.e3_suggestions}
                                 onChange={handleChange}
                                 className="w-full px-4 py-3 bg-gray-50 border-2 border-gray-100 rounded-xl focus:border-[var(--button-red)] focus:bg-white outline-none transition-all resize-none text-sm"
-                                rows={3}
+                                rows={2}
                             />
                         </div>
                     </div>
                 </div>
 
-                {/* Section F: Overall Feedback */}
+                {/* Section F: Overall */}
                 <div className="space-y-6">
                     <div className="flex items-center gap-4 border-b border-gray-100 pb-4">
                         <span className="bg-[var(--button-red)] text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">F</span>
@@ -417,15 +446,15 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     </div>
 
                     <div className="space-y-8">
-                        <LikertQuestion 
+                        <LikertQuestion
                             id="f1"
-                            label="1. Do you think Vision, Mission, PEOs, and PSOs collectively represent the core values and direction of the Department?"
+                            label="Q1. Overall, the Vision, Mission, PEOs, and PSOs are appropriate and relevant to the current academic, industrial, and societal context."
                             value={formData.f1}
                             onChange={handleLikertChange}
                         />
                         <div className="space-y-2">
-                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">2. Any general comments or suggestions for enhancement:</label>
-                            <textarea 
+                            <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider">Q2. Any general comments or suggestions for enhancement:</label>
+                            <textarea
                                 name="f2_comments"
                                 value={formData.f2_comments}
                                 onChange={handleChange}
@@ -440,8 +469,8 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                 <div className="pt-8 space-y-4">
                     <div className="max-w-xs space-y-2">
                         <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider underline">Signature *</label>
-                        <input 
-                            type="text" 
+                        <input
+                            type="text"
                             name="signature"
                             value={formData.signature}
                             onChange={handleChange}
@@ -458,7 +487,7 @@ export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
                     </p>
                     <AnimatePresence>
                         {error && (
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 20 }}
@@ -491,11 +520,10 @@ function LikertQuestion({ id, label, value, onChange }) {
                         key={opt.value}
                         type="button"
                         onClick={() => onChange(id, opt.value)}
-                        className={`p-2 py-3 rounded-xl border-2 transition-all flex flex-col items-center justify-center ${
-                            value === opt.value
-                            ? "border-[var(--button-red)] bg-red-50 text-[var(--button-red)] shadow-sm scale-[1.02]"
-                            : "border-gray-100 bg-gray-50 text-gray-400 hover:border-gray-200"
-                        }`}
+                        className={`p-2 py-3 rounded-xl border-2 transition-all flex flex-col items-center justify-center ${value === opt.value
+                                ? "border-[var(--button-red)] bg-red-50 text-[var(--button-red)] shadow-sm scale-[1.02]"
+                                : "border-gray-100 bg-gray-50 text-gray-400 hover:border-gray-200"
+                            }`}
                     >
                         <span className="text-[9px] font-bold uppercase text-center leading-tight tracking-tighter">{opt.label}</span>
                     </button>
