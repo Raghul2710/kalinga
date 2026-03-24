@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { submitSurvey } from "@/app/lib/survey";
 import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 
 const LIKERT_OPTIONS = [
@@ -37,7 +38,7 @@ const PSO_POINTS = [
     "PSO3: Ability to identify business opportunities, create innovative solutions, and demonstrate entrepreneurial skills to launch or scale ventures with sustainability in focus."
 ];
 
-export default function StakeholderFeedbackForm({ onSuccess }) {
+export default function StakeholderFeedbackForm({ courseId, onSuccess }) {
     const [formData, setFormData] = useState({
         name: "",
         role: "",
@@ -111,17 +112,46 @@ export default function StakeholderFeedbackForm({ onSuccess }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
-
+        
         setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
-            setIsSubmitting(false);
+        setError("");
+
+        try {
+            // Map the flat formData to the structured answers payload for the dynamic API
+            const answers = Object.entries(formData)
+                .filter(([key, value]) => value !== "" && key !== 'signature') // Skip empty fields and non-question fields
+                .map(([key, value]) => {
+                    const isLikert = /^[bcdef]1$|^b[23]$|^c[23]$|^d[23]$|^e[23]$/.test(key);
+                    return {
+                        question_id: key, // Using the field key as question_id identifier
+                        rating: isLikert ? parseInt(value, 10) : null,
+                        answer_text: !isLikert ? value : null
+                    };
+                });
+
+            // Add the signature as a special field
+            answers.push({
+                question_id: "signature",
+                rating: null,
+                answer_text: formData.signature
+            });
+
+            await submitSurvey({
+                course_id: String(courseId),
+                category: "stakeholder-feedback",
+                answers: answers
+            });
+
             setIsSubmitted(true);
-            console.log("External Stakeholder Form Submitted:", formData);
             if (onSuccess) {
                 setTimeout(onSuccess, 2000);
             }
-        }, 1500);
+        } catch (err) {
+            setError("Failed to submit feedback. Please try again.");
+            console.error("Submission Error:", err);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (isSubmitted) {

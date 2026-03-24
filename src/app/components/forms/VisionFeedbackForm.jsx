@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { submitSurvey } from "@/app/lib/survey";
 import SectionHeading from "@/app/components/general/SectionHeading";
 import GlobalArrowButton from "@/app/components/general/global-arrow_button";
 
@@ -39,7 +40,7 @@ const PSO_POINTS = [
     "PSO3: Ability to identify business opportunities, create innovative solutions, and demonstrate entrepreneurial skills to launch or scale ventures with sustainability in focus."
 ];
 
-export default function VisionFeedbackForm({ onSuccess }) {
+export default function VisionFeedbackForm({ courseId, onSuccess }) {
     const [formData, setFormData] = useState({
         name: "",
         role: "",
@@ -117,17 +118,46 @@ export default function VisionFeedbackForm({ onSuccess }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateForm()) return;
-
+        
         setIsSubmitting(true);
-        // Simulate API call
-        setTimeout(() => {
-            setIsSubmitting(false);
+        setError("");
+
+        try {
+            // Map the flat formData to the structured answers payload for the dynamic API
+            const answers = Object.entries(formData)
+                .filter(([key, value]) => value !== "" && key !== 'signature') // Skip empty fields and non-question fields
+                .map(([key, value]) => {
+                    const isLikert = /^[bcde][1-4]$|^q[1-3]$|^f1$/.test(key);
+                    return {
+                        question_id: key, // Using the field key as question_id identifier
+                        rating: isLikert ? parseInt(value, 10) : null,
+                        answer_text: !isLikert ? value : null
+                    };
+                });
+
+            // Add the signature as a special field
+            answers.push({
+                question_id: "signature",
+                rating: null,
+                answer_text: formData.signature
+            });
+
+            await submitSurvey({
+                course_id: String(courseId),
+                category: "vision-feedback",
+                answers: answers
+            });
+
             setIsSubmitted(true);
-            console.log("Form Submitted:", formData);
             if (onSuccess) {
                 setTimeout(onSuccess, 2000);
             }
-        }, 1500);
+        } catch (err) {
+            setError("Failed to submit feedback. Please try again.");
+            console.error("Submission Error:", err);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (isSubmitted) {

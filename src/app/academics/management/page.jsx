@@ -557,9 +557,9 @@ export default function ManagementDepartmentPage() {
                 title={feedbackModalConfig.title}
             >
                 {feedbackModalConfig.category === "vision-feedback" ? (
-                    <VisionFeedbackForm onSuccess={handleCloseSurvey} />
+                    <VisionFeedbackForm courseId={17} onSuccess={handleCloseSurvey} />
                 ) : feedbackModalConfig.category === "stakeholder-external" ? (
-                    <StakeholderFeedbackForm onSuccess={handleCloseSurvey} />
+                    <StakeholderFeedbackForm courseId={17} onSuccess={handleCloseSurvey} />
                 ) : (
                     <SurveyForm
                         courseId={17}
