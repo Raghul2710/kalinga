@@ -1028,5 +1028,125 @@
         "source": "/PO-PSO-CO/Bachelor-Of-Design",
         "destination": "/departments/faculty-of-science",
         "permanent": true
+    },
+    {
+        "source": "/governing-body",
+        "destination": "/about-us#governing-body",
+        "permanent": true
+    },
+    {
+        "source": "/board-of-management",
+        "destination": "/about-us#governing-body",
+        "permanent": true
+    },
+    {
+        "source": "/Academic-Council",
+        "destination": "/about-us#academic-council",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/internal_complaint_committee",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/grievance-redressal-committee",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/sexual-harassment-prevention-committee",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/research/ethics-committee-constitution",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/IIC/Composition",
+        "destination": "/institution-innovation-council",
+        "permanent": true
+    },
+    {
+        "source": "/anticommittee",
+        "destination": "/anti-ragging-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/iqaccomposition",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/grievancecell",
+        "destination": "/grievance-redressal",
+        "permanent": true
+    },
+    {
+        "source": "/research/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/obc-cell",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/sc-st-cell",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Commerce-and-Management",
+        "destination": "/departments/faculty-of-commerce-and-management",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/strategicplan",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/ideathon4.0",
+        "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/uba",
+        "destination": "/unnat-bharat-abhiyan",
+        "permanent": true
+    },
+    {
+        "source": "/ideathonprog",
+        "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/ideathon",
+        "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/IIC",
+        "destination": "/institution-innovation-council",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Commerce-and-Management/Library",
+        "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/alumni",
+        "destination": "/alumini",
+        "permanent": true
+    },
+    {
+        "source": "/alumniform",
+        "destination": "/alumini",
+        "permanent": true
     }
 ]
