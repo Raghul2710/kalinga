@@ -1060,11 +1060,6 @@
         "permanent": true
     },
     {
-        "source": "/research/ethics-committee-constitution",
-        "destination": "/other-committees",
-        "permanent": true
-    },
-    {
         "source": "/IIC/Composition",
         "destination": "/institution-innovation-council",
         "permanent": true
@@ -1101,7 +1096,7 @@
     },
     {
         "source": "/Faculty-of-Commerce-and-Management",
-        "destination": "/departments/faculty-of-commerce-and-management",
+        "destination": "/academics/management",
         "permanent": true
     },
     {
@@ -1147,6 +1142,31 @@
     {
         "source": "/alumniform",
         "destination": "/alumini",
+        "permanent": true
+    },
+    {
+        "source": "/research/ethics-committee-constitution",
+        "destination": "/brochure/Ethics-board.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Commerce-and-Management/Board-of-Studies",
+        "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/research/research-advisory-committee",
+        "destination": "/brochure/research-advisory-committee.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/Alumni-Cell",
+        "destination": "/brochure/alumni-details.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/research/research-consultancy-ipr-policy",
+        "destination": "/brochure/research-consultancy-ipr-policy.pdf",
         "permanent": true
     }
 ]
