@@ -45,27 +45,22 @@ const MentorIntroProps = [
 
 const committeeMembers = [
   {
-    sno: 1,
     name: "Dr. R. Uday Kumar, Dean CS & IT",
     position: "Head",
   },
   {
-    sno: 2,
     name: "Dr. Vijayalaxmi Biradar, Professor, Dept. of Engineering, Director IQAC",
-    position: "Member",
+    position: "Head",
   },
   {
-    sno: 3,
     name: "Dr. Rahul Mishra, Professor, Dept. of Engineering, DAA & COE",
     position: "Member",
   },
   {
-    sno: 4,
     name: "Dr. Sushma Dubey, Head Dept. of Biotechnology",
     position: "Member",
   },
   {
-    sno: 5,
     name: "Dr. Amit Joshi, Asst. Professor, Dept. Biotechnology, Asst. COE",
     position: "Member",
   },
@@ -80,7 +75,7 @@ export default function IPRCellPage() {
 
 
   const columns = [
-    { key: "sno", label: "S. No.", width: "w-24" },
+    // { key: "sno", label: "S. No.", width: "w-24" },
     { key: "name", label: "Name of member", width: "flex-1" },
     { key: "position", label: "Category", width: "w-40" },
   ];
@@ -128,11 +123,11 @@ export default function IPRCellPage() {
         buttonLink={IPR_READMORE_PDF}
       />
 
-      <div>
+      {/* <div>
         <MentorIntro items={MentorIntroProps} />
-      </div>
+      </div> */}
 
-      <section className="pb-12">
+      <section className="pb-12 pt-20">
         <div className="container mx-auto px-4 ">
           <h2 className="!font-stix text-4xl text-center">Our IPR Committee</h2>
 

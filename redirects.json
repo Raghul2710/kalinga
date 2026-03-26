@@ -1161,7 +1161,7 @@
     },
     {
         "source": "/Alumni-Cell",
-        "destination": "/brochure/alumni-details.pdf",
+        "destination": "/alumini",
         "permanent": true
     },
     {

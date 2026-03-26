@@ -192,6 +192,25 @@ function Academiccards() {
             logoSrc: "",
             subtitle: "DIGITAL EDUCATION",
         },
+        {
+            title: "Hostel",
+            description:
+                "We have fully-furnished hostels for girls and boys on our campus, where all necessary facilities are available along with tight security. We always strive to fulfil all the basic requirements of our hostelers, ensuring they never face any difficulty while living here.",
+            imageSrc:
+                "https://cdn.kalingauniversity.ac.in/campus-facilities/hostel.webp",
+            logoSrc: "",
+            subtitle: "STUDENT ACCOMMODATION",
+            link: "/hostel",
+        },
+        {
+            title: "Transportation Options",
+            description:
+                "We have 30+ buses and four-wheel vehicles that provide pick-up and drop facilities with a comfortable travelling experience. Transport is offered at minimal rates, with faculty assigned proctorial duties in the morning and evening. Our buses and cars cover distances up to 70 km (one way).",
+            imageSrc:
+                "https://cdn.kalingauniversity.ac.in/campus-life/transport-1.jpg",
+            logoSrc: "",
+            subtitle: "CAMPUS CONNECTIVITY",
+        }
     ];
 
 
