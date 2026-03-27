@@ -201,6 +201,7 @@ function Academiccards() {
             logoSrc: "",
             subtitle: "STUDENT ACCOMMODATION",
             link: "/hostel",
+            href: "/hostel",
         },
         {
             title: "Transportation Options",
@@ -210,6 +211,7 @@ function Academiccards() {
                 "https://cdn.kalingauniversity.ac.in/campus-life/transport-1.jpg",
             logoSrc: "",
             subtitle: "CAMPUS CONNECTIVITY",
+            href: "/transport-facility",
         }
     ];
 
@@ -219,9 +221,18 @@ function Academiccards() {
         const root = wrapperRef.current;
         if (!root) return;
 
-        // Hide all Know More buttons
-        root.querySelectorAll(".absolute.left-5.bottom-4").forEach((btn) => {
-            btn.style.display = "none";
+        // Hide all Know More buttons except for Hostel and Transportation Options
+        root.querySelectorAll(".bg-\\[var\\(--card-sandal\\)\\]").forEach((cardNode) => {
+            const h3 = cardNode.querySelector("h3");
+            const btn = cardNode.querySelector(".absolute.left-5.bottom-4");
+            if (h3 && btn) {
+                const title = h3.textContent.trim();
+                if (title === "Hostel" || title === "Transportation Options") {
+                    btn.style.display = "block"; // Ensure it's visible
+                } else {
+                    btn.style.display = "none";
+                }
+            }
         });
 
         // Reveal wrapper only after buttons are hidden

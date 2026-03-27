@@ -800,6 +800,51 @@ const FAQ = ({
       setUnifiedOpenId(prev => prev === fullId ? null : fullId)
     }
 
+    // Handle hash-based opening of sections
+    useEffect(() => {
+      const handleHashJump = () => {
+        if (typeof window !== 'undefined' && window.location.hash) {
+          const currentHash = window.location.hash.replace('#', '')
+          if (currentHash) {
+            // Check if any table section matches the hash
+            const matchingSection = tableSectionsList.find(s => slugify(s.title) === currentHash)
+            if (matchingSection) {
+              const sectionId = matchingSection.id || tableSectionsList.indexOf(matchingSection)
+              setUnifiedOpenId(`card-${sectionId}`)
+
+              // Reinforce scroll to the section
+              setTimeout(() => {
+                const element = document.getElementById(slugify(matchingSection.title))
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }, 100)
+              return;
+            }
+
+            // Check if any regular item matches the hash
+            const matchingItem = regularItems.find(item => slugify(item.question) === currentHash)
+            if (matchingItem) {
+              setUnifiedOpenId(`regular-${matchingItem.id}`)
+
+              // Reinforce scroll to the item
+              setTimeout(() => {
+                const element = document.getElementById(slugify(matchingItem.question))
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }, 100)
+            }
+          }
+        }
+      }
+
+      // Run on initial load and when hash changes
+      handleHashJump()
+      window.addEventListener('hashchange', handleHashJump)
+      return () => window.removeEventListener('hashchange', handleHashJump)
+    }, [tableSectionsList])
+
     return (
       <Wrapper id={id} className={`${backgroundColor} ${pyClassName}`}>
         <div className="container mx-auto px-2">
@@ -822,7 +867,7 @@ const FAQ = ({
               const isOpen = unifiedOpenId === fullId
 
               return (
-                <div key={section.id || index} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                <div key={section.id || index} id={slugify(section.title)} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                   <button
                     onClick={() => toggleUnified(sectionId, 'card')}
                     className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors"
@@ -965,6 +1010,7 @@ const FAQ = ({
               return (
                 <div
                   key={item.id}
+                  id={slugify(item.question)}
                   className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
                 >
                   <button

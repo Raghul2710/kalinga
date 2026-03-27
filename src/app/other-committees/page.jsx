@@ -20,7 +20,7 @@ export default function OtherCommittees() {
       { slNo: "5", name: "Mr. Manish Singh", position: "Chief Warden" },
       { slNo: "6", name: "Dr. A. Vijayanand", position: "Chief Proctor" },
       { slNo: "7", name: "Dr. Naresh Kumar Khunte", position: "Assistant Professor, Faculty of Technology" },
-      { slNo: "8", name: "Dr. Lincy Roy", position: "Head HR" },
+      { slNo: "8", name: "Dr. Lincy Roy", position: "Assistant Professor" },
     ],
   };
 

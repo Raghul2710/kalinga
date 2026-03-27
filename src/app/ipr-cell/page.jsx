@@ -44,10 +44,10 @@ const MentorIntroProps = [
 ];
 
 const committeeMembers = [
-  {
-    name: "Dr. R. Uday Kumar, Dean CS & IT",
-    position: "Head",
-  },
+  // {
+  //   name: "Dr. R. Uday Kumar, Dean CS & IT",
+  //   position: "Head",
+  // },
   {
     name: "Dr. Vijayalaxmi Biradar, Professor, Dept. of Engineering, Director IQAC",
     position: "Head",
