@@ -971,7 +971,7 @@
     },
     {
         "source": "/other-committees/minority-cell",
-        "destination": "/other-committees",
+        "destination": "/other-committees/#minority-cell",
         "permanent": true
     },
     {
