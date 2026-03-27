@@ -1046,17 +1046,17 @@
     },
     {
         "source": "/other-committees/internal_complaint_committee",
-        "destination": "/other-committees",
+        "destination": "/other-committees/#internal-complaint-committee",
         "permanent": true
     },
     {
         "source": "/other-committees/grievance-redressal-committee",
-        "destination": "/other-committees",
+        "destination": "/other-committees/#grievance-redressal-committee",
         "permanent": true
     },
     {
         "source": "/other-committees/sexual-harassment-prevention-committee",
-        "destination": "/other-committees",
+        "destination": "/other-committees/#women-cell-prevention-of-sexual-harassment-posh-committee",
         "permanent": true
     },
     {
@@ -1086,12 +1086,12 @@
     },
     {
         "source": "/other-committees/obc-cell",
-        "destination": "/other-committees",
+        "destination": "/other-committees/#obc-cell",
         "permanent": true
     },
     {
         "source": "/other-committees/sc-st-cell",
-        "destination": "/other-committees",
+        "destination": "/other-committees/#scst-cell",
         "permanent": true
     },
     {
