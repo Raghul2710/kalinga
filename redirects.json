@@ -1168,10 +1168,5 @@
         "source": "/research/research-consultancy-ipr-policy",
         "destination": "/brochure/research-consultancy-ipr-policy.pdf",
         "permanent": true
-    },
-    {
-        "source": "/brochure/alumni-details.pdf",
-        "destination": "/alumini",
-        "permanent": true
     }
 ]

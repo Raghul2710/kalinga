@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { submitForm } from "../../config/api";
 import FlipbookTrigger from "../general/FlipbookTrigger";
 
@@ -1529,6 +1529,32 @@ export default function IqacTabSection() {
   });
   const [activeFeedbackModal, setActiveFeedbackModal] = useState(null);
 
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== 'undefined' && window.location.hash) {
+        const hash = window.location.hash.replace('#', '');
+        if (hash.endsWith('-iqac')) {
+          const tabId = hash.replace('-iqac', '');
+          // Check if tabId exists in IQAC_TABS
+          const tabExists = IQAC_TABS.some(t => t.id === tabId);
+          if (tabExists) {
+            setActiveTab(tabId);
+            setTimeout(() => {
+              const element = document.getElementById(hash);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 100);
+          }
+        }
+      }
+    };
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
+
   const handleTabClick = (tabId) => {
     setActiveTab(tabId);
   };
@@ -1625,7 +1651,7 @@ export default function IqacTabSection() {
           </div>
 
           {/* Content Area - White Background */}
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full" id={`${activeTab}-iqac`}>
             <div className="rounded-[16px] bg-white p-4 md:p-5 shadow-sm h-full flex flex-col">
               {/* Objectives Tab */}
               {activeTab === "objectives" && (

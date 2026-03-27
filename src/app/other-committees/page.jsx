@@ -36,7 +36,7 @@ export default function OtherCommittees() {
     data: [
       { slNo: "1", name: "Dr. Rahul Mishra", position: "Dean, Academic Affairs – Chairperson of the Committee" },
       { slNo: "2", name: "Dr. Lincy Roy", position: "Assistant Professor" },
-      { slNo: "3", name: "Dr. C. P. Jawahar", position: "Dean, Faculty of Technology" },
+      { slNo: "3", name: "Dr. V.C Jha", position: "Dean, Faculty of Technology" },
       { slNo: "4", name: "Dr. Shilpi Bhattacharya", position: "Dean, Faculty of Arts & Humanities" },
       { slNo: "5", name: "Dr. A. Vijayanand", position: "Chief Proctor" },
       { slNo: "6", name: "Dr. Shilpi Shrivastava", position: "HoD, Dept. of Chemistry" },
