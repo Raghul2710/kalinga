@@ -1639,6 +1639,7 @@ export default function IqacTabSection() {
                   return (
                     <button
                       key={tab.id}
+                      id={`${tab.id}-iqac`}
                       onClick={() => handleTabClick(tab.id)}
                       className={className}
                     >
@@ -1651,7 +1652,7 @@ export default function IqacTabSection() {
           </div>
 
           {/* Content Area - White Background */}
-          <div className="flex-1 w-full" id={`${activeTab}-iqac`}>
+          <div className="flex-1 w-full">
             <div className="rounded-[16px] bg-white p-4 md:p-5 shadow-sm h-full flex flex-col">
               {/* Objectives Tab */}
               {activeTab === "objectives" && (
