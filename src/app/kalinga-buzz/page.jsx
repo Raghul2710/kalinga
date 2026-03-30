@@ -12,110 +12,110 @@ export const dynamic = 'force-dynamic';
 
 export default function KalingaBuzz() {
 
-  const buttons = [
-    {
-      id: 1,
-      text: "Kalinga Buzz July 2019",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/July+2019.pdf",
-    },
-    {
-      id: 2,
-      text: "Kalinga Buzz August 2019",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Aug+2019.pdf",
-    },
-    {
-      id: 3,
-      text: "Kalinga Buzz September 2019",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Sep+2019.pdf",
-    },
-    {
-      id: 4,
-      text: "Kalinga Buzz October 2019",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Oct+2019.pdf",
-    },
-    {
-      id: 5,
-      text: "Kalinga Buzz November 2019",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Nov+2019.pdf",
-    },
-    {
-      id: 6,
-      text: "Kalinga Buzz December 2019",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Dec+2019.pdf",
-    },
-  ];
+  // const buttons = [
+  //   {
+  //     id: 1,
+  //     text: "Kalinga Buzz July 2019",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/July+2019.pdf",
+  //   },
+  //   {
+  //     id: 2,
+  //     text: "Kalinga Buzz August 2019",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Aug+2019.pdf",
+  //   },
+  //   {
+  //     id: 3,
+  //     text: "Kalinga Buzz September 2019",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Sep+2019.pdf",
+  //   },
+  //   {
+  //     id: 4,
+  //     text: "Kalinga Buzz October 2019",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Oct+2019.pdf",
+  //   },
+  //   {
+  //     id: 5,
+  //     text: "Kalinga Buzz November 2019",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Nov+2019.pdf",
+  //   },
+  //   {
+  //     id: 6,
+  //     text: "Kalinga Buzz December 2019",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Dec+2019.pdf",
+  //   },
+  // ];
 
-  const buttons2 = [
-    {
-      id: 1,
-      text: "Kalinga Buzz January 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Jan+2020.pdf",
-    },
-    {
-      id: 2,
-      text: "Kalinga Buzz February 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Feb+2020.pdf",
-    },
-    {
-      id: 3,
-      text: "Kalinga Buzz March 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+March+2020.pdf",
-    },
-    {
-      id: 4,
-      text: "Kalinga Buzz April 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+April+2020.pdf",
-    },
-    {
-      id: 5,
-      text: "Kalinga Buzz May 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+May+2020.pdf",
-    },
-    {
-      id: 6,
-      text: "Kalinga Buzz June 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+June+2020.pdf",
-    },
-    {
-      id: 7,
-      text: "Kalinga Buzz July 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+July+2020.pdf",
-    },
-    {
-      id: 8,
-      text: "Kalinga Buzz September 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+September+2020.pdf",
-    },
-    {
-      id: 10,
-      text: "Kalinga Buzz November 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+November+2020.pdf",
-    },
-    {
-      id: 11,
-      text: "Kalinga Buzz December 2020",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Dec+2020.pdf",
-    },
-  ];
+  // const buttons2 = [
+  //   {
+  //     id: 1,
+  //     text: "Kalinga Buzz January 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Jan+2020.pdf",
+  //   },
+  //   {
+  //     id: 2,
+  //     text: "Kalinga Buzz February 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Feb+2020.pdf",
+  //   },
+  //   {
+  //     id: 3,
+  //     text: "Kalinga Buzz March 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+March+2020.pdf",
+  //   },
+  //   {
+  //     id: 4,
+  //     text: "Kalinga Buzz April 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+April+2020.pdf",
+  //   },
+  //   {
+  //     id: 5,
+  //     text: "Kalinga Buzz May 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+May+2020.pdf",
+  //   },
+  //   {
+  //     id: 6,
+  //     text: "Kalinga Buzz June 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+June+2020.pdf",
+  //   },
+  //   {
+  //     id: 7,
+  //     text: "Kalinga Buzz July 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+July+2020.pdf",
+  //   },
+  //   {
+  //     id: 8,
+  //     text: "Kalinga Buzz September 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+September+2020.pdf",
+  //   },
+  //   {
+  //     id: 10,
+  //     text: "Kalinga Buzz November 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+November+2020.pdf",
+  //   },
+  //   {
+  //     id: 11,
+  //     text: "Kalinga Buzz December 2020",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Dec+2020.pdf",
+  //   },
+  // ];
 
-  const buttons3 = [
-    {
-      id: 1,
-      text: "Kalinga Buzz January 2021",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+jan+2021.pdf",
-    },
-    {
-      id: 2,
-      text: "Kalinga Buzz February 2021",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Feb+2021.pdf",
-    },
-    {
-      id: 3,
-      text: "Kalinga Buzz April 2021",
-      href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+april+2021.pdf",
-    },
+  // const buttons3 = [
+  //   {
+  //     id: 1,
+  //     text: "Kalinga Buzz January 2021",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+jan+2021.pdf",
+  //   },
+  //   {
+  //     id: 2,
+  //     text: "Kalinga Buzz February 2021",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+Feb+2021.pdf",
+  //   },
+  //   {
+  //     id: 3,
+  //     text: "Kalinga Buzz April 2021",
+  //     href: "https://cdn.kalingauniversity.ac.in/buzz/Kalinga+Buzz+april+2021.pdf",
+  //   },
 
-  ];
+  // ];
 
   const buttons4 = [
     {
@@ -178,9 +178,9 @@ export default function KalingaBuzz() {
       />
       <KalingaBuzzTabs
         year2025={buttons4}
-        year2021={buttons3}
-        year2020={buttons2}
-        year2019={buttons}
+      // year2021={buttons3}
+      // year2020={buttons2}
+      // year2019={buttons}
       />
 
 

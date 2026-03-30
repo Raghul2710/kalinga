@@ -85,7 +85,7 @@ function NewsletterCard({ title, href }) {
     );
 }
 
-export default function KalingaBuzzTabs({ year2025, year2021, year2020, year2019 }) {
+export default function KalingaBuzzTabs({ year2025 }) {
     return (
         <section className="w-full">
             <style jsx>{`
@@ -120,24 +120,24 @@ export default function KalingaBuzzTabs({ year2025, year2021, year2020, year2019
                                 >
                                     Kalinga Buzz 2025
                                 </TabsTrigger>
-                                <TabsTrigger
+                                {/* <TabsTrigger
                                     value="2021"
                                     className="flex-shrink-0 min-w-[140px] md:flex-1 break-words whitespace-nowrap shadow-sm"
                                 >
                                     Kalinga Buzz 2021
-                                </TabsTrigger>
-                                <TabsTrigger
+                                </TabsTrigger> */}
+                                {/* <TabsTrigger
                                     value="2020"
                                     className="flex-shrink-0 min-w-[140px] md:flex-1 break-words whitespace-nowrap shadow-sm"
                                 >
                                     Kalinga Buzz 2020
-                                </TabsTrigger>
-                                <TabsTrigger
+                                </TabsTrigger> */}
+                                {/* <TabsTrigger
                                     value="2019"
                                     className="flex-shrink-0 min-w-[140px] md:flex-1 break-words whitespace-nowrap shadow-sm"
                                 >
                                     Kalinga Buzz 2019
-                                </TabsTrigger>
+                                </TabsTrigger> */}
                             </TabsList>
                         </div>
 
@@ -151,29 +151,29 @@ export default function KalingaBuzzTabs({ year2025, year2021, year2020, year2019
                                 </div>
                             </TabsContent>
 
-                            <TabsContent value="2021" className="mt-0">
+                            {/* <TabsContent value="2021" className="mt-0">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                     {year2021?.map((item) => (
                                         <NewsletterCard key={item.id} title={item.text} href={item.href} />
                                     ))}
                                 </div>
-                            </TabsContent>
+                            </TabsContent> */}
 
-                            <TabsContent value="2020" className="mt-0">
+                            {/* <TabsContent value="2020" className="mt-0">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                     {year2020?.map((item) => (
                                         <NewsletterCard key={item.id} title={item.text} href={item.href} />
                                     ))}
                                 </div>
-                            </TabsContent>
+                            </TabsContent> */}
 
-                            <TabsContent value="2019" className="mt-0">
+                            {/* <TabsContent value="2019" className="mt-0">
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                                     {year2019?.map((item) => (
                                         <NewsletterCard key={item.id} title={item.text} href={item.href} />
                                     ))}
                                 </div>
-                            </TabsContent>
+                            </TabsContent> */}
                         </div>
                     </Tabs>
                 </div>

@@ -8,6 +8,7 @@ import ProgramsOffered from '../components/department/programs-offered';
 import OurPrograms from '../components/admissions/our_programs';
 import MentorIntro from '../components/department/dept_head_intro';
 import QuickLinks from '../components/general/quick_links';
+import SectionHeading from '../components/general/SectionHeading';
 
 const JournalOfLawAndAIPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -119,6 +120,11 @@ const JournalOfLawAndAIPage = () => {
     const consolidatedFAQItems = [
         {
             id: 1,
+            question: "Standard Format- Research Papers",
+            file: "https://cdn.kalingauniversity.ac.in/journal-of-law-and-artificial-intelligence/Standard-format-research-paper.pdf"
+        },
+        {
+            id: 2,
             question: "Format and Citation Guidelines",
             answer: `
                 <p><strong>File Format:</strong> Please submit your manuscript in a Microsoft Word-compatible format (.doc or .docx is preferred).</p>
@@ -135,10 +141,9 @@ const JournalOfLawAndAIPage = () => {
             `
         },
         {
-            id: 2,
+            id: 3,
             question: "Submission Procedure",
             answer: `
-                <p><strong>Submission Format:</strong> Submit your manuscript at <a href="mailto:legal.writing@kalingauniversity.ac.in" class="text-[var(--button-red)] hover:underline">legal.writing@kalingauniversity.ac.in</a></p>
                 <p><strong>File Naming:</strong> The file name should include the Name of the Author(s) followed by the Title of the Submission.</p>
                 <p><strong>Google Form Links:</strong></p>
                 <ul class="list-disc pl-5 space-y-1">
@@ -146,11 +151,11 @@ const JournalOfLawAndAIPage = () => {
                     <li>For UG students (Kalinga University): <a href="https://forms.gle/N77FPt187xKoKrYWA" target="_blank" class="text-[var(--button-red)] hover:underline">https://forms.gle/N77FPt187xKoKrYWA</a></li>
                     <li>For Others: <a href="https://forms.gle/8TWD7SKB8ic7R5Js7" target="_blank" class="text-[var(--button-red)] hover:underline">https://forms.gle/8TWD7SKB8ic7R5Js7</a></li>
                 </ul>
-                <p><strong>Paper Processing and Publication charges:</strong> 1500 INR</p>
+                <p class="text-black px-1 rounded font-bold">Paper Processing and Publication charges: 1500 INR</p>
             `
         },
         {
-            id: 3,
+            id: 4,
             question: "Publication Policy",
             answer: `
                 <p><strong>Originality and Exclusivity:</strong> Submissions must be the original work of the author(s) and must not have been published elsewhere. Any submission found to contain plagiarized content or facing copyright issues will be promptly rejected.</p>
@@ -160,7 +165,7 @@ const JournalOfLawAndAIPage = () => {
             `
         },
         {
-            id: 4,
+            id: 5,
             question: "Call for Papers- Volume I, Issue 2",
             answer: `
                 <p>The Journal of Law and Artificial Intelligence invites submissions for Volume I, Issue 2 on the themes:</p>
@@ -199,7 +204,12 @@ const JournalOfLawAndAIPage = () => {
                 </div>
                 <p class="mt-4">Note: The above sub-themes are only illustrative. The Journal of Law and Artificial Intelligence would welcome papers on other topics related to the main theme.</p>
             `
-        }
+        },
+        {
+            id: 6,
+            question: "Call for Papers Volume II, Issue 1",
+            image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/journal-of-law-and-artificial-intelligence/Call-for-paper.webp"
+        },
     ];
 
     const archivesData = [
@@ -367,7 +377,7 @@ const JournalOfLawAndAIPage = () => {
         department: "For Any Query and Clarifications, Contact Us At:",
         quote: "<strong>Address:</strong> Editor-in-chief, Kalinga University, Near Mantralaya, Kotni, Atal Nagar-Naya Raipur, Chhattisgarh 492101",
         contactInfo: {
-            email: "jlai@jlai@kalingauniversity.ac.in",
+            email: "jlai@kalingauniversity.ac.in",
             phone: "+917024116971"
         },
         imageSrc: "https://cdn.kalingauniversity.ac.in/laboratories/laboratories-mainintro.webp",
@@ -375,95 +385,104 @@ const JournalOfLawAndAIPage = () => {
     };
 
     return (
-        <div className="pt-[100px] md:pt-0">
-            <MainIntro
-                title="Journal of Law and Artificial Intelligence"
-                subtitle="Faculty of Law"
-                description={[
-                    "The Journal of Law and Artificial Intelligence is a pioneering, peer-reviewed, bi-annual academic publication dedicated to examining the evolving relationship between law and artificial intelligence. At the forefront of contemporary scholarship, JLAI serves as a premier platform for critical inquiry, innovative research, and interdisciplinary dialogue at the intersection of legal studies and emerging technologies.",
-                    "In a rapidly transforming digital world, artificial intelligence is reshaping legal systems, regulatory frameworks, and notions of justice. JLAI seeks to explore these transformative impacts by fostering an inclusive and intellectually vibrant space where scholars, practitioners, technologists, and policymakers can converge. Our mission is to advance legal scholarship that not only engages with the implications of AI and machine learning but also contextualizes their role within broader societal, ethical, and economic dimensions.",
-                    "The journal welcomes submissions that offer original research, critical analysis, case studies, and comprehensive reviews on a wide array of topics, including but not limited to AI regulation, algorithmic governance, digital rights, legal automation, ethics in AI, and the future of legal practice in the age of intelligent systems.",
-                    "By embracing an interdisciplinary approach, JLAI aims to bridge traditional legal paradigms with insights from computer science, philosophy, economics, sociology, and data science. We believe that understanding the legal challenges posed by AI technologies requires not only legal expertise but also the perspectives of adjacent disciplines.",
-                    "We invite scholars and professionals to contribute to this timely and vital discourse. Join us in shaping the future of legal thought and innovation through the lens of artificial intelligence.",
-                    "Frequency: Bi-Annual | Medium: Online Only | Subject focus: Multidisciplinary Subject | Language: English only"
-                ]}
-                imageUrl="https://cdn.kalingauniversity.ac.in/research/research-main-content.webp"
-                imageAlt="Journal of Law and Artificial Intelligence"
-                showKnowMore={true}
-                knowMoreLabel="Editorial Board"
-                knowMoreHref="#"
-                onKnowMore={(e) => {
-                    e.preventDefault();
-                    setSelectedMember(editorialBoardData[0]); // Default to Editor-in-chief
-                    setIsModalOpen(true);
-                }}
-                initialVisibleParagraphs={2}
-            />
+        <>
+            <div className="pt-[100px] md:pt-0">
+                <div className="container mx-auto px-4 mt-8 mb-4">
+                    <SectionHeading
+                        title="E-ISSN: 3107-8524"
+                        titleClassName="text-center md:text-[40px]"
+                        titleTextColor="text-[#001f3f]"
+                    />
+                </div>
+                <MainIntro
+                    title="Journal of Law and Artificial Intelligence"
+                    subtitle="Faculty of Law"
+                    description={[
+                        "The Journal of Law and Artificial Intelligence is a pioneering, peer-reviewed, bi-annual academic publication dedicated to examining the evolving relationship between law and artificial intelligence. At the forefront of contemporary scholarship, JLAI serves as a premier platform for critical inquiry, innovative research, and interdisciplinary dialogue at the intersection of legal studies and emerging technologies.",
+                        "In a rapidly transforming digital world, artificial intelligence is reshaping legal systems, regulatory frameworks, and notions of justice. JLAI seeks to explore these transformative impacts by fostering an inclusive and intellectually vibrant space where scholars, practitioners, technologists, and policymakers can converge. Our mission is to advance legal scholarship that not only engages with the implications of AI and machine learning but also contextualizes their role within broader societal, ethical, and economic dimensions.",
+                        "The journal welcomes submissions that offer original research, critical analysis, case studies, and comprehensive reviews on a wide array of topics, including but not limited to AI regulation, algorithmic governance, digital rights, legal automation, ethics in AI, and the future of legal practice in the age of intelligent systems.",
+                        "By embracing an interdisciplinary approach, JLAI aims to bridge traditional legal paradigms with insights from computer science, philosophy, economics, sociology, and data science. We believe that understanding the legal challenges posed by AI technologies requires not only legal expertise but also the perspectives of adjacent disciplines.",
+                        "We invite scholars and professionals to contribute to this timely and vital discourse. Join us in shaping the future of legal thought and innovation through the lens of artificial intelligence.",
+                        "Frequency: Bi-Annual | Medium: Online Only | Subject focus: Multidisciplinary Subject | Language: English only"
+                    ]}
+                    imageUrl="https://cdn.kalingauniversity.ac.in/research/research-main-content.webp"
+                    imageAlt="Journal of Law and Artificial Intelligence"
+                    showKnowMore={true}
+                    knowMoreLabel="Read More"
+                    knowMoreHref="#"
+                    onKnowMore={(e) => {
+                        e.preventDefault();
+                        setSelectedMember(editorialBoardData[0]); // Default to Editor-in-chief
+                        setIsModalOpen(true);
+                    }}
+                    initialVisibleParagraphs={2}
+                />
 
-            <ImageListItem
-                items={aimsAndScopeItems}
-                imageSrc="https://cdn.kalingauniversity.ac.in/campus-life/whywork.webp"
-                title="Aims and Scope"
-                description="Starting year of the Publication: 2025. The Journal is dedicated to examining the evolving intersections of law, technology, and society across the globe. The Journal of Law and Artificial Intelligence is a peer-reviewed, bi-annual academic publication dedicated to examining the evolving intersections of law, technology, and society. It provides a dynamic platform for multidisciplinary scholarship that critically engages with how law and artificial intelligence are reshaping legal systems, rights, responsibilities, and governance across the globe."
-                buttonText="Read More"
-                className="!bg-white"
-                textClassName="text-gray-700"
-                titleTextColor="text-[var(--foreground)]"
-                headingClassName=""
-            />
+                <ImageListItem
+                    items={aimsAndScopeItems}
+                    imageSrc="https://cdn.kalingauniversity.ac.in/campus-life/whywork.webp"
+                    title="Aims and Scope"
+                    description="Starting year of the Publication: 2025. The Journal is dedicated to examining the evolving intersections of law, technology, and society across the globe. The Journal of Law and Artificial Intelligence is a peer-reviewed, bi-annual academic publication dedicated to examining the evolving intersections of law, technology, and society. It provides a dynamic platform for multidisciplinary scholarship that critically engages with how law and artificial intelligence are reshaping legal systems, rights, responsibilities, and governance across the globe."
+                    buttonText="Read More"
+                    className="!bg-white"
+                    textClassName="text-gray-700"
+                    titleTextColor="text-[var(--foreground)]"
+                    headingClassName=""
+                />
 
-            <FAQ
-                title="Format, Citation & Policy"
-                subtitle="Guidelines"
-                items={consolidatedFAQItems}
-            />
+                <FAQ
+                    title="Format, Citation & Policy"
+                    subtitle="Guidelines"
+                    items={consolidatedFAQItems}
+                />
 
-            <QuickLinks
-                title="Journal Policies & Information"
-                description="Explore the standards and processes that govern the Journal of Law and Artificial Intelligence."
-                links={journalQuickLinks}
-                backgroundColor="bg-[var(--dark-blue)]"
-                textColorClassName="text-white"
-                titleClassName="text-white"
-            />
+                <QuickLinks
+                    title="Journal Policies & Information"
+                    description="Explore the standards and processes that govern the Journal of Law and Artificial Intelligence."
+                    links={journalQuickLinks}
+                    backgroundColor="bg-[var(--dark-blue)]"
+                    textColorClassName="text-white"
+                    titleClassName="text-white"
+                />
 
-            <ProgramsOffered
-                title="Archives"
-                description="Explore past volumes and issues of the Journal of Law and Artificial Intelligence."
-                programs={archivesData}
-                exploreLabel="Download PDF"
-                searchPlaceholder="Search Archives...."
-                hideSearch={false}
-                backgroundImage="https://cdn.kalingauniversity.ac.in/international-students/student-cell.webp"
-                backgroundColor="bg-white"
-                textColor="text-gray-700"
-                titleColor="text-[var(--foreground)]"
-            />
+                <ProgramsOffered
+                    title="Archives"
+                    description="Explore past volumes and issues of the Journal of Law and Artificial Intelligence."
+                    programs={archivesData}
+                    exploreLabel="Download PDF"
+                    searchPlaceholder="Search Archives...."
+                    hideSearch={false}
+                    backgroundImage="https://cdn.kalingauniversity.ac.in/international-students/student-cell.webp"
+                    backgroundColor="bg-white"
+                    textColor="text-gray-700"
+                    titleColor="text-[var(--foreground)]"
+                />
 
-            <OurPrograms
-                customPrograms={editorialBoardData.map(p => ({ ...p, hideApplyNow: true }))}
-                customTitle="Editorial Board Members"
-                customSubtitle="Our distinguished members"
-                hideSearchFilter={true}
-                backgroundColor="bg-white"
-                onExploreProgramClick={(program) => {
-                    setSelectedMember(program);
-                    setIsModalOpen(true);
-                }}
-                onCheckEligibility={(program) => {
-                    setSelectedMember(program);
-                    setIsModalOpen(true);
-                }}
-            />
+                <OurPrograms
+                    customPrograms={editorialBoardData.map(p => ({ ...p, hideApplyNow: true }))}
+                    customTitle="Editorial Board Members"
+                    customSubtitle="Our distinguished members"
+                    hideSearchFilter={true}
+                    backgroundColor="bg-white"
+                    onExploreProgramClick={(program) => {
+                        setSelectedMember(program);
+                        setIsModalOpen(true);
+                    }}
+                    onCheckEligibility={(program) => {
+                        setSelectedMember(program);
+                        setIsModalOpen(true);
+                    }}
+                />
 
-            <MentorIntro {...contactInfo} />
+                <MentorIntro {...contactInfo} />
 
-            <EditorialBoardModal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                member={selectedMember}
-            />
-        </div>
+                <EditorialBoardModal
+                    isOpen={isModalOpen}
+                    onClose={() => setIsModalOpen(false)}
+                    member={selectedMember}
+                />
+            </div>
+        </>
     );
 };
 

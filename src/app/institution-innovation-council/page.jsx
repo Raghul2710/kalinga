@@ -243,30 +243,30 @@ export default function InstitutionInnovationCouncil() {
         description={false}
       />
 
-      <div className="container mx-auto mt-16 bg-[var(--lite-sand)] p-6 rounded-xl">
-        <h2 className="font-stix text-2xl md:text-[36px] text-center text-[var(--foreground)] mb-6">
-          IIC Committee
-        </h2>
+      <div className="container mx-auto mt-16 bg-[var(--lite-sand)] p-6 rounded-xl" id="iic-committee">
+      <h2 className="font-stix text-2xl md:text-[36px] text-center text-[var(--foreground)] mb-6">
+        IIC Committee
+      </h2>
 
-        <div className="overflow-x-auto">
-          <DataTable
-            columns={[
-              { key: "memberType", label: "Member Type", width: "w-[35%]" },
-              { key: "role", label: "Key Role / Position Assigned in IIC", width: "w-[65%]" },
-            ]}
-            data={iicCommitteeTable}
-            overflowX={true}
-            className="shadow-none"
-            headerBgColor="bg-[var(--button-red)]"
-            headerTextColor="text-white"
-            evenRowBg="bg-white"
-            oddRowBg="bg-gray-50"
-          />
-        </div>
+      <div className="overflow-x-auto">
+        <DataTable
+          columns={[
+            { key: "memberType", label: "Member Type", width: "w-[35%]" },
+            { key: "role", label: "Key Role / Position Assigned in IIC", width: "w-[65%]" },
+          ]}
+          data={iicCommitteeTable}
+          overflowX={true}
+          className="shadow-none"
+          headerBgColor="bg-[var(--button-red)]"
+          headerTextColor="text-white"
+          evenRowBg="bg-white"
+          oddRowBg="bg-gray-50"
+        />
       </div>
+    </div>
 
-      {/* ---------------- Kalinga Incubation Foundation ---------------- */}
-      {/* <ImageContent
+      {/* ---------------- Kalinga Incubation Foundation ---------------- */ }
+  {/* <ImageContent
         title=" About Kalinga Incubation Foundation"
         subtitle={false}
         description="KIF was established in ----, where students' bold and unique ideas are supported so that their entrepreneurial ambitions can be turned into ACTION. Our motive is to promote the spirit of research, innovation, and entrepreneurship among students and faculty members of our university."
@@ -361,7 +361,7 @@ export default function InstitutionInnovationCouncil() {
 
         </div>
       </section>
-      {/* <MasterClassTab
+  {/* <MasterClassTab
         tab1Title="Foundation level"
         tab2Title="Advanced level"
 
@@ -370,7 +370,7 @@ export default function InstitutionInnovationCouncil() {
 
 
       /> */}
-      {/* ---------------- IIC Training Achievements ---------------- */}
+  {/* ---------------- IIC Training Achievements ---------------- */ }
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <SectionHeading
@@ -495,7 +495,7 @@ Kalinga University hosted its first session of the Impact Lecture Series on 15th
 
         ]}
       />
-    </div>
+    </div >
   );
 }
 
