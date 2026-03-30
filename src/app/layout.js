@@ -145,6 +145,21 @@ export default function RootLayout({ children }) {
             title="Google Tag Manager"
           />
         </noscript>
+        {/* NoPaperForms Tracking Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var npf_d='https://admissions.kalingauniversity.ac.in';
+              var npf_c='642';
+              var npf_m='1';
+              var s=document.createElement("script");
+              s.type="text/javascript";
+              s.async=true;
+              s.src="https://track.nopaperforms.com/js/track.js";
+              document.body.appendChild(s);
+            `
+          }}
+        />
         <ChatbotProvider>
           <FlipbookProvider>
             <ClickSparkWrapper>
