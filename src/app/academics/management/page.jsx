@@ -437,12 +437,14 @@ export default function ManagementDepartmentPage() {
             <div id="research" className="scroll-mt-24 md:scroll-mt-28">
                 <ResearchPublicationsTabs />
             </div>
-            <StudentCell
-                subtitle=""
-                title="Library"
-                imageSrc="https://cdn.kalingauniversity.ac.in/facilities/library-new.webp"
-                imageAlt="Kalinga University Central Library"
-                description="Kalinga University, Raipur, hosts a modern and fully digitized Central Library that serves as a pivotal academic resource center supporting the learning, teaching, and research needs of the MBA program. Designed to foster a scholarly environment, the library integrates both traditional and digital resources with state-of-the-art services. 
+
+            <div id="library" className="scroll-mt-24 md:scroll-mt-28">
+                <StudentCell
+                    subtitle=""
+                    title="Library"
+                    imageSrc="https://cdn.kalingauniversity.ac.in/facilities/library-new.webp"
+                    imageAlt="Kalinga University Central Library"
+                    description="Kalinga University, Raipur, hosts a modern and fully digitized Central Library that serves as a pivotal academic resource center supporting the learning, teaching, and research needs of the MBA program. Designed to foster a scholarly environment, the library integrates both traditional and digital resources with state-of-the-art services. 
                 
                 1. Kalinga University Central Library has 92000+ books and has also subscribed to more than 38,000 National and International e-Journals.
                 2. It has a reading room capacity for 400 students that is divided into 2 halls of 200 each.
@@ -453,35 +455,36 @@ export default function ManagementDepartmentPage() {
                 7. The library provides separate e-resource for faculty and research scholars.
                 
                 Budget: The University allots a specific budget to the library for upgradation its physical and e-resource facilities."
-                functionsTitle="Library Resources & Automation"
-                functionsSubtitle="Management Department Specifics & Digital Services:"
-                functionsList={[
-                    "Comprehensive collection of 10,681 volumes of management books",
-                    "1,674 e-journals and 4 major e-databases",
-                    "Robust collection of reference materials and competitive exam guides",
-                    "Special sections for student project reports and newspapers/magazines",
-                    "Fully automated using KOHA Library Management Software",
-                    "Real-time computerized cataloguing and circulation",
-                    "Online Public Access Catalogue (OPAC)",
-                    "Wi-Fi-enabled digital access terminals (50 computers)",
-                    "Turnitin and Drillbit anti-plagiarism softwares",
-                    "INFEED platform for remote access"
-                ]}
-                buttons={[
-                    {
-                        id: 1,
-                        text: "Management Journal List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Journal-List.pdf",
-                        disableFlipbook: true
-                    },
-                    {
-                        id: 2,
-                        text: "Management Title List",
-                        fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Title-List.pdf",
-                        disableFlipbook: true
-                    }
-                ]}
-            />
+                    functionsTitle="Library Resources & Automation"
+                    functionsSubtitle="Management Department Specifics & Digital Services:"
+                    functionsList={[
+                        "Comprehensive collection of 10,681 volumes of management books",
+                        "1,674 e-journals and 4 major e-databases",
+                        "Robust collection of reference materials and competitive exam guides",
+                        "Special sections for student project reports and newspapers/magazines",
+                        "Fully automated using KOHA Library Management Software",
+                        "Real-time computerized cataloguing and circulation",
+                        "Online Public Access Catalogue (OPAC)",
+                        "Wi-Fi-enabled digital access terminals (50 computers)",
+                        "Turnitin and Drillbit anti-plagiarism softwares",
+                        "INFEED platform for remote access"
+                    ]}
+                    buttons={[
+                        {
+                            id: 1,
+                            text: "Management Journal List",
+                            fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Journal-List.pdf",
+                            disableFlipbook: true
+                        },
+                        {
+                            id: 2,
+                            text: "Management Title List",
+                            fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Title-List.pdf",
+                            disableFlipbook: true
+                        }
+                    ]}
+                />
+            </div>
 
             <OrganogramOfKalinga
                 title="Feedback"

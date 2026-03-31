@@ -1136,7 +1136,7 @@
     },
     {
         "source": "/Faculty-of-Commerce-and-Management/Library",
-        "destination": "/academics/management",
+        "destination": "/academics/management/#library",
         "permanent": true
     },
     {
@@ -1172,6 +1172,11 @@
     {
         "source": "/research/research-consultancy-ipr-policy",
         "destination": "/brochure/research-consultancy-ipr-policy.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/Sustainable-Initiatives",
+        "destination": "/sustainability",
         "permanent": true
     }
 ]
