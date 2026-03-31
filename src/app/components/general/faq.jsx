@@ -480,9 +480,9 @@ const FAQ = ({
   // Wrapper component that conditionally renders with or without section
   const Wrapper = ({ children, className = "", id }) => {
     if (noSection) {
-      return <div id={id} className={className}>{children}</div>
+      return <div id={id} className={`scroll-mt-32 ${className}`}>{children}</div>
     }
-    return <section id={id} className={className}>{children}</section>
+    return <section id={id} className={`scroll-mt-32 ${className}`}>{children}</section>
   }
 
   // Render Table Display Variant (like first image)
@@ -537,31 +537,47 @@ const FAQ = ({
           const currentHash = window.location.hash.replace('#', '')
           if (currentHash) {
             // Check if any table section matches the hash
-            const matchingSection = tableSectionsList.find(s => slugify(s.title) === currentHash)
+            const matchingSection = tableSectionsList.find(s => (s.slug || slugify(s.title)) === currentHash)
             if (matchingSection) {
               const sectionId = matchingSection.id || tableSectionsList.indexOf(matchingSection)
               setUnifiedOpenId(`table-${sectionId}`)
 
-              // Reinforce scroll to the section
+              // Reinforce scroll to the section heading instead of specific item
               setTimeout(() => {
-                const element = document.getElementById(slugify(matchingSection.title))
+                const targetId = id || matchingSection.slug || slugify(matchingSection.title);
+                const element = document.getElementById(targetId);
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  const headerOffset = 120;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
                 }
               }, 100)
               return;
             }
 
             // Check if any regular item matches the hash
-            const matchingItem = regularItems.find(item => slugify(item.question) === currentHash)
+            const matchingItem = regularItems.find(item => (item.slug || slugify(item.question)) === currentHash)
             if (matchingItem) {
               setUnifiedOpenId(`regular-${matchingItem.id}`)
 
-              // Reinforce scroll to the item
+              // Reinforce scroll to the section heading
               setTimeout(() => {
-                const element = document.getElementById(slugify(matchingItem.question))
+                const targetId = id || matchingItem.slug || slugify(matchingItem.question);
+                const element = document.getElementById(targetId);
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  const headerOffset = 120;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
                 }
               }, 100)
             }
@@ -598,7 +614,7 @@ const FAQ = ({
               const isOpen = unifiedOpenId === fullId
 
               return (
-                <div key={section.id || index} id={slugify(section.title)} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                <div key={section.id || index} id={section.slug || slugify(section.title)} className="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
                   <button
                     onClick={() => toggleUnified(sectionId, 'table')}
                     className="w-full flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 transition-colors"
@@ -699,6 +715,7 @@ const FAQ = ({
               return (
                 <div
                   key={item.id}
+                  id={item.slug || slugify(item.question)}
                   className="border border-gray-200 rounded-lg overflow-hidden shadow-sm"
                 >
                   <button
@@ -824,31 +841,47 @@ const FAQ = ({
           const currentHash = window.location.hash.replace('#', '')
           if (currentHash) {
             // Check if any table section matches the hash
-            const matchingSection = tableSectionsList.find(s => slugify(s.title) === currentHash)
+            const matchingSection = tableSectionsList.find(s => (s.slug || slugify(s.title)) === currentHash)
             if (matchingSection) {
               const sectionId = matchingSection.id || tableSectionsList.indexOf(matchingSection)
               setUnifiedOpenId(`card-${sectionId}`)
 
-              // Reinforce scroll to the section
+              // Reinforce scroll to the section heading instead of specific item
               setTimeout(() => {
-                const element = document.getElementById(slugify(matchingSection.title))
+                const targetId = id || matchingSection.slug || slugify(matchingSection.title);
+                const element = document.getElementById(targetId);
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  const headerOffset = 120;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
                 }
               }, 100)
               return;
             }
 
             // Check if any regular item matches the hash
-            const matchingItem = regularItems.find(item => slugify(item.question) === currentHash)
+            const matchingItem = regularItems.find(item => (item.slug || slugify(item.question)) === currentHash)
             if (matchingItem) {
               setUnifiedOpenId(`regular-${matchingItem.id}`)
 
-              // Reinforce scroll to the item
+              // Reinforce scroll to the section heading
               setTimeout(() => {
-                const element = document.getElementById(slugify(matchingItem.question))
+                const targetId = id || matchingItem.slug || slugify(matchingItem.question);
+                const element = document.getElementById(targetId);
                 if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  const headerOffset = 120;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                  });
                 }
               }, 100)
             }

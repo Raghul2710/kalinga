@@ -191,6 +191,7 @@ export default function OtherCommittees() {
   return (
     <div className="min-h-screen bg-white pt-10">
       <FAQ
+        id="committee-members"
         title="List Of Important Committee Members"
         subtitle="Committees"
         variant="card-display"

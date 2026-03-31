@@ -276,7 +276,7 @@ export default function IMTS2025() {
         ],
         data: [
             { slNo: "1", name: "Prof. (Dr.) R. Shridhar", position: "Vice-Chancellor, Kalinga University, Naya Raipur" },
-            { slNo: "2", name: "Dr. Byju John", position: "Director General, Kalinga University, Naya Raipur" },
+            // { slNo: "2", name: "Dr. Byju John", position: "Director General, Kalinga University, Naya Raipur" },
             { slNo: "3", name: "Dr. Sandeep Gandhi", position: "Registrar, Kalinga University, Naya Raipur" },
             { slNo: "4", name: "Dr. Rahul Mishra", position: "Dean Academic Affairs, Kalinga University, Naya Raipur" },
             { slNo: "5", name: "Dr. Vijayalaxmi", position: "Director IQAC, Kalinga University, Naya Raipur" },

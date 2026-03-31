@@ -1036,7 +1036,7 @@
     },
     {
         "source": "/board-of-management",
-        "destination": "/about-us#governing-body",
+        "destination": "/about-us/#board-of-management",
         "permanent": true
     },
     {
@@ -1055,13 +1055,18 @@
         "permanent": true
     },
     {
+        "source": "/othercommittees/grievance-redressal-committee",
+        "destination": "/other-committees/#grievance-redressal-committee",
+        "permanent": true
+    },
+    {
         "source": "/other-committees/sexual-harassment-prevention-committee",
         "destination": "/other-committees/#women-cell-prevention-of-sexual-harassment-posh-committee",
         "permanent": true
     },
     {
         "source": "/IIC/Composition",
-        "destination": "/institution-innovation-council",
+        "destination": "/institution-innovation-council/#iic-committee",
         "permanent": true
     },
     {
@@ -1071,7 +1076,7 @@
     },
     {
         "source": "/iqac/iqaccomposition",
-        "destination": "/internal-quality-assurance-cell",
+        "destination": "/internal-quality-assurance-cell/#committee-iqac",
         "permanent": true
     },
     {
@@ -1101,12 +1106,12 @@
     },
     {
         "source": "/iqac/strategicplan",
-        "destination": "/internal-quality-assurance-cell",
+        "destination": "/internal-quality-assurance-cell/#strategies-plan-deployment",
         "permanent": true
     },
     {
         "source": "/ideathon4.0",
-        "destination": "/academics/management",
+        "destination": "/academics/management#activities",
         "permanent": true
     },
     {
@@ -1116,12 +1121,12 @@
     },
     {
         "source": "/ideathonprog",
-        "destination": "/academics/management",
+        "destination": "/academics/management#activities",
         "permanent": true
     },
     {
         "source": "/ideathon",
-        "destination": "/academics/management",
+        "destination": "/academics/management#activities",
         "permanent": true
     },
     {
@@ -1151,7 +1156,7 @@
     },
     {
         "source": "/Faculty-of-Commerce-and-Management/Board-of-Studies",
-        "destination": "/academics/management",
+        "destination": "/academics/management/#board-of-studies",
         "permanent": true
     },
     {

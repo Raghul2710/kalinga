@@ -42,6 +42,7 @@ const aboutFaqData = [
   {
     id: 3,
     title: "Board Of Management",
+    slug: "board-of-management",
     columns: [
       { key: "slNo", label: "S. No.", width: "w-20" },
       { key: "member", label: "Members", width: "flex-1" }

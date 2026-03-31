@@ -1540,12 +1540,35 @@ export default function IqacTabSection() {
           if (tabExists) {
             setActiveTab(tabId);
             setTimeout(() => {
-              const element = document.getElementById(hash);
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              const section = document.getElementById('iqac-tab-section');
+              if (section) {
+                // To account for fixed header, use a small offset
+                const headerOffset = 100;
+                const elementPosition = section.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
               }
             }, 100);
           }
+        } else if (hash === 'strategies-plan-deployment') {
+          setActiveTab('strategic');
+          setTimeout(() => {
+            const element = document.getElementById(hash);
+            if (element) {
+              const headerOffset = 100;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }, 100);
         }
       }
     };
@@ -1593,7 +1616,7 @@ export default function IqacTabSection() {
   };
 
   return (
-    <section className="w-full py-4 px-2">
+    <section className="w-full py-4 px-2 scroll-mt-24" id="iqac-tab-section">
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
@@ -1938,7 +1961,7 @@ export default function IqacTabSection() {
 
               {/* Strategic Plan Tab */}
               {activeTab === "strategic" && (
-                <div className="flex-1">
+                <div className="flex-1" id="strategies-plan-deployment">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     Strategic Plan & Deployment
                   </h2>
