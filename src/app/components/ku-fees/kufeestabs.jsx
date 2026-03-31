@@ -1101,7 +1101,6 @@ const OTHER_CHARGES = {
     ],
     notes: [
         "The above mentioned transport fee is for the academic session 2026-27.",
-        "The above mentioned transport fee is for the academic session 2026-27.",
     ],
     scholarship:
         "Scholarships (General, Merit & Girl Student) are available on Tuition Fees. The scholarships are not applicable to Pharmacy, Education, and Research Programs.",
