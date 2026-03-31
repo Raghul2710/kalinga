@@ -1178,5 +1178,10 @@
         "source": "/Sustainable-Initiatives",
         "destination": "/sustainability",
         "permanent": true
+    },
+    {
+        "source": "/other-committees/minority-cell",
+        "destination": "/other-committees/#minority-cell",
+        "permanent": true
     }
 ]
