@@ -1506,6 +1506,12 @@ const FEEDBACK_ANALYSIS = {
   ],
 };
 
+const FINANCIAL_STATEMENTS = [
+  { title: "Financial Audited Statements 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf" },
+  { title: "Financial Audited Statements 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf" },
+  { title: "Financial Audited Statements 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf" },
+];
+
 // Strategic Plan Content
 const STRATEGIC_PLAN_CONTENT = `Kalinga University promotes knowledge development through innovation & research, hands-on learning, and student startups. It provides a platform for students to experiment, work on real-world projects, and bring their innovative ideas. It has also established an incubation centre to support and transform the brilliant startup ideas of young students into successful businesses.
 
@@ -1677,6 +1683,43 @@ export default function IqacTabSection() {
           {/* Content Area - White Background */}
           <div className="flex-1 w-full">
             <div className="rounded-[16px] bg-white p-4 md:p-5 shadow-sm h-full flex flex-col">
+              {/* Financial Audited Statements Tab */}
+              {activeTab?.trim().toLowerCase() === "financial" && (
+                <div className="flex-1">
+                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
+                    Financial Audited Statements
+                  </h2>
+                  <div className="space-y-4 max-w-2xl mx-auto">
+                    {FINANCIAL_STATEMENTS.map((item, idx) => (
+                      <FlipbookTrigger key={idx} pdfUrl={item.url} title={item.title}>
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 group"
+                        >
+                          <div className="flex items-center gap-4">
+                            <div className="w-10 h-10 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
+                              <svg className="w-5 h-5 text-[var(--button-red)] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                            </div>
+                            <span className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-sm md:text-base">
+                              {item.title}
+                            </span>
+                          </div>
+                          <div className="flex items-center text-[var(--button-red)] font-plus-jakarta-sans text-xs md:text-sm font-medium">
+                            <span>View PDF</span>
+                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </a>
+                      </FlipbookTrigger>
+                    ))}
+                  </div>
+                </div>
+              )}
               {/* Objectives Tab */}
               {activeTab === "objectives" && (
                 <div className="flex-1">
@@ -2128,7 +2171,7 @@ export default function IqacTabSection() {
               )}
 
               {/* Placeholder content for other tabs */}
-              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits"].includes(activeTab) && (
+              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits", "financial"].includes(activeTab) && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}

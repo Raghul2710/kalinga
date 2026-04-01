@@ -164,8 +164,10 @@ export default function StudentActivities({
 
   const bindNavigation = (swiperInstance) => {
     if (!swiperInstance || !prevRef.current || !nextRef.current) return;
-    swiperInstance.params.navigation.prevEl = prevRef.current;
-    swiperInstance.params.navigation.nextEl = nextRef.current;
+    if (swiperInstance.params && swiperInstance.params.navigation) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+    }
     if (swiperInstance.navigation) {
       swiperInstance.navigation.destroy();
       swiperInstance.navigation.init();

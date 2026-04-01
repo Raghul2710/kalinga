@@ -22,6 +22,8 @@ import SurveyForm from "@/app/components/general/SurveyForm";
 import CourseNavigation from "@/app/components/general/course-navigation";
 import VisionFeedbackForm from "@/app/components/forms/VisionFeedbackForm";
 import StakeholderFeedbackForm from "@/app/components/forms/StakeholderFeedbackForm";
+import ResearchSixGridButtons from "@/app/components/research/research_six_grid-buttons";
+import FlipbookTrigger from "@/app/components/general/FlipbookTrigger";
 
 export default function ManagementDepartmentPage() {
     const [feedbackModalConfig, setFeedbackModalConfig] = useState({ isOpen: false, category: "", title: "" });
@@ -241,6 +243,24 @@ export default function ManagementDepartmentPage() {
         }
     ];
 
+
+    const research_six_grid_buttons1 = [
+        {
+            id: 1,
+            text: "Placement 2021-22",
+            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2021-22.pdf"
+        },
+        {
+            id: 2,
+            text: "Placement 2022-23",
+            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2022-23.pdf"
+        },
+        {
+            id: 3,
+            text: "Placement 2023-24",
+            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2023-24.pdf"
+        }
+    ];
 
     const ideathonActivities = [
         {
@@ -571,6 +591,14 @@ export default function ManagementDepartmentPage() {
                     />
                 )}
             </Modal>
+
+            <SectionHeading
+                title="Placement Details"
+                titleClassName="text-center"
+            />
+            <ResearchSixGridButtons
+                buttons={research_six_grid_buttons1}
+            />
 
             <div id="placements" className="scroll-mt-24 md:scroll-mt-28">
                 <Placements
