@@ -1575,6 +1575,21 @@ export default function IqacTabSection() {
               });
             }
           }, 100);
+        } else if (hash === 'finanical-audited-statements') {
+          setActiveTab('financial');
+          setTimeout(() => {
+            const element = document.getElementById(hash);
+            if (element) {
+              const headerOffset = 100;
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }, 100);
         }
       }
     };
@@ -1685,7 +1700,7 @@ export default function IqacTabSection() {
             <div className="rounded-[16px] bg-white p-4 md:p-5 shadow-sm h-full flex flex-col">
               {/* Financial Audited Statements Tab */}
               {activeTab?.trim().toLowerCase() === "financial" && (
-                <div className="flex-1">
+                <div className="flex-1" id="finanical-audited-statements">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
                     Financial Audited Statements
                   </h2>
