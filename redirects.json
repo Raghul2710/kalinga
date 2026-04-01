@@ -1183,5 +1183,10 @@
         "source": "/other-committees/minority-cell",
         "destination": "/other-committees/#minority-cell",
         "permanent": true
+    },
+    {
+        "source": "/why_kalinga.php",
+        "destination": "/about-us",
+        "permanent": true
     }
 ]
