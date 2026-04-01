@@ -319,7 +319,7 @@ const Header = () => {
             links: [
               { label: 'Placement Overview', href: '/training-and-placements' },
               { label: 'Placement Cell', href: '/training-and-placement-cell' },
-              { label: 'Industry Collaborations', href: '/career-and-corporate-resource-centre' },
+              { label: 'Industry Collaborations', href: '/academic-and-industry-collaborations' },
               { label: 'Kalinga Achievers', href: '#' },
             ]
           }

@@ -329,11 +329,11 @@ export default function ManagementDepartmentPage() {
         { name: "Dr. Deepti Patnaik", designation: "Assistant Professor" },
         { name: "Dr. Kanchan Thakur", designation: "Assistant Professor" },
         { name: "Dr. Nishtha Sharma", designation: "Assistant Professor and Head of Department" },
+        { name: "Dr. Shinki Katyayani Pandey", designation: "Assistant Professor" },
         { name: "Dr. Parvinder Shesh", designation: "Assistant Professor" },
         { name: "Dr. Ankita Nihlani", designation: "Assistant Professor" },
         { name: "Ms. Dawakit Lepcha", designation: "Assistant Professor" },
-        { name: "Mr. Rakshak Bharti", designation: "Assistant Professor" },
-        { name: "Ms. Milan Singh", designation: "Assistant Professor" },
+        { name: "Mr. Rakshak Bharti", designation: "Assistant Professor" }
 
     ];
 

@@ -795,6 +795,18 @@ export default function DynamicCoursePage() {
           ctaLink="/library"
         />
       )}
+      {['bca-in-game-development-with-ai'].includes(slug) && (
+        <FacilitySlider
+          title="About Hi-Tech Animation"
+          subtitle=""
+          description="Hi-Tech Animation is an India-based animation production studio with a state-of-the-art production facility with offices located in Kolkata and Mumbai. Known for its work with reputed national and international clients such as Sony Yay, Nick, Byju’s, Cartoon Network, and Zee News, the studio brings extensive industry expertise in animation, VFX, and filmmaking."
+          images={[
+            "https://cdn.kalingauniversity.ac.in/academic-facilities/filmmakingstudio.webp"
+          ]}
+          ctaText=""
+          ctaLink=""
+        />
+      )}
       {['bachelor-of-arts-in-film-making', 'master-of-arts-in-film-making'].includes(slug) && (
         <FacilitySlider
           title="Film Studio Of KU"

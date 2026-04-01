@@ -519,20 +519,26 @@ export default function CommerceDepartmentPage() {
 
     const facultyMembers = [
         { name: "Dr. Deepak Tiwari", designation: "Assistant Professor" },
+        { name: "Dr. Amit Sharma", designation: "Assistant Professor" },
         { name: "Dr. Arvind Kumar Tiwari", designation: "Assistant Professor" },
         { name: "Dr. Poonam Singh", designation: "Assistant Professor" },
-        { name: "Ms. Shivangi Makade", designation: "Assistant Professor" },
         { name: "Dr. Prashant Kumar Jha", designation: "Assistant Professor" },
         { name: "Dr. Chandra Bhooshan Singh", designation: "Assistant Professor" },
         { name: "Mr. Shubham Singh Chandel", designation: "Assistant Professor" },
         { name: "Ms. Angel Mary Xess", designation: "Assistant Professor" },
         { name: "Dr. Jyotsna Dwivedi", designation: "Assistant Professor" },
         { name: "Dr. Priyam Vishwakarma", designation: "Assistant Professor" },
-        { name: "Dr. Divya Nandini Sharma", designation: "Assistant Professor" }
+        { name: "Dr. Divya Nandini Sharma", designation: "Assistant Professor" },
+        { name: "Ms. Deepshikha Patel", designation: "Assistant Professor" },
+        { name: "Mrs. Anushree Shrivastava", designation: "Assistant Professor" },
+        { name: "Dr. Satvik Jain", designation: "Assistant Professor" },
+        { name: "Ms. Shivangi Makade", designation: "Assistant Professor" },
+        { name: "Dr. Roopam Jain Hazra", designation: "Assistant Professor" },
+        { name: "Dr. Jitendra Singh", designation: "Assistant Professor" }
     ];
 
     const bbaFacultyMembers = [
-        { name: "Dr. Satvik Jain", designation: "Assistant Professor" },
+        { name: "Ms. Rachita Diwan", designation: "Assistant Professor" },
         { name: "Dr. Utkarsh Anand", designation: "Assistant Professor" },
         { name: "Dr. Sandeep Soni", designation: "Assistant Professor" },
         { name: "Ms. Mariyam Ahmed", designation: "Assistant Professor" },
