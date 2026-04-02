@@ -248,17 +248,20 @@ export default function ManagementDepartmentPage() {
         {
             id: 1,
             text: "Placement 2021-22",
-            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2021-22.pdf"
+            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2021-22.pdf",
+            disableFlipbook: true
         },
         {
             id: 2,
             text: "Placement 2022-23",
-            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2022-23.pdf"
+            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2022-23.pdf",
+            disableFlipbook: true
         },
         {
             id: 3,
             text: "Placement 2023-24",
-            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2023-24.pdf"
+            href: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2023-24.pdf",
+            disableFlipbook: true
         }
     ];
 

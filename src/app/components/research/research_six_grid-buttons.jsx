@@ -231,7 +231,8 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
     }
 
     // Check if this is a PDF link
-    if (isPdfLink(button.href)) {
+    const isPdf = isPdfLink(button.href);
+    if (isPdf && !button.disableFlipbook) {
       e.preventDefault();
       openFlipbook(button.href, button.text);
     }
@@ -254,7 +255,7 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {buttons.map((button) => {
-              const isPdf = isPdfLink(button.href);
+              const isPdf = isPdfLink(button.href) && !button.disableFlipbook;
               const isTable = button.isTable;
               const isContent = button.isContent;
               return (

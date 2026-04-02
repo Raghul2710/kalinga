@@ -861,7 +861,7 @@
     },
     {
         "source": "/iqac/Financial-Audited-Statements",
-        "destination": "/internal-quality-assurance-cell",
+        "destination": "/internal-quality-assurance-cell/#finanical-audited-statements",
         "permanent": true
     },
     {
@@ -1187,6 +1187,11 @@
     {
         "source": "/why_kalinga.php",
         "destination": "/about-us",
+        "permanent": true
+    },
+    {
+        "source": "/departments/management",
+        "destination": "/academics/management",
         "permanent": true
     }
 ]

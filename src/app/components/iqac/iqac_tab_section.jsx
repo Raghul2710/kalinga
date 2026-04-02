@@ -1706,31 +1706,30 @@ export default function IqacTabSection() {
                   </h2>
                   <div className="space-y-4 max-w-2xl mx-auto">
                     {FINANCIAL_STATEMENTS.map((item, idx) => (
-                      <FlipbookTrigger key={idx} pdfUrl={item.url} title={item.title}>
-                        <a
-                          href={item.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 group"
-                        >
-                          <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
-                              <svg className="w-5 h-5 text-[var(--button-red)] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                            </div>
-                            <span className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-sm md:text-base">
-                              {item.title}
-                            </span>
-                          </div>
-                          <div className="flex items-center text-[var(--button-red)] font-plus-jakarta-sans text-xs md:text-sm font-medium">
-                            <span>View PDF</span>
-                            <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                      <a
+                        key={idx}
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 group"
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
+                            <svg className="w-5 h-5 text-[var(--button-red)] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                           </div>
-                        </a>
-                      </FlipbookTrigger>
+                          <span className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-sm md:text-base">
+                            {item.title}
+                          </span>
+                        </div>
+                        <div className="flex items-center text-[var(--button-red)] font-plus-jakarta-sans text-xs md:text-sm font-medium">
+                          <span>View PDF</span>
+                          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      </a>
                     ))}
                   </div>
                 </div>
