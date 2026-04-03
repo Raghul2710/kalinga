@@ -18,7 +18,7 @@ function Accreditations() {
         { id: 5, name: "PCI", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002980.png" },
         { id: 6, name: "NCTE", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002978.png" },
         // { id: 6, name: "NAAC Accreditation B+", logo: "https://cdn.kalingauniversity.ac.in/about/Accreditation+and+Ranking+Logo/Naac+niirf+2025.png" },
-        { id: 6, name: "NAAC Accreditation B+", logo: "https://cdn.kalingauniversity.ac.in/Home/naac.webp" },
+        { id: 6, name: "NAAC Accreditation B+", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/naac-kalinga.webp" },
         { id: 6, name: "NIRF", logo: "https://cdn.kalingauniversity.ac.in/accreditation/nirf-logo-new.jpeg" },
 
     ]
@@ -107,7 +107,7 @@ function Accreditations() {
             { id: "aicte", label: "AICTE Approval", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp", description: "All India Council for Technical Education approval for engineering and technical courses." },
             { id: "bci", label: "BCI Approval", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/bci.webp", description: "Bar Council of India recognition for legal education and professional law standards." },
             { id: "ncte", label: "NCTE Approval", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002978.png", description: "National Council for Teacher Education approval for B.Ed. and B.P.Ed. programs." },
-            { id: "naac", label: "National Assessment and Accreditation Council", logo: "https://cdn.kalingauniversity.ac.in/Home/naac.webp", description: "NAAC B+ accreditation reflecting institutional quality and excellence." },
+            { id: "naac", label: "National Assessment and Accreditation Council", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/naac-kalinga.webp", description: "NAAC B+ accreditation reflecting institutional quality and excellence." },
             { id: "eoa_pharmacy", label: "EOA PHARMACY", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp", description: "Extension of Approval (EOA) for Pharmacy programs by AICTE." },
             { id: "eoa_diploma", label: "EOA Diploma Engg", logo: "https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp", description: "Extension of Approval (EOA) for Diploma in Engineering programs by AICTE." },
         ],

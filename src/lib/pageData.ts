@@ -25,7 +25,7 @@ export const pageDataMap: Record<string, PageData> = {
     "/about-raipur": {
         slug: "/about-raipur",
         title: "About Raipur",
-        banner: "https://cdn.kalingauniversity.ac.in/about-raipur/raipur_breadcrujmb.webp",
+        banner: "https://cdn.kalingauniversity.ac.in/about-raipur/gallery/raipur-images-4.jpg",
     },
     "/about-us": {
         slug: "/about-us",
@@ -265,7 +265,7 @@ export const pageDataMap: Record<string, PageData> = {
     "/health-clinic": {
         slug: "/health-clinic",
         title: "Health Clinic",
-        banner: "https://cdn.kalingauniversity.ac.in/health-clinic/health-clinic-1.webp",
+        banner: "https://cdn.kalingauniversity.ac.in/campus-facilities/medical-facilities.webp",
     },
     "/hostel": {
         slug: "/hostel",

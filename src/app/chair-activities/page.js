@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import MainIntro from "../components/about/main_intro";
 import DataTable from "../components/general/data-table";
 import SectionHeading from "../components/general/SectionHeading";
+import Gallery from "@/app/components/general/gallery";
 
 import CenterOfExcellence from "../components/about/center_of_excellence";
 
@@ -182,6 +183,7 @@ export default function Kalingachair() {
         columns={tableColumns1} data={tableData1}
         overflowX={true}
       />
+
     </>
   );
 }

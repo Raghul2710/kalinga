@@ -50,14 +50,41 @@ const PublicationCard = ({ data, className = "" }) => {
                             </h3>
 
                             <div className="space-y-1">
-                                <p className="font-stix text-lg md:text-xl font-medium text-gray-800 line-clamp-2" title={data.author || data.subtitle}>
-                                    {data.author ? `By ${data.author}` : data.subtitle}
-                                </p>
-                                {data.designation && (
-                                    <p className="text-xs md:text-sm">
-                                        {data.designation}
-                                    </p>
-                                )}
+                                {(() => {
+                                    const authors = data.author
+                                        ? [data.author]
+                                        : [data.author_1, data.author_2, data.author_3, data.author_4].filter(Boolean);
+
+                                    const authorText =
+                                        authors.length > 1
+                                            ? authors.slice(0, -1).join(", ") + " & " + authors.slice(-1)
+                                            : authors[0] || data.subtitle || "";
+
+                                    const designations = data.designation
+                                        ? [data.designation]
+                                        : [
+                                            data.designation_1,
+                                            data.designation_2,
+                                            data.designation_3,
+                                            data.designation_4,
+                                        ].filter(Boolean);
+
+                                    const uniqueDesignations = [...new Set(designations)];
+                                    const designationText = uniqueDesignations.join(", ");
+
+                                    return (
+                                        <>
+                                            <p className="font-stix text-lg md:text-xl font-medium text-gray-800 line-clamp-2" title={authorText}>
+                                                {authorText ? (authors.length > 0 || data.author ? `By ${authorText}` : authorText) : ""}
+                                            </p>
+                                            {designationText && (
+                                                <p className="text-xs md:text-sm">
+                                                    {designationText}
+                                                </p>
+                                            )}
+                                        </>
+                                    );
+                                })()}
                                 {(data.faculty || data.department) && (
                                     <p className="text-xs tracking-tight mt-1 truncate w-full" title={data.faculty || data.department}>
                                         {data.faculty || data.department}

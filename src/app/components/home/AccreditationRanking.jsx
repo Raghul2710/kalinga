@@ -12,7 +12,7 @@ const AccreditationRanking = ({
   // Default accreditations if none provided
   const defaultAccreditations = [
     { id: 1, name: 'NIRF', logo: 'https://cdn.kalingauniversity.ac.in/accreditation/nirf-logo-new.jpeg' },
-    { id: 2, name: 'NAAC B+', logo: 'https://cdn.kalingauniversity.ac.in/Home/naac.webp' },
+    { id: 2, name: 'NAAC', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/naac-kalinga.webp' },
     { id: 2, name: 'UGC Grant', logo: 'https://cdn.kalingauniversity.ac.in/Home/ugc.webp' },
     { id: 4, name: 'AICTE', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/acite.webp' },
     { id: 5, name: 'NCTE', logo: 'https://cdn.kalingauniversity.ac.in/about/accerdation/Group+1000002978.png' },

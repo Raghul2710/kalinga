@@ -895,6 +895,11 @@
         "permanent": true
     },
     {
+        "source": "/KAL-MAT-2025-26/index.html",
+        "destination": "/kalmat",
+        "permanent": true
+    },
+    {
         "source": "/job_openings.php/ipr-cell",
         "destination": "/ipr-cell",
         "permanent": true
@@ -961,6 +966,11 @@
     },
     {
         "source": "/placement/voter_portal",
+        "destination": "/voter-portal",
+        "permanent": true
+    },
+    {
+        "source": "/voter_portal",
         "destination": "/voter-portal",
         "permanent": true
     },
@@ -1192,6 +1202,16 @@
     {
         "source": "/departments/management",
         "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/index",
+        "destination": "/",
+        "permanent": true
+    },
+    {
+        "source": "/job_openings.php/1000",
+        "destination": "/careers",
         "permanent": true
     }
 ]

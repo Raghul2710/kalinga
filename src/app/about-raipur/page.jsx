@@ -8,11 +8,33 @@ import Highlights from '@/app/components/about-raipur/highlights'
 import AdmissionCareer from '../components/general/admission_cta'
 import RaipurVideo from '../components/about-raipur/raipurvideo'
 import Newraipurvideos from '../components/about-raipur/newraipurvideos'
+import Gallery from '../components/general/gallery'
 
 function page() {
   const pathname = usePathname();
 
-  
+  const raipurGalleryData = [
+    {
+      id: 1,
+      image: "https://cdn.kalingauniversity.ac.in/about-raipur/gallery/raipur-images-1.jpg",
+    },
+    {
+      id: 2,
+      image: "https://cdn.kalingauniversity.ac.in/about-raipur/gallery/raipur-images-2.jpg",
+    },
+    {
+      id: 3,
+      image: "https://cdn.kalingauniversity.ac.in/about-raipur/gallery/raipur-images-3.jpg",
+    },
+    {
+      id: 4,
+      image: "https://cdn.kalingauniversity.ac.in/about-raipur/gallery/raipur-images-4.jpg",
+    },
+    {
+      id: 5,
+      image: "https://cdn.kalingauniversity.ac.in/about-raipur/gallery/raipur-images-5.jpg",
+    },
+  ];
 
 
   return (
@@ -35,6 +57,9 @@ function page() {
       <NewRaipur />
       <Newraipurvideos />
       <Highlights />
+      <Gallery
+        images={raipurGalleryData}
+        title="Glimpses" paddingClassName="py-16" />
       <AdmissionCareer />
     </>
   )

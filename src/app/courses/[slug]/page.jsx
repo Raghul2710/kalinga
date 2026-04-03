@@ -446,7 +446,7 @@ export default function DynamicCoursePage() {
   ].includes(slug);
 
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
-    sectionTitle: isMtechSpecializationCourse ? "Sub Specialisations" : "Specialisation",
+    sectionTitle: isMtechSpecializationCourse ? "Sub Specialisations" : "Specialisations",
     sectionDescription: "Choose a Specialisation of Your Choice and Master What’s Trending",
     backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: courseData.specializations

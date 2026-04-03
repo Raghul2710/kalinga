@@ -11,7 +11,7 @@ const swCardsData = [
     imageSrc:
       "https://cdn.kalingauniversity.ac.in/student-welfare/Tours.webp",
     logoSrc: "",
-    href: "/campuslife",
+    href: "/news-and-events/#excursion",
   },
   {
     title: "Cultural Events & Programs",

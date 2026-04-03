@@ -609,7 +609,7 @@ export default function Page() {
         allowMultipleOpen={false}
       />
 
-      <section className="mb-[80px]">
+      <section>
         <OrganogramOfKalinga
           title={admissionOrganogramContent.title}
           description={admissionOrganogramContent.description}

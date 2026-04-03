@@ -114,6 +114,35 @@ function NewsAndEvents() {
     setMounted(true);
   }, []);
 
+  // Handle hash-based scrolling
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          setTimeout(() => {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }, 100);
+        }
+      }
+    };
+
+    if (!loading && mounted) {
+      handleHashScroll();
+      window.addEventListener("hashchange", handleHashScroll);
+      return () => window.removeEventListener("hashchange", handleHashScroll);
+    }
+  }, [loading, mounted]);
+
   // --- Derived Data Processing ---
   const today = useMemo(() => {
     const d = new Date();
@@ -264,7 +293,7 @@ function NewsAndEvents() {
         id="industrial-visits"
       />
       <StudentActivities
-        id="events-activities"
+        id="excursion"
         title="Excursions"
         subtitle=""
         activities={mappedEventActivities}

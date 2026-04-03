@@ -58,6 +58,7 @@ function getPreviewText(desc) {
 
 
 export default function StudentActivities({
+  id = "",
   title = " Events and Activities",
   subtitle = "Experience Campus Life Beyond Academics",
   activities: providedActivities,
@@ -271,7 +272,7 @@ export default function StudentActivities({
   }
 
   return (
-    <section className={`bg-white ${paddingClassName}`}>
+    <section id={id} className={`bg-white ${paddingClassName}`}>
       {(title || subtitle) && (
         <SectionHeading
           title={title}

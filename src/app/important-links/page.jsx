@@ -49,7 +49,7 @@ const clubSections = [
       {
         name: "National Assessment and Accreditation Council",
         image:
-          "https://cdn.kalingauniversity.ac.in/Home/naac.webp",
+          "https://cdn.kalingauniversity.ac.in/about/accerdation/naac-kalinga.webp",
         url: "http://www.naac.gov.in",
       },
       {
