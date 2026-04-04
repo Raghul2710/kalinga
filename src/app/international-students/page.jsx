@@ -173,7 +173,7 @@ export default function InternationalStudents() {
     {
       id: 7,
       title: 'Extensive Research Facilities',
-      body: "With 90 + Labs, including IT Labs and CIF labs, we're Chhattisgarh's No. 1 institute, committed to innovation and groundbreaking research facilities.",
+      body: "With 100 + Labs, including IT Labs and CIF labs, we're Chhattisgarh's No. 1 institute, committed to innovation and groundbreaking research facilities.",
       image: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg',
       variant: 'gray',
     },
@@ -244,7 +244,7 @@ export default function InternationalStudents() {
     {
       id: 3,
       title: "Countries",
-      value: "29+",
+      value: "33+",
       description: "",
     },
     // {
@@ -268,13 +268,13 @@ export default function InternationalStudents() {
     {
       id: 7,
       title: "Research Publications",
-      value: "3360+",
+      value: "4700+",
       description: "",
     },
     {
       id: 8,
       title: "Patents",
-      value: "510 +",
+      value: "549 +",
       description: "",
     },
     {
@@ -304,7 +304,7 @@ export default function InternationalStudents() {
     {
       id: 13,
       title: "Laboratories",
-      value: "90 +",
+      value: "100 +",
       description: "",
     },
   ]
@@ -398,7 +398,7 @@ export default function InternationalStudents() {
         subtitle="Faith and Worship Facility"
         title="Honouring Every Faith and Religion"
         description={[
-          "At Kalinga University, you'll find the world in one place. With students from 29+ countries, we celebrate their cultures, faiths, and beliefs. We offer an inclusive environment to all our students where they can freely practice their religion and stay connected with their roots.",
+          "At Kalinga University, you'll find the world in one place. With students from 33+ countries, we celebrate their cultures, faiths, and beliefs. We offer an inclusive environment to all our students where they can freely practice their religion and stay connected with their roots.",
           "Our multi-faith services are accessible to all students at our campus, which include:"
         ]}
         imageUrl="https://cdn.kalingauniversity.ac.in/international-students/international-students-group.webp"

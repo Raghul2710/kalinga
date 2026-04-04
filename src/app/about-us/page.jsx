@@ -83,7 +83,7 @@ const aboutFeatureCards = [
   {
     id: 2,
     title: 'Extensive Research Facilities',
-    body: 'With 90 + Labs, including IT Labs and CIF labs, we’re Chhattisgarh’s No. 1 institute, committed to innovation and groundbreaking research facilities.',
+    body: 'With 100 + Labs, including IT Labs and CIF labs, we’re Chhattisgarh’s No. 1 institute, committed to innovation and groundbreaking research facilities.',
     image: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg',
     variant: 'amber',
   },
@@ -329,9 +329,9 @@ export default function AboutUs() {
         subtitleClassName="!text-blue"
         showReadMore={false}
         description={["Kalinga University, established in 2013, stands out as one of the leading private institutions that has consistently ranked among the top 101–150 universities in India under the NIRF Rankings 2025 for the fourth consecutive year. It has also received a NAAC B+ accreditation, continuously shining on the horizons of high-quality education.",
-          "Kalinga University has students from across India and 29 + countries. It offers Diploma, Undergraduate, Postgraduate, and Doctoral programs in Arts and Humanities, Commerce and Management, Education, Information Technology, Law, Pharmacy, Science, and Technology. With highly-qualified and experienced faculty members, the University strongly emphasizes research, innovation, and hands-on learning. "
+          "Kalinga University has students from across India and 33 + countries. It offers Diploma, Undergraduate, Postgraduate, and Doctoral programs in Arts and Humanities, Commerce and Management, Education, Information Technology, Law, Pharmacy, Science, and Technology. With highly-qualified and experienced faculty members, the University strongly emphasizes research, innovation, and hands-on learning. "
           , "With a vibrant and multicultural environment, the University promotes collaboration and cross-cultural understanding."
-          , "Spread across 50 + acres eco-friendly campus, the University offers an indoor and outdoor sports centre, Moot Court, Incubation Centre, Corporate Training and Consultancy Division, Centres of Excellence, a library with a collection of over 80,000 books and digital content, and 90 + labs, including Central Instrumentation Facility, language labs, and computer labs. Moreover, the University has developed strong connections with leading companies through MoUs to offer corporate training, and internship and placement opportunities to students."
+          , "Spread across 50 + acres eco-friendly campus, the University offers an indoor and outdoor sports centre, Moot Court, Incubation Centre, Corporate Training and Consultancy Division, Centres of Excellence, a library with a collection of over 80,000 books and digital content, and 100 + labs, including Central Instrumentation Facility, language labs, and computer labs. Moreover, the University has developed strong connections with leading companies through MoUs to offer corporate training, and internship and placement opportunities to students."
           , "With an industry-relevant curriculum aligned to the New Education Policy 2020, students are well-prepared to meet modern career demands.  Students get a platform where they dont just study but collaborate, make new connections, learn new languages, and participate in multi-cultural programs. We help students build communication skills, leadership qualities, problem-solving abilities, time management, critical thinking, emotional intelligence, and teamwork, so that they can turn out to be a powerful individual."
         ]}
         readMoreLabel="Read More"

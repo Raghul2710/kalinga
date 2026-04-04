@@ -25,7 +25,7 @@ function Valueadditionwhatmakes() {
             id: 3,
             title: "Unmatched Research Facilities",
             body:
-                "With 90+ Labs, including IT Labs, we’re Chhattisgarh’s No. 1 institute, committed to innovation and excel in providing groundbreaking research facilities.",
+                "With 100+ Labs, including IT Labs, we’re Chhattisgarh’s No. 1 institute, committed to innovation and excel in providing groundbreaking research facilities.",
             variant: "gray",
             image:
                 "https://cdn.kalingauniversity.ac.in/value-additions/researchfacilities.svg", // Image - 26

@@ -12,7 +12,7 @@ import Modal from "../general/Modal";
 
 export default function SampleTesting({
   title = "Sample Testing",
-  description = "At our CIF, we provide sample testing services using our advanced instruments to obtain accurate outcomes. These are available for university students, research scholars, organisations, and industries at minimal rates. Charges may vary depending on the type of equipment.",
+  description = "We provide sample testing services using our advanced instruments to obtain accurate outcomes. These are available for university students, research scholars, organisations, and industries at minimal rates. Charges may vary depending on the type of equipment.",
   subtitle = "Cost Of Sample Analysis",
   instruction,
   note,

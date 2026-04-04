@@ -108,7 +108,7 @@ export default function MSMETrainingCentrePage() {
       <RaipurVideoSection
         videoId="lqO-cvAVMvc"
         thumbnail="https://cdn.kalingauniversity.ac.in/coe/msme-thumbnail.jpg"
-        title="I am SME of India Chairman Rajiv Chawla on Kalinga University's MSME Session & Centre of Excellence"
+        title=""
         description="" // optional
         alt="Video thumbnail"
         heightClass="h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default

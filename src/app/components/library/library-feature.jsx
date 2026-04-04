@@ -1,6 +1,6 @@
 "use client";
 
-import PublicationGrid from "../research/publication-grid"; 
+import PublicationGrid from "../research/publication-grid";
 
 
 export default function LibraryGrid() {
@@ -14,10 +14,10 @@ export default function LibraryGrid() {
         },
         {
           title: "Research Publications",
-          value: "3360+",
+          value: "4700+",
           description: "Scholarly research publications by faculty and researchers.",
         },
-        
+
         {
           title: "E-Books",
           value: "86L+",

@@ -68,7 +68,7 @@ export default function FeatureCards({
     {
       id: 8,
       title: 'Extensive Research Facilities',
-      body: 'With 90+ advanced labs, including IT and CIF, Kalinga University leads in innovation and research excellence.',
+      body: 'With 100+ advanced labs, including IT and CIF, Kalinga University leads in innovation and research excellence.',
       variant: 'amber',
       image: 'https://cdn.kalingauniversity.ac.in/icons/Extensive+Research+Facilities.svg'
     },

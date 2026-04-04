@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const stats = [
   { number: "8,000+", label: "Students Enrolled" },
-  { number: "600+", label: "International Students from 29+ Countries" },
+  { number: "650+", label: "International Students from 33+ Countries" },
   { number: "3 Cr+", label: "Scholarships Distributed" },
   { number: "130+", label: "Programs Offered" },
   { number: "400+", label: "Recruitment Partners" },
-  { number: "3360+", label: "Research Publications" },
-  { number: "510+", label: "Patents Filed" },
+  { number: "4700+", label: "Research Publications" },
+  { number: "549+", label: "Patents Filed" },
   { number: "160+", label: "Sponsored Research Projects" },
   { number: "130+", label: "Consultancy Projects" },
   { number: "200+", label: "MoUs Signed" },
   { number: "7", label: "Centres of Excellence" },
-  { number: "90+", label: "Advanced Laboratories" },
+  { number: "100+", label: "Advanced Laboratories" },
 ];
 
 export default function WhoWeAre() {

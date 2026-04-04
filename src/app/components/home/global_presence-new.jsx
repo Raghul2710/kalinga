@@ -293,7 +293,7 @@ export default function Map({ backgroundColor = "", textColor = "", subtitleText
           titleClassName={`mb-4 text-center ${textColor}`}
           subtitleTextColor={subtitleTextColor}
         />
-        <p className={`text-center ${textColor}`}>KU is a top private university in India that offers a dynamic platform to its National and International students, where unique ideas are appreciated and cultural diversity is celebrated. Our global students from 29+ Countries receive unparalleled mentorship and guidance throughout their academic journey.</p>
+        <p className={`text-center ${textColor}`}>KU is a top private university in India that offers a dynamic platform to its National and International students, where unique ideas are appreciated and cultural diversity is celebrated. Our global students from 33+ Countries receive unparalleled mentorship and guidance throughout their academic journey.</p>
         <div className="relative flex justify-center">
           <Image
             src="https://cdn.kalingauniversity.ac.in/about/globe-new.png"

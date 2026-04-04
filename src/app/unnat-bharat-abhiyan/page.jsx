@@ -210,7 +210,7 @@ export default function UnnatBharatAbhiyanPage() {
 
               {/* DESIGNATION */}
               <p className="text-white/80 text-sm sm:text-base mb-6 leading-relaxed">
-                UBA Principal Investigator (Coordinator)<br />
+                UBA Participating Institution Coordinator<br />
                 Registrar, Kalinga University
               </p>
 

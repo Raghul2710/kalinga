@@ -81,8 +81,10 @@ const defaultGalleryImages = [
 ]
 
 const Gallery = ({
-  images = defaultGalleryImages,
+  images,
+  gallery,
   title = "Gallery",
+  subtitle = "",
   backgroundColor = "bg-white",
   paddingClassName = "py-16",
   titleClassName = "",
@@ -90,7 +92,8 @@ const Gallery = ({
   forceSlider = false,
   showTitles = false
 }) => {
-  const useSlider = forceSlider || images.length > 4 || forceSliderOnMobile
+  const displayImages = images || gallery || defaultGalleryImages;
+  const useSlider = forceSlider || displayImages.length > 4 || forceSliderOnMobile
 
   // Determine title alignment based on titleClassName
   const titleAlignment = titleClassName.includes('text-left') ? 'text-left' :
@@ -102,7 +105,7 @@ const Gallery = ({
       <div className="px-2">
         {/* Title */}
         <div className={`mb-6 sm:mb-8 md:mb-10 ${titleAlignment}`}>
-          <SectionHeading title={title} titleClassName={titleClassName} />
+          <SectionHeading title={title} subtitle={subtitle} titleClassName={titleClassName} />
         </div>
 
         {useSlider ? (
@@ -133,7 +136,7 @@ const Gallery = ({
               }}
               className="gallery-swiper"
             >
-              {images.map((item) => {
+              {displayImages.map((item) => {
                 const imageContent = (
                   <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
                     <Image
@@ -193,7 +196,7 @@ const Gallery = ({
                   slidesPerView={1.2}
                   className="gallery-swiper"
                 >
-                  {images.map((item) => {
+                  {displayImages.map((item) => {
                     const imageContent = (
                       <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
                         <Image
@@ -239,7 +242,7 @@ const Gallery = ({
             )}
             {/* Desktop Grid - always show for grid layout */}
             <div className={`flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 ${forceSliderOnMobile ? 'hidden md:flex' : ''}`}>
-              {images.map((item) => {
+              {displayImages.map((item) => {
                 const imageContent = (
                   <div className="relative overflow-hidden shadow-lg hover:shadow-2xl transition duration-200 rounded-[10px] aspect-square group cursor-pointer">
                     <Image

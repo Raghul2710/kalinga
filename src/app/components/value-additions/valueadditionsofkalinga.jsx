@@ -83,7 +83,7 @@ function Valueadditionsofkalinga() {
         {
             id: 12,
             title: "Experience Cultural Diversity",
-            body: "We have students from 29+ nationalities, which opens doors to experiencing a wide diversity. We encourage all our students to participate in different festivals or cultural activities and develop global connections.",
+            body: "We have students from 33+ nationalities, which opens doors to experiencing a wide diversity. We encourage all our students to participate in different festivals or cultural activities and develop global connections.",
             image: "https://cdn.kalingauniversity.ac.in/value-additions/diversity.svg",
             variant: "amber",
         },

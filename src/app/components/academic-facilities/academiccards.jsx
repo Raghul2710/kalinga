@@ -29,7 +29,7 @@ function Academiccards() {
         {
             title: "Modern Laboratories",
             description:
-                "We have over 90 + labs, including a language lab, a central instrumentation facility, computer labs (with more than 1600 high-tech computers), and other research labs that offer sophisticated instruments, technologies, and advanced computer systems.",
+                "We have over 100 + labs, including a language lab, a central instrumentation facility, computer labs (with more than 1600 high-tech computers), and other research labs that offer sophisticated instruments, technologies, and advanced computer systems.",
             imageSrc:
                 "https://cdn.kalingauniversity.ac.in/academic-facilities/modernlabrotary.webp",
             logoSrc: "",

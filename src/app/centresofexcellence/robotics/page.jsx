@@ -113,7 +113,7 @@ export default function RoboticsCodingDronesTrainingCentrePage() {
       <RaipurVideoSection
         videoId="XZ8gVVzu8Ts"
         thumbnail="https://cdn.kalingauniversity.ac.in/coe/bds-thumbnail.jpg"
-        title="Empowering Students with AI and Robotics: A Tour of Kalinga University's Centre of Excellence Lab"
+        title=""
         description="" // optional
         alt="Video thumbnail"
         heightClass="h-[380px] sm:h-[420px] md:h-[520px]" // optional, keep default

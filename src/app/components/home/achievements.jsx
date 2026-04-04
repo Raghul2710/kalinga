@@ -19,8 +19,8 @@ const achievements = [
   {
     id: 2,
     title: 'International Students',
-    number: '600+',
-    description: 'From 29+ countries',
+    number: '650+',
+    description: 'From 33+ countries',
   },
   {
     id: 3,
@@ -43,13 +43,13 @@ const achievements = [
   {
     id: 6,
     title: 'Research Publications',
-    number: '3360+',
+    number: '4700+',
     description: 'Peer-reviewed contributions',
   },
   {
     id: 7,
     title: 'Patents',
-    number: '510+',
+    number: '549+',
     description: 'Innovations protected',
   },
   {
@@ -79,7 +79,7 @@ const achievements = [
   {
     id: 12,
     title: 'Laboratories',
-    number: '90+',
+    number: '100+',
     description: 'State-of-the-art lab facilities',
   },
 ]

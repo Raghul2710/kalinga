@@ -10,7 +10,7 @@ export default function PublicationGrid({
   stats = [
     {
       title: "Research Publications",
-      value: "3360 +",
+      value: "4700 +",
       description: "Kalinga University has produced a strong body of research publications in reputed national and international journals, reflecting academic depth and innovation.",
     },
     // {
@@ -20,7 +20,7 @@ export default function PublicationGrid({
     // },
     {
       title: "Patents",
-      value: "510 +",
+      value: "549 +",
       description: "Our institution actively supports patent filing and innovation, resulting in numerous granted and filed patents that translate research into real-world solutions.",
     },
     {
@@ -35,7 +35,7 @@ export default function PublicationGrid({
     },
     {
       title: "Labs",
-      value: "90 +",
+      value: "100 +",
       description: "Equipped with state-of-the-art infrastructure, our research labs provide hands-on exposure and advanced experimentation facilities across disciplines.",
     },
     {

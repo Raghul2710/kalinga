@@ -8,7 +8,6 @@ import MainIntro from "@/app/components/about/main_intro";
 import VisionMission from "@/app/components/about/vision-mission";
 import ImageListItem from "@/app/components/ccrc/imagelistitem";
 import Gallery from "@/app/components/general/gallery";
-import Gallerys from '../components/campuslife/campusgallery';
 import MentorIntro from "@/app/components/department/dept_head_intro";
 import WeStandOut from "@/app/components/department/we_stand_out";
 import AdmissionCareer from "@/app/components/general/admission_cta";
@@ -111,6 +110,51 @@ const learningOutcomeCards = [
   { id: 5, description: "Become confident while making correct decisions", imageUrl: "https://cdn.kalingauniversity.ac.in/nss/social-services.svg" },
 ];
 
+
+const galleryImages = [
+
+  {
+    id: 1,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-1.jpeg",
+    alt: "NSS Activities 1",
+  },
+  {
+    id: 2,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-2.jpeg",
+    alt: "NSS Activities 2",
+  },
+  {
+    id: 3,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-3.jpeg",
+    alt: "NSS Activities 3",
+  },
+  {
+    id: 4,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-4.jpeg",
+    alt: "NSS Activities 4",
+  },
+  {
+    id: 5,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-5.jpeg",
+    alt: "NSS Activities 5",
+  },
+  {
+    id: 6,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-6.jpeg",
+    alt: "NSS Activities 6",
+  },
+  {
+    id: 7,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-7.jpeg",
+    alt: "NSS Activities 7",
+  },
+  {
+    id: 8,
+    image: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-8.jpeg",
+    alt: "NSS Activities 8",
+  }
+];
+
 export default function NSSPage() {
   const pathname = usePathname();
 
@@ -132,7 +176,7 @@ export default function NSSPage() {
       <ImageListItem
         title="Objectives"
         items={objectiveItems}
-        imageSrc="https://cdn.kalingauniversity.ac.in/nss/nss-benefits-new.webp"
+        imageSrc="https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-1.jpeg"
         imageAlt="NSS Objectives"
         description=""
       />
@@ -163,7 +207,11 @@ export default function NSSPage() {
         categoryId={2}
         fallbackToGlobal={true}
       />
-      <Gallerys />
+      <Gallery
+        title="Glimpses"
+        subtitle=""
+        images={galleryImages}
+      />
       <AdmissionCareer />
 
       {/* ✅ FIXED + WORKING GLOBAL CSS */}

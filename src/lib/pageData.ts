@@ -366,7 +366,7 @@ export const pageDataMap: Record<string, PageData> = {
     "/nss": {
         slug: "/nss",
         title: "NSS",
-        banner: "https://cdn.kalingauniversity.ac.in/nss/nss-benefits-new.webp",
+        banner: "https://cdn.kalingauniversity.ac.in/nss/gallery/nss-images-2.jpeg",
     },
     "/organogram": {
         slug: "/organogram",

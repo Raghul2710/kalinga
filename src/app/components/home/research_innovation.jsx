@@ -20,11 +20,11 @@ export default function ResearchInnovation() {
   const [hIndex, setHIndex] = useState(0)
 
   const stats = [
-    { label: 'Research Publications', value: '3360+', variant: 'white', targetValue: 3360, setter: setResearchPublications },
+    { label: 'Research Publications', value: '4700+', variant: 'white', targetValue: 4700, setter: setResearchPublications },
     { label: 'Startups', value: '6+', variant: 'white', targetValue: 6, setter: setStartups },
     { label: 'Research Labs', value: '90+', variant: 'white', targetValue: 90, setter: setResearchLabs },
     { label: 'Citations', value: '2136+', variant: 'white', targetValue: 2136, setter: setCitations },
-    { label: 'Patents', value: '510+', variant: 'white', targetValue: 510, setter: setPatents },
+    { label: 'Patents', value: '549+', variant: 'white', targetValue: 549, setter: setPatents },
     { label: 'H-Index', value: '19+', variant: 'white', targetValue: 19, setter: setHIndex },
   ]
 

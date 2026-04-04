@@ -9,7 +9,7 @@ import Gallery from "@/app/components/general/gallery";
 import AdmissionCareer from "@/app/components/general/admission_cta";
 
 const aboutP1 =
-  "Kalinga University has research labs, including the Central Instrumentation Facility (CIF), Language Lab, Business Lab, and computer Labs that will fulfil all the research needs by providing students and research scholars with comprehensive resources, tools, and technologies.";
+  "Kalinga University has 100+ research labs, including the Central Instrumentation Facility (CIF), Language Lab, Business Lab, and computer Labs that will fulfil all the research needs by providing students and research scholars with comprehensive resources, tools, and technologies.";
 
 const aboutP2 =
   "Experience practical learning like never before. Explore the advanced tools, instruments, and facilities of our labs across different fields of study, designed for you to experiment, explore, perform research, and obtain findings that will make you future-ready professionals.";

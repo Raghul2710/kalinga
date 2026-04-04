@@ -42,7 +42,7 @@ const phdWhyChooseItems = [
     {
         id: 7,
         title: "Advanced Labs",
-        description: "With 90 + labs, including a computer lab and a CIF, scholars can easily conduct research work using advanced equipment.",
+        description: "With 100 + labs, including a computer lab and a CIF, scholars can easily conduct research work using advanced equipment.",
         icon: "https://cdn.kalingauniversity.ac.in/phd/microscope.svg",
     },
     {
