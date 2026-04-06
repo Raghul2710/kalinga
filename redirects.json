@@ -1195,7 +1195,7 @@
         "permanent": true
     },
     {
-        "source": "/why_kalinga.php",
+        "source": "/iqac/why_kalinga",
         "destination": "/about-us",
         "permanent": true
     },
@@ -1205,13 +1205,104 @@
         "permanent": true
     },
     {
-        "source": "/index",
-        "destination": "/",
+        "source": "/job_openings.php/seed-money",
+        "destination": "/careers",
         "permanent": true
     },
     {
-        "source": "/job_openings.php/1000",
-        "destination": "/careers",
+        "source": "/department/chemistry",
+        "destination": "/courses/bachelor-of-science-physics-chemistry-mathematics",
+        "permanent": true
+    },
+    {
+        "source": "/PO-PSO-CO/Master-Of-Science-(Mathematics)",
+        "destination": "/courses/master-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/departments/information-technology",
+        "destination": "/departments/faculty-of-information-technology",
+        "permanent": true
+    },
+    {
+        "source": "/6months-internship/research-consultancy-ipr-policy",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/6-Months-Internship-2025-2026/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/placement/overview",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Pharmacy/ipr-cell",
+        "destination": "/departments/faculty-of-pharmacy",
+        "permanent": true
+    },
+    {
+        "source": "/research/voter_portal",
+        "destination": "/voter-portal",
+        "permanent": true
+    },
+    {
+        "source": "/film-making-workshop/ipr-cell",
+        "destination": "/courses/bachelor-of-arts-in-film-making",
+        "permanent": true
+    },
+    {
+        "source": "/faculty-of-arts-and-humanities",
+        "destination": "/departments/faculty-of-arts-humanities",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/faculty-of-management",
+        "destination": "/academics/management",
+        "permanent": true
+    },
+    {
+        "source": "/faculty-of-science",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/faculty-of-engineering-and-technology",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Law/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Commerce-and-Management/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Arts-and-Humanities/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/ieee/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Technology/hostel_fee",
+        "destination": "/ku-fees",
         "permanent": true
     }
+    
 ]
