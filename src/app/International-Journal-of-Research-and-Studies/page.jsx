@@ -524,6 +524,11 @@ const UnivistaJournalPage = () => {
 
     return (
         <div className="pt-[100px] md:pt-0">
+            <SectionHeading
+                title="E-ISSN: 3139-0668"
+                titleClassName="text-center md:text-[40px]"
+                titleTextColor="text-[#001f3f]"
+            />
             <MainIntro
                 title="Univista: International Journal of Research and Studies"
                 subtitle="About the Journal"

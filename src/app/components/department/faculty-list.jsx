@@ -9,7 +9,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const FacultyCard = ({ name, designation, department, showArrow = false }) => {
+const FacultyCard = ({ name, designation, doj, department, showArrow = false }) => {
     return (
         <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group h-full relative border border-gray-100/50">
             <div>
@@ -19,6 +19,11 @@ const FacultyCard = ({ name, designation, department, showArrow = false }) => {
                 <p className="tracking-wide text-black">
                     {designation}
                 </p>
+                {doj && (
+                    <p className="tracking-wide text-black mt-1">
+                        DOJ: {doj}
+                    </p>
+                )}
                 {department && (
                     <p className="tracking-wide text-black mt-1">
                         {department}
@@ -97,6 +102,7 @@ export default function FacultyList({ items, title = "Our Faculty", description,
                                     <FacultyCard
                                         name={faculty.name}
                                         designation={faculty.designation}
+                                        doj={faculty.doj || faculty.dOJ}
                                         showArrow={showArrow}
                                     />
                                 </SwiperSlide>
@@ -111,6 +117,7 @@ export default function FacultyList({ items, title = "Our Faculty", description,
                                 key={index}
                                 name={faculty.name}
                                 designation={faculty.designation}
+                                doj={faculty.doj || faculty.dOJ}
                                 showArrow={showArrow}
                             />
                         ))}

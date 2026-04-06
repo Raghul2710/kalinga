@@ -319,24 +319,24 @@ export default function ManagementDepartmentPage() {
     ];
 
     const facultyMembers = [
-        { name: "Dr. R. Shridhar", designation: "Professor" },
-        { name: "Prof. Byju John", designation: "Professor & Dean" },
-        { name: "Dr. Arup Kumar Haldar", designation: "Associate Professor" },
-        { name: "Dr. Arvind Kumar Saxena", designation: "Associate Professor" },
-        { name: "Dr. Atul Bhardwaj", designation: "Associate Professor" },
-        { name: "Dr. Lalit Sachdeva", designation: "Associate Professor" },
-        { name: "Dr. Pankaj Tiwari", designation: "Associate Professor" },
-        { name: "Dr. Saurabh Banwar", designation: "Associate Professor" },
-        { name: "Dr. Akash Bhattacharya", designation: "Assistant Professor" },
-        { name: "Dr. Lincy Roy", designation: "Assistant Professor" },
-        { name: "Dr. Deepti Patnaik", designation: "Assistant Professor" },
-        { name: "Dr. Kanchan Thakur", designation: "Assistant Professor" },
-        { name: "Dr. Nishtha Sharma", designation: "Assistant Professor and Head of Department" },
-        { name: "Dr. Shinki Katyayani Pandey", designation: "Assistant Professor" },
-        { name: "Dr. Parvinder Shesh", designation: "Assistant Professor" },
-        { name: "Dr. Ankita Nihlani", designation: "Assistant Professor" },
-        { name: "Ms. Dawakit Lepcha", designation: "Assistant Professor" },
-        { name: "Mr. Rakshak Bharti", designation: "Assistant Professor" }
+        { name: "Dr. R. Shridhar (Ph.D)", designation: "Professor", doj: "14-11-2013" },
+        { name: "Prof. Byju John (Ph.D)", designation: "Professor", doj: "06-04-2019" },
+        { name: "Dr. Arup Kumar Haldar (Ph.D)", designation: "Associate Professor", doj: "16-12-2016" },
+        { name: "Dr. Arvind Kumar Saxena (Ph.D)", designation: "Associate Professor", doj: "03-09-2018" },
+        { name: "Dr. Atul Bhardwaj (Ph.D)", designation: "Associate Professor", doj: "08-05-2019" },
+        { name: "Dr. Lalit Sachdeva (Ph.D)", designation: "Associate Professor", doj: "24-12-2020" },
+        { name: "Dr. Pankaj Tiwari (Ph.D)", designation: "Associate Professor", dOJ: "27-06-2022" },
+        { name: "Dr. Saurabh Banwar (Ph.D)", designation: "Associate Professor", dOJ: "27-06-2022" },
+        { name: "Dr. Akash Bhattacharya (Ph.D)", designation: "Assistant Professor", dOJ: "27-06-2022" },
+        { name: "Dr. Lincy Roy (Ph.D)", designation: "Assistant Professor", dOJ: "30-09-2013" },
+        { name: "Dr. Deepti Patnaik (Ph.D)", designation: "Assistant Professor", dOJ: "20-07-2023" },
+        { name: "Dr. Kanchan Thakur (Ph.D)", designation: "Assistant Professor", dOJ: "25-07-2022" },
+        { name: "Dr. Nishtha Sharma (Ph.D)", designation: "Assistant Professor", dOJ: "20-02-2023" },
+        { name: "Dr. Shinki Katyayani Pandey (Ph.D)", designation: "Assistant Professor", dOJ: "15-11-2021" },
+        { name: "Dr. Parvinder Shesh (Ph.D)", designation: "Assistant Professor", dOJ: "28-08-2017" },
+        { name: "Dr. Ankita Nihlani (Ph.D)", designation: "Assistant Professor", dOJ: "01-05-2017" },
+        { name: "Ms. Dawakit Lepcha (MBA & UGC-NET)", designation: "Assistant Professor", dOJ: "18-07-2022" },
+        { name: "Mr. Rakshak Bharti (MBA & UGC-NET)", designation: "Assistant Professor", dOJ: "18-07-2022" }
 
     ];
 
@@ -369,6 +369,12 @@ export default function ManagementDepartmentPage() {
         { id: 'research', label: 'Research' },
         { id: 'placements', label: 'Placements' },
         { id: 'facilities', label: 'Facilities' },
+    ];
+
+    const researchItems = [
+        { id: 1, title: "Research", href: "/research" },
+        { id: 2, title: "Publications", href: "/publications" },
+        { id: 3, title: "Conferences", href: "/conferences" }
     ];
 
     return (
@@ -460,6 +466,8 @@ export default function ManagementDepartmentPage() {
             <div id="research" className="scroll-mt-24 md:scroll-mt-28">
                 <ResearchPublicationsTabs />
             </div>
+
+
 
             <div id="library" className="scroll-mt-24 md:scroll-mt-28">
                 <StudentCell
@@ -595,13 +603,13 @@ export default function ManagementDepartmentPage() {
                 )}
             </Modal>
 
-            {/* <SectionHeading
+            <SectionHeading
                 title="Placement Details"
                 titleClassName="text-center"
             />
             <ResearchSixGridButtons
                 buttons={research_six_grid_buttons1}
-            /> */}
+            />
 
             <div id="placements" className="scroll-mt-24 md:scroll-mt-28">
                 <Placements
