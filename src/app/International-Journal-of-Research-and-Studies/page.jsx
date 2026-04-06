@@ -526,7 +526,7 @@ const UnivistaJournalPage = () => {
         <div className="pt-[100px] md:pt-0">
             <SectionHeading
                 title="E-ISSN: 3139-0668"
-                titleClassName="text-center md:text-[40px]"
+                titleClassName="text-center mt-5 md:text-[40px]"
                 titleTextColor="text-[#001f3f]"
             />
             <MainIntro

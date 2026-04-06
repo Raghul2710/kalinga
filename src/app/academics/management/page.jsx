@@ -517,21 +517,23 @@ export default function ManagementDepartmentPage() {
                 />
             </div>
 
-            <OrganogramOfKalinga
-                title="Feedback"
-                useContainer={true}
-                description="Your responses will help us improve our academic quality and learning experience."
-                showImage={false}
-                imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
-                imageAlt="Kalinga University Organogram"
-                buttons={[
-                    {
-                        id: 1,
-                        text: "Course Exit Survey – MBA",
-                        onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - MBA")
-                    }
-                ]}
-            />
+            <div id="feedback">
+                <OrganogramOfKalinga
+                    title="Feedback"
+                    useContainer={true}
+                    description="Your responses will help us improve our academic quality and learning experience."
+                    showImage={false}
+                    imageUrl="https://cdn.kalingauniversity.ac.in/about/Organogram.png"
+                    imageAlt="Kalinga University Organogram"
+                    buttons={[
+                        {
+                            id: 1,
+                            text: "Course Exit Survey – MBA",
+                            onClick: () => handleOpenSurvey("course-exit-survey", "Course Exit Survey - MBA")
+                        }
+                    ]}
+                />
+            </div>
 
             <OrganogramOfKalinga
                 title="On Curriculum, Course, Teaching-Learning and Evaluation"
