@@ -137,6 +137,11 @@ function Accreditations() {
 
             aicte: {
                 years: {
+                    "2026 - 27": [
+                        { title: "AICTE-DIPLOMA-ENGINEERING-2026-27-EOA-With-Working-Professional", url: "https://cdn.kalingauniversity.ac.in/accreditation/Approval+PDF/AICTE/AICTE-DIPLOMA-ENGINEERING-2026-27-EOA-With-Working-Professional.PDF" },
+                        { title: "AICTE-B.TECH-2026-27-EOA-with Working Professional", url: "https://cdn.kalingauniversity.ac.in/accreditation/Approval+PDF/AICTE/AICTE-B.TECH-2026-27-EOA-with Working Professional.PDF" },
+                    ],
+
                     "2025 - 26": [
                         { title: "AICTE-DIPLOMA ENGINEERING 2025-26 EOA (With Working Professional)", url: "https://cdn.kalingauniversity.ac.in/accreditation/Approval+PDF/AICTE/AICTE-DIPLOMA+ENGINEERING+2025-26+EOA+(With+Working+Professional).pdf" },
                         { title: "AICTE B.TECH. 2025-26 EOA (with Working Professional)", url: "https://cdn.kalingauniversity.ac.in/accreditation/Approval+PDF/AICTE/AICTE+B.TECH.+2025-26+EOA+(with+Working+Professional).pdf" },
