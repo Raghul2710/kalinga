@@ -2046,7 +2046,7 @@ export default function IqacTabSection() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       {/* 2025-2029 Plan */}
                       <a
-                        href="https://cdn.kalingauniversity.ac.in/IQAC/Perspective+Cum+Strategic+Plan+for+2025-2029.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/strategic-plan/Strategic-Plan-for-2025-29.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
@@ -2076,7 +2076,7 @@ export default function IqacTabSection() {
 
                       {/* 2020-2024 Plan */}
                       <a
-                        href="https://cdn.kalingauniversity.ac.in/IQAC/Perspective+Cum+Strategic+Plan+for+2020-2024.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/strategic-plan/Strategic-Plan-for-2020-24.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"
@@ -2106,7 +2106,7 @@ export default function IqacTabSection() {
 
                       {/* 2014-2019 Plan */}
                       <a
-                        href="https://cdn.kalingauniversity.ac.in/IQAC/Perspective+Cum+Strategic+Plan+for+2014-2019.pdf"
+                        href="https://cdn.kalingauniversity.ac.in/IQAC/strategic-plan/Strategic-Plan-for-2014-19.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-[var(--button-red)] hover:shadow-lg transition-all duration-300"

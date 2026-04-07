@@ -319,24 +319,24 @@ export default function ManagementDepartmentPage() {
     ];
 
     const facultyMembers = [
-        { name: "Dr. R. Shridhar (Ph.D)", designation: "Professor", doj: "14-11-2013" },
-        { name: "Prof. Byju John (Ph.D)", designation: "Professor", doj: "06-04-2019" },
-        { name: "Dr. Arup Kumar Haldar (Ph.D)", designation: "Associate Professor", doj: "16-12-2016" },
-        { name: "Dr. Arvind Kumar Saxena (Ph.D)", designation: "Associate Professor", doj: "03-09-2018" },
-        { name: "Dr. Atul Bhardwaj (Ph.D)", designation: "Associate Professor", doj: "08-05-2019" },
-        { name: "Dr. Lalit Sachdeva (Ph.D)", designation: "Associate Professor", doj: "24-12-2020" },
-        { name: "Dr. Pankaj Tiwari (Ph.D)", designation: "Associate Professor", dOJ: "27-06-2022" },
-        { name: "Dr. Saurabh Banwar (Ph.D)", designation: "Associate Professor", dOJ: "27-06-2022" },
-        { name: "Dr. Akash Bhattacharya (Ph.D)", designation: "Assistant Professor", dOJ: "27-06-2022" },
-        { name: "Dr. Lincy Roy (Ph.D)", designation: "Assistant Professor", dOJ: "30-09-2013" },
-        { name: "Dr. Deepti Patnaik (Ph.D)", designation: "Assistant Professor", dOJ: "20-07-2023" },
-        { name: "Dr. Kanchan Thakur (Ph.D)", designation: "Assistant Professor", dOJ: "25-07-2022" },
-        { name: "Dr. Nishtha Sharma (Ph.D)", designation: "Assistant Professor", dOJ: "20-02-2023" },
-        { name: "Dr. Shinki Katyayani Pandey (Ph.D)", designation: "Assistant Professor", dOJ: "15-11-2021" },
-        { name: "Dr. Parvinder Shesh (Ph.D)", designation: "Assistant Professor", dOJ: "28-08-2017" },
-        { name: "Dr. Ankita Nihlani (Ph.D)", designation: "Assistant Professor", dOJ: "01-05-2017" },
-        { name: "Ms. Dawakit Lepcha (MBA & UGC-NET)", designation: "Assistant Professor", dOJ: "18-07-2022" },
-        { name: "Mr. Rakshak Bharti (MBA & UGC-NET)", designation: "Assistant Professor", dOJ: "18-07-2022" }
+        { name: "Dr. R. Shridhar", designation: "Professor", Qualification: "Ph.D", doj: "14-11-2013" },
+        { name: "Prof. Byju John", designation: "Professor", Qualification: "Ph.D", doj: "06-04-2019" },
+        { name: "Dr. Arup Kumar Haldar", designation: "Associate Professor", Qualification: "Ph.D", doj: "16-12-2016" },
+        { name: "Dr. Arvind Kumar Saxena", designation: "Associate Professor", Qualification: "Ph.D", doj: "03-09-2018" },
+        { name: "Dr. Atul Bhardwaj", designation: "Associate Professor", Qualification: "Ph.D", doj: "08-05-2019" },
+        { name: "Dr. Lalit Sachdeva", designation: "Associate Professor", Qualification: "Ph.D", doj: "24-12-2020" },
+        { name: "Dr. Pankaj Tiwari", designation: "Associate Professor", Qualification: "Ph.D", dOJ: "27-06-2022" },
+        { name: "Dr. Saurabh Banwar", designation: "Associate Professor", Qualification: "Ph.D", dOJ: "27-06-2022" },
+        { name: "Dr. Akash Bhattacharya", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "27-06-2022" },
+        { name: "Dr. Lincy Roy", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "30-09-2013" },
+        { name: "Dr. Deepti Patnaik", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "20-07-2023" },
+        { name: "Dr. Kanchan Thakur", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "25-07-2022" },
+        { name: "Dr. Nishtha Sharma", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "20-02-2023" },
+        { name: "Dr. Shinki Katyayani Pandey", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "15-11-2021" },
+        { name: "Dr. Parvinder Shesh", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "28-08-2017" },
+        { name: "Dr. Ankita Nihlani", designation: "Assistant Professor", Qualification: "Ph.D", dOJ: "01-05-2017" },
+        { name: "Ms. Dawakit Lepcha", designation: "Assistant Professor", Qualification: "MBA & UGC-NET", dOJ: "18-07-2022" },
+        { name: "Mr. Rakshak Bharti", designation: "Assistant Professor", Qualification: "MBA & UGC-NET", dOJ: "18-07-2022" }
 
     ];
 
