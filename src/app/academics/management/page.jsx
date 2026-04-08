@@ -650,11 +650,11 @@ function ResearchPublicationsTabs() {
             { id: "79", label: "Book Chapters (2023)" },
             { id: "78", label: "Book Chapters (2022)" },
             { id: "77", label: "Book Chapters (2021)" },
-            { id: "73", label: "Patents (2025)" },
-            { id: "74", label: "Patents (2024)" },
-            { id: "75", label: "Patents (2023)" },
-            { id: "86", label: "Patents (2022)" },
-            { id: "76", label: "Patents (2021)" },
+            { id: "93", label: "Patents (2025)" },
+            { id: "94", label: "Patents (2024)" },
+            { id: "95", label: "Patents (2023)" },
+            { id: "96", label: "Patents (2022)" },
+            { id: "97", label: "Patents (2021)" },
 
 
         ],
