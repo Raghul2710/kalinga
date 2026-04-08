@@ -1233,6 +1233,7 @@ const IQAC_TABS = [
   // { id: "financial", label: "Financial Audited Statements" },
   { id: "feedback-form", label: "Feedback Form" },
   { id: "https://kalingauniversity.ac.in/International-Journal-of-Research-and-Studies", label: "Univista: International Journal of Research and Studies" },
+  { id: "nba", label: "NBA" }
 ];
 
 const IQAC_OBJECTIVES = [
@@ -1442,6 +1443,29 @@ const MINUTES_OF_MEETING = {
   ],
 };
 
+
+const nba = {
+  "SAR": [
+    { title: "SAR", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/final-sar.pdf" },
+  ],
+  "Student Details": [
+    { title: "Student Details - 2021-22", url: "#" },
+    { title: "Student Details - 2022-23", url: "#" },
+    { title: "Student Details - 2023-24", url: "#" },
+  ],
+  "Faculty Details": [
+    { title: "Faculty Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/Faculty-deatils-22-23.pdf" },
+    { title: "Faculty Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/Faculty-details-23-24.pdf" },
+    { title: "Faculty Details - 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-24-25.pdf" },
+    { title: "Faculty Details - 2025-26", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2025-26.pdf" },
+  ],
+  "Placement Details": [
+    { title: "Placement Details - 2021-22", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2021-22.pdf" },
+    { title: "Placement Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2022-23.pdf" },
+    { title: "Placement Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2023-24.pdf" },
+  ],
+};
+
 // Feedback Analysis Data
 const FEEDBACK_ANALYSIS = {
   "2023-24": [
@@ -1636,6 +1660,8 @@ export default function IqacTabSection() {
     }
     return [];
   };
+
+
 
   return (
     <section className="w-full py-4 px-2 scroll-mt-24" id="iqac-tab-section">
@@ -2185,8 +2211,60 @@ export default function IqacTabSection() {
                 </div>
               )}
 
+              {/* NBA Tab */}
+              {activeTab === "nba" && (
+                <div className="flex-1">
+                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
+                    NBA
+                  </h2>
+                  <div className="space-y-2 text-left">
+                    {Object.entries(nba).map(([category, documents]) => {
+                      const isExpanded = expandedYears[category] || false;
+                      return (
+                        <div key={category} className="border-b border-[var(--button-red)] pb-2 last:border-b-0">
+                          <button
+                            onClick={() => toggleYear(category)}
+                            className="w-full flex items-center gap-2 py-1 hover:opacity-80 transition-opacity justify-between pr-3"
+                            aria-label={`Toggle ${category}`}
+                          >
+                            <h3 className="font-plus-jakarta-sans text-sm md:text-base text-[var(--foreground)]">
+                              {category}
+                            </h3>
+                            <div className={`text-[var(--background)] bg-[var(--button-red)] rounded-sm p-3 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
+                              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                          {isExpanded && (
+                            <div className="mt-2 space-y-2">
+                              {documents.length > 0 ? (
+                                documents.map((doc, idx) => (
+                                  <FlipbookTrigger key={idx} pdfUrl={doc.url} title={doc.title}>
+                                    <a
+                                      href={doc.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="block px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-[var(--foreground)] border border-gray-200"
+                                    >
+                                      <span className="font-plus-jakarta-sans text-sm md:text-base">{doc.title}</span>
+                                    </a>
+                                  </FlipbookTrigger>
+                                ))
+                              ) : (
+                                <p className="px-4 py-2 text-[var(--foreground)]/60 text-sm">No documents available for this category.</p>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
               {/* Placeholder content for other tabs */}
-              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits"].includes(activeTab) && (
+              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits", "nba"].includes(activeTab) && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}

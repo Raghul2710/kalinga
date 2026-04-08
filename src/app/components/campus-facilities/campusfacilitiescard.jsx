@@ -3,10 +3,15 @@
 import React, { useLayoutEffect, useRef } from "react";
 import Cards from "../ccrc/cards";
 
-function Campusfacilitiescard() {
+function Campusfacilitiescard({
+    title = "Campus Facilities",
+    titleClassName = "mb-1 text-black text-center",
+    cards: customCards,
+    showKnowMore = false
+}) {
     const wrapperRef = useRef(null);
 
-    const cards = [
+    const defaultCards = [
         {
             title: "Hostel",
             description:
@@ -157,18 +162,22 @@ function Campusfacilitiescard() {
         },
     ];
 
+    const cards = customCards || defaultCards;
+
     // ✅ useLayoutEffect runs earlier than useEffect (prevents flash)
     useLayoutEffect(() => {
         const root = wrapperRef.current;
         if (!root) return;
 
         // hide the buttons
-        const btns = root.querySelectorAll(".absolute.left-5.bottom-4");
-        btns.forEach((btn) => (btn.style.display = "none"));
+        if (!showKnowMore) {
+            const btns = root.querySelectorAll(".absolute.left-5.bottom-4");
+            btns.forEach((btn) => (btn.style.display = "none"));
+        }
 
         // unhide the wrapper after hiding buttons
         root.style.visibility = "visible";
-    }, []);
+    }, [showKnowMore]);
 
     return (
         <>
@@ -205,8 +214,8 @@ function Campusfacilitiescard() {
         }
       `}</style>
 
-            <h2 className="mb-1 text-black text-center">
-                Campus Facilities
+            <h2 className={titleClassName}>
+                {title}
             </h2>
 
             {/* ✅ hidden on first paint, shown immediately after layout effect */}
