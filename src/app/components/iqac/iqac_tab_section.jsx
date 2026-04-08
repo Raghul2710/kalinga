@@ -2237,16 +2237,15 @@ export default function IqacTabSection() {
                             <div className="mt-2 space-y-2">
                               {documents.length > 0 ? (
                                 documents.map((doc, idx) => (
-                                  <FlipbookTrigger key={idx} pdfUrl={doc.url} title={doc.title}>
-                                    <a
-                                      href={doc.url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      className="block px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-[var(--foreground)] border border-gray-200"
-                                    >
-                                      <span className="font-plus-jakarta-sans text-sm md:text-base">{doc.title}</span>
-                                    </a>
-                                  </FlipbookTrigger>
+                                  <a
+                                    key={idx}
+                                    href={doc.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-[var(--foreground)] border border-gray-200"
+                                  >
+                                    <span className="font-plus-jakarta-sans text-sm md:text-base">{doc.title}</span>
+                                  </a>
                                 ))
                               ) : (
                                 <p className="px-4 py-2 text-[var(--foreground)]/60 text-sm">No documents available for this category.</p>
