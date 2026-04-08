@@ -1630,22 +1630,19 @@ export default function IqacTabSection() {
 
   const toggleYear = (year) => {
     setExpandedYears((prev) => {
-      // If the clicked year is already expanded, close it
+      const newState = {};
+      // Reset all existing keys to false to ensure only one can be open
+      Object.keys(prev).forEach((y) => {
+        newState[y] = false;
+      });
+
+      // If the clicked item was already expanded, we've already reset everything to false, so just return
       if (prev[year]) {
-        // Close all years
-        const newState = {};
-        Object.keys(prev).forEach((y) => {
-          newState[y] = false;
-        });
-        return newState;
-      } else {
-        // Close all years and open only the clicked year
-        const newState = {};
-        Object.keys(prev).forEach((y) => {
-          newState[y] = y === year;
-        });
         return newState;
       }
+
+      // Otherwise, expand the clicked item
+      return { ...newState, [year]: true };
     });
   };
 
