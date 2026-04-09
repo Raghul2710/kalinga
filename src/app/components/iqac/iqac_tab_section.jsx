@@ -1449,14 +1449,15 @@ const nba = {
     { title: "SAR", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/final-sar.pdf" },
   ],
   "Student Details": [
-    { title: "Student Details - 2021-22", url: "#" },
-    { title: "Student Details - 2022-23", url: "#" },
-    { title: "Student Details - 2023-24", url: "#" },
+    { title: "Student Details - 2025-26", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2025-26.pdf" },
+    { title: "Student Details - 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2024-25.pdf" },
+    { title: "Student Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2023-24.pdf" },
+    { title: "Student Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2022-23.pdf" },
   ],
   "Faculty Details": [
-    { title: "Faculty Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/Faculty-deatils-22-23.pdf" },
-    { title: "Faculty Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/Faculty-details-23-24.pdf" },
-    { title: "Faculty Details - 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-24-25.pdf" },
+    { title: "Faculty Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-deatils-2022-23.pdf" },
+    { title: "Faculty Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2023-24.pdf" },
+    { title: "Faculty Details - 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2024-25.pdf" },
     { title: "Faculty Details - 2025-26", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2025-26.pdf" },
   ],
   "Placement Details": [
