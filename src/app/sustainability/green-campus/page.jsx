@@ -6,13 +6,15 @@ import PhdObjectivesPanel from "@/app/components/phd/phd-objectives";
 import Campusfacilitiescard from "@/app/components/campus-facilities/campusfacilitiescard";
 import FAQ from "@/app/components/general/faq";
 import DataTable from "@/app/components/general/data-table";
+import ResearchSixGridButtons from "@/app/components/research/research_six_grid-buttons";
+import SectionHeading from "../../../../my-app/src/app/components/general/SectionHeading";
 
 const mainIntroContent = {
     title: "Sustainable Initiatives for a Green Campus",
     description: [
         "To promote sustainability and environmental responsibility, the University is taking various green initiatives and contributing towards various United Nations Sustainable Development Goals (SDGs), particularly SDG 7 (Affordable and Clean Energy), SDG 11 (Sustainable Cities and Communities), SDG 13 (Climate Action), and SDG 15 (Life on Land). The campus features a green landscape that supports ecological balance and biodiversity, pedestrian-friendly pathways, and the use of sustainable modes of transportation like bicycles and e-vehicles. Solar panels and LED lights installed in different buildings reduce electricity consumption and promote the usage of renewable sources of energy. Various outreach activities, environmental-focused projects, and research initiatives build awareness among students and staff."
     ],
-    imageUrl: "https://cdn.kalingauniversity.ac.in/common/student.jpg",
+    imageUrl: "https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-green-campus/sdg-images-1.webp",
     imageAlt: "Sustainable Initiatives for a Green Campus",
 };
 
@@ -105,6 +107,64 @@ const cards = [
         logoSrc: "",
         subtitle: "PLASTIC FREE CAMPUS",
         link: "#",
+    }
+];
+
+const research_six_grid_buttons1 = [
+    {
+        id: 1,
+        text: "Polythene Awareness Program",
+        url: "#"
+    },
+    {
+        id: 2,
+        text: "Debate Competition/Group Discussion for Lifestyle for Environment (LiFE): Youth Parliament",
+        url: "#"
+    },
+    {
+        id: 3,
+        text: "Paper Bag Distribution Campaign",
+        url: "#"
+    },
+    {
+        id: 4,
+        text: "Walkathon - Go Green with Olive Green",
+        url: "#"
+    },
+    {
+        id: 5,
+        text: "Tree Plantation by NSS Unit",
+        url: "#"
+    },
+    {
+        id: 6,
+        text: "Green Audit Report & Certificate (2020-2021)",
+        url: "#"
+    },
+    {
+        id: 7,
+        text: "Green Audit Report & Certificates (2023)",
+        url: "#"
+    },
+    {
+        id: 8,
+        text: "Green Audit/Environmental Audit Manual",
+        url: "#"
+    },
+    {
+        id: 9,
+        text: "Members of the Green Audit Committee and Geotagged Photographs",
+        url: "#"
+    },
+    {
+        id: 10,
+        text: "Policy Guidelines for Environmental Sustainability",
+        url: "#"
+    },
+    {
+        id: 11,
+        text: "Best Practice 2 - Harmony in Action: Implementing Sustainable Development Goals for a Better World",
+        url: "#"
     }
 ];
 
@@ -204,7 +264,18 @@ export default function GreenCampusPage() {
             <PhdObjectivesPanel
                 title="Some of the programs include:"
                 subtitle=""
+                images="https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-green-campus/sdg-images-1.webp"
                 phdObjectives={phdObjectives}
+            />
+            <div className="mt-10">
+                <SectionHeading
+                    title="Green Coverage Reports & Policies"
+                    description=""
+                    titleClassName="text-center"
+                />
+            </div>
+            <ResearchSixGridButtons
+                buttons={research_six_grid_buttons1}
             />
         </>
     );
