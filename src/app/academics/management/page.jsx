@@ -504,13 +504,13 @@ export default function ManagementDepartmentPage() {
                         {
                             id: 1,
                             text: "Management Journal List",
-                            fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Journal-List.pdf",
+                            fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/List-of-journals-management.pdf",
                             disableFlipbook: true
                         },
                         {
                             id: 2,
                             text: "Management Title List",
-                            fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/Management-Title-List.pdf",
+                            fileUrl: "https://cdn.kalingauniversity.ac.in/departments/MBA/title-list-of-books-2026-nba.pdf",
                             disableFlipbook: true
                         }
                     ]}
