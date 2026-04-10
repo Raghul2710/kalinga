@@ -861,7 +861,7 @@
     },
     {
         "source": "/iqac/Financial-Audited-Statements",
-        "destination": "/internal-quality-assurance-cell",
+        "destination": "/internal-quality-assurance-cell/#finanical-audited-statements",
         "permanent": true
     },
     {
@@ -1304,5 +1304,4 @@
         "destination": "/ku-fees",
         "permanent": true
     }
-    
 ]
