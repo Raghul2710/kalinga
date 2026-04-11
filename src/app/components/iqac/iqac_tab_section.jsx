@@ -1230,10 +1230,10 @@ const IQAC_TABS = [
   { id: "satisfaction", label: "Student Satisfaction Survey" },
   { id: "strategic", label: "Strategic Plan & Deployment" },
   { id: "naac", label: "NAAC SSR" },
-  { id: "financial", label: "Financial Audited Statements" },
+  // { id: "financial", label: "Financial Audited Statements" },
   { id: "feedback-form", label: "Feedback Form" },
   { id: "https://kalingauniversity.ac.in/International-Journal-of-Research-and-Studies", label: "Univista: International Journal of Research and Studies" },
-  { id: "nba", label: "NBA" }
+  // { id: "nba", label: "NBA" }
 ];
 
 const IQAC_OBJECTIVES = [
@@ -1601,7 +1601,7 @@ export default function IqacTabSection() {
             }
           }, 100);
         }
-        else if (hash === 'finanical-audited-statements') {
+        /* else if (hash === 'finanical-audited-statements') {
           setActiveTab('financial');
           setTimeout(() => {
             const element = document.getElementById(hash);
@@ -1616,7 +1616,7 @@ export default function IqacTabSection() {
               });
             }
           }, 100);
-        }
+        } */
       }
     };
 
@@ -1724,7 +1724,7 @@ export default function IqacTabSection() {
           <div className="flex-1 w-full">
             <div className="rounded-[16px] bg-white p-4 md:p-5 shadow-sm h-full flex flex-col">
               {/* Financial Audited Statements Tab */}
-              {activeTab?.trim().toLowerCase() === "financial" && (
+              {/* {activeTab?.trim().toLowerCase() === "financial" && (
                 <div className="flex-1" id="finanical-audited-statements">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
                     Financial Audited Statements
@@ -1758,7 +1758,7 @@ export default function IqacTabSection() {
                     ))}
                   </div>
                 </div>
-              )}
+              )} */}
               {/* Objectives Tab */}
               {activeTab === "objectives" && (
                 <div className="flex-1">
@@ -2210,7 +2210,7 @@ export default function IqacTabSection() {
               )}
 
               {/* NBA Tab */}
-              {activeTab === "nba" && (
+              {/* {activeTab === "nba" && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     NBA
@@ -2258,10 +2258,10 @@ export default function IqacTabSection() {
                     })}
                   </div>
                 </div>
-              )}
+              )} */}
 
               {/* Placeholder content for other tabs */}
-              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits", "nba", "financial"].includes(activeTab) && (
+              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits"].includes(activeTab) && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}
