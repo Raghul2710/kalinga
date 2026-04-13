@@ -1230,10 +1230,10 @@ const IQAC_TABS = [
   { id: "satisfaction", label: "Student Satisfaction Survey" },
   { id: "strategic", label: "Strategic Plan & Deployment" },
   { id: "naac", label: "NAAC SSR" },
-  // { id: "financial", label: "Financial Audited Statements" },
+  { id: "financial", label: "Financial Audited Statements" },
   { id: "feedback-form", label: "Feedback Form" },
   { id: "https://kalingauniversity.ac.in/International-Journal-of-Research-and-Studies", label: "Univista: International Journal of Research and Studies" },
-  // { id: "nba", label: "NBA" }
+  { id: "nba", label: "NBA" }
 ];
 
 const IQAC_OBJECTIVES = [
@@ -1444,6 +1444,7 @@ const MINUTES_OF_MEETING = {
 };
 
 
+/*
 const nba = {
   "SAR": [
     { title: "SAR", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/final-sar.pdf" },
@@ -1466,6 +1467,7 @@ const nba = {
     { title: "Placement Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2023-24.pdf" },
   ],
 };
+*/
 
 // Feedback Analysis Data
 const FEEDBACK_ANALYSIS = {
@@ -1531,11 +1533,11 @@ const FEEDBACK_ANALYSIS = {
   ],
 };
 
-const FINANCIAL_STATEMENTS = [
-  { title: "Financial Audited Statements 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf" },
-  { title: "Financial Audited Statements 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf" },
-  { title: "Financial Audited Statements 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf" },
-];
+// const FINANCIAL_STATEMENTS = [
+//   { title: "Financial Audited Statements 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf" },
+//   { title: "Financial Audited Statements 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf" },
+//   { title: "Financial Audited Statements 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf" },
+// ];
 
 // Strategic Plan Content
 const STRATEGIC_PLAN_CONTENT = `Kalinga University promotes knowledge development through innovation & research, hands-on learning, and student startups. It provides a platform for students to experiment, work on real-world projects, and bring their innovative ideas. It has also established an incubation centre to support and transform the brilliant startup ideas of young students into successful businesses.
@@ -1601,7 +1603,8 @@ export default function IqacTabSection() {
             }
           }, 100);
         }
-        /* else if (hash === 'finanical-audited-statements') {
+        /*
+        else if (hash === 'finanical-audited-statements') {
           setActiveTab('financial');
           setTimeout(() => {
             const element = document.getElementById(hash);
@@ -1616,7 +1619,8 @@ export default function IqacTabSection() {
               });
             }
           }, 100);
-        } */
+        }
+        */
       }
     };
 
@@ -1724,41 +1728,16 @@ export default function IqacTabSection() {
           <div className="flex-1 w-full">
             <div className="rounded-[16px] bg-white p-4 md:p-5 shadow-sm h-full flex flex-col">
               {/* Financial Audited Statements Tab */}
-              {/* {activeTab?.trim().toLowerCase() === "financial" && (
+              {activeTab?.trim().toLowerCase() === "financial" && (
                 <div className="flex-1" id="finanical-audited-statements">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
                     Financial Audited Statements
                   </h2>
                   <div className="space-y-4 max-w-2xl mx-auto">
-                    {FINANCIAL_STATEMENTS.map((item, idx) => (
-                      <a
-                        key={idx}
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-xl transition-all duration-300 border border-gray-200 group"
-                      >
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-[var(--lite-sand)] rounded-full flex items-center justify-center group-hover:bg-[var(--button-red)] transition-colors">
-                            <svg className="w-5 h-5 text-[var(--button-red)] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                          </div>
-                          <span className="font-plus-jakarta-sans font-semibold text-[var(--foreground)] text-sm md:text-base">
-                            {item.title}
-                          </span>
-                        </div>
-                        <div className="flex items-center text-[var(--button-red)] font-plus-jakarta-sans text-xs md:text-sm font-medium">
-                          <span>View PDF</span>
-                          <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
-                      </a>
-                    ))}
+                    {/* Financial Statements hidden as requested */}
                   </div>
                 </div>
-              )} */}
+              )}
               {/* Objectives Tab */}
               {activeTab === "objectives" && (
                 <div className="flex-1">
@@ -2210,58 +2189,19 @@ export default function IqacTabSection() {
               )}
 
               {/* NBA Tab */}
-              {/* {activeTab === "nba" && (
+              {activeTab === "nba" && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     NBA
                   </h2>
                   <div className="space-y-2 text-left">
-                    {Object.entries(nba).map(([category, documents]) => {
-                      const isExpanded = expandedYears[category] || false;
-                      return (
-                        <div key={category} className="border-b border-[var(--button-red)] pb-2 last:border-b-0">
-                          <button
-                            onClick={() => toggleYear(category)}
-                            className="w-full flex items-center gap-2 py-1 hover:opacity-80 transition-opacity justify-between pr-3"
-                            aria-label={`Toggle ${category}`}
-                          >
-                            <h3 className="font-plus-jakarta-sans text-sm md:text-base text-[var(--foreground)]">
-                              {category}
-                            </h3>
-                            <div className={`text-[var(--background)] bg-[var(--button-red)] rounded-sm p-3 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
-                              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                              </svg>
-                            </div>
-                          </button>
-                          {isExpanded && (
-                            <div className="mt-2 space-y-2">
-                              {documents.length > 0 ? (
-                                documents.map((doc, idx) => (
-                                  <a
-                                    key={idx}
-                                    href={doc.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block px-4 py-2 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-[var(--foreground)] border border-gray-200"
-                                  >
-                                    <span className="font-plus-jakarta-sans text-sm md:text-base">{doc.title}</span>
-                                  </a>
-                                ))
-                              ) : (
-                                <p className="px-4 py-2 text-[var(--foreground)]/60 text-sm">No documents available for this category.</p>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+                    {/* NBA Content hidden as requested */}
                   </div>
                 </div>
-              )} */}
+              )}
 
               {/* Placeholder content for other tabs */}
-              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits"].includes(activeTab) && (
+              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits", "financial", "nba"].includes(activeTab) && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}
