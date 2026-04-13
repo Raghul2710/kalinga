@@ -646,6 +646,11 @@ export const pageDataMap: Record<string, PageData> = {
         title: "Bachelor of Computer Applications in Game Development with Artificial Intelligence",
         banner: "https://cdn.kalingauniversity.ac.in/common/kalinga-front-banner02.webp",
     },
+    "/nirf": {
+        slug: "/nirf",
+        title: "NIRF",
+        banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
+    },
 
 };
 
