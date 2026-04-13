@@ -199,7 +199,11 @@ const ethicsCommitteeColumns = [
   { key: "designation", label: "Designation", width: "flex-1" },
 ];
 
-export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
+export default function ResearchSixGridButtons({ 
+  buttons = defaultButtons, 
+  noSection = false,
+  className = "" 
+}) {
   const { openFlipbook } = useFlipbook();
   const [isTableModalOpen, setIsTableModalOpen] = useState(false);
   const [isContentModalOpen, setIsContentModalOpen] = useState(false);
@@ -212,6 +216,8 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
   };
 
   const handleButtonClick = (e, button) => {
+    const link = button.href || button.url;
+    
     // Check if this button is a content modal trigger
     if (button.isContent) {
       e.preventDefault();
@@ -231,10 +237,10 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
     }
 
     // Check if this is a PDF link
-    const isPdf = isPdfLink(button.href);
+    const isPdf = isPdfLink(link);
     if (isPdf && !button.disableFlipbook) {
       e.preventDefault();
-      openFlipbook(button.href, button.text);
+      openFlipbook(link, button.text);
     }
     // For non-PDF links, let the default anchor behavior handle it
   };
@@ -249,48 +255,60 @@ export default function ResearchSixGridButtons({ buttons = defaultButtons }) {
     setIsContentModalOpen(false);
     setSelectedContentType(null);
   };
+  const content = (
+    <div className={`${noSection ? "" : "container mx-auto px-6"} ${className}`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {buttons.map((button) => {
+          const link = button.href || button.url;
+          const isPdf = isPdfLink(link) && !button.disableFlipbook;
+          const isTable = button.isTable;
+          const isContent = button.isContent;
+
+          return (
+            <div key={button.id} className="block">
+              {isPdf || isTable || isContent ? (
+                <GlobalArrowButton
+                  onClick={(e) => handleButtonClick(e, button)}
+                  className="!w-full h-[60px] justify-between"
+                  arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+                  arrowSize={29}
+                >
+                  {button.text}
+                </GlobalArrowButton>
+              ) : (
+                <a
+                  href={link}
+                  className="block"
+                  target={link && link.startsWith("http") ? "_blank" : undefined}
+                  rel={link && link.startsWith("http") ? "noopener noreferrer" : undefined}
+                >
+                  <GlobalArrowButton
+                    className="!w-full h-[60px] justify-between"
+                    arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+                    arrowSize={29}
+                  >
+                    {button.text}
+                  </GlobalArrowButton>
+                </a>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+
   return (
     <>
-      <section className="pt-16 pb-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {buttons.map((button) => {
-              const isPdf = isPdfLink(button.href) && !button.disableFlipbook;
-              const isTable = button.isTable;
-              const isContent = button.isContent;
-              return (
-                <div key={button.id} className="block">
-                  {isPdf || isTable || isContent ? (
-                    <GlobalArrowButton
-                      onClick={(e) => handleButtonClick(e, button)}
-                      className="!w-full h-[60px] justify-between"
-                      arrowClassName="p-[3px] !px-2 mr-2 !py-1"
-                      arrowSize={29}
-                    >
-                      {button.text}
-                    </GlobalArrowButton>
-                  ) : (
-                    <a
-                      href={button.href}
-                      className="block"
-                      target={button.href ? (button.href.startsWith("http") ? "_blank" : undefined) : undefined}
-                      rel={button.href ? (button.href.startsWith("http") ? "noopener noreferrer" : undefined) : undefined}
-                    >
-                      <GlobalArrowButton
-                        className="!w-full h-[60px] justify-between"
-                        arrowClassName="p-[3px] !px-2 mr-2 !py-1"
-                        arrowSize={29}
-                      >
-                        {button.text}
-                      </GlobalArrowButton>
-                    </a>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {noSection ? (
+        content
+      ) : (
+        <section className="pt-16 pb-16 bg-white">
+          {content}
+        </section>
+      )}
+
+      {/* Content Modal for Plagiarism Policy */}
 
       {/* Content Modal for Plagiarism Policy */}
       {isContentModalOpen && (

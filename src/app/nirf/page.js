@@ -9,22 +9,19 @@ export default function NirfPage() {
 
     const nirfData = {
         "2026": [
-            { id: 1, text: "Overall", url: "#" },
-            { id: 2, text: "Management", url: "#" },
-            { id: 3, text: "Pharmacy", url: "#" },
-            { id: 4, text: "SDGs", url: "#" }
+            { id: 1, text: "Overall", href: "#" },
+            { id: 2, text: "Management", href: "#" },
+            { id: 3, text: "Pharmacy", href: "#" },
+            { id: 4, text: "SDGs", href: "#" }
         ],
         "2025": [
-            { id: 1, text: "Overall", url: "#" },
-            { id: 2, text: "Management", url: "#" },
-            { id: 3, text: "Pharmacy", url: "#" },
-            { id: 4, text: "SDGs", url: "#" }
+            { id: 1, text: "Overall", href: "#" },
+            { id: 2, text: "Management", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20250113-MBA-submitted-13-jan-2025.pdf" },
+            { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-pharmacy-13-jan-2025-submitted.pdf" },
+            { id: 4, text: "SDGs", href: "#" }
         ],
         "2024": [
-            { id: 1, text: "Overall", url: "#" },
-            { id: 2, text: "Management", url: "#" },
-            { id: 3, text: "Pharmacy", url: "#" },
-            { id: 4, text: "SDGs", url: "#" }
+            { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20240131.pdf" }
         ]
     };
 
@@ -44,7 +41,7 @@ export default function NirfPage() {
             <SectionHeading
                 title="NIRF"
                 titleClassName="text-center mb-8" />
-            
+
             <div className="flex flex-col lg:flex-row gap-4 bg-[var(--dark-blue)] py-16 md:px-10 px-4 rounded-xl">
                 {/* Vertical Tabs on Left (Horizontal Scroll on Mobile) */}
                 <div className="w-full lg:w-80 flex-shrink-0">
@@ -84,6 +81,7 @@ export default function NirfPage() {
                         </h2>
                         <ResearchSixGridButtons
                             buttons={nirfData[activeTab]}
+                            noSection={true}
                         />
                     </div>
                 </div>

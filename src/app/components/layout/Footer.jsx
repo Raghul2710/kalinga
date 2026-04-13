@@ -111,11 +111,11 @@ export default function Footer() {
 
                   </ul>
                   <ul className="text-white/80 space-y-2 sm:space-y-3">
-                    <li>
+                    {/* <li>
                       <FlipbookTrigger pdfUrl="https://cdn.kalingauniversity.ac.in/downloads/KU+NIRF+2024+DCF.pdf" title="NIRF Ranking">
                         <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://cdn.kalingauniversity.ac.in/downloads/KU+NIRF+2024+DCF.pdf", "NIRF Ranking")}>NIRF Ranking</a>
                       </FlipbookTrigger>
-                    </li>
+                    </li> */}
                     <li>
                       <FlipbookTrigger pdfUrl="https://cdn.kalingauniversity.ac.in/common/UGC+(Detailed+Info.).pdf" title="UGC Detailed Information">
                         <a className="hover:text-white transition-colors lg:whitespace-nowrap break-words cursor-pointer" onClick={() => openFlipbook("https://cdn.kalingauniversity.ac.in/common/UGC+(Detailed+Info.).pdf", "UGC Detailed Information")}>UGC Detailed Information</a>
