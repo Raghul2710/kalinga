@@ -1735,7 +1735,9 @@ export default function IqacTabSection() {
                     Financial Audited Statements
                   </h2>
                   <div className="space-y-4 max-w-2xl mx-auto">
-                    {/* Financial Statements hidden as requested */}
+                    <p className="text-center text-[var(--foreground)] font-plus-jakarta-sans py-10">
+                      the page is not loading due to some errors
+                    </p>
                   </div>
                 </div>
               )}
@@ -2196,7 +2198,9 @@ export default function IqacTabSection() {
                     NBA
                   </h2>
                   <div className="space-y-2 text-left">
-                    {/* NBA Content hidden as requested */}
+                    <p className="text-center text-[var(--foreground)] font-plus-jakarta-sans py-10">
+                      the page is not loading due to some errors
+                    </p>
                   </div>
                 </div>
               )}
