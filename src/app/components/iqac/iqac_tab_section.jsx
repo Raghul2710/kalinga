@@ -1731,12 +1731,26 @@ export default function IqacTabSection() {
               {/* Financial Audited Statements Tab */}
               {activeTab?.trim().toLowerCase() === "financial" && (
                 <div className="flex-1" id="finanical-audited-statements">
-                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
-                    Financial Audited Statements
-                  </h2>
-                  <div className="space-y-4 max-w-2xl mx-auto">
-                    <p className="text-center text-[var(--foreground)] font-plus-jakarta-sans py-10">
-                      the page is not loading due to some errors
+                  <div className="flex flex-col items-center justify-center py-12 md:py-20 px-4 text-center">
+                    <div className="relative mb-8">
+                      <h1
+                        className="text-[100px] sm:text-[140px] leading-none font-stix font-bold text-[var(--dark-blue)] opacity-5 select-none"
+                        style={{
+                          textShadow: '1px 1px 0px rgba(0,0,0,0.05)',
+                          WebkitTextStroke: '1.5px var(--dark-blue)',
+                          color: 'transparent'
+                        }}
+                      >
+                        404
+                      </h1>
+                    </div>
+                    
+                    <h2 className="text-2xl md:text-4xl font-stix text-[var(--foreground)] mb-4">
+                      Search Result Not Found
+                    </h2>
+                    
+                    <p className="text-base md:text-lg text-gray-500 font-plus-jakarta-sans max-w-md mx-auto leading-relaxed">
+                      The financial statements for this section are currently unavailable or there was an error loading the page.
                     </p>
                   </div>
                 </div>
@@ -2194,12 +2208,27 @@ export default function IqacTabSection() {
               {/* NBA Tab */}
               {activeTab === "nba" && (
                 <div className="flex-1">
-                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
-                    NBA
-                  </h2>
-                  <div className="space-y-2 text-left">
-                    <p className="text-center text-[var(--foreground)] font-plus-jakarta-sans py-10">
-                      the page is not loading due to some errors
+                  <div className="flex flex-col items-center justify-center py-12 md:py-20 px-4 text-center">
+                    <div className="relative mb-8">
+                      <h1
+                        className="text-[100px] sm:text-[140px] leading-none font-stix font-bold text-[var(--dark-blue)] opacity-5 select-none"
+                        style={{
+                          textShadow: '1px 1px 0px rgba(0,0,0,0.05)',
+                          WebkitTextStroke: '1.5px var(--dark-blue)',
+                          color: 'transparent'
+                        }}
+                      >
+                        404
+                      </h1>
+
+                    </div>
+                    
+                    <h2 className="text-2xl md:text-4xl font-stix text-[var(--foreground)] mb-4">
+                      Search Result Not Found
+                    </h2>
+                    
+                    <p className="text-base md:text-lg text-gray-500 font-plus-jakarta-sans max-w-md mx-auto leading-relaxed">
+                      The NBA documentation for this section is currently unavailable or there was an error loading the page.
                     </p>
                   </div>
                 </div>
