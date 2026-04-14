@@ -1744,13 +1744,13 @@ export default function IqacTabSection() {
                         404
                       </h1>
                     </div>
-                    
+
                     <h2 className="text-2xl md:text-4xl font-stix text-[var(--foreground)] mb-4">
                       Search Result Not Found
                     </h2>
-                    
+
                     <p className="text-base md:text-lg text-gray-500 font-plus-jakarta-sans max-w-md mx-auto leading-relaxed">
-                      The financial statements for this section are currently unavailable or there was an error loading the page.
+                      There was an error loading the page.
                     </p>
                   </div>
                 </div>
@@ -2222,13 +2222,13 @@ export default function IqacTabSection() {
                       </h1>
 
                     </div>
-                    
+
                     <h2 className="text-2xl md:text-4xl font-stix text-[var(--foreground)] mb-4">
                       Search Result Not Found
                     </h2>
-                    
+
                     <p className="text-base md:text-lg text-gray-500 font-plus-jakarta-sans max-w-md mx-auto leading-relaxed">
-                      The NBA documentation for this section is currently unavailable or there was an error loading the page.
+                      There was an error loading the page.
                     </p>
                   </div>
                 </div>
