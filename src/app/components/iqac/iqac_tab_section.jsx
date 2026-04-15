@@ -1234,7 +1234,7 @@ const IQAC_TABS = [
   { id: "feedback-form", label: "Feedback Form" },
   { id: "https://kalingauniversity.ac.in/International-Journal-of-Research-and-Studies", label: "Univista: International Journal of Research and Studies" },
   { id: "nba", label: "NBA" },
-  { id: "https://kalingauniversity.ac.in/nirf", label: "NIRF Rankings" }
+  { id: "https://kalingauniversity.ac.in/nirf", label: "NIRF" }
 ];
 
 const IQAC_OBJECTIVES = [

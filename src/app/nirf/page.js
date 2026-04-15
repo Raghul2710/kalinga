@@ -16,12 +16,12 @@ export default function NirfPage() {
         ],
         "2025": [
             { id: 1, text: "Overall", href: "#" },
-            { id: 2, text: "Management", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20250113-MBA-submitted-13-jan-2025.pdf" },
-            { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-pharmacy-13-jan-2025-submitted.pdf" },
-            { id: 4, text: "SDGs", href: "#" }
+            { id: 2, text: "Management", href: "#", disableFlipbook: true },
+            { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-pharmacy-13-jan-2025-submitted.pdf", disableFlipbook: true },
+            { id: 4, text: "SDGs", href: "https://cdn.kalingauniversity.ac.in/nirf/SDG-Kalinga-University-Raipur.pdf" }
         ],
         "2024": [
-            { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20240131.pdf" }
+            { id: 1, text: "Overall", href: "#", disableFlipbook: true }
         ]
     };
 

@@ -286,7 +286,6 @@ const FlipbookModal = ({ isOpen, onClose, pdfUrl, title }) => {
                                                     )}
                                                 </PDFPage>
                                             ));
-
                                             // Add a blank page if the total number of pages is odd on desktop to prevent "loading" states on spreads
                                             if (!isMobile && numPages % 2 !== 0) {
                                                 pages.push(
