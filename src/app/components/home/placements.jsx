@@ -166,7 +166,7 @@ const Placements = ({ hideMarquee = false, hideMilestones = false, bgColor = "bg
 
   return (
     <>
-      <section ref={sectionRef} className={`py-16 ${bgColor}`} suppressHydrationWarning={true}>
+      <section ref={sectionRef} className={`py-16 ${bgColor} overflow-x-hidden`} suppressHydrationWarning={true}>
         <div suppressHydrationWarning className="container mx-auto px-2">
           <div suppressHydrationWarning className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-10 items-center md:items-center">
             {/* Left: title + stats */}
@@ -214,8 +214,8 @@ const Placements = ({ hideMarquee = false, hideMilestones = false, bgColor = "bg
             </div>
 
             {/* Right: Stack card component */}
-            <div suppressHydrationWarning className={`flex justify-center md:justify-end mt-6 md:mt-0 z-2 ${marginClassName}`}>
-              <div className="w-full max-w-[530px]">
+            <div suppressHydrationWarning className={`flex justify-center md:justify-end mt-6 md:mt-0 z-2 ${marginClassName} w-full`}>
+              <div className="w-[90%] sm:w-full max-w-[530px] mx-auto md:mx-0">
                 <div style={{ width: '100%', height: '480px' }}>
                   <Stack
                     ref={stackRef}
