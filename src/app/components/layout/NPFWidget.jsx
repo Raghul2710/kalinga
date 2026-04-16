@@ -28,9 +28,7 @@ export default function NPFWidget() {
                     display: block !important;
                     visibility: visible !important;
                 }
-                /* Aggressive hide for NPF launcher/tracking bubble */
-                iframe[src*="widgets.nopaperforms.com"]:not([id*="modal"]),
-                iframe[src*="track.nopaperforms.com"],
+                /* Surgical suppression for NPF launcher/tracking elements only */
                 iframe#npf-widget-launcher,
                 iframe.npf-widget-launcher,
                 #npf-widget-launcher-bubble,
@@ -46,15 +44,19 @@ export default function NPFWidget() {
                     width: 0 !important;
                     height: 0 !important;
                 }
-                /* Ensure the modal/iframe for the form stays visible */
+                /* Explicitly allow the modal and form content iframe to be visible and correctly sized */
                 .npfwpopup-wrapper, 
                 .npf-popup-modal, 
-                iframe[id*="modal"], 
+                iframe[id*="npf"],
+                iframe[src*="form"],
                 [id*="npfWidget"] {
                     display: flex !important;
                     visibility: visible !important;
                     opacity: 1 !important;
                     z-index: 2147483647 !important;
+                    width: 100% !important;
+                    height: 520px !important;
+                    min-height: 520px !important;
                 }
                 /* Mobile adjustments */
                 @media (max-width: 1024px) {
@@ -85,7 +87,7 @@ export default function NPFWidget() {
                             "formTitle": "Feedback Form",
                             "titleColor": "#FF0033",
                             "backgroundColor": "#ddd",
-                            "iframeHeight": "500px",
+                            "iframeHeight": "600px",
                             "buttonbgColor": "#972B28",
                             "buttonTextColor": "#FFF",
                         });

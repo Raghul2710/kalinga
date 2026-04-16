@@ -21,7 +21,7 @@ export default function NirfPage() {
             { id: 4, text: "SDGs", href: "https://cdn.kalingauniversity.ac.in/nirf/SDG-Kalinga-University-Raipur.pdf" }
         ],
         "2024": [
-            { id: 1, text: "Overall", href: "#", disableFlipbook: true }
+            { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20240131.pdf", useSlider: true }
         ]
     };
 

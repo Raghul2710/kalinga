@@ -204,7 +204,7 @@ export default function ResearchSixGridButtons({
   noSection = false,
   className = "" 
 }) {
-  const { openFlipbook } = useFlipbook();
+  const { openFlipbook, openPdfSlider } = useFlipbook();
   const [isTableModalOpen, setIsTableModalOpen] = useState(false);
   const [isContentModalOpen, setIsContentModalOpen] = useState(false);
   const [selectedTitle, setSelectedTitle] = useState("");
@@ -240,7 +240,11 @@ export default function ResearchSixGridButtons({
     const isPdf = isPdfLink(link);
     if (isPdf && !button.disableFlipbook) {
       e.preventDefault();
-      openFlipbook(link, button.text);
+      if (button.useSlider) {
+        openPdfSlider(link, button.text);
+      } else {
+        openFlipbook(link, button.text);
+      }
     }
     // For non-PDF links, let the default anchor behavior handle it
   };
