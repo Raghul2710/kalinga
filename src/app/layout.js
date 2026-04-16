@@ -59,6 +59,7 @@ import { headers } from "next/headers";
 import siteMeta from "./config/site-meta.json";
 import { getPageMetadata } from "@/lib/getPageMetadata";
 import Script from "next/script";
+import NPFWidget from "./components/layout/NPFWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -135,6 +136,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
         suppressHydrationWarning
       >
+        <NPFWidget />
         {/* Google Tag Manager (noscript) - immediately after opening body */}
         <noscript>
           <iframe
