@@ -2243,7 +2243,7 @@ export default function IqacTabSection() {
                   </h2>
                   <div className="flex justify-center mt-6">
                     <a
-                      href="https://cdn.kalingauniversity.ac.in/nirf/Annual-Report-Links-2022-23-to-2024-25.pdf"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-6 py-3 bg-[var(--button-red)] text-white rounded-lg hover:bg-[var(--button-red)]/90 transition-colors font-plus-jakarta-sans text-sm md:text-base font-semibold"
