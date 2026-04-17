@@ -56,6 +56,8 @@ import { FlipbookProvider } from "./components/general/FlipbookContext";
 import ChatbotPopup from "./components/layout/ChatbotPopup";
 import { ChatbotProvider } from "./components/layout/ChatbotContext";
 import siteMeta from "./config/site-meta.json";
+import NPFChatbot from "./components/layout/NPFChatbot";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,7 +97,9 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
       >
         <ChatbotProvider>
+          <NPFChatbot />
           <FlipbookProvider>
+
             <ClickSparkWrapper>
               <Header />
               <script

@@ -32,7 +32,7 @@ export default function ChatbotPopup() {
                         transition={{ type: "spring", stiffness: 300, damping: 30 }}
                         className={`fixed z-[99999] bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 flex flex-col font-plus-jakarta-sans ${isExpanded
                             ? "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] h-[95vh] md:w-[850px] md:h-[850px] max-w-[95vw] max-h-[95vh]"
-                            : "bottom-24 right-4 md:right-8 w-[380px] md:w-[450px] h-[720px] md:h-[780px] max-h-[90vh] max-w-[calc(100vw-2rem)]"
+                            : "bottom-24 left-4 md:left-8 w-[380px] md:w-[450px] h-[720px] md:h-[780px] max-h-[90vh] max-w-[calc(100vw-2rem)]"
                             } transition-all duration-300`}
                     >
                         {/* Header */}
@@ -173,15 +173,15 @@ export default function ChatbotPopup() {
             </AnimatePresence>
 
             {/* Toggle Button & Tooltip Container */}
-            <div className="fixed bottom-6 right-4 md:right-8 z-[9999] flex flex-col items-end gap-3 pointer-events-none" suppressHydrationWarning={true}>
+            <div className="fixed bottom-6 left-4 md:left-8 z-[9999] flex flex-col items-end gap-3 pointer-events-none" suppressHydrationWarning={true}>
                 {/* Tooltip / Call to Action */}
-                <AnimatePresence>
+                {/* <AnimatePresence>
                     {showTooltip && !isOpen && (
                         <motion.div
                             initial={{ opacity: 0, x: 10, scale: 0.9 }}
                             animate={{ opacity: 1, x: 0, scale: 1 }}
                             exit={{ opacity: 0, x: 10, scale: 0.9 }}
-                            className="relative bg-white px-5 py-3.5 rounded-2xl shadow-2xl border border-gray-100 mb-1 mr-2 pointer-events-auto max-w-[220px]"
+                            className="relative bg-white px-5 py-3.5 rounded-2xl shadow-2xl border border-gray-100 mb-1 -ml-2 pointer-events-auto max-w-[220px]"
                         >
                             <div className="text-sm font-semibold text-gray-800 mb-1">
                                 👋 Hi there!
@@ -189,11 +189,7 @@ export default function ChatbotPopup() {
                             <div className="text-xs text-gray-600">
                                 Need help with admissions or courses?
                             </div>
-
-                            {/* Tooltip Arrow */}
                             <div className="absolute -bottom-1.5 right-8 w-4 h-4 bg-white border-b border-r border-gray-100 rotate-45 transform"></div>
-
-                            {/* Close Tooltip X */}
                             <button
                                 onClick={(e) => {
                                     e.stopPropagation();
@@ -208,7 +204,7 @@ export default function ChatbotPopup() {
                             </button>
                         </motion.div>
                     )}
-                </AnimatePresence>
+                </AnimatePresence> */}
 
                 {/* Floating Action Button */}
                 <motion.button
