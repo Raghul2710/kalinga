@@ -58,6 +58,19 @@ export default function NPFWidget() {
                     height: 520px !important;
                     min-height: 520px !important;
                 }
+                /* Hide the redundant title/header area */
+                .npfwpopup-title,
+                .npfwpopup-header,
+                .npf-title,
+                .npf-header,
+                .npfwpopup-wrapper h3,
+                .npf-popup-modal h3 {
+                    display: none !important;
+                    visibility: hidden !important;
+                    height: 0 !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
                 /* Mobile adjustments */
                 @media (max-width: 1024px) {
                     .npf-sticky-button {
@@ -84,7 +97,7 @@ export default function NPFWidget() {
                         new NpfWidgetsInit({
                             "widgetId": "91df5911b269a8c3f63541c1f915d331",
                             "baseurl": "widgets.nopaperforms.com",
-                            "formTitle": "Feedback Form",
+                            "formTitle": "",
                             "titleColor": "#FF0033",
                             "backgroundColor": "#ddd",
                             "iframeHeight": "600px",
