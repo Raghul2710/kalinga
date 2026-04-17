@@ -43,16 +43,16 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
     return (
         <div className="fixed inset-0 z-[20000] flex flex-col items-center justify-center animate-in fade-in duration-300">
             {/* Backdrop */}
-            <div 
+            <div
                 className="absolute inset-0 bg-black/90 backdrop-blur-md"
                 onClick={onClose}
             ></div>
 
             {/* Modal Content */}
             <div className="relative w-full max-w-5xl h-[90vh] flex flex-col bg-white rounded-xl overflow-hidden shadow-2xl z-10 mx-4">
-                
+
                 {/* Floating Close Button */}
-                <button 
+                <button
                     onClick={onClose}
                     className="absolute top-6 right-6 z-[20005] bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all shadow-lg backdrop-blur-md"
                     title="Close"
@@ -64,7 +64,7 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                 </button>
 
                 {/* PDF List / Area */}
-                <div 
+                <div
                     ref={containerRef}
                     className="flex-1 overflow-y-auto p-4 md:p-8 bg-gray-100 flex flex-col items-center gap-8 custom-scrollbar pt-20"
                 >
@@ -81,21 +81,21 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                         {numPages && Array.from(new Array(numPages), (el, index) => {
                             const isVisible = index < maxVisiblePages;
                             return (
-                                <div 
-                                    key={`page_${index + 1}`} 
+                                <div
+                                    key={`page_${index + 1}`}
                                     className="relative shadow-xl rounded-sm overflow-hidden"
                                     style={{ width: pageWidth }}
                                 >
                                     {isVisible ? (
-                                        <Page 
-                                            pageNumber={index + 1} 
+                                        <Page
+                                            pageNumber={index + 1}
                                             width={pageWidth}
                                             renderTextLayer={false}
                                             renderAnnotationLayer={false}
                                             className="bg-white"
                                         />
                                     ) : (
-                                        <div 
+                                        <div
                                             className="bg-gray-200 flex flex-col items-center justify-center aspect-[1/1.41] w-full border-2 border-dashed border-gray-300 relative"
                                         >
                                             <div className="flex flex-col items-center opacity-40">
@@ -112,7 +112,7 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                                             <div className="absolute inset-0 bg-gradient-to-t from-gray-300/20 to-transparent animate-pulse pointer-events-none"></div>
                                         </div>
                                     )}
-                                    
+
                                     {/* Page Number Badge */}
                                     <div className="absolute bottom-4 right-4 bg-black/60 text-white px-2 py-1 rounded text-[10px] font-bold z-20">
                                         PAGE {index + 1}
@@ -123,14 +123,14 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                     </Document>
 
                     {/* Final CTA */}
-                    <div className="flex justify-center w-full mb-12">
+                    {/* <div className="flex justify-center w-full mb-12">
                         <button 
                             onClick={() => window.open(pdfUrl, '_blank')}
                             className="bg-[var(--button-red)] hover:bg-[#7a1c1d] text-white px-10 py-4 rounded-full font-bold transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
                         >
                             View Full PDF
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

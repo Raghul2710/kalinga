@@ -9,16 +9,16 @@ export default function NirfPage() {
 
     const nirfData = {
         "2026": [
-            { id: 1, text: "Overall", href: "#" },
+            { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-UniversityOverall-2026.pdf", useSlider: true },
             { id: 2, text: "Management", href: "#" },
-            { id: 3, text: "Pharmacy", href: "#" },
-            { id: 4, text: "SDGs", href: "#" }
+            { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/kalinga-university-pharamacy-2026.pdf", useSlider: true },
+            { id: 4, text: "SDGs", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-SDG-2026.pdf", useSlider: true }
         ],
         "2025": [
-            { id: 1, text: "Overall", href: "#" },
+            { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-overall-2025.pdf", useSlider: true },
             { id: 2, text: "Management", href: "#", disableFlipbook: true },
-            { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-pharmacy-13-jan-2025-submitted.pdf", disableFlipbook: true },
-            { id: 4, text: "SDGs", href: "https://cdn.kalingauniversity.ac.in/nirf/SDG-Kalinga-University-Raipur.pdf" }
+            { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-pharmacy-13-jan-2025-submitted.pdf", useSlider: true },
+            { id: 4, text: "SDGs", href: "https://cdn.kalingauniversity.ac.in/nirf/SDG-Kalinga-University-Raipur.pdf", useSlider: true }
         ],
         "2024": [
             { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20240131.pdf", useSlider: true }

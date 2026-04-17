@@ -1234,7 +1234,8 @@ const IQAC_TABS = [
   { id: "feedback-form", label: "Feedback Form" },
   { id: "https://kalingauniversity.ac.in/International-Journal-of-Research-and-Studies", label: "Univista: International Journal of Research and Studies" },
   { id: "nba", label: "NBA" },
-  { id: "https://kalingauniversity.ac.in/nirf", label: "NIRF" }
+  { id: "https://kalingauniversity.ac.in/nirf", label: "NIRF" },
+  { id: "annual-reports", label: "Annual Reports" }
 ];
 
 const IQAC_OBJECTIVES = [
@@ -2234,8 +2235,27 @@ export default function IqacTabSection() {
                 </div>
               )}
 
+              {/* Annual Reports Tab */}
+              {activeTab === "annual-reports" && (
+                <div className="flex-1">
+                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
+                    Annual Reports
+                  </h2>
+                  <div className="flex justify-center mt-6">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 bg-[var(--button-red)] text-white rounded-lg hover:bg-[var(--button-red)]/90 transition-colors font-plus-jakarta-sans text-sm md:text-base font-semibold"
+                    >
+                      View Annual Report 2022-23 to 2024-25
+                    </a>
+                  </div>
+                </div>
+              )}
+
               {/* Placeholder content for other tabs */}
-              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits", "financial", "nba"].includes(activeTab) && (
+              {!["committee", "initiatives", "minutes", "feedback", "strategic", "satisfaction", "feedback-form", "objectives", "functions", "strategies", "benefits", "financial", "nba", "annual-reports"].includes(activeTab) && (
                 <div className="flex-1">
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     {IQAC_TABS.find((tab) => tab.id === activeTab)?.label}
