@@ -1112,19 +1112,27 @@ const OTHER_CHARGES = {
  *  ----------------------------*/
 function ScrollTable({ columns, rows }) {
     return (
-        <div className="mt-2 border border-gray-200 rounded-lg overflow-hidden">
-            <div className="w-full max-w-full overflow-x-auto overflow-y-auto max-h-[520px] custom-scrollbar">
-                <table className="w-max min-w-full border-collapse">
+        <div className="mt-2 border border-gray-200 rounded-lg overflow-hidden h-full flex flex-col">
+            <div className="w-full max-w-full overflow-x-auto overflow-y-auto custom-scrollbar flex-1">
+                <table className="w-full border-collapse table-fixed min-w-[800px]">
                     <thead className="sticky top-0 z-10">
                         <tr className="bg-[var(--dark-blue)] text-white">
-                            {columns.map((c) => (
-                                <th
-                                    key={c}
-                                    className="px-4 py-3 text-left font-plus-jakarta-sans text-sm md:text-base font-semibold whitespace-nowrap"
-                                >
-                                    {c}
-                                </th>
-                            ))}
+                            {columns.map((c) => {
+                                // Specific widths for different columns
+                                let widthClass = "w-[150px]";
+                                if (c === "S.No.") widthClass = "w-[60px]";
+                                else if (c === "Sem" || c === "Tenure (Years)") widthClass = "w-[80px]";
+                                else if (c === "Programme" || c === "Course") widthClass = "w-[200px]";
+                                
+                                return (
+                                    <th
+                                        key={c}
+                                        className={`px-3 py-3 text-left font-plus-jakarta-sans text-xs md:text-sm font-semibold leading-tight ${widthClass}`}
+                                    >
+                                        {c}
+                                    </th>
+                                );
+                            })}
                         </tr>
                     </thead>
 
@@ -1134,14 +1142,21 @@ function ScrollTable({ columns, rows }) {
                                 key={r["S.No."] ?? idx}
                                 className="border-b border-gray-200 hover:bg-gray-50 transition-colors bg-white"
                             >
-                                {columns.map((col) => (
-                                    <td
-                                        key={col}
-                                        className="px-4 py-3 text-[var(--foreground)] whitespace-normal break-words align-top min-w-[140px]"
-                                    >
-                                        {r[col] ?? "-"}
-                                    </td>
-                                ))}
+                                {columns.map((col) => {
+                                    let widthClass = "w-[150px]";
+                                    if (col === "S.No.") widthClass = "w-[60px]";
+                                    else if (col === "Sem" || col === "Tenure (Years)") widthClass = "w-[80px]";
+                                    else if (col === "Programme" || col === "Course") widthClass = "w-[200px]";
+
+                                    return (
+                                        <td
+                                            key={col}
+                                            className={`px-3 py-3 text-[var(--foreground)] text-xs md:text-sm whitespace-normal break-words align-top ${widthClass}`}
+                                        >
+                                            {r[col] ?? "-"}
+                                        </td>
+                                    );
+                                })}
                             </tr>
                         ))}
                     </tbody>

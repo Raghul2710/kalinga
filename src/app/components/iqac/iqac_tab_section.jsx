@@ -1535,6 +1535,26 @@ const FEEDBACK_ANALYSIS = {
   ],
 };
 
+// Annual Reports Data
+const ANNUAL_REPORTS = {
+  "2024-25": [
+    { title: "July-September-2024", url: "https://cdn.kalingauniversity.ac.in/annual-reports/iqac-annual-reports/Final-Report-of-Activities-Month-of-July-September-2024.pdf" },
+    { title: "October-December-2024", url: "https://cdn.kalingauniversity.ac.in/annual-reports/iqac-annual-reports/Final-Report-of-Activities-Month-October-December-2024.pdf" }
+
+  ],
+
+  "2023-24": [
+    { title: "January-June-2024", url: "https://cdn.kalingauniversity.ac.in/annual-reports/iqac-annual-reports/Report-of-Activities-Month-of-January-June-2024.pdf" },
+    { title: "July-December-2023", url: "https://cdn.kalingauniversity.ac.in/annual-reports/iqac-annual-reports/Report-of-Activities-Month-July-December-2023.pdf" }
+
+  ],
+  "2022-23": [
+    { title: "January-April-2022-23", url: "https://cdn.kalingauniversity.ac.in/annual-reports/iqac-annual-reports/Report-Month-of-January-to-April-2022-23.pdf" },
+    { title: "July-December-2022-23", url: "https://cdn.kalingauniversity.ac.in/annual-reports/iqac-annual-reports/Report-of-Activities-Month-of-July-December-2022-23.pdf" }
+
+  ],
+};
+
 // const FINANCIAL_STATEMENTS = [
 //   { title: "Financial Audited Statements 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf" },
 //   { title: "Financial Audited Statements 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf" },
@@ -1551,7 +1571,8 @@ These initiatives prove the University's commitment to expanding its horizons an
 export default function IqacTabSection() {
   const [activeTab, setActiveTab] = useState("initiatives");
   const [expandedYears, setExpandedYears] = useState({
-    "2023-24": true,
+    "2024-25": true,
+    "2023-24": false,
     "2022-23": false,
     "2021-22": false,
     "2020-21": false,
@@ -1661,6 +1682,8 @@ export default function IqacTabSection() {
       return ["2022-23", "2021-22", "2020-21", "2019-20", "2018-19", "2017-18", "2016-17"];
     } else if (activeTab === "feedback") {
       return ["2023-24", "2022-23", "2021-22", "2020-21", "2019-20", "2018-19", "2017-18", "2016-17", "2015-16", "2014-15"];
+    } else if (activeTab === "annual-reports") {
+      return ["2024-25", "2023-24", "2022-23"];
     }
     return [];
   };
@@ -2241,15 +2264,54 @@ export default function IqacTabSection() {
                   <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-4 text-center mt-3">
                     Annual Reports
                   </h2>
-                  <div className="flex justify-center mt-6">
-                    <a
-                      href="#"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-6 py-3 bg-[var(--button-red)] text-white rounded-lg hover:bg-[var(--button-red)]/90 transition-colors font-plus-jakarta-sans text-sm md:text-base font-semibold"
-                    >
-                      View Annual Report 2022-23 to 2024-25
-                    </a>
+                  <div className="space-y-2 text-left">
+                    {getAvailableYears().map((year) => {
+                      const isExpanded = expandedYears[year] || false;
+                      const reports = ANNUAL_REPORTS[year] || [];
+                      return (
+                        <div key={year} className="border-b border-[var(--button-red)] pb-2 last:border-b-0">
+                          <button
+                            onClick={() => toggleYear(year)}
+                            className="w-full flex items-center gap-2 py-1 hover:opacity-80 transition-opacity justify-between pr-3"
+                            aria-label={`Toggle ${year}`}
+                          >
+                            <h3 className="font-plus-jakarta-sans text-sm md:text-base text-[var(--foreground)]">
+                              {year}
+                            </h3>
+                            <div className={`text-[var(--background)] bg-[var(--button-red)] rounded-sm p-3 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
+                              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                          {isExpanded && (
+                            <div className="mt-2 space-y-2">
+                              {reports.length > 0 ? (
+                                reports.map((report, idx) => (
+                                  <FlipbookTrigger key={idx} pdfUrl={report.url} title={report.title}>
+                                    <a
+                                      href={report.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="block px-4 py-3 bg-gray-50 hover:bg-gray-100 rounded-lg transition-all text-[var(--foreground)] border border-gray-200 group relative overflow-hidden"
+                                    >
+                                      <div className="flex items-center justify-between relative z-10">
+                                        <span className="font-plus-jakarta-sans text-sm md:text-base font-medium">{report.title}</span>
+                                        <svg className="w-5 h-5 text-[var(--button-red)] transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                                        </svg>
+                                      </div>
+                                    </a>
+                                  </FlipbookTrigger>
+                                ))
+                              ) : (
+                                <p className="px-4 py-2 text-[var(--foreground)]/60 text-sm">No reports available for this year.</p>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}

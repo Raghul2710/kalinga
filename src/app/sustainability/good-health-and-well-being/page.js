@@ -1,0 +1,279 @@
+"use client";
+
+import { useState, useEffect, useMemo } from "react";
+import MainIntro from "@/app/components/about/main_intro";
+import DataTable from "@/app/components/general/data-table";
+import FAQ from "@/app/components/general/faq";
+import PhdObjectivesPanel from "@/app/components/phd/phd-objectives";
+import Campusfacilitiescard from "@/app/components/campus-facilities/campusfacilitiescard";
+import SectionHeading from "@/app/components/general/SectionHeading";
+import ResearchSixGridButtons from "@/app/components/research/research_six_grid-buttons";
+
+
+const mainIntroContent = {
+    title: "Good Health and Well-Being",
+    description: [
+        "The University actively promotes the physical and mental health and emotional well-being of students and staff through a supportive campus environment. It has a modern gymnasium and indoor and outdoor sports facilities that encourage physical fitness, discipline, and teamwork. A dedicated yoga and wellness centre conducts yoga and meditation sessions to improve mental and emotional health. The recreation room allows students to maintain a balance between studies and leisure activities. The campus also has a medical room that provides basic healthcare services. Regular health and eye checkup camps are organised along with awareness programs on nutrition, eye checkups, stress management, hygiene, and mental health to encourage overall development. These initiatives contribute towards SDG 3: Good Health and Well-Being."
+    ],
+    imageUrl: "https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-green-campus/sdg-images-1.webp",
+    imageAlt: "Good Health and Well-Being",
+};
+
+const mainIntroContent1 = {
+    title: "Awareness Programs & Other Events held at Kalinga University",
+    description: [
+        "The University organises various awareness programs and events like workshops, expert lectures, health camps, and interactive sessions, to promote the physical and mental well-being of students and staff while developing a spirit of social responsibility. These programs cover important topics like nutrition, mental health, hygiene, stress management, lifestyle disorders, and more."
+    ],
+    imageUrl: "https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/images-2.png",
+    imageAlt: "Awareness Programs & Other Events held at Kalinga University",
+};
+
+const items = [
+    {
+        question: "Health and Wellness Infrastructure & Programs",
+        component: (
+            <div className="w-full mt-4">
+                <DataTable
+                    columns={[
+                        { key: "year", label: "Financial Year", widthPx: 120 },
+                        { key: "pedestrianArea", label: "Total Area Designated as Pedestrian/Vehicle-Restricted Zones (other than building area)", widthPx: 250 },
+                        { key: "sportsArea", label: "Total Area Designated for Sports Facilities", widthPx: 220 },
+                        { key: "campusArea", label: "Total Area of the Campus", widthPx: 180 },
+                        { key: "yogaTwiceYear", label: "Number of People Taking Part in Yoga and Meditation Programs at least Twice a Year", widthPx: 240 },
+                        { key: "yogaOnceWeek", label: "Number of People Taking Part in Yoga and Meditation Programs Once a Week", widthPx: 240 }
+                    ]}
+                    data={[
+                        { year: "2024-2025", pedestrianArea: "22", sportsArea: "17", campusArea: "45 +", yogaTwiceYear: "494", yogaOnceWeek: "120" },
+                        { year: "2023-2024", pedestrianArea: "22", sportsArea: "17", campusArea: "45 +", yogaTwiceYear: "497", yogaOnceWeek: "135" },
+                        { year: "2022-2023", pedestrianArea: "22", sportsArea: "17", campusArea: "33.98", yogaTwiceYear: "864", yogaOnceWeek: "115" }
+                    ]}
+                    overflowX={true}
+                    disableContainer={true}
+                    className="shadow-none border border-gray-100"
+                />
+            </div>
+        )
+    }
+];
+
+const research_six_grid_buttons1 = [
+    {
+        id: 1,
+        text: "City Eye Care Hospital",
+        url: "#"
+    },
+    {
+        id: 2,
+        text: "NH MMI Hospital",
+        url: "#"
+    },
+    {
+        id: 3,
+        text: "Ramkrishna Care Hospital",
+        url: "#"
+    },
+    {
+        id: 4,
+        text: "Saptgiri Hospital",
+        url: "#"
+    },
+    {
+        id: 5,
+        text: "Shri Ganesh Vinayak Eye Hospital",
+        url: "#"
+    },
+    {
+        id: 6,
+        text: "Urmila Memorial Hospital",
+        url: "#"
+    },
+    {
+        id: 7,
+        text: "VY Hospital",
+        url: "#"
+    },
+    {
+        id: 8,
+        text: "Model/Poster Exhibition on World Mental Health Day",
+        url: "#"
+    },
+    {
+        id: 2,
+        text: "Guest Lecture on “Development of New Vaccines and Variants in Indian Poultry Diseases”",
+        url: "#"
+    },
+    {
+        id: 3,
+        text: "Guest Lecture on Mental Health and Well-Being of Students and Teachers",
+        url: "#"
+    },
+    {
+        id: 4,
+        text: "Industrial Visit to AIIMS Raipur",
+        url: "#"
+    },
+    {
+        id: 5,
+        text: "Emerging Perspectives and Future Trends in Pharmaceuticals and Allied Sciences for Global Health and Well-being",
+        url: "#"
+    },
+    {
+        id: 6,
+        text: "International Yoga Day",
+        url: "#"
+    }
+];
+
+
+const cards = [
+    {
+        title: "Medical Room Facility",
+        description:
+            "The University provides medical support to its students and staff members with a well-equipped medical room established on campus. With a 24×7 availability of qualified doctors and nurses, they get immediate medical assistance. It includes bed facilities for observation, essential medicines, oxygen cylinders, and other medical equipment required in an emergency situation. An ambulance service is also available for quick transportation to the nearby hospital. The University has signed MoUs with 5 hospitals, namely, Saptagiri Hospital, BALCO Hospital, VY Hospital, Urmila Memorial Hospital, and NHMMI Narayana, ensuring patients get advanced medical treatment.",
+        imageSrc:
+            "https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/Medical-room-facility.webp",
+        logoSrc: "",
+        subtitle: "MEDICAL ROOM FACILITY",
+        link: "#",
+    },
+    {
+        title: "Yoga and Wellness Centre",
+        description:
+            "The Department of Yoga at Kalinga University supports the physical fitness, mental health, and well-being of students and staff members. It conducts yoga sessions, meditation programs, and wellness activities in the yoga and wellness centre, helping them manage stress, improve concentration, and maintain a healthy lifestyle. Expert instructors teach different yoga asanas, breathing exercises, and relaxation techniques.",
+        imageSrc:
+            "https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/yoga-wellness.webp",
+        logoSrc: "",
+        subtitle: "YOGA AND WELLNESS CENTRE",
+        link: "#",
+    },
+    {
+        title: "Sports Facilities (Indoor & Outdoor Games)",
+        description:
+            "The University has a dedicated sports complex and various grounds where students play a wide range of indoor and outdoor games, such as Chess, Carom, Table Tennis, Snooker, Badminton, Cricket, Football, Basketball, Lawn Tennis, Kabaddi, Volleyball, Kho-Kho, Hockey, Handball, and more. The University organises various sports events from time to time and encourages students to participate in various State, National, and International-level competitions, helping them develop discipline and leadership skills.",
+        imageSrc:
+            "https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/Sports-Facilities.webp",
+        logoSrc: "",
+        subtitle: "SPORTS FACILITIES (INDOOR & OUTDOOR GAMES)",
+        link: "#",
+    },
+    {
+        title: "Gymnasium",
+        description:
+            "The campus has separate gym facilities for both boys and girls, which contain different modern fitness equipment, ensuring accessibility and a comfortable environment for all. Qualified gym trainers guide them with proper exercise techniques and workout routines.",
+        imageSrc:
+            "https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/gym.png",
+        logoSrc: "",
+        subtitle: "GYMNASIUM",
+        link: "#",
+    }
+];
+
+const phdObjectives = [
+    {
+        item: "Free Eye & Dental Checkup Camp"
+    },
+    {
+        item: "Blood Donation Camp"
+    },
+    {
+        item: "Namo Yuva Run Marathan Event-2025"
+    },
+    {
+        item: "Guest Lecture on ‘Herpes Simplex Virus: Infection & Diagnosis’"
+    },
+    {
+        item: "Awareness Program on Health & Wellness"
+    },
+    {
+        item: "Doctors honoured by Kalinga University on Doctor's Day Celebration"
+    },
+    {
+        item: "World Tourism Day Festival 2024"
+    },
+    {
+        item: "Cancer Awareness Talk and Screening Camp"
+    },
+    {
+        item: "Awareness Workshop on HIV/AIDS"
+    },
+    {
+        item: "Inclusive Walkthon, Telibandha Talab, Raipur"
+    },
+    {
+        item: "Meditation Workshop"
+    },
+    {
+        item: "Mental Health Aspects of Gender Based Violence"
+    },
+    {
+        item: "World Heart Day, latest health statistics from The Health Check-up Camp"
+    },
+    {
+        item: "International Yoga Day Celebration"
+    },
+    {
+        item: "Nasha Mukti Abhiyaan – Student Ambassador Program"
+    },
+    {
+        item: "Online Pledge on symptoms and prevention of drug addiction"
+    },
+    {
+        item: "4th National Pharmacovigilance Awareness on “Building ADR and Reporting Culture for Patient Safety”"
+    }
+
+];
+
+export default function GreenCampusPage() {
+    return (
+        <>
+            <MainIntro
+                title={mainIntroContent.title}
+                description={mainIntroContent.description}
+                imageUrl={mainIntroContent.imageUrl}
+                imageAlt={mainIntroContent.imageAlt}
+                showKnowMore={false}
+                sectionClassName="bg-white"
+            />
+            <FAQ
+                items={items}
+                title=""
+                showHeading={false}
+                variant="default"
+                pyClassName="py-8"
+            />
+            <div className="mt-10">
+                <Campusfacilitiescard
+                    title=""
+                    cards={cards}
+                    showKnowMore={false}
+                    titleClassName="hidden"
+                />
+            </div>
+
+            <MainIntro
+                title={mainIntroContent1.title}
+                description={mainIntroContent1.description}
+                imageUrl={mainIntroContent1.imageUrl}
+                imageAlt={mainIntroContent1.imageAlt}
+                showKnowMore={false}
+                sectionClassName="bg-white"
+            />
+            <PhdObjectivesPanel
+                title="Some of the programs include:"
+                subtitle=""
+                imageSrc="https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/images-1.png"
+                phdObjectives={phdObjectives}
+            />
+            <div className="mt-10">
+                <SectionHeading
+                    title="All MoUs with Hospitals & Event Reports"
+                    description=""
+                    titleClassName="text-center"
+                />
+            </div>
+            <ResearchSixGridButtons
+                buttons={research_six_grid_buttons1}
+            />
+        </>
+    );
+}
