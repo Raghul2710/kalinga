@@ -59,13 +59,13 @@ const items = [
 ];
 
 const hospitalMoUs = [
-    { id: 1, text: "City Eye Care Hospital", url: "#" },
-    { id: 2, text: "NH MMI Hospital", url: "#" },
-    { id: 3, text: "Ramkrishna Care Hospital", url: "#" },
-    { id: 4, text: "Saptgiri Hospital", url: "#" },
-    { id: 5, text: "Shri Ganesh Vinayak Eye Hospital", url: "#" },
-    { id: 6, text: "Urmila Memorial Hospital", url: "#" },
-    { id: 7, text: "VY Hospital", url: "#" },
+    { id: 1, text: "City Eye Care Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+City+Eye+Care+Hospital_compressed.pdf" },
+    { id: 2, text: "NH MMI Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+NH+MMI+Hospital_compressed.pdf" },
+    { id: 3, text: "Ramkrishna Care Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+Ramkrishna+Care+Hospital+Raipur_compressed.pdf" },
+    { id: 4, text: "Saptgiri Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+Saptgiri+Hospital_compressed.pdf" },
+    { id: 5, text: "Shri Ganesh Vinayak Eye Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+Shri+Ganesh+Vinayak+Eye+Hospital_compressed.pdf" },
+    { id: 6, text: "Urmila Memorial Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+Urmila+Memorial+Hospital(pdfgear.com).pdf" },
+    { id: 7, text: "VY Hospital", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/MoU+-+VY+Hospital+Kamal+Vihar+Raipur(pdfgear.com).pdf" },
 ];
 
 const eventReports = [
@@ -249,6 +249,8 @@ export default function GreenCampusPage() {
                             description="Official Memorandum of Understanding for healthcare services and medical support."
                             showReadMore={false}
                             descriptionContainerClassName=""
+                            href={hospital.url}
+                            fullCardLink={hospital.url !== "#"}
                         />
                     ))}
                 </div>
