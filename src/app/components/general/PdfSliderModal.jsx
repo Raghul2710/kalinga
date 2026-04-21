@@ -12,6 +12,13 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
     const [numPages, setNumPages] = useState(null);
     const containerRef = useRef(null);
     const [containerWidth, setContainerWidth] = useState(0);
+    const [visiblePagesCount, setVisiblePagesCount] = useState(maxVisiblePages);
+
+    useEffect(() => {
+        if (isOpen) {
+            setVisiblePagesCount(maxVisiblePages);
+        }
+    }, [isOpen, maxVisiblePages]);
 
     useEffect(() => {
         if (!isOpen) return;
@@ -37,6 +44,15 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
     }
+
+    const handleScroll = (e) => {
+        const { scrollTop, scrollHeight, clientHeight } = e.target;
+        if (scrollHeight - scrollTop <= clientHeight * 1.5) {
+            if (numPages && visiblePagesCount < numPages) {
+                setVisiblePagesCount(prev => Math.min(prev + 5, numPages));
+            }
+        }
+    };
 
     const pageWidth = Math.min(containerWidth - 40, 800);
 
@@ -66,6 +82,7 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                 {/* PDF List / Area */}
                 <div
                     ref={containerRef}
+                    onScroll={handleScroll}
                     className="flex-1 overflow-y-auto p-4 md:p-8 bg-gray-100 flex flex-col items-center gap-8 custom-scrollbar pt-20"
                 >
                     <Document
@@ -78,40 +95,20 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                             </div>
                         }
                     >
-                        {numPages && Array.from(new Array(numPages), (el, index) => {
-                            const isVisible = index < maxVisiblePages;
+                        {numPages && Array.from(new Array(Math.min(numPages, visiblePagesCount)), (el, index) => {
                             return (
                                 <div
                                     key={`page_${index + 1}`}
                                     className="relative shadow-xl rounded-sm overflow-hidden"
                                     style={{ width: pageWidth }}
                                 >
-                                    {isVisible ? (
-                                        <Page
-                                            pageNumber={index + 1}
-                                            width={pageWidth}
-                                            renderTextLayer={false}
-                                            renderAnnotationLayer={false}
-                                            className="bg-white"
-                                        />
-                                    ) : (
-                                        <div
-                                            className="bg-gray-200 flex flex-col items-center justify-center aspect-[1/1.41] w-full border-2 border-dashed border-gray-300 relative"
-                                        >
-                                            <div className="flex flex-col items-center opacity-40">
-                                                {/* Loading Spinner SVG */}
-                                                <svg className="animate-spin h-12 w-12 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                                </svg>
-                                                <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-center px-6">
-                                                    Loading Content
-                                                </p>
-                                            </div>
-                                            {/* Pulse overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-gray-300/20 to-transparent animate-pulse pointer-events-none"></div>
-                                        </div>
-                                    )}
+                                    <Page
+                                        pageNumber={index + 1}
+                                        width={pageWidth}
+                                        renderTextLayer={false}
+                                        renderAnnotationLayer={false}
+                                        className="bg-white"
+                                    />
 
                                     {/* Page Number Badge */}
                                     <div className="absolute bottom-4 right-4 bg-black/60 text-white px-2 py-1 rounded text-[10px] font-bold z-20">
@@ -120,6 +117,17 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5 })
                                 </div>
                             );
                         })}
+
+                        {/* Loading indicator when more pages are available */}
+                        {numPages && visiblePagesCount < numPages && (
+                            <div className="flex flex-col items-center justify-center p-8 mt-4 w-full">
+                                <svg className="animate-spin h-8 w-8 text-[var(--button-red)]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                <p className="mt-3 text-sm font-semibold text-gray-500">Loading more pages...</p>
+                            </div>
+                        )}
                     </Document>
 
                     {/* Final CTA */}
