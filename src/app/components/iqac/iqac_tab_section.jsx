@@ -1457,10 +1457,10 @@ const nba = {
     { id: 5, text: "Student Details - 2022-23", href: "#" },
   ],
   "Faculty Details": [
-    { id: 6, text: "Faculty Details - 2022-23", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-deatils-2022-23.pdf" },
-    { id: 7, text: "Faculty Details - 2023-24", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2023-24.pdf" },
-    { id: 8, text: "Faculty Details - 2024-25", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2024-25.pdf" },
-    { id: 9, text: "Faculty Details - 2025-26", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2025-26.pdf" },
+    { id: 6, text: "Faculty Details - 2022-23", href: "#" },
+    { id: 7, text: "Faculty Details - 2023-24", href: "#" },
+    { id: 8, text: "Faculty Details - 2024-25", href: "#" },
+    { id: 9, text: "Faculty Details - 2025-26", href: "#" },
   ],
   "Placement Details": [
     { id: 10, text: "Placement Details - 2021-22", href: "#" },

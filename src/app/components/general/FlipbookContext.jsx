@@ -12,6 +12,7 @@ export const FlipbookProvider = ({ children }) => {
     const [isSliderOpen, setIsSliderOpen] = useState(false);
     const [pdfUrl, setPdfUrl] = useState('');
     const [title, setTitle] = useState('');
+    const [sliderLimit, setSliderLimit] = useState(null);
 
     const openFlipbook = useCallback((url, docTitle = '') => {
         setPdfUrl(getProxyPdfUrl(url) || url);
@@ -19,9 +20,10 @@ export const FlipbookProvider = ({ children }) => {
         setIsOpen(true);
     }, []);
 
-    const openPdfSlider = useCallback((url, docTitle = '') => {
+    const openPdfSlider = useCallback((url, docTitle = '', limit = null) => {
         setPdfUrl(getProxyPdfUrl(url) || url);
         setTitle(docTitle);
+        setSliderLimit(limit);
         setIsSliderOpen(true);
     }, []);
 
@@ -44,6 +46,7 @@ export const FlipbookProvider = ({ children }) => {
                 onClose={closeFlipbook}
                 pdfUrl={pdfUrl}
                 title={title}
+                limitPages={sliderLimit}
             />
         </FlipbookContext.Provider>
     );

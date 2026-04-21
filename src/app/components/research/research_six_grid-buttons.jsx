@@ -241,7 +241,7 @@ export default function ResearchSixGridButtons({
     if (isPdf && !button.disableFlipbook) {
       e.preventDefault();
       if (button.useSlider) {
-        openPdfSlider(link, button.text);
+        openPdfSlider(link, button.text, button.limitPages);
       } else {
         openFlipbook(link, button.text);
       }
