@@ -13,7 +13,8 @@ const QuickLinkCard = ({
   href = null,
   iconWrapperClassName = "w-12 h-12 sm:w-14 sm:h-14", // Default size
   alt = "",
-  onToggleExpand // Add this prop
+  onToggleExpand, // Add this prop
+  descriptionContainerClassName = "mb-4 sm:mb-6"
 }) => {
   const isImageUrl = typeof icon === 'string' && (icon.startsWith('http') || icon.startsWith('/'))
   const [isExpanded, setIsExpanded] = useState(false)
@@ -98,7 +99,7 @@ const QuickLinkCard = ({
       </h3>
 
       {/* Description */}
-      <div className="flex-grow mb-4 sm:mb-6">
+      <div className={`flex-grow ${descriptionContainerClassName}`}>
         <p
           ref={descriptionRef}
           className={`text-sm font-plus-jakarta-sans ${!isExpanded && showReadMoreButton && showDescriptionReadMore ? 'line-clamp-4' : ''
