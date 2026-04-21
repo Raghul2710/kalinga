@@ -25,6 +25,7 @@ export default function MainIntro({
   imageUrl = defaultContent.imageUrl,
   imageAlt = defaultContent.imageAlt,
   initialVisibleParagraphs = 2,
+  initialCharacterLimit = null,
   subtitleClassName = "text-left",
   subtitleTextColor = "text-[var(--button-red)]",
   titleClassName = "leading-tight !text-left",
@@ -75,6 +76,24 @@ export default function MainIntro({
   }, [description, initialVisibleParagraphs]);
 
   const descriptionArray = Array.isArray(description) ? description : [description];
+  const useCharacterTruncation =
+    Array.isArray(description) &&
+    typeof initialCharacterLimit === "number" &&
+    initialCharacterLimit > 0;
+  const fullDescriptionText = useMemo(
+    () =>
+      descriptionArray
+        .map((paragraph) => (typeof paragraph === "string" ? paragraph.replace(/<[^>]*>/g, "") : ""))
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim(),
+    [descriptionArray]
+  );
+  const truncatedDescriptionText = useMemo(() => {
+    if (!useCharacterTruncation) return fullDescriptionText;
+    if (fullDescriptionText.length <= initialCharacterLimit) return fullDescriptionText;
+    return `${fullDescriptionText.slice(0, initialCharacterLimit).trimEnd()}...`;
+  }, [useCharacterTruncation, fullDescriptionText, initialCharacterLimit]);
   const visibleParagraphs = showAll
     ? descriptionArray
     : descriptionArray.slice(0, initialVisibleParagraphs);
@@ -122,7 +141,11 @@ export default function MainIntro({
             />
 
             <div className="space-y-4">
-              {Array.isArray(description) ? (
+              {useCharacterTruncation && !showAll ? (
+                <p className={`${descriptionClassName} leading-relaxed break-words overflow-visible text-justify`}>
+                  {truncatedDescriptionText}
+                </p>
+              ) : Array.isArray(description) ? (
                 // Array format - render as paragraphs
                 visibleParagraphs.map((paragraph, idx) => (
                   <p
