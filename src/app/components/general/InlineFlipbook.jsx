@@ -34,9 +34,8 @@ const InlineFlipbook = ({ pdfUrl, title }) => {
     const audioRef = useRef(null);
 
     useEffect(() => {
-        // Preload audio
         audioRef.current = new Audio(PAGE_FLIP_SOUND_URL);
-        audioRef.current.load();
+        audioRef.current.preload = "none";
     }, []);
 
     useEffect(() => {

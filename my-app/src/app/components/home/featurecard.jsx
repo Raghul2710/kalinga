@@ -197,6 +197,7 @@ export default function FeatureCards({
                   src={imageUrl}
                   alt={imageAlt}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                   priority
                 />

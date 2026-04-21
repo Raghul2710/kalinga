@@ -251,7 +251,7 @@ export default function DepartmentsPage() {
 function DepartmentCard({ program }) {
   const imageCard = (
     <div className="relative w-full h-full rounded-xl overflow-hidden shadow-xl">
-      <Image src={program.img} alt={program.title} fill className="object-cover" />
+      <Image src={program.img} alt={program.title} fill sizes="(max-width: 1024px) 100vw, 33vw" className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       <div className="absolute bottom-5 left-8 right-3 text-white">
         <h3 className="font-stix text-lg sm:text-xl leading-snug drop-shadow">{toTitleCase(program.title)}</h3>

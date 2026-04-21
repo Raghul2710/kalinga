@@ -106,6 +106,7 @@ function VideoCardSlider({
                         src={image || "https://cdn.kalingauniversity.ac.in/placement/Anant+Jha.jpg"}
                         alt={title}
                         fill
+                        sizes="(max-width: 768px) 90vw, 400px"
                         className="rounded-[20px] !object-cover"
                     />
                     {/* Play Button Overlay */}

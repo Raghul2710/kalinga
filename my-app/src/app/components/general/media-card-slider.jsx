@@ -88,7 +88,7 @@ export default function MediaCardSlider({
       return url;
     }
 
-    return url;
+    return "";
   };
 
   // Check if URL is a direct video file (AWS S3 or other direct URLs)
@@ -197,6 +197,7 @@ export default function MediaCardSlider({
                                 src={item.thumbnail}
                                 alt={item.name || item.title || "Video thumbnail"}
                                 className="absolute inset-0 w-full h-full object-cover object-center"
+                                loading="lazy"
                               />
                             ) : (
                               // Use Next.js Image component for other image thumbnails
@@ -204,6 +205,7 @@ export default function MediaCardSlider({
                                 src={item.thumbnail}
                                 alt={item.name || item.title || "Video thumbnail"}
                                 fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className={`object-cover ${imageObjectPosition} brightness-100`}
                                 priority
                               />
@@ -247,6 +249,7 @@ export default function MediaCardSlider({
                           src={item.image || item.thumbnail}
                           alt={item.name || item.title || "Image"}
                           fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className={`object-cover ${imageObjectPosition}`}
                         />
                       )}
@@ -382,14 +385,26 @@ export default function MediaCardSlider({
                 </video>
               ) : isYouTubeUrl(currentVideo.url) ? (
                 // Use iframe for YouTube videos (more reliable than ReactPlayer)
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  src={`${getYouTubeEmbedUrl(currentVideo.url)}?autoplay=1&rel=0`}
-                  title={currentVideo.name || "YouTube video"}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
+                (() => {
+                  const embedUrl = getYouTubeEmbedUrl(currentVideo.url);
+                  if (!embedUrl) {
+                    return (
+                      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white">
+                        Unable to load this YouTube link.
+                      </div>
+                    );
+                  }
+                  return (
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full"
+                      src={`${embedUrl}?autoplay=1&rel=0`}
+                      title={currentVideo.name || "YouTube video"}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  );
+                })()
               ) : (
                 // ReactPlayer for other video platforms (Vimeo, etc.)
                 <div className="absolute top-0 left-0 w-full h-full">

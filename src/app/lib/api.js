@@ -471,7 +471,10 @@ export async function fetchAllCourseAbout() {
     const maxPages = 100; // Safety limit to prevent infinite loops
 
     while (nextUrl && pageCount < maxPages) {
+      let timeoutId;
       try {
+        const controller = new AbortController();
+        timeoutId = setTimeout(() => controller.abort(), 5000);
         // Handle both absolute and relative URLs
         const fetchUrl = nextUrl.startsWith('http') ? nextUrl : getApiUrl(nextUrl);
 
@@ -481,7 +484,9 @@ export async function fetchAllCourseAbout() {
             'Content-Type': 'application/json',
           },
           cache: 'no-store',
+          signal: controller.signal,
         });
+        clearTimeout(timeoutId);
 
         if (!response.ok) {
           // If it's a 404 or 500 on subsequent pages, return what we have
@@ -503,6 +508,7 @@ export async function fetchAllCourseAbout() {
         nextUrl = data.next ? data.next : null;
         pageCount++;
       } catch (fetchError) {
+        if (timeoutId) clearTimeout(timeoutId);
         // If it's the first page, throw the error
         if (pageCount === 0) {
           // Provide more helpful error message
