@@ -39,7 +39,7 @@ export default function NirfPage() {
               }
             `}</style>
             <SectionHeading
-                title="NIRF"
+                title="National Institutional Ranking Framework"
                 titleClassName="text-center mb-8" />
 
             <div className="flex flex-col lg:flex-row gap-4 bg-[var(--dark-blue)] py-16 md:px-10 px-4 rounded-xl">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { submitForm } from "../../config/api";
 import FlipbookTrigger from "../general/FlipbookTrigger";
+import ResearchSixGridButtons from "../research/research_six_grid-buttons";
 
 // Student Feedback Form Component
 function StudentFeedbackForm({ onClose }) {
@@ -1445,31 +1446,28 @@ const MINUTES_OF_MEETING = {
   ],
 };
 
-
-/*
 const nba = {
   "SAR": [
-    { title: "SAR", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/final-sar.pdf" },
+    { id: 1, text: "SAR", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/final-sar.pdf" },
   ],
   "Student Details": [
-    { title: "Student Details - 2025-26", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2025-26.pdf" },
-    { title: "Student Details - 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2024-25.pdf" },
-    { title: "Student Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2023-24.pdf" },
-    { title: "Student Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/2022-23.pdf" },
+    { id: 2, text: "Student Details - 2025-26", href: "#" },
+    { id: 3, text: "Student Details - 2024-25", href: "#" },
+    { id: 4, text: "Student Details - 2023-24", href: "#" },
+    { id: 5, text: "Student Details - 2022-23", href: "#" },
   ],
   "Faculty Details": [
-    { title: "Faculty Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-deatils-2022-23.pdf" },
-    { title: "Faculty Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2023-24.pdf" },
-    { title: "Faculty Details - 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2024-25.pdf" },
-    { title: "Faculty Details - 2025-26", url: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2025-26.pdf" },
+    { id: 6, text: "Faculty Details - 2022-23", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-deatils-2022-23.pdf" },
+    { id: 7, text: "Faculty Details - 2023-24", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2023-24.pdf" },
+    { id: 8, text: "Faculty Details - 2024-25", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2024-25.pdf" },
+    { id: 9, text: "Faculty Details - 2025-26", href: "https://cdn.kalingauniversity.ac.in/IQAC/nba/faculty-details-2025-26.pdf" },
   ],
   "Placement Details": [
-    { title: "Placement Details - 2021-22", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2021-22.pdf" },
-    { title: "Placement Details - 2022-23", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2022-23.pdf" },
-    { title: "Placement Details - 2023-24", url: "https://cdn.kalingauniversity.ac.in/departments/MBA/Placement-2023-24.pdf" },
+    { id: 10, text: "Placement Details - 2021-22", href: "#" },
+    { id: 11, text: "Placement Details - 2022-23", href: "#" },
+    { id: 12, text: "Placement Details - 2023-24", href: "#" },
   ],
 };
-*/
 
 // Feedback Analysis Data
 const FEEDBACK_ANALYSIS = {
@@ -1555,11 +1553,11 @@ const ANNUAL_REPORTS = {
   ],
 };
 
-// const FINANCIAL_STATEMENTS = [
-//   { title: "Financial Audited Statements 2022-23", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf" },
-//   { title: "Financial Audited Statements 2023-24", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf" },
-//   { title: "Financial Audited Statements 2024-25", url: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf" },
-// ];
+const FINANCIAL_STATEMENTS = [
+  { id: 1, text: "Financial Audited Statements 2024-25", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf", useSlider: true },
+  { id: 2, text: "Financial Audited Statements 2023-24", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf", useSlider: true },
+  { id: 3, text: "Financial Audited Statements 2022-23", href: "#", disableFlipbook: true },
+];
 
 // Strategic Plan Content
 const STRATEGIC_PLAN_CONTENT = `Kalinga University promotes knowledge development through innovation & research, hands-on learning, and student startups. It provides a platform for students to experiment, work on real-world projects, and bring their innovative ideas. It has also established an incubation centre to support and transform the brilliant startup ideas of young students into successful businesses.
@@ -1626,7 +1624,6 @@ export default function IqacTabSection() {
             }
           }, 100);
         }
-        /*
         else if (hash === 'finanical-audited-statements') {
           setActiveTab('financial');
           setTimeout(() => {
@@ -1643,7 +1640,6 @@ export default function IqacTabSection() {
             }
           }, 100);
         }
-        */
       }
     };
 
@@ -1755,28 +1751,13 @@ export default function IqacTabSection() {
               {/* Financial Audited Statements Tab */}
               {activeTab?.trim().toLowerCase() === "financial" && (
                 <div className="flex-1" id="finanical-audited-statements">
-                  <div className="flex flex-col items-center justify-center py-12 md:py-20 px-4 text-center">
-                    <div className="relative mb-8">
-                      <h1
-                        className="text-[100px] sm:text-[140px] leading-none font-stix font-bold text-[var(--dark-blue)] opacity-5 select-none"
-                        style={{
-                          textShadow: '1px 1px 0px rgba(0,0,0,0.05)',
-                          WebkitTextStroke: '1.5px var(--dark-blue)',
-                          color: 'transparent'
-                        }}
-                      >
-                        404
-                      </h1>
-                    </div>
-
-                    <h2 className="text-2xl md:text-4xl font-stix text-[var(--foreground)] mb-4">
-                      Search Result Not Found
-                    </h2>
-
-                    <p className="text-base md:text-lg text-gray-500 font-plus-jakarta-sans max-w-md mx-auto leading-relaxed">
-                      There was an error loading the page.
-                    </p>
-                  </div>
+                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
+                    Financial Audited Statements
+                  </h2>
+                  <ResearchSixGridButtons
+                    buttons={FINANCIAL_STATEMENTS}
+                    noSection={true}
+                  />
                 </div>
               )}
               {/* Objectives Tab */}
@@ -2232,28 +2213,36 @@ export default function IqacTabSection() {
               {/* NBA Tab */}
               {activeTab === "nba" && (
                 <div className="flex-1">
-                  <div className="flex flex-col items-center justify-center py-12 md:py-20 px-4 text-center">
-                    <div className="relative mb-8">
-                      <h1
-                        className="text-[100px] sm:text-[140px] leading-none font-stix font-bold text-[var(--dark-blue)] opacity-5 select-none"
-                        style={{
-                          textShadow: '1px 1px 0px rgba(0,0,0,0.05)',
-                          WebkitTextStroke: '1.5px var(--dark-blue)',
-                          color: 'transparent'
-                        }}
-                      >
-                        404
-                      </h1>
-
-                    </div>
-
-                    <h2 className="text-2xl md:text-4xl font-stix text-[var(--foreground)] mb-4">
-                      Search Result Not Found
-                    </h2>
-
-                    <p className="text-base md:text-lg text-gray-500 font-plus-jakarta-sans max-w-md mx-auto leading-relaxed">
-                      There was an error loading the page.
-                    </p>
+                  <h2 className="font-plus-jakarta-sans text-xl md:text-3xl text-[var(--foreground)] mb-6 text-center mt-3">
+                    NBA
+                  </h2>
+                  <div className="space-y-2 text-left">
+                    {Object.entries(nba).map(([category, items], idx) => {
+                      const isExpanded = expandedYears[category] || false;
+                      return (
+                        <div key={idx} className="border-b border-[var(--button-red)] pb-2 last:border-b-0">
+                          <button
+                            onClick={() => toggleYear(category)}
+                            className="w-full flex items-center gap-2 py-1 hover:opacity-80 transition-opacity justify-between pr-3"
+                            aria-label={`Toggle ${category}`}
+                          >
+                            <h3 className="font-plus-jakarta-sans text-sm md:text-base text-[var(--foreground)]">
+                              {category}
+                            </h3>
+                            <div className={`text-[var(--background)] bg-[var(--button-red)] rounded-sm p-3 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
+                              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                            </div>
+                          </button>
+                          {isExpanded && (
+                            <div className="mt-4 mb-2">
+                              <ResearchSixGridButtons buttons={items} noSection={true} />
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
