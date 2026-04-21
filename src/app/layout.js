@@ -193,7 +193,7 @@ export default function RootLayout({ children }) {
                 {children}
               </main>
               <Footer />
-              <ChatbotPopup />
+              {/* <ChatbotPopup /> */}
             </ClickSparkWrapper>
           </FlipbookProvider>
         </ChatbotProvider>

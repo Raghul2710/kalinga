@@ -20,12 +20,12 @@ const quickLinks = [
         href: "/international-students",
         icon: "https://cdn.kalingauniversity.ac.in/icons/international.svg"
     },
-    {
+    /* {
         title: "Chat with Kalinga AI",
         href: "#",
         icon: "https://cdn.kalingauniversity.ac.in/icons/chat+with+students.svg",
         isChatbot: true
-    },
+    }, */
     {
         title: "Admission",
         href: "/admissions",

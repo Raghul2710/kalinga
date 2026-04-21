@@ -28,22 +28,7 @@ export default function NPFWidget() {
                     display: block !important;
                     visibility: visible !important;
                 }
-                /* Surgical suppression for NPF launcher/tracking elements only */
-                iframe#npf-widget-launcher,
-                iframe.npf-widget-launcher,
-                #npf-widget-launcher-bubble,
-                .npf-chat-icon, 
-                .npf-bubble,
-                .npf-tracking-icon,
-                #npf_chat_icon,
-                svg[class*="npf-"] {
-                    display: none !important;
-                    visibility: hidden !important;
-                    opacity: 0 !important;
-                    pointer-events: none !important;
-                    width: 0 !important;
-                    height: 0 !important;
-                }
+                /* Surgical suppression removed to allow NPF chatbot to show */
                 /* Explicitly allow the modal and form content iframe to be visible and correctly sized */
                 .npfwpopup-wrapper, 
                 .npf-popup-modal, 
