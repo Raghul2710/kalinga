@@ -8,6 +8,8 @@ import PhdObjectivesPanel from "@/app/components/phd/phd-objectives";
 import Campusfacilitiescard from "@/app/components/campus-facilities/campusfacilitiescard";
 import SectionHeading from "@/app/components/general/SectionHeading";
 import ResearchSixGridButtons from "@/app/components/research/research_six_grid-buttons";
+import CustomGallery from "@/app/components/general/gallery";
+import QuickLinkCard from "@/app/components/general/quick_link_card";
 
 
 const mainIntroContent = {
@@ -56,72 +58,23 @@ const items = [
     }
 ];
 
-const research_six_grid_buttons1 = [
-    {
-        id: 1,
-        text: "City Eye Care Hospital",
-        url: "#"
-    },
-    {
-        id: 2,
-        text: "NH MMI Hospital",
-        url: "#"
-    },
-    {
-        id: 3,
-        text: "Ramkrishna Care Hospital",
-        url: "#"
-    },
-    {
-        id: 4,
-        text: "Saptgiri Hospital",
-        url: "#"
-    },
-    {
-        id: 5,
-        text: "Shri Ganesh Vinayak Eye Hospital",
-        url: "#"
-    },
-    {
-        id: 6,
-        text: "Urmila Memorial Hospital",
-        url: "#"
-    },
-    {
-        id: 7,
-        text: "VY Hospital",
-        url: "#"
-    },
-    {
-        id: 8,
-        text: "Model/Poster Exhibition on World Mental Health Day",
-        url: "#"
-    },
-    {
-        id: 2,
-        text: "Guest Lecture on “Development of New Vaccines and Variants in Indian Poultry Diseases”",
-        url: "#"
-    },
-    {
-        id: 3,
-        text: "Guest Lecture on Mental Health and Well-Being of Students and Teachers",
-        url: "#"
-    },
-    {
-        id: 4,
-        text: "Industrial Visit to AIIMS Raipur",
-        url: "#"
-    },
-    {
-        id: 5,
-        text: "Emerging Perspectives and Future Trends in Pharmaceuticals and Allied Sciences for Global Health and Well-being",
-        url: "#"
-    },
-    {
-        id: 6,
-        text: "International Yoga Day",
-        url: "#"
-    }
+const hospitalMoUs = [
+    { id: 1, text: "City Eye Care Hospital", url: "#" },
+    { id: 2, text: "NH MMI Hospital", url: "#" },
+    { id: 3, text: "Ramkrishna Care Hospital", url: "#" },
+    { id: 4, text: "Saptgiri Hospital", url: "#" },
+    { id: 5, text: "Shri Ganesh Vinayak Eye Hospital", url: "#" },
+    { id: 6, text: "Urmila Memorial Hospital", url: "#" },
+    { id: 7, text: "VY Hospital", url: "#" },
+];
+
+const eventReports = [
+    { id: 1, text: "Model/Poster Exhibition on World Mental Health Day", url: "#" },
+    { id: 2, text: "Guest Lecture on “Development of New Vaccines and Variants in Indian Poultry Diseases”", url: "#" },
+    { id: 3, text: "Guest Lecture on Mental Health and Well-Being of Students and Teachers", url: "#" },
+    { id: 4, text: "Industrial Visit to AIIMS Raipur", url: "#" },
+    { id: 5, text: "Emerging Perspectives and Future Trends in Pharmaceuticals and Allied Sciences for Global Health and Well-being", url: "#" },
+    { id: 6, text: "International Yoga Day", url: "#" },
 ];
 
 
@@ -220,8 +173,26 @@ const phdObjectives = [
     {
         item: "4th National Pharmacovigilance Awareness on “Building ADR and Reporting Culture for Patient Safety”"
     }
-
 ];
+
+const galleryImages = [
+    { id: 1, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-1.webp", alt: "Good Health and Well-Being 1" },
+    { id: 2, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-2.webp", alt: "Good Health and Well-Being 2" },
+    { id: 3, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-3.webp", alt: "Good Health and Well-Being 3" },
+    { id: 4, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-4.webp", alt: "Good Health and Well-Being 4" },
+    { id: 5, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-5.webp", alt: "Good Health and Well-Being 5" },
+    { id: 6, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-6.webp", alt: "Good Health and Well-Being 6" },
+    { id: 7, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-7.webp", alt: "Good Health and Well-Being 7" },
+    { id: 8, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-8.webp", alt: "Good Health and Well-Being 8" },
+    { id: 9, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-9.webp", alt: "Good Health and Well-Being 9" },
+    { id: 10, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-10.webp", alt: "Good Health and Well-Being 10" },
+    { id: 11, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-11.webp", alt: "Good Health and Well-Being 11" },
+    { id: 12, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-12.webp", alt: "Good Health and Well-Being 12" },
+    { id: 13, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-13.webp", alt: "Good Health and Well-Being 13" },
+    { id: 14, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-14.webp", alt: "Good Health and Well-Being 14" },
+    { id: 15, image: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/image-new-good-15.webp", alt: "Good Health and Well-Being 15" },
+];
+
 
 export default function GreenCampusPage() {
     return (
@@ -264,15 +235,39 @@ export default function GreenCampusPage() {
                 imageSrc="https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/images-1.png"
                 phdObjectives={phdObjectives}
             />
+            <div className="container mx-auto mt-16 px-4">
+                <SectionHeading
+                    title="Tie-ups with Hospitals (MoU)"
+                    description="The University has signed MoUs with renowned hospitals to ensure advanced medical treatment and support for students and staff."
+                    titleClassName="text-center"
+                />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
+                    {hospitalMoUs.map((hospital) => (
+                        <QuickLinkCard
+                            key={hospital.id}
+                            title={hospital.text}
+                            description="Official Memorandum of Understanding for healthcare services and medical support."
+                            showReadMore={false}
+                            descriptionContainerClassName=""
+                        />
+                    ))}
+                </div>
+            </div>
+
             <div className="mt-10">
                 <SectionHeading
-                    title="All MoUs with Hospitals & Event Reports"
+                    title="Event Reports"
                     description=""
                     titleClassName="text-center"
                 />
             </div>
             <ResearchSixGridButtons
-                buttons={research_six_grid_buttons1}
+                buttons={eventReports}
+            />
+
+            <CustomGallery
+                images={galleryImages}
+                title="Glimpses of Our Health and Well-Being Activities"
             />
         </>
     );
