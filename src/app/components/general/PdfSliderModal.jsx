@@ -8,17 +8,20 @@ import "react-pdf/dist/Page/TextLayer.css";
 // Set up PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5, limitPages }) => {
+const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5, limitPages, lockAfterInitialPages = false }) => {
     const [numPages, setNumPages] = useState(null);
     const containerRef = useRef(null);
     const [containerWidth, setContainerWidth] = useState(0);
-    const [visiblePagesCount, setVisiblePagesCount] = useState(maxVisiblePages);
+    const initialPages = limitPages || 3;
+    const [visiblePagesCount, setVisiblePagesCount] = useState(initialPages);
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
 
     useEffect(() => {
         if (isOpen) {
-            setVisiblePagesCount(maxVisiblePages);
+            setVisiblePagesCount(initialPages);
+            setIsLoadingMore(false);
         }
-    }, [isOpen, maxVisiblePages]);
+    }, [isOpen, initialPages]);
 
     useEffect(() => {
         if (!isOpen) return;
@@ -41,15 +44,32 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5, l
 
     if (!isOpen) return null;
 
+    const shouldLockPreview = Boolean(lockAfterInitialPages);
+
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
+        setVisiblePagesCount(initialPages);
+
+        if (!shouldLockPreview && numPages > initialPages) {
+            setIsLoadingMore(true);
+            setTimeout(() => {
+                setVisiblePagesCount((prev) => Math.min(prev + maxVisiblePages, numPages));
+                setIsLoadingMore(false);
+            }, 700);
+        }
     }
 
     const handleScroll = (e) => {
+        if (shouldLockPreview) return;
+        if (isLoadingMore) return;
         const { scrollTop, scrollHeight, clientHeight } = e.target;
         if (scrollHeight - scrollTop <= clientHeight * 1.5) {
             if (numPages && visiblePagesCount < numPages) {
-                setVisiblePagesCount(prev => Math.min(prev + 5, numPages));
+                setIsLoadingMore(true);
+                setTimeout(() => {
+                    setVisiblePagesCount(prev => Math.min(prev + maxVisiblePages, numPages));
+                    setIsLoadingMore(false);
+                }, 400);
             }
         }
     };
@@ -95,8 +115,7 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5, l
                             </div>
                         }
                     >
-                        {numPages && Array.from(new Array(numPages), (el, index) => {
-                            const isVisible = index < maxVisiblePages;
+                        {numPages && Array.from(new Array(visiblePagesCount), (el, index) => {
                             return (
                                 <div
                                     key={`page_${index + 1}`}
@@ -119,6 +138,13 @@ const PdfSliderModal = ({ isOpen, onClose, pdfUrl, title, maxVisiblePages = 5, l
                             );
                         })}
                     </Document>
+
+                    {(isLoadingMore || (shouldLockPreview && numPages > visiblePagesCount)) && (
+                        <div className="flex flex-col items-center justify-center py-4">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[var(--dark-blue)]"></div>
+                            <p className="mt-2 text-sm text-[var(--dark-blue)]">Loading more pages...</p>
+                        </div>
+                    )}
 
                     {/* Final CTA */}
                     {/* <div className="flex justify-center w-full mb-12">

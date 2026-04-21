@@ -13,6 +13,7 @@ export const FlipbookProvider = ({ children }) => {
     const [pdfUrl, setPdfUrl] = useState('');
     const [title, setTitle] = useState('');
     const [sliderLimit, setSliderLimit] = useState(null);
+    const [lockAfterInitialPages, setLockAfterInitialPages] = useState(false);
 
     const openFlipbook = useCallback((url, docTitle = '') => {
         setPdfUrl(getProxyPdfUrl(url) || url);
@@ -20,10 +21,16 @@ export const FlipbookProvider = ({ children }) => {
         setIsOpen(true);
     }, []);
 
-    const openPdfSlider = useCallback((url, docTitle = '', limit = null) => {
+    const openPdfSlider = useCallback((url, docTitle = '', sliderOptions = null) => {
         setPdfUrl(getProxyPdfUrl(url) || url);
         setTitle(docTitle);
-        setSliderLimit(limit);
+        if (sliderOptions && typeof sliderOptions === 'object') {
+            setSliderLimit(sliderOptions.limitPages ?? null);
+            setLockAfterInitialPages(Boolean(sliderOptions.lockAfterInitialPages));
+        } else {
+            setSliderLimit(sliderOptions);
+            setLockAfterInitialPages(false);
+        }
         setIsSliderOpen(true);
     }, []);
 
@@ -47,6 +54,7 @@ export const FlipbookProvider = ({ children }) => {
                 pdfUrl={pdfUrl}
                 title={title}
                 limitPages={sliderLimit}
+                lockAfterInitialPages={lockAfterInitialPages}
             />
         </FlipbookContext.Provider>
     );

@@ -1554,9 +1554,9 @@ const ANNUAL_REPORTS = {
 };
 
 const FINANCIAL_STATEMENTS = [
-  { id: 1, text: "Financial Audited Statements 2024-25", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf", useSlider: true },
-  { id: 2, text: "Financial Audited Statements 2023-24", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf", useSlider: true },
-  { id: 3, text: "Financial Audited Statements 2022-23", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf", useSlider: true },
+  { id: 1, text: "Financial Audited Statements 2024-25", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2024-25.pdf", useSlider: true, limitPages: 3, lockAfterInitialPages: true },
+  { id: 2, text: "Financial Audited Statements 2023-24", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2023-24.pdf", useSlider: true, limitPages: 3, lockAfterInitialPages: true },
+  { id: 3, text: "Financial Audited Statements 2022-23", href: "https://cdn.kalingauniversity.ac.in/IQAC/statments-2022-23.pdf", useSlider: true, limitPages: 3, lockAfterInitialPages: true },
 ];
 
 // Strategic Plan Content
