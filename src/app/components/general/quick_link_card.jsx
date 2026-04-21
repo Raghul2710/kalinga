@@ -14,7 +14,8 @@ const QuickLinkCard = ({
   iconWrapperClassName = "w-12 h-12 sm:w-14 sm:h-14", // Default size
   alt = "",
   onToggleExpand, // Add this prop
-  descriptionContainerClassName = "mb-4 sm:mb-6"
+  descriptionContainerClassName = "mb-4 sm:mb-6",
+  fullCardLink = false
 }) => {
   const isImageUrl = typeof icon === 'string' && (icon.startsWith('http') || icon.startsWith('/'))
   const [isExpanded, setIsExpanded] = useState(false)
@@ -67,9 +68,9 @@ const QuickLinkCard = ({
     }
   }
 
-  return (
+  const CardContent = (
     <div
-      className={`${cardBackgroundColor} rounded-lg p-5 sm:p-6 shadow-lg flex flex-col h-full`}
+      className={`${cardBackgroundColor} rounded-lg p-5 sm:p-6 shadow-lg flex flex-col h-full transition-transform hover:scale-[1.02] duration-300`}
     >
       {/* Icon */}
       {/* Icon */}
@@ -161,6 +162,16 @@ const QuickLinkCard = ({
       }
     </div >
   )
+
+  if (fullCardLink && href) {
+    return (
+      <Link href={href} target={href.startsWith('http') ? "_blank" : undefined} rel={href.startsWith('http') ? "noopener noreferrer" : undefined} className="block h-full">
+        {CardContent}
+      </Link>
+    )
+  }
+
+  return CardContent
 }
 
 export default QuickLinkCard
