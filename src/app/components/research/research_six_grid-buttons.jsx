@@ -273,7 +273,7 @@ export default function ResearchSixGridButtons({
               {isPdf || isTable || isContent ? (
                 <GlobalArrowButton
                   onClick={(e) => handleButtonClick(e, button)}
-                  className="!w-full h-[60px] justify-between"
+                  className="!w-full min-h-[60px] h-auto justify-between"
                   arrowClassName="p-[3px] !px-2 mr-2 !py-1"
                   arrowSize={29}
                 >
@@ -287,7 +287,7 @@ export default function ResearchSixGridButtons({
                   rel={link && link.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   <GlobalArrowButton
-                    className="!w-full h-[60px] justify-between"
+                    className="!w-full min-h-[60px] h-auto justify-between"
                     arrowClassName="p-[3px] !px-2 mr-2 !py-1"
                     arrowSize={29}
                   >
