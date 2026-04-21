@@ -271,7 +271,7 @@ export default function MainIntro({
                     })()
                   ) : (
                     /* Expansion Toggle (Read More / Show Less) - ONLY if no external link */
-                    (needsTruncation || (hidePointsUntilExpanded && points && points.length > 0)) && (
+                    (needsTruncation || (useCharacterTruncation && fullDescriptionText.length > initialCharacterLimit) || (hidePointsUntilExpanded && points && points.length > 0)) && (
                       <GlobalArrowButton
                         className="w-fit !bg-white !text-white gap-2 !px-0 !py-0"
                         textClassName="!text-[var(--button-red)] !font-semibold !px-0"
