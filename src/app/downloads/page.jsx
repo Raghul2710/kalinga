@@ -24,7 +24,7 @@ const downloadsreport = [
   {
     id: 2,
     text: "Application for the Issue of Semester / Year-wise Transcript",
-    href: "https://cdn.kalingauniversity.ac.in/downloads/APPLICATION_FORM_FOR_TRANSCRIPT+CERTIFICATE.pdfICATION+FORM.pdf",
+    href: "https://cdn.kalingauniversity.ac.in/nirf/application-for-issues-year-wise-transcipt.pdf",
   },
   {
     id: 3,
