@@ -393,21 +393,21 @@ const newsletterAndReportsData = [
                 <p className="text-gray-600 mb-4">Official newsletter showcasing legal research, student achievements, and faculty contributions.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                        "VOLUME 4, ISSUE 2 (July 2025 - December 2025)",
-                        "VOLUME 4, ISSUE 1 (January 2025 - June 2025)",
-                        "VOLUME 3, ISSUE 2 (July 2024 - December 2024)",
-                        "Volume 2, Issue II (July 2023 - December 2023)",
-                        "Volume 2, Issue 1 ( January 2023 - June 2023 )",
-                        "Volume 1, Issue 2 ( October 2022 - December 2022 )",
-                        "VOLUME I, ISSUE I (April 2022 - September 2022)",
-                        "Volume 3, Issue - I"
+                        { title: "VOLUME 4, ISSUE 2 (July 2025 - December 2025)", url: "#" },
+                        { title: "VOLUME 4, ISSUE 1 (January 2025 - June 2025)", url: "#" },
+                        { title: "VOLUME 3, ISSUE 2 (July 2024 - December 2024)", url: "#" },
+                        { title: "Volume 2, Issue II (July 2023 - December 2023)", url: "#" },
+                        { title: "Volume 2, Issue 1 ( January 2023 - June 2023 )", url: "#" },
+                        { title: "Volume 1, Issue 2 ( October 2022 - December 2022 )", url: "#" },
+                        { title: "VOLUME I, ISSUE I (April 2022 - September 2022)", url: "#" },
+                        { title: "Volume 3, Issue - I", url: "#" }
                     ].map((issue, idx) => (
-                        <div key={idx} className="flex items-center gap-3 p-3 bg-white border border-gray-100 rounded-lg hover:border-[var(--button-red)]/30 transition-colors cursor-pointer group">
+                        <a href={issue.url} target="_blank" rel="noopener noreferrer" key={idx} className="flex items-center gap-3 p-3 bg-white border border-gray-100 rounded-lg hover:border-[var(--button-red)]/30 transition-colors cursor-pointer group">
                             <div className="w-8 h-8 rounded bg-red-50 flex items-center justify-center text-[var(--button-red)] group-hover:bg-[var(--button-red)] group-hover:text-white transition-colors">
                                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" /></svg>
                             </div>
-                            <span className="text-sm font-medium text-gray-700">{issue}</span>
-                        </div>
+                            <span className="text-sm font-medium text-gray-700">{issue.title}</span>
+                        </a>
                     ))}
                 </div>
             </div>
@@ -421,16 +421,16 @@ const newsletterAndReportsData = [
                 <p className="text-gray-600 mb-4">Newsletter focusing on social justice, legal aid, and community outreach initiatives.</p>
                 <div className="space-y-2">
                     {[
-                        "Newsletter of Probono Club under the Faculty of Law | Issue No. 6 | February 2024",
-                        "Newsletter of Probono Club under the Faculty of Law | Issue No. 5 | November 2023",
-                        "Newsletter of Probono Club under the Faculty of Law | Issue No. 4 | August 2023",
-                        "Newsletter of Probono Club under the Faculty of Law | Issue No. 3 | May 2023",
-                        "Newsletter of Probono Club under the Faculty of Law | Issue No. 2 | February 2023"
+                        { title: "Newsletter of Probono Club under the Faculty of Law | Issue No. 6 | February 2024", url: "#" },
+                        { title: "Newsletter of Probono Club under the Faculty of Law | Issue No. 5 | November 2023", url: "#" },
+                        { title: "Newsletter of Probono Club under the Faculty of Law | Issue No. 4 | August 2023", url: "#" },
+                        { title: "Newsletter of Probono Club under the Faculty of Law | Issue No. 3 | May 2023", url: "#" },
+                        { title: "Newsletter of Probono Club under the Faculty of Law | Issue No. 2 | February 2023", url: "#" }
                     ].map((issue, idx) => (
-                        <div key={idx} className="p-3 bg-white border border-gray-100 rounded-lg hover:shadow-sm transition-all cursor-pointer flex justify-between items-center group">
-                            <span className="text-sm text-gray-700">{issue}</span>
+                        <a href={issue.url} target="_blank" rel="noopener noreferrer" key={idx} className="p-3 bg-white border border-gray-100 rounded-lg hover:shadow-sm transition-all cursor-pointer flex justify-between items-center group">
+                            <span className="text-sm text-gray-700">{issue.title}</span>
                             <span className="text-[var(--button-red)] opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
@@ -443,53 +443,53 @@ const newsletterAndReportsData = [
             <div className="overflow-hidden">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
                     {[
-                        "2nd Alumni Meet (Raipur Chapter)",
-                        "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy",
-                        "3rd Alumni Meet (Raipur Chapter)",
-                        "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy",
-                        "7-Day Online Faculty Development Programme (FDP)",
-                        "Alumni Talk – Pathways to Success: Alumni Share their Journey",
-                        "Guest Lecture On “Lean Start Up & Minimum Viable Product / Business Boot Camp or Mentoring Session”",
-                        "Capacity Building Workshop on “Techniques of Forensic Evidences in Crime Scene Investigation and New Criminal Laws”",
-                        "Jail Visit for Law Students (Industrial Visit)",
-                        "Trainers’ Training Certification Course on RTI Act, 2005",
-                        "6 Days Online Certificate Course on Legal Drafting and Contract Drafting",
-                        "IDEATHON 5.0",
-                        "The 76th Year of the Indian Constitution Day Celebration With a Focus on “Dignity Beyond Text: POSH as an Instrument to Enforce Article 14 & 15 of the Constitution of India”",
-                        "Bhoomi-Club Donation Drive (From 10th September to 16th October, 2025)",
-                        "Engineers Day Celebration",
-                        "Tourism Treasure Hunt 2025",
-                        "Open Mic: Youth Voices “A celebration of youth expression and empowerment”",
-                        "Global Conference on Cyber Violence and Digital Deception: Undertaking, Preventing and Responding to Technology Facilitated Crimes",
-                        "One-Day Industrial Visit to Gangrel Dam, Dhamtari",
-                        "ONE-DAY INDUSTRIAL VISIT” To 9M India Limited",
-                        "Industrial visit (Lord India Pvt. Ltd.)",
-                        "Industrial Visit – Marble Center India, Abhanpur",
-                        "An Industrial Visit to Parle G Plant in Raipur",
-                        "Industrial Visit to VNR SEEDS PVT. LTD.",
-                        "Industrial Visit to Yasham Software Development Center",
-                        "IEEE 3rd International World Conference on Communication & Computing 2025",
-                        "IEEE 2nd International World Conference on Communication & Computing 2024",
-                        "2nd International Conference on Chhattisgarh@2047: Transforming Education through Sustainability Innovation Inclusion & Indian Knowledge System",
-                        "ICSTDTSD 2025",
-                        "International Conference SciSustain 2025: Fostering Sustainable Development Through Interdisciplinary Scientific Research",
-                        "Legal Aid Activity On Legal Awareness regarding Domestic Safety & Avoidance of Violence",
-                        "Surana & Surana Judex 3.0 Human Rights Law Moot Court competition, 2025",
-                        "National Conference on Sustainable Futures: Culture, Society and Governance in Transition",
-                        "National Seminar on From Vachanas to Vision: Mahatma Basaveshwara’s Ideas in Contemporary Society",
-                        "“Nukkad Natak Event”",
-                        "Quiz Competition On “Indian Standard”",
-                        "Report on Startup India Delegation Visit and Ideathon Awareness Session",
-                        "A Session on Startup Summit: Demo Day/Exhibition of Startups & Linkage with Innovation Ambassadors/Experts for Mentorship Support",
-                        "A Training Report on The Entrepreneurship Development Institute of India - EDII",
-                        "Guest Lecture on Innovation/Prototype Validation – Converting Innovation into a Start-up",
-                        "Donation Drive: Donate to Make a Difference (under Unnat Bharat Abhiyan)",
-                        "A Report of “Workshop on Best out of Waste”"
+                        { title: "2nd Alumni Meet (Raipur Chapter)", url: "#" },
+                        { title: "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy", url: "#" },
+                        { title: "3rd Alumni Meet (Raipur Chapter)", url: "#" },
+                        { title: "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy", url: "#" },
+                        { title: "7-Day Online Faculty Development Programme (FDP)", url: "#" },
+                        { title: "Alumni Talk – Pathways to Success: Alumni Share their Journey", url: "#" },
+                        { title: "Guest Lecture On “Lean Start Up & Minimum Viable Product / Business Boot Camp or Mentoring Session”", url: "#" },
+                        { title: "Capacity Building Workshop on “Techniques of Forensic Evidences in Crime Scene Investigation and New Criminal Laws”", url: "#" },
+                        { title: "Jail Visit for Law Students (Industrial Visit)", url: "#" },
+                        { title: "Trainers’ Training Certification Course on RTI Act, 2005", url: "#" },
+                        { title: "6 Days Online Certificate Course on Legal Drafting and Contract Drafting", url: "#" },
+                        { title: "IDEATHON 5.0", url: "#" },
+                        { title: "The 76th Year of the Indian Constitution Day Celebration With a Focus on “Dignity Beyond Text: POSH as an Instrument to Enforce Article 14 & 15 of the Constitution of India”", url: "#" },
+                        { title: "Bhoomi-Club Donation Drive (From 10th September to 16th October, 2025)", url: "#" },
+                        { title: "Engineers Day Celebration", url: "#" },
+                        { title: "Tourism Treasure Hunt 2025", url: "#" },
+                        { title: "Open Mic: Youth Voices “A celebration of youth expression and empowerment”", url: "#" },
+                        { title: "Global Conference on Cyber Violence and Digital Deception: Undertaking, Preventing and Responding to Technology Facilitated Crimes", url: "#" },
+                        { title: "One-Day Industrial Visit to Gangrel Dam, Dhamtari", url: "#" },
+                        { title: "ONE-DAY INDUSTRIAL VISIT” To 9M India Limited", url: "#" },
+                        { title: "Industrial visit (Lord India Pvt. Ltd.)", url: "#" },
+                        { title: "Industrial Visit – Marble Center India, Abhanpur", url: "#" },
+                        { title: "An Industrial Visit to Parle G Plant in Raipur", url: "#" },
+                        { title: "Industrial Visit to VNR SEEDS PVT. LTD.", url: "#" },
+                        { title: "Industrial Visit to Yasham Software Development Center", url: "#" },
+                        { title: "IEEE 3rd International World Conference on Communication & Computing 2025", url: "#" },
+                        { title: "IEEE 2nd International World Conference on Communication & Computing 2024", url: "#" },
+                        { title: "2nd International Conference on Chhattisgarh@2047: Transforming Education through Sustainability Innovation Inclusion & Indian Knowledge System", url: "#" },
+                        { title: "ICSTDTSD 2025", url: "#" },
+                        { title: "International Conference SciSustain 2025: Fostering Sustainable Development Through Interdisciplinary Scientific Research", url: "#" },
+                        { title: "Legal Aid Activity On Legal Awareness regarding Domestic Safety & Avoidance of Violence", url: "#" },
+                        { title: "Surana & Surana Judex 3.0 Human Rights Law Moot Court competition, 2025", url: "#" },
+                        { title: "National Conference on Sustainable Futures: Culture, Society and Governance in Transition", url: "#" },
+                        { title: "National Seminar on From Vachanas to Vision: Mahatma Basaveshwara’s Ideas in Contemporary Society", url: "#" },
+                        { title: "“Nukkad Natak Event”", url: "#" },
+                        { title: "Quiz Competition On “Indian Standard”", url: "#" },
+                        { title: "Report on Startup India Delegation Visit and Ideathon Awareness Session", url: "#" },
+                        { title: "A Session on Startup Summit: Demo Day/Exhibition of Startups & Linkage with Innovation Ambassadors/Experts for Mentorship Support", url: "#" },
+                        { title: "A Training Report on The Entrepreneurship Development Institute of India - EDII", url: "#" },
+                        { title: "Guest Lecture on Innovation/Prototype Validation – Converting Innovation into a Start-up", url: "#" },
+                        { title: "Donation Drive: Donate to Make a Difference (under Unnat Bharat Abhiyan)", url: "#" },
+                        { title: "A Report of “Workshop on Best out of Waste”", url: "#" }
                     ].map((report, idx) => (
-                        <div key={idx} className="py-2 border-b border-gray-50 flex items-center gap-2 hover:bg-gray-50 px-2 rounded transition-colors group">
+                        <a href={report.url} target="_blank" rel="noopener noreferrer" key={idx} className="py-2 border-b border-gray-50 flex items-center gap-2 hover:bg-gray-50 px-2 rounded transition-colors group">
                             <span className="text-[var(--button-red)]">•</span>
-                            <span className="text-xs text-gray-600 group-hover:text-gray-900 transition-colors leading-tight">{report}</span>
-                        </div>
+                            <span className="text-xs text-gray-600 group-hover:text-gray-900 transition-colors leading-tight">{report.title}</span>
+                        </a>
                     ))}
                 </div>
             </div>
