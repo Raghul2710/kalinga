@@ -16,7 +16,7 @@ export default function NirfPage() {
         ],
         "2025": [
             { id: 1, text: "Overall", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-overall-2025.pdf", useSlider: true, limitPages: 5, lockAfterInitialPages: true },
-            { id: 2, text: "Management", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20250113-MBA-submitted-13-jan-2025.pdf", useSlider: true, limitPages: 3, lockAfterInitialPages: true },
+            { id: 2, text: "Management", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-Raipur20250113-MBA-submitted-13-jan-2025-new.pdf", useSlider: true, limitPages: 3, lockAfterInitialPages: true },
             { id: 3, text: "Pharmacy", href: "https://cdn.kalingauniversity.ac.in/nirf/Kalinga-University-pharmacy-13-jan-2025-submitted.pdf", useSlider: true },
             { id: 4, text: "SDGs", href: "https://cdn.kalingauniversity.ac.in/nirf/SDG-Kalinga-University-Raipur.pdf", useSlider: true, limitPages: 5, lockAfterInitialPages: true }
         ],

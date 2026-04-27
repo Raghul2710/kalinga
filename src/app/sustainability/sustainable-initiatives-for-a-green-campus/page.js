@@ -103,15 +103,18 @@ const greenCoverageReports = [
 ];
 
 const eventReports = [
-    { id: 1, text: "Plant Diversity at Kalinga University", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Plant+Diversity+at+Kalinga+University.pdf" },
-    { id: 2, text: "List of Plant Diversity", url: "#" },
-    { id: 3, text: "Plant Diversity of Kalinga University (Audited in August 2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Report+on+Plant+Diversity+of+Kalinga+University.pdf" },
-    { id: 4, text: "Events Reports", url: "#" },
-    { id: 5, text: "ESG & Sustainability Symposium", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Symposium+on+ESG+%26+Sustainablity.pdf" },
-    { id: 6, text: "Wildlife Week Celebration", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Wildlife+Week+Celebration+2025+(1).pdf" },
-    { id: 7, text: "Herbal Colour Making Workshop", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Workshop+on+Herbal+Colour+Making+2026.pdf" },
-    { id: 8, text: "One-Day Workshop on Sustainable Gardening Practices: Role of Biofertilisers and Grafting", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Workshop+on+Sustainable+Gardening+Practices.pdf" },
-    { id: 9, text: "World River Day", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/World+River+Day+Celebration+2025.pdf" },
+    { id: 1, text: "List of Plant Diversity", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Plant+Diversity+at+Kalinga+University.pdf" },
+    { id: 2, text: "Plant Diversity of Kalinga University (Audited in August 2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Report+on+Plant+Diversity+of+Kalinga+University.pdf" },
+    { id: 3, text: "Events Reports", url: "#" }
+];
+
+const eventsreportsnew = [
+    { id: 1, text: "ESG & Sustainability Symposium", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Symposium+on+ESG+%26+Sustainablity.pdf" },
+    { id: 2, text: "Wildlife Week Celebration", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Wildlife+Week+Celebration+2025+(1).pdf" },
+    { id: 3, text: "Herbal Colour Making Workshop", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Workshop+on+Herbal+Colour+Making+2026.pdf" },
+    { id: 4, text: "One-Day Workshop on Sustainable Gardening Practices: Role of Biofertilisers and Grafting", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Workshop+on+Sustainable+Gardening+Practices.pdf" },
+    { id: 5, text: "World River Day", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/World+River+Day+Celebration+2025.pdf" },
+
 ];
 
 
@@ -295,13 +298,23 @@ export default function GreenCampusPage() {
 
             <div className="mt-10">
                 <SectionHeading
-                    title="Event Reports"
+                    title="Plant Diversity at Kalinga University"
                     description=""
                     titleClassName="text-center"
                 />
             </div>
             <ResearchSixGridButtons
                 buttons={eventReports}
+            />
+            <div className="mt-10">
+                <SectionHeading
+                    title="Events Reports"
+                    description=""
+                    titleClassName="text-center"
+                />
+            </div>
+            <ResearchSixGridButtons
+                buttons={eventsreportsnew}
             />
 
             <CustomGallery
