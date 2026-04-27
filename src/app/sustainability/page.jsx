@@ -4,35 +4,28 @@ import React from "react";
 import ImageContent from "../components/ccrc/imagecontent";
 import MainIntro from "../components/about/main_intro";
 import SdgImageGrid from "../components/sdg-cell/sdg-image-grid";
-import SdgTabSection from "../components/sdg-cell/sdg-tab-section";
-import FAQ from "../components/general/faq";
-// import SpecializationCard from "../components/department/specialization-card";
-
-// FAQ items for different sections
-const faqItems = [
-  {
-    id: 1,
-    title: "Sustainability Infrastructure",
-    description: "Learn about Kalinga University's green campus initiatives, including solar power, rainwater harvesting, and waste management systems.",
-    buttons: [
-      { label: "Energy Policy", onClick: () => console.log("Energy Policy") },
-      { label: "Water Management", onClick: () => console.log("Water Management") }
-    ]
-  },
-  {
-    id: 2,
-    title: "Community Outreach",
-    description: "Our commitment to community development through various social welfare campaigns and awareness programs.",
-    buttons: [
-      { label: "Women Empowerment", onClick: () => console.log("Women Empowerment") },
-      { label: "Rural Development", onClick: () => console.log("Rural Development") }
-    ]
-  }
-];
+import GlobalArrowButton from "../components/general/global-arrow_button";
+import { useRouter } from "next/navigation";
+import SectionHeading from "../../../my-app/src/app/components/general/SectionHeading";
 
 export default function SDGCell() {
+  const router = useRouter();
+
+  const sdgPages = [
+    { label: "Good Health and Well-being", href: "/sustainability/good-health-and-well-being" },
+    { label: "Water Conservation", href: "/sustainability/water-conservation" },
+    { label: "Energy Conservation", href: "/sustainability/energy-conservation" },
+    { label: "Waste Management", href: "/sustainability/waste-management" },
+    { label: "Sustainable Initiatives for a Green Campus", href: "/sustainability/sustainable-initiatives-for-a-green-campus" },
+    { label: "Partnerships for the Goals", href: "/sustainability/partnerships-for-the-goals" }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pb-20">
+      <SectionHeading title="Centre of Excellence for Sustainable Development Goals"
+        subTitle=""
+        titleClassName="text-center pb-12 pt-6"
+      />
       <ImageContent
         hasImage={false}
         readmore={false}
@@ -59,17 +52,27 @@ export default function SDGCell() {
         disableClipPath={false}
         imageObjectFit="contain"
       />
-      <SdgTabSection />
+
       <SdgImageGrid />
 
-
-      {/* <FAQ
-        title="SDG Cell Resources"
-        subtitle=""
-        variant="button"
-        buttons={faqItems}
-        pyClassName="py-8 md:py-12"
-      /> */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl md:text-4xl text-center mb-12 font-serif">
+          Out Initiatives
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {sdgPages.map((page, index) => (
+            <GlobalArrowButton
+              key={index}
+              onClick={() => router.push(page.href)}
+              className="!w-full min-h-[60px] h-auto justify-between !rounded-xl"
+              arrowClassName="p-[3px] !px-2 mr-2 !py-1"
+              arrowSize={29}
+            >
+              {page.label}
+            </GlobalArrowButton>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

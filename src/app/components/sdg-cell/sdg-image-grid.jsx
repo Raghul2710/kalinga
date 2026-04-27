@@ -1,31 +1,14 @@
 "use client";
 
-import GlobalArrowButton from "../general/global-arrow_button";
-
 const SdgImageGrid = () => {
   const images = Array.from({ length: 17 }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
     const id = i + 1;
-    let pdfUrl = "";
-
-    // PDF links
-    if (id === 3) {
-      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-3-Good-Health-and-Well-Being-new.pdf";
-    } else if (id === 6) {
-      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-6-Water-Conservation.pdf";
-    } else if (id === 7) {
-      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-7-Energy-Conservation.pdf";
-    } else if (id === 12) {
-      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-12-Waste-Management.pdf";
-    } else if (id === 15) {
-      pdfUrl = "https://cdn.kalingauniversity.ac.in/sdg-cell/pdf/SDG-15-Sustainable-initiatives-For-Green-Campus.pdf";
-    }
 
     return {
       id,
       src: `https://cdn.kalingauniversity.ac.in/sdg-cell/sdg-logo/E-WEB-Goal-${num}.png`,
       alt: `SDG Goal ${num}`,
-      pdfUrl
     };
   });
 
@@ -52,21 +35,6 @@ const SdgImageGrid = () => {
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
-
-              {/* Hover Overlay with Button */}
-              {img.pdfUrl && (
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                  <GlobalArrowButton
-                    as="a"
-                    href={img.pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!py-2 !px-4 !rounded-full scale-90 group-hover:scale-100 transition-transform duration-300 shadow-xl"
-                  >
-                    View Report
-                  </GlobalArrowButton>
-                </div>
-              )}
             </div>
           ))}
         </div>

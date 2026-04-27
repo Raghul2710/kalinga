@@ -13,6 +13,7 @@ import StudentActivities from "@/app/components/department/student_activities";
 import Gallery from "@/app/components/general/gallery";
 import TwoLogo from "../components/iqac/two-logo";
 import CareerPath from '@/app/components/course/career_path'
+import SdgTabSection from "../components/sdg-cell/sdg-tab-section";
 const IQACPage = () => {
   const pathname = usePathname();
 
@@ -155,7 +156,7 @@ const IQACPage = () => {
         showDescriptionReadMore={true}
         description=""
       /> */}
-
+      <SdgTabSection />
       <StudentActivities
         title="News & Events"
         fallbackToGlobal={true}
