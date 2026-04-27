@@ -247,7 +247,7 @@ export default function GreenCampusPage() {
                         <QuickLinkCard
                             key={hospital.id}
                             title={hospital.text}
-                            description="Official Memorandum of Understanding for healthcare services and medical support."
+                            description=""
                             showReadMore={false}
                             descriptionContainerClassName=""
                             href={hospital.url}

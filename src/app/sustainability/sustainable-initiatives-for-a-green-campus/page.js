@@ -275,7 +275,7 @@ export default function GreenCampusPage() {
             <div className="container mx-auto mt-16 px-4">
                 <SectionHeading
                     title="Green Coverage Reports & Policies"
-                    description="The University maintains detailed reports and policy guidelines to ensure environmental sustainability and green campus management."
+                    description=""
                     titleClassName="text-center"
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-10">
@@ -283,7 +283,7 @@ export default function GreenCampusPage() {
                         <QuickLinkCard
                             key={report.id}
                             title={report.text}
-                            description="Official report/policy document regarding green campus initiatives."
+                            description=""
                             showReadMore={false}
                             descriptionContainerClassName=""
                             href={report.url}

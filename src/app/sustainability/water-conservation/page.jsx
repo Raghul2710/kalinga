@@ -187,7 +187,7 @@ export default function GreenCampusPage() {
                         <QuickLinkCard
                             key={report.id}
                             title={report.text}
-                            description="Official report regarding water conservation and harvesting."
+                            description=""
                             showReadMore={false}
                             descriptionContainerClassName=""
                             href={report.url}
