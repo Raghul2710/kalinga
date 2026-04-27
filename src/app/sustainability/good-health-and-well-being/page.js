@@ -45,6 +45,7 @@ const items = [
                         { key: "yogaOnceWeek", label: "Number of People Taking Part in Yoga and Meditation Programs Once a Week", widthPx: 240 }
                     ]}
                     data={[
+                        { year: "Unit", pedestrianArea: "Acres", sportsArea: "Acres", campusArea: "Acres", yogaTwiceYear: "Number", yogaOnceWeek: "Number" },
                         { year: "2024-2025", pedestrianArea: "22", sportsArea: "17", campusArea: "45 +", yogaTwiceYear: "494", yogaOnceWeek: "120" },
                         { year: "2023-2024", pedestrianArea: "22", sportsArea: "17", campusArea: "45 +", yogaTwiceYear: "497", yogaOnceWeek: "135" },
                         { year: "2022-2023", pedestrianArea: "22", sportsArea: "17", campusArea: "33.98", yogaTwiceYear: "864", yogaOnceWeek: "115" }
@@ -69,12 +70,12 @@ const hospitalMoUs = [
 ];
 
 const eventReports = [
-    { id: 1, text: "Model/Poster Exhibition on World Mental Health Day", url: "#" },
-    { id: 2, text: "Guest Lecture on “Development of New Vaccines and Variants in Indian Poultry Diseases”", url: "#" },
-    { id: 3, text: "Guest Lecture on Mental Health and Well-Being of Students and Teachers", url: "#" },
-    { id: 4, text: "Industrial Visit to AIIMS Raipur", url: "#" },
-    { id: 5, text: "Emerging Perspectives and Future Trends in Pharmaceuticals and Allied Sciences for Global Health and Well-being", url: "#" },
-    { id: 6, text: "International Yoga Day", url: "#" },
+    { id: 1, text: "Model/Poster Exhibition on World Mental Health Day", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Event+report+-+World+Mental+Health+Day.pdf" },
+    { id: 2, text: "Guest Lecture on “Development of New Vaccines and Variants in Indian Poultry Diseases”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Guest+Lecture+-+Development+of+New+Vaccines.pdf" },
+    { id: 3, text: "Guest Lecture on Mental Health and Well-Being of Students and Teachers", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Guest+Lecture_on+Mental+Health+-+2025.pdf" },
+    { id: 4, text: "Industrial Visit to AIIMS Raipur", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Industrial+Visit+at+AIIMS+Raipur.pdf" },
+    { id: 5, text: "Emerging Perspectives and Future Trends in Pharmaceuticals and Allied Sciences for Global Health and Well-being", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/International+Conference+-+Global+Health+%26+Wellbeing+-+2025.pdf" },
+    { id: 6, text: "International Yoga Day", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/International+Yoga+Day_2025.pdf" },
 ];
 
 

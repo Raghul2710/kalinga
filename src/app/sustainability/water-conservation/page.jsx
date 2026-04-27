@@ -40,14 +40,15 @@ const items = [
                 <DataTable
                     columns={[
                         { key: "year", label: "Financial Year", widthPx: 120 },
-                        { key: "pumpsHP", label: "Total Horsepower of all Pumps Installed (HP)", widthPx: 200 },
-                        { key: "rwhArea", label: "Total Rooftop Area connected to RWH (Sq.ft.)", widthPx: 250 },
-                        { key: "wastewaterReused", label: "Percentage of Wastewater Treated & Reused (%)", widthPx: 220 },
+                        { key: "pumpsHP", label: "Total Horsepower of all Pumps Installed", widthPx: 200 },
+                        { key: "rwhArea", label: "Total Rooftop Area connected to RWH", widthPx: 250 },
+                        { key: "wastewaterReused", label: "Percentage of Wastewater Treated & Reused", widthPx: 220 },
                         { key: "totalTaps", label: "Total No. of Taps in the Campus", widthPx: 180 },
                         { key: "lowFlowTaps", label: "No. of Taps with Low-Flow Fixtures", widthPx: 180 },
-                        { key: "totalRooftop", label: "Total Rooftop Area (Sq.ft.)", widthPx: 180 }
+                        { key: "totalRooftop", label: "Total Rooftop Area", widthPx: 180 }
                     ]}
                     data={[
+                        { year: "Unit", pumpsHP: "HP", rwhArea: "Sq.ft", wastewaterReused: "%", totalTaps: "Number", lowFlowTaps: "Number", totalRooftop: "Sq.ft" },
                         { year: "2024-2025", pumpsHP: "120", rwhArea: "6,40,000", wastewaterReused: "15", totalTaps: "970", lowFlowTaps: "170", totalRooftop: "3940225" },
                         { year: "2023-2024", pumpsHP: "120", rwhArea: "6,40,000", wastewaterReused: "10", totalTaps: "970", lowFlowTaps: "170", totalRooftop: "3940225" },
                         { year: "2022-2023", pumpsHP: "120", rwhArea: "6,40,000", wastewaterReused: "10", totalTaps: "963", lowFlowTaps: "170", totalRooftop: "3940225" }
@@ -72,9 +73,9 @@ const hospitalMoUs = [
 ];
 
 const conservationReports = [
-    { id: 1, text: "Training Session on Rainwater Harvesting Conducted at Palaud Village", url: "#" },
-    { id: 2, text: "World River Day", url: "#" },
-    { id: 3, text: "Geo-Tagged Photos", url: "#" },
+    { id: 1, text: "Training Session on Rainwater Harvesting Conducted at Palaud Village", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/Report+on+Rain+Water+Harvesting+on+6th+September+2022.pdf" },
+    { id: 2, text: "World River Day", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/World+River+Day+Celebration+2025.pdf" },
+    { id: 3, text: "Geo-Tagged Photos", url: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/Geo+Tagged+Photos.pdf" },
 ];
 
 const eventReports = [

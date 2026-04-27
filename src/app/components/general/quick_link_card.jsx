@@ -95,7 +95,7 @@ const QuickLinkCard = ({
       }
 
       {/* Title */}
-      <h3 className="text-xl mb-2 pb-2 border-b border-gray-700 text-[var(--foreground)]">
+      <h3 className="text-xl mb-2 pb-2 border-gray-700 text-[var(--foreground)]">
         {title}
       </h3>
 

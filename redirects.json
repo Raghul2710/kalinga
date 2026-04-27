@@ -555,11 +555,6 @@
         "permanent": true
     },
     {
-        "source": "/job_openings",
-        "destination": "/careers",
-        "permanent": true
-    },
-    {
         "source": "/about_kalinga",
         "destination": "/about-us",
         "permanent": true
@@ -1226,7 +1221,7 @@
     },
     {
         "source": "/6months-internship/research-consultancy-ipr-policy",
-        "destination": "/training-and-placements",
+        "destination": "/brochure/research-consultancy-ipr-policy",
         "permanent": true
     },
     {
@@ -1302,6 +1297,731 @@
     {
         "source": "/Faculty-of-Technology/hostel_fee",
         "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/index",
+        "destination": "/",
+        "permanent": true
+    },
+    {
+        "source": "/job_openings.php/1000",
+        "destination": "/careers",
+        "permanent": true
+    },
+    {
+        "source": "/career",
+        "destination": "/careers",
+        "permanent": true
+    },
+    {
+        "source": "/brochure/voter_portal",
+        "destination": "/voter-portal",
+        "permanent": true
+    },
+    {
+        "source": "/ieee/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/botany/seed-money",
+        "destination": "/courses/bachelor-of-science-zoology-botany-chemistry",
+        "permanent": true
+    },
+    {
+        "source": "/department/voter_portal",
+        "destination": "/voter-portal",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Education/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/annual-report/voter_portal",
+        "destination": "/voter-portal",
+        "permanent": true
+    },
+    {
+        "source": "/faculties/research-consultancy-ipr-policy",
+        "destination": "/brochure/research-consultancy-ipr-policy",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Education/hostel_fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/ai-ml/research-consultancy-ipr-policy",
+        "destination": "/brochure/research-consultancy-ipr-policy.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/phd-programs",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/seminar/ethics-committee-constitution",
+        "destination": "/brochure/Ethics-board.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/seminar/research-consultancy-ipr-policy",
+        "destination": "/brochure/research-consultancy-ipr-policy.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/Institute-of-Pharmacy/PO-PSO-CO",
+        "destination": "/departments/faculty-of-pharmacy",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Arts-and-Humanities/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/iccppdd2022/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/contact.php/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/ku/ug-courses",
+        "destination": "/admissions?studyLevel=UG",
+        "permanent": true
+    },
+    {
+        "source": "/wp/webinar-hindi",
+        "destination": "/news-and-events#events-activities",
+        "permanent": true
+    },
+    {
+        "source": "/botany-internship/overview",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/ai-ml/seed-money",
+        "destination": "/courses/bachelor-of-technology-in-computer-science-artificial-intelligence-machine-learning",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/Peer-Team-Visit",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/other_offices",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/faculty_interior_design",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/faculty_of_pharmacy",
+        "destination": "/departments/faculty-of-pharmacy",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/approvals",
+        "destination": "/accreditations-and-approvals",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/chancellors",
+        "destination": "/chancellor",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/international_student_cell",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/faculty_of_science",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/6-Months-Internship-2025-2026/research-consultancy-ipr-policy",
+        "destination": "/brochure/research-consultancy-ipr-policy.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/contact.php/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/environment-initatives",
+        "destination": "/sustainability",
+        "permanent": true
+    },
+    {
+        "source": "/kuhackathon2025",
+        "destination": "/news-and-events/hackathon-2025",
+        "permanent": true
+    },
+    {
+        "source": "/nss-ku",
+        "destination": "/nss",
+        "permanent": true
+    },
+    {
+        "source": "/student-services.php/index",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/placement/software-used-for-plagiarism",
+        "destination": "/training-and-placement-cell",
+        "permanent": true
+    },
+    {
+        "source": "/chemistry-internship/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/kuhighlights.php/1000",
+        "destination": "/about-us",
+        "permanent": true
+    },
+    {
+        "source": "/contact-us.php/overview",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/contact-us.php/seed-money",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/student-services.php/1000",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/student-services.php/1000",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/job_openings.php/overview",
+        "destination": "/careers",
+        "permanent": true
+    },
+    {
+        "source": "/contact-us.php/1000",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/&",
+        "destination": "/",
+        "permanent": true
+    },
+    {
+        "source": "/$",
+        "destination": "/",
+        "permanent": true
+    },
+    {
+        "source": "/kalingaplus/voter_portal",
+        "destination": "/voter-portal",
+        "permanent": true
+    },
+    {
+        "source": "/memorandum",
+        "destination": "/mou",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Technology/Vigilance-Awareness-Week-2025-%281%29",
+        "destination": "/departments/faculty-of-technology",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/faculty_of_education",
+        "destination": "/departments/faculty-of-education",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/pre_arrival_guidelines",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/scholarship",
+        "destination": "/scholarships",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/guidelines_visa_fro_frro",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/faculty_research_post",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/governing-body",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/prochancellors",
+        "destination": "/pro-chancellor",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/placement_cell",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/placements",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/research-advisory-committee",
+        "destination": "/brochure/research-advisory-committee.pdf",
+        "permanent": true
+    },
+    {
+        "source": "/overview",
+        "destination": "/",
+        "permanent": true
+    },
+    {
+        "source": "/Executive-Development",
+        "destination": "/executive-development-program",
+        "permanent": true
+    },
+    {
+        "source": "/ICETSD2025",
+        "destination": "/news-and-events/icetsd-2025",
+        "permanent": true
+    },
+    {
+        "source": "/other_offices",
+        "destination": "/contact-us",
+        "permanent": true
+    },
+    {
+        "source": "/seminar-rooms",
+        "destination": "/academic-facilities",
+        "permanent": true
+    },
+    {
+        "source": "/annual-report/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/admission-policy",
+        "destination": "/admission-procedure",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Pharmacy/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/Details-Of-Currently-Enrolled-Ph.d.-Scholars-And-Details-Of-Supervisor",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/Fellowship%20Scholarship%20Policy%20for%20Ph.D.%20Scholars",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/Best%20Practices%20&%20Process%20Improvement",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/Research%20Advisory%20Committee%20And%20Its%20Functions",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/research-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/ku/national-fee",
+        "destination": "/ku-fees",
+        "permanent": true
+    },
+    {
+        "source": "/constitution%20of%20ethics%20board%20for%20maintaining%20research%20integrity",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/confrence-2023-24/Ku-Ref-Citation",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/confrence-2023-24/research-integrity-ethics-policy",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/IQAC%20Initiative",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Information-and-Technology/Scheme-and-Syllabus",
+        "destination": "/departments/faculty-of-information-technology",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/research-methodology-syllabus",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Pharmacy/plagiarism-policy",
+        "destination": "/departments/faculty-of-pharmacy",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/plagiarism-policy",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/DSW/student-services",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/DSW/student-services",
+        "destination": "/student-support",
+        "permanent": true
+    },
+    {
+        "source": "/Conference2024-25/research-integrity-ethics-policy",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/Conference2024-25/research-consultancy-ipr-policy",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/Ku-Ref-Citation",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/Conference2024-25/software-used-for-plagiarism",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/ku-ncame-2019",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Pharmacy/research-methodology-syllabus",
+        "destination": "/departments/faculty-of-pharmacy",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Pharmacy/research-consultancy-ipr-policy",
+        "destination": "/departments/faculty-of-pharmacy",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/software-used-for-plagiarism",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/Sustainable-Initiatives/research-advisory-committee",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/research-advisory-committee",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/leavepolicie",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/ethics-committee-constitution",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/uba/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/research/Departmental%20Academic%20Integrity%20Panel%20And%20Its%20Functions",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/PhD-Ordinance/Ku-Ref-Citation",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/research-integrity-ethics-policy",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/internshipprogram/research-methodology-syllabus",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/film-making-workshop/plagiarism-policy",
+        "destination": "/courses/bachelor-of-arts-in-film-making",
+        "permanent": true
+    },
+    {
+        "source": "/placement/research-methodology-syllabus",
+        "destination": "/training-and-placements",
+        "permanent": true
+    },
+    {
+        "source": "/research/details%20of%20approved%20supervisor%20and%20registered%20scholars%20in%20the%20university",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/botany/research-methodology-syllabus",
+        "destination": "/courses/bachelor-of-science-zoology-botany-chemistry",
+        "permanent": true
+    },
+    {
+        "source": "/DSW/student-welfare-services",
+        "destination": "/student-welfare",
+        "permanent": true
+    },
+    {
+        "source": "/PhD-Ordinance/research-methodology-syllabus",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/research/Policy%20on%20Grievance%20Redress%20Mechanism%20for%20Scholars",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/Sustainable-Initiatives/research-consultancy-ipr-policy",
+        "destination": "/sustainability",
+        "permanent": true
+    },
+    {
+        "source": "/wlcs22/ipr-cell",
+        "destination": "/ipr-cell",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/seed-money",
+        "destination": "/departments/faculty-of-science",
+        "permanent": true
+    },
+    {
+        "source": "/PhD-Ordinance/software-used-for-plagiarism",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/seminar/Ku-Ref-Citation",
+        "destination": "/conferences-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/seminar/Ku-Ref-Citation",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/film-making-workshop/software-used-for-plagiarism",
+        "destination": "/courses/bachelor-of-arts-in-film-making",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/ph_d_admissionstatus",
+        "destination": "/phd",
+        "permanent": true
+    },
+    {
+        "source": "/internshipprogram/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/Faculty-of-Science/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/faculty_of_law",
+        "destination": "/departments/faculty-of-law",
+        "permanent": true
+    },
+    {
+        "source": "/seminar/research-methodology-syllabus",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/PhD-Ordinance/research-advisory-committee",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/iqac/vision_and_mission",
+        "destination": "/internal-quality-assurance-cell",
+        "permanent": true
+    },
+    {
+        "source": "/PhD-Ordinance/research-consultancy-ipr-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/monthly_report",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/PhD-Ordinance/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/confrence-2022-23/research-methodology-syllabus",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/other-committees/invitations_greetings",
+        "destination": "/other-committees",
+        "permanent": true
+    },
+    {
+        "source": "/physics-45-days-internship/research-consultancy-ipr-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/physics-45-days-internship/research-methodology-syllabus",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/physics-45-days-internship/overview",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/physics-45-days-internship/ethics-committee-constitution",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/physics-45-days-internship/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/seminarondesigncourses/research-methodology-syllabus",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/film-making-workshop/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/seminarondesigncourses/software-used-for-plagiarism",
+        "destination": "/conferences-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/ciftrainingprogram/research-methodology-syllabus",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/icicmce2022/research-integrity-ethics-policy",
+        "destination": "/research",
+        "permanent": true
+    },
+    {
+        "source": "/wp/event",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/ku-national-20201",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/engineering_computer_conf/Ku-Ref-Citation",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/biotech-tools-techniques/software-used-for-plagiarism",
+        "destination": "/courses/bachelor-of-science-in-biotechnology",
+        "permanent": true
+    },
+    {
+        "source": "/ncriet2022/plagiarism-policy",
+        "destination": "/news-and-events",
+        "permanent": true
+    },
+    {
+        "source": "/KAL-MAT-2025-26",
+        "destination": "/kalmat",
         "permanent": true
     }
 ]

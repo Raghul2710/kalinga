@@ -68,12 +68,13 @@ const items = [
                 <DataTable
                     columns={[
                         { key: "year", label: "Financial Year", widthPx: 120 },
-                        { key: "campusLand", label: "Total Campus Land Area (Acres)", widthPx: 200 },
-                        { key: "greenCovered", label: "Approximate Green-Covered Area Within the Campus (includes lawn, trees, and hedges) (Acres)", widthPx: 300 },
-                        { key: "matureTrees", label: "Approximate Number of Mature Trees on the Campus (older than 10 years) (Number)", widthPx: 250 },
-                        { key: "saplings", label: "Number of Saplings Planted this Year (within and outside the campus) (Number)", widthPx: 250 }
+                        { key: "campusLand", label: "Total Campus Land Area", widthPx: 200 },
+                        { key: "greenCovered", label: "Approximate Green-Covered Area Within the Campus (includes lawn, trees, and hedges)", widthPx: 300 },
+                        { key: "matureTrees", label: "Approximate Number of Mature Trees on the Campus (older than 10 years)", widthPx: 250 },
+                        { key: "saplings", label: "Number of Saplings Planted this Year (within and outside the campus)", widthPx: 250 }
                     ]}
                     data={[
+                        { year: "Unit", campusLand: "Acres", greenCovered: "Acres", matureTrees: "Number", saplings: "Number" },
                         { year: "2024-2025", campusLand: "45 +", greenCovered: "20", matureTrees: "71520", saplings: "17800" },
                         { year: "2023-2024", campusLand: "45 +", greenCovered: "20", matureTrees: "55130", saplings: "15260" },
                         { year: "2022-2023", campusLand: "33.98", greenCovered: "10", matureTrees: "81572", saplings: "12450" }
@@ -88,29 +89,29 @@ const items = [
 ];
 
 const greenCoverageReports = [
-    { id: 1, text: "Polythene Awareness Program", url: "#" },
-    { id: 2, text: "Debate Competition/Group Discussion for Lifestyle for Environment (LiFE): Youth Parliament", url: "#" },
-    { id: 3, text: "Paper Bag Distribution Campaign", url: "#" },
-    { id: 4, text: "Walkathon - Go Green with Olive Green", url: "#" },
-    { id: 5, text: "Tree Plantation by NSS Unit", url: "#" },
-    { id: 6, text: "Green Audit Report & Certificate (2020-2021)", url: "#" },
-    { id: 7, text: "Green Audit Report & Certificates (2023)", url: "#" },
-    { id: 8, text: "Green Audit/Environmental Audit Manual", url: "#" },
-    { id: 9, text: "Members of the Green Audit Committee and Geotagged Photographs", url: "#" },
-    { id: 10, text: "Policy Guidelines for Environmental Sustainability", url: "#" },
-    { id: 11, text: "Best Practice 2 - Harmony in Action: Implementing Sustainable Development Goals for a Better World", url: "#" },
+    { id: 1, text: "Polythene Awareness Program", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Environmental+Awareness+Program+-+2021-22.pdf" },
+    { id: 2, text: "Debate Competition/Group Discussion for Lifestyle for Environment (LiFE): Youth Parliament", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Environmental+Awareness+Program+-+2022-23.pdf" },
+    { id: 3, text: "Paper Bag Distribution Campaign", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Environmental+Awareness+Program+-+2023-24+(1).pdf" },
+    { id: 4, text: "Walkathon - Go Green with Olive Green", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Green+Initiatives_Jun.2024+-+Dec.2024.pdf" },
+    { id: 5, text: "Tree Plantation by NSS Unit", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Green+Initiations+2022-23.pdf" },
+    { id: 6, text: "Green Audit Report & Certificate (2020-2021)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Green+Audit+Report+%26+Certificate+-+2020-21+(1).pdf" },
+    { id: 7, text: "Green Audit Report & Certificates (2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Green+Audit+Report+%26+Certificates+-+2023.pdf" },
+    { id: 8, text: "Green Audit/Environmental Audit Manual", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/KU_Environment_Audit_Manual_ISO+14001.pdf" },
+    { id: 9, text: "Members of the Green Audit Committee and Geotagged Photographs", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Green+Campus+Geotag+Photos.pdf" },
+    { id: 10, text: "Policy Guidelines for Environmental Sustainability", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Policy+on+Environment+Sustainability.pdf" },
+    { id: 11, text: "Best Practice 2 - Harmony in Action: Implementing Sustainable Development Goals for a Better World", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Best+Practice+2_Green+Coverage+(1)+(1).pdf" },
 ];
 
 const eventReports = [
-    { id: 1, text: "Plant Diversity at Kalinga University", url: "#" },
+    { id: 1, text: "Plant Diversity at Kalinga University", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Plant+Diversity+at+Kalinga+University.pdf" },
     { id: 2, text: "List of Plant Diversity", url: "#" },
-    { id: 3, text: "Plant Diversity of Kalinga University (Audited in August 2023)", url: "#" },
+    { id: 3, text: "Plant Diversity of Kalinga University (Audited in August 2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Report+on+Plant+Diversity+of+Kalinga+University.pdf" },
     { id: 4, text: "Events Reports", url: "#" },
-    { id: 5, text: "ESG & Sustainability Symposium", url: "#" },
-    { id: 6, text: "Wildlife Week Celebration", url: "#" },
-    { id: 7, text: "Herbal Colour Making Workshop", url: "#" },
-    { id: 8, text: "One-Day Workshop on Sustainable Gardening Practices: Role of Biofertilisers and Grafting", url: "#" },
-    { id: 9, text: "World River Day", url: "#" },
+    { id: 5, text: "ESG & Sustainability Symposium", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Symposium+on+ESG+%26+Sustainablity.pdf" },
+    { id: 6, text: "Wildlife Week Celebration", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Wildlife+Week+Celebration+2025+(1).pdf" },
+    { id: 7, text: "Herbal Colour Making Workshop", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Workshop+on+Herbal+Colour+Making+2026.pdf" },
+    { id: 8, text: "One-Day Workshop on Sustainable Gardening Practices: Role of Biofertilisers and Grafting", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/Workshop+on+Sustainable+Gardening+Practices.pdf" },
+    { id: 9, text: "World River Day", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/sustainable-initiatives-for-a-green-campus/World+River+Day+Celebration+2025.pdf" },
 ];
 
 

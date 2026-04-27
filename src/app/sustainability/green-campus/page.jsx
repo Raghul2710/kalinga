@@ -221,9 +221,10 @@ const items = [
                         { key: "saplings", label: "Saplings Planted this Year", widthPx: 200 }
                     ]}
                     data={[
-                        { year: "2024-2025", totalArea: "45 +", greenArea: "20", matureTrees: "71520", saplings: "17800" },
-                        { year: "2023-2024", totalArea: "45 +", greenArea: "20", matureTrees: "55130", saplings: "15260" },
-                        { year: "2022-2023", totalArea: "33.98", greenArea: "10", matureTrees: "81572", saplings: "12450" }
+                        { year: "Unit", totalArea: "Acres", greenArea: "Acres", matureTrees: "Numbers", saplings: "Numbers" },
+                        { year: "2024-2025", totalArea: "45.000", greenArea: "20.000", matureTrees: "71520", saplings: "17800" },
+                        { year: "2023-2024", totalArea: "45.000", greenArea: "20.000", matureTrees: "55130", saplings: "15260" },
+                        { year: "2022-2023", totalArea: "33.000", greenArea: "10.000", matureTrees: "81572", saplings: "12450" }
                     ]}
                     overflowX={true}
                     disableContainer={true}

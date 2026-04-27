@@ -38,15 +38,16 @@ const items = [
                 <DataTable
                     columns={[
                         { key: "year", label: "Financial Year", widthPx: 120 },
-                        { key: "totalSolid", label: "Total (Wet + Dry) Solid Waste Generated (Tons)", widthPx: 250 },
-                        { key: "horticulture", label: "Total Horticulture Waste Generated (Tons)", widthPx: 220 },
-                        { key: "dryGenerated", label: "Total Dry Waste Generated (Tons)", widthPx: 180 },
-                        { key: "wetGenerated", label: "Total Wet Waste Generated (Tons)", widthPx: 180 },
-                        { key: "dryRecycled", label: "Total Dry Waste Recycled (Tons)", widthPx: 180 },
-                        { key: "bioProcessed", label: "Total Biodegradable (Food) Waste Processed (Tons)", widthPx: 240 },
-                        { key: "eWaste", label: "Total Electronic Waste Generated (KG)", widthPx: 200 }
+                        { key: "totalSolid", label: "Total (Wet + Dry) Solid Waste Generated", widthPx: 250 },
+                        { key: "horticulture", label: "Total Horticulture Waste Generated", widthPx: 220 },
+                        { key: "dryGenerated", label: "Total Dry Waste Generated", widthPx: 180 },
+                        { key: "wetGenerated", label: "Total Wet Waste Generated", widthPx: 180 },
+                        { key: "dryRecycled", label: "Total Dry Waste Recycled", widthPx: 180 },
+                        { key: "bioProcessed", label: "Total Biodegradable (Food) Waste Processed", widthPx: 240 },
+                        { key: "eWaste", label: "Total Electronic Waste Generated", widthPx: 200 }
                     ]}
                     data={[
+                        { year: "Tons", totalSolid: "Tons", horticulture: "Tons", dryGenerated: "Tons", wetGenerated: "Tons", dryRecycled: "Tons", bioProcessed: "Tons", eWaste: "KG" },
                         { year: "2024-2025", totalSolid: "11.09279021", horticulture: "0.440925", dryGenerated: "0.17637", wetGenerated: "0.099208", dryRecycled: "0.0661387", bioProcessed: "0.49604", eWaste: "2024" },
                         { year: "2023-2024", totalSolid: "13.28683064", horticulture: "0.418878", dryGenerated: "0.154324", wetGenerated: "0.0881849", dryRecycled: "0.0606271", bioProcessed: "0.462971", eWaste: "8790" },
                         { year: "2022-2023", totalSolid: "6.78451668", horticulture: "0.396832", dryGenerated: "0.132277", wetGenerated: "0.0881849", dryRecycled: "0.049604", bioProcessed: "0.429901", eWaste: "5176" }
@@ -71,10 +72,10 @@ const hospitalMoUs = [
 ];
 
 const eventReports = [
-    { id: 1, text: "Best Out of Waste Workshop (05th April 2024 - 07th April 2024)", url: "#" },
-    { id: 2, text: "Agreement For Electronic Waste Recycling", url: "#" },
-    { id: 3, text: "National seminar on Waste Optimisation and Cleaner Technology", url: "#" },
-    { id: 4, text: "Workshop on Best Out of Waste (10th May 2023 - 12th May 2023)", url: "#" },
+    { id: 1, text: "Best Out of Waste Workshop (05th April 2024 - 07th April 2024)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/waste-management/Event+Report+-+Best+Out+of+Waste+-+2024.pdf" },
+    { id: 2, text: "Agreement For Electronic Waste Recycling", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/waste-management/MOU+e-waste+Management.pdf" },
+    { id: 3, text: "National seminar on Waste Optimisation and Cleaner Technology", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/waste-management/Seminar++on+Waste+Management+by+AICTE+ATAL+VAANI.pdf" },
+    { id: 4, text: "Workshop on Best Out of Waste (10th May 2023 - 12th May 2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/waste-management/Workshop+on+Best+out+of+Waste+-+2022+%26+2023.pdf" },
 ];
 
 
