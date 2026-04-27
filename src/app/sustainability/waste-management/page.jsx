@@ -47,10 +47,10 @@ const items = [
                         { key: "eWaste", label: "Total Electronic Waste Generated", widthPx: 200 }
                     ]}
                     data={[
-                        { year: "Tons", totalSolid: "Tons", horticulture: "Tons", dryGenerated: "Tons", wetGenerated: "Tons", dryRecycled: "Tons", bioProcessed: "Tons", eWaste: "KG" },
-                        { year: "2024-2025", totalSolid: "11.09279021", horticulture: "0.440925", dryGenerated: "0.17637", wetGenerated: "0.099208", dryRecycled: "0.0661387", bioProcessed: "0.49604", eWaste: "2024" },
-                        { year: "2023-2024", totalSolid: "13.28683064", horticulture: "0.418878", dryGenerated: "0.154324", wetGenerated: "0.0881849", dryRecycled: "0.0606271", bioProcessed: "0.462971", eWaste: "8790" },
-                        { year: "2022-2023", totalSolid: "6.78451668", horticulture: "0.396832", dryGenerated: "0.132277", wetGenerated: "0.0881849", dryRecycled: "0.049604", bioProcessed: "0.429901", eWaste: "5176" }
+                        { year: "Unit", totalSolid: "Tons", horticulture: "Tons", dryGenerated: "Tons", wetGenerated: "Tons", dryRecycled: "Tons", bioProcessed: "Tons", eWaste: "KG" },
+                        { year: "2024-2025", totalSolid: "11.10", horticulture: "0.44", dryGenerated: "0.18", wetGenerated: "0.10", dryRecycled: "0.07", bioProcessed: "0.50", eWaste: "2.00" },
+                        { year: "2023-2024", totalSolid: "13.30", horticulture: "0.42", dryGenerated: "0.15", wetGenerated: "0.09", dryRecycled: "0.06", bioProcessed: "0.46", eWaste: "3.50" },
+                        { year: "2022-2023", totalSolid: "6.80", horticulture: "0.40", dryGenerated: "0.13", wetGenerated: "0.09", dryRecycled: "0.05", bioProcessed: "0.43", eWaste: "3.80" }
                     ]}
                     overflowX={true}
                     disableContainer={true}

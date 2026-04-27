@@ -69,15 +69,15 @@ const items = [
                     columns={[
                         { key: "year", label: "Financial Year", widthPx: 120 },
                         { key: "campusLand", label: "Total Campus Land Area", widthPx: 200 },
-                        { key: "greenCovered", label: "Approximate Green-Covered Area Within the Campus (includes lawn, trees, and hedges)", widthPx: 300 },
-                        { key: "matureTrees", label: "Approximate Number of Mature Trees on the Campus (older than 10 years)", widthPx: 250 },
-                        { key: "saplings", label: "Number of Saplings Planted this Year (within and outside the campus)", widthPx: 250 }
+                        { key: "greenCovered", label: "Approximate Green-Covered Area Within the Campus (includes lawn, trees, and hedges) (Acres)", widthPx: 300 },
+                        { key: "matureTrees", label: "Approximate Number of Mature Trees on the Campus (older than 10 years) (Number)", widthPx: 250 },
+                        { key: "saplings", label: "Number of Saplings Planted this Year (within and outside the campus) (Number)", widthPx: 250 }
                     ]}
                     data={[
-                        { year: "Unit", campusLand: "Acres", greenCovered: "Acres", matureTrees: "Number", saplings: "Number" },
-                        { year: "2024-2025", campusLand: "45 +", greenCovered: "20", matureTrees: "71520", saplings: "17800" },
-                        { year: "2023-2024", campusLand: "45 +", greenCovered: "20", matureTrees: "55130", saplings: "15260" },
-                        { year: "2022-2023", campusLand: "33.98", greenCovered: "10", matureTrees: "81572", saplings: "12450" }
+                        { year: "Unit", campusLand: "(Acres)", greenCovered: "(Acres)", matureTrees: "(Number)", saplings: "(Number)" },
+                        { year: "2024-2025", campusLand: "45.000", greenCovered: "20.000", matureTrees: "7520", saplings: "7800" },
+                        { year: "2023-2024", campusLand: "45.000", greenCovered: "20.000", matureTrees: "5130", saplings: "5260" },
+                        { year: "2022-2023", campusLand: "15.000", greenCovered: "15.000", matureTrees: "4572", saplings: "2450" }
                     ]}
                     overflowX={true}
                     disableContainer={true}

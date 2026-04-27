@@ -45,10 +45,9 @@ const items = [
                         { key: "yogaOnceWeek", label: "Number of People Taking Part in Yoga and Meditation Programs Once a Week", widthPx: 240 }
                     ]}
                     data={[
-                        { year: "Unit", pedestrianArea: "Acres", sportsArea: "Acres", campusArea: "Acres", yogaTwiceYear: "Number", yogaOnceWeek: "Number" },
-                        { year: "2024-2025", pedestrianArea: "22", sportsArea: "17", campusArea: "45 +", yogaTwiceYear: "494", yogaOnceWeek: "120" },
-                        { year: "2023-2024", pedestrianArea: "22", sportsArea: "17", campusArea: "45 +", yogaTwiceYear: "497", yogaOnceWeek: "135" },
-                        { year: "2022-2023", pedestrianArea: "22", sportsArea: "17", campusArea: "33.98", yogaTwiceYear: "864", yogaOnceWeek: "115" }
+                        { year: "2024-2025", pedestrianArea: "22.000", sportsArea: "17.000", campusArea: "45.000", yogaTwiceYear: "2494", yogaOnceWeek: "220" },
+                        { year: "2023-2024", pedestrianArea: "22.000", sportsArea: "17.000", campusArea: "45.000", yogaTwiceYear: "2134", yogaOnceWeek: "235" },
+                        { year: "2022-2023", pedestrianArea: "10.000", sportsArea: "17.000", campusArea: "34.000", yogaTwiceYear: "1864", yogaOnceWeek: "195" }
                     ]}
                     overflowX={true}
                     disableContainer={true}

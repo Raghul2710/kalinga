@@ -51,9 +51,9 @@ const items = [
                     ]}
                     data={[
                         { year: "Unit", activeInitiatives: "Number", studentsPlantingTrees: "Number", studentsOtherActions: "Number", studentsOutsideCampus: "Number", eventsSeminars: "Number" },
-                        { year: "2024-2025", activeInitiatives: "13", studentsPlantingTrees: "108", studentsOtherActions: "1433", studentsOutsideCampus: "4", eventsSeminars: "29" },
-                        { year: "2023-2024", activeInitiatives: "16", studentsPlantingTrees: "394", studentsOtherActions: "1426", studentsOutsideCampus: "9", eventsSeminars: "30" },
-                        { year: "2022-2023", activeInitiatives: "10", studentsPlantingTrees: "394", studentsOtherActions: "1264", studentsOutsideCampus: "6", eventsSeminars: "32" }
+                        { year: "2024-2025", activeInitiatives: "17", studentsPlantingTrees: "3108", studentsOtherActions: "1433", studentsOutsideCampus: "2634", eventsSeminars: "39" },
+                        { year: "2023-2024", activeInitiatives: "16", studentsPlantingTrees: "2394", studentsOtherActions: "1426", studentsOutsideCampus: "2010", eventsSeminars: "30" },
+                        { year: "2022-2023", activeInitiatives: "10", studentsPlantingTrees: "1394", studentsOtherActions: "1264", studentsOutsideCampus: "1222", eventsSeminars: "32" }
                     ]}
                     overflowX={true}
                     disableContainer={true}
@@ -395,7 +395,7 @@ const newsletterAndReportsData = [
                 <p className="text-gray-600 mb-4">Official newsletter showcasing legal research, student achievements, and faculty contributions.</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
-                        { title: "VOLUME 4, ISSUE 2 (July 2025 - December 2025)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/02WEEK_1.PDF" },
+                        { title: "VOLUME 4, ISSUE 2 (July 2025 - December 2025)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/ED9A19_1.pdf" },
                         { title: "VOLUME 4, ISSUE 1 (January 2025 - June 2025)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/EDE9D1_1.pdf" },
                         { title: "VOLUME 3, ISSUE 2 (July 2024 - December 2024)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/EDFFA0_1.pdf" },
                         { title: "Volume 2, Issue II (July 2023 - December 2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/EDITIO_3.pdf" },
