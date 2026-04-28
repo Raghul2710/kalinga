@@ -51,7 +51,7 @@ const items = [
                         { year: "Unit", pumpsHP: "HP", rwhArea: "Sq.ft", wastewaterReused: "%", totalTaps: "Number", lowFlowTaps: "Number", totalRooftop: "Sq.ft" },
                         { year: "2024-2025", pumpsHP: "120", rwhArea: "1645432.000", wastewaterReused: "82.000", totalTaps: "970", lowFlowTaps: "486", totalRooftop: "3940225" },
                         { year: "2023-2024", pumpsHP: "120", rwhArea: "1645432.000", wastewaterReused: "78.600", totalTaps: "970", lowFlowTaps: "470", totalRooftop: "3940225" },
-                        { year: "2022-2023", pumpsHP: "120", rwhArea: "1645432.000", wastewaterReused: "76.000", totalTaps: "963", lowFlowTaps: "405", totalRooftop: "3940225" }
+                        { year: "2022-2023", pumpsHP: "120", rwhArea: "1502345.000", wastewaterReused: "76.000", totalTaps: "963", lowFlowTaps: "405", totalRooftop: "3940225" }
                     ]}
                     overflowX={true}
                     disableContainer={true}

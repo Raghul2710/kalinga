@@ -77,7 +77,7 @@ const items = [
                         { year: "Unit", campusLand: "(Acres)", greenCovered: "(Acres)", matureTrees: "(Number)", saplings: "(Number)" },
                         { year: "2024-2025", campusLand: "45.000", greenCovered: "20.000", matureTrees: "7520", saplings: "7800" },
                         { year: "2023-2024", campusLand: "45.000", greenCovered: "20.000", matureTrees: "5130", saplings: "5260" },
-                        { year: "2022-2023", campusLand: "15.000", greenCovered: "15.000", matureTrees: "4572", saplings: "2450" }
+                        { year: "2022-2023", campusLand: "34.000", greenCovered: "15.000", matureTrees: "4572", saplings: "2450" }
                     ]}
                     overflowX={true}
                     disableContainer={true}
