@@ -95,7 +95,7 @@ const cards = [
         title: "Solar Power Systems – Rooftop Solar Energy",
         description:
             "The University has installed a 300 kWp Solar Power Plant, reducing dependence on conventional electricity sources. So far, it has generated 125,946.60 kWh of electricity, contributing towards lower carbon emissions and clean energy usage on campus. Solar panels are installed on rooftops and open spaces to maximise sunlight exposure and energy efficiency. The University actively promotes the usage of renewable energy through various skill development programs, research and awareness activities.",
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1-1.webp",
+        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1.webp",
         logoSrc: "",
         subtitle: "SOLAR POWER SYSTEMS",
         link: "#",
@@ -104,7 +104,7 @@ const cards = [
         title: "Biogas Plant",
         description:
             "For efficient waste management, the University has installed a biogas plant on campus that converts organic and food waste generated from hostels and other campus areas into renewable energy. The biogas produced is used as a clean fuel, reducing the dependence on conventional fuels. The plant also produces nutrient-rich slurry, an organic fertiliser used in gardening and landscaping purposes, promoting sustainable resource usage.",
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1-2.webp",
+        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1-1.webp",
         logoSrc: "",
         subtitle: "BIOGAS PLANT",
         link: "#",
@@ -113,7 +113,7 @@ const cards = [
         title: "Sensor-Based LED Lighting Systems",
         description:
             "The university has installed sensor-based LED lighting systems in several campus buildings and common areas. These smart lighting systems automatically switch on or off based on human movement and ambient light conditions, reducing unnecessary lighting consumption while maintaining adequate lighting across the campus.",
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1.webp",
+        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1-2.webp",
         logoSrc: "",
         subtitle: "SENSOR-BASED LIGHTING",
         link: "#",
