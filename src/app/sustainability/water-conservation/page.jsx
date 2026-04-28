@@ -79,10 +79,9 @@ const conservationReports = [
 ];
 
 const eventReports = [
-    { id: 1, text: "Poster Making & Awareness Drive on World River Day", url: "#" },
-    { id: 2, text: "World Water Day Celebration", url: "#" },
-    { id: 3, text: "Awareness Campaigns World Wetlands Day", url: "#" },
-    { id: 4, text: "Industrial Visit to Gangrel Dam, Dhamtari", url: "#" },
+    { id: 1, text: "Policy  – Water Conservation", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/3-Policy-Water-Conservation-and-Management.pdf" },
+    { id: 2, text: "Action Plan - for Water Conservations", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/11-Action-Plan-for-Water-Conservation.pdf" },
+    { id: 3, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
 ];
 
 
@@ -197,16 +196,16 @@ export default function GreenCampusPage() {
                 </div>
             </div>
 
-            {/* <div className="mt-10">
+            <div className="mt-14">
                 <SectionHeading
-                    title="Awareness and Capacity Building"
+                    title="Policies and Office Orders"
                     description=""
                     titleClassName="text-center"
                 />
             </div>
             <ResearchSixGridButtons
                 buttons={eventReports}
-            /> */}
+            />
 
             <CustomGallery
                 images={galleryImages}

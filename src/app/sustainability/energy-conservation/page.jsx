@@ -89,6 +89,13 @@ const eventReports = [
     { id: 5, text: "International Conference on “Emerging Technologies for Sustainable Development” (ICETSD-2025)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/International+Conference+ICETSD-2025.pdf" },
 ];
 
+const policyDocuments = [
+    { id: 1, text: "Energy Conservation", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/1-Policy-Energy-Conservation.pdf" },
+    { id: 2, text: "Electricity Overuse & Misuse", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/2-Policy-Electrictiy-Overuse-and-Misuse.pdf" },
+    { id: 3, text: "Framework Cooling & Heating Energy efficiency", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/9-Framework-Cooling-Heating-Energy-Efficiency.pdf" },
+    { id: 4, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
+];
+
 
 const cards = [
     {
@@ -210,6 +217,17 @@ export default function GreenCampusPage() {
             </div>
             <ResearchSixGridButtons
                 buttons={eventReports}
+            />
+
+            <div className="mt-10">
+                <SectionHeading
+                    title="Policies and Office Orders"
+                    description=""
+                    titleClassName="text-center"
+                />
+            </div>
+            <ResearchSixGridButtons
+                buttons={policyDocuments}
             />
 
             <CustomGallery

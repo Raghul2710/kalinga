@@ -78,6 +78,12 @@ const eventReports = [
     { id: 4, text: "Workshop on Best Out of Waste (10th May 2023 - 12th May 2023)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/waste-management/Workshop+on+Best+out+of+Waste+-+2022+%26+2023.pdf" },
 ];
 
+const policyDocuments = [
+    { id: 1, text: "Waste Management", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/4-Policy-Waste-Management.pdf" },
+    { id: 2, text: "Plastic Prohibition", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/5-Policy-Plastic-Prohibition.pdf" },
+    { id: 4, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
+];
+
 
 const cards = [
     {
@@ -228,6 +234,17 @@ export default function GreenCampusPage() {
             </div>
             <ResearchSixGridButtons
                 buttons={eventReports}
+            />
+
+            <div className="mt-10">
+                <SectionHeading
+                    title="Policies and Office Orders"
+                    description=""
+                    titleClassName="text-center"
+                />
+            </div>
+            <ResearchSixGridButtons
+                buttons={policyDocuments}
             />
 
             <CustomGallery
