@@ -653,32 +653,32 @@ export const pageDataMap: Record<string, PageData> = {
     },
     "/sustainability/energy-conservation": {
         slug: "/sustainability/energy-conservation",
-        title: "SDG: 7 - Energy Conservation",
+        title: "Energy Conservation",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
     "/sustainability/water-conservation": {
         slug: "/sustainability/water-conservation",
-        title: "SDG: 6 - Water Conservation",
+        title: "Water Conservation",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
     "/sustainability/waste-management": {
         slug: "/sustainability/waste-management",
-        title: "SDG: 12 - Waste Management",
+        title: "Waste Management",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
     "/sustainability/good-health-and-well-being": {
         slug: "/sustainability/good-health-and-well-being",
-        title: "SDG: 3 - Good Health and Well-being",
+        title: "Good Health and Well-being",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
     "/sustainability/sustainable-initiatives-for-a-green-campus": {
         slug: "/sustainability/sustainable-initiatives-for-a-green-campus",
-        title: "SDG: 15 - Sustainable Initiatives for a Green Campus",
+        title: "Sustainable Initiatives for a Green Campus",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
     "/sustainability/partnerships-for-the-goals": {
         slug: "/sustainability/partnerships-for-the-goals",
-        title: "SDG: 17 - Partnerships for the Goals",
+        title: "Partnerships for the Goals",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
 
