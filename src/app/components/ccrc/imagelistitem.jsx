@@ -8,6 +8,7 @@ export default function ImageListItem({
   imageHeight = 400,
   title = "About CCRC",
   subtitle = "Career and Corporate Resource Centre",
+  subtitle1 = "",
   description = "The Career and Corporate Resource Centre (CCRC) of Kalinga University bridges academic learning and industrial knowledge through collaborations and customised solutions. Our services include: Corporate Trainings & Psychometric Analysis, Consultancy Services: 360 Degree PMS & HRIS.",
   buttonText = "Apply for CCRC",
   onButtonClick,
@@ -96,6 +97,11 @@ export default function ImageListItem({
               titleTextColor={titleTextColor}
             />
 
+            {/* Subtitles */}
+            {subtitle && (
+              <p className={`text-sm pb-2 ${textClassName}`}>{subtitle}</p>
+            )}
+
             {/* Description */}
             {description && (
               <p className={`text-sm pb-4 ${textClassName}`}>{description}</p>
@@ -164,6 +170,11 @@ export default function ImageListItem({
                   </li>
                 ))}
               </ul>
+            )}
+
+            {/* Bottom Subtitle */}
+            {subtitle1 && (
+              <p className={`text-sm pt-4 ${textClassName}`}>{subtitle1}</p>
             )}
           </div>
         </div>

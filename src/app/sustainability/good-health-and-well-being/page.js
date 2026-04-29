@@ -26,6 +26,29 @@ const mainIntroContent1 = {
     description: [
         "The University organises various awareness programs and events like workshops, expert lectures, health camps, and interactive sessions, to promote the physical and mental well-being of students and staff while developing a spirit of social responsibility. These programs cover important topics like nutrition, mental health, hygiene, stress management, lifestyle disorders, and more."
     ],
+    description1: [
+        "Some of the programs include:"
+    ],
+    description2: [
+        "Free Eye & Dental Checkup Camp",
+        "Blood Donation Camp",
+        "Namo Yuva Run Marathan Event-2025",
+        "Guest Lecture on ‘Herpes Simplex Virus: Infection & Diagnosis’",
+        "Awareness Program on Health & Wellness",
+        "Doctors honoured by Kalinga University on Doctor's Day Celebration",
+        "World Tourism Day Festival 2024",
+        "Cancer Awareness Talk and Screening Camp",
+        "Awareness Workshop on HIV/AIDS",
+        "Inclusive Walkthon, Telibandha Talab, Raipur",
+        "Meditation Workshop",
+        "Mental Health Aspects of Gender Based Violence",
+        "World Heart Day, latest health statistics from The Health Check-up Camp",
+        "International Yoga Day Celebration",
+        "Nasha Mukti Abhiyaan – Student Ambassador Program",
+        "Online Pledge on symptoms and prevention of drug addiction",
+        "4th National Pharmacovigilance Awareness on “Building ADR and Reporting Culture for Patient Safety”"
+    ],
+
     imageUrl: "https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/images-2.png",
     imageAlt: "Awareness Programs & Other Events held at Kalinga University",
 };
@@ -215,7 +238,13 @@ export default function GreenCampusPage() {
                 variant="default"
                 pyClassName="py-8"
             />
-            <div className="mt-10">
+            <SectionHeading
+                title="Our Initiatives"
+                description=""
+                titleClassName="text-center mt-10"
+            />
+
+            <div className="mt-4">
                 <Campusfacilitiescard
                     title=""
                     cards={cards}
@@ -226,17 +255,14 @@ export default function GreenCampusPage() {
 
             <MainIntro
                 title={mainIntroContent1.title}
-                description={mainIntroContent1.description}
+                description={[...(mainIntroContent1.description || []), ...(mainIntroContent1.description1 || [])]}
+                points={mainIntroContent1.description2}
+                initialVisibleParagraphs={1}
+                hidePointsUntilExpanded={true}
                 imageUrl={mainIntroContent1.imageUrl}
                 imageAlt={mainIntroContent1.imageAlt}
-                showKnowMore={false}
+                showKnowMore={true}
                 sectionClassName="bg-white"
-            />
-            <PhdObjectivesPanel
-                title="Some of the programs include:"
-                subtitle=""
-                imageSrc="https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/images-1.png"
-                phdObjectives={phdObjectives}
             />
             <div className="container mx-auto mt-16 px-4">
                 <SectionHeading

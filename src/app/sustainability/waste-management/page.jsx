@@ -22,11 +22,17 @@ const mainIntroContent = {
 };
 
 const mainIntroContent1 = {
-    title: "Activities to Promote Waste Management",
+    title: "Waste Management Programs Held at Kalinga University",
     description: [
         "Kalinga University conducts various waste management awareness programs, workshops, and seminars in collaboration with environmental organisations and local authorities. These initiatives encourage everyone on the campus to adopt sustainable practices such as recycling, composting, and waste segregation."
     ],
-    imageUrl: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-2.webp",
+    description2: [
+        "Three-Day National Seminar on Waste Management and Sustainable Practices (Management Innovations, Sustainability, Climate Impact, and Environmental Ethics) sponsored by AICTE ATAL VAANI",
+        "Training Program on Waste Optimisation by Green Skill Development Program, Government of India",
+        "Workshop on Best out of Waste at Regional Science Centre, Raipur, Chhattisgarh",
+        "Industrial Visit on Sewage Treatment Plant, Water Purification Plant & Solid Waste Management Plant, Raipur"
+    ],
+    imageUrl: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/need-3.webp",
     imageAlt: "Activities to Promote Waste Management",
 };
 
@@ -84,16 +90,39 @@ const policyDocuments = [
     { id: 4, text: "Office Order on SDG Policies ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
 ];
 
+const ReadMoreParagraph = ({ text1, text2 }) => {
+    const [isExpanded, setIsExpanded] = useState(false);
+    return (
+        <span className="block">
+            {text1}
+            {isExpanded && (
+                <span className="block mt-4">
+                    {text2}
+                </span>
+            )}
+            <br />
+            <button
+                onClick={(e) => {
+                    e.preventDefault();
+                    setIsExpanded(!isExpanded);
+                }}
+                className="text-[#E7002B] font-semibold mt-2 cursor-pointer hover:underline"
+            >
+                {isExpanded ? "Read Less" : "Read More"}
+            </button>
+        </span>
+    );
+};
+
 
 const cards = [
     {
         title: "Solid Waste Management",
         description: (
-            <>
-                The University has established a well-structured, solid waste management system by partnering with authorised vendors who regularly collect garbage and paper waste from various collection points. These are strategically located with proper colour coding, like green for biodegradable waste, blue for recyclable waste, and yellow for other waste categories, ensuring systematic segregation of wastes. We strongly encourage everyone on the campus to use minimal plastic and promote the usage of eco-friendly products, such as paper cups and paper bags, to maintain a plastic-free campus environment.
-                <br /><br />
-                To manage biodegradable waste, the University has established compost pits and vermicomposting units across the campus. Green waste generated from gardens and landscape areas, such as dry leaves, pruning residues, grass clippings, and other horticulture waste, is collected and processed through vermicomposting. Wet waste collected from the cafeteria and canteen is also treated in composting and vermicomposting units to produce high-quality organic fertiliser used for campus greenery.
-            </>
+            <ReadMoreParagraph
+                text1="The University has established a well-structured, solid waste management system by partnering with authorised vendors who regularly collect garbage and paper waste from various collection points. These are strategically located with proper colour coding, like green for biodegradable waste, blue for recyclable waste, and yellow for other waste categories, ensuring systematic segregation of wastes. We strongly encourage everyone on the campus to use minimal plastic and promote the usage of eco-friendly products, such as paper cups and paper bags, to maintain a plastic-free campus environment."
+                text2="To manage biodegradable waste, the University has established compost pits and vermicomposting units across the campus. Green waste generated from gardens and landscape areas, such as dry leaves, pruning residues, grass clippings, and other horticulture waste, is collected and processed through vermicomposting. In this process, organic waste is decomposed by earthworms and converted into nutrient-rich vermin-compost. This method speeds up the decomposition process and improves the quality of organic manure. Wet waste collected from the cafeteria and canteen is also combined with suitable horticulture waste and treated in composting and vermicomposting units to produce high-quality organic fertiliser. The compost produced from these processes is used to maintain the campus greenery, plantations, and gardens, supporting an eco-friendly and circular approach towards waste management."
+            />
         ),
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-1.webp",
         logoSrc: "",
@@ -104,15 +133,14 @@ const cards = [
         title: "Liquid Waste Management",
         description: (
             <>
-                To ensure 100% utilisation of liquid waste on the campus, the University operates a Sewage Treatment Plant (STP) to treat wastewater for gardening and landscaping purposes.
-                <br /><br />
-                • Greywater from wash basins and hostels is stored and used for irrigation.<br />
-                • Low-flush cisterns and water-saving taps are installed in washrooms.<br />
-                • Rainwater harvesting tanks are established for water conservation.<br />
-                • Plantation drives under the National Mission on Clean and Green Environment are monitored by NSS.
+                • To ensure 100% utilisation of liquid waste on the campus, the University operates a Sewage Treatment Plant (STP) to treat wastewater for gardening and landscaping purposes. <br />
+                • Greywater, collected from wash basins and hostel rooms, is collected in storage tanks and used for irrigation purposes. <br />
+                • Low-flush cisterns and water-saving taps with controlled flow systems are installed in washrooms. <br />
+                • To support water conservation, the campus has rainwater harvesting tanks with sufficient storage capacity.<br />
+                • Plantation drives conducted under the National Mission on Clean and Green Environment are monitored annually by NSS.
             </>
         ),
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-2.webp",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/sdg-cell/waste-management/liquid-waste-management.jpeg",
         logoSrc: "",
         subtitle: "LIQUID WASTE MANAGEMENT",
         link: "#",
@@ -121,14 +149,14 @@ const cards = [
         title: "E-Waste Management",
         description: (
             <>
-                The University follows a Standard Operating Procedure (SOP) for the safe handling and disposal of hazardous laboratory and electronic waste in a legally compliant manner.
+                The University follows a Standard Operating Procedure (SOP) for the safe handling and disposal of hazardous laboratory and electronic waste to ensure they are handled carefully in a legally compliant manner.
                 <br /><br />
-                Departments submit outdated or non-functional electronic devices, such as monitors, keyboards, printers, and laboratory equipment, to the E-Waste Store for segregation and temporary storage.
+                Departments are strictly instructed to submit outdated or non-functional electronic devices, such as monitors, keyboards, printers, batteries, cables, and other laboratory equipment to the E-Waste Store. By following all safety norms, these items are further segregated according to their categories and kept for temporary storage and monitoring before final disposal.
                 <br /><br />
-                The University has signed MoUs with certified and authorised e-waste management vendors for scientific dismantling and recycling, preventing environmental hazards from toxic components like lead and mercury.
+                To ensure the responsible disposal of waste, the University has signed MoUs with certified and authorised e-waste management vendors. The collected e-waste is periodically handed over to these authorised recyclers for scientific dismantling, recycling, and recovery of reusable materials. This prevents environmental and health hazards caused by toxic components such as mercury, lead, cadmium, and other harmful substances present in electronic devices.
             </>
         ),
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-3.webp",
+        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-2.webp",
         logoSrc: "",
         subtitle: "E-WASTE MANAGEMENT",
         link: "#",
@@ -142,7 +170,7 @@ const cards = [
                 Continuous awareness programs are conducted to encourage active participation in recycling activities across the campus to reduce waste generation.
             </>
         ),
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-4.webp",
+        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-3.webp",
         logoSrc: "",
         subtitle: "WASTE RECYCLING SYSTEM",
         link: "#",
@@ -150,8 +178,8 @@ const cards = [
     {
         title: "Biomedical Waste Management",
         description:
-            "Biomedical waste generated from the University’s animal house and medical room is segregated at the point of origin using colour-coded and labelled containers. This ensures safe handling and compliance with biomedical waste management regulations. The process is monitored daily by trained personnel to maintain strict hygiene standards before being transported by authorised agencies for further treatment.",
-        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-5.webp",
+            "Biomedical waste generated from the University’s animal house and medical room is segregated at the point of origin to ensure safe handling and proper disposal. The waste is placed in colour-coded and labelled containers under different categories, such as infectious waste, sharps, and non-infectious materials. It prevents cross-contamination and ensures compliance with biomedical waste management regulations. The process is monitored every day by trained personnel to maintain strict hygiene standards. The collected waste is transported by authorised agencies for further treatment.",
+        imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/waste-management/waste-4.webp",
         logoSrc: "",
         subtitle: "BIOMEDICAL WASTE MANAGEMENT",
         link: "#",
@@ -200,7 +228,8 @@ export default function GreenCampusPage() {
                 variant="default"
                 pyClassName="py-8"
             />
-            <div className="mt-10">
+            <SectionHeading title="Our Initiatives" titleClassName="text-center mt-10" />
+            <div className="mt-4">
                 <Campusfacilitiescard
                     title=""
                     cards={cards}
@@ -212,22 +241,20 @@ export default function GreenCampusPage() {
             <MainIntro
                 title={mainIntroContent1.title}
                 description={mainIntroContent1.description}
+                description1="Some of the programs include:"
+                points={mainIntroContent1.description2}
+                initialVisibleParagraphs={1}
+                hidePointsUntilExpanded={true}
                 imageUrl={mainIntroContent1.imageUrl}
                 imageAlt={mainIntroContent1.imageAlt}
-                showKnowMore={false}
+                showKnowMore={true}
                 sectionClassName="bg-white"
-            />
-            <PhdObjectivesPanel
-                title="Some of the programs include:"
-                subtitle=""
-                imageSrc="https://cdn.kalingauniversity.ac.in/sdg-cell/good-health-well-being/images-1.png"
-                phdObjectives={phdObjectives}
             />
 
 
             <div className="mt-10">
                 <SectionHeading
-                    title="Awareness and Capacity Building"
+                    title="Waste Management Reports"
                     description=""
                     titleClassName="text-center"
                 />

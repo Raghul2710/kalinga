@@ -668,7 +668,7 @@ export const pageDataMap: Record<string, PageData> = {
     },
     "/sustainability/good-health-and-well-being": {
         slug: "/sustainability/good-health-and-well-being",
-        title: "Good Health and Well-being",
+        title: "Good Health and Well-Being",
         banner: "https://cdn.kalingauniversity.ac.in/about/about-banner.webp",
     },
     "/sustainability/sustainable-initiatives-for-a-green-campus": {

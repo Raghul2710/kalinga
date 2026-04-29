@@ -3,6 +3,7 @@ import ImageListItem from "../ccrc/imagelistitem";
 export default function PhdObjectivesPanel({
   title = "Objectives of Our Research Cell",
   subtitle = "",
+  subtitle1 = "",
   phdObjectives = [],
   imageSrc = "https://cdn.kalingauniversity.ac.in/phd/Phd-Objectives.webp"
 }) {
@@ -47,6 +48,7 @@ export default function PhdObjectivesPanel({
       description=""
       title={title}
       subtitle={subtitle}
+      subtitle1={subtitle1}
       items={displayItems}
     />
   );

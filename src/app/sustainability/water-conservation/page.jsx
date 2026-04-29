@@ -28,6 +28,13 @@ const mainIntroContent1 = {
         "Along with the above initiatives, Kalinga University also conducts various awareness programs throughout the year to promote responsible water management among students and staff. To highlight the significance of water conservation, the University organises various seminars, workshops, guest lectures, poster-making and slogan-writing competitions, and student-led campaigns.",
         "Special activities are held on World Water Day, including rallies, awareness drives, and pledge-taking ceremonies. Departments also arrange training sessions and discussions on water auditing and sustainable water practices."
     ],
+    description1: "Awareness Campaigns and Outreach Programs include:",
+    description2: [
+        "Poster Making & Awareness Drive on World River Day under Puneet Sagar Abhiyaan",
+        "World Water Day Celebration",
+        "Awareness Campaigns World Wetlands Day",
+        "Industrial Visit to Gangrel Dam, Dhamtari"
+    ],
     imageUrl: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/w-g-3.webp",
     imageAlt: "Water Conservation Awareness Programs",
 };
@@ -89,7 +96,7 @@ const cards = [
     {
         title: "Sewage Treatment Plant (STP)",
         description:
-            "The University follows various practices to ensure effective water management. A modern Sewage Treatment Plant (STP) is installed that treats wastewater collected from hostels, residential quarters, and academic buildings, which is recycled and reused for irrigation, landscaping, and gardening purposes, minimising the usage of freshwater. The University also encourages everyone to use water responsibly through awareness and monitoring systems.",
+            "The University follows various practices to ensure effective water management. A modern Sewage Treatment Plant (STP) is installed that treats wastewater collected from hostels, residential quarters, and academic buildings, which is recycled and reused for irrigation, landscaping, and gardening purposes, minimising the usage of freshwater. The University also encourages everyone to use water responsibly through awareness and monitoring systems. These measures ensure long-term water conservation and the development of an eco-friendly campus.",
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/water-1.webp",
         logoSrc: "",
         subtitle: "SEWAGE TREATMENT PLANT",
@@ -98,7 +105,7 @@ const cards = [
     {
         title: "Drip Irrigation",
         description:
-            "To improve the water-use efficiency and contribute towards responsible water management, the University has implemented drip irrigation systems in lawns, gardens, and green belts. This system directly transfers water to the plant roots through a controlled network of pipes and emitters, ensuring proper water distribution while lowering evaporation and run-off losses.",
+            "To improve the water-use efficiency and contribute towards responsible water management, the University has implemented drip irrigation systems in lawns, gardens, and green belts. This system directly transfers water to the plant roots through a controlled network of pipes and emitters, ensuring proper water distribution while lowering evaporation and run-off losses, and contributing towards plant growth.",
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/water-2.webp",
         logoSrc: "",
         subtitle: "DRIP IRRIGATION",
@@ -107,7 +114,7 @@ const cards = [
     {
         title: "Rainwater Harvesting",
         description:
-            "To effectively use rainwater, the University uses a rainwater harvesting system as a key measure toward sustainable water management. This system collects rainwater from rooftops and open areas and channels it into recharge pits and storage systems. It helps in restoring groundwater levels and reducing the dependence on external water sources.",
+            "To effectively use rainwater, the University uses a rainwater harvesting system as a key measure toward sustainable water management. This system collects rainwater from rooftops and open areas and channels it into recharge pits and storage systems. It helps in restoring groundwater levels and reducing the dependence on external water sources. By combining this with other measures, the institution carefully uses water throughout the year.",
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/water-3.webp",
         logoSrc: "",
         subtitle: "RAINWATER HARVESTING",
@@ -151,7 +158,8 @@ export default function GreenCampusPage() {
                 variant="default"
                 pyClassName="py-8"
             />
-            <div className="mt-10">
+            <SectionHeading title="Our Initiatives" titleClassName="text-center mt-10" />
+            <div className="mt-4">
                 <Campusfacilitiescard
                     title=""
                     cards={cards}
@@ -162,17 +170,14 @@ export default function GreenCampusPage() {
 
             <MainIntro
                 title={mainIntroContent1.title}
-                description={mainIntroContent1.description}
+                description={[...(mainIntroContent1.description || []), mainIntroContent1.description1]}
+                points={mainIntroContent1.description2}
+                initialVisibleParagraphs={mainIntroContent1.description.length}
+                hidePointsUntilExpanded={true}
                 imageUrl={mainIntroContent1.imageUrl}
                 imageAlt={mainIntroContent1.imageAlt}
-                showKnowMore={false}
+                showKnowMore={true}
                 sectionClassName="bg-white"
-            />
-            <PhdObjectivesPanel
-                title="Awareness Campaigns and Outreach Programs include:"
-                subtitle=""
-                imageSrc="https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Water+Conservation/w-g-1.webp"
-                phdObjectives={phdObjectives}
             />
 
             <div className="container mx-auto mt-16 px-4">

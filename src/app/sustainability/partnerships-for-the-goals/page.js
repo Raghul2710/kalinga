@@ -16,7 +16,7 @@ import KalingaBuzzTabs from "@/app/components/kalinga-buzz/KalingaBuzzTabs";
 
 
 const mainIntroContent = {
-    title: "Sustainable Initiatives for a Green Campus",
+    title: "Sustainable Communities & Partnership",
     description: [
         "In alignment with the UN Sustainable Development Goal (SDG) 17: Partnerships for the Goals, Kalinga University has partnered with various National and International academic institutions, industries, government agencies, and civil society to promote knowledge exchange, resource sharing, and collective action for sustainable development. Through well-structured Memorandum of Understanding (MoUs), joint research initiatives, faculty and student exchange programs, conferences, and value-based educational activities, it offers a dynamic platform to stakeholders to address complex societal and environmental challenges. The University comprises eight academic schools (Arts and Humanities, Commerce and Management, Education, Information Technology, Law, Pharmacy, Science, Technology), each having dedicated student clubs, student branches, and academic chairs for collaborative activities. Through these platforms, students and faculty organise and participate in a wide range of academic, research, social, environmental, and community-based activities. These initiatives encourage experiential learning, societal outreach, and leadership development.",
         "Flagship initiatives, such as conferences, environmental sustainability drives, skill-development projects, and the adoption of six villages (Kotni, Kotarabhata, Kuhera, Palaud, Parshada, and Tandul), translate partnerships into tangible outcomes, including internships, incubation support, community interventions, and policy-oriented research contributions. Kalinga University's collaborations extend across academic exchanges at national and international levels, industry-linked skilling and innovation hubs, NGO partnerships for community engagement, professional certification programs, and sports and cultural partnerships.",
@@ -438,67 +438,57 @@ const newsletterAndReportsData = [
                 </div>
             </div>
         )
-    },
-    {
-        id: "extended-event-reports",
-        question: "Detailed Event Reports",
-        answer: (
-            <div className="overflow-hidden">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
-                    {[
-                        { title: "2nd Alumni Meet (Raipur Chapter)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/2nd-Alumni-Meet-2022.docx.pdf" },
-                        { title: "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/02WEEK_1.PDF" },
-                        { title: "3rd Alumni Meet (Raipur Chapter)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/3rd-Alumni-Meet-2023.docx.pdf" },
-                        { title: "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/3RDINT_1.PDF" },
-                        { title: "7-Day Online Faculty Development Programme (FDP)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/7DAYSO.pdf" },
-                        { title: "Alumni Talk – Pathways to Success: Alumni Share their Journey", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Alumni+Talk+2024.docx.pdf" },
-                        { title: "Guest Lecture On “Lean Start Up & Minimum Viable Product / Business Boot Camp or Mentoring Session”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/BUSINE_1.pdf" },
-                        { title: "Capacity Building Workshop on “Techniques of Forensic Evidences in Crime Scene Investigation and New Criminal Laws”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/CAPACI_1.PDF" },
-                        { title: "Jail Visit for Law Students (Industrial Visit)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Central+Jail+Visit+at+Raipur.docx.pdf" },
-                        { title: "Trainers’ Training Certification Course on RTI Act, 2005", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/CERTIF_1.PDF" },
-                        { title: "6 Days Online Certificate Course on Legal Drafting and Contract Drafting", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/CERTIF_2.PDF" },
-                        { title: "IDEATHON 5.0", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/COLLAB_1.PDF" },
-                        { title: "The 76th Year of the Indian Constitution Day Celebration With a Focus on “Dignity Beyond Text: POSH as an Instrument to Enforce Article 14 & 15 of the Constitution of India”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Constitution-Day-Report-2025.docx.pdf" },
-                        { title: "Bhoomi-Club Donation Drive (From 10th September to 16th October, 2025)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/DONATI_1.pdf" },
-                        { title: "Engineers Day Celebration", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Engineers-Day-Celebration_2025.pdf" },
-                        { title: "Tourism Treasure Hunt 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Eventon-World-Tourism-Day.pdf" },
-                        { title: "Open Mic: Youth Voices “A celebration of youth expression and empowerment”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/EVENTR.pdf" },
-                        { title: "Global Conference on Cyber Violence and Digital Deception: Undertaking, Preventing and Responding to Technology Facilitated Crimes", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/GLOBAL_1.PDF" },
-                        { title: "One-Day Industrial Visit to Gangrel Dam, Dhamtari", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/IN1EB5_1.pdf" },
-                        { title: "ONE-DAY INDUSTRIAL VISIT” To 9M India Limited", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INA945_1.PDF" },
-                        { title: "Industrial visit (Lord India Pvt. Ltd.)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_1.pdf" },
-                        { title: "Industrial Visit – Marble Center India, Abhanpur", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_2.pdf" },
-                        { title: "An Industrial Visit to Parle G Plant in Raipur", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_3.pdf" },
-                        { title: "Industrial Visit to VNR SEEDS PVT. LTD.", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_4.pdf" },
-                        { title: "Industrial Visit to Yasham Software Development Center", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Industrial+Visit+at+Yasham+Software.pdf" },
-                        { title: "IEEE 3rd International World Conference on Communication & Computing 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Int.+Conference+-+IEEE+WCONF+2025.pdf" },
-                        { title: "IEEE 2nd International World Conference on Communication & Computing 2024", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Int-Conference-IEEE-WCONF-2024.pdf" },
-                        { title: "2nd International Conference on Chhattisgarh@2047: Transforming Education through Sustainability Innovation Inclusion & Indian Knowledge System", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INTCON_1.pdf" },
-                        { title: "ICSTDTSD 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INTERN_1.PDF" },
-                        { title: "International Conference SciSustain 2025: Fostering Sustainable Development Through Interdisciplinary Scientific Research", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INTERN_2.pdf" },
-                        { title: "Legal Aid Activity On Legal Awareness regarding Domestic Safety & Avoidance of Violence", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Legal-Aid-Activity.docx.pdf" },
-                        { title: "Surana & Surana Judex 3.0 Human Rights Law Moot Court competition, 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Moot-Court-Competition-2025.docx.pdf" },
-                        { title: "National Conference on Sustainable Futures: Culture, Society and Governance in Transition", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/NATION_1.pdf" },
-                        { title: "National Seminar on From Vachanas to Vision: Mahatma Basaveshwara’s Ideas in Contemporary Society", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/NATION_2.pdf" },
-                        { title: "“Nukkad Natak Event”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/NUKKAD_1.PDF" },
-                        { title: "Quiz Competition On “Indian Standard”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/QUIZCO.pdf" },
-                        { title: "Report on Startup India Delegation Visit and Ideathon Awareness Session", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Startup+India+Delegation+Visit.pdf" },
-                        { title: "A Session on Startup Summit: Demo Day/Exhibition of Startups & Linkage with Innovation Ambassadors/Experts for Mentorship Support", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Startup-Summit-under-IIC-2025.pdf" },
-                        { title: "A Training Report on The Entrepreneurship Development Institute of India - EDII", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/TRAINI.pdf" },
-                        { title: "Guest Lecture on Innovation/Prototype Validation – Converting Innovation into a Start-up", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Under-IIC-Activity-Guest-Lecture.pdf" },
-                        { title: "Donation Drive: Donate to Make a Difference (under Unnat Bharat Abhiyan)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/UNNATB_1.PDF" },
-                        { title: "A Report of “Workshop on Best out of Waste”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/WORKSH_1.PDF" }
-                    ].map((report, idx) => (
-                        <a href={report.url} target="_blank" rel="noopener noreferrer" key={idx} className="py-2 border-b border-gray-50 flex items-center gap-2 hover:bg-gray-50 px-2 rounded transition-colors group">
-                            <span className="text-[var(--button-red)]">•</span>
-                            <span className="text-xs text-gray-600 group-hover:text-gray-900 transition-colors leading-tight">{report.title}</span>
-                        </a>
-                    ))}
-                </div>
-            </div>
-        )
     }
 ];
+
+const detailedEventReports = [
+    { title: "2nd Alumni Meet (Raipur Chapter)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/2nd-Alumni-Meet-2022.docx.pdf" },
+    { title: "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/02WEEK_1.PDF" },
+    { title: "3rd Alumni Meet (Raipur Chapter)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/3rd-Alumni-Meet-2023.docx.pdf" },
+    { title: "Two-Week Online Faculty Development Programme (FDP) On Emerging Trends in Research and Innovative Teaching Pedagogy", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/3RDINT_1.PDF" },
+    { title: "7-Day Online Faculty Development Programme (FDP)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/7DAYSO.pdf" },
+    { title: "Alumni Talk – Pathways to Success: Alumni Share their Journey", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Alumni+Talk+2024.docx.pdf" },
+    { title: "Guest Lecture On “Lean Start Up & Minimum Viable Product / Business Boot Camp or Mentoring Session”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/BUSINE_1.pdf" },
+    { title: "Capacity Building Workshop on “Techniques of Forensic Evidences in Crime Scene Investigation and New Criminal Laws”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/CAPACI_1.PDF" },
+    { title: "Jail Visit for Law Students (Industrial Visit)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Central+Jail+Visit+at+Raipur.docx.pdf" },
+    { title: "Trainers’ Training Certification Course on RTI Act, 2005", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/CERTIF_1.PDF" },
+    { title: "6 Days Online Certificate Course on Legal Drafting and Contract Drafting", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/CERTIF_2.PDF" },
+    { title: "IDEATHON 5.0", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/COLLAB_1.PDF" },
+    { title: "The 76th Year of the Indian Constitution Day Celebration With a Focus on “Dignity Beyond Text: POSH as an Instrument to Enforce Article 14 & 15 of the Constitution of India”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Constitution-Day-Report-2025.docx.pdf" },
+    { title: "Bhoomi-Club Donation Drive (From 10th September to 16th October, 2025)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/DONATI_1.pdf" },
+    { title: "Engineers Day Celebration", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Engineers-Day-Celebration_2025.pdf" },
+    { title: "Tourism Treasure Hunt 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Eventon-World-Tourism-Day.pdf" },
+    { title: "Open Mic: Youth Voices “A celebration of youth expression and empowerment”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/EVENTR.pdf" },
+    { title: "Global Conference on Cyber Violence and Digital Deception: Undertaking, Preventing and Responding to Technology Facilitated Crimes", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/GLOBAL_1.PDF" },
+    { title: "One-Day Industrial Visit to Gangrel Dam, Dhamtari", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/IN1EB5_1.pdf" },
+    { title: "ONE-DAY INDUSTRIAL VISIT” To 9M India Limited", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INA945_1.PDF" },
+    { title: "Industrial visit (Lord India Pvt. Ltd.)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_1.pdf" },
+    { title: "Industrial Visit – Marble Center India, Abhanpur", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_2.pdf" },
+    { title: "An Industrial Visit to Parle G Plant in Raipur", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_3.pdf" },
+    { title: "Industrial Visit to VNR SEEDS PVT. LTD.", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INDUST_4.pdf" },
+    { title: "Industrial Visit to Yasham Software Development Center", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Industrial+Visit+at+Yasham+Software.pdf" },
+    { title: "IEEE 3rd International World Conference on Communication & Computing 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Int.+Conference+-+IEEE+WCONF+2025.pdf" },
+    { title: "IEEE 2nd International World Conference on Communication & Computing 2024", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Int-Conference-IEEE-WCONF-2024.pdf" },
+    { title: "2nd International Conference on Chhattisgarh@2047: Transforming Education through Sustainability Innovation Inclusion & Indian Knowledge System", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INTCON_1.pdf" },
+    { title: "ICSTDTSD 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INTERN_1.PDF" },
+    { title: "International Conference SciSustain 2025: Fostering Sustainable Development Through Interdisciplinary Scientific Research", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/INTERN_2.pdf" },
+    { title: "Legal Aid Activity On Legal Awareness regarding Domestic Safety & Avoidance of Violence", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Legal-Aid-Activity.docx.pdf" },
+    { title: "Surana & Surana Judex 3.0 Human Rights Law Moot Court competition, 2025", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Moot-Court-Competition-2025.docx.pdf" },
+    { title: "National Conference on Sustainable Futures: Culture, Society and Governance in Transition", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/NATION_1.pdf" },
+    { title: "National Seminar on From Vachanas to Vision: Mahatma Basaveshwara’s Ideas in Contemporary Society", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/NATION_2.pdf" },
+    { title: "“Nukkad Natak Event”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/NUKKAD_1.PDF" },
+    { title: "Quiz Competition On “Indian Standard”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/QUIZCO.pdf" },
+    { title: "Report on Startup India Delegation Visit and Ideathon Awareness Session", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Startup+India+Delegation+Visit.pdf" },
+    { title: "A Session on Startup Summit: Demo Day/Exhibition of Startups & Linkage with Innovation Ambassadors/Experts for Mentorship Support", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Startup-Summit-under-IIC-2025.pdf" },
+    { title: "A Training Report on The Entrepreneurship Development Institute of India - EDII", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/TRAINI.pdf" },
+    { title: "Guest Lecture on Innovation/Prototype Validation – Converting Innovation into a Start-up", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/Under-IIC-Activity-Guest-Lecture.pdf" },
+    { title: "Donation Drive: Donate to Make a Difference (under Unnat Bharat Abhiyan)", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/UNNATB_1.PDF" },
+    { title: "A Report of “Workshop on Best out of Waste”", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/WORKSH_1.PDF" }
+].map((report, idx) => ({
+    id: idx + 1,
+    text: report.title,
+    url: report.url
+}));
 
 const buttons = [
     {
@@ -673,7 +663,8 @@ export default function PartnershipsForTheGoalsPage() {
                 variant="default"
                 pyClassName="py-8"
             />
-            <div className="mt-10">
+            <SectionHeading title="Our Initiatives" titleClassName="text-center mt-10" />
+            <div className="mt-4">
                 <Campusfacilitiescard
                     title=""
                     cards={cards}
@@ -756,7 +747,13 @@ export default function PartnershipsForTheGoalsPage() {
                         pyClassName="py-0"
                     />
                 </div>
+
                 <div className="mt-10">
+                    <SectionHeading
+                        title="Kalinga Buzz"
+                        description=""
+                        titleClassName="text-center mt-10 mb-8"
+                    />
                     <KalingaBuzzTabs
                         year2025={buttons4}
                         year2021={buttons3}
@@ -765,6 +762,17 @@ export default function PartnershipsForTheGoalsPage() {
                     />
                 </div>
             </div>
+
+            <div className="mt-10">
+                <SectionHeading
+                    title="Events and Reports"
+                    description=""
+                    titleClassName="text-center"
+                />
+            </div>
+            <ResearchSixGridButtons
+                buttons={detailedEventReports}
+            />
 
             <CustomGallery
                 images={galleryImages}

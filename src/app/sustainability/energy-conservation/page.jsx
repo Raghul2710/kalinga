@@ -101,7 +101,7 @@ const cards = [
     {
         title: "Solar Power Systems – Rooftop Solar Energy",
         description:
-            "The University has installed a 300 kWp Solar Power Plant, reducing dependence on conventional electricity sources. So far, it has generated 125,946.60 kWh of electricity, contributing towards lower carbon emissions and clean energy usage on campus. Solar panels are installed on rooftops and open spaces to maximise sunlight exposure and energy efficiency. The University actively promotes the usage of renewable energy through various skill development programs, research and awareness activities.",
+            "The University has installed a 300 kWp Solar Power Plant, reducing dependence on conventional electricity sources. So far, it has generated 125,946.60 kWh of electricity, contributing towards lower carbon emissions and clean energy usage on campus. Solar panels are installed on rooftops and open spaces to maximise sunlight exposure and energy efficiency. The University actively promotes the usage of renewable energy through various skill development programs, research and awareness activities.This initiative not only lowered electricity expenses but also proved our commitment to adopting green technology.",
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1.webp",
         logoSrc: "",
         subtitle: "SOLAR POWER SYSTEMS",
@@ -110,7 +110,7 @@ const cards = [
     {
         title: "Biogas Plant",
         description:
-            "For efficient waste management, the University has installed a biogas plant on campus that converts organic and food waste generated from hostels and other campus areas into renewable energy. The biogas produced is used as a clean fuel, reducing the dependence on conventional fuels. The plant also produces nutrient-rich slurry, an organic fertiliser used in gardening and landscaping purposes, promoting sustainable resource usage.",
+            "For efficient waste management, the University has installed a biogas plant on campus that converts organic and food waste generated from hostels and other campus areas into renewable energy. The biogas produced is used as a clean fuel, reducing the dependence on conventional fuels. The plant also produces nutrient-rich slurry, an organic fertiliser used in gardening and landscaping purposes, promoting sustainable resource usage and a circular approach towards waste management.",
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1-1.webp",
         logoSrc: "",
         subtitle: "BIOGAS PLANT",
@@ -121,6 +121,15 @@ const cards = [
         description:
             "The university has installed sensor-based LED lighting systems in several campus buildings and common areas. These smart lighting systems automatically switch on or off based on human movement and ambient light conditions, reducing unnecessary lighting consumption while maintaining adequate lighting across the campus.",
         imageSrc: "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/Energy+Conservation/s-1-2.webp",
+        logoSrc: "",
+        subtitle: "SENSOR-BASED LIGHTING",
+        link: "#",
+    },
+    {
+        title: "Centre of Excellence for Sustainable Transportation and Green Campus Initiatives",
+        description:
+            "The institution has established a Centre of Excellence dedicated to promoting sustainable and innovative practices across campus. As a key initiative, an eBlu Electric Vehicle (EV) has been introduced to create awareness about eco-friendly and energy-efficient transportation systems. The university actively encourages staff members to adopt carpooling practices, helping to reduce fuel consumption, traffic congestion, and carbon emissions. Additionally, well-organized bus facilities are provided to ensure safe, reliable, and convenient commuting for staff. These combined efforts demonstrate the institution’s strong commitment to environmental responsibility, energy conservation, and building a greener, more sustainable campus culture. ",
+        imageSrc: "https://cdn.kalingauniversity.ac.in/sdg-cell/Energy Conservation/kalinga-sdg-energy.png",
         logoSrc: "",
         subtitle: "SENSOR-BASED LIGHTING",
         link: "#",
@@ -171,7 +180,7 @@ export default function GreenCampusPage() {
                 pyClassName="py-8"
             />
             <SectionHeading title="Our Initiatives"
-                titleClassName="text-center" />
+                titleClassName="text-center mt-10" />
             <div className="mt-4">
                 <Campusfacilitiescard
                     title=""

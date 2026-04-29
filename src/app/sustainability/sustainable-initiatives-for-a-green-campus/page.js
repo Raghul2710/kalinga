@@ -12,28 +12,7 @@ import CustomGallery from "@/app/components/general/gallery";
 import QuickLinkCard from "@/app/components/general/quick_link_card";
 
 
-const ReadMoreText = ({ text, listContent }) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    return (
-        <span className="block">
-            {text}
-            {isExpanded && (
-                <span className="block mt-4">
-                    Some of the programs include:
-                    <br />
-                    {listContent}
-                </span>
-            )}
-            <br />
-            <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="text-[#E7002B] font-semibold mt-2 cursor-pointer hover:underline"
-            >
-                {isExpanded ? "Read Less" : "Read More"}
-            </button>
-        </span>
-    );
-};
+
 const mainIntroContent = {
     title: "Sustainable Initiatives for a Green Campus",
     description: [
@@ -69,9 +48,9 @@ const items = [
                     columns={[
                         { key: "year", label: "Financial Year", widthPx: 120 },
                         { key: "campusLand", label: "Total Campus Land Area", widthPx: 200 },
-                        { key: "greenCovered", label: "Approximate Green-Covered Area Within the Campus (includes lawn, trees, and hedges) (Acres)", widthPx: 300 },
-                        { key: "matureTrees", label: "Approximate Number of Mature Trees on the Campus (older than 10 years) (Number)", widthPx: 250 },
-                        { key: "saplings", label: "Number of Saplings Planted this Year (within and outside the campus) (Number)", widthPx: 250 }
+                        { key: "greenCovered", label: "Approximate Green-Covered Area Within the Campus (includes lawn, trees, and hedges)", widthPx: 300 },
+                        { key: "matureTrees", label: "Approximate Number of Mature Trees on the Campus (older than 10 years)", widthPx: 250 },
+                        { key: "saplings", label: "Number of Saplings Planted this Year (within and outside the campus)", widthPx: 250 }
                     ]}
                     data={[
                         { year: "Unit", campusLand: "(Acres)", greenCovered: "(Acres)", matureTrees: "(Number)", saplings: "(Number)" },
@@ -180,26 +159,7 @@ const cards = [
     },
     {
         title: "Activities to Promote Sustainable Initiatives for Green Campus",
-        description: (
-            <ReadMoreText
-                text="Kalinga University, under its eight schools, has established different clubs to develop a sense of environmental responsibility among students and staff. These clubs conduct hands-on training programs, seminars, workshops, poster making and painting competitions, science model exhibitions, guest lectures, expert talks, and debates on topics related to environmental sustainability and climate action. Students get practical exposure through various educational trips and field visits, and the NSS team organises tree-planting drives and cleanliness campaigns."
-                listContent={
-                    <>
-                        • Ek Ped Maa Ke Naam - A Tree Plantation & Environmental Awareness Drive<br />
-                        • Pledge on Tobacco-Free Campus, State, and India<br />
-                        • Eco Vision: Expressing Environment & Climate Change through Faces/ Henna/Posters Competition<br />
-                        • Walkathon: Go Green with Olive Green<br />
-                        • Green Army, Lions Club Friends, and Unnat Bharat Abhiyan are organising a Tree Plantation Drive<br />
-                        • Tree Plantation, by NSS Unit at Anganwadi School, Kotni<br />
-                        • Pollution Awareness Program<br />
-                        • Workshop on Herbal Colour Making<br />
-                        • International Conference SCISUSTAIN 2025: Fostering Sustainable Development Through Interdisciplinary Scientific Research<br />
-                        • Workshop on Sustainable Gardening Practices: Role of Biofertilizers and Grafting<br />
-                        • ESG & Sustainability Symposium
-                    </>
-                }
-            />
-        ),
+        description: "Kalinga University, under its eight schools, has established different clubs to develop a sense of environmental responsibility among students and staff. These clubs conduct hands-on training programs, seminars, workshops, poster making and painting competitions, science model exhibitions, guest lectures, expert talks, and debates on topics related to environmental sustainability and climate action. Students get practical exposure through various educational trips and field visits, and the NSS team organises tree-planting drives and cleanliness campaigns.",
         imageSrc:
             "https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/image-6.webp",
         logoSrc: "",
@@ -227,6 +187,20 @@ const phdObjectives = [
     {
         item: "Community Outreach and Engagement Activities"
     }
+];
+
+const sustainableActivitiesObjectives = [
+    { item: "Ek Ped Maa Ke Naam - A Tree Plantation & Environmental Awareness Drive" },
+    { item: "Pledge on Tobacco-Free Campus, State, and India" },
+    { item: "Eco Vision: Expressing Environment & Climate Change through Faces/ Henna/Posters Competition" },
+    { item: "Walkathon: Go Green with Olive Green" },
+    { item: "Green Army, Lions Club Friends, and Unnat Bharat Abhiyan are organising a Tree Plantation Drive" },
+    { item: "Tree Plantation, by NSS Unit at Anganwadi School, Kotni" },
+    { item: "Pollution Awareness Program" },
+    { item: "Workshop on Herbal Colour Making" },
+    { item: "International Conference SCISUSTAIN 2025: Fostering Sustainable Development Through Interdisciplinary Scientific Research" },
+    { item: "Workshop on Sustainable Gardening Practices: Role of Biofertilizers and Grafting" },
+    { item: "ESG & Sustainability Symposium" }
 ];
 
 const galleryImages = [
@@ -259,7 +233,8 @@ export default function GreenCampusPage() {
                 variant="default"
                 pyClassName="py-8"
             />
-            <div className="mt-10">
+            <SectionHeading title="Our Initiatives" titleClassName="text-center mt-10" />
+            <div className="mt-4">
                 <Campusfacilitiescard
                     title=""
                     cards={cards}
@@ -267,6 +242,12 @@ export default function GreenCampusPage() {
                     titleClassName="hidden"
                 />
             </div>
+            <PhdObjectivesPanel
+                title="some of the program include :"
+                subtitle="Kalinga University has established different clubs to develop a sense of environmental responsibility among students and staff. Some of the programs include:"
+                imageSrc="https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/image-6.webp"
+                phdObjectives={sustainableActivitiesObjectives}
+            />
 
             <MainIntro
                 title={mainIntroContent1.title}
@@ -283,7 +264,9 @@ export default function GreenCampusPage() {
                 subtitle="To promote awareness and active participation among students and staff, the University regularly organises:"
                 imageSrc="https://s3.ap-south-1.amazonaws.com/cdn.kalingauniversity.ac.in/sdg-cell/partnerships-for-the-goals/image-g-8.webp"
                 phdObjectives={phdObjectives}
+                subtitle1="Through these initiatives, Kalinga University aims to develop responsible citizens, future leaders, and innovators who support a greener and sustainable future."
             />
+
             <div className="container mx-auto mt-16 px-4">
                 <SectionHeading
                     title="Green Coverage Reports & Policies"
@@ -305,7 +288,7 @@ export default function GreenCampusPage() {
                 </div>
             </div>
 
-            <div className="mt-10">
+            {/* <div className="mt-10">
                 <SectionHeading
                     title="Plant Diversity at Kalinga University"
                     description=""
@@ -314,7 +297,7 @@ export default function GreenCampusPage() {
             </div>
             <ResearchSixGridButtons
                 buttons={eventReports}
-            />
+            /> */}
             <div className="mt-10">
                 <SectionHeading
                     title="Events Reports"
