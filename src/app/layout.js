@@ -61,6 +61,7 @@ import { getPageMetadata } from "@/lib/getPageMetadata";
 import Script from "next/script";
 import NPFWidget from "./components/layout/NPFWidget";
 import NPFChatbot from "./components/layout/NPFChatbot";
+import CountdownBanner from "./components/general/CountdownBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -132,6 +133,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
@@ -195,6 +200,7 @@ export default function RootLayout({ children }) {
               </main>
               <Footer />
               {/* <ChatbotPopup /> */}
+              <CountdownBanner targetDate="2026-05-01T00:00:00" />
             </ClickSparkWrapper>
           </FlipbookProvider>
         </ChatbotProvider>
