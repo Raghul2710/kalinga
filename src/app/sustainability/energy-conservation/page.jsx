@@ -90,10 +90,10 @@ const eventReports = [
 ];
 
 const policyDocuments = [
-    { id: 1, text: "Energy Conservation", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/1-Policy-Energy-Conservation.pdf" },
-    { id: 2, text: "Electricity Overuse & Misuse", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/2-Policy-Electrictiy-Overuse-and-Misuse.pdf" },
-    { id: 3, text: "Framework Cooling & Heating Energy efficiency", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/9-Framework-Cooling-Heating-Energy-Efficiency.pdf" },
-    { id: 4, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
+    { id: 1, text: "Policy on ‘Energy Conservation’", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/1-Policy-Energy-Conservation.pdf" },
+    { id: 2, text: "Policy on ‘Electricity Overuse and Misuse’", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/2-Policy-Electrictiy-Overuse-and-Misuse.pdf" },
+    { id: 3, text: "Framework on ‘Cooling & Heating Energy efficiency’", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/9-Framework-Cooling-Heating-Energy-Efficiency.pdf" },
+    { id: 4, text: "Office Order on SDG Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
 ];
 
 

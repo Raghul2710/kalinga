@@ -79,9 +79,9 @@ const eventReports = [
 ];
 
 const policyDocuments = [
-    { id: 1, text: "Waste Management", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/4-Policy-Waste-Management.pdf" },
-    { id: 2, text: "Plastic Prohibition", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/5-Policy-Plastic-Prohibition.pdf" },
-    { id: 4, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
+    { id: 1, text: "Policy on ‘Waste Management’ ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/4-Policy-Waste-Management.pdf" },
+    { id: 2, text: "Policy on ‘Plastic Prohibition’ ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/5-Policy-Plastic-Prohibition.pdf" },
+    { id: 4, text: "Office Order on SDG Policies ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
 ];
 
 

@@ -79,9 +79,9 @@ const conservationReports = [
 ];
 
 const eventReports = [
-    { id: 1, text: "Policy  – Water Conservation", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/3-Policy-Water-Conservation-and-Management.pdf" },
-    { id: 2, text: "Action Plan - for Water Conservations", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/11-Action-Plan-for-Water-Conservation.pdf" },
-    { id: 3, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
+    { id: 1, text: "Policy on ‘Water Conservation and Management’", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/3-Policy-Water-Conservation-and-Management.pdf" },
+    { id: 2, text: "Action Plan for ‘Water Conservation’", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/11-Action-Plan-for-Water-Conservation.pdf" },
+    { id: 3, text: "Office Order on SDG Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
 ];
 
 

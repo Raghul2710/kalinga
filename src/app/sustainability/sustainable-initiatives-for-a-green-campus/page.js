@@ -119,11 +119,11 @@ const eventsreportsnew = [
 
 
 const policyDocuments = [
-    { id: 1, text: "Tree Plantation", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/6-Policy-Tree-Plantation-and-Green-Cover-Enhancement.pdf" },
-    { id: 2, text: "Green Cover Protection", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/7-Policy-Green-Cover-Protection-Management.pdf" },
-    { id: 3, text: "Campus Beautification", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/8-Policy-Campus-Beautification.pdf" },
-    { id: 4, text: "Declaration on Prevention of Tree", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/10-Decleration-Prevention-Tree-Cutting.pdf" },
-    { id: 5, text: "Office-Order-on-SDG-Policies", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
+    { id: 1, text: "Policy on ‘Tree Plantation and Green Cover Enhancement’ ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/6-Policy-Tree-Plantation-and-Green-Cover-Enhancement.pdf" },
+    { id: 2, text: "Policy on ‘Green Cover Protection & Management’ ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/7-Policy-Green-Cover-Protection-Management.pdf" },
+    { id: 3, text: "Policy on ‘Campus Beautification’ ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/8-Policy-Campus-Beautification.pdf" },
+    { id: 4, text: "Declaration on ‘Prevention of Tree Cutting’ ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/10-Decleration-Prevention-Tree-Cutting.pdf" },
+    { id: 5, text: "Office Order on SDG Policies ", url: "https://cdn.kalingauniversity.ac.in/sdg-cell/office-orders/Office-Order-on-SDG-Policies.pdf" },
 ];
 
 
