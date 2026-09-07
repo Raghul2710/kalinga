@@ -1408,7 +1408,7 @@ const UnivistaJournalPage = () => {
         },
         {
             id: 157,
-            shortName: "Factors Influencing Decision Making In Stock Market.",
+            shortName: "Factors Influencing Decision Making In Stock Market",
             title: "Payal Dahiya",
             duration: "April - June 2026",
             level: "VOL 1",
