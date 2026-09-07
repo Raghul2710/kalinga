@@ -218,14 +218,14 @@ export const SUSTAINABILITY_POLICIES = [
         goal: "SDG 3 – Good Health & Well-Being",
         theme: "Health, Safety, Wellbeing",
         policies: [
-            "Smoke-Free Campus Policy",
+            "Gender Sensitization",
             {
                 // The written policy behind this heading is the emotional
                 // wellness policy, which already has its own page.
                 label: "Mental Health & Wellbeing",
                 href: "/sustainability/emotional-wellness-and-mental-health-policy",
             },
-            "Gender Sensitization",
+            "Smoke-Free Campus Policy",
         ],
     },
     {

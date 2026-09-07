@@ -216,8 +216,13 @@ export default function ResearchSixGridButtons({
   const [selectedTableType, setSelectedTableType] = useState(null);
   const [selectedContentType, setSelectedContentType] = useState(null);
 
+  // A PDF opens in the flipbook whether it is hosted on the CDN or served from
+  // this site's own public/ folder, so root-relative paths count too.
   const isPdfLink = (href) => {
-    return href && href.startsWith("http") && href.toLowerCase().endsWith(".pdf");
+    if (!href) return false;
+    const isAbsolute = href.startsWith("http");
+    const isSiteRelative = href.startsWith("/");
+    return (isAbsolute || isSiteRelative) && href.toLowerCase().endsWith(".pdf");
   };
 
   const handleButtonClick = (e, button) => {
