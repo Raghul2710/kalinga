@@ -55,6 +55,16 @@ const normalizeSlug = (slug) => {
     .replace(/^-+|-+$/g, '');
 };
 
+/**
+ * Extra copy for the Specialisations section, shown as a paragraph under the
+ * section heading. Keyed by course slug — a course that is not listed here
+ * shows the heading on its own, as before.
+ */
+const SPECIALISATION_DESCRIPTIONS = {
+  "bachelor-of-education":
+    "Approved by the Rehabilitation Council of India (RCI), our integrated Special Education programmes equip you with inclusive education practices and professional teacher training.",
+};
+
 export default function DynamicCoursePage() {
   const params = useParams();
   const slug = params?.slug;
@@ -448,6 +458,8 @@ export default function DynamicCoursePage() {
   const whyStudyContent = courseData?.specializations && courseData.specializations.length > 0 ? {
     sectionTitle: isMtechSpecializationCourse ? "Sub Specialisations" : "Specialisations",
     sectionDescription: "Choose a Specialisation of Your Choice and Master What’s Trending",
+    // Optional paragraph under the heading; only some courses have one.
+    sectionNote: SPECIALISATION_DESCRIPTIONS[slug] || "",
     backgroundImage: "https://cdn.kalingauniversity.ac.in/departments/why-this-course-1.webp",
     items: courseData.specializations
       .sort((a, b) => (a.display_order || 0) - (b.display_order || 0))
@@ -766,7 +778,7 @@ export default function DynamicCoursePage() {
           <Specialization
             title={whyStudyContent.sectionTitle}
             subtitle={specializationHeading || whyStudyContent.sectionDescription}
-            // description={whyStudyContent.sectionDescription}
+            description={whyStudyContent.sectionNote}
             items={whyStudyContent.items.map(item => ({
               title: item.title,
               careerOpportunities: [item.body], // Map body to skills array

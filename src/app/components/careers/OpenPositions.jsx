@@ -238,6 +238,7 @@ export default function OpenPositions({
   initialVisibleCount = null,
   hideCheckEligibility = false,
   titleClassName = "text-white",
+  descriptionClassName = "",
   cardTitleClassName = "font-semibold",
   priceClassName = "text-2xl sm:text-3xl lg:text-2xl text-black",
   skillsLabel = "Key Skills And Learning Outcome"
@@ -276,7 +277,7 @@ export default function OpenPositions({
             subtitleTextColor="!text-[var(--dark-orange-red-light)]"
           />
           {description && (
-            <p className="text-white mt-4 leading-relaxed">
+            <p className={`text-white mt-4 leading-relaxed ${descriptionClassName}`}>
               {description}
             </p>
           )}

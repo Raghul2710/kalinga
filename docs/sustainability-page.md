@@ -70,10 +70,11 @@ src/app/components/sustainability/
 | `public/sdg-reports/` | Goal-wise SDG reports linked from the 17 goal tiles |
 | `public/sdg-policies/` | Policy documents linked from the Sustainability Policies table |
 
-A row in `SUSTAINABILITY_POLICIES` lists each policy as a plain string, or as a
-link once the policy has somewhere to go:
+A row in `SUSTAINABILITY_POLICIES` lists each policy as a plain string, or as an
+object when the policy already lives somewhere else:
 
-- `{ label, href }` — a page on this site, opened in the same tab
+- `"Policy name"` — gets its own generated page (see below)
+- `{ label, href }` — an existing page on this site, opened in the same tab
 - `{ label, pdfUrl }` — a document, opened in a new tab
 
 For the PDF form, drop the file into `public/sdg-policies/` using the exact
@@ -81,17 +82,57 @@ filename in `pdfUrl`, or the link will 404.
 
 ## Policy pages
 
-SDG 3's "Policy on Emotional Wellness, Mental Health and Resilience" is a page
-rather than a download:
+Every policy named in `SUSTAINABILITY_POLICIES` has a URL. Adding a name to that
+list is all it takes — the slug, the URL and the page follow automatically.
+
+| Path | Holds |
+| --- | --- |
+| `components/sustainability/data/policy-registry.js` | slug + URL for every policy, derived from its name |
+| `src/app/sustainability/policies/[slug]/` | the page each generated URL resolves to |
+| `components/sustainability/data/policy-content.js` | the written text, keyed by slug |
+
+URLs take the form `/sustainability/policies/<slug>`, where the slug is the
+policy name lowercased with punctuation dropped and spaces hyphenated
+("Policy on Women's Applications and Admission" →
+`policy-on-womens-applications-and-admission`). To list them all:
+
+```bash
+node scripts/sustainability/list_policy_urls.mjs        # grouped by goal
+node scripts/sustainability/list_policy_urls.mjs --csv  # SDG,Policy,URL
+```
+
+A policy listed under two goals — hazardous waste sits under both SDG 12 and
+SDG 15 — resolves to one shared page that names both goals.
+
+### Publishing the text
+
+A slug missing from `POLICY_CONTENT` renders a short "being prepared for
+publication" notice and is served `noindex`, so an unwritten policy is never
+indexed as an empty page. Adding its entry:
+
+```js
+"smoke-free-campus-policy": {
+    summary: "One sentence, used for the meta description.",
+    body: ["First paragraph.", "Second paragraph."],
+}
+```
+
+publishes the text and drops the `noindex` — nothing else needs to change.
+
+### Policies with their own page
+
+A policy long enough to need headings, lists or cards gets a dedicated route
+instead, and its table entry points there with `{ label, href }`. SDG 3's
+"Mental Health & Wellbeing" is the worked example:
 
 | Path | Source |
 | --- | --- |
 | `src/app/sustainability/emotional-wellness-and-mental-health-policy/` | the page |
 | `components/sustainability/data/wellness-policy-content.js` | its text |
 
-The page also links the signed PDF, so both forms of the policy stay reachable.
-Add new policy pages the same way, and register the route in `src/lib/pageData.ts`
-so it gets a banner and title.
+That page also links the signed PDF, so both forms of the policy stay reachable.
+Add new ones the same way, and register the route in `src/lib/pageData.ts` so it
+gets a banner and title.
 
 ## Editing content
 

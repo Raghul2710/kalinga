@@ -8,6 +8,8 @@ as the code they describe.
 
 - [Sustainability page](./sustainability-page.md) — side-panel layout, section
   order, content sources and how to edit them.
+- [Univista journal archives](./univista-journal-archives.md) — archive data
+  model, PDF hosting and how to add a batch of papers.
 
 ## Related notes at the repository root
 

@@ -194,9 +194,14 @@ export const POLICY_STATEMENT_OUTRO =
 /**
  * Goal-wise policy map for the "Sustainability Policies" table.
  *
- * A policy is a plain string, or a link when the policy has somewhere to go:
+ * A policy is a plain string, or an object when it needs to override the
+ * default destination:
  * `{ label, href }` for a page on this site, `{ label, pdfUrl }` for a document
  * that should open in a new tab.
+ *
+ * A plain string still gets a page: `policy-registry.js` derives the slug and
+ * URL for every policy listed here, so adding a name below is enough to give it
+ * an address. Only override when the policy already lives somewhere else.
  */
 export const SUSTAINABILITY_POLICIES = [
     {
@@ -205,14 +210,22 @@ export const SUSTAINABILITY_POLICIES = [
         policies: ["Poverty Alleviation Policy"],
     },
     {
+        goal: "SDG 2 – Zero Hunger",
+        theme: "Food Security, Nutrition",
+        policies: ["Policy on Subsidized Staff Meals"],
+    },
+    {
         goal: "SDG 3 – Good Health & Well-Being",
         theme: "Health, Safety, Wellbeing",
         policies: [
             "Smoke-Free Campus Policy",
             {
-                label: "Policy on Emotional Wellness, Mental Health and Resilience",
+                // The written policy behind this heading is the emotional
+                // wellness policy, which already has its own page.
+                label: "Mental Health & Wellbeing",
                 href: "/sustainability/emotional-wellness-and-mental-health-policy",
             },
+            "Gender Sensitization",
         ],
     },
     {
@@ -278,6 +291,7 @@ export const SUSTAINABILITY_POLICIES = [
             "Ethical and Sustainable Sourcing Policy",
             "Hazardous Waste Disposal and Management Policy",
             "Landfill Waste Management and Reduction Policy",
+            "Minimisation Policy extended",
             "Plastic Use Minimization Policy",
             "Policy on Extending the Useful Life of Disposable Items and Services",
             "Single-Use and Disposable Items Minimization Policy",

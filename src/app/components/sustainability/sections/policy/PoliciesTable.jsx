@@ -1,6 +1,7 @@
 import Link from "next/link";
 import DataTable from "../../../general/data-table";
 import { SUSTAINABILITY_POLICIES } from "../../data/sdg-content";
+import { resolvePolicy } from "../../data/policy-registry";
 
 const LINK_CLASSES =
     "font-medium text-[var(--button-red)] underline underline-offset-2 transition-opacity hover:opacity-75";
@@ -23,28 +24,26 @@ export default function PoliciesTable() {
         policies: (
             <ul className="list-disc space-y-1 pl-4">
                 {entry.policies.map((policy) => {
-                    // A policy is a plain string, or a link: `href` for a page on
-                    // this site, `pdfUrl` for a document that opens in a new tab.
-                    if (typeof policy === "string") {
-                        return <li key={policy}>{policy}</li>;
-                    }
+                    // Every policy has an address: its own page by default, or
+                    // the href/pdfUrl the entry names. A PDF opens in a new tab.
+                    const { label, href, isExternal } = resolvePolicy(policy);
 
                     return (
-                        <li key={policy.label}>
-                            {policy.href ? (
-                                <Link href={policy.href} className={LINK_CLASSES}>
-                                    {policy.label}
-                                </Link>
-                            ) : (
+                        <li key={label}>
+                            {isExternal ? (
                                 <a
-                                    href={policy.pdfUrl}
+                                    href={href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    title={`${policy.label} (PDF)`}
+                                    title={`${label} (PDF)`}
                                     className={LINK_CLASSES}
                                 >
-                                    {policy.label}
+                                    {label}
                                 </a>
+                            ) : (
+                                <Link href={href} className={LINK_CLASSES}>
+                                    {label}
+                                </Link>
                             )}
                         </li>
                     );

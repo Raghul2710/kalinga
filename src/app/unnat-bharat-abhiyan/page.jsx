@@ -272,7 +272,7 @@ export default function UnnatBharatAbhiyanPage() {
 
 
       <SectionHeading
-        title="Activities Organised by KU"
+        title="Events and Activities Conducted"
         titleClassName="mt-20 text-center"
       />
       {/* ================== UBA ACTIVITIES TABS ================== */}
