@@ -1,8 +1,14 @@
+'use client';
+
 import React from "react";
 import Image from "next/image";
 import LogoLoop from "../gsap/LogoLoop";
+import ImageLightbox, { useImageLightbox } from "../general/ImageLightbox";
 
 export default function TwoLogo({ logos }) {
+    // Hooks run before the early return so their order stays stable.
+    const lightbox = useImageLightbox(logos?.length || 0);
+
     if (!logos || logos.length === 0) return null;
 
     return (
@@ -24,9 +30,17 @@ export default function TwoLogo({ logos }) {
                     gap={32}
                     pauseOnHover={true}
                     ariaLabel="Major Achievement Logos"
-                    renderItem={(logo, idx) => (
-                        <div
-                            className="flex items-center justify-center bg-transparent border-[1.5px] border-gray-300 rounded-xl p-4 w-64 h-48 sm:w-80 sm:h-64 shadow-sm transition-all hover:shadow-md"
+                    renderItem={(logo) => (
+                        // These are certificates and rankings, so they are worth
+                        // reading full size rather than at card scale.
+                        <button
+                            type="button"
+                            // LogoLoop's second argument is a copy-scoped string key
+                            // ("0-3"), not an index, and it repeats the same logo
+                            // objects per copy — so resolve the real index here.
+                            onClick={() => lightbox.open(logos.indexOf(logo))}
+                            aria-label={`View ${logo.alt || logo.name || "achievement"} full size`}
+                            className="flex items-center justify-center bg-transparent border-[1.5px] border-gray-300 rounded-xl p-4 w-64 h-48 sm:w-80 sm:h-64 shadow-sm transition-all hover:shadow-md cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--button-red)]"
                         >
                             <Image
                                 src={logo.src}
@@ -35,10 +49,18 @@ export default function TwoLogo({ logos }) {
                                 height={logo.height || 100}
                                 className="object-contain w-auto !h-full"
                             />
-                        </div>
+                        </button>
                     )}
                 />
             </div>
+
+            <ImageLightbox
+                images={logos}
+                index={lightbox.index}
+                onClose={lightbox.close}
+                onPrev={lightbox.showPrev}
+                onNext={lightbox.showNext}
+            />
         </div>
     );
 }

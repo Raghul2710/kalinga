@@ -1,12 +1,12 @@
 "use client"
-import React, { useState, useEffect, useCallback } from 'react'
-import { createPortal } from 'react-dom'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import SectionHeading from './SectionHeading'
+import ImageLightbox, { useImageLightbox } from './ImageLightbox'
 
 const defaultGalleryImages = [
   {
@@ -98,41 +98,8 @@ const Gallery = ({
   const useSlider = forceSlider || displayImages.length > 4 || forceSliderOnMobile
 
   // Full-screen viewer (opt-in via enableLightbox)
-  const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [mounted, setMounted] = useState(false);
-  const isLightboxOpen = lightboxIndex !== null;
-
-  useEffect(() => setMounted(true), []);
-
-  const openLightbox = (index) => setLightboxIndex(index);
-  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
-  const showPrev = useCallback(
-    () => setLightboxIndex((i) => (i === null ? i : (i - 1 + displayImages.length) % displayImages.length)),
-    [displayImages.length]
-  );
-  const showNext = useCallback(
-    () => setLightboxIndex((i) => (i === null ? i : (i + 1) % displayImages.length)),
-    [displayImages.length]
-  );
-
-  useEffect(() => {
-    if (!isLightboxOpen) return;
-
-    const onKeyDown = (e) => {
-      if (e.key === 'Escape') closeLightbox();
-      else if (e.key === 'ArrowLeft') showPrev();
-      else if (e.key === 'ArrowRight') showNext();
-    };
-
-    document.addEventListener('keydown', onKeyDown);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.removeEventListener('keydown', onKeyDown);
-      document.body.style.overflow = previousOverflow;
-    };
-  }, [isLightboxOpen, closeLightbox, showPrev, showNext]);
+  const lightbox = useImageLightbox(displayImages.length);
+  const openLightbox = lightbox.open;
 
   // Determine title alignment based on titleClassName
   const titleAlignment = titleClassName.includes('text-left') ? 'text-left' :
@@ -378,71 +345,14 @@ const Gallery = ({
 
       {/* Full-screen image viewer - portalled to <body> so no ancestor
           transform/overflow can trap the fixed overlay */}
-      {mounted && isLightboxOpen && createPortal(
-        <div
-          className="fixed inset-0 z-[200000] bg-black/90 flex items-center justify-center p-4"
-          onClick={closeLightbox}
-          role="dialog"
-          aria-modal="true"
-        >
-          <button
-            type="button"
-            onClick={closeLightbox}
-            aria-label="Close image"
-            className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/25 text-white text-3xl leading-none flex items-center justify-center transition-colors"
-          >
-            &times;
-          </button>
-
-          {displayImages.length > 1 && (
-            <>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  showPrev();
-                }}
-                aria-label="Previous image"
-                className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-lg bg-[var(--button-red)] hover:opacity-90 text-white flex items-center justify-center shadow-md transition-opacity"
-              >
-                <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  showNext();
-                }}
-                aria-label="Next image"
-                className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-lg bg-[var(--button-red)] hover:opacity-90 text-white flex items-center justify-center shadow-md transition-opacity"
-              >
-                <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 4L10 8L6 12" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-            </>
-          )}
-
-          {/* Plain <img> - it sizes itself to the image's own aspect ratio,
-              which next/image's fill mode cannot do inside a flex overlay */}
-          <img
-            src={displayImages[lightboxIndex].image}
-            alt={displayImages[lightboxIndex].alt || ''}
-            onClick={(e) => e.stopPropagation()}
-            className="max-h-[88vh] max-w-[88vw] w-auto h-auto object-contain rounded-md shadow-2xl"
-          />
-
-          {showTitles && displayImages[lightboxIndex].title && (
-            <p className="absolute bottom-6 left-0 right-0 text-center text-white text-sm px-6">
-              {displayImages[lightboxIndex].title}
-            </p>
-          )}
-        </div>,
-        document.body
-      )}
+      <ImageLightbox
+        images={displayImages}
+        index={lightbox.index}
+        onClose={lightbox.close}
+        onPrev={lightbox.showPrev}
+        onNext={lightbox.showNext}
+        showTitles={showTitles}
+      />
     </section>
   )
 }
