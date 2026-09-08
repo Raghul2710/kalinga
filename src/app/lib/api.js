@@ -208,7 +208,7 @@ export async function fetchDepartmentCourses(slugOrId) {
  * @param {string} text - Text with HTML entities
  * @returns {string} Decoded text
  */
-function decodeHtmlEntities(text) {
+export function decodeHtmlEntities(text) {
   if (!text) return '';
 
   // Comprehensive entity map for common HTML entities

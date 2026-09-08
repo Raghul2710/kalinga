@@ -4,6 +4,7 @@ import Link from "next/link";
 import GlobalArrowButton from "../general/global-arrow_button";
 import SectionHeading from "../general/SectionHeading";
 import { Tabs, TabsList, TabsTrigger } from "../general/tab";
+import { decodeHtmlEntities } from "@/app/lib/api";
 
 const defaultContent = {
   imageUrl: "https://cdn.kalingauniversity.ac.in/course/course_page.webp",
@@ -21,10 +22,15 @@ const defaultContent = {
 const CriterionItem = ({ criterion, limit = 80 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Helper to strip HTML and count words
+  // Helper to strip HTML and count words. The truncated form is rendered as
+  // plain React text, so entities have to be decoded here or they show through
+  // literally ("Bachelor&#39;s"); the expanded form goes through
+  // dangerouslySetInnerHTML, where the browser decodes them itself.
   const stripHtml = (html) => {
     if (!html) return "";
-    return html.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+    return decodeHtmlEntities(html.replace(/<[^>]*>/g, " "))
+      .replace(/\s+/g, " ")
+      .trim();
   };
 
   const text = stripHtml(criterion);
