@@ -140,7 +140,7 @@ function Accreditations() {
             },
             ugc: {
                 docs: [
-                    { title: "UGC Approval (under section 12B)", url: "https://cdn.kalingauniversity.ac.in/accreditation/Approval+PDF/UGC+Approval+(under+section+12B).pdf" },
+                    { title: "UGC Approval (under section 12B)", url: "/accreditation/UGC-Approval-under-section-12B.pdf" },
                     { title: "UGC 2(f) Approval", url: "https://cdn.kalingauniversity.ac.in/accreditation/Approval+PDF/UGC+2(f)+Approval.pdf" },
                 ]
             },

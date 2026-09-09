@@ -50,6 +50,38 @@ export default function UnnatBharatAbhiyanPage() {
     { slNo: 9, name: "Mr. Hemant Kumar Sahu", designation: "IQAC Office Assistant", role: "Member" },
   ];
 
+  const ubaEventDetails = [
+    { slNo: 1, event: "Field Visit and Interaction with Women Self-Help Group (SHG) Members of Village Palaud for Assessing Livelihood and Market-Linkage Challenges", date: "02.07.2026 to 03.07.2026" },
+    { slNo: 2, event: "A field visit was conducted to Kuhera Village, Tilda Block, Raipur District, Chhattisgarh Regarding - Solar-Powered Smart Automatic Water Dispenser for Hygienic and Sustainable Drinking Water Management in Rural Communities", date: "24.05.2026" },
+    { slNo: 3, event: "Summer Camp on Robotics, AI & STEM Education", date: "23.04.2026 to 05.05.2026" },
+    { slNo: 4, event: "Training Program on Robotics & STEM Education", date: "04.04.2026 to 14.04.2026" },
+    { slNo: 5, event: "Celebration of Four Successful Years of IEEE Kalinga University Student Branch", date: "04.04.2026" },
+    { slNo: 6, event: "STEM Demonstration at Bangur Public School, SRCP", date: "28.03.2026" },
+    { slNo: 7, event: "9-Day STEM Summer Camp on AI & Robotics", date: "09.03.2026 to 20.03.2026" },
+    { slNo: 8, event: "Bootcamp on Data Empowerment for Local Innovation and Entrepreneurship", date: "27.01.2026 to 31.01.2026" },
+    { slNo: 9, event: "STEM Showcase at Anand Mela 2025", date: "22.11.2025" },
+    { slNo: 10, event: "Cybersecurity Extravaganza 2025 for School Students", date: "26.09.2025 to 27.09.2025" },
+    { slNo: 11, event: "IEEE MOVE Outreach India: Promoting Climate Change and Sustainability", date: "08.09.2025" },
+    { slNo: 12, event: "STEM Awareness Session at Blossom School", date: "02.09.2025" },
+    { slNo: 13, event: "IEEE MOVE Outreach India: Promoting Climate Change and Sustainability", date: "30.08.2025" },
+    { slNo: 14, event: "Gram Sabha (Labour Day) under Unnat Bharat Abhiyan", date: "01.05.2025" },
+    { slNo: 15, event: "“IEEE-MOVE Outreach India Promoting Climate Change & Sustainability”", date: "24.12.2024" },
+    { slNo: 16, event: "“IEEE-MOVE Outreach India Promoting Climate Change & Sustainability”", date: "19.12.2024" },
+    { slNo: 17, event: "“IEEE-MOVE Outreach India Promoting Climate Change & Sustainability”", date: "16.12.2024" },
+    { slNo: 18, event: "“IEEE-MOVE Outreach India Promoting Climate Change & Sustainability”", date: "07.12.2024" },
+    { slNo: 19, event: "“IEEE-MOVE Outreach India Promoting Climate Change & Sustainability”", date: "05.12.2024" },
+    { slNo: 20, event: "One week hands on training : Exposing rural students to opportunities in stem", date: "05.08.2024 - 09.08.2024" },
+    { slNo: 21, event: "Production of Lotus Yarn from lotus fuber as an aquifiber, an innovation in Handloom Industry", date: "6.6.2024" },
+    { slNo: 22, event: "Donation Drive: Donate to Make a Difference", date: "8.11.2023" },
+    { slNo: 23, event: "Smart Garbage Monitoring System in Government Schools", date: "03.10.2023 - 07.10.2023" },
+    { slNo: 24, event: "Two day workshop on aero-modeling for girls students from government school", date: "17.06.2023 - 18.06.2023" },
+    { slNo: 25, event: "Guest lecture on “Funding Opportunities on Humanitarian Projects to Meet SDG’s through IEEE”, NIT Durgapur", date: "20.03.2023" },
+    { slNo: 26, event: "Guest lecture on “Funding Opportunities on Humanitarian Projects to Meet SDG’s through IEEE”", date: "23.02.2023" },
+    { slNo: 27, event: "Guest lecture on “Funding Opportunities on Humanitarian Projects to Meet SDG’s through IEEE”, NIT Raipur", date: "23.02.2023" },
+    { slNo: 28, event: "Village/household surveys in the Kalinga University UBA adopted villages", date: "03.11.2022 - 09.08.2022" },
+    { slNo: 29, event: "Infrastructure (Basic Amenities) development of Government Schools", date: "22.08.2022 - 27.08.2022" },
+  ];
+
   const ubaImages = [
     { id: 1, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/1.jpg", alt: "UBA Activity 1" },
     { id: 2, image: "https://cdn.kalingauniversity.ac.in/unnat-bharat-abhiyan/2.jpg", alt: "UBA Activity 2" },
@@ -92,6 +124,7 @@ export default function UnnatBharatAbhiyanPage() {
         visionMissionData={visionMissionData}
         objectives={objectives}
         ubaTeamTable={ubaTeamTable}
+        ubaEventDetails={ubaEventDetails}
         ubaImages={ubaImages}
         CARD_TEXT_CLASSNAME={CARD_TEXT_CLASSNAME}
         SECTION_TITLE_CLASSNAME={SECTION_TITLE_CLASSNAME}

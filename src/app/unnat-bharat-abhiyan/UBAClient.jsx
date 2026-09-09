@@ -11,7 +11,7 @@ import AdmissionSteps from "../components/admissions/admission-steps";
 import SectionHeading from "../components/general/SectionHeading";
 import Gallery from "../components/general/gallery";
 
-const UBAClient = ({ ubaSteps, visionMissionData, objectives, ubaTeamTable, ubaImages, SECTION_TITLE_CLASSNAME, CARD_TEXT_CLASSNAME }) => {
+const UBAClient = ({ ubaSteps, visionMissionData, objectives, ubaTeamTable, ubaEventDetails = [], ubaImages, SECTION_TITLE_CLASSNAME, CARD_TEXT_CLASSNAME }) => {
     return (
         <div className="bg-white">
             <ImageContent
@@ -126,6 +126,7 @@ const UBAClient = ({ ubaSteps, visionMissionData, objectives, ubaTeamTable, ubaI
                             <TabsTrigger value="infra">Infrastructure Development</TabsTrigger>
                             <TabsTrigger value="survey">Village Survey</TabsTrigger>
                             <TabsTrigger value="garbage">Smart Garbage Monitoring</TabsTrigger>
+                            <TabsTrigger value="events">Event Details</TabsTrigger>
                         </TabsList>
 
                         <div className="mt-6 rounded-xl bg-white p-8">
@@ -281,6 +282,32 @@ const UBAClient = ({ ubaSteps, visionMissionData, objectives, ubaTeamTable, ubaI
                                     <p className={CARD_TEXT_CLASSNAME}>
                                         Keeping this into consideration, a proposal was submitted to the IEEE Signal Processing Society (SPS) and the IEEE Humanitarian Activities Committee (HAC). In response to this, IEEE Kalinga University Student Branch (IEEE KU SB) received a sanctioned amount of <strong>USD 1,000.00</strong> for the project named “Smart Garbage Monitoring System” with project code and grant reference number: <strong>22-SPSHAC-07</strong>. The visit was scheduled from <strong> 3<sup>rd</sup> October 2023 to 7<sup>th</sup> October 2023</strong>.
                                     </p>
+                                </div>
+                            </TabsContent>
+
+                            <TabsContent value="events">
+                                <div className="space-y-6">
+                                    <h2 className={SECTION_TITLE_CLASSNAME}>Event Details</h2>
+                                    <div className="overflow-x-auto rounded-xl border border-gray-300">
+                                        <table className="w-full border-collapse text-left">
+                                            <thead className="bg-[var(--dark-blue)] text-white">
+                                                <tr>
+                                                    <th className="border border-gray-300 px-4 py-3">S. No.</th>
+                                                    <th className="border border-gray-300 px-4 py-3">Name of the Event</th>
+                                                    <th className="border border-gray-300 px-4 py-3">Date of the Event</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="bg-white">
+                                                {ubaEventDetails.map((entry) => (
+                                                    <tr key={entry.slNo}>
+                                                        <td className="border border-gray-300 px-4 py-3 text-[var(--foreground)]">{entry.slNo}</td>
+                                                        <td className="border border-gray-300 px-4 py-3 text-[var(--foreground)]">{entry.event}</td>
+                                                        <td className="border border-gray-300 px-4 py-3 text-[var(--foreground)] whitespace-nowrap">{entry.date}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </TabsContent>
                         </div>
