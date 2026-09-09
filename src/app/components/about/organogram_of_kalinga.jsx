@@ -84,6 +84,11 @@ const OrganogramOfKalinga = ({
                   buttons.map((btn) => {
                     const destinationUrl = btn.link || btn.fileUrl;
                     const isPdf = destinationUrl && destinationUrl.toLowerCase().endsWith(".pdf") && !btn.disableFlipbook;
+                    // mailto:/tel: must open in the same tab — a _blank handoff leaves a
+                    // blank tab and is blocked by most browsers, so the button does nothing.
+                    const opensNewTab = Boolean(destinationUrl)
+                      && !destinationUrl.startsWith('#')
+                      && !/^(mailto|tel):/i.test(destinationUrl);
                     const buttonEl = (
                       <GlobalArrowButton
                         className={buttonClassName}
@@ -111,8 +116,8 @@ const OrganogramOfKalinga = ({
                       <a
                         key={btn.id}
                         href={destinationUrl ? destinationUrl : undefined}
-                        target={destinationUrl && !destinationUrl.startsWith('#') ? "_blank" : undefined}
-                        rel={destinationUrl && !destinationUrl.startsWith('#') ? "noopener noreferrer" : undefined}
+                        target={opensNewTab ? "_blank" : undefined}
+                        rel={opensNewTab ? "noopener noreferrer" : undefined}
                         className="inline-flex"
                         onClick={(e) => {
                           if (btn.onClick) {

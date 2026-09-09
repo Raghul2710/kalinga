@@ -21,38 +21,34 @@ const LawConferencePage = () => {
         },
         {
             id: 2,
-            text: "Author details with affiliation: Name of the first author, corresponding author & co-authors, Designation, Institutional Affiliation, E-Mail ID.",
+            text: "The abstract should contain personal details of the author(s) in the order: Title of the Paper, Name, Designation, Institute/University/College/Organisation, Contact Number, E-mail, and Address of Correspondence of the Author(s).",
         },
         {
             id: 3,
-            text: "Main Text- 150- 200 Words, Times New Roman, font size 12, 1.5 spacing, justified, with a margin left 1.5 inch and right 1.0-inch, top 1 inch and bottom 1 inch. The first line of the paragraph is not to be indented.",
+            text: "Main Text - 150-300 words, Times New Roman, font size 12, 1.5 spacing, justified, with a margin left 1.5 inch and right 1.0-inch, top 1 inch and bottom 1 inch. The first line of the paragraph is not to be indented.",
         },
         {
             id: 4,
-            text: "Keywords: 5 key words.<br /><br />Note: Abstracts will be Published as Conference Proceedings with ISBN Number.<br>Springer Publication - Selected good Quality papers will be published in Atlantis Press (Springer Nature) (Publication Charges will be separate).",
+            text: "Keywords: 5 keywords<br /><br />Note: Abstracts will be Published as Conference Proceedings with ISBN Number.<br>Springer Publication - Selected good Quality papers will be published in Atlantis Press (Springer Nature) (Publication Charges will be INR 12,500/- for a selected paper).",
         },
         {
             id: 5,
-            text: "The abstract should contain personal details of the author(s) in the order: Title of the Paper, Name, Designation, Institute/University/College/Organisation, Contact Number, E-mail, and Address of Correspondence of the Author(s)",
-        },
-        {
-            id: 6,
             text: "Kindly indicate the name of the main author for correspondence in case of more than one author.",
         },
         {
-            id: 7,
-            text: `Acceptance of the Abstract will be communicated via e-mail <a href="mailto:lawconference@kalingauniversity.ac.in"> lawconference@kalingauniversity.ac.in</a>.`,
+            id: 6,
+            text: `Acceptance of the Abstract will be communicated via e-mail - <a href="mailto:lawconference@kalingauniversity.ac.in">lawconference@kalingauniversity.ac.in</a>`,
         }
     ]
 
     const fullPaperItems = [
         {
             id: 1,
-            text: "Author guidelines - Please follow the guidelines for proper format of writing: Authors details, Affiliation, Mail ID, ORCID Margins, line spacing. Id. Maximum Three authors are allowed including main author. One of the authors must have Doctorate / Ph.D.",
+            text: "Author guidelines - Please follow the guidelines for proper format of writing: Authors details, Affiliation, Mail id, ORCID Margins, line spacing. Id. Maximum Three authors are allowed including main author. One of the authors must have Doctorate / Ph.D.",
         },
         {
             id: 2,
-            text: "Abstract (100-150 words and 5 key words), Full paper (2500-3000 words, excluding references).",
+            text: "Abstract (150-300 words and 5 key words), Full paper (2500-3000 words, excluding references).",
         },
         {
             id: 3,
@@ -64,11 +60,42 @@ const LawConferencePage = () => {
         },
         {
             id: 5,
-            text: "Similarity: Should not exceed 10%",
+            text: "Similarity: should not exceed 10%.",
         },
         {
             id: 6,
-            text: "Al Similarity must be 0%",
+            text: "AI Similarity must be less than 10%.",
+        }
+    ]
+
+    const publicationPolicyItems = [
+        {
+            id: 1,
+            text: "Selected high-quality papers, after undergoing the prescribed peer-review process, shall be considered for publication in the <strong>Springer Nature (Atlantis Press Book Proceeding Series)</strong>. Publication in Springer Nature is subject to the acceptance of the paper by the <strong>Springer Nature</strong> and compliance with all prescribed guidelines.",
+        },
+        {
+            id: 2,
+            text: "Authors opting for publication in the Springer Nature proceedings shall be required to pay a <strong>publication fee of ₹12,500/- per paper</strong>, which includes the Article Processing Charges (APC) and other associated publication expenses.",
+        },
+        {
+            id: 3,
+            text: "The publication fee shall be payable only after the paper has been accepted for inclusion in the Springer Nature book proceeding and upon notification by the organizing committee.",
+        },
+        {
+            id: 4,
+            text: "Only papers that are duly registered, presented at the conference, and accepted after the review process shall be forwarded for publication. The decision of the editorial board and the <strong>Springer Nature (Atlantis Press)</strong> regarding acceptance or rejection of manuscripts shall be final and binding.",
+        },
+        {
+            id: 5,
+            text: "<strong>Springer Nature Book Proceedings:</strong> Selected high-quality papers will be published in the Springer Nature Book Proceedings, which may subsequently be indexed in databases such as Google Scholar, Dimensions, CNKI, Wanfang Data, CPCI, Compendex, and Scopus, subject to the publisher's indexing policies.",
+        },
+        {
+            id: 6,
+            text: "<strong>Journal Publication:</strong> Papers that do not qualify for the Springer Nature Book Proceedings will be considered for publication in the Journal of Law and Artificial Intelligence (E-ISSN: 3107-8524) (Peer-Reviewed Journal as per the latest UGC Guidelines), subject to applicable publication charges.",
+        },
+        {
+            id: 7,
+            text: "<strong>Edited Book with ISBN:</strong> Select papers may also be published in an Edited Book with ISBN without any publication charges.",
         }
     ]
 
@@ -124,7 +151,7 @@ const LawConferencePage = () => {
             ],
             data: [
                 { name: "Prof. (Dr.) Farhana Helal Mehtab", designation: "Dean, Faculty of Law, Green University of Bangladesh, Bangladesh" },
-                { name: "Dr. Sarah Jane Fox", designation: "School of Justice, Staffordshire University, UK" },
+                { name: "Dr. Sarah Jane Fox", designation: "Associate Professor, School of Justice, Staffordshire University, UK" },
                 { name: "Mr. Alfredo M. Ronchi", designation: "EC, Medici Framework, Italy" },
                 { name: "Prof. Andrii Paziuk", designation: "Prof., Kyiv Aviation Institute, Ukraine " },
                 { name: "Dr. Ahmad Ghouri", designation: "Associate Professor, University of Sussex Brighton, England, United Kingdom" },
@@ -141,11 +168,11 @@ const LawConferencePage = () => {
                 { key: "designation", label: "Designation/Affiliation" }
             ],
             data: [
-                { name: "Dr. Pavan Duggal", designation: "Advocate, Supreme Court of India" },
-                { name: "Advocate Rajas Pingle", designation: "Cyber Law Expert" },
-                { name: "Mr. Ashutosh Shrivastava", designation: "Advocate, Supreme Court of India" },
-                { name: "Mr. Rodney D. Ryder", designation: "Founding Partner, Scriboard" },
-                { name: "Dr. Saket Anand", designation: "Advocate on Record, Supreme Court of India" }
+                { name: "Dr. Pavan Duggal", designation: "Senior Advocate, Supreme Court of India, New Delhi, India" },
+                { name: "Advocate Rajas Pingle", designation: "Cyber Law Expert, RPLC, Pune, Maharashtra, India" },
+                { name: "Mr. Ashutosh Shrivastava", designation: "Advocate, Supreme Court of India, New Delhi, India" },
+                { name: "Mr. Rodney D. Ryder", designation: "Founding Partner, Scriboard, New Delhi, India" },
+                { name: "Mr. Saket Anand", designation: "Advocate on Record, Supreme Court of India, New Delhi, India" }
             ]
         },
         {
@@ -156,16 +183,16 @@ const LawConferencePage = () => {
                 { key: "designation", label: "Designation/Affiliation" }
             ],
             data: [
-                { name: "Prof. Dr. Dilip Ukey", designation: "Vice-Chancellor, MNLU Mumbai" },
-                { name: "Prof. Dr. V. C. Vivekanandan", designation: "Vice-Chancellor, HNLU Raipur" },
-                { name: "Dr. Manoj Kumar Sinha", designation: "Vice-Chancellor, DSNLU, Jabalpur" },
-                { name: "Prof. Venkat Rao", designation: "Vice-Chancellor, India International University of Legal Studies and Research, Goa" },
-                { name: "Prof. Dr. V. K. Ahuja", designation: "Director, Indian Law Institute, New Delhi" },
-                { name: "Dr. A. Nagarathna", designation: "Associate Professor of Law, NLSIU Bengaluru" },
-                { name: "Dr. Mohd. Nizam Ashraf Khan", designation: "Professor of Law, IILM University, Greater Noida" },
-                { name: "Dr. Mamta Rana", designation: "Associate Professor, HNB Garhwal University" },
-                { name: "Prof. Dr. Mohd. Imran", designation: "Professor, MANUU Law School" },
-                { name: "Dr. Rajeev Khare", designation: "Dean, NLIU Bhopal" }
+                { name: "Prof. Dr. Dilip Ukey", designation: "Vice-Chancellor, MNLU Mumbai, Maharashtra, India" },
+                { name: "Prof. Dr. V. C. Vivekanandan", designation: "Vice-Chancellor, HNLU Raipur, C.G., India" },
+                { name: "Prof. Dr. Manoj Kumar Sinha", designation: "Vice-Chancellor, DSNLU, Jabalpur, M.P., India" },
+                { name: "Prof. Dr. Venkat Rao", designation: "Vice-Chancellor, India International University of Legal Studies and Research, Goa, India" },
+                { name: "Prof. Dr. V. K. Ahuja", designation: "Director, Indian Law Institute, New Delhi, India" },
+                { name: "Dr. A. Nagarathna", designation: "Associate Professor of Law, NLSIU Bengaluru, Karnataka, India" },
+                { name: "Prof. Dr. Mohd. Nizam Ashraf Khan", designation: "Professor of Law, IILM University Greater Noida, U.P., India" },
+                { name: "Prof. Dr. Mamta Rana", designation: "Dean & Head, School of Law, HNB Garhwal University, Uttarakhand, India" },
+                { name: "Prof. Dr. Mohd. Imran", designation: "Professor & Associate Dean, MANUU Law School, Hyderabad, Telangana, India" },
+                { name: "Prof. Dr. Rajeev Kumar Khare", designation: "Dean, NLIU Bhopal, M.P., India" }
             ]
         },
         {
@@ -174,10 +201,11 @@ const LawConferencePage = () => {
             columns: [
                 { key: "name", label: "Name" },
                 { key: "designation", label: "Designation" },
-                { key: "institution", label: "Institution" }
+                { key: "institution", label: "Institution" },
+                { key: "contact", label: "Contact" }
             ],
             data: [
-                { name: "Mrs. Saloni Tyagi Shrivastava", designation: "HoD (In-charge), Faculty of Law", institution: "Kalinga University, Naya Raipur" }
+                { name: "Ms. Ekta Chandrakar", designation: "HoD (In-charge), Faculty of Law", institution: "Kalinga University, Naya Raipur, (C.G.), India", contact: "📲 <a href='tel:+919399251038'>+91 9399251038</a>" }
             ]
         },
         {
@@ -186,11 +214,12 @@ const LawConferencePage = () => {
             columns: [
                 { key: "name", label: "Name" },
                 { key: "designation", label: "Designation" },
-                { key: "institution", label: "Institution" }
+                { key: "institution", label: "Institution" },
+                { key: "contact", label: "Contact" }
             ],
             data: [
-                { name: "Dr. Payal Bohria", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur" },
-                { name: "Dr. Savyasanchi Pandey", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur" }
+                { name: "Dr. Payal Bohria", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur, (C.G.), India", contact: "📲 <a href='tel:+918448523052'>+91 84485 23052</a>" },
+                { name: "Dr. Savyasanchi Pandey", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur, (C.G.), India", contact: "📲 <a href='tel:+918839953988'>+91 883 995 3988</a>" }
             ]
         },
         {
@@ -199,10 +228,11 @@ const LawConferencePage = () => {
             columns: [
                 { key: "name", label: "Name" },
                 { key: "designation", label: "Designation" },
-                { key: "institution", label: "Institution" }
+                { key: "institution", label: "Institution" },
+                { key: "contact", label: "Contact" }
             ],
             data: [
-                { name: "Ms. Chikita Malhotra", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur" }
+                { name: "Ms. Vanshika Kapoor", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur, (C.G.), India", contact: "📲 <a href='tel:+919039364455'>+91 90393 64455</a>" }
             ]
         },
         {
@@ -211,11 +241,46 @@ const LawConferencePage = () => {
             columns: [
                 { key: "name", label: "Name" },
                 { key: "designation", label: "Designation" },
-                { key: "institution", label: "Institution" }
+                { key: "institution", label: "Institution" },
+                { key: "contact", label: "Contact" }
             ],
             data: [
-                { name: "Ms. Vishakha Sakharkar", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur" },
-                { name: "Ms. Vanshika Kapoor", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur" }
+                { name: "Ms. Vishakha Sakharkar", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur, (C.G.), India", contact: "📲 <a href='tel:+919685708387'>+91 96857 08387</a>" },
+                { name: "Mr. Navanshu Shrivastava", designation: "Assistant Professor", institution: "Kalinga University, Naya Raipur, (C.G.), India", contact: "📲 <a href='tel:+919826183134'>+91-9826183134</a>" }
+            ]
+        },
+        {
+            id: 11,
+            title: "Student Convenor",
+            columns: [
+                { key: "name", label: "Name" },
+                { key: "contact", label: "Contact" }
+            ],
+            data: [
+                { name: "Avishi Gupta", contact: "📲 <a href='tel:+917869561703'>+91 7869561703</a><br />📩 <a href='mailto:avishigupta107@gmail.com'>avishigupta107@gmail.com</a>" }
+            ]
+        },
+        {
+            id: 12,
+            title: "Student Co-Convenor",
+            columns: [
+                { key: "name", label: "Name" },
+                { key: "contact", label: "Contact" }
+            ],
+            data: [
+                { name: "Archi Jain", contact: "📲 <a href='tel:+919406149382'>+91 9406149382</a><br />📩 <a href='mailto:archijain07072005@gmail.com'>archijain07072005@gmail.com</a>" }
+            ]
+        },
+        {
+            id: 13,
+            title: "Student Coordinators",
+            columns: [
+                { key: "name", label: "Name" },
+                { key: "contact", label: "Contact" }
+            ],
+            data: [
+                { name: "Mahi Anand", contact: "📲 <a href='tel:+917070511811'>+91 7070511811</a><br />📩 <a href='mailto:mahianand2131@gmail.com'>mahianand2131@gmail.com</a>" },
+                { name: "Riddhi Dhiman", contact: "📲 <a href='tel:+916232434612'>+91 6232434612</a><br />📩 <a href='mailto:riddhidhiman33@gmail.com'>riddhidhiman33@gmail.com</a>" }
             ]
         }
     ];
@@ -381,11 +446,11 @@ const LawConferencePage = () => {
             id: 1,
             question: "Important Dates",
             answer: [
-                "Submission of Abstract: 10th August 2026",
-                "Confirmation of Abstract: 10th September 2026",
-                "Last Date for Registration And Payment: 30th September 2026",
-                "Submission of Full Paper: 15th October 2026",
-                "Global Conference: 20th & 21st November 2026"
+                "Submission of Abstract: 10<sup>th</sup> September 2026",
+                "Confirmation of Abstract: 20<sup>th</sup> September 2026",
+                "Last Date for Registration And Payment: 30<sup>th</sup> September 2026",
+                "Submission of Full Paper: 15<sup>th</sup> October 2026",
+                "Global Conference: 20<sup>th</sup> &amp; 21<sup>st</sup> November 2026"
             ]
         }
     ];
@@ -408,7 +473,7 @@ const LawConferencePage = () => {
                 { key: "fee", label: "Fee (inclusive of taxes)", width: "w-48" }
             ],
             data: [
-                { category: "Faculty & Other Educators", fee: "INR 1500/-" },
+                { category: "Faculty & Other Educators", fee: "INR 2000/-" },
                 { category: "Research Scholars", fee: "INR 1500/-" },
                 { category: "UG+PG Students", fee: "INR 1200/-" },
                 { category: "Industry Experts", fee: "INR 2500/-" },
@@ -419,7 +484,7 @@ const LawConferencePage = () => {
             footerContent: [
                 "After the Registration Dates, each category will have an additional charge of INR 250/-, and International Participants will have an additional charge of USD 20/-.",
                 "50% concession to participants from Kalinga University and Colleges having an MoU with Kalinga University, Naya Raipur.",
-                "Accommodation will be provided at the Participants' request (Charges Applicable).",
+                "Accommodation will be provided at the Participants' request. (INR 1000/- per day inclusive of meals)",
                 "Registration Fees include a Conference Kit, High Tea, Lunch, and Snacks for both days."
             ]
         }
@@ -435,16 +500,18 @@ const LawConferencePage = () => {
                 "Account Name: KALINGA UNIVERSITY FACULTY OF LAW",
                 "Account No.: 1744100100003546",
                 "IFSC Code: PUNB0174410",
-                "Step 2: Fill out the registration form with all necessary information and add a screenshot of the payment details."
+                "<strong>Step 2: Registration Process</strong>",
+                "<strong>Step (i): Abstract Submission</strong><br />Submit your abstract using the following link:<br /><a href='https://forms.gle/QfbhP5XYYaDWpGp79' target='_blank' rel='noopener noreferrer'>https://forms.gle/QfbhP5XYYaDWpGp79</a>",
+                "<strong>Step (ii): Registration</strong><br />Complete the registration form by providing all the required details and uploading a screenshot of the payment confirmation.<br />Registration Link: <a href='https://forms.gle/59wpK96kh4aoCFddA' target='_blank' rel='noopener noreferrer'>https://forms.gle/59wpK96kh4aoCFddA</a>"
             ]
         },
         {
             id: "submission",
             question: "Submission Process",
             answer: [
-                "The submission link for the full paper and payment will be shared via email only with participants whose abstracts are selected. Participants who want to attend the conference without a paper presentation will also receive a final registration link.",
-                "Registration Link: <a href='https://forms.gle/VdmyVBuzvnVV3GbB8' target='_blank'>https://forms.gle/VdmyVBuzvnVV3GbB8</a>",
-                "Note – Authors who are ready with the final papers before the submission deadline can directly send them via e-mail to: <a href='mailto:lawconference@kalingauniversity.ac.in'>lawconference@kalingauniversity.ac.in</a>"
+                "Participants whose abstracts are selected will be informed of the acceptance of their abstracts through e-mail only.",
+                "Participants who wish to attend the conference without presenting a paper will also receive the final registration link via e-mail.",
+                "Authors who have completed their full papers before the submission deadline may submit them using the following link:<br />Full Paper Submission: <a href='https://forms.gle/sc3k3PYNvtqucpoz9' target='_blank' rel='noopener noreferrer'>https://forms.gle/sc3k3PYNvtqucpoz9</a>"
             ]
         },
         {
@@ -459,7 +526,7 @@ const LawConferencePage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="border border-gray-300 p-2">Faculty & Other Educators</td><td class="border border-gray-300 p-2">INR 1500/-</td></tr>
+                        <tr><td class="border border-gray-300 p-2">Faculty & Other Educators</td><td class="border border-gray-300 p-2">INR 2000/-</td></tr>
                         <tr><td class="border border-gray-300 p-2">Research Scholars</td><td class="border border-gray-300 p-2">INR 1500/-</td></tr>
                         <tr><td class="border border-gray-300 p-2">UG+PG Students</td><td class="border border-gray-300 p-2">INR 1200/-</td></tr>
                         <tr><td class="border border-gray-300 p-2">Industry Experts</td><td class="border border-gray-300 p-2">INR 2500/-</td></tr>
@@ -476,7 +543,7 @@ const LawConferencePage = () => {
                     <li>International Participants: USD 20/- additional</li>
                 </ul>
                 <p>➢ 50% concession to participants from Kalinga University and Colleges having an MoU with Kalinga University, Naya Raipur.</p>
-                <p>➢ Accommodation will be provided at the Participants’ request (Charges Applicable).</p>
+                <p>➢ Accommodation will be provided at the Participants’ request. (INR 1000/- per day inclusive of meals)</p>
                 <p>➢ Registration Fees include a Conference Kit, High Tea, Lunch, and Snacks for both days.</p>
             </div>`
         },
@@ -485,13 +552,13 @@ const LawConferencePage = () => {
             question: "Awards",
             answer: `<ul class="list-disc list-inside space-y-2 mb-6">
                 <li>Certificate/E-Certificate will be provided to every Participant.</li>
-                <li>Certificate of Merit will be provided to the 3 Best Paper Presentations.</li>
-                <li>Springer Publication - Selected good Quality papers will be published in Atlantis Press (Springer Nature) (Publication Charges will be separate).</li>
+                <li>Certificate of Merit will be provided to the 3 Best Paper Presentations from each technical session.</li>
+                <li>Springer Publication - Selected good Quality papers will be published in Atlantis Press (Springer Nature) (Publication Charges will be INR 12,500/- for a selected paper).</li>
                 <li>Conference abstract proceedings will be released at the Inauguration of the Conference. </li>
             </ul>
             <div class="mt-4 pt-4 border-t border-gray-200">
                 <strong class="text-lg text-gray-900 block mb-2">Note:</strong>
-                <p>A soft copy of the book/proceeding shall be provided to the authors. (A hard copy will be provided on request with applicable charges).</p>
+                <p>A soft copy of the proceeding shall be abstract provided to the authors. (A hard copy will be provided on request with applicable charges).</p>
             </div>`
         }
     ];
@@ -600,8 +667,11 @@ const LawConferencePage = () => {
                 title="About The Faculty Of Law"
                 subtitle=""
                 description={[
-                    "The Faculty of Law at Kalinga University, Naya Raipur, stands as a beacon of legal education, fostering academic excellence and professional development. With a commitment to nurturing future legal luminaries, the faculty comprises distinguished scholars and experienced faculty who bring a wealth of expertise to the learning environment. Emphasising a holistic approach to legal studies, the faculty members are dedicated to imparting both theoretical knowledge and practical skills essential for success in the dynamic field of law. At Kalinga University, Faculty of Law, students embark on a transformative educational journey characterised by innovative pedagogy, interactive sessions, and experiential learning opportunities. The curriculum is designed to align with contemporary legal challenges, ensuring that graduates are well-equipped to navigate the complexities of the legal landscape. With state-of-the-art facilities, including modern classrooms, a well-stocked library, and moot courtrooms, students engage in a stimulating academic environment that encourages critical thinking, research, and the development of ethical legal practice. The faculty's commitment to fostering a culture of intellectual curiosity and professional integrity distinguishes the legal education imparted at Kalinga University, making it a premier destination for those aspiring to excel in the legal profession."
+                    "The faculty of law at Kalinga University is a time-tested department offering excellence in the field of legal education and fulfilling the demands of young aspirants by making them employable in the legal sector. We are one of the best colleges for law admissions as our different legal education programs are aligned with UGC and NEP guidelines and offer high-quality education through outcome-based learning methods. The courses offered by our faculty of law are carefully designed to ensure that our graduates turn out to be industry-ready professionals.",
+                    "We have digital classrooms and moot courts with all the modern technologies and facilities, preparing students for real-world legal challenges. Our curriculum is designed to satisfy the academic needs of every student and to make them professionally ready. Our law school prepares young legal professionals with a thorough understanding of theoretical and practical legal studies so that they can get familiar with the complex legal systems."
                 ]}
+                initialVisibleParagraphs={1}
+                showKnowMore={true}
                 imageUrl="https://cdn.kalingauniversity.ac.in/law-conference/BA-LLB-AboutImage.webp"
                 imageAlt="International Conference on Law and AI"
             />
@@ -609,8 +679,8 @@ const LawConferencePage = () => {
                 title="About The Two-Day Global Conference"
                 subtitle=""
                 description={[
-                    "The Two-Day Global Conference on “Emerging Trends in Artificial Intelligence: Comparative Approaches of Legal Governance” aims to examine the growing relationship between AI and legal systems globally. Due to the growing influence of AI across commercial laws, criminal justice systems, intellectual property regimes, judicial institutions, healthcare regulations, cyber law frameworks, and international legal mechanisms, it raises concerns regarding privacy, transparency, accountability, liability, bias, and protection of human rights",
-                    "The conference will provide a global platform for legal professionals, judges, academicians, researchers, and industry experts to discuss comparative legal and regulatory approaches to AI governance. Through keynote addresses, research paper presentations, case-study analysis, and panel discussions, participants will explore global regulatory practices, emerging challenges, and policy recommendations for ethical, accountable, and future-ready AI governance.",
+                    "The Two-Day Global Conference on “Emerging Trends in Artificial Intelligence: Comparative Approaches of Legal Governance” aims to examine the evolving relationship between AI and legal systems globally. Due to the growing influence of AI across commercial laws, criminal justice systems, intellectual property regimes, judicial institutions, healthcare regulations, cyber law frameworks, and international legal mechanisms, it raises concerns regarding privacy, transparency, accountability, liability, bias, and protection of human rights",
+                    "The conference will provide a global platform for legal professionals, judges, academicians, researchers, policymakers, and industry experts to discuss comparative legal and regulatory approaches to AI governance. Through keynote addresses, research paper presentations, case-study analysis, and panel discussions, participants will explore global regulatory practices, emerging challenges, and policy recommendations for ethical, accountable, and future-ready AI governance.",
                 ]}
                 imageUrl="https://cdn.kalingauniversity.ac.in/law-conference/FacultyOfLaw-AboutDept.webp"
                 imageAlt="International Conference on Law and AI"
@@ -626,7 +696,7 @@ const LawConferencePage = () => {
                 imageSrc="https://cdn.kalingauniversity.ac.in/law-conference/document.svg"
                 imageWidth={100}
                 imageHeight={100}
-                description="This Global Conference on 'Emerging Trends in Artificial Intelligence: Comparative Approaches of Legal Governance”, organised by the Faculty of Law, Kalinga University, Naya Raipur, will be held on 20th & 21st November 2026. The Conference invites contributions in the form of full-length scholarly papers documenting original and substantial research work."
+                description={<>This Global Conference on &lsquo;Emerging Trends in Artificial Intelligence: Comparative Approaches of Legal Governance&rdquo;, organised by the Faculty of Law, Kalinga University, Naya Raipur, will be held on 20<sup>th</sup> &amp; 21<sup>st</sup> November 2026. The Conference invites contributions in the form of full-length scholarly papers documenting original and substantial research work.</>}
             />
 
             <section className="py-16 bg-white">
@@ -647,7 +717,7 @@ const LawConferencePage = () => {
                             {/* Left Column */}
                             <div className="flex-1 flex flex-col gap-4 w-full">
                                 <AccordionItem
-                                    title="AI in Commercial Law and Financial Regulation"
+                                    title="Artificial Intelligence in Commercial Law and Financial Regulation"
                                     titleClassName="font-stix text-[18px] md:text-[20px] leading-tight text-[var(--button-red)]"
                                     bgClassName="bg-[var(--card-sandal)] p-4 md:p-5"
                                 >
@@ -664,7 +734,7 @@ const LawConferencePage = () => {
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem
-                                    title="AI in Criminal Law"
+                                    title="Artificial Intelligence in Criminal Law"
                                     titleClassName="font-stix text-[18px] md:text-[20px] leading-tight text-[var(--button-red)]"
                                     bgClassName="bg-[var(--card-sandal)] p-4 md:p-5"
                                 >
@@ -678,7 +748,7 @@ const LawConferencePage = () => {
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem
-                                    title="Intellectual Property Law and Innovation in AI"
+                                    title="Intellectual Property Law and Innovation in Artificial Intelligence"
                                     titleClassName="font-stix text-[18px] md:text-[20px] leading-tight text-[var(--button-red)]"
                                     bgClassName="bg-[var(--card-sandal)] p-4 md:p-5"
                                 >
@@ -693,7 +763,7 @@ const LawConferencePage = () => {
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem
-                                    title="Access to Justice Through AI"
+                                    title="Access to Justice Through Artificial Intelligence"
                                     titleClassName="font-stix text-[18px] md:text-[20px] leading-tight text-[var(--button-red)]"
                                     bgClassName="bg-[var(--card-sandal)] p-4 md:p-5"
                                 >
@@ -710,7 +780,7 @@ const LawConferencePage = () => {
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem
-                                    title="AI, Healthcare, and Legal Governance"
+                                    title="Artificial Intelligence, Healthcare, and Legal Governance"
                                     titleClassName="font-stix text-[18px] md:text-[20px] leading-tight text-[var(--button-red)]"
                                     bgClassName="bg-[var(--card-sandal)] p-4 md:p-5"
                                 >
@@ -768,7 +838,7 @@ const LawConferencePage = () => {
                                     </ul>
                                 </AccordionItem>
                                 <AccordionItem
-                                    title="AI in Legal Practice and Education"
+                                    title="Artificial Intelligence in Legal Practice and Education"
                                     titleClassName="font-stix text-[18px] md:text-[20px] leading-tight text-[var(--button-red)]"
                                     bgClassName="bg-[var(--card-sandal)] p-4 md:p-5"
                                 >
@@ -833,10 +903,18 @@ const LawConferencePage = () => {
                 headingClassName="text-black"
             />
 
+            <ImageListItem
+                items={publicationPolicyItems}
+                imageSrc="https://cdn.kalingauniversity.ac.in/course/law-2.webp"
+                title="Publication Policy"
+                subtitle=""
+                description=""
+            />
+
             <FAQ
                 id="conference-information"
-                title="Conference Information"
-                subtitle="Guidelines & Fees"
+                title="Important Information"
+                subtitle="Guidelines"
                 variant="table-display"
                 tableSections={[]}
                 items={[...importantDatesItems, ...modeofconference, ...conferenceInfoItems]}
