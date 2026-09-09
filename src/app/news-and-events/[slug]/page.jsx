@@ -6,6 +6,11 @@ import AdmissionCareer from '@/app/components/general/admission_cta';
 import UpcomingEvents from '@/app/components/admissions/upcoming_events';
 import { fetchNewsEvents, fetchNewsEventDetails, fetchNewsEventSEO, parseHtmlToParagraphs, parseHtmlListItems } from '@/app/lib/api';
 
+// Brochures hosted in /public for events whose CMS entry has no `link` yet
+const EVENT_BROCHURES = {
+    'two-days-global-conference-on-recent-trends-in-law': '/brochures/global-law-conference-2026.pdf',
+};
+
 // Static Generation for News & Events Pages
 export async function generateStaticParams() {
     try {
@@ -110,6 +115,9 @@ export default async function NewsEventDetailsPage({ params }) {
         alt: newsEvent.heading
     };
 
+    // Brochure: prefer the CMS `link` field, fall back to a locally hosted PDF
+    const brochureUrl = newsEvent.link || EVENT_BROCHURES[decodedSlug] || '';
+
     const galleryImages = newsEvent.images ? newsEvent.images.map(img => ({
         id: img.id,
         src: img.image,
@@ -125,6 +133,7 @@ export default async function NewsEventDetailsPage({ params }) {
                 description={description}
                 mainImage={mainImage}
                 galleryImages={galleryImages}
+                brochureUrl={brochureUrl}
             />
             <UpcomingEvents />
             <AdmissionCareer />

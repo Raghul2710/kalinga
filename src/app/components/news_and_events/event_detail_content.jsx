@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import SectionHeading from '@/app/components/general/SectionHeading';
+import GlobalArrowButton from '@/app/components/general/global-arrow_button';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -16,7 +17,9 @@ const EventDetailContent = ({
     src: 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
     alt: 'Event Gallery'
   },
-  galleryImages = []
+  galleryImages = [],
+  brochureUrl = '',
+  brochureLabel = 'Download Brochure'
 }) => {
   // State to track the currently selected image
   const [selectedImage, setSelectedImage] = useState(mainImage);
@@ -67,6 +70,21 @@ const EventDetailContent = ({
                 {paragraph}
               </p>
             ))}
+          </div>
+        )}
+
+        {/* Brochure Download */}
+        {brochureUrl && (
+          <div className="mb-8 md:mb-12">
+            <GlobalArrowButton
+              as="a"
+              href={brochureUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              {brochureLabel}
+            </GlobalArrowButton>
           </div>
         )}
 

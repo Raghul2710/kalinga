@@ -15,10 +15,12 @@ const MegaMenu = ({ sections, imageUrl, imageAlt = "Menu Image" }) => {
         'grid-cols-5';
 
   useEffect(() => {
-    if (!menuRef.current) return;
-
     const adjustPosition = () => {
+      // The ref is detached on unmount before this effect's cleanup runs, so a
+      // pending timer or resize event can still fire with a null ref.
       const menu = menuRef.current;
+      if (!menu) return;
+
       const rect = menu.getBoundingClientRect();
       const viewportWidth = window.innerWidth;
       const padding = 24;
