@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import EventCalendar from "../components/news_and_events/event_calendar";
 import ThreeCardSider from "../components/general/three_card_sider";
-import UpcomingEvents from "../components/admissions/upcoming_events";
 import UpcomingConference from "../components/research/upcoming_conference";
 import Gallery from "../components/general/gallery";
 import AdmissionCareer from "../components/general/admission_cta";
@@ -65,6 +64,23 @@ const customImages = [
 ];
 
 
+
+// Events surfaced in the "Upcoming Events" section instead of the Event Calendar list.
+const eventsHiddenFromCalendar = ["ideathon-6-0"];
+
+// Upcoming events that are not managed in the CMS.
+const staticUpcomingEvents = [
+  {
+    id: 'ku-hackathon-2027',
+    title: 'KU Hackathon 2027',
+    description: 'The Department of Computer Science and the Faculty of Information Technology are organizing Hackathon-2027, a 24-hour non-stop innovation challenge at Kalinga University. Students from schools across India work individually or in teams to solve real-world problems using technology and build software prototypes.',
+    date: '18 Feb, 2027',
+    imageSrc: 'https://cdn.kalingauniversity.ac.in/course/student-computer.webp',
+    imageAlt: 'KU Hackathon 2027',
+    buttonText: 'Read More',
+    link: '/ku-hackathon-2027',
+  }
+];
 
 function NewsAndEvents() {
   const [newsItems, setNewsItems] = useState([]);
@@ -166,19 +182,31 @@ function NewsAndEvents() {
     return words.slice(0, 18).join(" ") + " ....";
   };
 
-  // 1. Future Events (Date > Today) - For Top Section
-  const futureEvents = useMemo(() => {
-    return newsItems.filter(item => {
+  // 1. Upcoming Events (Date > Today) - rendered below Upcoming Conferences
+  const upcomingEventItems = useMemo(() => {
+    const fromCms = newsItems.filter(item => {
       if (!item.date) return false;
       return isFutureEvent(item.date);
     }).map(item => ({
       id: item.id,
-      image: item.images?.[0]?.image || 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
       title: parseHtmlToText(item.heading),
-      badgeText: item.date,
+      description: item.short_para ? parseHtmlToText(item.short_para) : getTruncatedContent(item.content),
+      fullDescription: parseHtmlToText(item.content),
+      imageSrc: item.primary_image?.image || item.images?.[0]?.image || 'https://cdn.kalingauniversity.ac.in/common/student.jpg',
+      imageAlt: item.primary_image?.alt || parseHtmlToText(item.heading),
+      date: item.date,
+      buttonText: 'Read More',
       slug: item.slug
     }));
+
+    return [...fromCms, ...staticUpcomingEvents];
   }, [newsItems]);
+
+  // Event Calendar list, minus the events promoted to the Upcoming Events section
+  const calendarItems = useMemo(
+    () => newsItems.filter(item => !eventsHiddenFromCalendar.includes(item.slug)),
+    [newsItems]
+  );
 
   // 2. Newly Adds (This Week) - For Bottom Section
   const newlyAdds = useMemo(() => {
@@ -337,13 +365,8 @@ function NewsAndEvents() {
     <div>
 
 
-      {/* 1. Upcoming Events (Future items) */}
-      {futureEvents.length > 0 && (
-        <UpcomingEvents events={futureEvents} />
-      )}
-
-      {/* 2. Main Filters & List */}
-      <EventCalendar items={newsItems} departments={departments} categories={categories} />
+      {/* 1. Main Filters & List */}
+      <EventCalendar items={calendarItems} departments={departments} categories={categories} />
 
       {/* 3. Newly Adds (This Week) */}
       {newlyAdds.length > 0 && (
@@ -365,6 +388,15 @@ function NewsAndEvents() {
         useModal={true}
         autoplay={false}
       />
+      {upcomingEventItems.length > 0 && (
+        <StudentActivities
+          id="upcoming-events"
+          title="Upcoming Events"
+          subtitle=""
+          activities={upcomingEventItems}
+          autoplay={false}
+        />
+      )}
       <MediaCardSlider
         title="Industrial Visits"
         imageItems={placementGalleryImages}
